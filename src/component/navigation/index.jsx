@@ -27,7 +27,9 @@ const Navigation = () => {
 
                     <BrowserRouter>
                         {listIcons.map((item, index) => {
-                            <LinkNavigation icon =  {item} key = {index}/>
+                            return(
+                                <LinkNavigation icon =  {item} />
+                            )
                         })}
                         
                     
