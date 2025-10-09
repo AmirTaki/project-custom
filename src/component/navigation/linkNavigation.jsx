@@ -5,10 +5,9 @@ const LinkNavigation = ({icon, conter, toggle}) => {
     return (
 
         <li 
-            style={{transitionDelay: `calc(.1s * ${conter})`,
-            transform : `rotate(calc(360deg / -8 * ${conter}))` }}
+            style={{}}
             className={`
-                absolute  origin-[100px]  transition-all duration-500  transform-[rotate(0deg)_translateX(0px)]`}
+                absolute left-0 list-none origin-[100px] transition-all duration-500 delay-[calc(0.1s*var(--i))] transform-[rotate(0deg)_translateX(80px)]`}
             >
             <Link 
                 style={{transform : `rotate(calc(360deg / -8 * ${conter}))`}}
