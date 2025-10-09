@@ -1,3 +1,4 @@
+
 const Navigation = () => {
     return (
         <div
@@ -9,7 +10,9 @@ const Navigation = () => {
                 <i className="bi bi-plus-lg"></i>
             </div>
 
-            <li></li>
+            <li>
+                <Link></Link>
+            </li>
         </div>
     )
 }
