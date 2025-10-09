@@ -1,5 +1,7 @@
+import { useState } from "react"
 import { BrowserRouter, Link } from "react-router-dom"
 
+const [toggle, setToggle]  =  useState(true)
 
 const Navigation = () => {
     return (
