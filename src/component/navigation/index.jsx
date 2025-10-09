@@ -13,14 +13,14 @@ const Navigation = () => {
 
                 <div
                     onClick={handleToggle}
-                    className="[transform-origin:100px] transform duration-500 delay-200 ease-in-out"
+                    className=""
                 >
                     <i className="bi bi-plus-lg"></i>
                 </div>
                 <div className={`${toggle ? "hidden" : "flex"}`}>
 
                     <BrowserRouter>
-                        <li>
+                        <li className="absolute left-0  [transform-origin:100px] transform duration-500 delay-200">
                             <Link to="/">
                                 <i className="bi bi-house-door"></i>
                             </Link>
