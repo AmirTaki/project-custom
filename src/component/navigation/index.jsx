@@ -3,7 +3,7 @@ import { BrowserRouter, Link } from "react-router-dom"
 
 const [toggle, setToggle]  =  useState(true)
 const handelrToggle = () => {
-    
+    setToggle( (prevToggle) => (!prevToggle) )    
 }
 
 const Navigation = () => {
