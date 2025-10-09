@@ -8,6 +8,8 @@ const Navigation = () => {
         setToggle((prevToggle) => !prevToggle)
     }
 
+
+    
     return (
         <div className="absolute left-[50%] top-[50%] list-none ">
 
