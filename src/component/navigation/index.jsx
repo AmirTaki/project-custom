@@ -5,6 +5,7 @@ import LinkNavigation from "./linkNavigation"
 
 
 const Navigation = () => {
+    const icons = ['bi bi-house-door', 'bi bi-person', 'bi bi-gear', 'bi bi-envelope']
     const [toggle, setToggle] = useState(true)
 
     const handleToggle = () => {
@@ -25,25 +26,21 @@ const Navigation = () => {
                 <div className={`${toggle ? "hidden" : "flex"}`}>
 
                     <BrowserRouter>
-                        <LinkNavigation />
-                        <li className="absolute left-0  [transform-origin:100px] transform duration-500 delay-200">
-                            <Link to="/" className="flex justify-center items-center w-[40px] h-[40px] bg-white rounded-full text-[#111] shadow-[0_3px_4px_rgba(0,0,0,0.15)]  ">
-                                <i className="bi bi-house-door "></i>
+
+                        <LinkNavigation icon = {} />
+                        
+                            <Link to="/">
+                                <i className=""></i>
                             </Link>
                         </li>
                         <li>
                             <Link to="/">
-                                <i className="bi bi-person"></i>
+                                <i className=""></i>
                             </Link>
                         </li>
                         <li>
                             <Link to="/">
-                                <i className="bi bi-gear"></i>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/">
-                                <i className="bi bi-envelope"></i>
+                                <i className=""></i>
                             </Link>
                         </li>
                         <li>
