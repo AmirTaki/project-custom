@@ -4,7 +4,7 @@ import { BrowserRouter, Link } from "react-router-dom"
 const Navigation = () => {
     return (
         <div
-            className="absolute left-[50%] top-[50%]"
+            className="absolute left-[50%] top-[50%] list-none"
             >
             <div 
                 className="[transform-origin:100px] transform transition-[.5s] "
@@ -16,6 +16,12 @@ const Navigation = () => {
                 <li>
                     <Link to = "/">
                         <i className="bi bi-house-door"></i>
+                    </Link>
+                </li>
+            
+                <li>
+                    <Link to = "/">
+                        <i className="bi bi-person"></i>
                     </Link>
                 </li>
           
