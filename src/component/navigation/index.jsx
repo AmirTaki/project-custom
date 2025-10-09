@@ -1,3 +1,5 @@
+import { BrowserRouter, Link } from "react-router-dom"
+
 
 const Navigation = () => {
     return (
@@ -9,10 +11,13 @@ const Navigation = () => {
             >
                 <i className="bi bi-plus-lg"></i>
             </div>
-
-            <li>
-                <Link></Link>
-            </li>
+            <BrowserRouter >
+            
+                <li>
+                    {/* <Link to = "/"></Link> */}
+                </li>
+          
+            </BrowserRouter>
         </div>
     )
 }
