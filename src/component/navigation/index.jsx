@@ -32,7 +32,7 @@ const Navigation = () => {
                     <BrowserRouter>
                         {listIcons.map((item, index) => {
                             return(
-                                <LinkNavigation icon =  {item} key = {index} conter = {index}/>
+                                <LinkNavigation icon =  {item} key = {index} conter = {index} toggle = {toggle}/>
                             )
                         })}
                         
