@@ -24,6 +24,12 @@ const Navigation = () => {
                         <i className="bi bi-person"></i>
                     </Link>
                 </li>
+
+                <li>
+                    <Link to = "/">
+                        <i className="bi bi-gear"></i>
+                    </Link>
+                </li>
           
             </BrowserRouter>
         </div>
