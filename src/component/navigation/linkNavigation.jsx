@@ -5,10 +5,11 @@ const LinkNavigation = ({icon, index, toggle}) => {
     return (
 
         <li 
-            style={{"--i":index}}
+            style={{ transitionDelay : `${toggle ? `` : `calc(.1s * ${index}`}` }}
             className={`
-                ${toggle ? "bg-yellow-400" : "bg-green-500"}
-                absolute left-0 list-none origin-[100px] transition-all duration-500 delay-[calc(0.1s*20)] transform-[rotate(0deg)_translateX(80px)]`
+               
+                absolute left-0 list-none origin-[100px] transition-all duration-500 
+                transform-[rotate(0deg)_translateX(80px)]`
             }
             >
             <Link 
