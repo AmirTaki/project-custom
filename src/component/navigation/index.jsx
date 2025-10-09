@@ -5,7 +5,7 @@ import LinkNavigation from "./linkNavigation"
 
 
 const Navigation = () => {
-    const icons = ['bi bi-house-door', 'bi bi-person', 'bi bi-gear', 'bi bi-envelope', "bi bi-key", "bi bi-camera-video", "bi bi-controller", "bi bi-camera"]
+    const listIcons = ['bi bi-house-door', 'bi bi-person', 'bi bi-gear', 'bi bi-envelope', "bi bi-key", "bi bi-camera-video", "bi bi-controller", "bi bi-camera"]
     const [toggle, setToggle] = useState(true)
 
     const handleToggle = () => {
@@ -26,43 +26,11 @@ const Navigation = () => {
                 <div className={`${toggle ? "hidden" : "flex"}`}>
 
                     <BrowserRouter>
-
-                        <LinkNavigation icon = {} />
+                        {listIcons.map((item, index) => {
+                            <LinkNavigation icon =  {item} key = {index}/>
+                        })}
                         
-                            <Link to="/">
-                                <i className=""></i>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/">
-                                <i className=""></i>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/">
-                                <i className=""></i>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/">
-                                <i className=></i>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/">
-                                <i className=></i>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/">
-                                <i className=></i>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/">
-                                <i className=></i>
-                            </Link>
-                        </li>
+                    
                     </BrowserRouter>
                 </div>
             </div>
