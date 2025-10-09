@@ -19,7 +19,8 @@ const Navigation = () => {
 
                 <div
                     onClick={handleToggle}
-                    className={`${toggle ? "rotate-[0deg]" : "rotate-[315deg]"}`}
+                    className={`
+                        ${toggle ? "rotate-[0deg] duration-500" : "rotate-[315deg] duration-500"}`}
                 >
                     <i className="bi bi-plus-lg"></i>
                 </div>
