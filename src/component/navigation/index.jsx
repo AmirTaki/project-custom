@@ -3,7 +3,7 @@ const Navigation = () => {
         <div
             className="absolute left-[50%] top-[50%]"
             >
-            navigation
+            <div className=""><i className="bi bi-plus-lg"></i></div>
         </div>
     )
 }
