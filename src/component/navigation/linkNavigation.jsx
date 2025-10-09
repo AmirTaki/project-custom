@@ -7,7 +7,7 @@ const LinkNavigation = ({icon, conter, toggle}) => {
         <li 
             style={{"--i":conter}}
             className={`
-                ${toggle ? "" : ""}
+                ${toggle ? "" : "transform-rotate-[calc(360deg/8*var(--i))]"}
                 absolute left-0 list-none origin-[100px] transition-all duration-500 delay-[calc(0.1s*var(--i))] transform-[rotate(0deg)_translateX(80px)]`
             }
             >
