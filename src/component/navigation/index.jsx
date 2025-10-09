@@ -54,6 +54,12 @@ const Navigation = () => {
                         <i className="bi bi-controller"></i>
                     </Link>
                 </li>
+
+                <li>
+                    <Link to = "/">
+                        <i className="bi bi-camera"></i>
+                    </Link>
+                </li>
           
             </BrowserRouter>
         </div>
