@@ -1,6 +1,8 @@
 const Navigation = () => {
     return (
-        <div>
+        <div
+            className="absolute left-[50%] top-[50%]"
+            >
             navigation
         </div>
     )
