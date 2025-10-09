@@ -5,7 +5,7 @@ import LinkNavigation from "./linkNavigation"
 
 
 const Navigation = () => {
-    const icons = ['bi bi-house-door', 'bi bi-person', 'bi bi-gear', 'bi bi-envelope']
+    const icons = ['bi bi-house-door', 'bi bi-person', 'bi bi-gear', 'bi bi-envelope', "bi bi-key", "bi bi-camera-video", "bi bi-controller", "bi bi-camera"]
     const [toggle, setToggle] = useState(true)
 
     const handleToggle = () => {
@@ -45,22 +45,22 @@ const Navigation = () => {
                         </li>
                         <li>
                             <Link to="/">
-                                <i className="bi bi-key"></i>
+                                <i className=></i>
                             </Link>
                         </li>
                         <li>
                             <Link to="/">
-                                <i className="bi bi-camera-video"></i>
+                                <i className=></i>
                             </Link>
                         </li>
                         <li>
                             <Link to="/">
-                                <i className="bi bi-controller"></i>
+                                <i className=></i>
                             </Link>
                         </li>
                         <li>
                             <Link to="/">
-                                <i className="bi bi-camera"></i>
+                                <i className=></i>
                             </Link>
                         </li>
                     </BrowserRouter>
