@@ -27,8 +27,8 @@ const Navigation = () => {
                 >
                     <i className="bi bi-plus-lg"></i>
                 </div>
-                <div className={`${toggle ? "hidden" : "flex"}`}>
-
+                <div >
+                        {/* className={`${toggle ? "hidden" : "flex"}`} */}
                     <BrowserRouter>
                         {listIcons.map((item, index) => {
                             return(
