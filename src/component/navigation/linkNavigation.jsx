@@ -7,7 +7,7 @@ const LinkNavigation = ({icon, conter}) => {
         <li 
             style={{'--i': conter }}
             className={`
-                
+                [transition-delay:calc(0.1s*var(--i))] 
                 absolute left-0 origin-[100px] transition-all duration-500  transform-[rotate(0deg)_translateX(80px)]`}
             >
             <Link 
