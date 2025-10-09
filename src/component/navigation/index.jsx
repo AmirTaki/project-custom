@@ -21,8 +21,8 @@ const Navigation = () => {
 
                     <BrowserRouter>
                         <li className="absolute left-0  [transform-origin:100px] transform duration-500 delay-200">
-                            <Link to="/">
-                                <i className="bi bi-house-door"></i>
+                            <Link to="/" className="flex justify-center items-center w-[40px] h-[40px] bg-white rounded-full ">
+                                <i className="bi bi-house-door "></i>
                             </Link>
                         </li>
                         <li>
