@@ -2,6 +2,9 @@ import { useState } from "react"
 import { BrowserRouter, Link } from "react-router-dom"
 
 const [toggle, setToggle]  =  useState(true)
+const handelrToggle = () => {
+    
+}
 
 const Navigation = () => {
     return (
@@ -9,6 +12,7 @@ const Navigation = () => {
             className="absolute left-[50%] top-[50%] list-none"
             >
             <div 
+                onClick={() => {handelrToggle()}}
                 className="[transform-origin:100px] transform transition-[.5s] "
             >
                 <i className="bi bi-plus-lg"></i>
