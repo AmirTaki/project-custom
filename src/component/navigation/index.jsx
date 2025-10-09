@@ -5,7 +5,11 @@ const Navigation = () => {
             >
             <div 
                 className="[transform-origin:100px] transform transition-[.5s] "
-            ><i className="bi bi-plus-lg"></i></div>
+            >
+                <i className="bi bi-plus-lg"></i>
+            </div>
+
+            <li></li>
         </div>
     )
 }
