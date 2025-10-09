@@ -14,7 +14,9 @@ const Navigation = () => {
             <BrowserRouter >
             
                 <li>
-                    {/* <Link to = "/"></Link> */}
+                    <Link to = "/">
+                        <i className="bi bi-house-door"></i>
+                    </Link>
                 </li>
           
             </BrowserRouter>
