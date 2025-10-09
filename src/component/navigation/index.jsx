@@ -30,9 +30,22 @@ const Navigation = () => {
                         <i className="bi bi-gear"></i>
                     </Link>
                 </li>
+                
                 <li>
                     <Link to = "/">
                         <i className="bi bi-envelope"></i>
+                    </Link>
+                </li>
+
+                <li>
+                    <Link to = "/">
+                        <i className="bi bi-key"></i>
+                    </Link>
+                </li>
+          
+                <li>
+                    <Link to = "/">
+                        <i className="bi bi-camera-video"></i>
                     </Link>
                 </li>
           
