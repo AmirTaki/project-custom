@@ -15,12 +15,13 @@ const Navigation = () => {
 
     
     return (
-        <div className="flex justify-center items-center list-none relative w-[200px] h-[200px]">
+        // flex justify-center items-center
+        <div className="fixed top-40 left-40 list-none relative w-[200px] h-[200px] ">
 
                 <div
                     onClick={handleToggle}
                     className={`
-                        w-[60px] h-[60px] bg-white flex items-center justify-center z-50 rounded-full cursor-pointer
+                        w-[60px] h-[60px] bg-white flex items-center justify-center z-50! rounded-full cursor-pointer
                         shadow-[0_3px_4px_rgba(0,0,0,0.15)] text-[2em] duration-[1250ms]!
                         ${toggle ? "" : "rotate-[315deg] "}`}
                 >

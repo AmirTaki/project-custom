@@ -10,8 +10,8 @@ const LinkNavigation = ({icon, index, toggle}) => {
                 transitionDelay : `calc(.1s * ${index}` ,
                 transform : `${toggle ? `rotate(0deg) translateX(80px)` : `rotate(calc(360deg / 8 * ${index})`}` 
             }}
-          
-            className={` absolute  left-0 list-none origin-[100px] transition-transform duration-[500ms]!`}
+        //   absolute  left-0
+            className={` fixed top-42 left-22 list-none origin-[100px] transition-transform duration-[500ms]! z-10!`}
         >
             <Link 
                 style={{transform : `${toggle ? `` : `rotate(calc(360deg / -8 * ${index}))`} `}}
