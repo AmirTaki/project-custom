@@ -15,7 +15,8 @@ const LinkNavigation = ({icon, index, toggle, touch}) => {
             className={`fixed  list-none origin-[100px] transition-transform duration-[500ms]!`}
         >
             <Link 
-                style={{transform : `${toggle ? `` : `rotate(calc(360deg / -8 * ${index}))`} `}}
+                // style={{transform : `${toggle ? `` : `rotate(calc(360deg / -8 * ${index}))`} `}}
+                style={{transform : `rotate(calc(360deg / -8 * ${index}))` }}
                 to="/" 
                 className={`flex justify-center items-center w-[40px] h-[40px] bg-white rounded-full text-[#111] shadow-[0_3px_4px_rgba(0,0,0,0.15)]  
                 duration-[500ms]!  hover:text-red-500
