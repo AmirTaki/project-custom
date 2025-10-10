@@ -1,4 +1,4 @@
-const LinkMenu = ({item}) => {
+const LinkMenu = ({item, toggle}) => {
     return(
         <span>
             <i className={item.icon}></i>
