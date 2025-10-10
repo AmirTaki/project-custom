@@ -10,7 +10,7 @@ const LinkNavigation = ({icon, index, toggle}) => {
          }}
             className={`
                
-                absolute left-0  list-none origin-[100px] transition-all duration-500 
+                absolute left-0  list-none origin-[100px] transition-all duration-1000!
                 `
             }
             >
@@ -18,9 +18,9 @@ const LinkNavigation = ({icon, index, toggle}) => {
                 style={{transform : `${toggle ? `` : `rotate(calc(360deg / -8 * ${index}))`} `}}
                 to="/" 
                 className={`flex justify-center items-center w-[40px] h-[40px] bg-white rounded-full text-[#111] shadow-[0_3px_4px_rgba(0,0,0,0.15)]  
-                duration-500!
+                duration-1000!
                 `}>
-                <i className={icon}>{index}</i>
+                <i className={icon}></i>
             </Link>
         </li>
         //            

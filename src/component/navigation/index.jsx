@@ -24,7 +24,7 @@ const Navigation = () => {
                     className={`
                         w-[60px] h-[60px] bg-white flex items-center justify-center z-50 rounded-full cursor-pointer
                         shadow-[0_3px_4px_rgba(0,0,0,0.15)] text-[2em]
-                        ${toggle ? "rotate-[0deg] duration-500" : "rotate-[315deg] duration-500"}`}
+                        ${toggle ? "rotate-[0deg] duration-1500!" : "rotate-[315deg] duration-1500!"}`}
                 >
                     <i className="bi bi-plus-lg"></i>
                 </div>
