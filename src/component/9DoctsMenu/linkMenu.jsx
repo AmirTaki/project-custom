@@ -11,11 +11,13 @@ const LinkMenu = ({item, toggle, index}) => {
                 }}
                 className={`
                     ${toggle ? "w-[45px] h-[45px] bg-[#333849]" : "w-[7px] h-[7px] bg-transparent"}
-                    absolute  flex items-center justify-centerbg-white rounded-[50%] 
+                    absolute  flex items-center justify-center rounded-[50%] 
                     transition-all duration-500!
                     `}
             >
-                <i className={item.icon}></i>
+                <i 
+                    className={`${item.icon} ${toggle ? "text-[1.35em] text-white" : "text-[0em]" } duration-500! `}
+                ></i>
             </span>
         </Link>
     )

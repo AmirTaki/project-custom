@@ -10,9 +10,9 @@ const DoctsMenu = () => {
         // navigation
         <div 
             className={` 
-                ${toggle ? "w-[200px] h-[200px]" : "w-[70px] h-[70px]"}
+                ${toggle ? "w-[200px] h-[200px] delay-[0ms] " : "w-[70px] h-[70px] delay-[800ms]"}
                 relative  bg-[#212532] rounded-[10px] cursor-pointer
-                flex items-center justify-center duration-[500ms] delay-[800ms]`
+                flex items-center justify-center duration-[500ms] `
             }
             onClick={() => {setToggle((prev) => (!prev))}}
             >
