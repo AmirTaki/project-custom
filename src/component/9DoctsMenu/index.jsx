@@ -12,9 +12,8 @@ const DoctsMenu = () => {
             className={` 
                 ${toggle ? "w-[200px] h-[200px]" : "w-[70px] h-[70px]"}
                 relative  bg-[#212532] rounded-[10px] cursor-pointer
-                flex items-center justify-center duration-[500ms] delay-[800ms]`}
-           
-            
+                flex items-center justify-center duration-[500ms] delay-[800ms]`
+            }
             onClick={() => {setToggle((prev) => (!prev))}}
             >
             <BrowserRouter >
