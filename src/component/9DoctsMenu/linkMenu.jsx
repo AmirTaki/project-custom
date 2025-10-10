@@ -5,7 +5,7 @@ const LinkMenu = ({item, toggle, index}) => {
         <Link to = "/">
             <span
                 style={{
-                    transform : `translate(calc(12px * ${item.x}), calc(12px * ${item.y}))`,
+                    transform : `${toggle ? `translate(calc(12px * ${item.x}), calc(12px * ${item.y}))` : `translate(calc(60px * ${item.x}), calc(60px * ${item.y}))`}`,
                     transitionDelay : `calc(.1s * ${index})`
                         
                 }}
