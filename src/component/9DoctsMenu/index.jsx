@@ -15,8 +15,7 @@ const DoctsMenu = () => {
             
             onClick={() => {setToggle((prev) => (!prev))}}
             >
-            
-            <BrowserRouter className = {toggle ? "flex" : "hidden"}>
+            <BrowserRouter >
                 {iconsList.map((item, index) => {
                     return(
                         <LinkMenu key = {index} item = {item} />
