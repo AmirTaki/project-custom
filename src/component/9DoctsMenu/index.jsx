@@ -11,8 +11,8 @@ const DoctsMenu = () => {
         <div 
             className={` 
                 ${toggle ? "w-[200px] h-[200px] delay-[0ms] " : "w-[70px] h-[70px] delay-[800ms]"}
-                relative  bg-[#212532] rounded-[10px] cursor-pointer
-                 duration-[500ms]  flex justify-center items-center` 
+                  bg-[#212532] rounded-[10px] cursor-pointer 
+                 duration-[500ms]  flex  items-center justify-center fixed  left-50 top-50` 
             }
             onClick={() => {setToggle((prev) => (!prev))}}
             >
