@@ -8,11 +8,15 @@ const DoctsMenu = () => {
     const [toggle, setToggle] = useState(false)
     return(
         // navigation
-        <div className="
+        <div 
+            className="
             relative w-[70px] h-[70px] bg-[#212532] rounded-[10px] cursor-pointer
-            flex items-center justify-center duration-[500ms] delay-[800ms]
-        ">
-            <BrowserRouter>
+            flex items-center justify-center duration-[500ms] delay-[800ms]"
+            
+            onClick={() => {setToggle((prev) => (!prev))}}
+            >
+            
+            <BrowserRouter className = {toggle ? "flex" : "hidden"}>
                 {iconsList.map((item, index) => {
                     return(
                         <LinkMenu key = {index} item = {item} />
