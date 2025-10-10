@@ -12,12 +12,17 @@ const Navigation = () => {
         setToggle((prevToggle) => !prevToggle)
     }
 
+    const [touch, setTouch] = useState({
+        x : 40,
+        y : 40
+    })
 
     
     return (
         // flex justify-center items-center relative
-        <div className="fixed top-40 left-40 list-none   w-[200px] h-[200px] ">
-
+        <div className={`fixed  list-none   w-[200px] h-[200px] `}
+            style={{left : `${touch.x}`, top :`${touch.y}`}}
+        >
                 <div
                     onClick={handleToggle}
                     className={`
