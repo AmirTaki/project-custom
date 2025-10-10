@@ -15,7 +15,7 @@ const Navigation = () => {
 
     
     return (
-        <div className="absolute left-[50%] top-[50%] list-none ">
+        <div className="flex justify-center items-center  list-none relative h-[100vh]">
 
                 <div
                     onClick={handleToggle}
@@ -27,7 +27,6 @@ const Navigation = () => {
                 >
                     <i className="bi bi-plus-lg"></i>
                 </div>
-                <div >
                         {/* className={`${toggle ? "hidden" : "flex"}`} */}
                     <BrowserRouter>
                         {listIcons.map((item, index) => {
@@ -38,7 +37,6 @@ const Navigation = () => {
                         
                     
                     </BrowserRouter>
-                </div>
             </div>
     
     )
