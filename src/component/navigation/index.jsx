@@ -15,7 +15,8 @@ const Navigation = () => {
 
     
     return (
-        <div className="flex justify-center items-center  list-none relative h-[100vh]">
+        <div className="flex justify-center items-center  list-none relative 
+        w-[200px] h-[200px]">
 
                 <div
                     onClick={handleToggle}
