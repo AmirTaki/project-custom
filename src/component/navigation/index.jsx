@@ -13,15 +13,15 @@ const Navigation = () => {
     }
 
     const [touch, setTouch] = useState({
-        x : 40,
-        y : 40
+        x : 120,
+        y : 120
     })
 
     
     return (
         // flex justify-center items-center relative
         <div className={`fixed  list-none   w-[200px] h-[200px] `}
-            style={{left : `${touch.x}`, top :`${touch.y}`}}
+            style={{left : `${touch.x}px`, top :`${touch.y}px`}}
         >
                 <div
                     onClick={handleToggle}
@@ -35,7 +35,7 @@ const Navigation = () => {
                     <BrowserRouter >
                         {listIcons.map((item, index) => {
                             return(
-                                <LinkNavigation icon =  {item} key = {index} index = {index} toggle = {toggle}/>
+                                <LinkNavigation icon =  {item} key = {index} index = {index} toggle = {toggle} touch = {touch}/>
                             )
                         })}
                     </BrowserRouter>
