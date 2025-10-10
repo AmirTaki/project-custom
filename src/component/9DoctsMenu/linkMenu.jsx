@@ -4,7 +4,9 @@ const LinkMenu = ({item, toggle}) => {
     return(
         <Link to = "/">
             <span
-                className={`absolute w-[7px] h-[7px] flex items-center justify-center`}
+                className={`
+                    absolute w-[7px] h-[7px] flex items-center justify-centerbg-white rounded-[50%] 
+                    `}
             >
                 <i className={item.icon}></i>
             </span>
