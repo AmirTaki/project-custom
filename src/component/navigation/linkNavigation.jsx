@@ -10,7 +10,7 @@ const LinkNavigation = ({icon, index, toggle}) => {
          }}
             className={`
                
-                absolute left-0  list-none origin-[100px] transition-transform duration-1000!
+                absolute  left-0 list-none origin-[100px] transition-transform duration-1000!
                 `
             }
             >
