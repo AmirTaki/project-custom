@@ -5,11 +5,13 @@ const LinkNavigation = ({icon, index, toggle}) => {
     return (
 
         <li 
-            style={{ transitionDelay : `${toggle ? `` : `calc(.1s * ${index}`}` }}
+            style={{ transitionDelay : `${toggle ? `` : `calc(.1s * ${index}`}` ,
+                transform : `${toggle ? `` : `rotate(0deg) translateX(80px)`}` 
+         }}
             className={`
                
                 absolute left-0 list-none origin-[100px] transition-all duration-500 
-                transform-[rotate(0deg)_translateX(80px)]`
+                `
             }
             >
             <Link 
