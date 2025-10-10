@@ -23,8 +23,8 @@ const Navigation = () => {
                     //shadow-[0_3px_4px_rgba(0,0,0,0.15)] 
                     className={`
                         w-[60px] h-[60px] bg-white flex items-center justify-center z-50 rounded-full cursor-pointer
-                        shadow-[0_3px_4px_rgba(0,0,0,0.15)] text-[2em]
-                        ${toggle ? "rotate-[0deg] duration-1500!" : "rotate-[315deg] duration-1500!"}`}
+                        shadow-[0_3px_4px_rgba(0,0,0,0.15)] text-[2em] duration-[1250ms]!
+                        ${toggle ? "" : "rotate-[315deg] "}`}
                 >
                     <i className="bi bi-plus-lg"></i>
                 </div>
