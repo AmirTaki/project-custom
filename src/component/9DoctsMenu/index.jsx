@@ -7,7 +7,8 @@ const DoctsMenu = () => {
     return(
         // navigation
         <div className="
-            relative w-[70px] h-[70px] bg-[#212532]
+            relative w-[70px] h-[70px] bg-[#212532] rounded-[10px] cursor-pointer
+            flex items-center justify-center
         ">
 
             <BrowserRouter>
