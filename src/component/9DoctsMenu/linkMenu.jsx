@@ -5,12 +5,12 @@ const LinkMenu = ({item, toggle, index}) => {
         <Link to = "/">
             <span
                 style={{
-                    transform : `${toggle ? `translate(calc(12px * ${item.x}), calc(12px * ${item.y}))` : `translate(calc(60px * ${item.x}), calc(60px * ${item.y}))`}`,
+                    transform : `${toggle ? `translate(calc(60px * ${item.x}), calc(60px * ${item.y}))` : `translate(calc(12px * ${item.x}), calc(12px * ${item.y}))`}`,
                     transitionDelay : `calc(.1s * ${index})`
                         
                 }}
                 className={`
-                    ${toggle ? "w-[45px] h-[45px]" : "w-[7px] h-[7px]"}
+                    ${toggle ? "w-[45px] h-[45px] bg-[#333849]" : "w-[7px] h-[7px] bg-transparent"}
                     absolute  flex items-center justify-centerbg-white rounded-[50%] 
                     transition-all duration-500!
                     `}
