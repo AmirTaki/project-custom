@@ -10,7 +10,8 @@ const LinkMenu = ({item, toggle, index}) => {
                         
                 }}
                 className={`
-                    absolute w-[7px] h-[7px] flex items-center justify-centerbg-white rounded-[50%] 
+                    ${toggle ? "w-[45px] h-[45px]" : "w-[7px] h-[7px]"}
+                    absolute  flex items-center justify-centerbg-white rounded-[50%] 
                     transition-transform transition-width transition-height transition-colors 
                     duration-500
                     `}
