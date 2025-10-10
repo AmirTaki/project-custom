@@ -1,6 +1,8 @@
-const LinkMenu = () => {
+const LinkMenu = ({item}) => {
     return(
-        <div className=""></div>
+        <span>
+            <i className={item.icon}></i>
+        </span>
     )
 }
 
