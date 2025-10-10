@@ -11,7 +11,7 @@ const DoctsMenu = () => {
             <BrowserRouter>
                 {iconsList.map((item, index) => {
                     return(
-                        <div className=""></div>
+                        <LinkMenu key = {index} item = {item} />
                     )
                 })}
             </BrowserRouter>
