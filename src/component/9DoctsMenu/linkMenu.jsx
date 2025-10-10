@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 
-const LinkMenu = ({item, toggle}) => {
+const LinkMenu = ({item, toggle, index}) => {
     return(
         <Link to = "/">
             <span
                 style={{
                     transform : `translate(clac(12px * ${item.x}), clac(12px * ${item.y}))`,
+                    transitionDelay : `calc(.1 * ${index})`
                         
                 }}
                 className={`
