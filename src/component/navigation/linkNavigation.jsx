@@ -18,7 +18,7 @@ const LinkNavigation = ({icon, index, toggle}) => {
                 style={{transform : `${toggle ? `` : `rotate(calc(360deg / -8 * ${index}))`} `}}
                 to="/" 
                 className={`flex justify-center items-center w-[40px] h-[40px] bg-white rounded-full text-[#111] shadow-[0_3px_4px_rgba(0,0,0,0.15)]  
-                duration-700!
+                duration-[500s]!
                 `}>
                 <i className={icon}></i>
             </Link>
