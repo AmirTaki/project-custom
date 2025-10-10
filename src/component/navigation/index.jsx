@@ -13,8 +13,8 @@ const Navigation = () => {
     }
 
     const [touch, setTouch] = useState({
-        x : 120,
-        y : 120
+        x : 520,
+        y : 420
     })
 
     
