@@ -1,11 +1,12 @@
+import { iconsList } from "./iconList";
+
+
 const DoctsMenu = () => {
 
     return(
         <div className="">
 
-            <span>
-                <i className="bi bi-camera"></i>
-            </span>
+            
         </div>
     )
 }
