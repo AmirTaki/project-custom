@@ -1,7 +1,10 @@
 const DoctsMenu = () => {
     return(
         <div className="">
-            9 docts menu
+
+            <span>
+                <i className="bi bi-camera"></i>
+            </span>
         </div>
     )
 }

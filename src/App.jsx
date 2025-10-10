@@ -7,9 +7,10 @@ function App() {
   
   return (
     <>
-    <div className="bg-linear-[25deg,red_5%,yellow_60%,lime_90%,teal] h-[100vh]">
+    {/* bg-linear-[25deg,red_5%,yellow_60%,lime_90%,teal]  */}
+    <div className="bg-[#10131c] h-[100vh] text-white">
 
-      <Navigation />
+      {/* <Navigation /> */}
       <DoctsMenu />
     </div>
     </>
