@@ -25,16 +25,27 @@ export const iconsList = [
         y : 1
     },
     {
-        icon : "bi bi-alarm",
-        x : 0 ,
-        y : 1
+        icon : "bi bi-moon",
+        x : -1 ,
+        y : -1
     },
     {
-        icon : "bi bi-alarm",
+        icon : "bi bi-bell",
         x : 0 ,
-        y : 1
+        y : 0
     },
+    {
+        icon : "bi bi-bell",
+        x : 0 ,
+        y : 0
+    },
+    {
+        icon : "bi bi-bell",
+        x : 0 ,
+        y : 0
+    },
+
     
-    "", "",   "", "bi bi-moon",  "bi bi-bell", "bi bi-droplet",  "bi bi-clock" ]
+    "", "",   "", "",  "", "bi bi-droplet",  "bi bi-clock" ]
 
 ]        
