@@ -6,7 +6,9 @@ const DoctsMenu = () => {
 
     return(
         // navigation
-        <div className="">
+        <div className="
+            relative w-[70px] h-[70px] bg-[#212532]
+        ">
 
             <BrowserRouter>
                 {iconsList.map((item, index) => {
