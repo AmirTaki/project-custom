@@ -33,8 +33,6 @@ const Navigation = () => {
                                 <LinkNavigation icon =  {item} key = {index} index = {index} toggle = {toggle}/>
                             )
                         })}
-                        
-                    
                     </BrowserRouter>
             </div>
     

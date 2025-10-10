@@ -6,10 +6,12 @@ const LinkNavigation = ({icon, index, toggle}) => {
 
         <li 
             style={{ 
-                transitionDelay : `${toggle ? `` : `calc(.1s * ${index}`}` ,
+                // transitionDelay : `${toggle ? `calc(.1s * ${index}` : `calc(.1s * ${index}`}` ,
+                transitionDelay : `calc(.1s * ${index}` ,
                 transform : `${toggle ? `rotate(0deg) translateX(80px)` : `rotate(calc(360deg / 8 * ${index})`}` 
             }}
-            className={`absolute  left-0 list-none origin-[100px] transition-transform duration-[500ms]!`}
+          
+            className={` absolute  left-0 list-none origin-[100px] transition-transform duration-[500ms]!`}
         >
             <Link 
                 style={{transform : `${toggle ? `` : `rotate(calc(360deg / -8 * ${index}))`} `}}
@@ -18,9 +20,7 @@ const LinkNavigation = ({icon, index, toggle}) => {
                 duration-[500ms]!`}>
                 <i className={icon}></i>
             </Link>
-        </li>
-        //            
-
+        </li>      
     )
 }
 
