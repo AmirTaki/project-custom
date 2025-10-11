@@ -11,8 +11,10 @@ const Navbar = () => {
                         <a href="">Web developer programming</a>
                     </div>
                 </div>
-                <div className=" w-10 h-20 bg-green-500">
-                    <ul>
+                <div className=" w-10 h-20 bg-green-500
+                  justify-center items-center flex
+                ">
+                    <ul className="  flex justify-center items-center gap-5">
                         <li><Link to = '/'>Home</Link></li>
                         <li><Link to = '/'>About</Link></li>
                         <li><Link to = '/'>Services</Link></li>
