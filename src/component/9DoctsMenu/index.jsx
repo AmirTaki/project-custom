@@ -16,6 +16,7 @@ const DoctsMenu = () => {
             }
             onClick={() => {setToggle((prev) => (!prev))}}
             >
+        
             <BrowserRouter >
                 {iconsList.map((item, index) => {
                     return(
@@ -23,6 +24,7 @@ const DoctsMenu = () => {
                     )
                 })}
             </BrowserRouter>
+
 
         </div>
     )
