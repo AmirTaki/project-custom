@@ -3,20 +3,20 @@ import { BrowserRouter, Link } from "react-router-dom"
 
 const Navbar = () => {
     return(
-        <div className="flex justify-between items-center bg-transparent px-[4rem] text-white
-            w-[100%] fixed 
+        <div className="flex justify-between items-center  px-[4rem] text-white
+            w-[100%] fixed bg-[rgba(0,0,0,.2)]
         ">
             <BrowserRouter >
                 <div className="  h-20 flex items-center justify-center ">
                     {/* logo */}
                     <div className="">
-                        <a className="text-[1.5rem] text-bold  cursor-pointer duration-300 hover:text-[orange]" href="">Web developer </a>
+                        <a className="text-[1.5rem] font-bold  cursor-pointer duration-300 hover:text-[orange]" href="">Web developer </a>
                     </div>
                 </div>
                 <div className="  h-20 
                   justify-between items-center flex gap-10
                 ">
-                    <ul className="  flex justify-center items-center gap-10">
+                    <ul className="  flex justify-center items-center gap-10 text-lg">
                         <li  className="cursor-pointer duration-300 hover:text-[orange]"><Link to = '/'>Home</Link></li>
                         <li  className="cursor-pointer duration-300 hover:text-[orange]"><Link to = '/'>About</Link></li>
                         <li  className="cursor-pointer duration-300 hover:text-[orange]"><Link to = '/'>Services</Link></li>
