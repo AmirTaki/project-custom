@@ -25,6 +25,7 @@ const Navbar = () => {
     },[] )
 
     useEffect(() => {
+        handerResize()
         return() => {
             handerResize()
         }
@@ -45,8 +46,8 @@ const Navbar = () => {
                     </div>
                 </div>
                                
-               
-                <ul  className="flex flex-row justify-center items-center gap-12">
+       
+                <ul  className={`${resize ? "" : "flex flex-row justify-center items-center gap-12"}`}>
                     <li  className={`${dropMenu ? " p-[.7rem] text-md" : "text-md"} cursor-pointer duration-300 hover:text-[orange] `} ><Link to = '/'>Home</Link></li>
                     <li  className={`${dropMenu ? " p-[.7rem] text-md" : "text-md"} cursor-pointer duration-300 hover:text-[orange] `} ><Link to = '/'>About</Link></li>
                     <li  className={`${dropMenu ? " p-[.7rem] text-md" : "text-md"} cursor-pointer duration-300 hover:text-[orange] `} ><Link to = '/'>Services</Link></li>
