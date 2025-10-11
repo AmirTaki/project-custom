@@ -17,7 +17,7 @@ const LinkMenu = ({item, toggle, index}) => {
                 <i 
                     className={`
                         ${item.icon} 
-                        ${toggle ? "hover:text-[#2dfc52]! " : ""}
+                        ${toggle && "hover:text-[#2dfc52]! glow-green duration-300" }
                         ${toggle ? "text-[1.35em] text-white" : "text-[0em] duration-500! " } 
                     `}
                 ></i>

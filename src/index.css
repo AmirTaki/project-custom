@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* Custom glow effect utility */
-.glow-green {
+.glow-green:hover {
   filter: drop-shadow(0 0 2px #2dfc52)
           drop-shadow(0 0 5px #2dfc52)
           drop-shadow(0 0 15px #2dfc52);
