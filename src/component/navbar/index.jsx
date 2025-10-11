@@ -1,8 +1,10 @@
+
 import { useState } from "react"
 import { BrowserRouter, Link } from "react-router-dom"
-const [dropMenu, setDropMenu] =  useState(false)
+
 
 const Navbar = () => {
+    const [dropMenu, setDrompMenu] =  useState(false)
     return(
         <div className="flex justify-between items-center  px-[4rem] text-white
             w-[100%] fixed bg-[rgba(0,0,0,.2)] h-[60px]
@@ -34,9 +36,9 @@ const Navbar = () => {
                 </div>
                 <div className="lg:hidden">
                     <div 
-                        onClick={()=>{setDropMenu((prevDropMenu) => (!prevDropMenu))}}
+                        onClick={()=>{setDrompMenu((prevDropMenu) => (!prevDropMenu))}}
                         className="text-white text-[1.5rem] cursor-pointer">
-                        <i className="fa-solid fa-bars"></i>
+                        <i className={`${dropMenu ? "fa-solid fa-xmark" : "fa-solid fa-bars"}`}></i>
                     </div>
                 </div>
                 
