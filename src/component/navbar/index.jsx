@@ -3,15 +3,15 @@ import { BrowserRouter, Link } from "react-router-dom"
 
 const Navbar = () => {
     return(
-        <div className="flex justify-between items-center bg-blue-500 px-30">
+        <div className="flex justify-between items-center bg-transparent px-30 text-white">
             <BrowserRouter >
-                <div className="  h-20 bg-red-500 flex items-center justify-center ">
+                <div className="  h-20 flex items-center justify-center ">
                     {/* logo */}
                     <div className="">
                         <a href="">Web developer </a>
                     </div>
                 </div>
-                <div className="  h-20 bg-green-500 
+                <div className="  h-20 
                   justify-between items-center flex gap-10
                 ">
                     <ul className="  flex justify-center items-center gap-10">
@@ -21,7 +21,7 @@ const Navbar = () => {
                         <li><Link to = '/'>Contact</Link></li>
                     </ul>
                 </div>
-                <div className="flex items-center justify-center bg-yellow-400 h-20">
+                <div className="flex items-center justify-center  h-20">
                     <div className="">
                         Get Start
                     </div>
