@@ -11,8 +11,8 @@ const Navbar = () => {
                         <a href="">Web developer programming</a>
                     </div>
                 </div>
-                <div className=" w-10 h-20 bg-green-500
-                  justify-center items-center flex
+                <div className="  h-20 bg-green-500
+                  justify-between items-center flex
                 ">
                     <ul className="  flex justify-center items-center gap-5">
                         <li><Link to = '/'>Home</Link></li>
@@ -20,8 +20,11 @@ const Navbar = () => {
                         <li><Link to = '/'>Services</Link></li>
                         <li><Link to = '/'>Contact</Link></li>
                     </ul>
+                    <div className="bg-yellow-500 h-20 flex items-center" >
+                        <div className="">GetStart</div>
+                    </div>
                 </div>
-                <div className=" w-10 h-20 bg-orange-500"></div>
+                
             </BrowserRouter>
         </div>
     )
