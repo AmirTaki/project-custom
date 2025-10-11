@@ -22,7 +22,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="flex items-center justify-center  h-20">
-                    <div className="">
+                    <div className="border-amber-300 border-2 px-[.5rem] py-[1rem]">
                         Get Start
                     </div>
                 </div>
