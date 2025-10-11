@@ -34,7 +34,7 @@ const Navbar = () => {
                 </div>
                                
                
-                <ul  className={`${dropMenu ? " absolute right-[2rem] h-[240px] top-[60px] flex justify-center flex-col items-center  overflow-hidden transition-[height] duration-400 ease-[cubic-bezier(.175,.885,.32,1.275)]  w-[300px] bg-[rgba(0,0,0,.2)]  " : "h-0 overflow-hidden transition-[height] duration-400 ease-[cubic-bezier(.175,.885,.32,1.275)]"}`}>
+                <ul  className="flex flex-row justify-center items-center gap-12">
                     <li  className={`${dropMenu ? " p-[.7rem] text-md" : "text-md"} cursor-pointer duration-300 hover:text-[orange] `} ><Link to = '/'>Home</Link></li>
                     <li  className={`${dropMenu ? " p-[.7rem] text-md" : "text-md"} cursor-pointer duration-300 hover:text-[orange] `} ><Link to = '/'>About</Link></li>
                     <li  className={`${dropMenu ? " p-[.7rem] text-md" : "text-md"} cursor-pointer duration-300 hover:text-[orange] `} ><Link to = '/'>Services</Link></li>
