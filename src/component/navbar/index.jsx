@@ -6,10 +6,14 @@ import { BrowserRouter, Link } from "react-router-dom"
 const Navbar = () => {
     const [dropMenu, setDrompMenu] =  useState(false)
     
+    const handlerNavbar = () => {
+        setDrompMenu((prev) => (!prev))
+    }
+
     useEffect(() => {
       
       return() => {
-        window.addEventListener('resize', setDrompMenu((prev) => (prev = false)))
+        window.addEventListener('resize', handlerNavbar)
       }
     },[] )
 
