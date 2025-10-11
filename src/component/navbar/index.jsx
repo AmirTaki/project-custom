@@ -38,9 +38,9 @@ const Navbar = () => {
                                
        
                 <ul  className={`
-                    ${resize ? "hidden " : "flex flex-row justify-center items-center gap-10"}
-                    ${dropMenu && resize ? "flex! flex-col items-center justify-center absolute right-[2rem]  top-[60px] transition-[height]! duration-500! ease-[cubic-bezier(.175,.885,.32,1.275)]! h-[280px]! w-[300px] bg-[rgba(0,0,0,.2)]  overflow-hidden" 
-                    : "h-0! duration-500"}
+                    ${resize ? " h-0 overflow-hidden fixed right-[2rem]  top-[60px] " : "flex flex-row justify-center items-center gap-10"}
+                    ${dropMenu && resize ? "flex! flex-col items-center justify-center transition-[height]! fixed right-[2rem]  top-[60px]  duration-500! ease-[cubic-bezier(.175,.885,.32,1.275)]! h-[280px]! w-[300px] bg-[rgba(0,0,0,.2)]  overflow-hidden" 
+                    : "h-0! duration-500 "}
                     ` 
                 }>
                     <li  className={`${dropMenu ? " p-[.7rem] text-md" : "text-md"} cursor-pointer duration-300 hover:text-[orange] `} ><Link to = '/'>Home</Link></li>
