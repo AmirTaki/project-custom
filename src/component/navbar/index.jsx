@@ -34,7 +34,7 @@ const Navbar = () => {
                 </div>
                 <div className="lg:hidden">
                     <div 
-                        onClick={()=>{}}
+                        onClick={()=>{setDropMenu((prevDropMenu) => (!prevDropMenu))}}
                         className="text-white text-[1.5rem] cursor-pointer">
                         <i className="fa-solid fa-bars"></i>
                     </div>
