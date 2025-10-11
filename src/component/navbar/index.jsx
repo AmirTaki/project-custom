@@ -30,12 +30,15 @@ const Navbar = () => {
                     </div>
                 </div>
                                
-                <div className={`${dropMenu ? "flex absolute right-[2rem] top-[60px] h-[240px] w-[300px] bg-[rgba(255,255,255,.1)] overflow-hidden  " : "   lg:justify-between lg:items-center lg:flex lg:gap-10 max-lg:hidden"}`}>
-                    <ul className={`${dropMenu ? "": 'flex justify-center items-center gap-10 text-lg'}`}>
-                        <li  className="cursor-pointer duration-300 hover:text-[orange]"><Link to = '/'>Home</Link></li>
-                        <li  className="cursor-pointer duration-300 hover:text-[orange]"><Link to = '/'>About</Link></li>
-                        <li  className="cursor-pointer duration-300 hover:text-[orange]"><Link to = '/'>Services</Link></li>
-                        <li  className="cursor-pointer duration-300 hover:text-[orange]"><Link to = '/'>Contact</Link></li>
+                <div className={`${dropMenu ? "h-0  " : "   lg:justify-between lg:items-center lg:flex lg:gap-10 max-lg:hidden"}`}>
+                    <ul className={`${dropMenu ?
+                        "flex flex-col items-center justify-center absolute right-[2rem] top-[60px] transition-[height]! duration-200! ease-out! h-[240px]! w-[300px] bg-[rgba(255,255,255,.1)] overflow-hidden"
+                        : 'flex justify-center items-center gap-10 text-lg h-0!'}`}
+                    >
+                        <li  className={`${dropMenu ? " p-[.7rem] text-lg" : "text-md"} cursor-pointer duration-300 hover:text-[orange] `} ><Link to = '/'>Home</Link></li>
+                        <li  className={`${dropMenu ? " p-[.7rem] text-lg" : "text-md"} cursor-pointer duration-300 hover:text-[orange] `} ><Link to = '/'>About</Link></li>
+                        <li  className={`${dropMenu ? " p-[.7rem] text-lg" : "text-md"} cursor-pointer duration-300 hover:text-[orange] `} ><Link to = '/'>Services</Link></li>
+                        <li  className={`${dropMenu ? " p-[.7rem] text-lg" : "text-md"} cursor-pointer duration-300 hover:text-[orange] `} ><Link to = '/'>Contact</Link></li>
                     </ul>
                 </div>
                 <div className="flex items-center justify-center  max-lg:hidden ">
