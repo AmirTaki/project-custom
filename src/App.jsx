@@ -11,8 +11,8 @@ function App() {
     <div className="bg-[#10131c] h-[100vh]   ">
 
       {/* navigatin & docts menu */}
-      <Navigation />
-      <DoctsMenu />
+      {/* <Navigation /> */}
+      {/* <DoctsMenu /> */}
   
 
     </div>
