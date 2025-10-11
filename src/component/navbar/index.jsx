@@ -32,7 +32,9 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="lg:hidden">
-                    <div className="toggle_btn"><i className="fa-solid fa-bars"></i></div>
+                    <div className="text-white text-[1.5rem] cursor-pointer">
+                        <i className="fa-solid fa-bars"></i>
+                    </div>
                 </div>
                 
             </BrowserRouter>
