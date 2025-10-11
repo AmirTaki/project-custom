@@ -11,7 +11,7 @@ const LinkMenu = ({item, toggle, index}) => {
                 }}
                 className={`
                     ${toggle ? "w-[45px] h-[45px] bg-[#333849]" : "w-[7px] h-[7px] bg-white"}
-                        flex  justify-center items-center   rounded-[50%] absolute
+                        flex  justify-center items-center   rounded-[50%] absolute -translate-x-1/2 -translate-y-1/2
                     `}
             >
                 <i 
