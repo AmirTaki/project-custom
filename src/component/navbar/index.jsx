@@ -5,6 +5,7 @@ import { BrowserRouter, Link } from "react-router-dom"
 
 const Navbar = () => {
     const [dropMenu, setDrompMenu] =  useState(false)
+    const [resize, setResize] = useState(false)
     
     const handlerNavbar = () => {
         setDrompMenu(false)
