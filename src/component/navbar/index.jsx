@@ -39,7 +39,7 @@ const Navbar = () => {
        
                 <ul  className={`
                     ${resize ? " h-0 overflow-hidden  flex! flex-col items-center justify-center fixed right-[2rem] w-[300px]  top-[60px] " : "flex flex-row justify-center items-center gap-10"}
-                    ${dropMenu && resize ? "flex! flex-col items-center justify-center transition-[height]! fixed right-[2rem]  top-[60px]  duration-500! ease-[cubic-bezier(.175,.885,.32,1.275)]! h-[280px]! w-[300px] bg-[rgba(0,0,0,.2)]  overflow-hidden" 
+                    ${dropMenu && resize ? " transition-[height]! duration-500! ease-[cubic-bezier(.175,.885,.32,1.275)]! h-[280px]!  bg-[rgba(0,0,0,.2)]  overflow-hidden" 
                     : "h-0! duration-500 "}
                     ` 
                 }>
