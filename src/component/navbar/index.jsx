@@ -20,12 +20,8 @@ const Navbar = () => {
       }
     },[])
 
-
-        //  "lg:flex flex-col items-center justify-center absolute right-[2rem]  top-[60px] transition-[height] duration-200 ease-[cubic-bezier(.175,.885,.32,1.275)] h-[280px]! w-[300px] bg-[rgba(0,0,0,.2)]  overflow-hidden"
-        //                 : 'flex justify-center items-center gap-10 text-lg h-0 transition-[height] duration-200 ease-[cubic-bezier(.175,.885,.32,1.275)]  lg:justify-between lg:items-center lg:flex lg:gap-10 max-lg:hidden'
-
     return(
-        <div className="flex justify-between items-center  px-[4rem] text-white
+        <div className="flex justify-between items-center  px-[5rem] max-lg:px-[2rem] text-white
             w-[100%] fixed bg-[rgba(0,0,0,.2)] h-[60px]
         ">
             <BrowserRouter >
@@ -38,8 +34,8 @@ const Navbar = () => {
                                
        
                 <ul  className={`
-                    ${resize ? " h-0 overflow-hidden  flex! flex-col items-center justify-center fixed right-[2rem] w-[300px]  top-[60px] " : "flex flex-row justify-center items-center gap-10"}
-                    ${dropMenu && resize ? " transition-[height]! duration-500! ease-[cubic-bezier(.175,.885,.32,1.275)]! h-[280px]!  bg-[rgba(0,0,0,.2)]  overflow-hidden" 
+                    ${resize ? " h-0 overflow-hidden  flex! flex-col items-center justify-center fixed right-[2rem] max-md:right-[5%] max-md:left-[5%]  max-md:w-[90%] w-[300px] rounded-2xl top-[60px] " : "flex flex-row justify-center items-center gap-10"}
+                    ${dropMenu && resize ? " transition-[height]! duration-500! ease-[cubic-bezier(.175,.885,.32,1.275)]! h-[260px]!  bg-[rgba(0,0,0,.2)]  overflow-hidden" 
                     : "h-0! duration-500 "}
                     ` 
                 }>
