@@ -10,7 +10,7 @@ function App() {
     <>
     {/*  */}
     <div 
-      className={`h-[100vh]`}
+      className={`h-[100vh] bg-no-repeat bg-cover`}
       style={{backgroundImage : `url(${background})`}}
       >
 

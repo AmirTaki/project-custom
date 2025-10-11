@@ -15,18 +15,18 @@ const Navbar = () => {
                   justify-between items-center flex gap-10
                 ">
                     <ul className="  flex justify-center items-center gap-10">
-                        <li><Link to = '/'>Home</Link></li>
-                        <li><Link to = '/'>About</Link></li>
-                        <li><Link to = '/'>Services</Link></li>
-                        <li><Link to = '/'>Contact</Link></li>
+                        <li  className="cursor-pointer duration-300 hover:text-[orange]"><Link to = '/'>Home</Link></li>
+                        <li  className="cursor-pointer duration-300 hover:text-[orange]"><Link to = '/'>About</Link></li>
+                        <li  className="cursor-pointer duration-300 hover:text-[orange]"><Link to = '/'>Services</Link></li>
+                        <li  className="cursor-pointer duration-300 hover:text-[orange]"><Link to = '/'>Contact</Link></li>
                     </ul>
                 </div>
                 <div className="flex items-center justify-center  h-20">
-                    <div className="border-0 outline-0 px-[2rem] py-[.5rem]
-                        rounded-[20px] cursor-pointer text-[.8rem] font-bold bg-orange-400
+                    <div className="border-0 outline-0 px-[1rem] py-[.5rem]
+                        rounded-[20px] cursor-pointer text-[.8rem] font-bold bg-[orange]
                         hover:scale-111 duration-200 active:scale-95
                     ">
-                        Get Start
+                        Get Started
                     </div>
                 </div>
                 
