@@ -29,10 +29,9 @@ const Navbar = () => {
                         <a className="text-[1.5rem] font-bold  cursor-pointer duration-300 hover:text-[orange]" href="">Web developer </a>
                     </div>
                 </div>
-                <div className="  
-                  justify-between items-center flex gap-10 max-lg:hidden
-                ">
-                    <ul className="  flex justify-center items-center gap-10 text-lg">
+                               
+                <div className={`${dropMenu ? "flex absolute right-[2rem] top-[60px] h-[240px] w-[300px] bg-[rgba(255,255,255,.1)] overflow-hidden  " : "   lg:justify-between lg:items-center lg:flex lg:gap-10 max-lg:hidden"}`}>
+                    <ul className={`${dropMenu ? "": 'flex justify-center items-center gap-10 text-lg'}`}>
                         <li  className="cursor-pointer duration-300 hover:text-[orange]"><Link to = '/'>Home</Link></li>
                         <li  className="cursor-pointer duration-300 hover:text-[orange]"><Link to = '/'>About</Link></li>
                         <li  className="cursor-pointer duration-300 hover:text-[orange]"><Link to = '/'>Services</Link></li>
