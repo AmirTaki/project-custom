@@ -13,11 +13,10 @@ const Navbar = () => {
                 </div>
                 <div className=" w-10 h-20 bg-green-500">
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li><Link to = '/'>Home</Link></li>
+                        <li><Link to = '/'>About</Link></li>
+                        <li><Link to = '/'>Services</Link></li>
+                        <li><Link to = '/'>Contact</Link></li>
                     </ul>
                 </div>
                 <div className=" w-10 h-20 bg-orange-500"></div>
