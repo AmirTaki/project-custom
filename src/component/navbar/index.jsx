@@ -11,11 +11,18 @@ const Navbar = () => {
         setDrompMenu(false)
     }
 
+    const handerResize = () => {
+        setResize (  window.innerWidth <= 1024 ? true : false);
+    }
+  
+
     useEffect(() => {
         window.addEventListener('resize', handlerNavbar)           
-
+        window.addEventListener('resize', handerResize)           
+        
         return() => {
             window.addEventListener('resize', handlerNavbar)           
+            window.addEventListener('resize', handerResize)           
       }
     },[] )
 
