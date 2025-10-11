@@ -12,7 +12,7 @@ const Navbar = () => {
     }
 
     const handerResize = () => {
-        setResize (  window.innerWidth <= 1024 ? true : false);
+        
     }
   
 
@@ -25,11 +25,11 @@ const Navbar = () => {
     },[] )
 
     useEffect(() => {
-        handerResize()
+        setResize (window.innerWidth <= 1024 ? true : false);
         return() => {
-            handerResize()
+            setResize (window.innerWidth <= 1024 ? true : false);
         }
-    })
+    },)
 
         //  "lg:flex flex-col items-center justify-center absolute right-[2rem]  top-[60px] transition-[height] duration-200 ease-[cubic-bezier(.175,.885,.32,1.275)] h-[280px]! w-[300px] bg-[rgba(0,0,0,.2)]  overflow-hidden"
         //                 : 'flex justify-center items-center gap-10 text-lg h-0 transition-[height] duration-200 ease-[cubic-bezier(.175,.885,.32,1.275)]  lg:justify-between lg:items-center lg:flex lg:gap-10 max-lg:hidden'
@@ -47,7 +47,7 @@ const Navbar = () => {
                 </div>
                                
        
-                <ul  className={`${resize ? "" : "flex flex-row justify-center items-center gap-12"}`}>
+                <ul  className={`${resize ? "hidden" : "flex flex-row justify-center items-center gap-12"}`}>
                     <li  className={`${dropMenu ? " p-[.7rem] text-md" : "text-md"} cursor-pointer duration-300 hover:text-[orange] `} ><Link to = '/'>Home</Link></li>
                     <li  className={`${dropMenu ? " p-[.7rem] text-md" : "text-md"} cursor-pointer duration-300 hover:text-[orange] `} ><Link to = '/'>About</Link></li>
                     <li  className={`${dropMenu ? " p-[.7rem] text-md" : "text-md"} cursor-pointer duration-300 hover:text-[orange] `} ><Link to = '/'>Services</Link></li>
