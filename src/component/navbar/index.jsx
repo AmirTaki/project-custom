@@ -22,7 +22,9 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="flex items-center justify-center  h-20">
-                    <div className="border-amber-300 border-2 px-[.5rem] py-[1rem]">
+                    <div className="border-0 outline-0 px-[.5rem] py-[1rem]
+                        rounded-[20px] cursor-pointer text-[.8rem] font-bold bg-orange-400
+                    ">
                         Get Start
                     </div>
                 </div>
