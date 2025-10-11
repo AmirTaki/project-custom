@@ -5,12 +5,14 @@ import { BrowserRouter, Link } from "react-router-dom"
 
 const Navbar = () => {
     const [dropMenu, setDrompMenu] =  useState(false)
+    
     useEffect(() => {
-        setDrompMenu((prev) => (prev = false))
-        return() => {
-            setDrompMenu((prev) => (prev = false))
-        }
-    },[])
+      
+      return() => {
+        window.addEventListener('resize', setDrompMenu((prev) => (prev = false)))
+      }
+    },[] )
+
     return(
         <div className="flex justify-between items-center  px-[4rem] text-white
             w-[100%] fixed bg-[rgba(0,0,0,.2)] h-[60px]
