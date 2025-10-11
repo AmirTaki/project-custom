@@ -18,13 +18,17 @@ const Navbar = () => {
 
     useEffect(() => {
         window.addEventListener('resize', handlerNavbar)           
-        window.addEventListener('resize', handerResize)           
-        
+
         return() => {
             window.addEventListener('resize', handlerNavbar)           
-            window.addEventListener('resize', handerResize)           
       }
     },[] )
+
+    useEffect(() => {
+        return() => {
+            handerResize()
+        }
+    })
 
         //  "lg:flex flex-col items-center justify-center absolute right-[2rem]  top-[60px] transition-[height] duration-200 ease-[cubic-bezier(.175,.885,.32,1.275)] h-[280px]! w-[300px] bg-[rgba(0,0,0,.2)]  overflow-hidden"
         //                 : 'flex justify-center items-center gap-10 text-lg h-0 transition-[height] duration-200 ease-[cubic-bezier(.175,.885,.32,1.275)]  lg:justify-between lg:items-center lg:flex lg:gap-10 max-lg:hidden'
