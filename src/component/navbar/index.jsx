@@ -7,13 +7,14 @@ const Navbar = () => {
     const [dropMenu, setDrompMenu] =  useState(false)
     
     const handlerNavbar = () => {
-        setDrompMenu((prev) => (!prev))
+        setDrompMenu(false)
     }
 
     useEffect(() => {
-      
-      return() => {
-        window.addEventListener('resize', handlerNavbar)
+        window.addEventListener('resize', handlerNavbar)           
+
+        return() => {
+            window.addEventListener('resize', handlerNavbar)           
       }
     },[] )
 
