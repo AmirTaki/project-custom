@@ -52,7 +52,7 @@ const MagicNavigationMenu = () => {
                             <div 
                                 style={{transform : `translateX(calc(70px * ${numberStatus}))` }}
                                 className={`
-                                    absolute  -top-[57%] w-[70px] h-[70px] bg-[#29fd53] rounded-[50%] border-6 border-[#29fd53] duration-500 shadow-[0_5px_0_0_#222327]
+                                    absolute  top-[-50%] w-[70px] h-[70px] bg-[#29fd53] rounded-[50%] border-6 border-[#29fd53] duration-500 
                                     before:content-[''] before:absolute before:top-[57%]  before:left-[-39%] before:w-[23px] before:h-[20px] before:bg-red-400 before:rounded-tr-[20px] before:shadow-[0_-10px_0_0_#222327]
                                     after:content-[''] after:absolute after:top-[50%] after:right-[-20px] after:w-[20px] after:h-[20px] after:bg-transparent after:rounded-tl-[20px] after:shadow-[0_-10px_0_0_#222327]
                                 `}
