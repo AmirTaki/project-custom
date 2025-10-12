@@ -12,7 +12,12 @@ const LinkMenu = ({item}) => {
                 >
                     <i className={`${item.icon}`}></i>
                 </span>
-                <span className="">{item.name}</span>
+                
+                <span 
+                    className={`absolute text-[#222327]`}
+                >
+                    {item.name}
+                </span>
             </Link>
         </li>
     )
