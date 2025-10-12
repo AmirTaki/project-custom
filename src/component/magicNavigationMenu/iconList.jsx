@@ -1,4 +1,4 @@
-export const iconList = [
+export const IconListNaviation = [
     {
         icon : "bi bi-house-door",
         name : 'Home'

@@ -1,5 +1,7 @@
 import { useReducer } from "react";
 import { BrowserRouter, Link, Route } from "react-router-dom";
+import { IconListNaviation } from "./iconList";
+
 
 // const [state, dispatch] =  useReducer(reducer, [])
 
@@ -12,6 +14,11 @@ const MagicNavigationMenu = () => {
             >
                 <BrowserRouter>
                     <ul>
+                        {IconListNaviation.map((item, index) => {
+                            return(
+                                <div key = {indexx}></div>
+                            )
+                        })}
                         <li>
                             <Link to = '/' >
                                 <span className=""><i className="bi bi-house-door"></i></span>
