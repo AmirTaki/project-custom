@@ -1,27 +1,23 @@
 export const iconList = [
     {
-        icon : "",
-        name : ''
+        icon : "bi bi-house-door",
+        name : 'Home'
     },
     {
-        icon : "",
-        name : ''
+        icon : "bi bi-person",
+        name : 'Profile'
     },
     {
-        icon : "",
-        name : ''
+        icon : "bi bi-chat",
+        name : 'Message'
     },
     {
-        icon : "",
-        name : ''
+        icon : "bi bi-camera",
+        name : 'Photos'
     },
     {
-        icon : "",
-        name : ''
+        icon : "bi bi-gear",
+        name : 'Settings'
     },
-    {
-        icon : "",
-        name : ''
-    },
-
+    
 ]
