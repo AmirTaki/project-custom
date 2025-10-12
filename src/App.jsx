@@ -1,4 +1,4 @@
-import background from "../public/background.avif"
+// import background from "../public/background.avif"
 import './App.css'
 import DoctsMenu from './component/9DoctsMenu'
 import MagicNavigationMenu from "./component/magicNavigationMenu"

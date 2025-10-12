@@ -16,7 +16,7 @@ const MagicNavigationMenu = () => {
                     <ul>
                         {IconListNaviation.map((item, index) => {
                             return(
-                                <div key = {indexx}></div>
+                                <div key = {index}>{item.name}</div>
                             )
                         })}
                         <li>
