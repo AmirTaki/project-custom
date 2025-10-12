@@ -39,9 +39,10 @@ const MagicNavigationMenu = () => {
     
     return(
         // navigation
-        <div className="
-            fixed left-0 bottom-0.5
-            flex justify-center items-center   w-[400px] h-[70px] bg-white  rounded-[10px]"
+    
+        <div 
+            className="fixed left-0 bottom-0.5 flex justify-center items-center   w-[400px] h-[70px] bg-white  rounded-[10px]"
+            style={{left : `${mouse.x}`}}
             >
                 <contextNavigation.Provider value = {{state, dispatch}}>
                     <BrowserRouter>
