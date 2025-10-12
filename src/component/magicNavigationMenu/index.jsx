@@ -19,7 +19,9 @@ const MagicNavigationMenu = () => {
                             return(
                                 <LinkMenu key = {index} item = {item} />                            )
                         })}
-                        <div className=""></div>
+                        <div 
+                            className="absolute w-[70px] h-[70px] bg-[#29fd53] rounded-[50%] border-6 border-[#29fd53]"
+                        ></div>
                     </ul>
                 </BrowserRouter>
         </div>
