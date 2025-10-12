@@ -2,27 +2,32 @@ export const IconListNaviation = [
     {   
         id : 0,
         icon : "bi bi-house-door",
-        name : 'Home'
+        name : 'Home',
+        status : true
     },
     {
         id : 1,
         icon : "bi bi-person",
-        name : 'Profile'
+        name : 'Profile',
+        status : false
     },
     {
         id : 2,
         icon : "bi bi-chat",
-        name : 'Message'
+        name : 'Message',
+        status : false
     },
     {
         id : 3, 
         icon : "bi bi-camera",
-        name : 'Photos'
+        name : 'Photos',
+        status : false
     },
     {
         id : 4,
         icon : "bi bi-gear",
-        name : 'Settings'
+        name : 'Settings',
+        status : false
     },
     
 ]
