@@ -18,7 +18,7 @@ const LinkMenu = ({item}) => {
                 <span 
                     className={`
                         relative block leading-[75px] text-[1.5em] text-center duration-500 text-[#222327]
-                        ${item.status ? "translate-y-[-32px]" : "translate-y-0"}
+                        ${item.status ? "translate-y-[-40px]" : "translate-y-0"}
                         `}
                 >
                     <i className={`${item.icon}`}></i>
