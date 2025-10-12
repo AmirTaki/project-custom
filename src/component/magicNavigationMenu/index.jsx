@@ -1,9 +1,9 @@
-
 import { BrowserRouter, Link, Route } from "react-router-dom";
 import { IconListNaviation } from "./iconList";
 import LinkMenu from "./linkMenu";
-import { useReducer } from "react";
+import { createContext, useReducer } from "react";
 
+const contextNaviation  = createContext()
 
 const MagicNavigationMenu = () => {
     
@@ -14,6 +14,7 @@ const MagicNavigationMenu = () => {
         }
     }
     
+    
     const [state, dispatch]  = useReducer(reducer, IconListNaviation)
     
     return(
@@ -21,6 +22,7 @@ const MagicNavigationMenu = () => {
         <div className="
             flex justify-center items-center   w-[400px] h-[70px] bg-white relative rounded-[10px]"
             >
+                <contextNaviation.Provider>
                 <BrowserRouter>
                     <ul className="flex w-[350px] ">
                         {state.map((item) => {
@@ -37,6 +39,7 @@ const MagicNavigationMenu = () => {
                         ></div>
                     </ul>
                 </BrowserRouter>
+                </contextNaviation.Provider>
         </div>
     )
 }
