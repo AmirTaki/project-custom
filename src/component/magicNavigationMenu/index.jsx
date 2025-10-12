@@ -10,8 +10,8 @@ const MagicNavigationMenu = () => {
                     <ul>
                         <li>
                             <Link to = '/' >
-                                <span></span>
-                                <span></span>
+                                <span className=""><i className="bi bi-house-door"></i></span>
+                                <span className="">Home</span>
                             </Link>
                         </li>
                     </ul>
