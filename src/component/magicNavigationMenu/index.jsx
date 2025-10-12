@@ -3,7 +3,12 @@ import { BrowserRouter, Link, Route } from "react-router-dom";
 import { IconListNaviation } from "./iconList";
 import LinkMenu from "./linkMenu";
 
-
+const reducer = (state, action) => {
+    switch (action.type){
+        case "":
+            return state;
+    }
+}
 const [state, dispatch] =  useReducer(reducer, IconListNaviation);
 
 
@@ -16,11 +21,11 @@ const MagicNavigationMenu = () => {
             >
                 <BrowserRouter>
                     <ul className="flex w-[350px] ">
-                        {IconListNaviation.map((item) => {
+                        {/* {state.map((item) => {
                             return(
                                 <LinkMenu key = {item.id} item = {item}  />                            
                             )
-                        })}
+                        })} */}
                         <div 
                             className={`
                                 absolute  -top-[50%] w-[70px] h-[70px] bg-[#29fd53] rounded-[50%] border-6 border-[#29fd53] duration-500
