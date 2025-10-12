@@ -1,7 +1,7 @@
 import { BrowserRouter, Link, Route } from "react-router-dom";
 import { IconListNaviation } from "./iconList";
 import LinkMenu from "./linkMenu";
-import { createContext, useReducer } from "react";
+import { createContext, useEffect, useReducer } from "react";
 
 export const contextNavigatoin  = createContext()
 const MagicNavigationMenu = () => {
@@ -11,28 +11,25 @@ const MagicNavigationMenu = () => {
         
         switch (action.type){
             case "selectItem":
-
                 const newData =  state.map((item) => {
                     item.status =  item.id === action.payload.id  ? true : false
                     return item
                 })
-                return [...newData]
-
-                // const newData = state.map((item) => {
-                //     item.status = false
-                //     return item; 
-                // })
-                
-                // return [...newData,  state.map((item) => {
-                //     item.id === action.payload.id  ? true : false
-                // }) ]; // This line has issues
-       
+            return [...newData]       
         }
     }
-    
-    
+        
     const [state, dispatch]  = useReducer(reducer, IconListNaviation)
-    
+    const checkStatusMenu = () => {
+        state.map((item) => {
+            return item.status && item.id
+        })
+    }
+
+  
+    useEffect(() => {
+        console.log(checkStatusMenu())
+    },[state])
     return(
         // navigation
         <div className="
