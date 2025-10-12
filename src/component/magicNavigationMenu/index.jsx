@@ -19,12 +19,7 @@ const MagicNavigationMenu = () => {
                             return(
                                 <LinkMenu key = {index} item = {item} />                            )
                         })}
-                        <li>
-                            <Link to = '/' >
-                                <span className=""><i className="bi bi-house-door"></i></span>
-                                <span className="">Home</span>
-                            </Link>
-                        </li>
+                        
                     </ul>
                 </BrowserRouter>
         </div>
