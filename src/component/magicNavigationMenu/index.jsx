@@ -3,7 +3,7 @@ import { IconListNaviation } from "./iconList";
 import LinkMenu from "./linkMenu";
 import { createContext, useReducer } from "react";
 
-const contextNaviation  = createContext()
+export const contextNavigatoin  = createContext()
 
 const MagicNavigationMenu = () => {
     
@@ -22,7 +22,7 @@ const MagicNavigationMenu = () => {
         <div className="
             flex justify-center items-center   w-[400px] h-[70px] bg-white relative rounded-[10px]"
             >
-                <contextNaviation.Provider value = {{state, dispatch}}>
+                <contextNavigatoin.Provider value = {{state, dispatch}}>
                     <BrowserRouter>
                         <ul className="flex w-[350px] ">
                             {state.map((item) => {
@@ -39,7 +39,7 @@ const MagicNavigationMenu = () => {
                             ></div>
                         </ul>
                     </BrowserRouter>
-                </contextNaviation.Provider>
+                </contextNavigatoin.Provider>
         </div>
     )
 }

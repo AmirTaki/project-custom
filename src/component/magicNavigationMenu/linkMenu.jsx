@@ -1,5 +1,8 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { contextNavigatoin } from ".";
 
+const {dispatch} =  useContext(contextNavigatoin)
 
 const LinkMenu = ({item}) => {
     return(
