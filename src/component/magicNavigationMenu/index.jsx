@@ -15,9 +15,9 @@ const MagicNavigationMenu = () => {
             >
                 <BrowserRouter>
                     <ul className="flex w-[350px] ">
-                        {IconListNaviation.map((item, index) => {
+                        {IconListNaviation.map((item) => {
                             return(
-                                <LinkMenu key = {index} item = {item} index = {index} />                            )
+                                <LinkMenu key = {item.id} item = {item}  />                            )
                         })}
                         <div 
                             className="
