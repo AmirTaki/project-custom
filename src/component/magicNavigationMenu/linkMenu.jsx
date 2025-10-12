@@ -2,13 +2,15 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { contextNavigatoin } from ".";
 
-const {dispatch} =  useContext(contextNavigatoin)
 
 const LinkMenu = ({item}) => {
+
+    const {dispatch} =  useContext(contextNavigatoin)
+    
     return(
         <li 
             className={`relative list-none w-[70px] h-[70px] z-10`}
-            onClick={() => {}}
+            onClick={() => {dispatch({type : 'selectItem', payload : {id : item.id} })}}
         >
             <Link to = '/' 
                 className={`relative flex justify-self-center items-center flex-col w-[100%] text-center font-[500] ` }
