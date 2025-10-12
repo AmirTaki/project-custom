@@ -53,8 +53,8 @@ const MagicNavigationMenu = () => {
                                 style={{transform : `translateX(calc(70px * ${numberStatus}))` }}
                                 className={`
                                     absolute  top-[-50%] w-[70px] h-[70px] bg-[#29fd53] rounded-[50%] border-6 border-[#10131c] duration-500
-                                    before:content-[''] before:absolute before:top-[50%]  before:left-[-22%] before:w-[20px] before:h-[20px] before:bg-transparent before:rounded-tr-[20px] before:shadow-[0_-10px_0_0_#10131c]
-                                    after:content-[''] after:absolute after:top-[50%] after:right-[-22px] after:w-[20px] after:h-[20px] after:bg-transparent after:rounded-tl-[20px] after:shadow-[0_-10px_0_0_#10131c]
+                                    before:content-[''] before:absolute before:top-[50%]  before:left-[-35%] before:w-[20px] before:h-[20px] before:bg-transparent before:rounded-tr-[20px] before:shadow-[0_-10px_0_0_#10131c]
+                                    after:content-[''] after:absolute after:top-[50%] after:right-[-21px] after:w-[20px] after:h-[20px] after:bg-transparent after:rounded-tl-[20px] after:shadow-[0_-10px_0_0_#10131c]
                                 `}
                             ></div>
                         </ul>
