@@ -1,5 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
-
+import { BrowserRouter, Link, Route } from "react-router-dom";
 
 const MagicNavigationMenu = () => {
     return(
@@ -10,7 +9,10 @@ const MagicNavigationMenu = () => {
                 <BrowserRouter>
                     <ul>
                         <li>
-                            
+                            <Link to = '/' >
+                                <span></span>
+                                <span></span>
+                            </Link>
                         </li>
                     </ul>
                 </BrowserRouter>
