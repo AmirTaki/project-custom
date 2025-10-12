@@ -4,13 +4,29 @@ import LinkMenu from "./linkMenu";
 import { createContext, useReducer } from "react";
 
 export const contextNavigatoin  = createContext()
-
 const MagicNavigationMenu = () => {
     
     const reducer = (state, action) => {
+
+        
         switch (action.type){
-            case "":
-                return state;
+            case "selectItem":
+
+                const newData =  state.map((item) => {
+                    item.status =  item.id === action.payload.id  ? true : false
+                    return item
+                })
+                return [...newData]
+
+                // const newData = state.map((item) => {
+                //     item.status = false
+                //     return item; 
+                // })
+                
+                // return [...newData,  state.map((item) => {
+                //     item.id === action.payload.id  ? true : false
+                // }) ]; // This line has issues
+       
         }
     }
     
