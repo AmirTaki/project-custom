@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-Link
+
 const LinkMenu = ({item}) => {
     return(
         <li 

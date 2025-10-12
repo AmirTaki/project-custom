@@ -4,7 +4,8 @@ import { IconListNaviation } from "./iconList";
 import LinkMenu from "./linkMenu";
 
 
-// const [state, dispatch] =  useReducer(reducer, [])
+const [state, dispatch] =  useReducer(reducer, IconListNaviation);
+
 
 
 const MagicNavigationMenu = () => {
