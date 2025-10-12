@@ -1,7 +1,7 @@
 import { BrowserRouter, Link, Route } from "react-router-dom";
 import { IconListNaviation } from "./iconList";
 import LinkMenu from "./linkMenu";
-import { createContext, useEffect, useReducer } from "react";
+import { createContext, useEffect, useReducer, useState } from "react";
 
 export const contextNavigatoin  = createContext()
 const MagicNavigationMenu = () => {
@@ -20,9 +20,13 @@ const MagicNavigationMenu = () => {
     }
         
     const [state, dispatch]  = useReducer(reducer, IconListNaviation)
+    const [numberStatus, setNumberStatus]  = useState(0)
     const checkStatusMenu = () => {
         state.map((item) => {
-            return item.status && item.id
+            if(item.status === true){
+                setNumberStatus(item.id)
+                
+            }
         })
     }
 
