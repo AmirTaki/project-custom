@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { contextNavigatoin } from ".";
+import { contextNavigation } from ".";
 
 
 const LinkMenu = ({item}) => {
 
-    const {dispatch} =  useContext(contextNavigatoin)
+    const {dispatch} =  useContext(contextNavigation)
     
     return(
         <li 

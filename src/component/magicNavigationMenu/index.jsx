@@ -3,7 +3,7 @@ import { IconListNaviation } from "./iconList";
 import LinkMenu from "./linkMenu";
 import { createContext, useEffect, useReducer, useState } from "react";
 
-export const contextNavigatoin  = createContext()
+export const contextNavigation = createContext()
 const MagicNavigationMenu = () => {
     
     const reducer = (state, action) => {
@@ -11,11 +11,12 @@ const MagicNavigationMenu = () => {
         
         switch (action.type){
             case "selectItem":
-                const newData =  state.map((item) => {
-                    item.status =  item.id === action.payload.id  ? true : false
-                    return item
-                })
-            return [...newData]       
+                return state.map((item) => ({
+                    ...item,
+                    status: item.id === action.payload.id
+                }));
+            default:
+                return state;
         }
     }
         
@@ -33,14 +34,14 @@ const MagicNavigationMenu = () => {
   
     useEffect(() => {
         checkStatusMenu()
-        numberStatus
+        console.log(numberStatus)
     },[state])
     return(
         // navigation
         <div className="
             flex justify-center items-center   w-[400px] h-[70px] bg-white relative rounded-[10px]"
             >
-                <contextNavigatoin.Provider value = {{state, dispatch}}>
+                <contextNavigation.Provider value = {{state, dispatch}}>
                     <BrowserRouter>
                         <ul className="flex w-[350px] ">
                             {state.map((item) => {
@@ -57,7 +58,7 @@ const MagicNavigationMenu = () => {
                             ></div>
                         </ul>
                     </BrowserRouter>
-                </contextNavigatoin.Provider>
+                </contextNavigation.Provider>
         </div>
     )
 }
