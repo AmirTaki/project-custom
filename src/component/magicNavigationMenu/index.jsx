@@ -22,6 +22,7 @@ const MagicNavigationMenu = () => {
         
     const [state, dispatch]  = useReducer(reducer, IconListNaviation)
     const [numberStatus, setNumberStatus]  = useState(0)
+    const [mouse, setMouse] = useState({x : 0 , y : 10})
   
     const checkStatusMenu = () => {
         state.map((item) => {
@@ -39,7 +40,8 @@ const MagicNavigationMenu = () => {
     return(
         // navigation
         <div className="
-            flex justify-center items-center   w-[400px] h-[70px] bg-white relative rounded-[10px]"
+            fixed left-0 bottom-0.5
+            flex justify-center items-center   w-[400px] h-[70px] bg-white  rounded-[10px]"
             >
                 <contextNavigation.Provider value = {{state, dispatch}}>
                     <BrowserRouter>
