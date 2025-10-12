@@ -22,6 +22,7 @@ const MagicNavigationMenu = () => {
         
     const [state, dispatch]  = useReducer(reducer, IconListNaviation)
     const [numberStatus, setNumberStatus]  = useState(0)
+  
     const checkStatusMenu = () => {
         state.map((item) => {
             if(item.status === true){
@@ -30,12 +31,11 @@ const MagicNavigationMenu = () => {
             }
         })
     }
-
-  
+   
     useEffect(() => {
         checkStatusMenu()
-        console.log(numberStatus)
     },[state])
+    
     return(
         // navigation
         <div className="
@@ -50,6 +50,7 @@ const MagicNavigationMenu = () => {
                                 )
                             })}
                             <div 
+                                style={{transform : `translateX(calc(70px * ${numberStatus}))` }}
                                 className={`
                                     absolute  -top-[50%] w-[70px] h-[70px] bg-[#29fd53] rounded-[50%] border-6 border-[#29fd53] duration-500
                                     before:content-[''] before:absolute before:top-[50%] before:left[-22px] before:w-[20px] before:h-[20px] before:bg-blue-500 before:rounded-tr-[20px] before:shadow-[0_-10px_0_0_#222327]
