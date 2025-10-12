@@ -8,10 +8,13 @@ const LinkMenu = ({item}) => {
             onClick={() => {}}
         >
             <Link to = '/' 
-                className={`relative flex justify-center items-center flex-col w-[100%] text-center font-[500]`}
+                className={`relative flex justify-center items-center flex-col w-[100%] text-center font-[500] ` }
             >
                 <span 
-                    className={`relative block line-[75px] text-[1.5em] text-center duration-500 text-[#222327]`}
+                    className={`
+                        relative block line-[75px] text-[1.5em] text-center duration-500 text-[#222327]
+                        ${item.status ? "translate-y-[-32px]" : "translate-y-0"}
+                        `}
                 >
                     <i className={`${item.icon}`}></i>
                 </span>
