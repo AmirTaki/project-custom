@@ -1,4 +1,7 @@
+import { useReducer } from "react";
 import { BrowserRouter, Link, Route } from "react-router-dom";
+
+const [state, dispatch] =  useReducer(reducer, {})
 
 const MagicNavigationMenu = () => {
     return(
