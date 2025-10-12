@@ -17,7 +17,7 @@ const MagicNavigationMenu = () => {
                     <ul className="flex w-[350px] ">
                         {IconListNaviation.map((item, index) => {
                             return(
-                                <LinkMenu key = {index} item = {item} />                            )
+                                <LinkMenu key = {index} item = {item} index = {index} />                            )
                         })}
                         <div 
                             className="

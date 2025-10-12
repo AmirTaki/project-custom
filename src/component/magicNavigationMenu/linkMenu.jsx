@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 
 Link
-const LinkMenu = ({item}) => {
+const LinkMenu = ({item, index}) => {
     return(
-        <li className={`relative list-none w-[70px] h-[70px] z-10`}>
+        <li 
+            className={`relative list-none w-[70px] h-[70px] z-10`}
+            onClick={() => {}}
+        >
             <Link to = '/' 
                 className={`relative flex justify-center items-center flex-col w-[100%] text-center font-[500]`}
             >
