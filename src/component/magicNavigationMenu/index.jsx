@@ -32,7 +32,8 @@ const MagicNavigationMenu = () => {
 
   
     useEffect(() => {
-        console.log(checkStatusMenu())
+        checkStatusMenu()
+        numberStatus
     },[state])
     return(
         // navigation
