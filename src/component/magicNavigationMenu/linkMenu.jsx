@@ -14,7 +14,7 @@ const LinkMenu = ({item}) => {
                 </span>
                 
                 <span 
-                    className={`absolute text-[#222327]`}
+                    className={`absolute text-[#222327] font-[400] text-[.75em] duration-500`}
                 >
                     {item.name}
                 </span>
