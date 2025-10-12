@@ -1,6 +1,9 @@
 const MagicNavigationMenu = () => {
     return(
-        <div className="">
+        // navigation
+        <div className="
+            flex justify-center items-center 
+            w-[400px] h-[70px] bg-red-500">
             magic navigaton menu
         </div>
     )
