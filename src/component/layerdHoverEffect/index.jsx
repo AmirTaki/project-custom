@@ -9,10 +9,13 @@ const LayerdHoverEffect = () => {
                     <div className="w-[55px] h-[55px] transition-transform duration-300
                         hover:transform hover:rotate-[-35deg] hover:skew-x-[20deg]
                     ">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span className="fab fa-facebook-f"></span>
+                        <span className="custom-span-layerd"></span>
+                        <span className="custom-span-layerd"></span>
+                        <span className="custom-span-layerd"></span>
+                        <span 
+                            className="fab fa-facebook-f custom-span-layerd
+                        
+                        "></span>
                     </div>
                     <div className="">Facebook</div>
                 </Link>
