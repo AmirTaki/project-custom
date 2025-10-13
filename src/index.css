@@ -1,8 +1,6 @@
 @import "tailwindcss";
 @tailwind utilities;
 
-
-
 /* Custom glow effect utility */
 .glow-green:hover {
   filter: drop-shadow(0 0 2px #2dfc52)
@@ -11,3 +9,8 @@
 }
 
 /* span custom layerd Hover Effects */
+@layer utilities {
+  .custom-span-layerd {
+    @apply
+  }
+}
