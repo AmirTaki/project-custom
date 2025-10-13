@@ -14,7 +14,6 @@
     @apply absolute top-0 left-0 ;
     @apply w-[100%] h-[100%] ;
     @apply border-1 border-white;
-    
-
+    @apply  transition-all duration-300;  
   }
 }
