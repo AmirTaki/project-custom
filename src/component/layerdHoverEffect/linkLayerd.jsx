@@ -11,7 +11,7 @@ const LinkLayerd = ({item}) => {
             ">
                 {/* span */}
                 <span 
-                    style={{color : `${item.color}`, borderColor : `${item.color}` }}
+                    style={{color : `${item.color}`, borderColor : `${item.color}`, boxShadow : `-1px 1px 3px ${item.color}` }}
                     className="custom-span-layerd group-hover:opacity-[.2]  "
                     >    
                 </span>
