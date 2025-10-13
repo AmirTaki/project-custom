@@ -8,12 +8,19 @@
           drop-shadow(0 0 15px #2dfc52);
 }
 
-/* span custom layerd Hover Effects */
 @layer utilities {
+  /* span custom layerd Hover Effects */
   .custom-span-layerd {
     @apply absolute top-0 left-0 ;
     @apply w-[100%] h-[100%] ;
     @apply border-1 border-white rounded-[5px];
     @apply  transition-all duration-300;  
   }
+
+  /* container box custom magic buttom */
+  .box-custom-magic {
+    @apply relative ;
+    @apply w-[100px];
+  }
+  
 }
