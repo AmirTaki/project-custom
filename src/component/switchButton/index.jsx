@@ -5,14 +5,17 @@ const SwitchButton = () => {
     
     })
     
-    
+    console.log(spans)
     return(
         <div className="relative flex flex-col gap-30">
             <div className="box-custom-magic"></div>
             <div className="box-custom-magic"></div>
             <div className="box-custom-magic">
                 {spans.map((i) => (
-                    <div className="text-white bg-red-300 w-1 h-1">{i}</div>
+                    <span 
+                        key = {i}
+                        style={{top : `${i * 1}px`, transitionDelay : `${3}s`}}
+                    ></span>
                 ))}
 
             </div>
