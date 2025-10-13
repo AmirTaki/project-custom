@@ -8,10 +8,7 @@ const SwitchButton = () => {
         return  Math.random() * .25
     })
 
-    const [active, setActive] = useState(false)
-    const handleBox = () => {
-        setActive((pre) => !pre)
-    }
+
 
 
     return(
