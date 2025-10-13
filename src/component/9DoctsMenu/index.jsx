@@ -16,7 +16,7 @@ const DoctsMenu = () => {
             className={` 
                 ${toggle ? "w-[200px] h-[200px] delay-0 " : "w-[70px] h-[70px] delay-[800ms]"}
                   bg-[#212532] rounded-[10px] cursor-pointer   fixed 
-                 duration-[500ms] flex items-center  justify-center ` 
+                 duration-[500ms] flex items-center  justify-center z-[1000]! ` 
             }
             style={{top : `${TouchLocation.x}px`, left : `${TouchLocation.y}px`}}
             onClick={() => {setToggle((prev) => (!prev))}}

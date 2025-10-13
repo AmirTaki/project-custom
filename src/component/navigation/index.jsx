@@ -20,7 +20,7 @@ const Navigation = () => {
     
     return (
         // flex justify-center items-center relative
-        <div className={`fixed  list-none   w-[200px] h-[200px] `}
+        <div className={`fixed  list-none   w-[200px] h-[200px] z-[1000]! `}
             style={{left : `${touch.x}px`, top :`${touch.y}px`}}
         >
                 <div
