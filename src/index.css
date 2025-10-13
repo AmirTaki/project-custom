@@ -13,7 +13,7 @@
   .custom-span-layerd {
     @apply absolute top-0 left-0 ;
     @apply w-[100%] h-[100%] ;
-    @apply border-1 border-white;
+    @apply border-1 border-white rounded-[5px];
     @apply  transition-all duration-300;  
   }
 }
