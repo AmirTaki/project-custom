@@ -11,6 +11,8 @@
 /* span custom layerd Hover Effects */
 @layer utilities {
   .custom-span-layerd {
-    @apply
+    @apply absolute top-0 left-0 ;
+    @apply w-[100%] h-[100%] 
+    
   }
 }
