@@ -9,10 +9,18 @@ const LinkLayerd = ({item}) => {
                 hover:transform hover:rotate-[-35deg] hover:skew-x-[20deg]
             
             ">
-                {/* span  text-[#] border-[#]*/}
-                <span className="custom-span-layerd group-hover:opacity-[.2]  "></span>
+                {/* span */}
+                <span 
+                    style={{color : `${item.color}`, borderColor : `${item.color}`}}
+                    className="custom-span-layerd group-hover:opacity-[.2]  "
+                    >    
+                </span>
                 
-                <span className="custom-span-layerd group-hover:opacity-[.4] group-hover:translate-x-[5px] group-hover:translate-y-[-5px] "></span>
+                <span 
+                    style={{color : `${item.color}`, borderColor : `${item.color}`}}
+                    className="custom-span-layerd group-hover:opacity-[.4] group-hover:translate-x-[5px] group-hover:translate-y-[-5px] "
+                    >
+                </span>
                 
                 <span 
                     style={{color : `${item.color}`, borderColor : `${item.color}`}}
