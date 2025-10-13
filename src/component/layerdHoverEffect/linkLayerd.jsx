@@ -17,26 +17,26 @@ const LinkLayerd = ({item}) => {
                 </span>
                 
                 <span 
-                    style={{color : `${item.color}`, borderColor : `${item.color}`}}
+                    style={{color : `${item.color}`, borderColor : `${item.color}`, boxShadow : `-1px 1px 3px ${item.color}` }}
                     className="custom-span-layerd group-hover:opacity-[.4] group-hover:translate-x-[5px] group-hover:translate-y-[-5px] "
                     >
                 </span>
                 
                 <span 
-                    style={{color : `${item.color}`, borderColor : `${item.color}`}}
+                    style={{color : `${item.color}`, borderColor : `${item.color}`, boxShadow : `-1px 1px 3px ${item.color}` }}
                     className="custom-span-layerd group-hover:opacity-[.6] group-hover:translate-x-[10px] group-hover:translate-y-[-10px]"
                     >
                 </span>
                 
                 <span 
-                    style={{color : `${item.color}`, borderColor : `${item.color}`}}
+                    style={{color : `${item.color}`, borderColor : `${item.color}`, boxShadow : `-1px 1px 3px ${item.color}` }}
                     className={`custom-span-layerd group-hover:opacity-[.8] group-hover:translate-x-[15px] group-hover:translate-y-[-15px] `}
                     >
                 </span>
                 
                 {/* span icon */}
                 <span 
-                    style={{color : `${item.color}`, borderColor : `${item.color}`}}
+                    style={{color : `${item.color}`, borderColor : `${item.color}`, boxShadow : `-1px 1px 3px ${item.color}` }}
                     className={`${item.icon}
                     custom-span-layerd text-[30px] text-center leading-[55px]!
                     group-hover:opacity-[1] group-hover:translate-x-[20px] group-hover:translate-y-[-20px]
