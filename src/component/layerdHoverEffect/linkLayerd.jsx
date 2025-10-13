@@ -11,7 +11,7 @@ const LinkLayerd = ({item}) => {
             ">
                 {/* span */}
                 <span 
-                    style={{color : `${item.color}`, borderColor : `${item.color}`}}
+                    style={{color : `${item.color}`, borderColor : `${item.color}` }}
                     className="custom-span-layerd group-hover:opacity-[.2]  "
                     >    
                 </span>
@@ -43,11 +43,15 @@ const LinkLayerd = ({item}) => {
                 `}></span>
             </div>
             {/* text */}
-            <div className="
-                absolute bottom-[-5%] left-[50%] translate-x-[-50%] 
-                transition-[bottom_0.3s_ease,opacity_0.3s_ease] opacity-0 
-                group-hover:opacity-100! group-hover:bottom-[-60%]!
-            ">{item.name}</div>
+            <div 
+                style={{color : `${item.color}`, borderColor : `${item.color}`}}
+                className="
+                    absolute bottom-[-5%] left-[50%] translate-x-[-50%] 
+                    transition-[bottom_0.3s_ease,opacity_0.3s_ease] opacity-0 
+                    group-hover:opacity-100! group-hover:bottom-[-60%]!
+                ">
+                    {item.name}
+            </div>
         </Link>
     )
 }
