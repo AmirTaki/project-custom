@@ -14,7 +14,7 @@ const LinkLayerd = ({item}) => {
                 
                 <span className="custom-span-layerd group-hover:opacity-[.4] group-hover:translate-x-[5px] group-hover:translate-y-[-5px] "></span>
                 
-                <span className="custom-span-layerd"></span>
+                <span className="custom-span-layerd group-hover:opacity-[.6] group-hover:translate-x-[10px] group-hover:translate-y-[-10px]"></span>
                 {/* span icon */}
                 <span 
                     className={`${item.icon}
