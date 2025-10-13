@@ -3,9 +3,9 @@ import { BrowserRouter, Link } from "react-router-dom";
 
 const LayerdHoverEffect = () => {
     return(
-        <div className="text-white">
+        <div className="inline-flex">
             <BrowserRouter>
-                <Link>
+                <Link className="mx-[25px] my-0 decoration-0 text-white block relative">
                     <div className="">
                         <span></span>
                         <span></span>
