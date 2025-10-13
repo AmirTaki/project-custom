@@ -1,11 +1,8 @@
 import Switch from "./switch"
+import { useState } from "react"
 
 const BoxSwitch = () => {
-    
-    
-  
     const [active, setActive] = useState(false)
-    
     const handleBox = () => {
         setActive((pre) => !pre)
     }
