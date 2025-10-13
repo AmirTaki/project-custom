@@ -1,6 +1,10 @@
 const SwitchButton = () => {
     return(
-        <div className="">switch</div>
+        <div className="text-white">
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+        </div>
     )
 }
 
