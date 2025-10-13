@@ -12,7 +12,7 @@ const SwitchButton = () => {
 
     console.log(active)
     return(
-        <div className="relative flex flex-col gap-30">
+        <div className="relative flex flex-col gap-7">
             <div className="box-custom-magic"></div>
             <div className="box-custom-magic"></div>
             <div className="box-custom-magic"
