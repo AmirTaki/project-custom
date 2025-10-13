@@ -5,25 +5,27 @@ const LayerdHoverEffect = () => {
     return(
         <div className="inline-flex">
             <BrowserRouter>
-                <Link className="mx-[25px] my-[0] decoration-0 text-white block relative">
+                <Link className="mx-[25px] my-[0] decoration-0 text-white block relative       group">
                     <div className="w-[55px] h-[55px] transition-transform duration-300
                         hover:transform hover:rotate-[-35deg] hover:skew-x-[20deg]
-                        group
+                  
                     ">
                         <span className="custom-span-layerd"></span>
                         <span className="custom-span-layerd"></span>
                         <span className="custom-span-layerd"></span>
                         <span 
                             className="fab fa-facebook-f 
-                            w-[100%] h-[100%] border-1 border-white rounded-[5px]  transition-all duration-300
+                           custom-span-layerd
                            
-                            group-hover:opacity-100 group-hover:bottom-[-60%]
+
                             text-[30px] text-center leading-[55px]
                         "></span>
                     </div>
                     <div className="
+                      
                         absolute bottom-[-5%] left-[50%] translate-x-[-50%] 
-                        transition-[bottom_0.3s_ease,opacity_0.3s_ease opacity-0
+                        transition-[bottom_0.3s_ease,opacity_0.3s_ease opacity-0 
+                        group-hover:opacity-100! group-hover:bottom-[-60%]!
                     ">Facebook</div>
                 </Link>
             </BrowserRouter>
