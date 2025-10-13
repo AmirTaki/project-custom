@@ -10,7 +10,7 @@ const LinkLayerd = ({item}) => {
             
             ">
                 {/* span  text-[#] border-[#]*/}
-                <span className="custom-span-layerd group-hover:opacity-[.2] "></span>
+                <span className="custom-span-layerd group-hover:opacity-[.2]  "></span>
                 
                 <span className="custom-span-layerd group-hover:opacity-[.4] group-hover:translate-x-[5px] group-hover:translate-y-[-5px] "></span>
                 
@@ -22,6 +22,7 @@ const LinkLayerd = ({item}) => {
                     className={`${item.icon}
                     custom-span-layerd text-[30px] text-center leading-[55px]!
                     group-hover:opacity-[1] group-hover:translate-x-[20px] group-hover:translate-y-[-20px]
+                    text-[#${item.color}]  border-[#${item.color}]!
                 `}></span>
             </div>
             {/* text */}
