@@ -14,7 +14,7 @@ const BoxSwitch = () => {
         <div className="box-custom-magic"
             onClick={handleBox}
         >
-            <Switch />
+            <Switch  active = {active}/>
         </div>
     )
 }

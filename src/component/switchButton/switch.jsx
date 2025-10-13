@@ -1,4 +1,4 @@
-const Switch = () => {
+const Switch = ({active}) => {
     const spans = Array.from({length : 40}, (_, i) => {
         return  Math.random() * .25
     })
