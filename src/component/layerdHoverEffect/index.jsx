@@ -1,4 +1,4 @@
-import { BrowserRouter, Link } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import LinkLayerd from "./linkLayerd";
 
 
@@ -7,7 +7,6 @@ const LayerdHoverEffect = () => {
         <div className="inline-flex">
             <BrowserRouter>
                 <LinkLayerd />
-                {/* a => link */}
               
             </BrowserRouter>
         </div>
