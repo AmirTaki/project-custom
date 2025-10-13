@@ -8,6 +8,7 @@ const LayerdHoverEffect = () => {
                 <Link className="mx-[25px] my-[0] decoration-0 text-white block relative">
                     <div className="w-[55px] h-[55px] transition-transform duration-300
                         hover:transform hover:rotate-[-35deg] hover:skew-x-[20deg]
+                        group
                     ">
                         <span className="custom-span-layerd"></span>
                         <span className="custom-span-layerd"></span>
@@ -16,6 +17,7 @@ const LayerdHoverEffect = () => {
                             className="fab fa-facebook-f custom-span-layerd
                             absolute bottom-[-5%] left-[50%] translate-x-[-50%] 
                             transition-[bottom_0.3s_ease,opacity_0.3s_ease opacity-0
+                            group-hover:opacity-100 group-hover:bottom-[-60%]
                         "></span>
                     </div>
                     <div className="">Facebook</div>
