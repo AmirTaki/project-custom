@@ -2,17 +2,17 @@ export const iconList = [
     {
         id : 1,
         icon  : 'fab fa-facebook-f',
-        name  : '',
+        name  : 'Facebook',
     },    
     {
         id : 2,
         icon  : 'fab fa-twitter',
-        name  : '',
+        name  : 'Twitter',
     },    
     {   
         id : 3,
         icon  : 'fab fa-instagram',
-        name  : '',
+        name  : 'Instagram',
     },    
     {
         id : 4,
