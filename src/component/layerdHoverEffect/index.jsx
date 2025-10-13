@@ -5,8 +5,8 @@ const LayerdHoverEffect = () => {
     return(
         <div className="inline-flex">
             <BrowserRouter>
-                <Link className="mx-[25px] my-0 decoration-0 text-white block relative">
-                    <div className="">
+                <Link className="mx-[25px] my-[0] decoration-0 text-white block relative">
+                    <div className="w-[55px] h-[55px] transition-transform duration-300">
                         <span></span>
                         <span></span>
                         <span></span>
