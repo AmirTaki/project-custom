@@ -35,6 +35,5 @@
     @apply bg-[#7ef0ff];
     @apply pointer-events-none;
     @apply transition duration-200 ease-in-out
-
   }
 }
