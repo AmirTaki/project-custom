@@ -3,8 +3,11 @@ import { useReducer, useState } from "react"
 
 const BoxSwitch = () => {
     const [active, setActive] = useState(false)
-    const reducer = () => {
-        
+    const reducer = (state, action) => {
+        switch (action.type){
+            case "":
+                return state;
+        }
     }
     const [stateSwich, dispatchSwitch] = useReducer(reducer, {});
 
