@@ -14,7 +14,7 @@ const LayerdHoverEffect = () => {
                         <span className="custom-span-layerd"></span>
                         <span 
                             className="fab fa-facebook-f custom-span-layerd
-                        
+                            absolute bottom-[-5%] left-[50%] translate-x-[-50%]
                         "></span>
                     </div>
                     <div className="">Facebook</div>
