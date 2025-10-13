@@ -28,5 +28,8 @@
     @apply before:inset-[-4px];
     @apply before:border-1 before:border-[#7ef0ff]
   }
-  
+  /* container box span custom magic buttom */
+  .box-span-custom {
+    @apply absolute;
+  }
 }
