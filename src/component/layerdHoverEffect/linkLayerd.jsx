@@ -4,13 +4,16 @@ import { Link } from "react-router-dom"
 const LinkLayerd = ({item}) => {
     return(
         // a => link
-        <Link className="mx-[25px] my-[0] decoration-0 text-white block relative       group">
+        <Link className="mx-[25px] my-[0] decoration-0 text-white block relative  group">
             <div className="w-[55px] h-[55px] transition-transform duration-300
                 hover:transform hover:rotate-[-35deg] hover:skew-x-[20deg]
             
             ">
                 {/* span */}
-                <span className="custom-span-layerd"></span>
+                <span 
+                    className="custom-span-layerd group-hover:opacity-[.2] "
+                
+                ></span>
                 <span className="custom-span-layerd"></span>
                 <span className="custom-span-layerd"></span>
                 {/* span icon */}
