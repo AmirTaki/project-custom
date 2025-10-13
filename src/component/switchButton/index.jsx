@@ -7,9 +7,10 @@ const SwitchButton = () => {
 
     const [active, setActive] = useState(false)
     const handleBox = () => {
-
+        setActive((pre) => !pre)
     }
 
+    console.log(active)
     return(
         <div className="relative flex flex-col gap-30">
             <div className="box-custom-magic"></div>
@@ -19,9 +20,9 @@ const SwitchButton = () => {
             >
                 {spans.map((i, index) => (
                     <span 
-                        className="box-span-custom "
+                        className={`box-span-custom ${active ? "transform translate-x-[60px]" : ""}`}
                         key = {index}
-                        style={{top : `${index * 1}px`, transitionDelay : `${3}s`}}
+                        style={{top : `${index * 1}px`, transitionDelay : `${i}s`}}
                     ></span>
                 ))}
 
