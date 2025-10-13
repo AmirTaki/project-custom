@@ -14,13 +14,17 @@ const LayerdHoverEffect = () => {
                         <span className="custom-span-layerd"></span>
                         <span className="custom-span-layerd"></span>
                         <span 
-                            className="fab fa-facebook-f custom-span-layerd
-                            absolute bottom-[-5%] left-[50%] translate-x-[-50%] 
-                            transition-[bottom_0.3s_ease,opacity_0.3s_ease opacity-0
+                            className="fab fa-facebook-f 
+                            w-[100%] h-[100%] border-1 border-white rounded-[5px]  transition-all duration-300
+                           
                             group-hover:opacity-100 group-hover:bottom-[-60%]
+                            text-[30px] text-center leading-[55px]
                         "></span>
                     </div>
-                    <div className="">Facebook</div>
+                    <div className="
+                        absolute bottom-[-5%] left-[50%] translate-x-[-50%] 
+                        transition-[bottom_0.3s_ease,opacity_0.3s_ease opacity-0
+                    ">Facebook</div>
                 </Link>
             </BrowserRouter>
         </div>
