@@ -4,9 +4,7 @@ import BoxSwitch from "./boxSwich"
 
 const SwitchButton = () => {
     const boxSwitch = [1, 2, 3];
-    const spans = Array.from({length : 40}, (_, i) => {
-        return  Math.random() * .25
-    })
+
 
 
 
