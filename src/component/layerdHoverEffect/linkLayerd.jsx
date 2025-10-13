@@ -24,7 +24,7 @@ const LinkLayerd = ({item}) => {
                 absolute bottom-[-5%] left-[50%] translate-x-[-50%] 
                 transition-[bottom_0.3s_ease,opacity_0.3s_ease] opacity-0 
                 group-hover:opacity-100! group-hover:bottom-[-60%]!
-            ">Facebook</div>
+            ">{item.name}</div>
         </Link>
     )
 }
