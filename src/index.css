@@ -31,5 +31,7 @@
   /* container box span custom magic buttom */
   .box-span-custom {
     @apply absolute;
+    @apply w-[40px] h-[1px];
+    @apply bg-[#7ef0ff];
   }
 }
