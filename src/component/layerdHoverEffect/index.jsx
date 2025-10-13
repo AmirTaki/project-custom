@@ -1,7 +1,13 @@
+import { BrowserRouter, Link } from "react-router-dom";
+
+
 const LayerdHoverEffect = () => {
     return(
         <div className="">
-            layerd
+            <BrowserRouter>
+                <Link>
+                </Link>
+            </BrowserRouter>
         </div>
     )
 }
