@@ -20,7 +20,8 @@
   /* container box custom magic buttom */
   .box-custom-magic {
     @apply relative ;
-    @apply w-[100px];
+    @apply w-[100px] h-[40px] ;
+    @apply cursor-pointer;
   }
   
 }
