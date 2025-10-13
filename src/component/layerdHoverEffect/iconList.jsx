@@ -21,10 +21,12 @@ export const iconList = [
         id : 4,
         icon  : 'fab fa-linkedin-in',
         name  : 'Linkedin',
+        color : '2867B2'
     },    
     {
         id : 5,
         icon  : 'fab fa-youtube',
         name  : 'YouTube',
+        color : 'ff0000'
     },    
 ]
