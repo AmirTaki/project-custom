@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 
-const LinkLayerd = () => {
+const LinkLayerd = ({item}) => {
     return(
         // a => link
         <Link className="mx-[25px] my-[0] decoration-0 text-white block relative       group">
@@ -15,9 +15,9 @@ const LinkLayerd = () => {
                 <span className="custom-span-layerd"></span>
                 {/* span icon */}
                 <span 
-                    className="fab fa-facebook-f 
+                    className={`${item.icon}
                     custom-span-layerd text-[30px] text-center leading-[55px]!
-                "></span>
+                `}></span>
             </div>
             {/* text */}
             <div className="
