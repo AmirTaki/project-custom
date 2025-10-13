@@ -1,6 +1,6 @@
 const BoxSwitch = () => {
     return(
-        <div className=""></div>
+        <div className="box-custom-magic"></div>
     )
 }
 

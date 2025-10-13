@@ -1,6 +1,9 @@
 import { useState } from "react"
+import BoxSwitch from "./boxSwich"
+
 
 const SwitchButton = () => {
+    const boxSwitch = [1, 2, 3];
     const spans = Array.from({length : 40}, (_, i) => {
         return  Math.random() * .25
     })
@@ -13,8 +16,10 @@ const SwitchButton = () => {
     console.log(active)
     return(
         <div className="relative flex flex-col gap-7">
-            <div className="box-custom-magic"></div>
-            <div className="box-custom-magic"></div>
+            {}
+            <BoxSwitch/>
+            <BoxSwitch/>
+            <BoxSwitch/>
             <div className="box-custom-magic"
                 onClick={handleBox}
             >
