@@ -18,11 +18,11 @@ const SwitchButton = () => {
             <div className="box-custom-magic"
                 onClick={handleBox}
             >
-                {spans.map((i, index) => (
+                {spans.map((delay, index) => (
                     <span 
                         className={`box-span-custom ${active ? "transform translate-x-[60px]" : ""}`}
                         key = {index}
-                        style={{top : `${index * 1}px`, transitionDelay : `${i}s`}}
+                        style={{top : `${index * 1}px`, transitionDelay : `${delay}s`}}
                     ></span>
                 ))}
 
