@@ -16,13 +16,13 @@ const LinkLayerd = ({item}) => {
                 
                 <span className="custom-span-layerd group-hover:opacity-[.6] group-hover:translate-x-[10px] group-hover:translate-y-[-10px]"></span>
                 
-                <span className="custom-span-layerd group-hover:opacity-[.8] group-hover:translate-x-[15px] group-hover:translate-y-[-15px]"></span>
+                <span className={`custom-span-layerd group-hover:opacity-[.8] group-hover:translate-x-[15px] group-hover:translate-y-[-15px] `}></span>
                 {/* span icon */}
                 <span 
+                    style={{color : `${item.color}`}}
                     className={`${item.icon}
                     custom-span-layerd text-[30px] text-center leading-[55px]!
                     group-hover:opacity-[1] group-hover:translate-x-[20px] group-hover:translate-y-[-20px]
-                    text-[#${item.color}]  border-[#${item.color}]!
                 `}></span>
             </div>
             {/* text */}
