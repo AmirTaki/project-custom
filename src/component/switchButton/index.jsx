@@ -12,7 +12,7 @@ const SwitchButton = () => {
         >  
            
             <div className={`                
-                before:content-[''] before:absolute before:w-[40px] before:h-[40px] before:bg-red-500 
+                before:content-[''] before:absolute before:w-[40px] before:h-[40px] before:bg-gray-300
                 before:top-[45%]!  before:left-[-10%]  before:rounded-full before:cursor-pointer before:z-40`}
                 onClick={() => {setMenu((pre) => (!pre))}}
             >
