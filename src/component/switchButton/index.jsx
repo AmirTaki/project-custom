@@ -17,8 +17,8 @@ const SwitchButton = () => {
                 onClick={() => {setMenu((pre) => (!pre))}}
             >
                 <i className={`
-                    ${menu ? "rotate-180 left-2" : " -left-4 "}
-                    bi bi-caret-left-fill text-[#7ef0ff] absolute  top-34 text-2xl z-5! cursor-pointer duration-400!`}    
+                    ${menu ? "rotate-180 left-2  top-34.5" : " -left-4  top-34"}
+                    bi bi-caret-left-fill text-[#7ef0ff] absolute  text-2xl z-5! cursor-pointer duration-400!`}    
                 ></i>   
             </div>
            
