@@ -56,7 +56,9 @@ const Navbar = () => {
                         Get Started
                     </div>
                 </div>
-                <SearchInput />
+                <div className="">
+                    <SearchInput />
+                </div>
                 <div className="lg:hidden">
                     <div 
                         onClick={()=>{setDrompMenu((prevDropMenu) => (!prevDropMenu))}}
