@@ -20,15 +20,12 @@ const SearchInput = () => {
             <input 
                 type="text" placeholder="Search ..." 
                 onChange={(e)=> {setSearch(e.target.value)}}
-                className="bg-transparet border-0 w-[500px]   outline-0 text-[rgb(100, 100, 100)] transition-[width] duration-[1000s] delay-[500s]"
+                className={`bg-transparet border-0 w-[500px]  m-[10px]  outline-0 text-[rgb(100, 100, 100)] transition-[width] duration-[1000s] delay-[500s]`}
             />
-            <div className="">
-                <i className="bi bi-mic-fill"></i>
-            </div>
-            <img 
-                src="https://tse4.mm.bing.net/th/id/OIP.FkcQWaj4fNpipuwvqAOvMwHaI6?pid=Api&P=0&h=22" alt="" 
-                className={`${active ? "w-[100px]" : "w-"} w-0 absolute right-[10px] transition-[width] delay-[1000s]`}    
-            />
+           
+            <i className={`${active ? 'text-2xl' : 'w-0'} bi bi-mic-fill absolute right-[10px] transition-[text] delay-[1000s]`}></i>
+         
+         
         </div>
     )
 }
