@@ -22,10 +22,6 @@ const BoxSwitch = ({box}) => {
         {id : 2, status : false},
     ]);
 
-    useEffect(() => {
-        // console.log(stateSwich)
-    }, [stateSwich])
-
     const handleBox = () => {
         setActive((pre) => !pre)
     }
