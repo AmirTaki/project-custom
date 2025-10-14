@@ -20,7 +20,7 @@ const Home =  ()  => {
 
 
             {/* LayerdHoverEffect */}
-            {/* <LayerdHoverEffect /> */}
+            <LayerdHoverEffect />
         </div>
    
     )

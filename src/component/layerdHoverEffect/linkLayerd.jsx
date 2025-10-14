@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 const LinkLayerd = ({item}) => {
     return(
         // a => link
-        <Link className="mx-[25px] my-[0] decoration-0 text-white block relative  group">
+        <Link className=" my-[0] decoration-0 text-white block relative  group">
             <div className="w-[55px] h-[55px] transition-transform duration-300
                 hover:transform hover:rotate-[-35deg] hover:skew-x-[20deg]
             

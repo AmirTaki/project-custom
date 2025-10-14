@@ -5,7 +5,7 @@ import { iconList } from "./iconList";
 
 const LayerdHoverEffect = () => {
     return(
-        <div className="inline-flex">
+        <div className="flex flex-row gap-12 flex-wrap">
             <BrowserRouter>
                 {iconList.map((item) => {
                     return(
