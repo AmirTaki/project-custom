@@ -21,6 +21,9 @@ const Home =  ()  => {
 
             {/* LayerdHoverEffect */}
             <LayerdHoverEffect />
+
+
+            {/* search */}
         </div>
    
     )
