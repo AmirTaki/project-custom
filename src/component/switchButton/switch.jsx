@@ -2,12 +2,13 @@ const Switch = ({active, box }) => {
     const spans = Array.from({length : 40}, (_, i) => {
         return  Math.random() * .25
     })
+    // active[box].status
     return(
         <>
             {spans.map((delay, index) => (
                 <span 
                 className={`box-span-custom 
-                    ${active[box].status ? "transform translate-x-[60px]" : ""}   
+                    ${active.listSwitch[box] ? "transform translate-x-[60px]" : ""}   
                         `
                     }
                     key = {index}
