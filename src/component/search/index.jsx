@@ -1,7 +1,7 @@
 const SearchInput = () => {
     return (
-        <div className=
-            "flex center bg-[aliceblue] p-5 w-[300px] h-[50px] rounded-[50px]"
+        <div 
+            className= "flex center bg-[aliceblue] p-[5px] w-[300px] h-[50px] rounded-[50px] m-[10px] relative transition-[width] duration-150"
         >
             <img src="https://purepng.com/public/uploads/medium/search-icon-sl7.png"
 
