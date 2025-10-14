@@ -38,12 +38,20 @@ const ComponentNavigation = () => {
             <SwitchButton />
 
             {/* NAVIGATION & DOCTS MENE 9  =>  bg-linear-[25deg,red_5%,yellow_60%,lime_90%,teal] ,bg-[#10131c]   */}
-            <Navigation />
-            <DoctsMenu />
+            
+            <div className={`${stateSwich.listSwitch[0] ? "flex" : "hidden"}`}>
+                <Navigation  />
+            </div>
+
+            <div className={`${stateSwich.listSwitch[1] ? "flex" : "hidden"}`}>
+                <DoctsMenu />
+            </div>
 
             
             {/* magic navigation menu */}
-            <MagicNavigationMenu />
+            <div className={`${stateSwich.listSwitch[2] ? "flex" : "hidden"}`}>
+                <MagicNavigationMenu />
+            </div>
 
         </switchNavigationContext.Provider>
     )
