@@ -23,10 +23,16 @@ const Navbar = () => {
 
     return(
         <div className="flex justify-between items-center  px-[5rem] max-lg:px-[2rem] text-white
-            w-[100%] fixed! top-0 bg-[rgba(0,0,0,.2)] h-[60px] z-[2000]! 
+        w-[100%] fixed! top-0 bg-[rgba(0,0,0,.2)] h-[60px] z-[2000]! 
         ">
+          
+            <div className={`${resize ? "absolute right-13!":"absolute right-1!"}`}>
+                <SearchInput active = {activeSearch} setActive = {setActiveSearch}/>
+            </div>
+
+
             <BrowserRouter >
-                <div className={`${activeSearch ? "hidden" : "flex"}  flex items-center justify-center  `}>
+                <div className={`${activeSearch ? "hidden " : "flex "}  flex items-center justify-center `}>
                     {/* logo */}
                     <div className="">
                         <a className="text-[1.5rem] font-bold  cursor-pointer duration-300 hover:text-[orange]" href="">Web developer </a>
@@ -48,10 +54,8 @@ const Navbar = () => {
                         Get Started
                     </div>
                 </ul>
-                    <SearchInput 
-                        active = {activeSearch} setActive = {setActiveSearch}
-                    />
          
+                    
                 <div 
                     className={`flex items-center justify-center  max-lg:hidden ${activeSearch ? "hidden!" : "flex"}`}
                 >
