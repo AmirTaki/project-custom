@@ -11,11 +11,11 @@ const SwitchButton = () => {
             className={`${menu ? " right-0 duration-300!" : "-right-50 duration-300!"} flex flex-row  items-center justify-center  fixed w-[200px] h-[300px]  border-2 border-[#7ef0ff]  rounded-4xl  shadow-[5px_5px_50px_#7ef0ff] `}
         >  
             <div className={`                
-                before:content-[''] before:absolute before:w-[40px] before:h-[40px] before:
+                before:content-[''] before:absolute before:w-[40px] before:h-[40px] before:bg-white
                 before:top-[45%]!  before:left-[-10%]  before:rounded-full before:cursor-pointer before:z-4`}
                 onClick={() => {setMenu((pre) => (!pre))}}
             >
-                <i className="bi bi-caret-left text-red-500 text-3xl z-50!"></i>   
+                <i className="bi bi-caret-left text-red-500 absolute -left-6 top-34 text-3xl z-50!"></i>   
             </div>
            
             <div className=" flex flex-col gap-7 relative
