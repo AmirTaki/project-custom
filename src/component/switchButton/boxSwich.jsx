@@ -7,21 +7,17 @@ const BoxSwitch = ({box}) => {
     const reducer = (state, action) => {
         switch (action.type){
             case "switchChange" : 
-               const newSwitch =  state.map((item) => {
-                   if (item.id === action.payload.box){
-                    // console.log(item)
-                    // return item.status = !item.status
-                    return {...item, status : !item.status}
-                   }
-                   return item
-                })
+                return state.map((item) => ({
+                    ...item,
+                    status : item.id === action.payload.box ? !item.status : item.status
+                }))
         
-                return newSwitch 
+              
         }
     }
     
     const [stateSwich, dispatchSwitch] = useReducer(reducer, [
-        {id : 0, status : true},
+        {id : 0, status : false},
         {id : 1, status : false},
         {id : 2, status : false},
     ]);
