@@ -57,7 +57,7 @@ const Navbar = () => {
                         Get Started
                     </div>
                 </div>
-                <div className={`${dropMenu ? "right-30" : "right-15"} absolute `}>
+                <div className={`${dropMenu ? "right-30" : "right-1"} absolute `}>
                     <SearchInput active = {active} setActive = {setActive}/>
                 </div>
                 <div className="lg:hidden">
