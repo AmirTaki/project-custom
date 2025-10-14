@@ -1,9 +1,7 @@
 import ComponentNavigation from "../componentNavigation"
 import LayerdHoverEffect from "../layerdHoverEffect"
 import Navbar from "../navbar"
-
-
-
+import SearchInput from "../search"
 
 const Home =  ()  => {
     return(
@@ -20,10 +18,11 @@ const Home =  ()  => {
 
 
             {/* LayerdHoverEffect */}
-            <LayerdHoverEffect />
+            {/* <LayerdHoverEffect /> */}
 
 
             {/* search */}
+            <SearchInput />
         </div>
    
     )
