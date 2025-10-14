@@ -9,13 +9,16 @@ const BoxSwitch = ({box}) => {
                 return state.map((item) => ({
                     ...item,
                     status : item.id === action.payload.box ? !item.status : item.status
-                }))     
-
+                }))    
+    
             case  "switchHandle" : 
-                return {...state, listSwitch : {...state.listSwitch,  [action.payload.box] : !state.listSwitch[box]}}
+                return {...state, listSwitch : {...state.listSwitch,  [action.payload.box] : !state.listSwitch[action.payload.box]}}
         }
     }
     
+
+
+
     // {id : 0, status : false},
     // {id : 1, status : false},
     // {id : 2, status : false},
