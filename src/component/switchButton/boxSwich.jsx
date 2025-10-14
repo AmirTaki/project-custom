@@ -4,7 +4,7 @@ import { switchNavigationContext } from "../componentNavigation"
 
 
 const BoxSwitch = ({box}) => {
-    const {dispatchSwitch, stateSwich} =   useContext(switchNavigationContext)
+    const {stateSwich,  dispatchSwitch} =  useContext(switchNavigationContext)
 
     return(
         <div className="box-custom-magic"

@@ -32,7 +32,7 @@ const ComponentNavigation = () => {
     });
 
     return (
-        <switchNavigationContext.Provider  Provider = {{stateSwich, dispatchSwitch}}>
+        <switchNavigationContext.Provider  value = {{stateSwich, dispatchSwitch}}>
 
             {/* button switch animation */}
             <SwitchButton />
