@@ -2,7 +2,7 @@ const Switch = ({active, box}) => {
     const spans = Array.from({length : 40}, (_, i) => {
         return  Math.random() * .25
     })
-    console.log(box)
+
     return(
         <>
             {spans.map((delay, index) => (

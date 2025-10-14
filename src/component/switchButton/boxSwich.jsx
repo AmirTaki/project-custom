@@ -6,8 +6,14 @@ const BoxSwitch = ({box}) => {
     
     const reducer = (state, action) => {
         switch (action.type){
-         
-            
+            case "switchChange" : 
+               const newSwitch =  state.map((item) => {
+                    if (item.id === action.payload.box ){
+                        item.status = !item.status
+                        return item
+                    }
+                })
+                return [...state, newSwitch ]
         }
     }
     
@@ -18,7 +24,7 @@ const BoxSwitch = ({box}) => {
     ]);
 
     useEffect(() => {
-        // console.log(stateSwich)
+        console.log(stateSwich)
     }, [stateSwich])
 
     const handleBox = () => {
@@ -28,8 +34,8 @@ const BoxSwitch = ({box}) => {
     return(
         <div className="box-custom-magic"
             // onClick={handleBox}
-            
-            
+            onClick={() => {dispatchSwitch ({type : "switchChange", payload : {box : box}})}}
+
         >
             <Switch  active = {stateSwich} box = {box} />
         </div>
