@@ -26,7 +26,13 @@ const Navbar = () => {
         w-[100%] fixed! top-0 bg-[rgba(0,0,0,.2)] h-[60px] z-[2000]! 
         ">
           
-            <div className={`${resize ? "absolute right-13!":"absolute right-1!"}`}>
+            <div 
+                className={`
+                    ${resize ? "absolute right-13!":"absolute right-1!"}
+                    ${activeSearch ? 'absolute  left-0' :''}  
+                `}
+                
+                >
                 <SearchInput active = {activeSearch} setActive = {setActiveSearch}/>
             </div>
 
@@ -68,7 +74,7 @@ const Navbar = () => {
                 </div>
   
        
-                <div  className={` lg:hidden!`} >
+                <div  className={` lg:hidden! ${activeSearch ? "hidden " : "flex "} `}  >
                     <div 
                         onClick={()=>{setDrompMenu((prevDropMenu) => (!prevDropMenu))}}
                         className="text-white text-[1.5rem] cursor-pointer">
