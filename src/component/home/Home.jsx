@@ -1,7 +1,8 @@
+import ComponentNavigation from "../componentNavigation"
 import LayerdHoverEffect from "../layerdHoverEffect"
-import MagicNavigationMenu from "../magicNavigationMenu"
 import Navbar from "../navbar"
-import SwitchButton from "../switchButton"
+
+
 
 
 const Home =  ()  => {
@@ -10,14 +11,16 @@ const Home =  ()  => {
         <div 
             className={`h-[100vh] bg-[#10131c] flex justify-center items-center   `}
         >        
-            
-        
+
+            {/* component navigation */}
+            <ComponentNavigation />
+
             {/* NAVBAR  => bg-no-repeat bg-cover bg-center => style={{backgroundImage : `url(${background})`}} */}
             <Navbar />
 
 
             {/* LayerdHoverEffect */}
-            <LayerdHoverEffect />
+            {/* <LayerdHoverEffect /> */}
         </div>
    
     )
