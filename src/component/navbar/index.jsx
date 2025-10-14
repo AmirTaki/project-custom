@@ -7,7 +7,8 @@ const Navbar = () => {
     const [dropMenu, setDrompMenu] =  useState(false)
     const [resize, setResize] = useState(false)
     const [activeSearch, setActiveSearch] = useState(false)
-    
+    const [hiddeMenu, setHiddenMenu] = useState(false)
+
     const handlerNavbar = () => {
         setDrompMenu(false)
         setResize(window.innerWidth <= 1024 ? true : false)
@@ -21,15 +22,18 @@ const Navbar = () => {
       }
     },[])
 
+  
     return(
         <div className="flex justify-between items-center  px-[5rem] max-lg:px-[2rem] text-white
         w-[100%] fixed! top-0 bg-[rgba(0,0,0,.2)] h-[60px] z-[2000]! 
         ">
           
             <div 
+
                 className={`
                     ${resize ? "absolute right-13!":"absolute right-1!"}
-                    ${activeSearch ? 'absolute  left-0' :''}  
+                    ${activeSearch ? "left-0" : ''} 
+             
                 `}
                 
                 >
@@ -47,7 +51,7 @@ const Navbar = () => {
                                
        
                 <ul  className={`
-                    ${activeSearch ? "hidden" : "flex "} 
+                    ${dropMenu ? "hidden" : "flex "} 
                     ${resize ? " h-0 overflow-hidden  flex! flex-col items-center justify-center fixed right-[2rem] max-md:right-[5%] max-md:left-[5%]  max-md:w-[90%] w-[300px] rounded-2xl top-[60px] " : "flex flex-row justify-center items-center gap-10"}
                     ${dropMenu && resize ? " transition-[height]! duration-500! ease-[cubic-bezier(.175,.885,.32,1.275)]! h-[260px]!  bg-[rgba(0,0,0,.2)]  overflow-hidden" 
                     : "h-0! duration-500 "}` 
