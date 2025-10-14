@@ -23,7 +23,7 @@ const SearchInput = () => {
                 className={`${active ? 'w-[100%]' : "w-0!"} border-0  mx-12   outline-0 text-[rgb(100_100_100)] transition-[width]  duration-[1000s] `}
             />
            
-            <i className={`${active ? 'text-2xl' : 'text-[0px]'} bi bi-mic-fill absolute right-[10px] transition-[text] duration-[2000s]! delay-[2000s]`}></i>
+            <i className={`${active ? 'text-2xl' : 'text-[0px]'} bi bi-mic-fill absolute right-[10px] delay-500 transition-all duration-300`}></i>
          
          
         </div>
