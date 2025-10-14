@@ -8,7 +8,7 @@ const SwitchButton = () => {
 
     return(
         <div 
-            className={`${menu ? " right-0 duration-300!" : "-right-50 duration-300!"} flex flex-row  items-center justify-center  fixed w-[200px] h-[300px]  border-2 border-[#7ef0ff]  rounded-4xl  shadow-[5px_5px_50px_#7ef0ff] `}
+            className={`${menu ? " right-0 duration-300! shadow-[5px_5px_50px_#7ef0ff] " : "-right-50 duration-300!  "} flex flex-row  items-center justify-center  fixed w-[200px] h-[300px]  border-2 border-[#7ef0ff]  rounded-4xl  `}
         >  
             <div className={`                
                 before:content-[''] before:absolute before:w-[40px] before:h-[40px] before:bg-white
