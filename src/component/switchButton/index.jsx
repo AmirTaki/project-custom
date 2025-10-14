@@ -6,7 +6,7 @@ const SwitchButton = () => {
     return(
         <div className="relative flex flex-col gap-7">
             {boxSwitch.map((box) => (
-                <BoxSwitch key = {box}/>
+                <BoxSwitch key = {box} />
             ))}
         </div>
     )
