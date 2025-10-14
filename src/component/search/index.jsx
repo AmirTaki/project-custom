@@ -10,7 +10,10 @@ const SearchInput = () => {
                 src="https://purepng.com/public/uploads/medium/search-icon-sl7.png"
                 alt="" 
             />
-            <input type="text" placeholder="Search ..." />
+            <input 
+                type="text" placeholder="Search ..." 
+                className="bg-transparent border-0 mx-[10px] my-[50px] w-[100%] outline-0 text-[rgb(100, 100, 100)]"
+            />
             <img src="https://tse4.mm.bing.net/th/id/OIP.FkcQWaj4fNpipuwvqAOvMwHaI6?pid=Api&P=0&h=22" alt="" />
         </div>
     )
