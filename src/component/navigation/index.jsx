@@ -13,14 +13,14 @@ const Navigation = () => {
     }
 
     const [touch, setTouch] = useState({
-        x : 520,
-        y : 420
+        x : 120,
+        y : 500
     })
 
     
     return (
         // flex justify-center items-center relative
-        <div className={`fixed  list-none   w-[200px] h-[200px] z-[1000]! `}
+        <div className={`fixed  list-none   w-[2px] h-[2px]   z-300`}
             style={{left : `${touch.x}px`, top :`${touch.y}px`}}
         >
                 <div

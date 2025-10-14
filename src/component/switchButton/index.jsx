@@ -8,7 +8,7 @@ const SwitchButton = () => {
 
     return(
         <div 
-            className={`${menu ? " right-0  shadow-[5px_5px_50px_#7ef0ff] " : "-right-50 duration-300!  "}  duration-400! flex flex-row  items-center justify-center  fixed w-[200px] h-[300px]  border-2 border-[#7ef0ff] bg-[#10131c]  rounded-4xl z-100!  `}
+            className={`${menu ? " right-0  shadow-[5px_5px_50px_#7ef0ff] " : "-right-50 duration-300!  "}  duration-400! flex flex-row  items-center justify-center  fixed w-[200px] h-[300px]  border-2 border-[#7ef0ff] bg-[#10131c]  rounded-4xl z-200!  `}
         >  
             <div className={` 
                 ${menu ? " before:left-[1%] " : " before:left-[-9%] "}               
@@ -17,7 +17,7 @@ const SwitchButton = () => {
                 onClick={() => {setMenu((pre) => (!pre))}}
             >
                 <i className={`
-                    ${menu ? "rotate-y-180 left-2  top-34.5" : " -left-4  top-34.5"}
+                    ${menu ? "rotate-y-180 left-1  top-34.5" : " -left-4  top-34.5"}
                     bi bi-caret-left-fill text-[#7ef0ff] absolute  text-2xl z-5! cursor-pointer duration-400!`}    
                 ></i>   
             </div>
