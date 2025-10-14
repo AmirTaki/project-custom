@@ -1,7 +1,7 @@
 import Switch from "./switch"
 import { useEffect, useReducer, useState } from "react"
 
-const BoxSwitch = ({key}) => {
+const BoxSwitch = ({box}) => {
     const [active, setActive] = useState(false)
     
     const reducer = (state, action) => {
@@ -11,9 +11,11 @@ const BoxSwitch = ({key}) => {
         }
     }
     
-    const [stateSwich, dispatchSwitch] = useReducer(reducer, {
-
-    });
+    const [stateSwich, dispatchSwitch] = useReducer(reducer, [
+        {id : 0, status : false},
+        {id : 1, status : false},
+        {id : 2, status : false},
+    ]);
 
     useEffect(() => {
         // console.log(stateSwich)
@@ -26,10 +28,10 @@ const BoxSwitch = ({key}) => {
     return(
         <div className="box-custom-magic"
             // onClick={handleBox}
-
+            
             
         >
-            <Switch  active = {stateSwich} />
+            <Switch  active = {stateSwich} box = {box} />
         </div>
     )
 }
