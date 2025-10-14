@@ -16,7 +16,8 @@ const SwitchButton = () => {
                 before:top-[45%]!  before:left-[-10%]  before:rounded-full before:cursor-pointer before:z-40`}
                 onClick={() => {setMenu((pre) => (!pre))}}
             >
-                </div>
+                <i className="bi bi-caret-left"></i>
+            </div>
            
             <div className=" flex flex-col gap-7 relative
              w-[200px]  items-center justify-center 
