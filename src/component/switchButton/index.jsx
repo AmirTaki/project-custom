@@ -5,12 +5,13 @@ const SwitchButton = () => {
     const boxSwitch = [0, 1, 2];
 
     return(
-        <div className="flex flex-row fixed   border-2 border-amber-400 rounded-4xl overflow-auto right-0">  
+        <div className="flex flex-row fixed   border-2 border-amber-400 rounded-4xl overflow-auto right-0 ">  
            
-            <div className="bg-blue-500 w-10 h-[260px]"></div>
+            <div className="bg-blue-500 w-10 h-[260px] "></div>
            
             <div className=" flex flex-col gap-7 relative
              w-[200px] items-center justify-center 
+              before:content-[''] before:absolute before:top-[50%]  before:left-[-35%] before:w-[20px] before:h-[20px] before:bg-red-500 
             ">
                 {boxSwitch.map((box) => (
                     <BoxSwitch key = {box} box = {box} />
