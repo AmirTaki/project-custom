@@ -9,24 +9,25 @@ const BoxSwitch = ({box}) => {
             case "switchChange" : 
                const newSwitch =  state.map((item) => {
                    if (item.id === action.payload.box){
-                    console.log(item.status)
-                    return item.status = !item.status
+                    // console.log(item)
+                    // return item.status = !item.status
+                    return {...item, status : !item.status}
                    }
                    return item
                 })
         
-                return [...newSwitch ]
+                return newSwitch 
         }
     }
     
     const [stateSwich, dispatchSwitch] = useReducer(reducer, [
-        {id : 0, status : false},
+        {id : 0, status : true},
         {id : 1, status : false},
         {id : 2, status : false},
     ]);
 
     useEffect(() => {
-        console.log(stateSwich)
+        // console.log(stateSwich)
     }, [stateSwich])
 
     const handleBox = () => {
@@ -39,7 +40,7 @@ const BoxSwitch = ({box}) => {
             onClick={() => {dispatchSwitch ({type : "switchChange", payload : {box : box}})}}
 
         >
-            <Switch  active = {stateSwich} box = {box} />
+            <Switch  active = {stateSwich}  box = {box}/>
         </div>
     )
 }
