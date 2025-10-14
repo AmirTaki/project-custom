@@ -8,12 +8,14 @@ const BoxSwitch = ({box}) => {
         switch (action.type){
             case "switchChange" : 
                const newSwitch =  state.map((item) => {
-                    if (item.id === action.payload.box ){
-                        item.status = !item.status
-                        return item
-                    }
+                   if (item.id === action.payload.box){
+                    console.log(item.status)
+                    return item.status = !item.status
+                   }
+                   return item
                 })
-                return [...state, newSwitch ]
+        
+                return [...newSwitch ]
         }
     }
     

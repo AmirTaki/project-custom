@@ -8,7 +8,7 @@ const Switch = ({active, box}) => {
             {spans.map((delay, index) => (
                 <span 
                 className={`box-span-custom 
-                    ${active[box].status ? "transform translate-x-[60px]" : ""}   
+                    ${active.status ? "transform translate-x-[60px]" : ""}   
                         `
                     }
                     key = {index}
