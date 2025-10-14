@@ -6,6 +6,7 @@ const SearchInput = () => {
     return (
         <div 
             className ={`
+                ${active ? "w-[300px]" : "w-15"}
                 flex items-center bg-[aliceblue] p-[5px]  h-[50px] rounded-[50px] m-[10px]  relative transition-[width] duration-150
                 shadow-[6px_6px_10px_rgba(0,0,0,.2),-6px_-6px_10px_rgba(255,255,255,.7)]
             `}
