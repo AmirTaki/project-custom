@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 const SearchInput = () => {
+    const [search, setSearch] = useState('')
     return (
         <div 
             className ="flex center bg-[aliceblue] p-[5px] w-[300px] h-[50px] rounded-[50px] m-[10px]  relative transition-[width] duration-150
@@ -12,7 +15,8 @@ const SearchInput = () => {
             />
             <input 
                 type="text" placeholder="Search ..." 
-                className="bg-transparent border-0 mx-[10px] my-[50px] w-[100%] outline-0 text-[rgb(100, 100, 100)]"
+                onChange={(e)=> {setSearch(e.target.value)}}
+                className="bg-yellow-200 border-0  w-[100%] outline-0 text-[rgb(100, 100, 100)] "
             />
             <img src="https://tse4.mm.bing.net/th/id/OIP.FkcQWaj4fNpipuwvqAOvMwHaI6?pid=Api&P=0&h=22" alt="" />
         </div>
