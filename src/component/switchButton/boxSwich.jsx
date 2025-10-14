@@ -6,8 +6,12 @@ const BoxSwitch = () => {
     
     const reducer = (state, action) => {
         switch (action.type){
-            case "":
-                return state;
+            case "button":
+                const newData =  Object.keys(state).reduce((a, b) => {
+                    a[b] = false
+                    return a
+                },{})
+                return {...newData, [action.payload.data] : true  };
         }
     }
     
@@ -26,7 +30,7 @@ const BoxSwitch = () => {
     return(
         <div className="box-custom-magic"
             // onClick={handleBox}
-            onClick={() => {dispatchSwitch({type : "button", pyaload : {data : key}})}}
+            onClick={() => {dispatchSwitch({type : "button", payload : {data : key}})}}
         >
             <Switch  active = {active}/>
         </div>
