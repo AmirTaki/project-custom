@@ -1,7 +1,9 @@
+import { useState } from "react";
 import BoxSwitch from "./boxSwich"
  
 
 const SwitchButton = () => {
+    const [menu, setMenu] = useState(false)
     const boxSwitch = [0, 1, 2];
 
     return(
@@ -12,6 +14,7 @@ const SwitchButton = () => {
                 before:top-[45%]!  before:left-[-10%]  before:rounded-full before:cursor-pointer
                 
                 "
+                onClick={() => {setMenu((pre) => (!pre))}}
             >
                 </div>
            
