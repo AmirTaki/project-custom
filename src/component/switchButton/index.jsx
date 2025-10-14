@@ -12,12 +12,12 @@ const SwitchButton = () => {
         >  
             <div className={` 
                 ${menu ? " before:left-[1%] " : " before:left-[-9%] "}               
-                before:content-[''] before:absolute before:w-[30px] before:h-[40px] before:bg-transparent before:border-2 before:border-[#7ef0ff]
+                before:content-[''] before:absolute before:w-[30px] before:h-[43px] before:bg-transparent before:border-2 before:border-[#7ef0ff]
                 before:top-[45%]!  before:rounded-full before:cursor-pointer before:z-4 duration-400!`}
                 onClick={() => {setMenu((pre) => (!pre))}}
             >
                 <i className={`
-                    ${menu ? "rotate-180 left-2  top-34.5" : " -left-4  top-34"}
+                    ${menu ? "rotate-y-180 left-2  top-34.5" : " -left-4  top-34.5"}
                     bi bi-caret-left-fill text-[#7ef0ff] absolute  text-2xl z-5! cursor-pointer duration-400!`}    
                 ></i>   
             </div>
