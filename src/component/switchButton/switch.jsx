@@ -3,11 +3,14 @@ const Switch = ({active}) => {
         return  Math.random() * .25
     })
 
+    // ${active.button[index] ? "transform translate-x-[60px]" : ""}
     return(
         <>
             {spans.map((delay, index) => (
                 <span 
-                    className={`box-span-custom ${active ? "transform translate-x-[60px]" : ""}`}
+                    className={`box-span-custom 
+                        `
+                    }
                     key = {index}
                     style={{top : `${index * 1}px`, transitionDelay : `${delay}s`}}
                 ></span>

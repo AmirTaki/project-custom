@@ -1,38 +1,35 @@
 import Switch from "./switch"
-import { useReducer, useState } from "react"
+import { useEffect, useReducer, useState } from "react"
 
-const BoxSwitch = () => {
+const BoxSwitch = ({key}) => {
     const [active, setActive] = useState(false)
     
     const reducer = (state, action) => {
         switch (action.type){
-            case "button":
-                const newData =  Object.keys(state).reduce((a, b) => {
-                    a[b] = false
-                    return a
-                },{})
-                return {...newData, [action.payload.data] : true  };
+         
+            
         }
     }
     
-    const [stateSwich, dispatchSwitch] = useReducer(reducer, 
-        {
-            1 : false,
-            2 : false,
-            3 : false
-        }
-    );
+    const [stateSwich, dispatchSwitch] = useReducer(reducer, {
 
-    const handleBox = ({key}) => {
+    });
+
+    useEffect(() => {
+        // console.log(stateSwich)
+    }, [stateSwich])
+
+    const handleBox = () => {
         setActive((pre) => !pre)
     }
 
     return(
         <div className="box-custom-magic"
             // onClick={handleBox}
-            onClick={() => {dispatchSwitch({type : "button", payload : {data : key}})}}
+
+            
         >
-            <Switch  active = {active}/>
+            <Switch  active = {stateSwich} />
         </div>
     )
 }
