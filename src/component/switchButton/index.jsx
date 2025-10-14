@@ -12,10 +12,13 @@ const SwitchButton = () => {
         >  
             <div className={`                
                 before:content-[''] before:absolute before:w-[30px] before:h-[40px] before:bg-transparent before:border-2 before:border-[#7ef0ff]
-                before:top-[45%]!  before:left-[-16%]  before:rounded-full before:cursor-pointer before:z-4`}
+                before:top-[45%]!  before:left-[-9%]  before:rounded-full before:cursor-pointer before:z-4`}
                 onClick={() => {setMenu((pre) => (!pre))}}
             >
-                <i className={`bi bi-caret-left-fill text-[#7ef0ff] absolute -left-7 top-34 text-2xl z-5! cursor-pointer `}></i>   
+                <i className={`
+                    ${menu ? "rotate-180" : ""}
+                    bi bi-caret-left-fill text-[#7ef0ff] absolute -left-4 top-34 text-2xl z-5! cursor-pointer duration-200`}    
+                ></i>   
             </div>
            
             <div className=" flex flex-col gap-7 relative
