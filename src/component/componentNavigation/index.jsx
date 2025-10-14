@@ -1,11 +1,13 @@
-import { useReducer } from "react";
+import { createContext, useReducer } from "react";
 import DoctsMenu from "../9DoctsMenu";
 import MagicNavigationMenu from "../magicNavigationMenu";
 import Navigation from "../navigation";
 import SwitchButton from "../switchButton";
+ 
+
+export const switchNavigationContext =  createContext()
 
 const ComponentNavigation = () => {
-
 
     const reducer = (state, action) => {
         switch (action.type){
@@ -28,9 +30,10 @@ const ComponentNavigation = () => {
     const [stateSwich, dispatchSwitch] = useReducer(reducer, {
         listSwitch : {}
     });
-    
+
     return (
-        <>
+        <switchNavigationContext.Provider  Provider = {{stateSwich, dispatchSwitch}}>
+
             {/* button switch animation */}
             <SwitchButton />
 
@@ -42,7 +45,7 @@ const ComponentNavigation = () => {
             {/* magic navigation menu */}
             <MagicNavigationMenu />
 
-        </>
+        </switchNavigationContext.Provider>
     )
 }
 
