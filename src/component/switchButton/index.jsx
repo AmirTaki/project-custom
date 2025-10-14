@@ -1,4 +1,5 @@
 import BoxSwitch from "./boxSwich"
+ 
 
 const SwitchButton = () => {
     const boxSwitch = [0, 1, 2];

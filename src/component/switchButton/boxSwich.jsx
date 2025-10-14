@@ -1,8 +1,11 @@
+import { useContext } from "react"
 import Switch from "./switch"
+import { switchNavigationContext } from "../componentNavigation"
+
 
 const BoxSwitch = ({box}) => {
+    const {dispatchSwitch, stateSwich} =   useContext(switchNavigationContext)
 
-  
     return(
         <div className="box-custom-magic"
             // onClick={() => {dispatchSwitch ({type : "switchChange", payload : {box : box}})}}
