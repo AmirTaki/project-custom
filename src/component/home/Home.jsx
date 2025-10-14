@@ -9,17 +9,12 @@ const Home =  ()  => {
    
         <div 
             className={`h-[100vh] bg-[#10131c] flex justify-center items-center   `}
-        >
-
+        >        
+            
         
             {/* NAVBAR  => bg-no-repeat bg-cover bg-center => style={{backgroundImage : `url(${background})`}} */}
             <Navbar />
 
-            <MagicNavigationMenu />
-            
-
-            {/* button switch animation */}
-            <SwitchButton />
 
             {/* LayerdHoverEffect */}
             <LayerdHoverEffect />
