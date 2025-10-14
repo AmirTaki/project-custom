@@ -6,7 +6,7 @@ import SearchInput from "../search"
 const Navbar = () => {
     const [dropMenu, setDrompMenu] =  useState(false)
     const [resize, setResize] = useState(false)
-    const [active, setActive] = useState(false)
+    const [activeSearch, setActiveSearch] = useState(false)
     
     const handlerNavbar = () => {
         setDrompMenu(false)
@@ -57,8 +57,8 @@ const Navbar = () => {
                         Get Started
                     </div>
                 </div>
-                <div className={`${dropMenu ? "right-30" : "right-1"} absolute `}>
-                    <SearchInput active = {active} setActive = {setActive}/>
+                <div className={`${dropMenu ? "right-0!" : "right-14"} absolute! `}  >
+                    <SearchInput active = {activeSearch} setActive = {setActiveSearch}/>
                 </div>
                 <div className="lg:hidden">
                     <div 
