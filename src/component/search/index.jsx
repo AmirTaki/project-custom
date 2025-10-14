@@ -1,14 +1,13 @@
 import { useState } from "react";
 
-const SearchInput = () => {
+const SearchInput = ({active, setActive}) => {
     const [search, setSearch] = useState('')
-    const [active, setActive] = useState(false)
     return (
         <div 
             className ={`
                 ${active ? "w-[300px]" : "w-12 border-0!"}
                 flex items-center bg-transparent p-[5px] border-2 h-[40px] hover:border-blue-500 rounded-[50px] m-[10px]  relative transition-all duration-900
-                shadow-[6px_6px_10px_rgba(0_0_0_.2),-6px_-6px_10px_rgba(255_255_255_.7)] overflow-hidden
+                shadow-[6px_6px_10px_rgba(0_0_0_.2),-6px_-6px_10px_rgba(255_255_255_.7)] overflow-hidden 
             `}
         >
    
