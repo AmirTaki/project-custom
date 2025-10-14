@@ -7,7 +7,7 @@ const SearchInput = () => {
         <div 
             className ={`
                 ${active ? "w-[300px]" : "w-12"}
-                flex items-center bg-[aliceblue] p-[5px]  h-[50px] rounded-[50px] m-[10px]  relative transition-all duration-900
+                flex items-center bg-[aliceblue] p-[5px]  h-[40px] rounded-[50px] m-[10px]  relative transition-all duration-900
                 shadow-[6px_6px_10px_rgba(0_0_0_.2),-6px_-6px_10px_rgba(255_255_255_.7)] overflow-hidden
             `}
         >
@@ -23,7 +23,7 @@ const SearchInput = () => {
                 className={`${active ? 'w-[100%]' : "w-0!"} border-0  mx-12   outline-0 text-[rgb(100_100_100)] transition-all  delay-500 duration-1000 `}
             />
            
-            <i className={`${active ? 'text-2xl' : 'text-[0px]'} bi bi-mic-fill absolute right-[10px] delay-900 transition-all duration-200`}></i>
+            <i className={`${active ? 'text-2xl' : 'text-[0px]'} bi bi-mic-fill absolute text-black hover:text-red-400! right-[10px] delay-900 transition-all duration-200`}></i>
          
          
         </div>

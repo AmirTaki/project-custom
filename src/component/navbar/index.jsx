@@ -1,6 +1,6 @@
-
 import { useEffect, useState } from "react"
 import { BrowserRouter, Link } from "react-router-dom"
+import SearchInput from "../search"
 
 
 const Navbar = () => {
@@ -45,6 +45,7 @@ const Navbar = () => {
                     <div className="border-0 w-[80%] text-center oumdine-0 px-[1rem] py-[.5rem] rounded-[20px] cursor-pointer text-[.8rem] font-bold bg-[orange] hover:scale-111 duration-200 active:scale-95 lg:hidden!">
                         Get Started
                     </div>
+    
                 </ul>
          
                 <div className="flex items-center justify-center  max-lg:hidden ">
@@ -55,6 +56,7 @@ const Navbar = () => {
                         Get Started
                     </div>
                 </div>
+                <SearchInput />
                 <div className="lg:hidden">
                     <div 
                         onClick={()=>{setDrompMenu((prevDropMenu) => (!prevDropMenu))}}
