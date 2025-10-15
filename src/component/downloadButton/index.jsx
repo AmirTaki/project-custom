@@ -19,6 +19,7 @@ const DownloadButton = () => {
                 if(newNumber > 100){                
                     clearInterval(intervalRef.current)
                     setDone((preDone) => (preDone = true))
+                    contaienrRef.current.style.background = "#0f0"
                     return 100
                 }   
                 return newNumber
