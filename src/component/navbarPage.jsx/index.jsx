@@ -1,8 +1,6 @@
 import { createContext, useEffect, useReducer, useState } from "react";
 import Navbar from "../navbar";
-import PageSearch from "../pageSearch";
 export const searchContext = createContext()
-
 const NavbarPaeg = () => {
     
     const reducer = (state, action) => {
@@ -32,19 +30,11 @@ const NavbarPaeg = () => {
         }
     }, [stateSearch.activeSearch])
 
-    return(
-       <>
-            <searchContext.Provider value = {{stateSearch, dispathSearch}} >
-            
-                {/* NAVBAR  => bg-no-repeat bg-cover bg-center => style={{backgroundImage : `url(${background})`}} */}
-                <Navbar />
-                <PageSearch />
-            
-                
-            </searchContext.Provider> 
-     
-            
-       </>
+    return(  
+        <searchContext.Provider value = {{stateSearch, dispathSearch}} >
+            {/* NAVBAR  => bg-no-repeat bg-cover bg-center => style={{backgroundImage : `url(${background})`}} */}
+            <Navbar />  
+        </searchContext.Provider> 
     )
 }
 
