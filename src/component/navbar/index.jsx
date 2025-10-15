@@ -29,7 +29,7 @@ const Navbar = () => {
         ">
       
             <BrowserRouter >
-                <div className={`items-center justify-center flex`}>
+                <div className={`items-center justify-center ${active ? "flex" : "hidden"}`}>
                     {/* logo */}
                     <div className="">
                         <a className="text-[1.5rem] font-bold  cursor-pointer duration-300 hover:text-[orange]" href="">Web developer </a>
@@ -37,6 +37,7 @@ const Navbar = () => {
                 </div>
     
                 <ul  className={`
+                    ${active ? "flex" : "hidden"}
                     ${dropMenu ? "hidden" : "flex "} 
                     ${resize ? " h-0 overflow-hidden  flex! flex-col items-center justify-center fixed right-[2rem] max-md:right-[5%] max-md:left-[5%]  max-md:w-[90%] w-[300px] rounded-2xl top-[60px] " : "flex flex-row justify-center items-center gap-10"}
                     ${dropMenu && resize ? " transition-[height]! duration-500! ease-[cubic-bezier(.175,.885,.32,1.275)]! h-[260px]!  bg-[rgba(0,0,0,.2)]  overflow-hidden" 
@@ -53,7 +54,7 @@ const Navbar = () => {
          
                     
                 <div 
-                    className={`flex items-center justify-center  max-lg:hidden `}
+                    className={`flex items-center justify-center  max-lg:hidden ${active ? "flex" : "hidden"} `}
                 >
                     <div className="border-0 outline-0 px-[1rem] py-[.5rem]
                         rounded-[20px] cursor-pointer text-[.8rem] font-bold bg-[orange]
@@ -64,14 +65,16 @@ const Navbar = () => {
                 </div>
 
        
-                <div  className={` lg:hidden!`}  >
+                <div  className={` lg:hidden! ${active ? "flex" : "hidden"}`}  >
                     <div 
                         onClick={()=>{setDrompMenu((prevDropMenu) => (!prevDropMenu))}}
                         className="text-white text-[1.5rem] cursor-pointer">
                         <i className={`${dropMenu ? "fa-solid fa-xmark" : "fa-solid fa-bars"}`}></i>
                     </div>
                 </div>
-                <div onClick = {()=> {setActive(!active)}} className={`absolute  ${resize ? "right-20" : "right-10"} hover:scale-125! duration-300 `}><i className="bi bi-search hover:text-blue-500 duration-200 cursor-pointer "></i></div>
+                <div onClick = {()=> {setActive(!active)}} className={`absolute  ${resize ? "right-20" : "right-10"} ${active ? "flex" : "hidden"} hover:scale-125! duration-300 `}>
+                    <i className="bi bi-search hover:text-blue-500 duration-200 cursor-pointer "></i>
+                </div>
                 <div className={`${active ? "hidden!" : "absolute  left-10! right-10 bg-transparent "} `}>
                     <SearchInput  />
                 </div>
