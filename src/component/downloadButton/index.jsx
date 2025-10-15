@@ -9,20 +9,14 @@ const DownloadButton = () => {
 
     const handleButton = () => {
         setStartDownload((pre) => (pre = true))
+        
     }
-    
-    useEffect(() => {
 
-        intervalRef.current = setInterval(() => {
-           setNumber((numberPrev) => (numberPrev+1))
-                if(number > 100){ return () => { clearInterval(intervalRef.current)}}
-        }, 1000)
-
-    }, [startDwonload])
 
     return (
         // container
         <div 
+            style={{background : `conic-gradient(#f5036c ${number}%, #333 0%)`}}
             ref = {contaienrRef}
             className={`
                 relative w-[200px] h-[200px] rounded-[50%] flex justify-center items-center
