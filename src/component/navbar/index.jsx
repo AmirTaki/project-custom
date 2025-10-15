@@ -24,8 +24,13 @@ const Navbar = () => {
     },[])
 
     useEffect(() => {
-        if(!activeSearch){
+        if(activeSearch){
             setHiddenMenu(true);
+        }
+        else {
+            setTimeout(() => {
+                setHiddenMenu(false)
+            }, 1000);
         }
         
     }, [activeSearch])
@@ -36,14 +41,14 @@ const Navbar = () => {
         ">
       
             <BrowserRouter >
-                <div className={`flex items-center justify-center `}>
+                <div className={`items-center justify-center ${hiddenMenu ? "hidden" : "flex"} `}>
                     {/* logo */}
                     <div className="">
                         <a className="text-[1.5rem] font-bold  cursor-pointer duration-300 hover:text-[orange]" href="">Web developer </a>
                     </div>
                 </div>
                                
-                <div className={`${resize ? 'right-15' : "right-5"} absolute `}>
+                <div className={`${resize ? 'right-15' : "right-5"}   ${activeSearch ? "static w-[100%]" :" absolute  "} `}>
                     <SearchInput activeSearch={activeSearch} setActiveSearch={setActiveSearch}/>
                 </div>
        
