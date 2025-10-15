@@ -33,6 +33,7 @@ const DownloadButton = () => {
             style={{background : `conic-gradient(#f5036c ${number}%, #333 0%)`}}
             ref = {contaienrRef}
             className={`
+                ${done ? "bg-[#0f0]" : "" }
                 relative w-[200px] h-[200px] rounded-[50%] flex justify-center items-center
                 cursor-pointer select-none overflow-hidden bg-[conic-gradient(#333_0%,#33_100%))]
                 before:content-[''] before:absolute before:rounded-[50%] before:bg-[#222] opacity-90 before:inset-[15px]
@@ -47,7 +48,7 @@ const DownloadButton = () => {
                 `}></i>
             {/* number */}
             <h2 className="
-                relative z-100 text-[3em] text-center
+                relative z-100 text-[3em] text-center text-white
             ">
                 <span className={`${startDwonload ? 'flex' : 'hidden'}`}>{number}%</span>
             </h2>
