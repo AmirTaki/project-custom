@@ -1,8 +1,10 @@
+import { createContext } from "react"
 import ComponentNavigation from "../componentNavigation"
 import LayerdHoverEffect from "../layerdHoverEffect"
 import Navbar from "../navbar"
 import PageSearch from "../pageSearch"
 import SearchInput from "../search"
+
 
 
 const Home =  ()  => {
