@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-const SearchInput = () => {
+const SearchInput = ({activeSearch, setActiveSearch }) => {
     const [search, setSearch] = useState('')
-    const [activeSearch, setActiveSearch] = useState(false)
+   
     return (
         <div 
             className ={`

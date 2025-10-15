@@ -7,7 +7,8 @@ import SearchInput from "../search"
 const Navbar = () => {
     const [dropMenu, setDrompMenu] =  useState(false)
     const [resize, setResize] = useState(false)
-
+    const [test, setTest] = useState(false)
+    const [activeSearch, setActiveSearch] = useState(false)
 
     const handlerNavbar = () => {
         setDrompMenu(false)
@@ -22,6 +23,12 @@ const Navbar = () => {
       }
     },[])
 
+    useEffect(() => {
+        if(!test){
+
+        }
+        
+    }, [])
 
     return(
         <div className="flex justify-between items-center  px-[5rem] max-lg:px-[2rem] text-white
@@ -37,7 +44,7 @@ const Navbar = () => {
                 </div>
                                
                 <div className={`${resize ? 'right-15' : "right-5"} absolute `}>
-                    <SearchInput />
+                    <SearchInput activeSearch={activeSearch} setActiveSearch={setActiveSearch}/>
                 </div>
        
                 <ul  className={`
