@@ -11,7 +11,11 @@ const DownloadButton = () => {
                 fa-solid fa-arrow-down-long
                 absolute top-[50%]  translate-y-[-50%] text-[#03a9f5] text-[4em] duration-500
             "></i>
-            <h2></h2>
+            <h2 className="
+                relative z-100 text-[3em] text-center
+            ">
+
+            </h2>
         </div>
     )
 }
