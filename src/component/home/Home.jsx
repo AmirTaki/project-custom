@@ -1,9 +1,12 @@
+import { useState } from "react"
 import ComponentNavigation from "../componentNavigation"
 import LayerdHoverEffect from "../layerdHoverEffect"
 import Navbar from "../navbar"
 import SearchInput from "../search"
 
+
 const Home =  ()  => {
+    const [activeSearch, setActiveSearch] = useState(false)
     return(
    
         <div 
@@ -20,7 +23,7 @@ const Home =  ()  => {
             {/* LayerdHoverEffect */}
             {/* <LayerdHoverEffect /> */}
 
-            <SearchInput />
+          <SearchInput activeSearch={activeSearch} setActiveSearch={setActiveSearch}/>
         </div>
    
     )

@@ -7,9 +7,7 @@ import SearchInput from "../search"
 const Navbar = () => {
     const [dropMenu, setDrompMenu] =  useState(false)
     const [resize, setResize] = useState(false)
-    const [hiddenMenu, setHiddenMenu] = useState(false)
-    const [activeSearch, setActiveSearch] = useState(false)
-
+    
     const handlerNavbar = () => {
         setDrompMenu(false)
         setResize(window.innerWidth <= 1024 ? true : false)
@@ -23,17 +21,7 @@ const Navbar = () => {
       }
     },[])
 
-    useEffect(() => {
-        if(activeSearch){
-            setHiddenMenu(true);
-        }
-        else {
-            setTimeout(() => {
-                setHiddenMenu(false)
-            }, 1000);
-        }
-        
-    }, [activeSearch])
+
 
     return(
         <div className="flex justify-between items-center  px-[5rem] max-lg:px-[2rem] text-white
@@ -41,19 +29,14 @@ const Navbar = () => {
         ">
       
             <BrowserRouter >
-                <div className={`items-center justify-center ${hiddenMenu ? "hidden" : "flex"} `}>
+                <div className={`items-center justify-center flex`}>
                     {/* logo */}
                     <div className="">
                         <a className="text-[1.5rem] font-bold  cursor-pointer duration-300 hover:text-[orange]" href="">Web developer </a>
                     </div>
                 </div>
-                               
-                <div className={`${resize ? 'right-15' : "right-5"}   ${activeSearch ? "static w-[100%]" :" absolute  "} `}>
-                    <SearchInput activeSearch={activeSearch} setActiveSearch={setActiveSearch}/>
-                </div>
-       
+    
                 <ul  className={`
-                    ${hiddenMenu ? "hidden" : "flex"}
                     ${dropMenu ? "hidden" : "flex "} 
                     ${resize ? " h-0 overflow-hidden  flex! flex-col items-center justify-center fixed right-[2rem] max-md:right-[5%] max-md:left-[5%]  max-md:w-[90%] w-[300px] rounded-2xl top-[60px] " : "flex flex-row justify-center items-center gap-10"}
                     ${dropMenu && resize ? " transition-[height]! duration-500! ease-[cubic-bezier(.175,.885,.32,1.275)]! h-[260px]!  bg-[rgba(0,0,0,.2)]  overflow-hidden" 
@@ -70,10 +53,7 @@ const Navbar = () => {
          
                     
                 <div 
-                    className={`
-                        ${hiddenMenu ? "hidden" : "flex"}
-                        flex items-center justify-center  max-lg:hidden 
-                    `}
+                    className={`flex items-center justify-center  max-lg:hidden `}
                 >
                     <div className="border-0 outline-0 px-[1rem] py-[.5rem]
                         rounded-[20px] cursor-pointer text-[.8rem] font-bold bg-[orange]
@@ -84,7 +64,7 @@ const Navbar = () => {
                 </div>
 
        
-                <div  className={` lg:hidden!  ${hiddenMenu ? "hidden" : "flex"} `}  >
+                <div  className={` lg:hidden!`}  >
                     <div 
                         onClick={()=>{setDrompMenu((prevDropMenu) => (!prevDropMenu))}}
                         className="text-white text-[1.5rem] cursor-pointer">

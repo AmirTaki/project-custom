@@ -6,8 +6,8 @@ const SearchInput = ({activeSearch, setActiveSearch }) => {
     return (
         <div 
             className ={`
-                ${activeSearch ? "w-[90%]" : "w-12 border-0!"}
-                flex items-center bg-transparent p-[5px] border-2 h-[40px] hover:border-blue-500 rounded-[50px]  transition-all duration-900
+                ${activeSearch ? "" : " border-0!"}
+                flex items-center bg-transparent p-[5px] border-2 h-[40px] hover:border-blue-500 rounded-[50px]  transition-all duration-900!
                 shadow-[6px_6px_10px_rgba(0_0_0_.2),-6px_-6px_10px_rgba(255_255_255_.7)] overflow-hidden    relative mx-[1%]
             `}
         >
