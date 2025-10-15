@@ -24,6 +24,13 @@ const NavbarPaeg = () => {
             return() => { clearTimeout(timer)}
         }
     }, [stateSearch.active])
+    
+    useEffect(() => {
+        if(!stateSearch.activeSearch){
+            const timer = setTimeout(() => {dispathSearch({type : 'openSearch', payload : {flag : true}})}, [900])
+            return () => {clearInterval(timer)}
+        }
+    }, [stateSearch.activeSearch])
 
     return(
        <>
