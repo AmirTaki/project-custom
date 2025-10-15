@@ -1,12 +1,18 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 
 const DownloadButton = () => {
 
     const [startDwonload, setStartDownload] = useState(false)
     const [number, setNumber] = useState(0)
+    const contaienrRef  =  useRef (null) 
 
     const handleButton = () => {
         setStartDownload((pre) => (pre = true))
+        const timer =  setTimeout(() => {
+            setNumber((number) => (number++))
+
+
+        }, [100])
     }
 
 
