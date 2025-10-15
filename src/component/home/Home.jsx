@@ -20,6 +20,7 @@ const Home =  ()  => {
             {/* LayerdHoverEffect */}
             {/* <LayerdHoverEffect /> */}
 
+            <SearchInput />
         </div>
    
     )

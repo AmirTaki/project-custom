@@ -3,11 +3,11 @@ import { BrowserRouter, Link } from "react-router-dom"
 import SearchInput from "../search"
 
 
+
 const Navbar = () => {
     const [dropMenu, setDrompMenu] =  useState(false)
     const [resize, setResize] = useState(false)
-    const [activeSearch, setActiveSearch] = useState(false)
-    const [hiddeMenu, setHiddenMenu] = useState(false)
+
 
     const handlerNavbar = () => {
         setDrompMenu(false)
@@ -22,33 +22,23 @@ const Navbar = () => {
       }
     },[])
 
-  
+
     return(
         <div className="flex justify-between items-center  px-[5rem] max-lg:px-[2rem] text-white
         w-[100%] fixed! top-0 bg-[rgba(0,0,0,.2)] h-[60px] z-[2000]! 
         ">
-          
-            <div 
-
-                className={`
-                    ${resize ? "absolute right-13!":"absolute right-1!"}
-                    ${activeSearch ? "left-0" : ''} 
-             
-                `}
-                
-                >
-                <SearchInput active = {activeSearch} setActive = {setActiveSearch}/>
-            </div>
-
-
+      
             <BrowserRouter >
-                <div className={`${activeSearch ? "hidden " : "flex "}  flex items-center justify-center `}>
+                <div className={`flex items-center justify-center `}>
                     {/* logo */}
                     <div className="">
                         <a className="text-[1.5rem] font-bold  cursor-pointer duration-300 hover:text-[orange]" href="">Web developer </a>
                     </div>
                 </div>
                                
+                <div className="absolute right-0">
+                    <SearchInput />
+                </div>
        
                 <ul  className={`
                     ${dropMenu ? "hidden" : "flex "} 
@@ -67,18 +57,20 @@ const Navbar = () => {
          
                     
                 <div 
-                    className={`flex items-center justify-center  max-lg:hidden ${activeSearch ? "hidden!" : "flex"}`}
+                    className={`
+                        flex items-center justify-center  max-lg:hidden 
+                        `}
                 >
                     <div className="border-0 outline-0 px-[1rem] py-[.5rem]
                         rounded-[20px] cursor-pointer text-[.8rem] font-bold bg-[orange]
                         hover:scale-111 duration-200 active:scale-95
-                    ">
+                        ">
                         Get Started
                     </div>
                 </div>
-  
+
        
-                <div  className={` lg:hidden! ${activeSearch ? "hidden " : "flex "} `}  >
+                <div  className={` lg:hidden! `}  >
                     <div 
                         onClick={()=>{setDrompMenu((prevDropMenu) => (!prevDropMenu))}}
                         className="text-white text-[1.5rem] cursor-pointer">
