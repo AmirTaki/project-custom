@@ -3,6 +3,7 @@ import { useState } from "react"
 const DownloadButton = () => {
 
     const [startDwonload, setStartDownload] = useState(false)
+    const [number, setNumber] = useState(0)
 
     const handleButton = () => {
         setStartDownload((pre) => (pre = true))
