@@ -8,15 +8,17 @@ const NavbarPaeg = () => {
     const reducer = (state, action) => {
         switch(action.type){
             case "inputWidth" :
-                return {...state, activeSearch : action.payload.flag ,}
+                return {...state, activeSearch : action.payload.flag }
             case "openSearch": 
-                return {...state, active : action.payload.flag }
+       
+                return  {...state, active : action.payload.flag  }
         }
     }
     const [stateSearch, dispathSearch] = useReducer(reducer, {
         active : true,
         activeSearch : false    
     })
+    
     
 
     return(
