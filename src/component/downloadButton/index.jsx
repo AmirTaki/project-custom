@@ -1,4 +1,10 @@
 const DownloadButton = () => {
+
+    const handleButton = () => {
+        
+    }
+
+
     return (
         // container
         <div className="
@@ -7,10 +13,13 @@ const DownloadButton = () => {
             before:content-['] before:absolute before:rounded-[50%] before:bg-[#222] opacity-90 before:inset-[15px]
          ">
             {/* download */}
-            <i className="
+            <i 
+                onClick = {() => {handleButton}}
+                className="
                 fa-solid fa-arrow-down-long
                 absolute top-[50%]  translate-y-[-50%] text-[#03a9f5] text-[4em] duration-500
             "></i>
+            {/* number */}
             <h2 className="
                 relative z-100 text-[3em] text-center
             ">
