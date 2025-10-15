@@ -48,7 +48,7 @@ const DownloadButton = () => {
                 `}></i>
             {/* number */}
             <h2 className={`
-                ${done ? 'text-[.5rem] ' : ''}
+                ${done ? 'text-[.5rem] leading-[1em] ' : ''}
                 relative z-100 text-[3em] text-center text-white    
             `}>
                 <span className={`${startDwonload ? 'flex' : 'hidden'}`}>{number}%</span>
