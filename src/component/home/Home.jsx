@@ -13,13 +13,13 @@ const Home =  ()  => {
             <ComponentNavigation />
 
             {/* Navbar */}
-            {/* <NavbarPaeg /> */}
+            <NavbarPaeg />
 
             {/* download button */}
             <DownloadButton />
 
             {/* LayerdHoverEffect */}
-            {/* <LayerdHoverEffect /> */}
+            <LayerdHoverEffect />
         </div>
    
     )
