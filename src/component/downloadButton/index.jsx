@@ -51,7 +51,11 @@ const DownloadButton = () => {
                 ${done ? 'text-[.5rem] leading-[1em] ' : ''}
                 relative z-100 text-[3em] text-center text-white    
             `}>
-                <span className={`${startDwonload ? 'flex' : 'hidden'}`}>{number}%</span>
+                <span className={`
+                    ${startDwonload ? 'flex' : 'hidden'}
+                    ${done ? "absolute top-[10px] text-[.2em] whitespace-nowrap font-[500] uppercase " : ""}    
+                
+                `}>{number}%</span>
             </h2>
         </div>
     )
