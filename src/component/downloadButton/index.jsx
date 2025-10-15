@@ -15,6 +15,7 @@ const DownloadButton = () => {
             
             setNumber(preNumber  => {
                 const newNumber = preNumber + 1;
+                contaienrRef.current.style.background = `conic-gradient(#f5036c ${newNumber}%, #333 0%)`
                 if(newNumber > 100){                
                     clearInterval(intervalRef.current)
                     setDone((preDone) => (preDone = true))
@@ -26,17 +27,18 @@ const DownloadButton = () => {
         }, 100);
     }   
 
+    // style={{background : `conic-gradient(#f5036c ${number}%, #333 0%)`  }}
 
     return (
         // container
         <div 
-            style={{background : `conic-gradient(#f5036c ${number}%, #333 0%)`}}
+
             ref = {contaienrRef}
             className={`
-                ${done ? "bg-[#0f0]" : "" }
+                
                 relative w-[200px] h-[200px] rounded-[50%] flex justify-center items-center
-                cursor-pointer select-none overflow-hidden bg-[conic-gradient(#333_0%,#33_100%))]
-                before:content-[''] before:absolute before:rounded-[50%] before:bg-[#222] opacity-90 before:inset-[15px]
+                cursor-pointer select-none overflow-hidden bg-[conic-gradient(#333_0%,#333_100%))]
+                before:content-[''] before:absolute before:rounded-[50%] before:bg-[#222] before:opacity-90 before:inset-[15px]
             `}>
             {/* download */}
             <i 
@@ -55,7 +57,7 @@ const DownloadButton = () => {
                     ${startDwonload ? 'flex' : 'hidden'}
                     ${done ? "absolute top-[10px] text-[.2em] whitespace-nowrap font-[500] uppercase -translate-x-1/2  translate-y-1/2 tracking-[.5em]" : "text-[.5em]"}    
                 
-                `}>{number}%</span>
+                `}>{number}% </span>
             </h2>
         </div>
     )
