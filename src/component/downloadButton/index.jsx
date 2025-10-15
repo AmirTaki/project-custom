@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react"
 const DownloadButton = () => {
 
     const [startDwonload, setStartDownload] = useState(false)
+    const [done, setDone] = useState(false)
     const [number, setNumber] = useState(0)
     const contaienrRef  =  useRef (null) 
     const intervalRef  =  useRef (null) 
@@ -14,9 +15,9 @@ const DownloadButton = () => {
             
             setNumber(preNumber  => {
                 const newNumber = preNumber + 1;
-                if(newNumber > 100){
-                    console.log('ok')
+                if(newNumber > 100){                
                     clearInterval(intervalRef.current)
+                    setDone((preDone) => (preDone = true))
                     return 100
                 }   
                 return newNumber
