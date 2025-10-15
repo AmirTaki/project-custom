@@ -36,7 +36,7 @@ const Navbar = () => {
                     </div>
                 </div>
                                
-                <div className="absolute right-0">
+                <div className={`${resize ? 'right-15' : "right-5"} absolute `}>
                     <SearchInput />
                 </div>
        
