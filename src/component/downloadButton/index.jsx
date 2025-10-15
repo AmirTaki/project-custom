@@ -8,13 +8,14 @@ const DownloadButton = () => {
 
     const handleButton = () => {
         setStartDownload((pre) => (pre = true))
-        const timer =  setTimeout(() => {
-            setNumber((number) => (number++))
-
-            contaienrRef.current.style.background  = `conic-gradient(#f5036c ${number}%, #333 0%)`
-        }, [100])
+        setInterval(()=> {
+            setNumber((number) => (number+1))
+            contaienrRef.current.style.background  = `conic-gradient(#f5036c ${number}%, #333 0%)`     
+        }, 100)
     }
-
+    
+    // setNumber((number) => (number++))
+    // console.log(number)
 
     return (
         // container
