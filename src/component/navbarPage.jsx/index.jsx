@@ -7,9 +7,11 @@ export const searchContext = createContext()
 const NavbarPaeg = () => {
     
     const [active, setActive] = useState(true)
+    const [activeSearch, setActiveSearch] = useState(false)
+    
     return(
        <>
-            <searchContext.Provider value = {{active, setActive}} >
+            <searchContext.Provider value = {{active, setActive, activeSearch, setActiveSearch}} >
             
                 {/* NAVBAR  => bg-no-repeat bg-cover bg-center => style={{backgroundImage : `url(${background})`}} */}
                 <Navbar />

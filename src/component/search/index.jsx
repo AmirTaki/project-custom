@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { searchContext } from "../navbarPage.jsx";
 
 const SearchInput = () => {
     const [search, setSearch] = useState('')
-    const [activeSearch, setActiveSearch] = useState(false)
-   
+    const {activeSearch, setActiveSearch } = useContext (searchContext)
+    
     return (
         <div 
             className ={`
