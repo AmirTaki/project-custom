@@ -71,6 +71,7 @@ const Navbar = () => {
                         <i className={`${dropMenu ? "fa-solid fa-xmark" : "fa-solid fa-bars"}`}></i>
                     </div>
                 </div>
+                <div className={`absolute  ${resize ? "right-20" : "right-10"} hover:scale-125! duration-300 `}><i className="bi bi-search hover:text-blue-500 duration-200 cursor-pointer "></i></div>
                 
             </BrowserRouter>
         </div>
