@@ -3,8 +3,9 @@ import { useState } from "react"
 const DownloadButton = () => {
 
     const [startDwonload, setStartDownload] = useState(false)
+
     const handleButton = () => {
-        setStartDownload(!startDwonload)
+        setStartDownload((pre) => (pre = true))
     }
 
 
@@ -17,11 +18,11 @@ const DownloadButton = () => {
         `}>
             {/* download */}
             <i 
-                onClick = {() => {handleButton}}
-                className={`
-                    ${startDwonload ? 'translate-y-[-50%]' : "translate-y-[170%]"}
+                onClick = {handleButton}
+                className={` 
                     fa-solid fa-arrow-down-long
-                    absolute top-[50%]  text-[#03a9f5] text-[4em] duration-500
+                    absolute top-[50%]  text-[#03a9f5] text-[4em] duration-500 
+                    ${startDwonload ? 'translate-y-[170%]!' : "translate-y-[-50%]!"}
                 `}></i>
             {/* number */}
             <h2 className="
