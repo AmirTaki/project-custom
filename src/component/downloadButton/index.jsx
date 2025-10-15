@@ -8,9 +8,14 @@ const DownloadButton = () => {
 
     const handleButton = () => {
         setStartDownload((pre) => (pre = true))
-        setInterval(()=> {
+        const timer =   setInterval(()=> {
             setNumber((number) => (number+1))
-            contaienrRef.current.style.background  = `conic-gradient(#f5036c ${number}%, #333 0%)`     
+            // contaienrRef.current.style.background  = `conic-gradient(#f5036c ${number}%, #333 0%)`  
+            
+            if (number > 100){
+                clearInterval(timer)
+            }
+            
         }, 100)
     }
     
@@ -22,8 +27,9 @@ const DownloadButton = () => {
         <div 
             ref = {contaienrRef}
             className={`
+                ${startDwonload ? `bg-[conic-gradient(#f5036c ${number}%,_#333_100%)]` : "bg-[conic-gradient(#333_0%,_#333_100%)]"}
                 relative w-[200px] h-[200px] rounded-[50%] flex justify-center items-center
-                cursor-pointer select-none overflow-hidden bg-[conic-gradient(#333_0%,_#333_100%)]
+                cursor-pointer select-none overflow-hidden 
                 before:content-[''] before:absolute before:rounded-[50%] before:bg-[#222] opacity-90 before:inset-[15px]
             `}>
             {/* download */}
