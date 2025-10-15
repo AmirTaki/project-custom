@@ -22,10 +22,10 @@ const SearchInput = () => {
             <input 
                 type="text" placeholder={`Search ...`} 
                 onChange={(e)=> {setSearch(e.target.value)}}
-                className={`${activeSearch ? 'w-[100%]' : "w-0!"} border-0  mx-12   outline-0 text-white transition-all  delay-500 duration-1000 `}
+                className={`${stateSearch.activeSearch ? 'w-[100%]' : "w-0!"} border-0  mx-12   outline-0 text-white transition-all  delay-500 duration-1000 `}
             />
            
-            <i className={`${activeSearch ? 'text-2xl' : 'text-[0px]'} bi bi-mic-fill absolute text-blue-500 hover:text-red-400! hover:delay-0 cursor-pointer not-hover:delay-0 right-[10px] delay-850! transition-all duration-200`}></i>
+            <i className={`${stateSearch.activeSearch ? 'text-2xl' : 'text-[0px]'} bi bi-mic-fill absolute text-blue-500 hover:text-red-400! hover:delay-0 cursor-pointer not-hover:delay-0 right-[10px] delay-850! transition-all duration-200`}></i>
          
             
          
