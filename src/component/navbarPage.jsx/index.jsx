@@ -10,7 +10,6 @@ const NavbarPaeg = () => {
             case "inputWidth" :
                 return {...state, activeSearch : action.payload.flag }
             case "openSearch": 
-    
                 return  {...state, active : action.payload.flag  }
         }
     }
@@ -21,7 +20,7 @@ const NavbarPaeg = () => {
     
     useEffect(() => {
         if(!stateSearch.active){
-            const timer = setTimeout(() => {dispathSearch({type : 'inputWidth', payload : {flag : true}})}, [50])
+            const timer = setTimeout(() => {dispathSearch({type : 'inputWidth', payload : {flag : true}})}, [100])
             return() => { clearTimeout(timer)}
         }
     }, [stateSearch.active])

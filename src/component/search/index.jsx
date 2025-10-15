@@ -9,13 +9,13 @@ const SearchInput = () => {
         <div 
             className ={`
                 ${stateSearch.activeSearch ? "w-[100%]" : " border-0! w-[10%]"}
-                flex items-center bg-transparent p-[5px] border-2 h-[40px] hover:border-blue-500 border-gray-500 rounded-[50px]  transition-all duration-900! delay-1000!
+                flex items-center bg-transparent p-[5px] border-2 h-[40px] hover:border-blue-500 border-gray-500 rounded-[50px]  transition-all duration-900! 
                 shadow-[6px_6px_10px_rgba(0_0_0_.2),-6px_-6px_10px_rgba(255_255_255_.7)] overflow-hidden    relative mx-[1%]
             `}
         >
    
             <i 
-                onClick={() => {dispathSearch({type : "inputWidth", payload : {flag : true}})}}
+                onClick={() => {dispathSearch({type : "inputWidth", payload : {flag : false}})}}
                 className="bi bi-search text-xl  cursor-pointer absolute left-[13px] text-blue-500 ">
             </i>
 
