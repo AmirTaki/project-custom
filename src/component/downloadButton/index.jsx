@@ -1,35 +1,32 @@
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 const DownloadButton = () => {
 
     const [startDwonload, setStartDownload] = useState(false)
     const [number, setNumber] = useState(0)
     const contaienrRef  =  useRef (null) 
+    const intervalRef  =  useRef (null) 
 
     const handleButton = () => {
         setStartDownload((pre) => (pre = true))
-        const timer =   setInterval(()=> {
-            setNumber((number) => (number+1))
-            // contaienrRef.current.style.background  = `conic-gradient(#f5036c ${number}%, #333 0%)`  
-            
-            if (number > 100){
-                clearInterval(timer)
-            }
-            
-        }, 100)
     }
     
-    // setNumber((number) => (number++))
-    // console.log(number)
+    useEffect(() => {
+
+        intervalRef.current = setInterval(() => {
+           setNumber((numberPrev) => (numberPrev+1))
+                if(number > 100){ return () => { clearInterval(intervalRef.current)}}
+        }, 1000)
+
+    }, [startDwonload])
 
     return (
         // container
         <div 
             ref = {contaienrRef}
             className={`
-                ${startDwonload ? `bg-[conic-gradient(#f5036c ${number}%,_#333_100%)]` : "bg-[conic-gradient(#333_0%,_#333_100%)]"}
                 relative w-[200px] h-[200px] rounded-[50%] flex justify-center items-center
-                cursor-pointer select-none overflow-hidden 
+                cursor-pointer select-none overflow-hidden bg-[conic-gradient(#333_0%,#33_100%))]
                 before:content-[''] before:absolute before:rounded-[50%] before:bg-[#222] opacity-90 before:inset-[15px]
             `}>
             {/* download */}
