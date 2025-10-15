@@ -9,8 +9,21 @@ const DownloadButton = () => {
 
     const handleButton = () => {
         setStartDownload((pre) => (pre = true))
-        
-    }
+
+        intervalRef.current =  setInterval(() => {
+            
+            setNumber(preNumber  => {
+                const newNumber = preNumber + 1;
+                if(newNumber > 100){
+                    console.log('ok')
+                    clearInterval(intervalRef.current)
+                    return 100
+                }   
+                return newNumber
+            })
+
+        }, 100);
+    }   
 
 
     return (
