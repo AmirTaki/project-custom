@@ -1,21 +1,17 @@
 import { createContext, useEffect, useReducer, useState } from "react";
 import Navbar from "../navbar";
 import PageSearch from "../pageSearch";
-
 export const searchContext = createContext()
 
 const NavbarPaeg = () => {
     
-    const [active, setActive] = useState(true)
-    const [activeSearch, setActiveSearch] = useState(false)
-    
     const reducer = (state, action) => {
         switch(action.type){
-            case "" :
-                return {...state}
+            case "inputWidth" :
+                return {...state, activeSearch : action.payload.flag}
         }
     }
-    const [state, dispath] = useReducer(reducer, {
+    const [stateSearch, dispathSearch] = useReducer(reducer, {
         active : true,
         activeSearch : false    
     })
@@ -23,7 +19,7 @@ const NavbarPaeg = () => {
 
     return(
        <>
-            <searchContext.Provider value = {{active, setActive, activeSearch, setActiveSearch}} >
+            <searchContext.Provider value = {{stateSearch, dispathSearch}} >
             
                 {/* NAVBAR  => bg-no-repeat bg-cover bg-center => style={{backgroundImage : `url(${background})`}} */}
                 <Navbar />
