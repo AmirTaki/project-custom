@@ -28,15 +28,11 @@ const DownloadButton = () => {
         }, 100);
     }   
 
-    // style={{background : `conic-gradient(#f5036c ${number}%, #333 0%)`  }}
-
     return (
         // container
         <div 
-
             ref = {contaienrRef}
             className={`
-                
                 relative w-[200px] h-[200px] rounded-[50%] flex justify-center items-center
                 cursor-pointer select-none overflow-hidden bg-[conic-gradient(#333_0%,#333_100%))]
                 before:content-[''] before:absolute before:rounded-[50%] before:bg-[#222] before:opacity-90 before:inset-[15px]
@@ -58,7 +54,11 @@ const DownloadButton = () => {
                     ${startDwonload ? 'flex' : 'hidden'}
                     ${done ? "absolute top-[10px] text-[.2em] whitespace-nowrap font-[500] uppercase -translate-x-1/2  translate-y-1/2 tracking-[.5em]" : "text-[.5em]"}    
                 
-                `}>{number}% </span>
+                `}>
+                    {number}% 
+                    <i className="fa-solid fa-check"><small>100% Done</small></i>
+                    
+                </span>
             </h2>
         </div>
     )
