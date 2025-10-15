@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { BrowserRouter, Link } from "react-router-dom"
 import SearchInput from "../search"
+import { searchContext } from "../navbarPage.jsx"
 
 const Navbar = () => {
     const [dropMenu, setDrompMenu] =  useState(false)
     const [resize, setResize] = useState(false)
+    const {active, setActive} =  useContext(searchContext)
 
     const handlerNavbar = () => {
         setDrompMenu(false)
