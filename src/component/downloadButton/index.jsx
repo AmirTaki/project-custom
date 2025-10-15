@@ -52,11 +52,13 @@ const DownloadButton = () => {
             `}>
                 <span className={`
                     ${startDwonload ? 'flex' : 'hidden'}
-                    ${done ? "absolute top-[10px] text-[.2em] whitespace-nowrap font-[500] uppercase -translate-x-1/2  translate-y-1/2 tracking-[.5em]" : "text-[.5em]"}    
+                    ${done ? "" : "text-[.5em]"}    
                 
                 `}>
                     <div className={`${done ? "hidden!" : "flex!"}`}>{number}%</div>
-                    <i className={`${done ? "flex!" : "hidden!"} fa-solid fa-check`}><small>100% Done</small></i>                    
+                    <i className={`${done ? "flex!" : "hidden!"} fa-solid fa-check`}>
+                        <small className="absolute top-[10px] text-[.2em] whitespace-nowrap font-[500] uppercase -translate-x-1/2  translate-y-1/2 tracking-[.5em]">100% Done</small>
+                    </i>                    
                 </span>
             </h2>
         </div>
