@@ -26,6 +26,7 @@ const SearchInput = () => {
            
             <i className={`${activeSearch ? 'text-2xl' : 'text-[0px]'} bi bi-mic-fill absolute text-blue-500 hover:text-red-400! hover:delay-0 cursor-pointer not-hover:delay-0 right-[10px] delay-850! transition-all duration-200`}></i>
          
+            
          
         </div>
     )

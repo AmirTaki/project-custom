@@ -2,12 +2,10 @@ import { useEffect, useState } from "react"
 import { BrowserRouter, Link } from "react-router-dom"
 import SearchInput from "../search"
 
-
-
 const Navbar = () => {
     const [dropMenu, setDrompMenu] =  useState(false)
     const [resize, setResize] = useState(false)
-    
+
     const handlerNavbar = () => {
         setDrompMenu(false)
         setResize(window.innerWidth <= 1024 ? true : false)
@@ -71,8 +69,10 @@ const Navbar = () => {
                         <i className={`${dropMenu ? "fa-solid fa-xmark" : "fa-solid fa-bars"}`}></i>
                     </div>
                 </div>
-                <div className={`absolute  ${resize ? "right-20" : "right-10"} hover:scale-125! duration-300 `}><i className="bi bi-search hover:text-blue-500 duration-200 cursor-pointer "></i></div>
-                
+                <div onClick = {()=> {setActive(!active)}} className={`absolute  ${resize ? "right-20" : "right-10"} hover:scale-125! duration-300 `}><i className="bi bi-search hover:text-blue-500 duration-200 cursor-pointer "></i></div>
+                <div className={`${active ? "hidden!" : "absolute  left-10! right-10 bg-transparent "} `}>
+                    <SearchInput  />
+                </div>
             </BrowserRouter>
         </div>
     )

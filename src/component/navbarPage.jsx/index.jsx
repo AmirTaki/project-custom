@@ -5,11 +5,19 @@ import PageSearch from "../pageSearch";
 export const searchContext = createContext()
 
 const NavbarPaeg = () => {
+    
+    const [active, setActive] = useState(true)
     return(
        <>
-            {/* NAVBAR  => bg-no-repeat bg-cover bg-center => style={{backgroundImage : `url(${background})`}} */}
-            <Navbar />
-            <PageSearch />
+            <searchContext.Provider value = {{}} >
+            
+                {/* NAVBAR  => bg-no-repeat bg-cover bg-center => style={{backgroundImage : `url(${background})`}} */}
+                <Navbar />
+                <PageSearch />
+            
+                
+            </searchContext.Provider> 
+     
             
        </>
     )
