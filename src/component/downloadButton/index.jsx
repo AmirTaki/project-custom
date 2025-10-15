@@ -14,7 +14,6 @@ const DownloadButton = () => {
             <h2 className="
                 relative z-100 text-[3em] text-center
             ">
-
             </h2>
         </div>
     )
