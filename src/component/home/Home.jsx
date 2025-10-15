@@ -1,4 +1,5 @@
 import ComponentNavigation from "../componentNavigation"
+import DownloadButton from "../downloadButton/index.jsx"
 import LayerdHoverEffect from "../layerdHoverEffect"
 import NavbarPaeg from "../navbarPage.jsx"
 
@@ -15,6 +16,7 @@ const Home =  ()  => {
             {/* <NavbarPaeg /> */}
 
             {/* download button */}
+            <DownloadButton />
 
             {/* LayerdHoverEffect */}
             {/* <LayerdHoverEffect /> */}

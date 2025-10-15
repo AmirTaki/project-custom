@@ -1,6 +1,9 @@
 const DownloadButton = () => {
     return (
-        <div className=""></div>
+        <div className="">
+            <i className="fa-solid fa-arrow-down-long"></i>
+            <h2></h2>
+        </div>
     )
 }
 
