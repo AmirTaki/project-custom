@@ -1,6 +1,12 @@
+import Navbar from "../navbar";
+
+
 const NavbarPaeg = () => {
     return(
-        <div className=""></div>
+       <>
+            {/* NAVBAR  => bg-no-repeat bg-cover bg-center => style={{backgroundImage : `url(${background})`}} */}
+            <Navbar />
+       </>
     )
 }
 

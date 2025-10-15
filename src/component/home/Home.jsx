@@ -1,9 +1,9 @@
 import { createContext } from "react"
 import ComponentNavigation from "../componentNavigation"
 import LayerdHoverEffect from "../layerdHoverEffect"
-import Navbar from "../navbar"
 import PageSearch from "../pageSearch"
 import SearchInput from "../search"
+import NavbarPaeg from "../navbarPage.jsx"
 
 
 
@@ -17,15 +17,11 @@ const Home =  ()  => {
             {/* component navigation */}
             <ComponentNavigation />
 
-            {/* NAVBAR  => bg-no-repeat bg-cover bg-center => style={{backgroundImage : `url(${background})`}} */}
-            <Navbar />
-
+            {/* Navbar */}
+            <NavbarPaeg />
 
             {/* LayerdHoverEffect */}
             {/* <LayerdHoverEffect /> */}
-
-            <PageSearch />
-            <SearchInput />
         </div>
    
     )
