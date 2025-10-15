@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useReducer, useState } from "react";
 import Navbar from "../navbar";
 import PageSearch from "../pageSearch";
 
@@ -9,6 +9,18 @@ const NavbarPaeg = () => {
     const [active, setActive] = useState(true)
     const [activeSearch, setActiveSearch] = useState(false)
     
+    const reducer = (state, action) => {
+        switch(action.type){
+            case "" :
+                return {...state}
+        }
+    }
+    const [state, dispath] = useReducer(reducer, {
+        active : true,
+        activeSearch : false    
+    })
+    
+
     return(
        <>
             <searchContext.Provider value = {{active, setActive, activeSearch, setActiveSearch}} >
