@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import {useEffect, useRef, useState } from "react"
 
 const DownloadButton = () => {
 
@@ -10,24 +10,24 @@ const DownloadButton = () => {
 
     const handleButton = () => {
         setStartDownload((pre) => (pre = true))
-
+        
         intervalRef.current =  setInterval(() => {
-            
             setNumber(preNumber  => {
                 const newNumber = preNumber + 1;
                 contaienrRef.current.style.background = `conic-gradient(#f5036c ${newNumber}%, #333 0%)`
+        
                 if(newNumber > 100){                
                     clearInterval(intervalRef.current)
                     setDone((preDone) => (preDone = true))
                     contaienrRef.current.style.background = "#0f0"
                     return 100
                 }   
+        
                 return newNumber
             })
-
         }, 100);
     }   
-
+    
     return (
         // container
         <div 
@@ -50,12 +50,7 @@ const DownloadButton = () => {
                 ${done ? 'text-[.5rem] leading-[1em] ' : ''}
                 relative z-100 text-[3em] text-center text-white    
             `}>
-                <span className={`
-                    ${startDwonload ? 'flex  ' : 'hidden'}
-                    ${done ? "" : ""}    
-                
-                `}>
-                    {/*  */}
+                <span className={` ${startDwonload ? 'flex  ' : 'hidden'} `}>
                     <div className={`${done ? "hidden!" : "flex!"}`}>{number} <small className="text-[.5em] absolute bottom-3 -right-6">%</small></div>
                     <i className={`${done ? "flex!   text-[100px]" : "hidden!"} fa-solid fa-check`}></i>                    
                     <small className={`${done ? 'absolute top-[55px] text-[.3em]! whitespace-nowrap font-bold  uppercase -translate-x-1/9 translate-y-1/2 tracking-[.2em]' : "hidden"}`}>100% Done</small>

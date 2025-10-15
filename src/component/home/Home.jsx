@@ -6,17 +6,17 @@ import NavbarPaeg from "../navbarPage.jsx"
 const Home =  ()  => {
     return(
         <div 
-            className={`h-[100vh] bg-[#10131c] flex justify-center items-center   `}
+            className={`h-[100vh] bg-[#10131c]   `}
         >        
 
             {/* component navigation */}
             <ComponentNavigation />
 
             {/* Navbar */}
-            {/* <NavbarPaeg /> */}
+            <NavbarPaeg />
 
             {/* download button */}
-            <DownloadButton />
+            {/* <DownloadButton /> */}
 
             {/* LayerdHoverEffect */}
             {/* <LayerdHoverEffect /> */}
