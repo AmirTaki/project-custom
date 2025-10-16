@@ -22,7 +22,7 @@ const DigitalClock = () => {
             className="flex gap-40 text-white "
         >
             {/* circle */}
-            <div className="     relative w-[150px] h-[150px]  flex items-center justify-center">
+            <div className="relative w-[150px] h-[150px]  flex items-center justify-center">
                 {/* dots */}
                 <div 
                     ref = {hr_dot}
