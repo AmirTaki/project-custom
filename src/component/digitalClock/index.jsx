@@ -39,6 +39,10 @@ const DigitalClock = () => {
             mm.current.style.strokeDashoffset = 440 - (440 * M) / 60
             min_dot.current.style.transform = `rotate(${M * 6}deg)`
 
+        // seconds
+        let S = new Date().getSeconds();
+            S = S < 10 ? "0" + S : S;
+              
 
 
     })
