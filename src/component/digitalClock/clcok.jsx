@@ -15,9 +15,9 @@ const Clock = ({text, color, flash, }) => {
             else if (flash == "seconds") return new Date().getSeconds()
         }
 
-        const strokeDashoffset = () => { flash == 'hours' ? 12 : 60}
+        const strokeDashoffset = () => { return flash == 'hours' ? 12 : 60}
 
-        const rotate = () => { flash == 'hours' ? 30 : 6 }
+        const rotate = () => { return flash == 'hours' ? 30 : 6 }
 
         useEffect(() => {
                 setInterval(() => {
