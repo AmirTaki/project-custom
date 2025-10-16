@@ -52,7 +52,7 @@ const DigitalClock = () => {
                 se_dot.current.style.transform = `rotate(${S * 6}deg)`
 
             // AM PM
-            
+            setAM_PM( H > 12 ? "PM" : "AM")
         })
     },)
 
@@ -69,7 +69,7 @@ const DigitalClock = () => {
             <Clock dots = {se_dot} svgCircle = {ss} circle={seconds} time = {s} text = {'Seconds'} color = {'04fc43'} />
         
             <div className="relative text-[1em] translate-x-[-20px]">
-                <div className="" ref = {AM_PM}></div>
+                <div className="" >{AM_PM}</div>
             </div>
         </div>
     )
