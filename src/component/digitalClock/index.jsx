@@ -74,7 +74,7 @@ const DigitalClock = () => {
             </div>
 
             {/* hours */}
-            <Clock />
+            <Clock  text = {"hours"} color = {'ff2972'}/>
         </div>
     )
 }

@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from "react"
+
 // {dots, svgCircle, circle, time, color, text   }
 const Clock = ({text, color}) => {
 
@@ -15,8 +17,8 @@ const Clock = ({text, color}) => {
                         C =  C < 10 ? "0" + C  : C;
                         setTime((prevCircle) => (prevCircle = C))
                 
-                        svgCircle.current.style.strokeDashoffset = 440 - (440 * H) / 12
-                        dots.current.style.transform = `rotate(${h * 30}deg)`
+                        svgCircle.current.style.strokeDashoffset = 440 - (440 * C) / 12
+                        dots.current.style.transform = `rotate(${C * 30}deg)`
 
                 }, )
             },)
