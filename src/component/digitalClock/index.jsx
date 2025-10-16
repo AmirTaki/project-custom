@@ -8,12 +8,11 @@ const DigitalClock = () => {
     const [h, setH]  = useState('')
     
     useEffect(() => {
-        setH (new Date().getHours());
-        console.log(new Date().getHours())
-
-        // if(h > 12) {setH(h-=12)}
-        // setH( (h < 10 ) ? "0" + h : h)
-
+        let H = `${new Date().getHours()}`
+            H > 12 ? H -=12 : H;
+            H =  H < 10 ? "0" + H  : H;
+            console.log(typeof(H))
+            setH(H)
     })
     return (
         // time
