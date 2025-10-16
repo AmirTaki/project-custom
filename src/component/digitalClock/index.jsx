@@ -2,7 +2,8 @@ import { useEffect, useRef } from "react"
 
 const DigitalClock = () => {
     const hoursRef =  useRef ()
-
+    const hhRef = useRef()
+    
     useEffect(() => {
 
     })
@@ -23,6 +24,7 @@ const DigitalClock = () => {
                     {/* svg */}
                     <svg className="relative w-[150px] h-[150px] rotate-[270deg]">
                         <circle 
+                            ref = {hhRef}
                             cx = '70' cy = "70" r = "70"
                             className="w-[100%] h-[100%] fill-transparent stroke-[#191919] stroke-4 translate-x-[5px] translate-y-[5px]"
                         ></circle>
