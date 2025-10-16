@@ -9,11 +9,18 @@ const DigitalClock = () => {
     const [h, setH]  = useState('')
 
     // minutes 
-    const minuts = useRef ()
+    const minutes = useRef ()
     const mm = useRef()
     const min_dot = useRef()
     const [m, setM] = useState('')
     
+
+    // seconds
+    const seconds = useRef()
+    const ss = useRef()
+    const se_dot = useRef()
+    const [s, setSe] = useState('')
+
     useEffect(() => {
         // hours
         let H = new Date().getHours()
@@ -42,7 +49,7 @@ const DigitalClock = () => {
             <Clock dots = {hr_dot} svgCircle = {hh} circle={hours} time = {h} text = {'Hours'} color = {'ff2972'} />
 
             {/* minuts */}
-            <Clock dots = {min_dot} svgCircle = {mm} circle={minuts} time = {m} text = {'Minutes'} color = {'fee800'} />
+            <Clock dots = {min_dot} svgCircle = {mm} circle={minutes} time = {m} text = {'Minutes'} color = {'fee800'} />
 
             {/* seconds */}
             {/* <Clock dots = {hr_dot} svgCircle = {hh} circle={hours} time = {h} text = {'Hours'} color = {'ff2972'} /> */}
