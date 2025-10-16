@@ -59,7 +59,7 @@ const DigitalClock = () => {
             <Clock dots = {min_dot} svgCircle = {mm} circle={minutes} time = {m} text = {'Minutes'} color = {'fee800'} />
 
             {/* seconds */}
-            {/* <Clock dots = {hr_dot} svgCircle = {hh} circle={hours} time = {h} text = {'Hours'} color = {'ff2972'} /> */}
+            <Clock dots = {se_dot} svgCircle = {ss} circle={seconds} time = {s} text = {'Seconds'} color = {'04fc43'} />
         </div>
     )
 }
