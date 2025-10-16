@@ -6,7 +6,20 @@ const Clock = () => {
         const svgCircle = useRef()
         const dots = useRef()
         const [time,  setTime]  = useState('')
+       
+        useEffect(() => {
+                setInterval(() => {
+                    // hours
+                    let H = new Date().getHours()
+                        H > 12 ? H -=12 : H;
+                        H =  H < 10 ? "0" + H  : H;
+                        setH((prevHour) => (prevHour = H))
+                
+                        hh.current.style.strokeDashoffset = 440 - (440 * H) / 12
+                        hr_dot.current.style.transform = `rotate(${h * 30}deg)`
 
+                }, )
+            },)
     return(
         <>
             {/* circle */}
