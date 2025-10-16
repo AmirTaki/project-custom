@@ -21,7 +21,7 @@ const DigitalClock = () => {
         // time
         <div    className="flex gap-40 text-white ">
             {/* hours */}
-            <Clock />
+            <Clock dots = {hr_dot} />
             {/* minuts */}
 
             {/* seconds */}

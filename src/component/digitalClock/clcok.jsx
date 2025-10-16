@@ -1,17 +1,18 @@
-const Clock = () => {
+const Clock = ({dots, svg, circle, time, color, text   }) => {
     return(
         <>
             {/* circle */}
             <div className="relative w-[150px] h-[150px]  flex items-center justify-center">
                 {/* dots */}
                 <div 
-                    ref = {hr_dot}
-                    className="
+                    ref = {dots}
+                    className={`
                         text-center font-[500] text-[1.5em]
                         absolute w-[100%] h-[100%] z-10 flex justify-center items-center
-                        before:content-[''] before:top-[-3px] before:absolute before:w-[15px] before:h-[15px] before:bg-[#ff2972]
-                        before:rounded-[50%] before:shadow-[0_0_20px_#ff2972,0_0_60px_#ff2972] 
-                    "
+                        before:content-[''] before:top-[-3px] before:absolute before:w-[15px] before:h-[15px] before:bg-[${color}]
+                        before:rounded-[50%] before:shadow-[0_0_20px_${color},0_0_60px_${color}] 
+                    `}
+                        
                 >
                 </div>
                 {/* svg */}
@@ -22,19 +23,19 @@ const Clock = () => {
                     ></circle>
                     
                     <circle 
-                        ref = {hh}
+                        ref = {svg}
                         cx = '70' cy = "70" r = "70"
-                        className="w-[100%] h-[100%] fill-transparent stroke-[#ff2972]  [stroke-dasharray:440]  stroke-4 translate-x-[5px] translate-y-[5px]  "
+                        className={`w-[100%] h-[100%] fill-transparent stroke-[${color}]  [stroke-dasharray:440]  stroke-4 translate-x-[5px] translate-y-[5px]`}  
                     ></circle>
                 </svg>
                 {/* hours */}
                 <div 
-                    ref = {hours}
+                    ref = {circle}
                     className="absolute text-center font-[500] text-[1.5em]"
                 >
-                    {h} <br /> 
+                    {time} <br /> 
                     <span className="absolute translate-x-[-50%] translate-y-[-3px] text-[12px] font-[300] uppercase tracking-[.1em]">
-                        Hours
+                        {text}
                     </span>
                 </div>
             </div>
