@@ -24,7 +24,8 @@ const DigitalClock = () => {
                             className="w-[100%] h-[100%] fill-transparent stroke-[#ff2972]  [stroke-dasharray:440]  stroke-4 translate-x-[5px] translate-y-[5px]  "
                         ></circle>
                     </svg>
-
+                    {/* hours */}
+                    <div className="absolute text-center font-[500] text-[1.5em]">00</div>
                 </div>
 
             </div>
