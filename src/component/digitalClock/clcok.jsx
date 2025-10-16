@@ -17,9 +17,8 @@ const Clock = ({text, color, flash, }) => {
 
         const strokeDashoffset = () => { flash == 'hours' ? 12 : 60}
 
-        const rotate = () => {
+        const rotate = () => { flash == 'hours' ? 30 : 6 }
 
-        }
         useEffect(() => {
                 setInterval(() => {
                     // clock
@@ -30,7 +29,7 @@ const Clock = ({text, color, flash, }) => {
                         setTime((prevCircle) => (prevCircle = C))
                 
                         svgCircle.current.style.strokeDashoffset = 440 - (440 * C) / strokeDashoffset()
-                        dots.current.style.transform = `rotate(${C * 30}deg)`
+                        dots.current.style.transform = `rotate(${C * rotate() }deg)`
 
                 }, )
             },)
