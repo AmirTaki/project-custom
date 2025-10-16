@@ -22,33 +22,36 @@ const DigitalClock = () => {
     const [s, setSe] = useState('')
 
     useEffect(() => {
-        // hours
-        let H = new Date().getHours()
-            H > 12 ? H -=12 : H;
-            H =  H < 10 ? "0" + H  : H;
-            setH((prevHour) => (prevHour = H))
-     
-            hh.current.style.strokeDashoffset = 440 - (440 * H) / 12
-            hr_dot.current.style.transform = `rotate(${h * 30}deg)`
+        setInterval(() => {
 
-        // minutes
-        let M = new Date().getMinutes();
-            M = M < 10 ? "0" + M : M;
-            setM((prevMin) => (prevMin = M))
+            // hours
+            let H = new Date().getHours()
+                H > 12 ? H -=12 : H;
+                H =  H < 10 ? "0" + H  : H;
+                setH((prevHour) => (prevHour = H))
+         
+                hh.current.style.strokeDashoffset = 440 - (440 * H) / 12
+                hr_dot.current.style.transform = `rotate(${h * 30}deg)`
+    
+            // minutes
+            let M = new Date().getMinutes();
+                M = M < 10 ? "0" + M : M;
+                setM((prevMin) => (prevMin = M))
+    
+                mm.current.style.strokeDashoffset = 440 - (440 * M) / 60
+                min_dot.current.style.transform = `rotate(${M * 6}deg)`
+    
+            // seconds
+            let S = new Date().getSeconds();
+                S = S < 10 ? "0"+ S : S;
+                setSe((prevSe) => (prevSe = S))
+                
+                ss.current.style.strokeDashoffset = 440 - (440 * S) / 60
+                se_dot.current.style.transform = `rotate(${S * 6}deg)`
+        })
 
-            mm.current.style.strokeDashoffset = 440 - (440 * M) / 60
-            min_dot.current.style.transform = `rotate(${M * 6}deg)`
 
-        // seconds
-        let S = new Date().getSeconds();
-            S = S < 10 ? "0" + S : S;
-            setSe((prevSe) => (prevSe = S))
-            
-            ss.current.style.strokeDashoffset = 440 - (440 - S) / 60
-            se_dot.current.style.transform = `rotate(${S * 6}deg)`
-
-
-    })
+    },)
     return (
         // time
         <div    className="flex gap-20 text-white ">
