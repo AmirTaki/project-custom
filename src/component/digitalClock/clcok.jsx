@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 
 // {dots, svgCircle, circle, time, color, text   }
-const Clock = ({text, color}) => {
+const Clock = ({text, color, flash, }) => {
 
        // use ref
         const circle =  useRef ()
@@ -9,10 +9,15 @@ const Clock = ({text, color}) => {
         const dots = useRef()
         const [time,  setTime]  = useState('')
        
+        const getClcok = () => {
+            if (flash == "hours") return new Date().getHours()
+            else if (flash == "minutes") return new Date().getHours()
+            else if (flash == "seconds") return new Date().getHours()
+        }
         useEffect(() => {
                 setInterval(() => {
-                    // hours
-                    let C = new Date().getHours()
+                    // clock
+                    let C = getClcok()
                         C > 12 ? C -=12 : C;
                         C =  C < 10 ? "0" + C  : C;
                         setTime((prevCircle) => (prevCircle = C))
