@@ -58,7 +58,7 @@ const DigitalClock = () => {
 
     return (
         // time
-        <div    className="flex gap-20 flex-wrap text-white bg-gray-800  text-center font-[500] text-[1.5em] ">
+        <div    className="flex gap-20 flex-wrap items-center justify-center text-white  text-center font-[500] text-[1.5em] mx-auto ">
             {/* hours */}
             <Clock dots = {hr_dot} svgCircle = {hh} circle={hours} time = {h} text = {'Hours'} color = {'ff2972'} />
 
@@ -68,7 +68,7 @@ const DigitalClock = () => {
             {/* seconds */}
             <Clock dots = {se_dot} svgCircle = {ss} circle={seconds} time = {s} text = {'Seconds'} color = {'04fc43'} />
         
-            <div className="relative text-[1em] translate-x-[-20px]">
+            <div className="relative text-[1em] translate-x-[-20px] -translate-y-10">
                 <div className="" >{AM_PM}</div>
             </div>
         </div>
