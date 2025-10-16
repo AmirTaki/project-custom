@@ -7,8 +7,15 @@ const DigitalClock = () => {
     const hh = useRef()
     const hr_dot = useRef()
     const [h, setH]  = useState('')
+
+    // minutes 
+    const minuts = useRef ()
+    const mm = useRef()
+    const min_dot = useRef()
+    const [m, setM] = useState('')
     
     useEffect(() => {
+        // hours
         let H = new Date().getHours()
             H > 12 ? H -=12 : H;
             H =  H < 10 ? "0" + H  : H;
@@ -16,6 +23,9 @@ const DigitalClock = () => {
      
             hh.current.style.strokeDashoffset = 440 - (440 * H) / 12
             hr_dot.current.style.transform = `rotate(${h * 30}deg)`
+
+        // minutes
+
     })
     return (
         // time
