@@ -1,6 +1,9 @@
 const DigitalClock = () => {
     return (
-        <div className="">digital clock</div>
+        // time
+        <div 
+            className="flex gap-40 text-white "
+        >digital clock</div>
     )
 }
 
