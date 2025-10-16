@@ -8,11 +8,12 @@ const DigitalClock = () => {
     const [h, setH]  = useState('')
     
     useEffect(() => {
-        let H = `${new Date().getHours()}`
+        let H = new Date().getHours()
             H > 12 ? H -=12 : H;
             H =  H < 10 ? "0" + H  : H;
-            console.log(typeof(H))
-            setH(H)
+            setH((prevHour) => (prevHour = H))
+            console.log(H)
+            hh.current.style.strokeDashoffset = 440 - (440 * H) / 12
     })
     return (
         // time
