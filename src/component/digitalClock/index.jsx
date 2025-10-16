@@ -29,8 +29,8 @@ const DigitalClock = () => {
             M = M < 10 ? "0" + M : M;
             setM((prevMin) => (prevMin = M))
 
-            mm.current.style.strokeDashoffset = 440 - (440 * M) / 12
-            min_dot.current.style.transform = `rotate(${h * 30}deg)`
+            mm.current.style.strokeDashoffset = 440 - (440 * M) / 60
+            min_dot.current.style.transform = `rotate(${M * 6}deg)`
 
 
 
@@ -45,7 +45,7 @@ const DigitalClock = () => {
             <Clock dots = {min_dot} svgCircle = {mm} circle={minuts} time = {m} text = {'Minutes'} color = {'ff2972'} />
 
             {/* seconds */}
-            <Clock dots = {hr_dot} svgCircle = {hh} circle={hours} time = {h} text = {'Hours'} color = {'ff2972'} />
+            {/* <Clock dots = {hr_dot} svgCircle = {hh} circle={hours} time = {h} text = {'Hours'} color = {'ff2972'} /> */}
         </div>
     )
 }
