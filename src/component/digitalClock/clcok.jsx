@@ -10,13 +10,13 @@ const Clock = () => {
         useEffect(() => {
                 setInterval(() => {
                     // hours
-                    let H = new Date().getHours()
-                        H > 12 ? H -=12 : H;
-                        H =  H < 10 ? "0" + H  : H;
-                        setH((prevHour) => (prevHour = H))
+                    let C = new Date().getHours()
+                        C > 12 ? C -=12 : C;
+                        C =  C < 10 ? "0" + C  : C;
+                        setTime((prevCircle) => (prevCircle = C))
                 
-                        hh.current.style.strokeDashoffset = 440 - (440 * H) / 12
-                        hr_dot.current.style.transform = `rotate(${h * 30}deg)`
+                        svgCircle.current.style.strokeDashoffset = 440 - (440 * H) / 12
+                        dots.current.style.transform = `rotate(${h * 30}deg)`
 
                 }, )
             },)
