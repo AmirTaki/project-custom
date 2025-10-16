@@ -19,7 +19,9 @@ const DigitalClock = () => {
                             className="w-[100%] h-[100%] fill-transparent stroke-[#191919] stroke-4 translate-x-[5px] translate-y-[5px]"
                         ></circle>
                        
-                        <circle cx = '70' cy = "70" r = "70"
+                        <circle 
+                            cx = '70' cy = "70" r = "70"
+                            className="w-[100%] h-[100%] fill-transparent stroke-[#ff2972]  [stroke-dasharray:440]  stroke-4 translate-x-[5px] translate-y-[5px]  "
                         ></circle>
                     </svg>
 
