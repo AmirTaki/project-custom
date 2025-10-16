@@ -21,7 +21,7 @@ const DigitalClock = () => {
             className="flex gap-40 text-white "
         >
             {/* circle */}
-            <div className="   relative w-[150px] h-[150px]  flex items-center justify-center">
+            <div className="     relative w-[150px] h-[150px]  flex items-center justify-center">
                 {/* dots */}
                 <div 
                     ref = {hr_dot}
@@ -51,7 +51,7 @@ const DigitalClock = () => {
                        className="absolute text-center font-[500] text-[1.5em]"
                     >
                         {h} <br /> 
-                        <span className="absolute translate-x-[-50%] translate-y-[-3px]]">
+                        <span className="absolute translate-x-[-50%] translate-y-[-3px] text-[12px] font-[300] uppercase tracking-[.1em]">
                             Hours
                         </span>
                     </div>
