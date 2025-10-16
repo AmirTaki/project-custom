@@ -53,12 +53,12 @@ const DigitalClock = () => {
 
             // AM PM
             setAM_PM( H > 12 ? "PM" : "AM")
-        })
+        }, )
     },)
 
     return (
         // time
-        <div    className="flex gap-20 text-white ">
+        <div    className="flex gap-20 flex-wrap text-white bg-gray-800  text-center font-[500] text-[1.5em] ">
             {/* hours */}
             <Clock dots = {hr_dot} svgCircle = {hh} circle={hours} time = {h} text = {'Hours'} color = {'ff2972'} />
 

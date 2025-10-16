@@ -33,7 +33,7 @@ const Clock = ({dots, svgCircle, circle, time, color, text   }) => {
                 {/* hours */}
                 <div 
                     ref = {circle}
-                    className="absolute text-center font-[500] text-[1.5em]"
+                    className="absolute text-center font-[500] top-10 text-[1.5em]"
                 >
                     {time} <br /> 
                     <span className="absolute translate-x-[-50%] translate-y-[-3px] text-[12px] font-[300] uppercase tracking-[.1em]">
