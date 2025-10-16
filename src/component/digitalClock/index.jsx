@@ -42,7 +42,9 @@ const DigitalClock = () => {
         // seconds
         let S = new Date().getSeconds();
             S = S < 10 ? "0" + S : S;
-              
+            setSe((prevSe) => (prevSe = S))
+            
+            ss.current.style.strokeDashoffset = 440 - (440 - S) / 60
 
 
     })
