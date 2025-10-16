@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react"
+import Clock from "./clcok"
 
 const DigitalClock = () => {
     // hours
@@ -18,12 +19,12 @@ const DigitalClock = () => {
     })
     return (
         // time
-        <div 
-            className="flex gap-40 text-white "
-        >
+        <div    className="flex gap-40 text-white ">
+            {/* hours */}
+            <Clock />
+            {/* minuts */}
 
-
-
+            {/* seconds */}
         </div>
     )
 }
