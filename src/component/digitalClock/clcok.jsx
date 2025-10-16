@@ -14,17 +14,21 @@ const Clock = ({text, color, flash, }) => {
             else if (flash == "minutes") return new Date().getMinutes()
             else if (flash == "seconds") return new Date().getSeconds()
         }
+
+        const t = () => {
+            if (flash == "hours") return 12
+            else return  60
+        }
         useEffect(() => {
                 setInterval(() => {
                     // clock
-                    let C = getClock()
-                        
+                    let C = getClock()         
                         flash === "hours" ? C > 12 ? C -=12 : C : ""
 
                         C =  C < 10 ? "0" + C  : C;
                         setTime((prevCircle) => (prevCircle = C))
                 
-                        svgCircle.current.style.strokeDashoffset = 440 - (440 * C) / 12
+                        svgCircle.current.style.strokeDashoffset = 440 - (440 * C) / t()
                         dots.current.style.transform = `rotate(${C * 30}deg)`
 
                 }, )
