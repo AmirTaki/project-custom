@@ -1,5 +1,5 @@
 // {dots, svgCircle, circle, time, color, text   }
-const Clock = () => {
+const Clock = ({text, color}) => {
 
        // use ref
         const circle =  useRef ()
