@@ -5,13 +5,14 @@ const DigitalClock = () => {
     const hours =  useRef ()
     const hh = useRef()
     const hr_dot = useRef()
-    const [h, setH]  = useState(0)
+    const [h, setH]  = useState('')
     
     useEffect(() => {
-        let h = new Date().getHours();
+        setH (new Date().getHours());
+        console.log(new Date().getHours())
 
-        if(h > 12) h -= 12
-        h = (h < 10 ) ? "0" + h : h
+        // if(h > 12) {setH(h-=12)}
+        // setH( (h < 10 ) ? "0" + h : h)
 
     })
     return (
@@ -20,13 +21,13 @@ const DigitalClock = () => {
             className="flex gap-40 text-white "
         >
             {/* circle */}
-            <div className=" relative w-[150px] h-[150px] bg-red-400 flex items-center justify-center">
+            <div className="   relative w-[150px] h-[150px]  flex items-center justify-center">
                 {/* dots */}
                 <div 
                     ref = {hr_dot}
                     className="
                         text-center font-[500] text-[1.5em]
-                        absolute w-[100%] h-[100%] z-10 flex justify-center items-center bg-amber-400
+                        absolute w-[100%] h-[100%] z-10 flex justify-center items-center
                         before:content-[''] before:top-[-3px] before:absolute before:w-[15px] before:h-[15px] before:bg-[#ff2972]
                         before:rounded-[50%] before:shadow-[0_0_20px_#ff2972,0_0_60px_#ff2972]
                     "
@@ -49,7 +50,10 @@ const DigitalClock = () => {
                        ref = {hours}
                        className="absolute text-center font-[500] text-[1.5em]"
                     >
-                        {} <br /> <span>Hours</span>
+                        {h} <br /> 
+                        <span className="absolute translate-x-[-50%] translate-y-[-3px]]">
+                            Hours
+                        </span>
                     </div>
                 </div>
 
