@@ -10,7 +10,7 @@ const Clock = ({dots, svg, circle, time, color, text   }) => {
                         text-center font-[500] text-[1.5em]
                         absolute w-[100%] h-[100%] z-10 flex justify-center items-center
                         before:content-[''] before:top-[-3px] before:absolute before:w-[15px] before:h-[15px] before:bg-[${color}]
-                        before:rounded-[50%] before:shadow-[0_0_20px_${color},0_0_60px_${color}] 
+                        before:rounded-[50%] before:shadow-[0_0_20px_#${color},0_0_60px_#${color}] 
                     `}
                         
                 >
@@ -25,7 +25,7 @@ const Clock = ({dots, svg, circle, time, color, text   }) => {
                     <circle 
                         ref = {svg}
                         cx = '70' cy = "70" r = "70"
-                        className={`w-[100%] h-[100%] fill-transparent stroke-[${color}]  [stroke-dasharray:440]  stroke-4 translate-x-[5px] translate-y-[5px]`}  
+                        className={`w-[100%] h-[100%] fill-transparent stroke-[#${color}]  [stroke-dasharray:440]  stroke-4 translate-x-[5px] translate-y-[5px]`}  
                     ></circle>
                 </svg>
                 {/* hours */}
