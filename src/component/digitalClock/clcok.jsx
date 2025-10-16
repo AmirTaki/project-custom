@@ -9,15 +9,15 @@ const Clock = ({text, color, flash, }) => {
         const dots = useRef()
         const [time,  setTime]  = useState('')
        
-        const getClcok = () => {
-            if (flash == "hours")     new Date().getHours()
-            else if (flash == "minutes")  new Date().getMinutes()
-            else if (flash == "seconds")  new Date().getSeconds()
+        const getClock = () => {
+            if (flash == "hours")     return new Date().getHours()
+            else if (flash == "minutes") return new Date().getMinutes()
+            else if (flash == "seconds") return new Date().getSeconds()
         }
         useEffect(() => {
                 setInterval(() => {
                     // clock
-                    let C = getClcok()
+                    let C = getClock()
                         C > 12 ? C -=12 : C;
                         C =  C < 10 ? "0" + C  : C;
                         setTime((prevCircle) => (prevCircle = C))
