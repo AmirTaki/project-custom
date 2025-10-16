@@ -13,9 +13,9 @@ const DigitalClock = () => {
                     before:rounded-[50%] before:shadow-[0_0_20px_#ff2972,0_0_60px_#ff2972]
                 ">
                     {/* svg */}
-                    <svg>
-                        <circle></circle>
-                        <circle></circle>
+                    <svg className="relative w-[150px] h-[150px] rotate-[270deg]">
+                        <circle cx = '70' cy = "70" r = "70"></circle>
+                        <circle cx = '70' cy = "70" r = "70"></circle>
                     </svg>
 
                 </div>
