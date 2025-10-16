@@ -1,4 +1,12 @@
-const Clock = ({dots, svgCircle, circle, time, color, text   }) => {
+// {dots, svgCircle, circle, time, color, text   }
+const Clock = () => {
+
+       // use ref
+        const circle =  useRef ()
+        const svgCircle = useRef()
+        const dots = useRef()
+        const [time,  setTime]  = useState('')
+
     return(
         <>
             {/* circle */}

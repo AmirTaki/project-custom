@@ -68,8 +68,9 @@ const DigitalClock = () => {
             {/* seconds */}
             <Clock dots = {se_dot} svgCircle = {ss} circle={seconds} time = {s} text = {'Seconds'} color = {'04fc43'} />
         
+            {/* AM PM */}
             <div className="relative text-[1em] translate-x-[-20px] -translate-y-10">
-                <div className="" >{AM_PM}</div>
+                <div>{AM_PM}</div>
             </div>
         </div>
     )
