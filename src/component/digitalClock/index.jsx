@@ -22,7 +22,7 @@ const DigitalClock = () => {
     const [s, setSe] = useState('')
 
     // AM PM
-    const AM_PM = useRef();
+    const [AM_PM, setAM_PM] = useState('')
 
     useEffect(() => {
         setInterval(() => {
@@ -50,6 +50,9 @@ const DigitalClock = () => {
                 
                 ss.current.style.strokeDashoffset = 440 - (440 * S) / 60
                 se_dot.current.style.transform = `rotate(${S * 6}deg)`
+
+            // AM PM
+            
         })
     },)
 
@@ -66,7 +69,7 @@ const DigitalClock = () => {
             <Clock dots = {se_dot} svgCircle = {ss} circle={seconds} time = {s} text = {'Seconds'} color = {'04fc43'} />
         
             <div className="relative text-[1em] translate-x-[-20px]">
-                <div className=""></div>
+                <div className="" ref = {AM_PM}></div>
             </div>
         </div>
     )
