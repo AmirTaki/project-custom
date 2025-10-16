@@ -45,6 +45,7 @@ const DigitalClock = () => {
             setSe((prevSe) => (prevSe = S))
             
             ss.current.style.strokeDashoffset = 440 - (440 - S) / 60
+            se_dot.current.style.transform = `rotate(${S * 6}deg)`
 
 
     })
