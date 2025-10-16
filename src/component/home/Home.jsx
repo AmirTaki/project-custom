@@ -6,7 +6,7 @@ import NavbarPaeg from "../navbarPage.jsx"
 const Home =  ()  => {
     return(
         <div 
-            className={`h-[100vh] bg-[#10131c]   `}
+            className={`h-[100vh] bg-[#10131c] flex justify-center items-center  `}
         >        
 
             {/* component navigation */}
