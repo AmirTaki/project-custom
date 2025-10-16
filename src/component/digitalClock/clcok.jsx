@@ -10,9 +10,9 @@ const Clock = ({text, color, flash, }) => {
         const [time,  setTime]  = useState('')
        
         const getClcok = () => {
-            if (flash == "hours") return new Date().getHours()
-            else if (flash == "minutes") return new Date().getHours()
-            else if (flash == "seconds") return new Date().getHours()
+            if (flash == "hours")     new Date().getHours()
+            else if (flash == "minutes")  new Date().getMinutes()
+            else if (flash == "seconds")  new Date().getSeconds()
         }
         useEffect(() => {
                 setInterval(() => {
