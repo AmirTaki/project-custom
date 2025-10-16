@@ -1,12 +1,17 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 
 const DigitalClock = () => {
     // hours
     const hours =  useRef ()
     const hh = useRef()
     const hr_dot = useRef()
+    const [h, setH]  = useState(0)
     
     useEffect(() => {
+        let h = new Date().getHours();
+
+        if(h > 12) h -= 12
+        h = (h < 10 ) ? "0" + h : h
 
     })
     return (
@@ -43,7 +48,8 @@ const DigitalClock = () => {
                     <div 
                        ref = {hours}
                        className="absolute text-center font-[500] text-[1.5em]"
-                    >00
+                    >
+                        {} <br /> <span>Hours</span>
                     </div>
                 </div>
 
