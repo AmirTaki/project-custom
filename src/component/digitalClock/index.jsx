@@ -1,4 +1,11 @@
+import { useEffect, useRef } from "react"
+
 const DigitalClock = () => {
+    const hoursRef =  useRef ()
+
+    useEffect(() => {
+
+    })
     return (
         // time
         <div 
@@ -26,7 +33,11 @@ const DigitalClock = () => {
                         ></circle>
                     </svg>
                     {/* hours */}
-                    <div className="absolute text-center font-[500] text-[1.5em]">00</div>
+                    <div 
+                       ref = {hoursRef}
+                       className="absolute text-center font-[500] text-[1.5em]"
+                    >00
+                    </div>
                 </div>
 
             </div>
