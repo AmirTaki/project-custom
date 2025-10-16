@@ -21,6 +21,9 @@ const DigitalClock = () => {
     const se_dot = useRef()
     const [s, setSe] = useState('')
 
+    // AM PM
+    const AM_PM = useRef();
+
     useEffect(() => {
         setInterval(() => {
             // hours
