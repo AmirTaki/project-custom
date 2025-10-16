@@ -25,6 +25,14 @@ const DigitalClock = () => {
             hr_dot.current.style.transform = `rotate(${h * 30}deg)`
 
         // minutes
+        let M = new Date().getMinutes();
+            M = M < 10 ? "0" + M : M;
+            setM((prevMin) => (prevMin = M))
+
+            mm.current.style.strokeDashoffset = 440 - (440 * M) / 12
+            min_dot.current.style.transform = `rotate(${h * 30}deg)`
+
+
 
     })
     return (
