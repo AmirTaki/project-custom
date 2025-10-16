@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 
-// {dots, svgCircle, circle, time, color, text   }
 const Clock = ({text, color, flash, }) => {
-
        // use ref
         const circle =  useRef ()
         const svgCircle = useRef()
@@ -20,19 +18,20 @@ const Clock = ({text, color, flash, }) => {
         const rotate = () => { return flash == 'hours' ? 30 : 6 }
 
         useEffect(() => {
-                setInterval(() => {
-                    // clock
-                    let C = getClock()         
-                        flash === "hours" ? C > 12 ? C -=12 : C : ""
+            setInterval(() => {
+                // clock
+                let C = getClock()         
+                   flash === "hours" ? C > 12 ? C -=12 : C : ""
 
-                        C =  C < 10 ? "0" + C  : C;
-                        setTime((prevCircle) => (prevCircle = C))
-                
-                        svgCircle.current.style.strokeDashoffset = 440 - (440 * C) / strokeDashoffset()
-                        dots.current.style.transform = `rotate(${C * rotate() }deg)`
+                C =  C < 10 ? "0" + C  : C;
+                setTime((prevCircle) => (prevCircle = C))
+        
+                svgCircle.current.style.strokeDashoffset = 440 - (440 * C) / strokeDashoffset()
+                dots.current.style.transform = `rotate(${C * rotate() }deg)`
+            }, )
+        },)
 
-                }, )
-            },)
+
     return(
         <>
             {/* circle */}
@@ -46,8 +45,7 @@ const Clock = ({text, color, flash, }) => {
                         absolute w-[100%] h-[100%] z-10 flex justify-center items-center
                         before:content-[''] before:top-[-3px] before:absolute before:w-[15px] before:h-[15px] before:bg-[var(--before-color)]
                         before:rounded-[50%] before:shadow-[0_0_20px_var(--before-color),0_0_60px_var(--before-color)] 
-                    `}
-                        
+                    `}    
                 >
                 </div>
                 {/* svg */}
