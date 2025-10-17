@@ -4,16 +4,12 @@ const AnimatedOnScroll = () => {
     const [showAnimate, setShowAnimate] = useState(false)
     const sectionRef = useRef()
     const animatedScroll = () => {
+
         const top = window.scrollY
         const offset = sectionRef.current.scrollTop - 150
         const height = sectionRef.current.offsetHeight;
 
-        if(top >= offset && top < offset + height){
-            setShowAnimate(true)
-        }
-        else {
-            setShowAnimate(false)
-        }
+        setShowAnimate(top >= offset && top < offset + height ? true : false)
 
     }
 
