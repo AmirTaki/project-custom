@@ -16,16 +16,17 @@ const SectionScroll = ( { dispatch, children, index}) => {
 
     useEffect(() => {
        
-        let flag = false
+        let flag = true
         const handleScroll = () => {
-            if(!flag){
+            if(flag){
                 requestAnimationFrame(() => {
                     animatedScroll()
-                    flag = false
+                    flag = true
                 })
-                flag = true
+                flag = false
             }
         }
+
         window.addEventListener("scroll", handleScroll)
         animatedScroll()
         return()=> {
