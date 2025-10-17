@@ -7,26 +7,23 @@ const SectionScroll = ( { dispatch, children, index}) => {
         if (!sectionRef.current) return ;
 
         const top = window.scrollY 
-        const offset = sectionRef.current.scrollTop - 150
-        const height = sectionRef.current.offsetHeight ;
+        const offset = sectionRef.current.offsetTop - 150
+        const height = sectionRef.current.offsetHeight
 
-        console.log('scroll', top)
-        console.log('offset',offset)
-        console.log('height',offset)
 
         dispatch({type : 'scroll', payload : { bool : (top >= offset && top < offset + height ? true : false) ,  index : index  }})
     })
 
     useEffect(() => {
        
-        let flag = true
+        let flag = false
         const handleScroll = () => {
-            if(flag){
+            if(!flag){
                 requestAnimationFrame(() => {
-                    animatedScroll();
-                    flag = true
+                    animatedScroll()
+                    flag = false
                 })
-                flag = false
+                flag = true
             }
         }
         window.addEventListener("scroll", handleScroll)
