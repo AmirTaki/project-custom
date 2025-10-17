@@ -14,9 +14,8 @@ const AnimatedOnScroll = () => {
                 >Hi, I'm Codehal</h1>
                 
                 <p  className="
-                    
                     opacity-0 blur-[5px] duration-1000
-
+                    relative text-[35px]  text-[#0ef] font-[600]
                 "
                 >Animation on Scroll using React js and tailwind and hock</p>
             </section>
