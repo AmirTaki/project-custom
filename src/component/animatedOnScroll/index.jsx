@@ -9,7 +9,8 @@ const AnimatedOnScroll = () => {
         switch(action.type){
             case "scroll":
                 const {bool} = action.payload;
-                return {...state, };
+                const {index} = action.payload;
+                return {...state, [index] : bool };
         }
     }
     const [showAnimate, dispatch] =  useReducer(reducer, {})
