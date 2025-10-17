@@ -16,7 +16,6 @@ const SectionScroll = ( {sectionRef, dispatch, children}) => {
         }
     }, [])
 
-
     return(
         <div className="">{children}</div>
     )

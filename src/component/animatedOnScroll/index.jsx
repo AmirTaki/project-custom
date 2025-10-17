@@ -8,6 +8,7 @@ const AnimatedOnScroll = () => {
     const reducer = (state, action) => {
         switch(action.type){
             case "scroll":
+                const {bool} = action.payload;
                 return state;
         }
     }
