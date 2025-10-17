@@ -1,6 +1,6 @@
 import { useReducer } from "react";
 import SectionScroll from "./sectionScroll";
-import SectionOne  from "./sectionOne";
+import Section  from "./section";
 import { DataSection } from "./dataSection";
 
 const AnimatedOnScroll = () => {
@@ -20,7 +20,7 @@ const AnimatedOnScroll = () => {
                 return(
                     <div key = {section.id}>
                         <SectionScroll index = {section.id}  dispatch= {dispatch} >
-                            <SectionOne 
+                            <Section 
                                 showAnimate = {showAnimate[section.id]}
                                 h = {section.h1}     
                                 p = {section.p}

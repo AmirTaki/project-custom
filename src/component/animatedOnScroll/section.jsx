@@ -1,4 +1,4 @@
-const SectionOne = ({showAnimate, h, p, showSection, hideSection, showStyles, hideStyles}) => {
+const Section = ({showAnimate, h, p, showSection, hideSection, showStyles, hideStyles}) => {
     return(
         // section
         <section
@@ -26,4 +26,4 @@ const SectionOne = ({showAnimate, h, p, showSection, hideSection, showStyles, hi
     )
 }
 
-export default SectionOne
+export default Section
