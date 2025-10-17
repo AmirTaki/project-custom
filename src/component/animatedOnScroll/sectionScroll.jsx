@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-const SectionScroll = (props, {sectionRef, setShowAnimate}) => {
+const SectionScroll = ( {sectionRef, setShowAnimate, children}) => {
 
     // const [showAnimate, setShowAnimate] = useState(false)
     // const sectionRef = useRef()
@@ -23,7 +23,7 @@ const SectionScroll = (props, {sectionRef, setShowAnimate}) => {
 
 
     return(
-        <div className="">{props.children}</div>
+        <div className="">{children}</div>
     )
 }
 

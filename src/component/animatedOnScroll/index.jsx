@@ -1,9 +1,11 @@
-import { useRef, useState } from "react";
+import { useReducer, useRef, useState } from "react";
 import SectionScroll from "./sectionScroll";
 
 const AnimatedOnScroll = () => {
 
-    const [showAnimate, setShowAnimate] = useState(true)
+    // const [showAnimate, setShowAnimate] = useState(false)
+
+    const [showAnimate, dispatch] =  useReducer(reducer, {})
     const sectionRef = useRef()
     return(
         <>
@@ -36,7 +38,7 @@ const AnimatedOnScroll = () => {
             }
             </SectionScroll>
 
-            <SectionScroll >
+            <SectionScroll  sectionRef = {sectionRef} setShowAnimate= {setShowAnimate}>
             {   
             // section
             <section
