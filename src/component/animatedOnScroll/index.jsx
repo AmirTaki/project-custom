@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const AnimatedOnScroll = () => {
     const [showAnimate, setShowAnimate] = useState(false)
-
+    const sectionRef = useRef()
     const animatedScroll = () => {
-        
+
     }
 
     useEffect(() => {
@@ -18,6 +18,7 @@ const AnimatedOnScroll = () => {
         <div className="">
             {/* section */}
             <section
+                ref = {sectionRef}
                 // sec-1 show-animate
                 className={`
                     ${showAnimate ? "translate-x-0" : "translate-x-[-100%]"}
