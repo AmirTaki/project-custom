@@ -10,16 +10,8 @@ const AnimatedOnScroll = () => {
                 const {index} = action.payload
                 const {bool} = action.payload
 
-                // return state.map((item) => {
-                //     if (item.id === index){
-                //         return {...item, status : bool}
-
-                //     }
-                //     return item
-                // })
                 return state.map((item) => (
-
-                     {...item,  status : bool}
+                    {...item,  status : item.id == index ? bool : item.status}
                 ))
               
           
@@ -34,13 +26,7 @@ const AnimatedOnScroll = () => {
                     <div key = {section.id} className="overflow-x-hidden">
                         <SectionScroll index = {section.id}  dispatch= {dispatch} >
                             <Section 
-                                showAnimate = {section.status}
-                                h = {section.h1}     
-                                p = {section.p}
-                                showSection = {section.showSection}
-                                hideSection = {section.hideSection}
-                                showStyles = {section.showStyles}
-                                hideStyles = {section.hideStyles}    
+                                section = {section}
                             />   
                         </SectionScroll>      
                     </div>

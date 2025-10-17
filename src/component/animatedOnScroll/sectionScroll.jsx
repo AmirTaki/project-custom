@@ -6,7 +6,7 @@ const SectionScroll = ( { dispatch, children, index}) => {
         const offset = sectionRef.current.scrollTop - 150
         const height = sectionRef.current.offsetHeight;
 
-        dispatch({type : 'scroll', payload : { bool : top >= offset && top < offset + height ? true : false,   index : index  }})
+        dispatch({type : 'scroll', payload : { bool : top >= offset && top < offset + height ? true : false,  index : index  }})
     }
 
     useEffect(() => {
