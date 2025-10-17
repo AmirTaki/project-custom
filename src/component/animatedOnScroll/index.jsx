@@ -20,9 +20,15 @@ const AnimatedOnScroll = () => {
                 return(
                     <SectionScroll key = {section.id}  dispatch= {dispatch} >
                         <SectionOne 
-                            showAnimate = {showAnimate[0]} h = {"Hi, I'm Codehal"} p = {"Animation on Scroll using React js and tailwind and hook"}  
-                            
-                            />   
+                            showAnimate = {showAnimate[section.id]}
+                            h = {section.h1}     
+                            p = {section.p}
+                            showSection = {section.showSection}
+                            hideSection = {section.hideSection}
+                            showStyles = {section.showStyles}
+                            hideStyles = {section.hideStyles}    
+                             
+                        />   
                     </SectionScroll>      
                 )
             })}
