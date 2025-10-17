@@ -10,7 +10,7 @@ const SectionOne = ({showAnimate, h, p}) => {
             >
         {/* animate */}
         <h1 className={`
-            ${showAnimate ? "opacity-100 blur-[0]" : "opacity-0 blur-[5px]"}  duration-1000
+            ${showAnimate ? "" : ""}  duration-1000
             relative text-[90px] text-[#fff]
         `}    
         >
@@ -18,7 +18,7 @@ const SectionOne = ({showAnimate, h, p}) => {
         </h1>
         {/* animate */}
         <p  className={`
-            ${showAnimate ? "opacity-100 blur-[0]" : "opacity-0 blur-[5px]"}    duration-1000
+            ${showAnimate ? "" : ""}    duration-1000
             relative text-[35px]  text-[#0ef] font-[600]`}
         >{p}</p>
         </section>

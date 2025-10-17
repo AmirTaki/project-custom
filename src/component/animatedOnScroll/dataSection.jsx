@@ -4,7 +4,8 @@ export const DataSection = [
         p : "Animation on Scroll using HTML CSS and Javascript",
         showAnimate : 'translate-x-0' ,
         hideAnimate : 'translate-x-[-100%]',
-        
+        showStyles : "opacity-100 blur-[0]",
+        hideStyles : 'opacity-0 blur-[5px]'
     }
 
 ]
