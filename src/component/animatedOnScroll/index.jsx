@@ -9,10 +9,12 @@ const AnimatedOnScroll = () => {
                 {/* animate */}
                 <h1 className="
                     opacity-0 blur-[5px] duration-1000
-                "
+                    relative text-[90px] text-[#fff]
+                    "
                 >Hi, I'm Codehal</h1>
                 
                 <p  className="
+                    
                     opacity-0 blur-[5px] duration-1000
 
                 "
