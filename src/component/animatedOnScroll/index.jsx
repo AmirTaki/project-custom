@@ -1,10 +1,7 @@
-import { useReducer, useRef, useState } from "react";
+import { useReducer } from "react";
 import SectionScroll from "./sectionScroll";
 
 const AnimatedOnScroll = () => {
-
-    // const [showAnimate, setShowAnimate] = useState(false)
-
     const reducer = (state, action) => {
         switch(action.type){
             case "scroll":
@@ -14,15 +11,12 @@ const AnimatedOnScroll = () => {
         }
     }
     const [showAnimate, dispatch] =  useReducer(reducer, {})
-    // const sectionRef = useRef()
     return(
         <>
-
-            <SectionScroll sectionRef = {sectionRef} dispatch= {dispatch} index = {0}>
+            <SectionScroll  dispatch= {dispatch} index = {0}>
             {   
             // section
             <section
-                // ref = {sectionRef}
                 // sec-1 show-animate
                 className={`
                     ${showAnimate[0] ? "translate-x-0" : "translate-x-[-100%]"}
