@@ -1,8 +1,7 @@
 
-
 const AnimatedOnScroll = () => {
-   
-        <div className="">
+    return(
+        <>
             {/* section */}
             <section
                 ref = {sectionRef}
@@ -26,9 +25,9 @@ const AnimatedOnScroll = () => {
                     relative text-[35px]  text-[#0ef] font-[600]`}
                 >Animation on Scroll using React js and tailwind and hock</p>
             </section>
-
-        </div>
+        </>
     )
+       
 }
 
 export default AnimatedOnScroll;
