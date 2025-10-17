@@ -10,13 +10,14 @@ const AnimatedOnScroll = () => {
                 const {index} = action.payload
                 const {bool} = action.payload
 
-                state.map((item) => {
+                return state.map((item) => {
                     if (item.id === index){
                         return {...item, status : bool}
+
                     }
                     return item
                 })
-                return state
+              
           
         }
     }
