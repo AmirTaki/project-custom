@@ -1,16 +1,16 @@
-const SectionOne = ({showAnimate, h, p}) => {
+const SectionOne = ({showAnimate, h, p, showSection, hideSection, showStyles, hideStyles}) => {
     return(
         // section
         <section
             // sec- show-animate
             className={`
-                ${showAnimate ? "" : ""}
+                ${showAnimate ? showSection : hideSection}
                 flex justify-center items-center flex-col min-h-[100vh] overflow-hidden
             `}
             >
         {/* animate */}
         <h1 className={`
-            ${showAnimate ? "" : ""}  duration-1000
+            ${showAnimate ? showStyles : hideStyles}  duration-1000
             relative text-[90px] text-[#fff]
         `}    
         >
@@ -18,7 +18,7 @@ const SectionOne = ({showAnimate, h, p}) => {
         </h1>
         {/* animate */}
         <p  className={`
-            ${showAnimate ? "" : ""}    duration-1000
+            ${showAnimate ? showStyles : hideStyles}    duration-1000
             relative text-[35px]  text-[#0ef] font-[600]`}
         >{p}</p>
         </section>

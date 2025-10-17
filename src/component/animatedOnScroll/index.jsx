@@ -27,7 +27,6 @@ const AnimatedOnScroll = () => {
                             hideSection = {section.hideSection}
                             showStyles = {section.showStyles}
                             hideStyles = {section.hideStyles}    
-                             
                         />   
                     </SectionScroll>      
                 )
