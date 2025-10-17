@@ -18,7 +18,7 @@ const AnimatedOnScroll = () => {
         <>
             {DataSection.map((section) => {
                 return(
-                    <SectionScroll  dispatch= {dispatch} index = {0}>
+                    <SectionScroll key = {section.id}  dispatch= {dispatch} >
                         <SectionOne 
                             showAnimate = {showAnimate[0]} h = {"Hi, I'm Codehal"} p = {"Animation on Scroll using React js and tailwind and hook"}  
                             

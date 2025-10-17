@@ -1,5 +1,6 @@
 export const DataSection = [
     {
+        id : 0,
         h1 : "Hi, I'm Codehal",
         p : "Animation on Scroll using HTML CSS and Javascript",
         showAnimate : 'translate-x-0' ,
