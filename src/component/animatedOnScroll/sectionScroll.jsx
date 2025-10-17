@@ -19,8 +19,15 @@ const SectionScroll = ( { dispatch, children, index}) => {
 
     useEffect(() => {
        
+        let flag = true
         const handleScroll = () => {
-
+            if(flag){
+                requestAnimationFrame(() => {
+                    animatedScroll();
+                    flag = true
+                })
+                flag = false
+            }
         }
         window.addEventListener("scroll", handleScroll)
         animatedScroll()
@@ -28,7 +35,7 @@ const SectionScroll = ( { dispatch, children, index}) => {
             window.removeEventListener('scroll', handleScroll)
         }
 
-    })
+    }, [animatedScroll])
 
     return(
         <div ref = {sectionRef} >
