@@ -32,7 +32,7 @@ const AnimatedOnScroll = () => {
                 // sec-1 show-animate
                 className={`
                     ${showAnimate ? "translate-x-0" : "translate-x-[-100%]"}
-                    flex justify-center items-center flex-col min-h-[100vh] bg-[#1f242d] overflow-hidden
+                    flex justify-center items-center flex-col min-h-[100vh] overflow-hidden
                     `}
             >
                 {/* animate */}

@@ -18,13 +18,13 @@ const Home =  ()  => {
             <NavbarPaeg />
 
             {/* Digital Clock */}
-            <DigitalClock />
+            {/* <DigitalClock /> */}
 
             {/* Download Button */}
-            <DownloadButton />
+            {/* <DownloadButton /> */}
 
             {/* LayerdHoverEffect */}
-            <LayerdHoverEffect />
+            {/* <LayerdHoverEffect /> */}
 
             {/* animation on Scroll */}
             <AnimatedOnScroll />
