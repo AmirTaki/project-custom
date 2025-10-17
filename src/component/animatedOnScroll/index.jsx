@@ -10,7 +10,7 @@ const AnimatedOnScroll = () => {
             case "scroll":
                 const {bool} = action.payload;
                 const {index} = action.payload;
-                return {...state, [index] : bool };
+            return {...state, [index] : bool };
         }
     }
     const [showAnimate, dispatch] =  useReducer(reducer, {})
@@ -25,13 +25,13 @@ const AnimatedOnScroll = () => {
                 ref = {sectionRef}
                 // sec-1 show-animate
                 className={`
-                    ${showAnimate ? "translate-x-0" : "translate-x-[-100%]"}
+                    ${showAnimate[0] ? "translate-x-0" : "translate-x-[-100%]"}
                     flex justify-center items-center flex-col min-h-[100vh] overflow-hidden
                 `}
                 >
             {/* animate */}
             <h1 className={`
-                ${showAnimate ? "opacity-100 blur-[0]" : "opacity-0 blur-[5px]"}  duration-1000
+                ${showAnimate[0] ? "opacity-100 blur-[0]" : "opacity-0 blur-[5px]"}  duration-1000
                 relative text-[90px] text-[#fff]
             `}    
             >
@@ -39,13 +39,13 @@ const AnimatedOnScroll = () => {
             </h1>
             
             <p  className={`
-                    ${showAnimate ? "opacity-100 blur-[0]" : "opacity-0 blur-[5px]"}    duration-1000
+                    ${showAnimate[0] ? "opacity-100 blur-[0]" : "opacity-0 blur-[5px]"}    duration-1000
                 relative text-[35px]  text-[#0ef] font-[600]`}
             >Animation on Scroll using React js and tailwind and hock</p>
             </section>
             }
             </SectionScroll>
-
+         
 
          
         </>
