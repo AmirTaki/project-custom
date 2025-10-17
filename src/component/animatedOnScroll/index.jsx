@@ -1,6 +1,14 @@
 const AnimatedOnScroll = () => {
     return(
-        <div className=""></div>
+        <div className="">
+            {/* section */}
+            <section
+                className=""
+            >
+                
+            </section>
+
+        </div>
     )
 }
 
