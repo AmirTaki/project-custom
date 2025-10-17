@@ -26,4 +26,4 @@ const SectionOne = ({showAnimate}) => {
     )
 }
 
-export default SectionOne()
+export default SectionOne
