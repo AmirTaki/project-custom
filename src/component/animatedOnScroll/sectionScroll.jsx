@@ -1,17 +1,12 @@
-import { useEffect, useRef, useState } from "react";
-const SectionScroll = ( {sectionRef, setShowAnimate, children}) => {
-
-    // const [showAnimate, setShowAnimate] = useState(false)
-    // const sectionRef = useRef()
+import { useEffect,  } from "react";
+const SectionScroll = ( {sectionRef, dispatch, children}) => {
     
     const animatedScroll = () => {
-
         const top = window.scrollY
         const offset = sectionRef.current.scrollTop - 150
         const height = sectionRef.current.offsetHeight;
 
-        setShowAnimate(top >= offset && top < offset + height ? true : false)
-
+        dispatch({type : 'scroll', payload : { bool : top >= offset && top < offset + height ? true : false } })
     }
 
     useEffect(() => {
