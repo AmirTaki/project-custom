@@ -3,11 +3,14 @@ import { useEffect, useState } from "react";
 const AnimatedOnScroll = () => {
     const [showAnimate, setShowAnimate] = useState(false)
 
+    const animatedScroll = () => {
+        
+    }
 
     useEffect(() => {
-        window.addEventListener('scroll', )
+        window.addEventListener('scroll', animatedScroll )
         return() => {
-            window.removeEventListener('scroll', )
+            window.removeEventListener('scroll', animatedScroll )
         }
     }, [])
 
