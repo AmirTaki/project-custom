@@ -2,9 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import Clock from "./clcok"
 
 const DigitalClock = () => {
-    // hours
   
-
     // AM PM
     const [AM_PM, setAM_PM] = useState('')
 
