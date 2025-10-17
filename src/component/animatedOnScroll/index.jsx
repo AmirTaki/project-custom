@@ -14,7 +14,7 @@ const AnimatedOnScroll = () => {
         }
     }
     const [showAnimate, dispatch] =  useReducer(reducer, {})
-    const sectionRef = useRef()
+    // const sectionRef = useRef()
     return(
         <>
 
@@ -22,7 +22,7 @@ const AnimatedOnScroll = () => {
             {   
             // section
             <section
-                ref = {sectionRef}
+                // ref = {sectionRef}
                 // sec-1 show-animate
                 className={`
                     ${showAnimate[0] ? "translate-x-0" : "translate-x-[-100%]"}

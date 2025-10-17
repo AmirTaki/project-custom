@@ -1,6 +1,6 @@
-import { useEffect,  } from "react";
-const SectionScroll = ( {sectionRef, dispatch, children, index}) => {
-    
+import { useEffect,  useRef} from "react";
+const SectionScroll = ( { dispatch, children, index}) => {
+    const sectionRef = useRef() 
     const animatedScroll = () => {
         const top = window.scrollY
         const offset = sectionRef.current.scrollTop - 150
@@ -17,7 +17,11 @@ const SectionScroll = ( {sectionRef, dispatch, children, index}) => {
     }, [])
 
     return(
-        <div className="">{children}</div>
+        <div ref = {sectionRef} className="">
+
+            {children}
+            
+        </div>
     )
 }
 
