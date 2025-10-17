@@ -1,7 +1,9 @@
 import { useState } from "react";
 
-const [showAnimate, setShowAnimate] = useState(false)
 const AnimatedOnScroll = () => {
+    const [showAnimate, setShowAnimate] = useState(false)
+
+
     return(
         <div className="">
             {/* section */}
@@ -10,10 +12,12 @@ const AnimatedOnScroll = () => {
                 className="flex justify-center items-center flex-col min-h-[100vh] bg-[#1f242d] overflow-hidden"
             >
                 {/* animate */}
-                <h1 className="
-                    opacity-0 blur-[5px] duration-1000
+                <h1 className={`
+                    ${showAnimate ? "opacity-100 blur-[0]" : "opacity-0 blur-[5px]"}  duration-1000
                     relative text-[90px] text-[#fff]
-                    "
+                `}
+               
+                    
                 >Hi, I'm Codehal</h1>
                 
                 <p  className="
