@@ -7,7 +7,10 @@ const AnimatedOnScroll = () => {
                 className="flex justify-center items-center flex-col min-h-[100vh] bg-[#1f242d] overflow-hidden"
             >
                 {/* animate */}
-                <h1>Hi, I'm Codehal</h1>
+                <h1 className="
+                    opacity-0 blur-[5px] duration-1000
+                "
+                >Hi, I'm Codehal</h1>
                 
             </section>
 
