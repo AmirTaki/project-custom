@@ -22,7 +22,7 @@ export const DataSection = [
     },
     {
         id : 2,
-        h1 : "Nice",
+        h1 : "Nice ",
         p : "Animation on Scroll using HTML CSS and Javascript",
         showSection : 'scale-100 ' ,
         hideSection : 'scale-[.2]',
@@ -30,8 +30,7 @@ export const DataSection = [
         hideStyles : ' opacity-0 blur-3xl',
         status : false
     },
-
-
+  
 
 
 ]
