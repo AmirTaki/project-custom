@@ -6,7 +6,7 @@ export const DataSection = [
         showSection : 'translate-x-0 ' ,
         hideSection : 'translate-x-[-100%] ',
         showStyles : "opacity-100 blur-[0]",
-        hideStyles : 'opacity-0 blur-[5px]',
+        hideStyles : 'opacity-0 blur-3xl',
         status : true
     },
     {
@@ -16,7 +16,7 @@ export const DataSection = [
         showSection : 'translate-x-0! ' ,
         hideSection : 'translate-x-[100%]! ',
         showStyles : "opacity-100 blur-[0] text-[#0f0]",
-        hideStyles : 'opacity-0 blur-[5px] ',
+        hideStyles : 'opacity-0 blur-3xl ',
         status : false
 
     },
@@ -27,7 +27,7 @@ export const DataSection = [
         showSection : 'scale-100 ' ,
         hideSection : 'scale-[.2]',
         showStyles : " opacity-100 blur-[0] text-[#e0f]",
-        hideStyles : ' opacity-0 blur-[5px]',
+        hideStyles : ' opacity-0 blur-3xl',
         status : false
 
     },

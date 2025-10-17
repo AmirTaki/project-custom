@@ -11,7 +11,7 @@ const Section = ({section}) => {
         {/* animate */}
         <h1 className={`
             ${section.status ? section.showStyles : section.hideStyles}  
-            relative text-[90px] text-[#fff]
+            relative text-[90px] text-[#fff] delay-200 duration-1000
         `}    
         >
             {section.h1}  
@@ -19,7 +19,7 @@ const Section = ({section}) => {
         {/* animate */}
         <p  className={`
             ${section.status ? section.showStyles : section.hideStyles}    
-            relative text-[35px]  text-[#0ef] font-[600]`}
+            relative text-[35px]  text-[#0ef] font-[600] delay-200 duration-1000`}
         >{section.p}</p>
         </section>
             
