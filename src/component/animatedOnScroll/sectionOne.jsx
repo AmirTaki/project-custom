@@ -2,9 +2,9 @@ const SectionOne = ({showAnimate, h, p}) => {
     return(
         // section
         <section
-            // sec-1 show-animate
+            // sec- show-animate
             className={`
-                ${showAnimate ? "translate-x-0" : "translate-x-[-100%]"}
+                ${showAnimate ? "" : ""}
                 flex justify-center items-center flex-col min-h-[100vh] overflow-hidden
             `}
             >
@@ -16,7 +16,7 @@ const SectionOne = ({showAnimate, h, p}) => {
         >
             {h}  
         </h1>
-        
+        {/* animate */}
         <p  className={`
             ${showAnimate ? "opacity-100 blur-[0]" : "opacity-0 blur-[5px]"}    duration-1000
             relative text-[35px]  text-[#0ef] font-[600]`}
