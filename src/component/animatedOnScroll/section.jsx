@@ -5,7 +5,7 @@ const Section = ({showAnimate, h, p, showSection, hideSection, showStyles, hideS
             // sec- show-animate
             className={`
                 ${showAnimate ? showSection : hideSection}
-                flex justify-center items-center flex-col min-h-[100vh] overflow-hidden! duration-1000
+                flex justify-center items-center flex-col min-h-[100vh] overflow-x-hidden! duration-1000
             `}
             >
         {/* animate */}

@@ -7,16 +7,14 @@ const AnimatedOnScroll = () => {
     const reducer = (state, action) => {
         switch(action.type){
             case "scroll":
-                const {bool} = action.payload;
-                const {index} = action.payload;
-            return {...state, [index] : bool };
+          
         }
     }
-    const [showAnimate, dispatch] =  useReducer(reducer, {})
+    const [showAnimate, dispatch] =  useReducer(reducer, DataSection)
     
     return(
         <>
-            {DataSection.map((section) => {
+            {showAnimate.map((section) => {
                 return(
                     <div key = {section.id} className="overflow-x-hidden">
                         <SectionScroll index = {section.id}  dispatch= {dispatch} >
