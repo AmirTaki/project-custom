@@ -32,8 +32,8 @@ export const DataSection = [
     },
     {
         id : 3,
-        h1 : "Very Good     <span className={`${section.status ? 'w-[100%] ' : 'w-0'} abolute top-0 right-0 h-[100%] bg-[#1f242d] duration-1000 delay-75`}></span>",
-        p : "Animation on Scroll using HTML CSS and Javascript",
+        h1 : "Very Good   <span className={`${section.status ? 'w-[100%] ' : 'w-0'} abolute top-0 right-0 h-[100%] bg-[#1f242d] duration-1000 delay-75`}></span>",
+        p : "Animation on Scroll using HTML CSS and Javascript <span className={`${section.status ? 'w-[100%] ' : 'w-0'} abolute top-0 right-0 h-[100%] bg-[#1f242d] duration-1000 delay-500`}></span>",
         showSection : 'scale-100 ' ,
         hideSection : 'scale-[.2]',
         showStyles : " opacity-100 blur-[0] text-[#e0f]",
