@@ -1,8 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const AnimatedOnScroll = () => {
     const [showAnimate, setShowAnimate] = useState(false)
 
+
+    useEffect(() => {
+        window.addEventListener('scroll', )
+        return() => {
+            window.removeEventListener('scroll', )
+        }
+    }, [])
 
     return(
         <div className="">
