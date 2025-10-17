@@ -9,7 +9,7 @@ const AnimatedOnScroll = () => {
         switch(action.type){
             case "scroll":
                 const {bool} = action.payload;
-                return state;
+                return {...state, };
         }
     }
     const [showAnimate, dispatch] =  useReducer(reducer, {})
@@ -17,7 +17,7 @@ const AnimatedOnScroll = () => {
     return(
         <>
 
-            <SectionScroll sectionRef = {sectionRef} dispatch= {dispatch}>
+            <SectionScroll sectionRef = {sectionRef} dispatch= {dispatch} index = {0}>
             {   
             // section
             <section
