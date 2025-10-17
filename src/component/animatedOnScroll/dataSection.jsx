@@ -25,9 +25,9 @@ export const DataSection = [
         h1 : "Nice",
         p : "Animation on Scroll using HTML CSS and Javascript",
         showSection : 'scale-100 ' ,
-        hideSection : 'scale-[1] ',
-        showStyles : "opacity-100 blur-[0] text-[#e0f]",
-        hideStyles : 'opacity-0 blur-[5px] ',
+        hideSection : 'scale-[.2]',
+        showStyles : " opacity-100 blur-[0] text-[#e0f]",
+        hideStyles : ' opacity-0 blur-[5px]',
         status : false
 
     },
