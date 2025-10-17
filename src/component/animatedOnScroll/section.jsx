@@ -4,21 +4,21 @@ const Section = ({section}) => {
         <section
             // sec- show-animate
             className={`
-                ${section.showAnimate ? section.showSection : section.hideSection}
-                flex justify-center items-center flex-col min-h-[100vh] overflow-x-hidden! duration-1000
+                ${section.status ? section.showSection : section.hideSection}
+                flex justify-center items-center flex-col min-h-[100vh] overflow-x-hidden! duration-2000
             `}
             >
         {/* animate */}
         <h1 className={`
-            ${section.showAnimate ? section.showStyles : section.hideStyles}  
+            ${section.status ? section.showStyles : section.hideStyles}  
             relative text-[90px] text-[#fff]
         `}    
         >
-            {section.h}  
+            {section.h1}  
         </h1>
         {/* animate */}
         <p  className={`
-            ${section.showAnimate ? section.showStyles : section.hideStyles}    
+            ${section.status ? section.showStyles : section.hideStyles}    
             relative text-[35px]  text-[#0ef] font-[600]`}
         >{section.p}</p>
         </section>
