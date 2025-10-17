@@ -1,4 +1,4 @@
-const SectionOne = ({showAnimate}) => {
+const SectionOne = ({showAnimate, h, p}) => {
     return(
         // section
         <section
@@ -14,13 +14,13 @@ const SectionOne = ({showAnimate}) => {
             relative text-[90px] text-[#fff]
         `}    
         >
-            
+            {h}  
         </h1>
         
         <p  className={`
             ${showAnimate ? "opacity-100 blur-[0]" : "opacity-0 blur-[5px]"}    duration-1000
             relative text-[35px]  text-[#0ef] font-[600]`}
-        ></p>
+        >{p}</p>
         </section>
             
     )
