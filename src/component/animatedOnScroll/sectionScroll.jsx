@@ -4,6 +4,8 @@ const SectionScroll = ( { dispatch, children, index}) => {
     const sectionRef = useRef() 
    
     const animatedScroll = useCallback (() => {
+        if (!sectionRef.current) return ;
+
         const top = window.scrollY 
         const offset = sectionRef.current.scrollTop - 150
         const height = sectionRef.current.offsetHeight ;
