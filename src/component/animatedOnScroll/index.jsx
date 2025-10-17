@@ -1,5 +1,6 @@
 import { useReducer } from "react";
 import SectionScroll from "./sectionScroll";
+import SectionOne from "./sectionOne";
 
 const AnimatedOnScroll = () => {
     const reducer = (state, action) => {
@@ -14,8 +15,8 @@ const AnimatedOnScroll = () => {
     return(
         <>
             <SectionScroll  dispatch= {dispatch} index = {0}>
-            {   
-      
+                <SectionOne showAnimate = {showAnimate[0]} />   
+        
             </SectionScroll>
       
          
