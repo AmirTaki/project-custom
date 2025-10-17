@@ -9,7 +9,10 @@ const AnimatedOnScroll = () => {
             {/* section */}
             <section
                 // sec-1 show-animate
-                className="flex justify-center items-center flex-col min-h-[100vh] bg-[#1f242d] overflow-hidden"
+                className={`
+                    ${showAnimate ? "translate-x-0" : "translate-x-[-100%]"}
+                    flex justify-center items-center flex-col min-h-[100vh] bg-[#1f242d] overflow-hidden
+                    `}
             >
                 {/* animate */}
                 <h1 className={`
