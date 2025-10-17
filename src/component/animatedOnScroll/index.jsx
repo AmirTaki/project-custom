@@ -16,12 +16,8 @@ const AnimatedOnScroll = () => {
         <>
             <SectionScroll  dispatch= {dispatch} index = {0}>
                 <SectionOne showAnimate = {showAnimate[0]} />   
-        
             </SectionScroll>
-      
-         
-
-         
+               
         </>
     )
        
