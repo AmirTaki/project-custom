@@ -18,17 +18,19 @@ const AnimatedOnScroll = () => {
         <>
             {DataSection.map((section) => {
                 return(
-                    <SectionScroll key = {section.id}  dispatch= {dispatch} >
-                        <SectionOne 
-                            showAnimate = {showAnimate[section.id]}
-                            h = {section.h1}     
-                            p = {section.p}
-                            showSection = {section.showSection}
-                            hideSection = {section.hideSection}
-                            showStyles = {section.showStyles}
-                            hideStyles = {section.hideStyles}    
-                        />   
-                    </SectionScroll>      
+                    <div key = {section.id}>
+                        <SectionScroll index = {section.id}  dispatch= {dispatch} >
+                            <SectionOne 
+                                showAnimate = {showAnimate[section.id]}
+                                h = {section.h1}     
+                                p = {section.p}
+                                showSection = {section.showSection}
+                                hideSection = {section.hideSection}
+                                showStyles = {section.showStyles}
+                                hideStyles = {section.hideStyles}    
+                            />   
+                        </SectionScroll>      
+                    </div>
                 )
             })}
         </>
