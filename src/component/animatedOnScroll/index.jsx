@@ -1,3 +1,6 @@
+import { useState } from "react";
+
+const [showAnimate, setShowAnimate] = useState(false)
 const AnimatedOnScroll = () => {
     return(
         <div className="">
