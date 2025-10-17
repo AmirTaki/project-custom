@@ -8,7 +8,7 @@ import NavbarPaeg from "../navbarPage.jsx"
 const Home =  ()  => {
     return(
         <div 
-            className={`  bg-[#10131c] `}
+            className={`  bg-[#10131c] min-h-[100vh] `}
         >        
 
             {/* component navigation */}

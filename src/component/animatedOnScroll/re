@@ -1,0 +1,50 @@
+import { useEffect, useRef, useCallback } from "react";
+
+const SectionScroll = ({ dispatch, children, index }) => {
+    const sectionRef = useRef();
+
+    const animatedScroll = useCallback(() => {
+        if (!sectionRef.current) return;
+        
+        const top = window.scrollY;
+        const offset = sectionRef.current.offsetTop - 150; // Fixed: was scrollTop
+        const height = sectionRef.current.offsetHeight;
+        
+        console.log("scroll", top);
+        console.log("offset", offset);
+        console.log("height", height); // Fixed: was logging offset again
+        
+        const isInView = top >= offset && top < offset + height;
+        
+        dispatch({
+            type: 'scroll', 
+            payload: { 
+                bool: isInView, 
+                index: index 
+            }
+        });
+    }, [dispatch, index]);
+
+    useEffect(() => {
+        // Throttle scroll events for better performance
+        let ticking = false;
+        
+        const handleScroll = () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    animatedScroll();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        
+        // Initial check
+        animatedScroll();
+        
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [animatedScroll]);
