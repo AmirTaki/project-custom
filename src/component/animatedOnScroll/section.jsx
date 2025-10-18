@@ -15,7 +15,9 @@ const Section = ({section}) => {
                 relative text-[90px] text-[#fff]  duration-800
             `}    
             >
-                {section.h1}<span className= {`${section.span&&section.span}`}></span>
+                {section.h1}<span className= {`${section.spanClass &&
+                    section.status ?  section.spanShow : "w-[100%]"    
+                }absolute top-0 right-0 h-[100%] bg-[#1f242d] duration-1000 delay[.2s]`}></span>
             </h1>
             {/* animate */}
             <p  className={`
