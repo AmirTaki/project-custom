@@ -37,7 +37,7 @@ export const DataSection = [
         hideSection : '',
         showStyles : "  text-[#ff0]",
         hideStyles : ' ',
-        spanClass : 'absolute top-0 right-0 h-[100%] bg-[#1f242d] duration-1000 delay[.2s]',
+        spanClass : '',
         spanShow : "w-[0]",
         spanHide : 'w-[100%]',
         status : false,

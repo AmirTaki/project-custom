@@ -16,7 +16,7 @@ const Section = ({section}) => {
             `}    
             >
                 {section.h1}<span className= {`
-                ${section.spanClass}
+                absolute top-0 right-0 h-[100%] bg-[#10131c] duration-1000 delay[.2s]
                 ${section.status ?  section.spanShow : section.spanHide } `}></span>
             </h1>
             {/* animate */}
