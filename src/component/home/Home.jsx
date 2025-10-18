@@ -5,6 +5,7 @@ import DigitalClock from "../digitalClock/index.jsx"
 import DownloadButton from "../downloadButton/index.jsx"
 import LayerdHoverEffect from "../layerdHoverEffect"
 import NavbarPaeg from "../navbarPage.jsx"
+import AnimationEffect from "../animationEffect/index.jsx"
 
 const Home =  ()  => {
     return(
@@ -32,6 +33,9 @@ const Home =  ()  => {
 
             {/* card 3d */}
             {/* <Card /> */}
+
+            {/* animation effects */}
+            <AnimationEffect />
         </div>
    
     )

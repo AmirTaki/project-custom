@@ -1,6 +1,8 @@
 const AnimationEffect = () => {
     return(
-        <div className=""></div>
+        <div className="">
+          
+        </div>
     )
 }
 
