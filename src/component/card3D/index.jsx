@@ -8,6 +8,7 @@ const Card = () => {
                 {/* front card  */}
                 <div className="
                     flex justify-center items-center w-[100%] h-[100%] bg-[#D48600] border-t-2 border-t-[#cc6600] border-l-2 border-l-[#cc6600]
+                   shadow-[0_5px_10px_rgba(0,0,0,0.2)] backface-hidden absolute
                 "></div>
 
                 {/* back card */}
