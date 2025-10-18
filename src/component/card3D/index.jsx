@@ -32,11 +32,19 @@ const Card = () => {
                    shadow-[0_5px_10px_rgba(0,0,0,0.2)] backface-hidden absolute
                 ">
                     {/* home-logo */}
-                    <div className="
-                        relative top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 translate-y-[6px]
-                        inline-block h-[15px] w-[25px] bg-[#4d2600]
+                    <span className="
+                     
 
-                    "></div>
+                    ">
+                        {/* icon */}
+                        <spna className ="
+                            relative top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 translate-y-[6px]
+                            inline-block h-[15px] w-[25px] bg-[#4d2600]
+                        ">
+
+                        </spna>
+
+                    </span>
                 </div>
             </div>
         </div>
