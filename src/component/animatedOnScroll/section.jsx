@@ -30,9 +30,9 @@ const Section = ({section}) => {
             </p>
             {/* images */}
             <div className="">
-                <img className={`${section.status ? "" : "translate-x-0" } max-w-[400px] mx-0 my-[30px] delay-[.2s]`} src={`${section.src1}`} alt="" />
-                <img className={`${section.status ? "" : "translate-x-0" } max-w-[400px] mx-0 my-[30px] delay-[.4s]`} src={`${section.src2}`} alt="" />
-                <img className={`${section.status ? "" : "translate-x-0" } max-w-[400px] mx-0 my-[30px] delay-[.6s]`} src={`${section.src3}`} alt="" />
+                <img className={`${section.status ? "translate-x-x" : "translate-x-[-100%]" } max-w-[400px] mx-0 my-[30px] delay-[.2s]`} src={`${section.src1}`} alt="" />
+                <img className={`${section.status ? "translate-x-x" : "translate-x-[-100%]" } max-w-[400px] mx-0 my-[30px] delay-[.4s]`} src={`${section.src2}`} alt="" />
+                <img className={`${section.status ? "translate-x-x" : "translate-x-[-100%]" } max-w-[400px] mx-0 my-[30px] delay-[.6s]`} src={`${section.src3}`} alt="" />
             </div>
     </section>  
           
