@@ -30,9 +30,9 @@ const Section = ({section}) => {
             </p>
             {/* images */}
             <div className="">
-                <img src="" alt="" />
-                <img src="" alt="" />
-                <img src="" alt="" />
+                <img src={`${section.src1}`} alt="" />
+                <img src={`${section.src2}`} alt="" />
+                <img src={`${section.src3}`} alt="" />
             </div>
     </section>  
           
