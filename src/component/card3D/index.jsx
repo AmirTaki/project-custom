@@ -1,7 +1,7 @@
 const Card = () => {
     return(
         // wrapper
-        <div className="relative w-[620px] h-[330px] perspective-[1000px] ">
+        <div className="relative w-[620px] h-[330px] perspective-[1000px] hover:rotate-y-180 ">
             {/* flipcard => transform-3d */}
             <div className="relative w-[100%] h-[100%] bg-[#D48600] transform-style-3d transition-all duration-1000 ease-in-out">
                 
@@ -29,7 +29,7 @@ const Card = () => {
                 {/* back card */}
                 <div className="     
                     flex justify-center items-center w-[100%] h-[100%] bg-[#D48600] border-t-2 border-t-[#cc6600] border-l-2 border-l-[#cc6600]
-                   shadow-[0_5px_10px_rgba(0,0,0,0.2)] backface-hidden absolute
+                   shadow-[0_5px_10px_rgba(0,0,0,0.2)] backface-hidden absolute rotate-y-180
                 ">
                     {/* home-logo */}
                     <span className="
