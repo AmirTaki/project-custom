@@ -20,6 +20,8 @@
   filter: drop-shadow(0 0 10px #93ff2d) 
           drop-shadow(0 0 30px #93ff2d) 
           drop-shadow(0 0 50px #93ff2d);
+  animation: animateSkyGreenEffect 4s linear infinite  ;
+    
 
 }
 .glowSkyRedEffect {
@@ -37,6 +39,15 @@
   100%{
       transform: rotate(360deg);
   }
+}
+
+@keyframes animateSkyGreenEffect  {
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
 }
 
 
