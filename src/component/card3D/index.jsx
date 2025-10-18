@@ -3,17 +3,15 @@ const Card = () => {
         // wrapper
         <div className="relative w-[620px] h-[330px] perspective-[1000px] group  ">
             {/* flipcard => transform-3d */}
-            <div className="relative w-[100%] h-[100%]  transform-style-3d transition-all duration-1000 ease-in-out ">
+            <div className="relative w-[100%] h-[100%]  transform-style-3d transition-all duration-1000 ease-in-out group-hover:rotate-y-180 ">
                 
                 {/* front card  */}
                 <div className="
                     flex justify-center items-center w-[100%] h-[100%] bg-[#D48600] border-t-2 border-t-[#cc6600] border-l-2 border-l-[#cc6600]
-                   shadow-[0_5px_10px_rgba(0,0,0,0.2)] backface-hidden  absolute gap-5    group-hover:rotate-y-360 z-20  duration-500
+                   shadow-[0_5px_10px_rgba(0,0,0,0.2)] backface-hidden  absolute gap-5      duration-700
                 ">
                     {/* circle */}
                     <span className="w-[100px] h-[110px] border-[10px] border-[#4d2600] rounded-[50%]"></span>
-                    {/* square */}
-                    <span className="w-[100px] h-[110px] border-[10px] border-[#4d2600]"></span>
                     {/* triangle */}
                     <span 
                         className="relative h-0 w-0  border-b-[110px] border-b-[#4d2600] mr-[16px] 
@@ -23,13 +21,15 @@ const Card = () => {
                             before:border-b-[80px] before:border-b-[#D48600]
                             before:left-[-40px] before:top-[20px]
                     "></span>
+                    {/* square */}
+                    <span className="w-[100px] h-[110px] border-[10px] border-[#4d2600]"></span>
 
                 </div>
 
                 {/* back card */}
                 <div className="      
                     flex justify-center items-center w-[100%] h-[100%] bg-[#D48600] border-t-2 border-t-[#cc6600] border-l-2 border-l-[#cc6600]
-                   shadow-[0_5px_10px_rgba(0,0,0,0.2)] backface-hidden absolute  duration-700 group-hover:rotate-y-360 
+                   shadow-[0_5px_10px_rgba(0,0,0,0.2)] backface-hidden absolute  duration-700 rotate-y-180
                 ">
                     {/* home-logo */}
                     <span className="
