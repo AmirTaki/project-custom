@@ -33,8 +33,7 @@ const Card = () => {
                 ">
                     {/* home-logo */}
                     <span className="
-                     
-
+                        relative h-[65px] w-[65px] border-[5px] border-[#4d2600] rounded-[50%] mr-[16px]
                     ">
                         {/* icon */}
                         <spna className ="
