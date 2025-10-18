@@ -11,8 +11,13 @@ const Card = () => {
                    shadow-[0_5px_10px_rgba(0,0,0,0.2)] backface-hidden absolute
                 ">
                     {/* circle */}
+                    <span className="w-[100px] h-[110px] border-[10px] border-[#4d2600] rounded-[50%]"></span>
+                    {/* square */}
                     <span className="w-[100px] h-[110px] border-[10px] border-[#4d2600]"></span>
-
+                    {/* triangle */}
+                    <span className="relative h-0 w-0  border-b-[110px] border-b-[#4d2600] mr-[16px] 
+                        border-l-[60px] border-r-[60px]
+                    "></span>
 
                 </div>
 
