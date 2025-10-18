@@ -8,7 +8,7 @@ const AnimationEffect = () => {
             glowSkyEffect 
 
             before:content-['\f135'] before:absolute before:font-[fontAwesome] before:text-[#24ecff] 
-            before:top-[10px] before:right-[-4px] before:rotate-90 before:text-[2em]
+            before:top-[10px] before:-right-3 before:rotate-90 before:text-[2em]
           "></div>
         </div>
     )
