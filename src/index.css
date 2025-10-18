@@ -16,9 +16,9 @@
 
 }
 .glowSkyGreenEffect {
-  filter: drop-shadow(0 0 10px #24ecff) 
-          drop-shadow(0 0 30px #24ecff) 
-          drop-shadow(0 0 50px #24ecff);
+  filter: drop-shadow(0 0 10px #ff1d6c) 
+          drop-shadow(0 0 30px #ff1d6c) 
+          drop-shadow(0 0 50px #ff1d6c);
 
 }
 
