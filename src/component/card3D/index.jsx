@@ -39,7 +39,7 @@ const Card = () => {
                         <spna className ="
                             relative top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 translate-y-[6px]
                             inline-block h-[15px] w-[25px] bg-[#4d2600]
-                            before:content-[''] before:absoulte before:h-[25px] before:top-[-15px] before:w-[25px] before:bg-[#4d2600] before:rotate-[45deg]
+                            before:content-[''] before:absolute before:h-[25px] before:top-[-15px] before:w-[25px] before:bg-[#4d2600] before:rotate-45
                         ">            
                         </spna>
                         {/* num */}
