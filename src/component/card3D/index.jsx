@@ -16,7 +16,11 @@ const Card = () => {
                     <span className="w-[100px] h-[110px] border-[10px] border-[#4d2600]"></span>
                     {/* triangle */}
                     <span className="relative h-0 w-0  border-b-[110px] border-b-[#4d2600] mr-[16px] 
-                        border-l-[60px] border-r-[60px]
+                        border-l-[60px] border-r-[60px] border-transparent
+                        before:content-[''] before:absolute before:h-0 before:w-0 
+                        before:border-r-[40px] before:border-l-[40px] before:border-transparent
+                        before:boder-b-[80px] before:border-b-[#D48600]
+                        before:left-[-40px] before:top-[20px]
                     "></span>
 
                 </div>
