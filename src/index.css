@@ -13,6 +13,7 @@
   filter: drop-shadow(0 0 10px #24ecff) 
           drop-shadow(0 0 30px #24ecff) 
           drop-shadow(0 0 50px #24ecff);
+  animation: animateSkyBlueEffect 4s linear infinite  ;
 
 }
 .glowSkyGreenEffect {
