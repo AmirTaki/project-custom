@@ -18,10 +18,10 @@ const Home =  ()  => {
             <NavbarPaeg />
 
             {/* animation on Scroll */}
-            <AnimatedOnScroll />
+            {/* <AnimatedOnScroll /> */}
             
             {/* Digital Clock */}
-            <DigitalClock />
+            {/* <DigitalClock /> */}
 
             {/* Download Button */}
             {/* <DownloadButton /> */}
