@@ -8,12 +8,21 @@
           drop-shadow(0 0 15px #2dfc52);
 }
 
-.glowSkyEffect  {
+/* effect animation */
+.glowSkyBlueEffect {
+  filter: drop-shadow(0 0 10px #93ff2d) 
+          drop-shadow(0 0 30px #93ff2d) 
+          drop-shadow(0 0 50px #93ff2d);
+
+}
+.glowSkyGreenEffect {
   filter: drop-shadow(0 0 10px #24ecff) 
           drop-shadow(0 0 30px #24ecff) 
           drop-shadow(0 0 50px #24ecff);
 
 }
+
+
 
 @layer utilities {
   /* span custom layerd Hover Effects */
