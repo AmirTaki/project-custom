@@ -1,4 +1,5 @@
 import AnimatedOnScroll from "../animatedOnScroll/index.jsx"
+import Card from "../card3D/index.jsx"
 import ComponentNavigation from "../componentNavigation"
 import DigitalClock from "../digitalClock/index.jsx"
 import DownloadButton from "../downloadButton/index.jsx"
@@ -29,6 +30,8 @@ const Home =  ()  => {
             {/* LayerdHoverEffect */}
             {/* <LayerdHoverEffect /> */}
 
+            {/* card 3d */}
+            <Card />
         </div>
    
     )
