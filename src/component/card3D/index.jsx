@@ -39,10 +39,11 @@ const Card = () => {
                         <spna className ="
                             relative top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 translate-y-[6px]
                             inline-block h-[15px] w-[25px] bg-[#4d2600]
-                        ">
 
+                        ">            
                         </spna>
-
+                        {/* num */}
+                        <span className="text-[25px] font-[600] text-[#4d2600]">8650 4006</span>
                     </span>
                 </div>
             </div>
