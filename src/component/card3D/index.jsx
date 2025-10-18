@@ -33,18 +33,18 @@ const Card = () => {
                 ">
                     {/* home-logo */}
                     <span className="
-                        relative h-[65px] w-[65px] border-[5px] border-[#4d2600] rounded-[50%] mr-[16px]
+                        relative h-[65px] w-[65px] border-[5px] border-[#4d2600] rounded-[50%] mr-[16px] 
                     ">
                         {/* icon */}
                         <spna className ="
-                            relative top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 translate-y-[6px]
+                            relative top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 translate-y-[-2px]
                             inline-block h-[15px] w-[25px] bg-[#4d2600]
                             before:content-[''] before:absolute before:h-[25px] before:top-[-15px] before:w-[25px] before:bg-[#4d2600] before:rotate-45
                         ">            
                         </spna>
-                        {/* num */}
-                        <span className="text-[25px] font-[600] text-[#4d2600]">8650 4006</span>
                     </span>
+                    {/* num */}
+                    <span className="text-[25px] font-[600] text-[#4d2600] ">8650 4006</span>
                 </div>
             </div>
         </div>
