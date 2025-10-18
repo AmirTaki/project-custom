@@ -3,7 +3,7 @@ const Card = () => {
         // wrapper
         <div className="relative w-[620px] h-[330px] perspective-[1000px] ">
             {/* flipcard => transform-3d */}
-            <div className="relative w-[100%] h-[100%] bg-[#D48600] transform-style-3d ">
+            <div className="relative w-[100%] h-[100%] bg-[#D48600] transform-style-3d transition-all duration-1000 ease-in-out">
                 
                 {/* front end  */}
                 <div className=""></div>
