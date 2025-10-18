@@ -37,9 +37,9 @@ export const DataSection = [
         hideSection : '',
         showStyles : " opacity-100 blur-[0] text-[#ff0]",
         hideStyles : ' opacity-0 blur-3xl',
-        spanClass : '',
-        spanShow : "",
-        shapnHide : 
+        spanClass : 'absolute top-0 right-0 h-[100%] bg-[#1f242d] duration-1000 delay[.2s]',
+        spanShow : "w-[0]",
+        spanHide : 'w-[100%]',
         status : false,
     },
     
