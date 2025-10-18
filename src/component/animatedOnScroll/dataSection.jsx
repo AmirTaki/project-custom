@@ -36,7 +36,7 @@ export const DataSection = [
         showSection : '' ,
         hideSection : '',
         showStyles : "  text-[#ff0]",
-        hideStyles : ' ',
+        hideStyles : 'text-[#ff0]',
         spanClass : '',
         spanShow : "w-[0]",
         spanHide : 'w-[100%]',

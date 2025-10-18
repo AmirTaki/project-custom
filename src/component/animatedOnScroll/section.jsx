@@ -24,7 +24,9 @@ const Section = ({section}) => {
                 ${section.status ? section.showStyles : section.hideStyles}    
                 relative text-[35px]  text-[#0ef] font-[600]  duration-800`}
             >
-                {section.p}<span className= {`${section.span&section.span}`}></span>
+                {section.p}<span className= {`
+                absolute top-0 right-0 h-[100%] bg-[#10131c] duration-1000 delay[.5s]
+                ${section.status ?  section.spanShow : section.spanHide } `}></span>
             </p>
     </section>  
           
