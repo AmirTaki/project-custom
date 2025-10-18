@@ -1,10 +1,13 @@
-const Ring = ({color, icon, animation}) => {
+const Ring = ({color, icon, animation, start}) => {
     return(
-        <div className={`
-           relative w-[150px] h-[150px] border-4 border-transparent border-t-4 border-t-[${color}] rounded-[50%] m-[-30px]
-            ${animation}
+        
+        <div 
+        style={{'--Color' : color , '--Icon' : icon, '--Animation' : animation}}
+        className={`
+           relative w-[150px] h-[150px] border-4 border-transparent border-t-4 border-t-[#var(--Color)] rounded-[50%] m-[-30px]
+           
 
-            before:content-[${icon}] before:absolute before:font-[fontAwesome] before:text-[${color}] 
+        before:absolute before:font-[fontAwesome] before:text-[#${color}] 
             before:top-[10px] before:-right-3 before:rotate-90 before:text-[2em]
         `}>
         </div>
