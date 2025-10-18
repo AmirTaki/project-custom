@@ -18,7 +18,8 @@ export const DataSection = [
         hideSection : 'translate-x-[100%]! ',
         showStyles : "opacity-100 blur-[0] text-[#0f0]",
         hideStyles : 'opacity-0 blur-3xl ',
-        status : false
+        status : false,
+        check : true
 
     },
     {

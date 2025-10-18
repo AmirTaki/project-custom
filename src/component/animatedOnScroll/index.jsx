@@ -29,9 +29,6 @@ const AnimatedOnScroll = () => {
                 </SectionScroll>
             )
         })} 
-        <SectionScroll index = {3}  dispatch= {dispatch} >
-            <SectionDelay />
-        </SectionScroll>
         </>
     )
        
