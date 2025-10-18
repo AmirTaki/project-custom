@@ -15,18 +15,24 @@ const Card = () => {
                     {/* square */}
                     <span className="w-[100px] h-[110px] border-[10px] border-[#4d2600]"></span>
                     {/* triangle */}
-                    <span className="relative h-0 w-0  border-b-[110px] border-b-[#4d2600] mr-[16px] 
-                        border-l-[60px] border-r-[60px] border-transparent
-                        before:content-[''] before:absolute before:h-0 before:w-0
-                        before:border-r-[40px] before:border-l-[40px] before:border-transparent
-                        before:border-b-[80px] before:border-b-[#D48600] before:z-20
-                        before:left-[-40px] before:top-[20px]
+                    <span 
+                        className="relative h-0 w-0  border-b-[110px] border-b-[#4d2600] mr-[16px] 
+                            border-l-[60px] border-r-[60px] border-transparent
+                            before:content-[''] before:absolute before:h-0 before:w-0
+                            before:border-r-[40px] before:border-l-[40px] before:border-transparent
+                            before:border-b-[80px] before:border-b-[#D48600]
+                            before:left-[-40px] before:top-[20px]
                     "></span>
 
                 </div>
 
                 {/* back card */}
-                <div className=""></div>
+                <div className="     
+                    flex justify-center items-center w-[100%] h-[100%] bg-[#D48600] border-t-2 border-t-[#cc6600] border-l-2 border-l-[#cc6600]
+                   shadow-[0_5px_10px_rgba(0,0,0,0.2)] backface-hidden absolute
+                ">
+                 
+                </div>
             </div>
         </div>
     )
