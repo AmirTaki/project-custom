@@ -8,7 +8,7 @@ const Card = () => {
                 {/* front card  */}
                 <div className="
                     flex justify-center items-center w-[100%] h-[100%] bg-[#D48600] border-t-2 border-t-[#cc6600] border-l-2 border-l-[#cc6600]
-                   shadow-[0_5px_10px_rgba(0,0,0,0.2)] backface-hidden  absolute gap-5      duration-700
+                   shadow-[0_5px_10px_rgba(0,0,0,0.2)] backface-hidden  absolute gap-5      duration-700 
                 ">
                     {/* circle */}
                     <span className="w-[100px] h-[110px] border-[10px] border-[#4d2600] rounded-[50%]"></span>
@@ -29,7 +29,7 @@ const Card = () => {
                 {/* back card */}
                 <div className="      
                     flex justify-center items-center w-[100%] h-[100%] bg-[#D48600] border-t-2 border-t-[#cc6600] border-l-2 border-l-[#cc6600]
-                   shadow-[0_5px_10px_rgba(0,0,0,0.2)] backface-hidden absolute  duration-700 rotate-y-180
+                   shadow-[0_5px_10px_rgba(0,0,0,0.2)] backface-hidden absolute  duration-700  rotate-y-180
                 ">
                     {/* home-logo */}
                     <span className="
