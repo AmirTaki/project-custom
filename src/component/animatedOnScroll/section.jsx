@@ -28,6 +28,12 @@ const Section = ({section}) => {
                 absolute top-0 right-0 h-[100%] bg-[#10131c] duration-1000 delay[.5s]
                 ${section.status ?  section.spanShow : section.spanHide } `}></span>
             </p>
+            {/* images */}
+            <div className="">
+                <img src="" alt="" />
+                <img src="" alt="" />
+                <img src="" alt="" />
+            </div>
     </section>  
           
 )

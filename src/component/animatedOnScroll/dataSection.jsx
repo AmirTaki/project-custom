@@ -33,13 +33,15 @@ export const DataSection = [
         id : 4,
         h1 : "Very Good ",
         p : "Animation on Scroll using HTML CSS and Javascript",
-        showSection : '' ,
-        hideSection : '',
         showStyles : "  text-[#ff0]",
         hideStyles : 'text-[#ff0]',
-        spanClass : '',
         spanShow : "w-[0]",
         spanHide : 'w-[100%]',
+        status : false,
+    },
+    {
+        id : 5,
+       
         status : false,
     },
     
