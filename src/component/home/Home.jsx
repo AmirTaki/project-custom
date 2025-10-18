@@ -9,7 +9,7 @@ import NavbarPaeg from "../navbarPage.jsx"
 const Home =  ()  => {
     return(
         <div 
-            className={`  bg-[#10131c] min-h-[100vh] flex flex-col `}
+            className={`  bg-[#10131c] min-h-[100vh] flex flex-col justify-center items-center gap-10 `}
         >        
 
             {/* component navigation */}
@@ -31,7 +31,7 @@ const Home =  ()  => {
             {/* <LayerdHoverEffect /> */}
 
             {/* card 3d */}
-            <Card />
+            {/* <Card /> */}
         </div>
    
     )
