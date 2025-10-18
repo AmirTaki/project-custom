@@ -24,6 +24,8 @@ const Section = ({section}) => {
                 {section.p}
             </p>
         </section>    
+
+        
     )
 }
 
