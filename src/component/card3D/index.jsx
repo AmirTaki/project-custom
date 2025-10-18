@@ -31,7 +31,12 @@ const Card = () => {
                     flex justify-center items-center w-[100%] h-[100%] bg-[#D48600] border-t-2 border-t-[#cc6600] border-l-2 border-l-[#cc6600]
                    shadow-[0_5px_10px_rgba(0,0,0,0.2)] backface-hidden absolute
                 ">
-                 
+                    {/* home-logo */}
+                    <div className="
+                        relative top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 translate-y-[6px]
+                        inline-block h-[15px] w-[25px] bg-[#4d2600]
+
+                    "></div>
                 </div>
             </div>
         </div>
