@@ -5,10 +5,12 @@ const Card = () => {
             {/* flipcard => transform-3d */}
             <div className="relative w-[100%] h-[100%] bg-[#D48600] transform-style-3d transition-all duration-1000 ease-in-out">
                 
-                {/* front end  */}
-                <div className=""></div>
+                {/* front card  */}
+                <div className="
+                    flex justify-center items-center w-[100%] h-[100%] bg-[#D48600] border-t-2 border-t-[#cc6600] border-l-2 border-l-[#cc6600]
+                "></div>
 
-                {/* back end */}
+                {/* back card */}
                 <div className=""></div>
             </div>
         </div>
