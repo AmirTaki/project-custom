@@ -30,9 +30,9 @@ const Section = ({section}) => {
             </p>
             {/* images */}
             <div className="">
-                <img src={`${section.src1}`} alt="" />
-                <img src={`${section.src2}`} alt="" />
-                <img src={`${section.src3}`} alt="" />
+                <img className={`${section.status ? "" : "" } max-w-[400px] mx-0 my-[30px]`} src={`${section.src1}`} alt="" />
+                <img className={`${section.status ? "" : "" } max-w-[400px] mx-0 my-[30px]`} src={`${section.src2}`} alt="" />
+                <img className={`${section.status ? "" : "" } max-w-[400px] mx-0 my-[30px]`} src={`${section.src3}`} alt="" />
             </div>
     </section>  
           
