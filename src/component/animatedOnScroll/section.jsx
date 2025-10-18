@@ -1,59 +1,31 @@
 const Section = ({section}) => {
 
     return (
-    <>
-     {section.check ? 
-        (
-            // section
-            <section
-            // sec- show-animate
-            className={`
-                ${section.status ? section.showSection : section.hideSection}
-                flex justify-center items-center flex-col min-h-[100vh]   duration-1000 
-            `}
+   // section
+        <section
+        // sec- show-animate
+        className={`
+            ${section.status ? section.showSection : section.hideSection}
+            flex justify-center items-center flex-col min-h-[100vh]   duration-1000 
+        `}
+        >
+            {/* animate */}
+            <h1 className={`
+                ${section.status ? section.showStyles : section.hideStyles}  
+                relative text-[90px] text-[#fff]  duration-800
+            `}    
             >
-                {/* animate */}
-                <h1 className={`
-                    ${section.status ? section.showStyles : section.hideStyles}  
-                    relative text-[90px] text-[#fff]  duration-800
-                `}    
-                >
-                    {section.h1}
-                </h1>
-                {/* animate */}
-                <p  className={`
-                    ${section.status ? section.showStyles : section.hideStyles}    
-                    relative text-[35px]  text-[#0ef] font-[600]  duration-800`}
-                >
-                    {section.p}
-                </p>
-            </section>  
-            ) : (
-
-            // section
-            <section
-            // sec- show-animate
-            className={`
-                flex justify-center items-center flex-col min-h-[100vh]   duration-1000 
-            `}
+                {section.h1}
+            </h1>
+            {/* animate */}
+            <p  className={`
+                ${section.status ? section.showStyles : section.hideStyles}    
+                relative text-[35px]  text-[#0ef] font-[600]  duration-800`}
             >
-                {/* animate */}
-                <h1 className={`
-                    relative text-[90px] text-[#fff]  duration-800
-                `}    
-                >
-                Very Good <span className={` absolute top-0 right-0 h-[100%] duration-1000 delay-200 ${section.status ? "w-0" : "w-[100%]"}`} ></span>
-                </h1>
-                {/* animate */}
-                <p  className={`
-                    relative text-[35px]  text-[#0ef] font-[600]  duration-800`}
-                >
-                    Animation on Scroll using HTML CSS and Javascript <span className={`absolute top-0 right-0 h-[100%] duration-1000 delay-600 ${section.status ? "w-0" : "w-[100%]"}`}  ></span>
-                </p>
-            </section>   
-            )
-        }  
-    </>
+                {section.p}
+            </p>
+    </section>  
+          
 )
          
 

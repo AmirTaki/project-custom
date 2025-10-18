@@ -2,7 +2,6 @@ import { act, useReducer } from "react";
 import SectionScroll from "./sectionScroll";
 import Section  from "./section";
 import { DataSection } from "./dataSection";
-import SectionDelay from "./sectionDelay";
 
 const AnimatedOnScroll = () => {
     const reducer = (state, action) => {

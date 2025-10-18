@@ -8,7 +8,6 @@ export const DataSection = [
         showStyles : "opacity-100 blur-[0]",
         hideStyles : 'opacity-0 blur-3xl',
         status : true,
-        check : true
     },
     {
         id : 1,
@@ -19,8 +18,6 @@ export const DataSection = [
         showStyles : "opacity-100 blur-[0] text-[#0f0]",
         hideStyles : 'opacity-0 blur-3xl ',
         status : false,
-        check : true
-
     },
     {
         id : 2,
@@ -31,15 +28,6 @@ export const DataSection = [
         showStyles : " opacity-100 blur-[0] text-[#e0f]",
         hideStyles : ' opacity-0 blur-3xl',
         status : false,
-        check : true
-
     },
-    {
-        id : 3,
-        status : false,
-        check : false
-
-    }
-
-
+    
 ]
