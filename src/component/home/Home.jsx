@@ -8,7 +8,7 @@ import NavbarPaeg from "../navbarPage.jsx"
 const Home =  ()  => {
     return(
         <div 
-            className={`  bg-[#10131c] min-h-[100vh] `}
+            className={`  bg-[#10131c] min-h-[100vh] flex flex-col `}
         >        
 
             {/* component navigation */}
@@ -17,8 +17,11 @@ const Home =  ()  => {
             {/* Navbar */}
             <NavbarPaeg />
 
+            {/* animation on Scroll */}
+            <AnimatedOnScroll />
+            
             {/* Digital Clock */}
-            {/* <DigitalClock /> */}
+            <DigitalClock />
 
             {/* Download Button */}
             {/* <DownloadButton /> */}
@@ -26,8 +29,6 @@ const Home =  ()  => {
             {/* LayerdHoverEffect */}
             {/* <LayerdHoverEffect /> */}
 
-            {/* animation on Scroll */}
-            <AnimatedOnScroll />
         </div>
    
     )

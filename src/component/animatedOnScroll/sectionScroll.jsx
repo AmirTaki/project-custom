@@ -1,15 +1,15 @@
 import { useCallback, useEffect,  useRef} from "react";
+
 const SectionScroll = ( { dispatch, children, index}) => {
    
     const sectionRef = useRef() 
-   
+
     const animatedScroll = useCallback (() => {
         if (!sectionRef.current) return ;
 
         const top = window.scrollY 
         const offset = sectionRef.current.offsetTop - 150
         const height = sectionRef.current.offsetHeight
-
 
         dispatch({type : 'scroll', payload : { bool : (top >= offset && top < offset + height ? true : false) ,  index : index  }})
     })

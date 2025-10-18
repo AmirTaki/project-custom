@@ -1,4 +1,4 @@
-import { act, useReducer } from "react";
+import { useReducer } from "react";
 import SectionScroll from "./sectionScroll";
 import Section  from "./section";
 import { DataSection } from "./dataSection";
