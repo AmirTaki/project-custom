@@ -9,7 +9,15 @@ const CardHoverEffect = () => {
             <div className="grid gap-y-[3.5rem]">
                 {/* card__article */}
                 <article className="relative overflow-hidden">
-                    <img src="" alt="" />
+                    {/* card image */}
+                    <img src={img1} alt="" className="w-[328px] rounded-[1.5rem]"/>
+
+
+                    {/* card__data */}
+                    <div className="w-[280px] bg-[hsl(0,0%,100%)] px-[1.5rem] py-[2rem]
+                        shadow-[0_8px_24px_hsla(0,0%,0%,.15)] rounded-[1rem] absolute bottom-[-9rem] left-0
+                        right-0 mx-auto opacity-0 transition-opacity duration-1000
+                    "></div>
                 </article>
             </div>
 
