@@ -1,6 +1,7 @@
 const CardHoverEffect = () => {
     return(
-        <div className=""></div>
+        // container
+        <div className="grid place-items-center mx-[1.5rem] py-[5rem]"></div>
     )
 }
 
