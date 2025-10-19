@@ -9,7 +9,8 @@ export const Data = [
         bottom : '',
         left : '',
         animation : "glowSkyBlueEffect",
-        right : '-4px'
+        right : '-4px',
+        positon : true,
     },
     {
         id : 1,
@@ -19,8 +20,9 @@ export const Data = [
         top : '5px',
         bottom : '82px',
         left : '-16px',
-        right : '',
-        animation : "glowSkyGreenEffect"
+        right : 'initial',
+        animation : "glowSkyGreenEffect",
+        positon : true,
     },
     {
         // 
@@ -31,8 +33,10 @@ export const Data = [
         top : '-29px',
         bottom : '75px',
         left : '2px',
-        right : '',
-        animation : 'glowSkyRedEffect'
+        right : 'initial',
+        animation : 'glowSkyRedEffect',
+        positon : false,
+        topRing : '-66.66px'
     },
 
 ]

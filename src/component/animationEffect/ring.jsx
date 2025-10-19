@@ -9,15 +9,17 @@ const Ring = ({ring}) => {
             '--ring-top' : `${ring.top}`,
             '--ring-right' : `${ring.right}`,
             '--ring-left' : `${ring.left}`,
-            '--ring-bottom' : `${ring.bottom}`
-            
+            '--ring-bottom' : `${ring.bottom}`            
         }}
 
         className={`
-            ${ring.animation}
-            relative w-[150px] 
-            h-[150px] border-6 border-transparent border-t-6 
-            border-t-[var(--ring-color)] rounded-[50%] m-[-50px]
+            ${ring.animation} 
+            ${ring.positon ? "relative" : "absolute" }
+            top-[${ring.topRing}]
+            w-[150px] 
+            h-[150px] 
+            border-4 border-transparent border-t-4 
+            border-t-[var(--ring-color)] rounded-[50%] m-[-30px]
             before:content-[var(--ring-content)] 
             before:absolute 
             before:font-[fontAwesome] 
