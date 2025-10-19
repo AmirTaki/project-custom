@@ -2,12 +2,11 @@ const Box = ({index}) => {
     return (
         <div 
             style={{
+                filter : `hue-rotate(calc(${index} * 90deg))`,
+                transform : `rotate(calc(${index} * 90deg)) `  
             }}
             className={`
-             
-                hue-rotate-${index*90}
                 effectAnimationHover
-                rotate-${index*90}
             `}>
 
         </div>

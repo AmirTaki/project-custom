@@ -18,25 +18,25 @@ const Home =  ()  => {
             <ComponentNavigation />
 
             {/* Navbar */}
-            {/* <NavbarPaeg /> */}
+            <NavbarPaeg />
 
             {/* animation on Scroll */}
-            {/* <AnimatedOnScroll /> */}
+            <AnimatedOnScroll />
             
             {/* Digital Clock */}
-            {/* <DigitalClock /> */}
+            <DigitalClock />
 
             {/* Download Button */}
-            {/* <DownloadButton /> */}
+            <DownloadButton />
 
             {/* LayerdHoverEffect */}
-            {/* <LayerdHoverEffect /> */}
+            <LayerdHoverEffect />
 
             {/* card 3d */}
-            {/* <Card /> */}
+            <Card />
 
             {/* animation effects */}
-            {/* <AnimationEffect /> */}
+            <AnimationEffect />
 
             {/* animate effects */}
             <AnimateEffect />
