@@ -11,9 +11,8 @@ import CardHoverEffect from "../cardHoverEffect/index.jsx"
  
 const Home =  ()  => {
     return(
-        <div 
-        // #10131c
-            className={`  bg-[white] min-h-[100vh] flex flex-col justify-center items-center gap-15 `}
+        <div  
+            className={`  bg-[#10131c] min-h-[100vh] flex flex-col justify-center items-center gap-15 `}
         >        
 
             {/* component navigation */}
