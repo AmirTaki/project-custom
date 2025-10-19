@@ -55,7 +55,14 @@
 /* effect animation */
 
 .effectAnimationHover {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(45deg, #00f376 10%, transparent 10%, transparent 50%, #00f376 50%, #00f376 60%, transparent 60%, transparent 100%),  
+      linear-gradient(135deg, #00f37666 10%, transparent 10%, transparent 50%, #00f37666 50%, #00f37666 60%, transparent 60%, transparent 100%);
+    
   animation: animationEffect 1s linear infinite  ;
+  background-size: 40px 40px;
 }
 
 @keyframes animationEffect {

@@ -7,14 +7,14 @@ const AnimateEffect = () => {
         >
             {/* box  */}
             <div 
-            style={{background : "linear-gradient(45deg, #00f376 10%, transparent 10%, transparent 50%, #00f376 50%, #00f376 60%, transparent 60%, transparent 100%),  linear-gradient(135deg, #00f37666 10%, transparent 10%, transparent 50%, #00f37666 50%, #00f37666 60%, transparent 60%, transparent 100%)","--i" : 2}}
+            style={{
+                "--i" : 1
+            }}
             className={`
-                relative w-[200px] h-[200px] 
-                bg-['linear-gradient(45deg,#00f376 10%,transparent 10%,transparent 50%,#00f376 50%,#00f376 60%,transparent 60%,transparent 100%),linear-gradient(135deg,#00f37666 10%,transparent 10%,transparent 50%,#00f37666 50%,#00f37666 60%,transparent 60%,transparent 100%)'] 
-                bg-[size:40px_40px] 
-                [filter:hue-rotate(calc(var(--i)*90deg))] 
-                animate-[animationEffect_1s_linear_infinite] 
-                [transform:rotate(calc(var(--i)*90deg))]
+             
+                hue-rotate-[calc(2*90)deg]
+                effectAnimationHover
+                rotate-[calc(2*90)deg]
             `}>
 
             </div>
