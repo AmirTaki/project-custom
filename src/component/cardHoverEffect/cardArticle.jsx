@@ -1,12 +1,12 @@
 import "./styles.css"
-const CardArticle = ({img}) =>  {
+const CardArticle = ({card}) =>  {
     return(
             
         <article className="relative overflow-hidden group hover:animate-[remove-flow_2s_forwards]
             not-hover:animate-[show-overflow_2s_forwards]"
         >
             {/* card__image */}
-            <img src={img} alt="" className="w-[328px] rounded-[1.5rem] xl:w-[348px]"/>
+            <img src={card.img} alt="" className="w-[328px] rounded-[1.5rem] xl:w-[348px]"/>
 
             {/* card__data */}
             <div 
@@ -21,9 +21,9 @@ const CardArticle = ({img}) =>  {
             >
             
                 {/* card_description*/}
-                <span className="block text-[.813rem] mb-[.25rem]">Vancover Muntains, Canada</span>
+                <span className="block text-[.813rem] mb-[.25rem]">{card.description}</span>
                 {/* card__title */}
-                <h2 className="text-[1.25rem] font-[500] text-[hsl(0,0%,15%)] mb-[.75rem]">The Great Path</h2>
+                <h2 className="text-[1.25rem] font-[500] text-[hsl(0,0%,15%)] mb-[.75rem]">{card.title}</h2>
                 {/* card__button */}
                 <a href="#" className="decoration-0 text-[.813rem] font-[500] text-[hsl(82,60%,28%)] hover:underline">Read More</a>
 
