@@ -29,7 +29,8 @@
   filter: drop-shadow(0 0 10px #ff1d6c) 
           drop-shadow(0 0 30px #ff1d6c) 
           drop-shadow(0 0 50px #ff1d6c);
-
+  animation: animateSkyGreenEffect 4s linear infinite;
+  animation-delay: -3s;
 }
 
 
