@@ -7,7 +7,8 @@ import LayerdHoverEffect from "../layerdHoverEffect"
 import NavbarPaeg from "../navbarPage.jsx"
 import AnimationEffect from "../animationEffect/index.jsx"
 import AnimateEffect from "../animateEffect/index.jsx"
-
+import CardHoverEffect from "../cardHoverEffect/index.jsx"
+ 
 const Home =  ()  => {
     return(
         <div 
@@ -15,32 +16,34 @@ const Home =  ()  => {
         >        
 
             {/* component navigation */}
-            <ComponentNavigation />
+            {/* <ComponentNavigation /> */}
 
             {/* Navbar */}
-            <NavbarPaeg />
+            {/* <NavbarPaeg /> */}
 
             {/* animation on Scroll */}
-            <AnimatedOnScroll />
+            {/* <AnimatedOnScroll /> */}
             
             {/* Digital Clock */}
-            <DigitalClock />
+            {/* <DigitalClock /> */}
 
             {/* Download Button */}
-            <DownloadButton />
+            {/* <DownloadButton /> */}
 
             {/* LayerdHoverEffect */}
-            <LayerdHoverEffect />
+            {/* <LayerdHoverEffect /> */}
 
             {/* card 3d */}
-            <Card />
+            {/* <Card /> */}
 
             {/* animation effects */}
-            <AnimationEffect />
+            {/* <AnimationEffect /> */}
 
             {/* animate effects */}
-            <AnimateEffect />
+            {/* <AnimateEffect /> */}
 
+            {/* card hover effect */}
+            <CardHoverEffect />
             <div className="h-100 w-100"></div>
         </div>
    
