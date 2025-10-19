@@ -7,7 +7,8 @@ export const Data = [
         color : "24ecff",
         top : '10px',
         bottom : '',
-        left : '-4px'
+        left : '-4px',
+        animation : "glowSkyBlueEffect",
     },
     {
         id : 1,
@@ -17,6 +18,19 @@ export const Data = [
         top : 'initial',
         bottom : '-6px',
         left : '12px',
-        right : 'initial'
+        right : 'initial',
+        animation : "glowSkyGreenEffect"
     },
+    {
+        id : 2,
+        content : '\\e518',
+        rotate : '135deg',
+        color : "ff1d6c ",
+        top : 'initial',
+        bottom : '-6px',
+        left : '12px',
+        right : 'initial',
+        animation : 'glowSkyGreenEffect'
+    },
+
 ]
