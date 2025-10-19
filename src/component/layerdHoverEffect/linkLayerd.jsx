@@ -4,21 +4,21 @@ import { Link } from "react-router-dom"
 const LinkLayerd = ({item}) => {
     return(
         // a => link
-        <Link className=" my-[0] decoration-0 text-white block relative  group">
+        <Link className=" my-[0] decoration-0 text-white  block relative  group">
             <div className="w-[55px] h-[55px] transition-transform duration-300
                 hover:transform hover:rotate-[-35deg] hover:skew-x-[20deg]
-            
+                
             ">
                 {/* span */}
                 <span 
                     style={{color : `${item.color}`, borderColor : `${item.color}`, boxShadow : `-1px 1px 3px ${item.color}` }}
-                    className="custom-span-layerd group-hover:opacity-[.2]  "
+                    className=" custom-span-layerd group-hover:opacity-[.2]  "
                     >    
                 </span>
                 
                 <span 
                     style={{color : `${item.color}`, borderColor : `${item.color}`, boxShadow : `-1px 1px 3px ${item.color}` }}
-                    className="custom-span-layerd group-hover:opacity-[.4] group-hover:translate-x-[5px] group-hover:translate-y-[-5px] "
+                    className="custom-span-layerd group-hover:opacity-[.4] group-hover:translate-x-[5px] group-hover:translate-y-[-5px]  "
                     >
                 </span>
                 

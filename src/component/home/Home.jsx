@@ -17,7 +17,7 @@ const Home =  ()  => {
             <ComponentNavigation />
 
             {/* Navbar */}
-            <NavbarPaeg />
+            {/* <NavbarPaeg /> */}
 
             {/* animation on Scroll */}
             {/* <AnimatedOnScroll /> */}
@@ -29,13 +29,13 @@ const Home =  ()  => {
             {/* <DownloadButton /> */}
 
             {/* LayerdHoverEffect */}
-            {/* <LayerdHoverEffect /> */}
+            <LayerdHoverEffect />
 
             {/* card 3d */}
             {/* <Card /> */}
 
             {/* animation effects */}
-            <AnimationEffect />
+            {/* <AnimationEffect /> */}
         </div>
    
     )
