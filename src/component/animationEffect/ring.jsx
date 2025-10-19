@@ -6,6 +6,10 @@ const Ring = ({ring}) => {
             '--ring-color' : `${ring.color}`,
             '--ring-content' : `"${ring.content}"`,
             '--ring-rotate' : `${ring.rotate}deg`,
+            '--ring-top' : `${ring.top}`,
+            '--ring-right' : `${ring.right}`,
+            '--ring-left' : `${ring.left}`,
+            
             
         }}
 
@@ -18,9 +22,9 @@ const Ring = ({ring}) => {
             before:absolute 
             before:font-[fontAwesome] 
             before:text-[var(--ring-color)] 
-            before:top-[${ring.top}] 
-            before:right-[${ring.right}] 
-            before:left-[${ring.left}]
+            before:top-[var(--ring-top)] 
+            before:right-[var(--ring-right)] 
+            before:left-[var(--ring-left)]
             before:bottom-[${ring.bottom}]
             before:rotate-[var(--ring-rotate)] 
             before:text-[2em] 
