@@ -6,36 +6,42 @@ import DownloadButton from "../downloadButton/index.jsx"
 import LayerdHoverEffect from "../layerdHoverEffect"
 import NavbarPaeg from "../navbarPage.jsx"
 import AnimationEffect from "../animationEffect/index.jsx"
+import AnimateEffect from "../animateEffect/index.jsx"
 
 const Home =  ()  => {
     return(
         <div 
-            className={`  bg-[#10131c] min-h-[100vh] flex flex-col justify-center items-center gap-10 `}
+            className={`  bg-[#10131c] min-h-[100vh] flex flex-col justify-center items-center gap-15 `}
         >        
 
             {/* component navigation */}
             <ComponentNavigation />
 
             {/* Navbar */}
-            <NavbarPaeg />
+            {/* <NavbarPaeg /> */}
 
             {/* animation on Scroll */}
-            <AnimatedOnScroll />
+            {/* <AnimatedOnScroll /> */}
             
             {/* Digital Clock */}
-            <DigitalClock />
+            {/* <DigitalClock /> */}
 
             {/* Download Button */}
-            <DownloadButton />
+            {/* <DownloadButton /> */}
 
             {/* LayerdHoverEffect */}
-            <LayerdHoverEffect />
+            {/* <LayerdHoverEffect /> */}
 
             {/* card 3d */}
-            <Card />
+            {/* <Card /> */}
 
             {/* animation effects */}
-            <AnimationEffect />
+            {/* <AnimationEffect /> */}
+
+            {/* animate effects */}
+            <AnimateEffect />
+
+            <div className="h-100 w-100"></div>
         </div>
    
     )
