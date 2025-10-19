@@ -1,3 +1,4 @@
+
 const CardHoverEffect = () => {
     return(
         // container
@@ -6,7 +7,7 @@ const CardHoverEffect = () => {
             <div className="grid gap-y-[3.5rem]">
                 {/* card__article */}
                 <article className="relative overflow-hidden">
-
+                    <img src="" alt="" />
                 </article>
             </div>
 
