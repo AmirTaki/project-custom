@@ -5,24 +5,30 @@ import img3 from "./Img/landscape-3.png"
 const CardHoverEffect = () => {
     return(
         // container
-        <div className="grid place-items-center mx-[1.5rem] py-[5rem] xl:h-[100vh] md:h-[100vh] sm:mx-[1rem]">
+        <div className="grid place-items-center mx-[1.5rem] py-[5rem] xl:h-[100vh] lg:h-[100vh] sm:mx-[1rem]">
             {/* card__conatiner */}
-            <div className="grid gap-y-[3.5rem] xl:grid-cols-3">
+            <div className="grid gap-y-[3.5rem] xl:grid-cols-3 md:grid-cols-2 md:gap-x-[1.5rem] ">
                 {/* card__article */}
-                <article className="relative overflow-hidden group hover:animate-[remove-flow_2s_forwards]">
+                <article className="relative overflow-hidden group hover:animate-[remove-flow_2s_forwards]
+                    not-hover:animate-[show-overflow_2s_forwards]
+                "
+                >
                     {/* card__image */}
                     <img src={img1} alt="" className="w-[328px] rounded-[1.5rem] xl:w-[348px]"/>
 
 
                     {/* card__data */}
                     <div 
-                    className="w-[280px] bg-[hsl(0,0%,100%)] px-[1.5rem] py-[2rem]
+                    className="
+                        w-[280px] bg-[hsl(0,0%,100%)] px-[1.5rem] py-[2rem]
                         rounded-[1rem] absolute bottom-[-9rem] left-0 shadow-[0_8px_24px_hsla(0,0%,0%,.15)]
                         right-0 mx-auto opacity-0 transition-opacity duration-1000 xl:w-[316px] xl:px-[2.5rem] sm:w-[250px] sm:p-[1rem]
-                        group-hover:animate-[show-data_1s_forwards]
                         group-hover:opacity-1000
                         group-hover:duration-300
-                    ">
+                        group-hover:animate-[show-data_1s_forwards]  
+                        groupItem                  "
+                    >
+                    
                         {/* card_description*/}
                         <span className="block text-[.813rem] mb-[.25rem]">Vancover Muntains, Canada</span>
                         {/* card__title */}

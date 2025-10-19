@@ -35,3 +35,7 @@
         overflow: hidden;
     }
 }
+
+.group:not(:hover) .groupItem{
+    animation: remove-data 1s forwards;
+}
