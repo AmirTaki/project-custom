@@ -1,0 +1,8 @@
+@keyframes show-data {
+    50%{
+        transform:  translateY(-10rem);
+    }
+    100%{
+        transform: translateY(-7rem);
+    }
+}
