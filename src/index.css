@@ -52,6 +52,17 @@
     }
 }
 
+/* effect animation */
+
+@keyframes animationEffect {
+  0%{
+    background-position: 40px
+  }
+  100%{
+    background-position: 0
+  }
+}
+
 
 @layer utilities {
   /* span custom layerd Hover Effects */
