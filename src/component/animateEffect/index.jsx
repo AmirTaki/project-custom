@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import './style.css'
 const AnimateEffect = () => {
+    const [i , setI] =  useState(2)
     return(
         // container
         <div
@@ -9,13 +11,12 @@ const AnimateEffect = () => {
             {/* box  */}
             <div 
             style={{
-                "--i" : 1
             }}
             className={`
              
-                hue-rotate-[calc(2*90)deg]
+                hue-rotate-${i*90}
                 effectAnimationHover
-                rotate-[calc(2*90)deg]
+                rotate-${i*90}
             `}>
 
             </div>
