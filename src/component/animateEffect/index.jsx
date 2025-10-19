@@ -5,6 +5,14 @@ const AnimateEffect = () => {
         [-webkit-box-reflect:below_2px_linear-gradient(transparent,#0004)]
             
         ">
+            {/* box  */}
+            <div 
+            className={`
+                relative w-[200px] h-[200px] bg-size-[40px_40px]
+                
+            `}>
+
+            </div>
 
         </div>
     )
