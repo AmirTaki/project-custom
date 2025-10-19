@@ -1,4 +1,6 @@
-
+import img1 from "./Img/landscape-1.png"
+import img2 from "./Img/landscape-2.png"
+import img3 from "./Img/landscape-3.png"
 const CardHoverEffect = () => {
     return(
         // container
