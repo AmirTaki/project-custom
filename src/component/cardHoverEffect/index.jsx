@@ -16,8 +16,12 @@ const CardHoverEffect = () => {
                     {/* card__data */}
                     <div className="w-[280px] bg-[hsl(0,0%,100%)] px-[1.5rem] py-[2rem]
                         shadow-[0_8px_24px_hsla(0,0%,0%,.15)] rounded-[1rem] absolute bottom-[-9rem] left-0
-                        right-0 mx-auto opacity-0 transition-opacity duration-1000
-                    "></div>
+                        right-0 mx-auto opacity-1 transition-opacity duration-1000
+                    ">
+                        {/* card_description*/}
+                        <span className="block text-[.813rem] mb-[.25rem]">Vancover Muntains, Canada</span>
+
+                    </div>
                 </article>
             </div>
 
