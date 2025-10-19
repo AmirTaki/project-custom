@@ -1,7 +1,5 @@
 import "./styles.css"
-import img1 from "./Img/landscape-1.png"
-import img2 from "./Img/landscape-2.png"
-import img3 from "./Img/landscape-3.png"
+import { DataCard } from "./dataCard"
 import CardArticle from "./cardArticle"
 
 const CardHoverEffect = () => {
@@ -11,7 +9,11 @@ const CardHoverEffect = () => {
             {/* card__conatiner */}
             <div className="grid gap-y-[3.5rem] xl:grid-cols-3 md:grid-cols-2 md:gap-x-[1.5rem] ">
                 {/* card__article */}
-                <CardArticle  img = {img1}/>
+                {DataCard.map((card) => {
+                    return(
+                        <CardArticle  key = {card.id} card = {card}/>
+                    )
+                })}
             </div>
 
         </div>

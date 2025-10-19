@@ -1,4 +1,4 @@
-const DataCard = [
+export const DataCard = [
     {
         id :0,
         img : './Img/landscape-1.png',
