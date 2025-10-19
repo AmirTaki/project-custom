@@ -1,10 +1,10 @@
 const AnimateEffect = () => {
     return(
         // container
-        <div className="relative flex justify-center items-center w-[100%] gap-[40px] 
-        [-webkit-box-reflect:below_2px_linear-gradient(transparent,#0004)]
-            
-        ">
+        <div
+            style = {{WebkitBoxReflect : 'below 2px linear-gradient(transparent, #0004)' }}
+            className="relative flex justify-center items-center w-[100%] gap-[40px] "
+        >
             {/* box  */}
             <div 
             style={{background : "linear-gradient(45deg, #00f376 10%, transparent 10%, transparent 50%, #00f376 50%, #00f376 60%, transparent 60%, transparent 100%),  linear-gradient(135deg, #00f37666 10%, transparent 10%, transparent 50%, #00f37666 50%, #00f37666 60%, transparent 60%, transparent 100%);"}}
