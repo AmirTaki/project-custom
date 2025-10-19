@@ -18,3 +18,20 @@
         transform: translateY(.5rem);
     }
 }
+
+@keyframes remove-flow {
+    to {
+        overflow: initial;
+    }
+}
+
+@keyframes show-overflow {
+    0%{
+        overflow: initial;
+        pointer-events: none;
+    }
+
+    50%{
+        overflow: hidden;
+    }
+}
