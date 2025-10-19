@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import './style.css'
+import Box from './box';
+
 const AnimateEffect = () => {
-    const [i , setI] =  useState(2)
+    const [box, setBox] = useState([1, 2, 3, 4])
     return(
         // container
         <div
@@ -9,18 +11,11 @@ const AnimateEffect = () => {
             className="relative flex justify-center items-center w-[100%] gap-[40px] "
         >
             {/* box  */}
-            <div 
-            style={{
-            }}
-            className={`
-             
-                hue-rotate-${i*90}
-                effectAnimationHover
-                rotate-${i*90}
-            `}>
+            {}
+            <Box index = {1}/>
+            <Box index = {2}/>
 
-            </div>
-
+    
         </div>
     )
 }
