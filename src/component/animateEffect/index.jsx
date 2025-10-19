@@ -1,3 +1,4 @@
+import './style.css'
 const AnimateEffect = () => {
     return(
         // container
