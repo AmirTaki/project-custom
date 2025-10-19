@@ -22,6 +22,8 @@ const CardHoverEffect = () => {
                         <span className="block text-[.813rem] mb-[.25rem]">Vancover Muntains, Canada</span>
                         {/* card__title */}
                         <h2 className="text-[1.25rem] font-[500] text-[hsl(0,0%,15%)] mb-[.75rem]">The Great Path</h2>
+                        {/* card__button */}
+                        <a href="#" className="decoration-0 text-[.813rem] font-[500] text-[hsl(82,60%,28%)]">Read More</a>
 
                     </div>
                 </article>
