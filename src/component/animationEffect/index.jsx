@@ -9,7 +9,7 @@ const AnimationEffect = () => {
           {/* ring */}
           {Data.map((ring) => {
             return(
-              <Ring key = {ring.id} />
+              <Ring key = {ring.id}  ring = {ring}/>
             )
           } )}
         </div>

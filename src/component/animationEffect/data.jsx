@@ -7,8 +7,9 @@ export const Data = [
         color : "24ecff",
         top : '10px',
         bottom : '',
-        left : '-4px',
+        left : '',
         animation : "glowSkyBlueEffect",
+        right : '-3px'
     },
     {
         id : 1,
