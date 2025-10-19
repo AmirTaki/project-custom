@@ -4,7 +4,8 @@ const Ring = ({color, icon, animation}) => {
         <div 
         style = {{
             '--bord-color' : `#${color}`,
-            '--bord-icon' : `"\\${icon}"`
+            '--bord-icon' : `"\\${icon}"`,
+            
         }}
 
         className={`
