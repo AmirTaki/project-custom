@@ -14,7 +14,6 @@ const Ring = ({ring}) => {
         }}
 
         className={`
-
             ${ring.animation}
             relative w-[150px] 
             h-[150px] border-6 border-transparent border-t-6 

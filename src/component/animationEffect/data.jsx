@@ -22,17 +22,17 @@ export const Data = [
         right : '',
         animation : "glowSkyGreenEffect"
     },
-    // {
-    //     // 
-    //     id : 2,
-    //     content : '\\e518',
-    //     rotate : '135',
-    //     color : "#ff1d6c ",
-    //     top : 'initial',
-    //     bottom : '-6px',
-    //     left : '12px',
-    //     right : 'initial',
-    //     // animation : 'glowSkyGreenEffect'
-    // },
+    {
+        // 
+        id : 2,
+        content : '\\e518',
+        rotate : '217',
+        color : "#ff1d6c",
+        top : '-29px',
+        bottom : '75px',
+        left : '2px',
+        right : '',
+        animation : 'glowSkyRedEffect'
+    },
 
 ]
