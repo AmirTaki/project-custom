@@ -1,6 +1,11 @@
 const AnimateEffect = () => {
     return(
-        <div className=""></div>
+        // container
+        <div className="relative flex justify-center items-center w-[100%] gap-[40px] 
+            
+        ">
+
+        </div>
     )
 }
 
