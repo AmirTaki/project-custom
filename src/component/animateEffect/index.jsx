@@ -8,7 +8,8 @@ const AnimateEffect = () => {
             {/* box  */}
             <div 
             className={`
-                relative w-[200px] h-[200px] bg-size-[40px_40px]
+                relative w-[200px] h-[200px] bg-size-[40px_40px] hue-rotate-[calc(1*90)deg]
+                rotate-[calc(1*90)deg]
                 
             `}>
 
