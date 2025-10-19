@@ -9,7 +9,7 @@ const Ring = ({ring}) => {
             '--ring-top' : `${ring.top}`,
             '--ring-right' : `${ring.right}`,
             '--ring-left' : `${ring.left}`,
-            
+            '--ring-bottom' : `${ring.bottom}`
             
         }}
 
@@ -25,7 +25,7 @@ const Ring = ({ring}) => {
             before:top-[var(--ring-top)] 
             before:right-[var(--ring-right)] 
             before:left-[var(--ring-left)]
-            before:bottom-[${ring.bottom}]
+            before:bottom-[var(--ring-bottom)]
             before:rotate-[var(--ring-rotate)] 
             before:text-[2em] 
         `}>
