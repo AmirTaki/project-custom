@@ -1,37 +1,38 @@
 export const Data = [
-
+    
     {
         id : 0,
         content : '\\f135',
-        rotate : '170',
+        rotate : '90',
         color : "#24ecff",
-        top : '14px',
+        top : '4px',
         bottom : '',
         left : '',
         animation : "glowSkyBlueEffect",
-        right : '-3px'
+        right : '-4px'
     },
     {
         id : 1,
         content : '\\f072',
-        rotate : '45',
+        rotate : '133',
         color : "#93ff2d ",
-        top : 'initial',
-        bottom : '-6px',
-        left : '12px',
-        right : 'initial',
+        top : '5px',
+        bottom : '82px',
+        left : '-16px',
+        right : '',
         animation : "glowSkyGreenEffect"
     },
-    {
-        id : 2,
-        content : '\\e518',
-        rotate : '135',
-        color : "#ff1d6c ",
-        top : 'initial',
-        bottom : '-6px',
-        left : '12px',
-        right : 'initial',
-        animation : 'glowSkyGreenEffect'
-    },
+    // {
+    //     // 
+    //     id : 2,
+    //     content : '\\e518',
+    //     rotate : '135',
+    //     color : "#ff1d6c ",
+    //     top : 'initial',
+    //     bottom : '-6px',
+    //     left : '12px',
+    //     right : 'initial',
+    //     // animation : 'glowSkyGreenEffect'
+    // },
 
 ]

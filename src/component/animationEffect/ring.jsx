@@ -14,10 +14,11 @@ const Ring = ({ring}) => {
         }}
 
         className={`
+
             ${ring.animation}
             relative w-[150px] 
-            h-[150px] border-4 border-transparent border-t-4 
-            border-t-[var(--ring-color)] rounded-[50%] m-[-30px]
+            h-[150px] border-6 border-transparent border-t-6 
+            border-t-[var(--ring-color)] rounded-[50%] m-[-50px]
             before:content-[var(--ring-content)] 
             before:absolute 
             before:font-[fontAwesome] 
