@@ -48,12 +48,12 @@ const DownloadButton = () => {
             {/* number */}
             <h2 className={`
                 ${done ? 'text-[.5rem] leading-[1em] ' : ''}
-                relative z-100 text-[3em] text-center text-white    
+                relative! z-100 text-[3em] text-center text-white    
             `}>
                 <span className={` ${startDwonload ? 'flex  ' : 'hidden'} `}>
                     <div className={`${done ? "hidden!" : "flex!"}`}>{number} <small className="text-[.5em] absolute bottom-3 -right-6">%</small></div>
-                    <i className={`${done ? "flex!   text-[100px]" : "hidden!"} fa-solid fa-check`}></i>                    
-                    <small className={`${done ? 'absolute top-[55px] text-[.3em]! whitespace-nowrap font-bold  uppercase -translate-x-1/9 translate-y-1/2 tracking-[.2em]' : "hidden"}`}>100% Done</small>
+                    <i className={`${done ? "flex!   text-[100px]" : "hidden!"}  flex-col  fa-solid fa-check`}></i>                    
+                    <small className={`${done ? 'absolute! top-[55px] left-5 text-[.3em]! whitespace-nowrap font-bold  uppercase -translate-x-1/9 translate-y-1/2 tracking-[.2em]' : "hidden"}`}>100% Done</small>
                 </span>
             </h2>
         </div>
