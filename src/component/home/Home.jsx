@@ -10,7 +10,9 @@ import AnimateEffect from "../animateEffect/index.jsx"
 import CardHoverEffect from "../cardHoverEffect/index.jsx"
 import { useState } from "react"
 import LoadingAnimation from "../loadingAnimation/index.jsx"
+import CustomRightClick from "../customRightClick/index.jsx"
  
+
 const Home =  ()  => {
 
     const  [view, setView] =   useState(false)
@@ -56,7 +58,8 @@ const Home =  ()  => {
            
             </div>
 
-            {/*  */}
+            {/* custom right click */}
+            <CustomRightClick />
 
             <div className="h-100 w-100 text-white"></div>
         </div>
