@@ -23,6 +23,14 @@ const inputTitle = [
         id : 4,
         title : 'French'
     },
+    {
+        id : 5,
+        title : 'Japanese'
+    },
+    {
+        id : 6,
+        title : 'Korean'
+    }
 ]
 
 
