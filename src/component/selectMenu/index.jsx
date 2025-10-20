@@ -1,9 +1,11 @@
-import { useEffect, useReducer, useState } from 'react';
+import { useEffect, useReducer, useRef, useState } from 'react';
 import { inputTitle } from './inputItem';
 import ItemOption from './itemOption';
 import './styles.css'
 
+
 const SelectMenu = () => {
+    const spanRef =  useRef('')
     const [open, setOpen] =  useState(false)
     const reducer = (state, action) =>{
         switch(action.type) {
@@ -13,6 +15,18 @@ const SelectMenu = () => {
     }
     const [state, dispatch] = useReducer(reducer, inputTitle)
 
+    const foundLanguge = () => {
+        state.map((item) => {
+            if (item.status){
+                console.log(item.title)
+                return item.title
+            }
+        } )
+    }
+    useEffect(() => { 
+        spanRef.current.innerText = "Select Languge" 
+        // 
+    }, )
 
     return( 
         // select menu
@@ -21,7 +35,7 @@ const SelectMenu = () => {
             <div 
                 onClick={() => {setOpen(!open)}}
                 className="bg-[#201e1e] p-[20px] text-white font-[500] rounded-[6px] flex justify-between items-center">
-                <span > Select Languge </span>
+                <span ref = {spanRef}> {foundLanguge()} </span>
                 <i className="fas fa-angle-down"></i>
             </div>
 
