@@ -11,7 +11,7 @@ const SelectMenu = () => {
             {/* option list */}
             <div className="absolute w-[100%] bg-[#f9f9f9] rounded-[6px] mt-[14px] px-0 py-[24px] max-h-[180px] transition-all duration-[400ms] ease-linear delay-[200ms] h-0">
                 {/* option */}
-                <div className="">English</div>
+                <div className="px-8 font-[500] text-[14px] transition-all duration-[300ms] ease-in-out ">English</div>
             </div>
         </div>
     )
