@@ -10,29 +10,20 @@ const SelectMenu = () => {
     const reducer = (state, action) =>{
         switch(action.type) {
             case "selected" :
-                return state.map((item) => ( {...item, status : item.id === action.payload.data ? true : false  } ))
-            case "foundLanguge":
-                return state
-
-
-            
+                return state.map((item) => ({...item, status : item.id === action.payload.data ? true : false } ))            
         }   
     }
     const [state, dispatch] = useReducer(reducer, inputTitle)
 
     const foundLanguge = () => {
-        state.map((item) => {
-            if (item.status){
-                console.log(item.title)
-                return item.title
-            }
-        } )
+        const findItem =  state.find(item => item.status)
+        findItem ? findItem.title : "Select Languge"
     }
     useEffect(() => { 
-        spanRef.current.innerText = "Select Languge" 
-        dispatch({type : 'foundLanguge'})
-        // 
-    }, )
+        const selectedLanguge =  foundLanguge() 
+        spanRef.current.innerText = selectedLanguge;
+    
+    },[state] )
 
     return( 
         // select menu
