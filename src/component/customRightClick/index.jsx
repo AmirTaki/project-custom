@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+import './styles.css'
+//animate-[showMenu_0.5s_ease-in-out_forwards] 
 const CustomRightClick = () => {
     const [change, setChange] = useState(false)
     return(
@@ -10,7 +11,8 @@ const CustomRightClick = () => {
             <ul className="p-0 m-0 list-none">
                 <li className={`p-[20px] bg-[#525F6C] border-1 border-[#5d6a77] text-white duration-500 
                     hover:bg-[#72DE73] hover:translate-x-0 hover:translate-y-[-10px] hover:shadow-[0_10px_50px_#636363]
-                     ${change ? 'animate-[showMenu_.5s_ease-in-out_1_forwards]' : "opacity-0"}  `}>
+
+                     ${change ? 'opacity-100  translate-x-0 translate-y-0 ease-in-out'  : "opacity-0 translate-x-0 translate-y-[20px]"}  `}>
                     <i className="fa-solid fa-house mr-[15px]"></i> Home
                 </li>
             </ul>
