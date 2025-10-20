@@ -10,18 +10,20 @@ const SelectMenu = () => {
             case "selected" :
 
         
-
-                const {id} = action.payload.data
-                state.map((item) => {
-                    if(item.id === id){
+                
+                return state.map((item) => {
+                    if(item.id === action.payload.data){
+                        console.log(item)
                         return {...item, status : true}
                     }
-                    return item
+                    else {
+                        return {...item, status : false}
+                    }
+                   
                 })
-                return state;
         }
     }
-    const [state, dispatch] = useReducer(reducer, [])
+    const [state, dispatch] = useReducer(reducer, inputTitle)
     return( 
         // select menu
         <div className="w-[300px] cursor-pointer relative">
