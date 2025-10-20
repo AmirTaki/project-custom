@@ -1,37 +1,7 @@
 import { useReducer, useState } from 'react';
 import './styles.css'
+import { inputTitle } from './inputItem';
 
-
-const inputTitle = [
-    {
-        id : 0,
-        title : 'English'
-    },
-    {
-        id : 1,
-        title : 'Arabic'
-    },
-    {
-        id : 2,
-        title : 'Hindi'
-    },
-    {
-        id : 3,
-        title : 'Spanish'
-    },
-    {
-        id : 4,
-        title : 'French'
-    },
-    {
-        id : 5,
-        title : 'Japanese'
-    },
-    {
-        id : 6,
-        title : 'Korean'
-    }
-]
 
 
 const SelectMenu = () => {
@@ -61,34 +31,20 @@ const SelectMenu = () => {
                     absolute w-[100%] bg-[#f9f9f9] rounded-[6px] mt-[14px]   max-h-[180px] transition-all duration-[400ms] ease-linear delay-[200ms] overflow-y-auto  scrollbarStyle
                 `}
             >
+                {inputTitle.map((item) => {
+                    return(
+
+                    )
+                })}
                 {/* option */}
                 <div 
-                    onClick={() => {setOpen(false)}}
                     className="px-8 py-4 font-[500]  text-[14px] transition-all duration-[300ms] ease-in-out 
                     hover:text-[#00a8ff]"
                 >
                     English
                 </div>
                
-                {/* option */}
-                <div className="px-8 py-4 font-[500]  text-[14px] bg-amber-300 transition-all duration-[300ms] ease-in-out 
-                    hover:text-[#00a8ff]
-                ">English</div>
                
-                {/* option */}
-                <div className="px-8 py-4 font-[500]  text-[14px] bg-amber-300 transition-all duration-[300ms] ease-in-out 
-                    hover:text-[#00a8ff]
-                ">English</div>
-               
-                {/* option */}
-                <div className="px-8 py-4 font-[500]  text-[14px] bg-amber-300 transition-all duration-[300ms] ease-in-out 
-                    hover:text-[#00a8ff]
-                ">English</div>
-               
-                {/* option */}
-                <div className="px-8 py-4 font-[500]  text-[14px] bg-amber-300 transition-all duration-[300ms] ease-in-out 
-                    hover:text-[#00a8ff]
-                ">English</div>
                
         
             </div>
