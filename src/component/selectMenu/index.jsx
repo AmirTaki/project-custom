@@ -11,6 +11,11 @@ const SelectMenu = () => {
         switch(action.type) {
             case "selected" :
                 return state.map((item) => ( {...item, status : item.id === action.payload.data ? true : false  } ))
+            case "foundLanguge":
+                return state
+
+
+            
         }   
     }
     const [state, dispatch] = useReducer(reducer, inputTitle)
@@ -25,6 +30,7 @@ const SelectMenu = () => {
     }
     useEffect(() => { 
         spanRef.current.innerText = "Select Languge" 
+        dispatch({type : 'foundLanguge'})
         // 
     }, )
 
@@ -35,8 +41,8 @@ const SelectMenu = () => {
             <div 
                 onClick={() => {setOpen(!open)}}
                 className="bg-[#201e1e] p-[20px] text-white font-[500] rounded-[6px] flex justify-between items-center">
-                <span ref = {spanRef}> {foundLanguge()} </span>
-                <i className="fas fa-angle-down"></i>
+                <span ref = {spanRef}> </span>
+                <i className={`${open ? "rotate-180" : ""} duration-200 fas fa-angle-down`}></i>
             </div>
 
             {/* option list */}
