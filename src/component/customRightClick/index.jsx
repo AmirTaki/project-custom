@@ -7,10 +7,14 @@ import './styles.css'
 const CustomRightClick = () => {
     const [change, setChange] = useState(false)
 
+    const handlerRightClick = (evnet) => {
+        
+    }
+
     useEffect(() => {
-        document.addEventListener("contextmenu", )
+        document.addEventListener("contextmenu", handlerRightClick )
         return () => {
-            document.removeEventListener('contextmenu',)
+            document.removeEventListener('contextmenu', handlerRightClick)
         }
     },[])
 
