@@ -1,0 +1,9 @@
+@layer utilities {
+    .scrollbarStyle::-webkit-scrollbar {
+        width: 4px;
+        background-color: #eee;
+    }
+    .scrollbarStyle::-webkit-scrollbar-thumb{
+        background-color: #00a8ff;
+    }
+}
