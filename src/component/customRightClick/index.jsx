@@ -5,7 +5,7 @@ import './styles.css'
 
 
 const CustomRightClick = () => {
-    const [mouse, setMouse] = useState({x : 10, y : 10})
+    const [mouse, setMouse] = useState({x : 50, y : 50})
     const [change, setChange] = useState(false)
 
     const handlerRightClick = (evnet) => {
@@ -23,7 +23,9 @@ const CustomRightClick = () => {
     return(
         <>
         {/* menu */}
-        <div className="fixed w-[200px] bg-red-500 h-[500px] top-[10%] left-[50%]">
+        <div 
+            style={{top : `${mouse.x}px`, left : `${mouse.y}px`}}
+            className={`fixed w-[200px] bg-red-500 h-[500px]`}>
             {/* ul */}
             <ul className="p-0 m-0 list-none">
                 <li className={`p-[20px] bg-[#525F6C] border-1 border-[#5d6a77] text-white duration-500 
