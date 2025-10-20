@@ -15,9 +15,9 @@ import SelectMenu from "../selectMenu/index.jsx"
  
 const Home =  ()  => {
 
-    const  [view, setView] =   useState(false)
+    const  [view, setView] =   useState(true)
     return(
-        <div className="bg-[#10131c] min-h-[100vh]">
+        <div className={`bg-[#10131c] min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} >
             <div  
                 className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-35 `}
             >        

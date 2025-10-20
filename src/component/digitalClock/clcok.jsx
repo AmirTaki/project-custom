@@ -18,18 +18,28 @@ const Clock = ({text, color, flash, }) => {
         const rotate = () => { return flash == 'hours' ? 30 : 6 }
 
         useEffect(() => {
-            setInterval(() => {
+            const interval = setInterval(() => {
                 // clock
                 let C = getClock()         
                    flash === "hours" ? C > 12 ? C -=12 : C : ""
 
                 C =  C < 10 ? "0" + C  : C;
                 setTime((prevCircle) => (prevCircle = C))
-        
-                svgCircle.current.style.strokeDashoffset = 440 - (440 * C) / strokeDashoffset()
-                dots.current.style.transform = `rotate(${C * rotate() }deg)`
-            }, )
-        },)
+                
+                if(svgCircle.current){
+                    svgCircle.current.style.strokeDashoffset = 440 - (440 * C) / strokeDashoffset()
+                }
+                
+                if(dots.current){
+                    dots.current.style.transform = `rotate(${C * rotate() }deg)`
+                }
+                
+            },1000 )
+
+            return () => {
+                clearInterval(interval)
+            }
+        } , [flash])
 
 
     return(
