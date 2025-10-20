@@ -38,16 +38,20 @@ const CustomRightClick = () => {
             className={`${show ? "fixed!" : "hidden"}  w-[200px] `}>
             {/* ul */}
             <ul className="p-0 m-0 list-none">
-                <li className={`p-[20px] bg-[#525F6C] border-1 border-[#5d6a77] text-white duration-500 
-                    hover:bg-[#72DE73] hover:translate-x-0 hover:translate-y-[-10px] hover:shadow-[0_10px_50px_#636363]
-                        animate-[showMenu_0.5s_ease-in-out_forwards]
+                
+                <li 
+                style={{animation : "showMenu .5s ease-in-out 1 forwards"}}
+                className={`p-[20px] bg-[#525F6C] border-1 border-[#5d6a77] text-white duration-500 
+                    hover:bg-[#72DE73] hover:translate-x-0 hover:translate-y-[-10px] hover:shadow-[0_10px_50px_#636363]        
                 `}>
                     <i className="fa-solid fa-house mr-[15px]"></i> Home
                 </li>
               
-                <li className={`p-[20px] bg-[#525F6C] border-1 border-[#5d6a77] text-white duration-500 
+                <li 
+                style={{animation : "showMenu .5s ease-in-out 1 forwards"}}
+                className={`p-[20px] bg-[#525F6C] border-1 border-[#5d6a77] text-white duration-500 
                     hover:bg-[#72DE73] hover:translate-x-0 hover:translate-y-[-10px] hover:shadow-[0_10px_50px_#636363]
-                         animate-[showMenu_0.5s_ease-in-out_forwards]
+                        delay-300!
                     `}>
                     <i className="fa-solid fa-house mr-[15px]"></i> contact
                 </li>
