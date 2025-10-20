@@ -1,10 +1,17 @@
-import { useState } from 'react';
+import { useReducer, useState } from 'react';
 import './styles.css'
 
 
 const SelectMenu = () => {
     const [open, setOpen] =  useState(false)
-    return(
+    const reducer = (state, action) =>{
+        switch(action.type) {
+            case "" :
+                return state;
+        }
+    }
+    const [state, dispatch] = useReducer(reducer, [])
+    return( 
         // select menu
         <div className="w-[300px] cursor-pointer relative">
             {/* select */}
@@ -25,7 +32,7 @@ const SelectMenu = () => {
                 {/* option */}
                 <div 
                     onClick={() => {setOpen(false)}}
-                    className="px-8 py-4 font-[500]  text-[14px] bg-amber-300 transition-all duration-[300ms] ease-in-out 
+                    className="px-8 py-4 font-[500]  text-[14px] transition-all duration-[300ms] ease-in-out 
                     hover:text-[#00a8ff]"
                 >
                     English
