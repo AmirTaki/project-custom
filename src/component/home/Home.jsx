@@ -18,7 +18,7 @@ const Home =  ()  => {
             className={`  bg-[#10131c] min-h-[100vh] flex flex-col justify-center items-center gap-15 `}
         >        
 
-            <div className={`${view ? "block" : "hidden"}`}>
+            <div className={`${view ? "flex justify-center items-center flex-col" : "hidden"}`}>
 
                 {/* component navigation */}
                 <ComponentNavigation />
