@@ -1,5 +1,5 @@
 import { useEffect, useReducer, useRef, useState } from 'react';
-import { inputTitle } from './inputItem';
+import { inputItem } from './inputItem';
 import ItemOption from './itemOption';
 import './styles.css'
 
@@ -13,17 +13,16 @@ const SelectMenu = () => {
                 return state.map((item) => ({...item, status : item.id === action.payload.data ? true : false } ))            
         }   
     }
-    const [state, dispatch] = useReducer(reducer, inputTitle)
+    const [state, dispatch] = useReducer(reducer, inputItem)
 
     const foundLanguge = () => {
-        const findItem =  state.find(item => item.status)
-        findItem ? findItem.title : "Select Languge"
+        const findItem =  state.find(item => item.status )
+        return findItem ? findItem.title : "Select Languge" 
     }
+
     useEffect(() => { 
-        const selectedLanguge =  foundLanguge() 
-        spanRef.current.innerText = selectedLanguge;
-    
-    },[state] )
+        spanRef.current.innerText = foundLanguge()   
+    },[open] )
 
     return( 
         // select menu
@@ -43,9 +42,9 @@ const SelectMenu = () => {
                     absolute w-[100%] bg-[#f9f9f9] rounded-[6px] mt-[14px]   max-h-[180px] transition-all duration-[400ms] ease-linear delay-[200ms] overflow-y-auto  scrollbarStyle
                 `}
             >
-                {inputTitle.map((item) => {
+                {inputItem.map((item) => {
                     return(
-                        <ItemOption  key = {item.id} option = {item} dispatch = {dispatch}  setOpen = {setOpen}/>
+                        <ItemOption  key = {item.id} item = {item} dispatch = {dispatch}  setOpen = {setOpen}/>
                     )
                 })}
               

@@ -1,4 +1,4 @@
-export const inputTitle = [
+export const inputItem = [
     {
         id : 0,
         title : 'English',
