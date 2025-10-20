@@ -1,6 +1,7 @@
 import { useReducer, useState } from 'react';
-import './styles.css'
 import { inputTitle } from './inputItem';
+import ItemOption from './itemOption';
+import './styles.css'
 
 const SelectMenu = () => {
     const [open, setOpen] =  useState(false)
@@ -31,7 +32,7 @@ const SelectMenu = () => {
             >
                 {inputTitle.map((item) => {
                     return(
-
+                        <ItemOption  key = {item.id} option = {item}/>
                     )
                 })}
               
