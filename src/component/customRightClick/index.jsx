@@ -1,23 +1,24 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import './styles.css'
 //animate-[showMenu_0.5s_ease-in-out_forwards] 
 
 
 
 const CustomRightClick = () => {
-    const [mouse, setMouse] = useState({x : 50, y : 50})
+    const [mouse, setMouse] = useState({x : 0, y : 0})
     const [change, setChange] = useState(false)
-
-    const handlerRightClick = (evnet) => {
-        event.preventDefault();
-
-        setMouse({
-            x  : event.clientX,
-            y : event.clientY
-        })
-    }
-
+    useRef(null)
+    
     useEffect(() => {
+        
+            const handlerRightClick = (e) => {
+                e.preventDefault();
+                
+                setMouse({
+                    x  : e.clientX,
+                    y : e.clientX
+                })
+            }
         document.addEventListener("contextmenu", handlerRightClick )
         return () => {
             document.removeEventListener('contextmenu', handlerRightClick)
@@ -30,7 +31,7 @@ const CustomRightClick = () => {
         {/* menu */}
         <div 
             style={{top : `${mouse.x}px`, left : `${mouse.y}px`}}
-            className={`fixed w-[200px] bg-red-500 h-[500px]`}>
+            className={`fixed w-[200px] bg-red-500`}>
             {/* ul */}
             <ul className="p-0 m-0 list-none">
                 <li className={`p-[20px] bg-[#525F6C] border-1 border-[#5d6a77] text-white duration-500 
@@ -42,7 +43,7 @@ const CustomRightClick = () => {
             </ul>
 
         </div>
-            <button className="text-white" onClick={() => setChange(!change)}>click</button>
+            <button className="text-white" onClick={() => setChange(!change)}>click {mouse.x }{mouse.y}</button>
         </>
  
     )
