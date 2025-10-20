@@ -15,7 +15,7 @@ import CustomRightClick from "../customRightClick/index.jsx"
 
 const Home =  ()  => {
 
-    const  [view, setView] =   useState(false)
+    const  [view, setView] =   useState(true)
     return(
         <div className="bg-[#10131c] min-h-[100vh]">
             <div  
@@ -32,7 +32,7 @@ const Home =  ()  => {
                 <AnimatedOnScroll />
                 
                 {/* Digital Clock */}
-                <DigitalClock />
+                {/* <DigitalClock /> */}
 
                 {/* Download Button */}
                 <DownloadButton />

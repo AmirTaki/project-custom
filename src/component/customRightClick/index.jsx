@@ -8,9 +8,7 @@ const CustomRightClick = () => {
     const [mouse, setMouse] = useState({x : 0, y : 0})
     const [show, setShow] = useState(false)
 
-    useEffect(() => {
-        console.log(window.innerWidth)
-        
+    useEffect(() => {     
         const handlerRightClick = (e) => {
             e.preventDefault();
             
@@ -38,7 +36,7 @@ const CustomRightClick = () => {
         {/* menu */}
         <div 
             style={{top : `${mouse.y}px`, left : `${mouse.x}px`}}
-            className={`${show ? "fixed!" : "hidden"}  w-[200px] `}>
+            className={`${show ? "fixed!" : "hidden"}  w-[200px] z-[200] `}>
             {/* ul */}
             <ul className="p-0 m-0 list-none">
               

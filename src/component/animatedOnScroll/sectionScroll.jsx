@@ -12,28 +12,27 @@ const SectionScroll = ( { dispatch, children, index}) => {
         const height = sectionRef.current.offsetHeight
 
         dispatch({type : 'scroll', payload : { bool : (top >= offset && top < offset + height ? true : false) ,  index : index  }})
-    })
+    }, [dispatch, index])
+    
+    useEffect(() => {
+        let flag = true
+        const handleScroll = () => {
+            if(flag){
+                requestAnimationFrame(() => {
+                    animatedScroll()
+                    flag = true
+                })
+                flag = false
+            }
+        }
 
-    // useEffect(() => {
-       
-    //     let flag = true
-    //     const handleScroll = () => {
-    //         if(flag){
-    //             requestAnimationFrame(() => {
-    //                 animatedScroll()
-    //                 flag = true
-    //             })
-    //             flag = false
-    //         }
-    //     }
+        window.addEventListener("scroll", animatedScroll)
+        animatedScroll()
+        return()=> {
+            window.removeEventListener('scroll', animatedScroll)
+        }
 
-    //     window.addEventListener("scroll", handleScroll)
-    //     animatedScroll()
-    //     return()=> {
-    //         window.removeEventListener('scroll', handleScroll)
-    //     }
-
-    // }, [animatedScroll])
+    }, [animatedScroll])
 
     return(
         <div ref = {sectionRef} >
