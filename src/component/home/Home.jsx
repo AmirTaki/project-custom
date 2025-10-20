@@ -15,7 +15,7 @@ import CustomRightClick from "../customRightClick/index.jsx"
 
 const Home =  ()  => {
 
-    const  [view, setView] =   useState(true)
+    const  [view, setView] =   useState(false)
     return(
         <div className="bg-[#10131c] min-h-[100vh]">
             <div  
@@ -54,11 +54,10 @@ const Home =  ()  => {
 
                 {/* loading animation */}
                 <LoadingAnimation />
-           
-            </div>
 
-            {/* custom right click */}
-            <CustomRightClick />
+                {/* custom right click */}
+                <CustomRightClick />
+            </div>
 
             <div className="h-100 w-100 text-white"></div>
         </div>
