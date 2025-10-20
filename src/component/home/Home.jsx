@@ -15,11 +15,10 @@ const Home =  ()  => {
 
     const  [view, setView] =   useState(false)
     return(
-        <div  
-            className={`  bg-[#10131c] min-h-[100vh] flex flex-col justify-center items-center gap-15 `}
-        >        
-
-            <div className={`${view ? "flex justify-center items-center flex-col" : "hidden"}`}>
+        <div className="bg-[#10131c] min-h-[100vh]">
+            <div  
+                className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-15 `}
+            >        
 
                 {/* component navigation */}
                 <ComponentNavigation />
@@ -51,13 +50,15 @@ const Home =  ()  => {
 
                 {/* card hover effect */}
                 <CardHoverEffect />
-            </div>
 
                 {/* loading animation */}
                 <LoadingAnimation />
-            
+           
+            </div>
+
             <div className="h-100 w-100 text-white"></div>
         </div>
+   
    
     )
 }

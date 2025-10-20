@@ -7,7 +7,6 @@ const LoadingAnimation = () => {
             <div className="
                 absolute w-[33px] h-[33px] bg-[#262626]
                 rounded-[50%] circle
-     
             "> </div>
         </div>
     )
