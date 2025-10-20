@@ -19,7 +19,7 @@ const Home =  ()  => {
     return(
         <div className="bg-[#10131c] min-h-[100vh]">
             <div  
-                className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-15 `}
+                className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-35 `}
             >        
 
                 {/* component navigation */}
@@ -32,7 +32,7 @@ const Home =  ()  => {
                 <AnimatedOnScroll />
                 
                 {/* Digital Clock */}
-                {/* <DigitalClock /> */}
+                <DigitalClock />
 
                 {/* Download Button */}
                 <DownloadButton />
@@ -41,7 +41,6 @@ const Home =  ()  => {
                 <LayerdHoverEffect />
 
                 {/* card 3d */}
-            
                 <Card />
 
                 {/* animation effects */}

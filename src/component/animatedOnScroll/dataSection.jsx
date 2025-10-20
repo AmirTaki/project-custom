@@ -1,6 +1,6 @@
 export const DataSection = [
     {
-        id : 0,
+        id : 10,
         h1 : "Hi, I'm Codehal",
         p : "Animation on Scroll using HTML CSS and Javascript",
         showSection : 'translate-x-0 ' ,
@@ -10,7 +10,7 @@ export const DataSection = [
         status : true,
     },
     {
-        id : 1,
+        id : 11,
         h1 : "Keep Scrolling",
         p : "Animation on Scroll using HTML CSS and Javascript",
         showSection : 'translate-x-0! ' ,
@@ -20,7 +20,7 @@ export const DataSection = [
         status : false,
     },
     {
-        id : 2,
+        id : 12,
         h1 : "Nice ",
         p : "Animation on Scroll using HTML CSS and Javascript",
         showSection : 'scale-100 ' ,
@@ -30,7 +30,7 @@ export const DataSection = [
         status : false,
     },
     {
-        id : 4,
+        id :13,
         h1 : "Very Good ",
         p : "Animation on Scroll using HTML CSS and Javascript",
         showStyles : "  text-[#ff0]",
@@ -40,7 +40,7 @@ export const DataSection = [
         status : false,
     },
     {
-        id : 5,
+        id : 14,
         src1 : "https://images.unsplash.com/photo-1508974239320-0a029497e820?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         src2 : "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         src3 : "https://images.unsplash.com/photo-1533416784636-2b0ccfea6b97?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",

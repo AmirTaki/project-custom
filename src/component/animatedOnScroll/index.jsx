@@ -21,9 +21,9 @@ const AnimatedOnScroll = () => {
         <>    
         {showAnimate.map((section) => {
             return(
-                <SectionScroll index = {section.id}  dispatch= {dispatch} >  
-                    <div key = {section.id} className="overflow-x-hidden ">
-                        <Section   section = {section} />   
+                <SectionScroll index = {section.id}  key ={section.id}  dispatch= {dispatch} >  
+                    <div className="overflow-x-hidden " >
+                        <Section   section = {section}  />   
                     </div>
                 </SectionScroll>
             )

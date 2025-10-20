@@ -26,10 +26,10 @@ const SectionScroll = ( { dispatch, children, index}) => {
             }
         }
 
-        window.addEventListener("scroll", animatedScroll)
+        window.addEventListener("scroll", handleScroll)
         animatedScroll()
         return()=> {
-            window.removeEventListener('scroll', animatedScroll)
+            window.removeEventListener('scroll', handleScroll)
         }
 
     }, [animatedScroll])
