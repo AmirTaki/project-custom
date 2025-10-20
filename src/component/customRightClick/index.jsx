@@ -38,7 +38,7 @@ const CustomRightClick = () => {
             className={`${show ? "fixed!" : "hidden"}  w-[200px] `}>
             {/* ul */}
             <ul className="p-0 m-0 list-none">
-                
+                {/* li */}
                 <li 
                 style={{animation : "showMenu .5s ease-in-out 1 forwards"}}
                 className={`p-[20px] bg-[#525F6C] border-1 border-[#5d6a77] text-white duration-500 
@@ -48,6 +48,7 @@ const CustomRightClick = () => {
                     <i className="fa-solid fa-house mr-[15px]"></i> Home
                 </li>
               
+
                 <li 
                 style={{animation : "showMenu .5s ease-in-out 1 forwards", animationDelay : ".2s"}}
                 className={`p-[20px] bg-[#525F6C] border-1 border-[#5d6a77] text-white duration-500 
