@@ -6,17 +6,17 @@ import ListItem from "./listItem";
 
 const CustomRightClick = () => {
     const [mouse, setMouse] = useState({x : 0, y : 0})
-    const [change, setChange] = useState(false)
     const [show, setShow] = useState(false)
-    
+
     useEffect(() => {
+        console.log(window.innerWidth)
         
         const handlerRightClick = (e) => {
             e.preventDefault();
             
             setMouse({
-                x  : e.clientX,
-                y : e.clientX
+                x  : e.clientX ,
+                y :  e.clientY
             })
 
             setShow(true)
@@ -37,7 +37,7 @@ const CustomRightClick = () => {
         <>
         {/* menu */}
         <div 
-            style={{top : `${mouse.x}px`, left : `${mouse.y}px`}}
+            style={{top : `${mouse.y}px`, left : `${mouse.x}px`}}
             className={`${show ? "fixed!" : "hidden"}  w-[200px] `}>
             {/* ul */}
             <ul className="p-0 m-0 list-none">
