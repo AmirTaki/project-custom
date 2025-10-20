@@ -19,8 +19,13 @@ const CustomRightClick = () => {
                     x  : e.clientX,
                     y : e.clientX
                 })
+
+                setShow(true)
             }
-        document.addEventListener("contextmenu", handlerRightClick )
+
+            const handlerShow = () => {setShow(false)}
+        document.addEventListener("contextmenu", handlerRightClick)
+        document.addEventListener('click', handlerShow)
         
         return () => {
             document.removeEventListener('contextmenu', handlerRightClick)
@@ -33,7 +38,7 @@ const CustomRightClick = () => {
         {/* menu */}
         <div 
             style={{top : `${mouse.x}px`, left : `${mouse.y}px`}}
-            className={`fixed w-[200px] bg-red-500`}>
+            className={`${show ? "fixed!" : "hidden"}  w-[200px] bg-red-500`}>
             {/* ul */}
             <ul className="p-0 m-0 list-none">
                 <li className={`p-[20px] bg-[#525F6C] border-1 border-[#5d6a77] text-white duration-500 
