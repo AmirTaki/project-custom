@@ -7,7 +7,17 @@ const SelectMenu = () => {
     const [open, setOpen] =  useState(false)
     const reducer = (state, action) =>{
         switch(action.type) {
-            case "" :
+            case "selected" :
+
+        
+
+                const {id} = action.payload.data
+                state.map((item) => {
+                    if(item.id === id){
+                        return {...item, status : true}
+                    }
+                    return item
+                })
                 return state;
         }
     }
