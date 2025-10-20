@@ -5,10 +5,11 @@ import './styles.css'
 
 
 const CustomRightClick = () => {
+    const [mouse, setMouse] = useState({x : 10, y : 10})
     const [change, setChange] = useState(false)
 
     const handlerRightClick = (evnet) => {
-        
+        event.preventDefault();
     }
 
     useEffect(() => {
