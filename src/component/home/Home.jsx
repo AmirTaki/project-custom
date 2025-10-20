@@ -1,3 +1,4 @@
+import { useState } from "react"
 import AnimatedOnScroll from "../animatedOnScroll/index.jsx"
 import Card from "../card3D/index.jsx"
 import ComponentNavigation from "../componentNavigation"
@@ -8,11 +9,10 @@ import NavbarPaeg from "../navbarPage.jsx"
 import AnimationEffect from "../animationEffect/index.jsx"
 import AnimateEffect from "../animateEffect/index.jsx"
 import CardHoverEffect from "../cardHoverEffect/index.jsx"
-import { useState } from "react"
 import LoadingAnimation from "../loadingAnimation/index.jsx"
 import CustomRightClick from "../customRightClick/index.jsx"
+import SelectMenu from "../selectMenu/index.jsx"
  
-
 const Home =  ()  => {
 
     const  [view, setView] =   useState(false)
@@ -58,6 +58,9 @@ const Home =  ()  => {
                 {/* custom right click */}
                 <CustomRightClick />
             </div>
+
+            {/* select menu */}
+            <SelectMenu />
 
             <div className="h-100 w-100 text-white"></div>
         </div>
