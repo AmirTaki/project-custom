@@ -10,6 +10,11 @@ const CustomRightClick = () => {
 
     const handlerRightClick = (evnet) => {
         event.preventDefault();
+
+        setMouse({
+            x  : event.clientX,
+            y : event.clientY
+        })
     }
 
     useEffect(() => {
