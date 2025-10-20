@@ -1,30 +1,37 @@
 export const inputTitle = [
     {
         id : 0,
-        title : 'English'
+        title : 'English',
+        status: false
     },
     {
         id : 1,
-        title : 'Arabic'
+        title : 'Arabic',
+        status: false
     },
     {
         id : 2,
-        title : 'Hindi'
+        title : 'Hindi',
+        status: false
     },
     {
         id : 3,
-        title : 'Spanish'
+        title : 'Spanish',
+        status: false
     },
     {
         id : 4,
-        title : 'French'
+        title : 'French',
+        status: false
     },
     {
         id : 5,
-        title : 'Japanese'
+        title : 'Japanese',
+        status: false
     },
     {
         id : 6,
-        title : 'Korean'
+        title : 'Korean',
+        status: false
     }
 ]
