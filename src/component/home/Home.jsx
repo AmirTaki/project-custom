@@ -12,41 +12,45 @@ import { useState } from "react"
  
 const Home =  ()  => {
 
-    const  [veiw, setView] =   useState(false)
+    const  [view, setView] =   useState(false)
     return(
         <div  
             className={`  bg-[#10131c] min-h-[100vh] flex flex-col justify-center items-center gap-15 `}
         >        
 
-            {/* component navigation */}
-            <ComponentNavigation />
+            <div className={`${view ? "block" : "hidden"}`}>
 
-            {/* Navbar */}
-            <NavbarPaeg />
+                {/* component navigation */}
+                <ComponentNavigation />
 
-            {/* animation on Scroll */}
-            <AnimatedOnScroll />
+                {/* Navbar */}
+                <NavbarPaeg />
+
+                {/* animation on Scroll */}
+                <AnimatedOnScroll />
+                
+                {/* Digital Clock */}
+                <DigitalClock />
+
+                {/* Download Button */}
+                <DownloadButton />
+
+                {/* LayerdHoverEffect */}
+                <LayerdHoverEffect />
+
+                {/* card 3d */}
             
-            {/* Digital Clock */}
-            <DigitalClock />
+                <Card />
 
-            {/* Download Button */}
-            <DownloadButton />
+                {/* animation effects */}
+                <AnimationEffect />
 
-            {/* LayerdHoverEffect */}
-            <LayerdHoverEffect />
+                {/* animate effects */}
+                <AnimateEffect />
 
-            {/* card 3d */}
-            <Card />
-
-            {/* animation effects */}
-            <AnimationEffect />
-
-            {/* animate effects */}
-            <AnimateEffect />
-
-            {/* card hover effect */}
-            <CardHoverEffect />
+                {/* card hover effect */}
+                <CardHoverEffect />
+            </div>
             
             <div className="h-100 w-100"></div>
         </div>
