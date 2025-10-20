@@ -2,6 +2,30 @@ import { useReducer, useState } from 'react';
 import './styles.css'
 
 
+const inputTitle = [
+    {
+        id : 0,
+        title : 'English'
+    },
+    {
+        id : 1,
+        title : 'Arabic'
+    },
+    {
+        id : 2,
+        title : 'Hindi'
+    },
+    {
+        id : 3,
+        title : 'Spanish'
+    },
+    {
+        id : 4,
+        title : 'French'
+    },
+]
+
+
 const SelectMenu = () => {
     const [open, setOpen] =  useState(false)
     const reducer = (state, action) =>{
