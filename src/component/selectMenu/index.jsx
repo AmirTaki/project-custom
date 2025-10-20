@@ -8,26 +8,11 @@ const SelectMenu = () => {
     const reducer = (state, action) =>{
         switch(action.type) {
             case "selected" :
-
                 return state.map((item) => ( {...item, status : item.id === action.payload.data ? true : false  } ))
-                
-                // return state.map((item) => {
-                //     if(){
-                //         console.log(item)
-                //         return {...item, status : true}
-                //     }
-                //     else {
-                //         return {...item, status : false}
-                //     }
-                   
-                // })
         }   
     }
     const [state, dispatch] = useReducer(reducer, inputTitle)
 
-    useEffect(() =>{
-        console.log(state)
-    }, [state])
 
     return( 
         // select menu
@@ -49,7 +34,7 @@ const SelectMenu = () => {
             >
                 {inputTitle.map((item) => {
                     return(
-                        <ItemOption  key = {item.id} option = {item} dispatch = {dispatch}/>
+                        <ItemOption  key = {item.id} option = {item} dispatch = {dispatch}  setOpen = {setOpen}/>
                     )
                 })}
               
