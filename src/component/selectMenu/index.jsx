@@ -32,7 +32,7 @@ const SelectMenu = () => {
             >
                 {inputTitle.map((item) => {
                     return(
-                        <ItemOption  key = {item.id} option = {item}/>
+                        <ItemOption  key = {item.id} option = {item} dispatch = {dispatch}/>
                     )
                 })}
               
