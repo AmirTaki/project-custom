@@ -1,8 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import './styles.css'
 //animate-[showMenu_0.5s_ease-in-out_forwards] 
+
+
+
 const CustomRightClick = () => {
     const [change, setChange] = useState(false)
+
+    useEffect(() => {
+        document.addEventListener("contextmenu", )
+        return () => {
+            document.removeEventListener('contextmenu',)
+        }
+    },[])
+
+
     return(
         <>
         {/* menu */}
