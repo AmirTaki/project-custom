@@ -8,39 +8,42 @@ import NavbarPaeg from "../navbarPage.jsx"
 import AnimationEffect from "../animationEffect/index.jsx"
 import AnimateEffect from "../animateEffect/index.jsx"
 import CardHoverEffect from "../cardHoverEffect/index.jsx"
+import { useState } from "react"
  
 const Home =  ()  => {
+
+    const  [veiw, setView] =   useState(false)
     return(
         <div  
             className={`  bg-[#10131c] min-h-[100vh] flex flex-col justify-center items-center gap-15 `}
         >        
 
             {/* component navigation */}
-            {/* <ComponentNavigation /> */}
+            <ComponentNavigation />
 
             {/* Navbar */}
-            {/* <NavbarPaeg /> */}
+            <NavbarPaeg />
 
             {/* animation on Scroll */}
-            {/* <AnimatedOnScroll /> */}
+            <AnimatedOnScroll />
             
             {/* Digital Clock */}
-            {/* <DigitalClock /> */}
+            <DigitalClock />
 
             {/* Download Button */}
-            {/* <DownloadButton /> */}
+            <DownloadButton />
 
             {/* LayerdHoverEffect */}
-            {/* <LayerdHoverEffect /> */}
+            <LayerdHoverEffect />
 
             {/* card 3d */}
-            {/* <Card /> */}
+            <Card />
 
             {/* animation effects */}
-            {/* <AnimationEffect /> */}
+            <AnimationEffect />
 
             {/* animate effects */}
-            {/* <AnimateEffect /> */}
+            <AnimateEffect />
 
             {/* card hover effect */}
             <CardHoverEffect />
