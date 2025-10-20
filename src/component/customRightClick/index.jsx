@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 const CustomRightClick = () => {
+    const [change, setChange] = useState(false)
     return(
         <>
         {/* menu */}
@@ -14,7 +17,7 @@ const CustomRightClick = () => {
             </ul>
 
         </div>
-            <button className="text-white" onClick={}>click</button>
+            <button className="text-white" onClick={() => setChange(!change)}>click</button>
         </>
  
     )
