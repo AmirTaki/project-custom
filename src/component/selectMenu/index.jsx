@@ -1,4 +1,4 @@
-import { useReducer, useState } from 'react';
+import { useEffect, useReducer, useState } from 'react';
 import { inputTitle } from './inputItem';
 import ItemOption from './itemOption';
 import './styles.css'
@@ -9,21 +9,26 @@ const SelectMenu = () => {
         switch(action.type) {
             case "selected" :
 
-        
+                return state.map((item) => ( {...item, status : item.id === action.payload.data ? true : false  } ))
                 
-                return state.map((item) => {
-                    if(item.id === action.payload.data){
-                        console.log(item)
-                        return {...item, status : true}
-                    }
-                    else {
-                        return {...item, status : false}
-                    }
+                // return state.map((item) => {
+                //     if(){
+                //         console.log(item)
+                //         return {...item, status : true}
+                //     }
+                //     else {
+                //         return {...item, status : false}
+                //     }
                    
-                })
-        }
+                // })
+        }   
     }
     const [state, dispatch] = useReducer(reducer, inputTitle)
+
+    useEffect(() =>{
+        console.log(state)
+    }, [state])
+
     return( 
         // select menu
         <div className="w-[300px] cursor-pointer relative">
