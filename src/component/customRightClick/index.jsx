@@ -29,6 +29,7 @@ const CustomRightClick = () => {
         
         return () => {
             document.removeEventListener('contextmenu', handlerRightClick)
+            document.removeEventListener('click', handlerShow)
         }
     },[])
 
