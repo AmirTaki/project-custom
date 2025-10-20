@@ -1,8 +1,9 @@
 const LoadingAnimation = () => {
     return (
         // center
-        <div className="relative top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2">
+        <div className=" w-20 h-20  ">
             {/* circle  */}
+            <div className="bg-blue-600 text-white">learning </div>
         </div>
     )
 }
