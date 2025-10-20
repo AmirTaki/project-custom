@@ -17,6 +17,26 @@ const SelectMenu = () => {
                     hover:text-[#00a8ff]
                 ">English</div>
                
+                {/* option */}
+                <div className="px-8 py-4 font-[500]  text-[14px] bg-amber-300 transition-all duration-[300ms] ease-in-out 
+                    hover:text-[#00a8ff]
+                ">English</div>
+               
+                {/* option */}
+                <div className="px-8 py-4 font-[500]  text-[14px] bg-amber-300 transition-all duration-[300ms] ease-in-out 
+                    hover:text-[#00a8ff]
+                ">English</div>
+               
+                {/* option */}
+                <div className="px-8 py-4 font-[500]  text-[14px] bg-amber-300 transition-all duration-[300ms] ease-in-out 
+                    hover:text-[#00a8ff]
+                ">English</div>
+               
+                {/* option */}
+                <div className="px-8 py-4 font-[500]  text-[14px] bg-amber-300 transition-all duration-[300ms] ease-in-out 
+                    hover:text-[#00a8ff]
+                ">English</div>
+               
         
             </div>
         </div>
