@@ -9,6 +9,7 @@ import AnimationEffect from "../animationEffect/index.jsx"
 import AnimateEffect from "../animateEffect/index.jsx"
 import CardHoverEffect from "../cardHoverEffect/index.jsx"
 import { useState } from "react"
+import LoadingAnimation from "../loadingAnimation/index.jsx"
  
 const Home =  ()  => {
 
@@ -50,6 +51,9 @@ const Home =  ()  => {
 
                 {/* card hover effect */}
                 <CardHoverEffect />
+
+                {/* loading animation */}
+                <LoadingAnimation />
             </div>
             
             <div className="h-100 w-100"></div>
