@@ -79,7 +79,7 @@ const Home =  ()  => {
         dragLocation : {x : 0, y:0},
         location : {x : 122, y : 200},
         dragLocatoin : false
-        }),[])
+        }),[NavigationRef, DotsMenuRef])
 
     const [dragState, dispatchDrag] = useReducer(reducerDrag,initaionDragStae )
 
@@ -97,6 +97,7 @@ const Home =  ()  => {
         dispatchDrag({type : "onMouseMove", payload : {event : event}}),
         dispatchDrag({type : "onMouseMoveDots", payload : {event : event}})
     }, [DotsMenuRef, NavigationRef])
+
     // veiw projects 
     const  [view, setView] =   useState(true)   
     return(
