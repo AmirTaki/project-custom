@@ -18,7 +18,7 @@ const Navigation = () => {
         // flex justify-center items-center relative
         <div 
             ref = {NavigationRef}
-            onMouseDown = {() => {dispatchDrag({type : "onMouseDown", payload : {event : event}})}} 
+            onMouseDown = {() => {dispatchDrag({type : "onMouseDown", payload : {event : event, flag : true}})}} 
             className={`fixed  list-none   w-[2px] h-[2px]   z-300`}
             style={{left : `${position.x}px`, top :`${position.y}px`}}
         >

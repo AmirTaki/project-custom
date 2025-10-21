@@ -23,17 +23,34 @@ const Home =  ()  => {
     const reducerDrag = (state, action) => {
         switch(action.type){
             case 'onMouseUp': 
-                return {...state, DragingNavigation : action.payload.drag}
+            return {...state, DragingNavigation : action.payload.drag}
             
             case "onMouseMove" :
                 const {event} = action.payload
                 if(!state.DragingNavigation) return {...state}             
                 return {...state, positionNavigation: {x : event.clientX - state.dragOffset.x, y : event.clientY - state.clientY - state.dragOffset.y}}
 
-            case 'onMouseDown' : 
-                
+            case 'onMouseDown' :
+                const rect =  NavigationRef.current.getBoundingClientRect();
+                event.preventDefault()
+                return {...state, DragingNavigation : action.payload.flag, dragNavigation : {
+                    x : event.clientX - rect.left,
+                    y : event.clientY - rect.top
+                } }
+
         }
     }
+    
+        const handleMouseDown = (event) => {
+            setIsDragging(true)
+            const rect =  NavigationRef.current.getBoundingClientRect();
+            setDragOffset({
+                x : event.clientX - rect.left,
+                y : event.clientY - rect.top
+            })
+            event.preventDefault()
+    
+        }
     const [dragState, dispatchDrag] = useReducer(reducerDrag, {
         dragNavigation : {x : 0, y : 0},
         positionNavigation :  {x : 120, y : 500},
@@ -56,17 +73,6 @@ const Home =  ()  => {
             x:event.clientX - dragOffset.x,
             y:event.clientY - dragOffset.y
         })
-    }
-
-    const handleMouseDown = (event) => {
-        setIsDragging(true)
-        const rect =  NavigationRef.current.getBoundingClientRect();
-        setDragOffset({
-            x : event.clientX - rect.left,
-            y : event.clientY - rect.top
-        })
-        event.preventDefault()
-
     }
 
     // 
