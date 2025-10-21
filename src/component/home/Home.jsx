@@ -22,8 +22,7 @@ const Home =  ()  => {
     const [isDragging, setIsDragging] = useState(false)
     const handleMouseUp = () => { setIsDragging(false)}
     const handleMouseDown = () => {setIsDragging(true)}
-
-
+    const handleMouseLeave = () => {setIsDragging(false)}
 
 
     const  [view, setView] =   useState(false)   
@@ -31,7 +30,8 @@ const Home =  ()  => {
         <div className={`bg-[#10131c] min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} >
             <div  
                 onMouseUp={handleMouseUp} 
-                onMouseDown={handleMouseDown}   
+                onMouseDown={handleMouseDown} 
+                onMouseLeave={handleMouseLeave}  
                 className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-35 `}
             >        
 
