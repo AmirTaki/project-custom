@@ -25,6 +25,10 @@ const Home =  ()  => {
             case 'onMouseUp': 
                 return {...state, DragingNavigation : action.payload.drag}
             
+            case "onMouseMove" :
+                const {event} = action.payload
+                if(!state.DragingNavigation) return {...state}             
+                return {...state, positionNavigation: {x : event.clientX - state.dragOffset.x, y : event.clientY - state.clientY - state.dragOffset.y}}
         }
     }
     const [dragState, dispatchDrag] = useReducer(reducerDrag, {
@@ -71,7 +75,7 @@ const Home =  ()  => {
             <div  
                 onMouseUp={() => {dispatchDrag({type : "onMouseUp", payload : { drag :  false}})}} 
                 onMouseLeave={() => {dispatchDrag({type : "onMouseUp", payload : { drag :  false}})}}  
-                onMouseMove={handleMouseMove} 
+                onMouseMove={() => {dispatchDrag({type : "onMouseMove", payload : {event : event}})}} 
                 className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-35 `}
             >        
                 <navigationContext.Provider value = {{position, handleMouseDown, NavigationRef}} >
