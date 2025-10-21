@@ -19,7 +19,7 @@ export const dragContext = createContext()
 
 const Home =  ()  => {
     const navigationRef  =  useRef(null)
-    const  [view, setView] =   useState(false)
+    const  [view, setView] =   useState(true)
 
     const allowDropHandler = (event) => {
         event.preventDefault()
@@ -85,7 +85,7 @@ const Home =  ()  => {
                 <SelectMenu />
             </div>
 
-            <Drag />
+            {/* <Drag /> */}
             <div className="h-100 w-100 text-white"></div>
         </div>
         </dragContext.Provider>
