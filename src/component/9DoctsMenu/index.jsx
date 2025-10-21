@@ -6,11 +6,9 @@ import { navigationContext } from "../home/Home";
 
 const DoctsMenu = () => {
 
-    const {DotsMenuRef, dispatchDrag, dragState, dragLocationRef, isDraggingRef} = useContext(navigationContext)
+    const {DotsMenuRef,  dragLocationRef, isDraggingRef} = useContext(navigationContext)
     const [toggle, setToggle] = useState(false)
-    // const handlerMouseDown = useCallback((event) => {
-    //     dispatchDrag({type : 'onMouseDownDocts', payload : {flag : true, event, event }})
-    // }, [dispatchDrag])
+ 
 
 
 
@@ -37,7 +35,7 @@ const DoctsMenu = () => {
                   bg-[#212532] rounded-[10px] cursor-pointer   fixed 
                 flex items-center  justify-center z-[1000]! ` 
             }
-            style={{left : `${dragState.location.x}px`, top : `${dragState.location.y}px`}}
+            style={{left : `100px`, top : `150px`}}
             onClick={() => {setToggle((prev) => (!prev))}}
             >
     
