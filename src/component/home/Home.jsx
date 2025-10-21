@@ -37,12 +37,11 @@ const Home =  ()  => {
             case 'onMouseDown' :
                 const rect =  NavigationRef.current.getBoundingClientRect();
                 action.payload.event.preventDefault()
-                console.log(action.payload.event)
-                return {...state, DragingNavigation : action.payload.flag, dragNavigation : {
+        
+                return {...state, drag : {
                     x : action.payload.event.clientX - rect.left,
-                    y : action.payload.event.clientY - rect.top
-                } }
-
+                    y : action.payload.event.clientY - React.top
+                }}
         }
     }
     
