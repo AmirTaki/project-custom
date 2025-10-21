@@ -22,8 +22,8 @@ const Home =  ()  => {
 
     const reducerDrag = (state, action) => {
         switch(action.type){
-            case '': 
-                return state
+            case 'onMouseUp': 
+                return {...state, DragingNavigation : action.payload.drag}
         }
     }
     const [dragState, dispatchDrag] = useReducer(reducerDrag, {
@@ -68,7 +68,7 @@ const Home =  ()  => {
     return(
         <div className={`bg-[#10131c] min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} >
             <div  
-                onMouseUp={handleMouseUp} 
+                onMouseUp={() => {dispatchDrag({type : "onMouseUp", payload : { drag :  false}})}} 
                 onMouseMove={handleMouseMove} 
                 onMouseLeave={handleMouseLeave}  
                 className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-35 `}
