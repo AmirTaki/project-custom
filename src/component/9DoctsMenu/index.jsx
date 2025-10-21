@@ -9,10 +9,7 @@ const DoctsMenu = () => {
 
     const {DotsMenuRef, dispatchDrag, dragState} = useContext(navigationContext)
     const [toggle, setToggle] = useState(false)
-    // const [TouchLocation, setTouchLocation] = useState({
-    //     x : 122, 
-    //     y : 200
-    // })
+
     return(
         // navigation
         <div 

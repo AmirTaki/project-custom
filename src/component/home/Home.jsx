@@ -83,18 +83,18 @@ const Home =  ()  => {
 
     const [dragState, dispatchDrag] = useReducer(reducerDrag,initaionDragStae )
 
-
+    const handlerMouseUp = useMemo( () => (event) => {
+        dispatchDrag({type : "onMouseUp", payload : { drag :  false}}),
+        dispatchDrag({type : "onMouseUpDots", payload : { drag :  false}}) 
+    })
     // veiw projects 
     const  [view, setView] =   useState(true)   
     return(
         <div 
             className={`bg-[blue] z-[10000]! min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} 
         >
-            <div  
-                onMouseUp={() => {
-                    dispatchDrag({type : "onMouseUp", payload : { drag :  false}}),
-                    dispatchDrag({type : "onMouseUpDots", payload : { drag :  false}})
-                }} 
+            <div 
+                onMouseUp={handlerMouseUp}
                 onMouseLeave={() => {
                     dispatchDrag({type : "onMouseUp", payload : { drag :  false}}),
                     dispatchDrag({type : "onMouseUpDots", payload : { drag :  false}})
