@@ -28,7 +28,10 @@ const Home =  ()  => {
     const handleMouseMove = (event) => {
         if(!isDragging) return;
        
-        
+        setPosition({
+            x:event.clientX - dragOffset.x,
+            y:event.clientY - dragOffset.y
+        })
     }
 
 
