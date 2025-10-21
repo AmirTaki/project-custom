@@ -1,13 +1,16 @@
-import { createContext, useReducer } from "react";
+import { createContext, useContext, useReducer } from "react";
 import DoctsMenu from "../9DoctsMenu";
 import MagicNavigationMenu from "../magicNavigationMenu";
 import Navigation from "../navigation";
 import SwitchButton from "../switchButton";
+import { dragContext } from "../home/Home";
  
 
 export const switchNavigationContext =  createContext()
 
 const ComponentNavigation = () => {
+
+   const {dragHandler} =  useContext(dragContext)
 
     const reducer = (state, action) => {
         switch (action.type){

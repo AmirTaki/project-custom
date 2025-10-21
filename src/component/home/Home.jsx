@@ -15,11 +15,11 @@ import SelectMenu from "../selectMenu/index.jsx"
 // drag
 import Drag from "../drag/index.jsx"
  
+export const dragContext = createContext()
 
 const Home =  ()  => {
     const navigationRef  =  useRef(null)
     const  [view, setView] =   useState(false)
-    const dragContext = createContext()
 
     const allowDropHandler = (event) => {
         event.preventDefault()
@@ -36,7 +36,7 @@ const Home =  ()  => {
         event.dataTransfer.setData('navigation', event.target.id)
     }
     return(
-        <dragContext.Provider value = {{navigationRef}}>
+        <dragContext.Provider value = {{navigationRef, dragHandler}}>
 
         <div className={`bg-[#10131c] min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} >
             <div  
