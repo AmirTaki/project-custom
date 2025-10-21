@@ -1,12 +1,15 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, useMatch } from "react-router-dom";
 import { iconsList } from "./iconList";
 import LinkMenu from "./linkMenu";
-import { useContext, useState } from "react";
+import { useContext, useMemo, useState } from "react";
 import { navigationContext } from "../home/Home";
 
 
 const DoctsMenu = () => {
 
+    const handlerMouseDown = useMemo(() => {
+        dispatchDrag({type : 'onMouseDownDocts', payload : {flag : true, event, event }})
+    }, [])
     const {DotsMenuRef, dispatchDrag, dragState} = useContext(navigationContext)
     const [toggle, setToggle] = useState(false)
 
@@ -14,7 +17,7 @@ const DoctsMenu = () => {
         // navigation
         <div 
             ref = {DotsMenuRef}
-            onMouseDown={() => {dispatchDrag({type : 'onMouseDownDocts', payload : {flag : true, event, event }})}}
+            onMouseDown={handlerMouseDown}
             // delay-[800ms]
             className={` 
                 ${toggle ? "w-[200px] h-[200px] delay-0 " : "w-[70px] h-[70px] "}
