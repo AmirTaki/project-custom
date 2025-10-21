@@ -1,17 +1,30 @@
 import { BrowserRouter, useMatch } from "react-router-dom";
 import { iconsList } from "./iconList";
 import LinkMenu from "./linkMenu";
-import { useCallback, useContext, useMemo, useState } from "react";
+import { useCallback, useContext, useMemo, useRef, useState } from "react";
 import { navigationContext } from "../home/Home";
-
 
 const DoctsMenu = () => {
 
-    const {DotsMenuRef, dispatchDrag, dragState} = useContext(navigationContext)
+    const {DotsMenuRef, dispatchDrag, dragState, dragLocationRef, isDraggingRef} = useContext(navigationContext)
     const [toggle, setToggle] = useState(false)
+    // const handlerMouseDown = useCallback((event) => {
+    //     dispatchDrag({type : 'onMouseDownDocts', payload : {flag : true, event, event }})
+    // }, [dispatchDrag])
+
+
+
+
     const handlerMouseDown = useCallback((event) => {
-        dispatchDrag({type : 'onMouseDownDocts', payload : {flag : true, event, event }})
-    }, [dispatchDrag])
+    const rect = DotsMenuRef.current.getBoundingClientRect();
+    dragLocationRef.current = {
+        x: event.clientX - rect.left,
+        y: event.clientY - rect.top,
+    };
+    isDraggingRef.current = true;
+    }, []);
+
+
 
     return(
         // navigation
