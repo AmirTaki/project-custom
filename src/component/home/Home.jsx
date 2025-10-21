@@ -12,10 +12,12 @@ import CardHoverEffect from "../cardHoverEffect/index.jsx"
 import LoadingAnimation from "../loadingAnimation/index.jsx"
 import CustomRightClick from "../customRightClick/index.jsx"
 import SelectMenu from "../selectMenu/index.jsx"
+import Drag from "../drag/index.jsx"
  
+
 const Home =  ()  => {
 
-    const  [view, setView] =   useState(true)
+    const  [view, setView] =   useState(false)
     return(
         <div className={`bg-[#10131c] min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} >
             <div  
@@ -62,7 +64,7 @@ const Home =  ()  => {
                 <SelectMenu />
             </div>
 
-
+            <Drag />
             <div className="h-100 w-100 text-white"></div>
         </div>
    
