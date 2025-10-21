@@ -47,6 +47,10 @@ const Home =  ()  => {
                 }}
         
             // Dots
+            case "" :
+                return {...state, }
+
+
             case "onMouseDownDocts" :
                 const rectDots =  DotsMenuRef.current.getBoundingClientRect();
                 action.payload.event.preventDefault()
@@ -72,6 +76,7 @@ const Home =  ()  => {
         position :  {x : 120, y : 500},
         location : {x : 122, y : 200},
         flagDrag : false, 
+        dragLocatoin : false
         }
     )
 
