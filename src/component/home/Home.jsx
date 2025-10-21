@@ -20,6 +20,7 @@ export const navigationContext = createContext ()
 
 const Home =  ()  => {
 
+    const NavigationRef =  useRef(null)
     const reducerDrag = (state, action) => {
         switch(action.type){
             case 'onMouseUp': 
@@ -41,16 +42,16 @@ const Home =  ()  => {
         }
     }
     
-        const handleMouseDown = (event) => {
-            setIsDragging(true)
-            const rect =  NavigationRef.current.getBoundingClientRect();
-            setDragOffset({
-                x : event.clientX - rect.left,
-                y : event.clientY - rect.top
-            })
-            event.preventDefault()
+        // const handleMouseDown = (event) => {
+        //     setIsDragging(true)
+        //     const rect =  NavigationRef.current.getBoundingClientRect();
+        //     setDragOffset({
+        //         x : event.clientX - rect.left,
+        //         y : event.clientY - rect.top
+        //     })
+        //     event.preventDefault()
     
-        }
+        // }
     const [dragState, dispatchDrag] = useReducer(reducerDrag, {
         dragNavigation : {x : 0, y : 0},
         positionNavigation :  {x : 120, y : 500},
@@ -58,22 +59,22 @@ const Home =  ()  => {
     }
     )
     // drag navigation
-    const NavigationRef =  useRef(null)
-    const [dragOffset, setDragOffset]  =  useState({x : 0, y : 0})
-    const [position, setPosition] = useState({ x : 120, y : 500})
-    const [isDragging, setIsDragging] = useState(false)
+    // 
+    // const [dragOffset, setDragOffset]  =  useState({x : 0, y : 0})
+    // const [position, setPosition] = useState({ x : 120, y : 500})
+    // const [isDragging, setIsDragging] = useState(false)
     
-    const handleMouseUp = () => { setIsDragging(false)}
-    const handleMouseLeave = () => {setIsDragging(false)}
+    // const handleMouseUp = () => { setIsDragging(false)}
+    // const handleMouseLeave = () => {setIsDragging(false)}
 
-    const handleMouseMove = (event) => {
-        if(!isDragging) return;
+    // const handleMouseMove = (event) => {
+    //     if(!isDragging) return;
        
-        setPosition({
-            x:event.clientX - dragOffset.x,
-            y:event.clientY - dragOffset.y
-        })
-    }
+    //     setPosition({
+    //         x:event.clientX - dragOffset.x,
+    //         y:event.clientY - dragOffset.y
+    //     })
+    // }
 
     // 
 
@@ -87,7 +88,7 @@ const Home =  ()  => {
                 onMouseMove={() => {dispatchDrag({type : "onMouseMove", payload : {event : event}})}} 
                 className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-35 `}
             >        
-                <navigationContext.Provider value = {{position, handleMouseDown, NavigationRef}} >
+                <navigationContext.Provider value = {{dragState, dispatchDrag, NavigationRef}} >
                     {/* component navigation */}
                     <ComponentNavigation />
                 </navigationContext.Provider>

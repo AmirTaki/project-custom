@@ -12,7 +12,7 @@ const Navigation = () => {
         setToggle((prevToggle) => !prevToggle)
     }
 
-    const {position, handleMouseDown, NavigationRef} =  useContext(navigationContext)
+    const {dragState, dispatchDrag, NavigationRef} =  useContext(navigationContext)
     
     return (
         // flex justify-center items-center relative
@@ -20,7 +20,7 @@ const Navigation = () => {
             ref = {NavigationRef}
             onMouseDown = {() => {dispatchDrag({type : "onMouseDown", payload : {event : event, flag : true}})}} 
             className={`fixed  list-none   w-[2px] h-[2px]   z-300`}
-            style={{left : `${position.x}px`, top :`${position.y}px`}}
+            style={{left : `${dragState.positionNavigation.x}px`, top :`${dragState.positionNavigation.y}px`}}
         >
                 <div
                     onClick={handleToggle}
@@ -34,7 +34,7 @@ const Navigation = () => {
                     <BrowserRouter >
                         {listIcons.map((item, index) => {
                             return(
-                                <LinkNavigation icon =  {item} key = {index} index = {index} toggle = {toggle} position = {position}/>
+                                <LinkNavigation icon =  {item} key = {index} index = {index} toggle = {toggle} dragState = {dragState}/>
                             )
                         })}
                     </BrowserRouter>
