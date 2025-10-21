@@ -36,6 +36,7 @@ const ComponentNavigation = () => {
 
     return (
         <switchNavigationContext.Provider  value = {{stateSwich, dispatchSwitch}}>
+            <div className="bg-blue-500 w-30 h-30" ></div>
 
             {/* button switch animation */}
             <SwitchButton />
@@ -45,7 +46,7 @@ const ComponentNavigation = () => {
             <div 
                 onDragStart={dragHandler}
                 draggable = {true}    
-                className={`${stateSwich.listSwitch[0] ? "flex" : "hidden"}`}
+                className={`${stateSwich.listSwitch[0] ? "flex" : "hidden"} `}
             >
                 <Navigation  />
             </div>

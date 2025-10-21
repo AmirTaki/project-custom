@@ -27,7 +27,7 @@ const Navigation = () => {
                     onClick={handleToggle}
                     className={`
                         w-[60px] h-[60px] bg-white flex items-center justify-center  rounded-full cursor-pointer
-                        shadow-[0_3px_4px_rgba(0,0,0,0.15)] text-[2em] duration-[1250ms]! fixed z-40
+                        shadow-[0_3px_4px_rgba(0,0,0,0.15)] text-[2em] duration-[1250ms]! fixed  z-40
                         ${toggle ? "" : "rotate-[315deg] "}`}
                 >
                     <i className="bi bi-plus-lg"></i>

@@ -12,7 +12,7 @@ const LinkNavigation = ({icon, index, toggle, touch}) => {
                 left : `${touch.x - 70}px`, top :`${touch.y + 10}px`
             }}
         //   absolute  left-0
-            className={`fixed  list-none origin-[100px] transition-transform duration-[500ms]!`}
+            className={`fixed left-0  list-none origin-[100px] transition-transform duration-[500ms]!`}
         >
             <Link 
                 // style={{transform : `${toggle ? `` : `rotate(calc(360deg / -8 * ${index}))`} `}}
