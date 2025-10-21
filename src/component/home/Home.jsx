@@ -13,10 +13,13 @@ import LoadingAnimation from "../loadingAnimation/index.jsx"
 import CustomRightClick from "../customRightClick/index.jsx"
 import SelectMenu from "../selectMenu/index.jsx"
 
+// 
+import MouseDragComponent from "../drag/index.jsx"
+
 
 const Home =  ()  => {
 
-    const  [view, setView] =   useState(true)   
+    const  [view, setView] =   useState(false)   
     return(
         <div className={`bg-[#10131c] min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} >
             <div  className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-35 `}>        
@@ -61,7 +64,7 @@ const Home =  ()  => {
                 <SelectMenu />
             </div>
 
-            {/* <Drag /> */}
+            <MouseDragComponent />
             <div className="h-100 w-100 text-white"></div>
         </div>   
     )
