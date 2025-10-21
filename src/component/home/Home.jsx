@@ -25,7 +25,12 @@ const Home =  ()  => {
         event.preventDefault()
     }
     const dropHandler = (event) => {
-        
+        event.preventDefault();
+        let data = event.dataTransfer.getData('navigation')
+        const dragElement = document.getElementById(data)
+        if(dragElement){
+            event.target.appendChild(dragElement)
+        }
     }
     return(
         <dragContext.Provider value = {{navigationRef}}>
