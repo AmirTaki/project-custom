@@ -28,6 +28,7 @@ const Home =  ()  => {
             case 'onMouseUp': 
             return {...state, flagDrag : action.payload.drag}
             
+            // navigation
             case "onMouseMove" :          
                 if(!state.flagDrag) return {...state}      
 
@@ -45,7 +46,8 @@ const Home =  ()  => {
                     y : action.payload.event.clientY - rect.top
                 }}
         
-                case "onMouseDownDocts" :
+            // Dots
+            case "onMouseDownDocts" :
                 const rectDots =  DotsMenuRef.current.getBoundingClientRect();
                 action.payload.event.preventDefault()
 
@@ -53,11 +55,15 @@ const Home =  ()  => {
                     x : action.payload.event.clientX - rectDots.left,
                     y : action.payload.event.clientY - rectDots.top
                 }}
+
+            case "" :
+                return {...state}
         }
     }
     
     const [dragState, dispatchDrag] = useReducer(reducerDrag, {
         drag : {x : 0, y : 0},
+        dragLocation : {x : 0, y:0},
         position :  {x : 120, y : 500},
         location : {x : 122, y : 200},
         flagDrag : false, 
@@ -68,7 +74,12 @@ const Home =  ()  => {
     // veiw projects 
     const  [view, setView] =   useState(true)   
     return(
-        <div className={`bg-[blue] z-[10000]! min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} >
+        <div 
+            onMouseUp={() => {dispatchDrag({type : "onMouseUpDots", payload : { drag :  false}})}} 
+            onMouseLeave={() => {dispatchDrag({type : "onMouseUpDots", payload : { drag :  false}})}}  
+            onMouseMove={() => {dispatchDrag({type : "onMouseMoveDots", payload : {event : event}})}} 
+            className={`bg-[blue] z-[10000]! min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} 
+        >
             <div  
                 onMouseUp={() => {dispatchDrag({type : "onMouseUp", payload : { drag :  false}})}} 
                 onMouseLeave={() => {dispatchDrag({type : "onMouseUp", payload : { drag :  false}})}}  
