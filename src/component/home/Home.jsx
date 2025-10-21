@@ -1,4 +1,4 @@
-import {  useState } from "react"
+import {  useRef, useState } from "react"
 import AnimatedOnScroll from "../animatedOnScroll/index.jsx"
 import Card from "../card3D/index.jsx"
 import ComponentNavigation from "../componentNavigation"
@@ -18,6 +18,7 @@ import MouseDragComponent from "../drag/index.jsx"
 
 
 const Home =  ()  => {
+    const dragRef =  useRef(null)
     const [dragOffset, setDragOffset]  =  useState({x : 0, y : 0})
     const [position, setPosition] = useState({ x : 120, y : 500})
     const [isDragging, setIsDragging] = useState(false)
@@ -32,6 +33,17 @@ const Home =  ()  => {
             x:event.clientX - dragOffset.x,
             y:event.clientY - dragOffset.y
         })
+    }
+
+    const handleMouseDown = (event) => {
+        setIsDragging(true)
+        const rect =  dragRef.current.getBoundingClientRect();
+        setDragOffset({
+            x : event.clientX - rect.left,
+            y : event.clientY - rect.top
+        })
+        event.preventDefault()
+
     }
 
 
