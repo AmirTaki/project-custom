@@ -20,7 +20,7 @@ const Navigation = () => {
             ref = {NavigationRef}
             onMouseDown = {() => {dispatchDrag({type : "onMouseDown", payload : {event : event, flag : true}})}} 
             className={`fixed  list-none   w-[2px] h-[2px]   z-300`}
-            style={{left : `${dragState.positionNavigation.x}px`, top :`${dragState.positionNavigation.y}px`}}
+            style={{left : `${dragState.position.x}px`, top :`${dragState.position.y}px`}}
         >
                 <div
                     onClick={handleToggle}
