@@ -1,4 +1,4 @@
-import { createContext, useRef, useState } from "react"
+import {  useState } from "react"
 import AnimatedOnScroll from "../animatedOnScroll/index.jsx"
 import Card from "../card3D/index.jsx"
 import ComponentNavigation from "../componentNavigation"
@@ -12,38 +12,14 @@ import CardHoverEffect from "../cardHoverEffect/index.jsx"
 import LoadingAnimation from "../loadingAnimation/index.jsx"
 import CustomRightClick from "../customRightClick/index.jsx"
 import SelectMenu from "../selectMenu/index.jsx"
-// drag
-import Drag from "../drag/index.jsx"
- 
-export const dragContext = createContext()
+
 
 const Home =  ()  => {
-    const navigationRef  =  useRef(null)
-    const  [view, setView] =   useState(true)
 
-    const allowDropHandler = (event) => {
-        event.preventDefault()
-    }
-    const dropHandler = (event) => {
-        event.preventDefault();
-        let data = event.dataTransfer.getData('navigation')
-        const dragElement = document.getElementById(data)
-        if(dragElement){
-            event.target.appendChild(dragElement)
-        }
-    }
-    const dragHandler = (event) => {
-        event.dataTransfer.setData('navigation', event.target.id)
-    }
+    const  [view, setView] =   useState(true)   
     return(
-        <dragContext.Provider value = {{navigationRef, dragHandler}}>
-
         <div className={`bg-[#10131c] min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} >
-            <div  
-                onDrop={dropHandler}
-                onDragOver={allowDropHandler}
-                className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-35 `}
-            >        
+            <div  className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-35 `}>        
 
                 {/* component navigation */}
                 <ComponentNavigation />
@@ -87,10 +63,7 @@ const Home =  ()  => {
 
             {/* <Drag /> */}
             <div className="h-100 w-100 text-white"></div>
-        </div>
-        </dragContext.Provider>
-   
-   
+        </div>   
     )
 }
 

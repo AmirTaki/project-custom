@@ -3,14 +3,12 @@ import DoctsMenu from "../9DoctsMenu";
 import MagicNavigationMenu from "../magicNavigationMenu";
 import Navigation from "../navigation";
 import SwitchButton from "../switchButton";
-import { dragContext } from "../home/Home";
- 
 
 export const switchNavigationContext =  createContext()
 
 const ComponentNavigation = () => {
 
-   const {dragHandler} =  useContext(dragContext)
+
 
     const reducer = (state, action) => {
         switch (action.type){
@@ -36,18 +34,13 @@ const ComponentNavigation = () => {
 
     return (
         <switchNavigationContext.Provider  value = {{stateSwich, dispatchSwitch}}>
-            <div className="bg-blue-500 w-30 h-30" ></div>
 
             {/* button switch animation */}
             <SwitchButton />
 
             {/* NAVIGATION & DOCTS MENE 9  =>  bg-linear-[25deg,red_5%,yellow_60%,lime_90%,teal] ,bg-[#10131c]   */}
             
-            <div 
-                onDragStart={dragHandler}
-                draggable = {true}    
-                className={`${stateSwich.listSwitch[0] ? "flex" : "hidden"} `}
-            >
+            <div  className={`${stateSwich.listSwitch[0] ? "flex" : "hidden"} `}>
                 <Navigation  />
             </div>
 
