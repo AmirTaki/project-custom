@@ -1,4 +1,4 @@
-import {  createContext, useEffect, useReducer, useRef, useState } from "react"
+import {  createContext, useCallback, useEffect, useMemo, useReducer, useRef, useState } from "react"
 import AnimatedOnScroll from "../animatedOnScroll/index.jsx"
 import Card from "../card3D/index.jsx"
 import ComponentNavigation from "../componentNavigation"
@@ -23,7 +23,7 @@ const Home =  ()  => {
     const NavigationRef =  useRef(null)
     const DotsMenuRef =  useRef(null)
  
-    const reducerDrag = (state, action) => {
+    const reducerDrag = useCallback( (state, action) => {
         switch(action.type){
             case 'onMouseUp': 
             return {...state, flagDrag : action.payload.drag}
@@ -67,9 +67,10 @@ const Home =  ()  => {
                     y : action.payload.event.clientY - rectDots.top
                 }}
         }
-    }
+    } ,[NavigationRef, DotsMenuRef])
     
-    const [dragState, dispatchDrag] = useReducer(reducerDrag, {
+
+    const initaionDragStae = useMemo( () => ({
         // navigation
         drag : {x : 0, y : 0},
         position :  {x : 120, y : 500},
@@ -78,17 +79,15 @@ const Home =  ()  => {
         dragLocation : {x : 0, y:0},
         location : {x : 122, y : 200},
         dragLocatoin : false
-        }
-    )
+        }),[])
+
+    const [dragState, dispatchDrag] = useReducer(reducerDrag,initaionDragStae )
 
 
     // veiw projects 
     const  [view, setView] =   useState(true)   
     return(
         <div 
-            // onMouseUp={() => {}} 
-            // onMouseLeave={() => {}}  
-            // onMouseMove={() => {}} 
             className={`bg-[blue] z-[10000]! min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} 
         >
             <div  
