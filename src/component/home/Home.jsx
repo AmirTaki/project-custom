@@ -86,7 +86,12 @@ const Home =  ()  => {
     const handlerMouseUp = useMemo( () => (event) => {
         dispatchDrag({type : "onMouseUp", payload : { drag :  false}}),
         dispatchDrag({type : "onMouseUpDots", payload : { drag :  false}}) 
-    })
+    }, [])
+
+    const handlerMouseLeave = useMemo(() => (event) => {
+        dispatchDrag({type : "onMouseUp", payload : { drag :  false}}),
+        dispatchDrag({type : "onMouseUpDots", payload : { drag :  false}})
+    }, [])
     // veiw projects 
     const  [view, setView] =   useState(true)   
     return(
@@ -95,10 +100,7 @@ const Home =  ()  => {
         >
             <div 
                 onMouseUp={handlerMouseUp}
-                onMouseLeave={() => {
-                    dispatchDrag({type : "onMouseUp", payload : { drag :  false}}),
-                    dispatchDrag({type : "onMouseUpDots", payload : { drag :  false}})
-                }}  
+                onMouseLeave={handlerMouseLeave}  
                 onMouseMove={() => {
                     dispatchDrag({type : "onMouseMove", payload : {event : event}}),
                     dispatchDrag({type : "onMouseMoveDots", payload : {event : event}})
