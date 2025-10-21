@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { createContext, useRef, useState } from "react"
 import AnimatedOnScroll from "../animatedOnScroll/index.jsx"
 import Card from "../card3D/index.jsx"
 import ComponentNavigation from "../componentNavigation"
@@ -12,13 +12,17 @@ import CardHoverEffect from "../cardHoverEffect/index.jsx"
 import LoadingAnimation from "../loadingAnimation/index.jsx"
 import CustomRightClick from "../customRightClick/index.jsx"
 import SelectMenu from "../selectMenu/index.jsx"
+// drag
 import Drag from "../drag/index.jsx"
  
 
 const Home =  ()  => {
-
+    const navigationRef  =  useRef(null)
     const  [view, setView] =   useState(false)
+    const dragContext = createContext()
     return(
+        <dragContext.Provider >
+
         <div className={`bg-[#10131c] min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} >
             <div  
                 className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-35 `}
@@ -67,6 +71,7 @@ const Home =  ()  => {
             <Drag />
             <div className="h-100 w-100 text-white"></div>
         </div>
+        </dragContext.Provider>
    
    
     )
