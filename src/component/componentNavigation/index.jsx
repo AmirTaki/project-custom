@@ -42,7 +42,11 @@ const ComponentNavigation = () => {
 
             {/* NAVIGATION & DOCTS MENE 9  =>  bg-linear-[25deg,red_5%,yellow_60%,lime_90%,teal] ,bg-[#10131c]   */}
             
-            <div className={`${stateSwich.listSwitch[0] ? "flex" : "hidden"}`}>
+            <div 
+                onDragStart={dragHandler()}
+                draggable = {true}    
+                className={`${stateSwich.listSwitch[0] ? "flex" : "hidden"}`}
+            >
                 <Navigation  />
             </div>
 
