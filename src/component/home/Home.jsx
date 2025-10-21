@@ -21,6 +21,7 @@ export const navigationContext = createContext ()
 const Home =  ()  => {
 
     const NavigationRef =  useRef(null)
+    const DotsMenuRef =  useRef(null)
  
     const reducerDrag = (state, action) => {
         switch(action.type){
@@ -46,12 +47,12 @@ const Home =  ()  => {
         }
     }
     
-
     const [dragState, dispatchDrag] = useReducer(reducerDrag, {
         drag : {x : 0, y : 0},
         position :  {x : 120, y : 500},
+        location : {x : 122, y : 200},
         flagDrag : false, 
-    }
+        }
     )
 
 
@@ -65,7 +66,7 @@ const Home =  ()  => {
                 onMouseMove={() => {dispatchDrag({type : "onMouseMove", payload : {event : event}})}} 
                 className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-35 `}
             >        
-                <navigationContext.Provider value = {{dragState, dispatchDrag, NavigationRef}} >
+                <navigationContext.Provider value = {{dragState, dispatchDrag, NavigationRef, DotsMenuRef}} >
                     {/* component navigation */}
                     <ComponentNavigation />
                 </navigationContext.Provider>

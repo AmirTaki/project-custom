@@ -1,10 +1,13 @@
 import { BrowserRouter } from "react-router-dom";
 import { iconsList } from "./iconList";
 import LinkMenu from "./linkMenu";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { navigationContext } from "../home/Home";
+
 
 const DoctsMenu = () => {
 
+    const {DotsMenuRef, dispatchDrag, dragState} = useContext(navigationContext)
     const [toggle, setToggle] = useState(false)
     const [TouchLocation, setTouchLocation] = useState({
         x : 122, 
