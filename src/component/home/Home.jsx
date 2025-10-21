@@ -56,8 +56,13 @@ const Home =  ()  => {
                     y : action.payload.event.clientY - rectDots.top
                 }}
 
-            case "" :
-                return {...state}
+            case "onMouseMoveDots" :
+                if(!state.flagDrag) return {...state}      
+
+                return {...state, location : {
+                    x : action.payload.event.clientX - state.dragLocation.x,
+                    y : action.payload.event.clientY - state.dragLocation.y
+                } }
         }
     }
     
