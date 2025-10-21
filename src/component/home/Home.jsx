@@ -44,6 +44,7 @@ const Home =  ()  => {
                     x : action.payload.event.clientX - rect.left,
                     y : action.payload.event.clientY - rect.top
                 }}
+            case "onMouseDownDocts" :
         }
     }
     
