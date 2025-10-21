@@ -26,7 +26,12 @@ const Home =  ()  => {
                 return state
         }
     }
-    const [dragState, dispatchDrag] = useReducer(reducerDrag, [])
+    const [dragState, dispatchDrag] = useReducer(reducerDrag, {
+        dragNavigation : {x : 0, y : 0},
+        positionNavigation :  {x : 120, y : 500},
+        DragingNavigation : false, 
+    }
+    )
     // drag navigation
     const NavigationRef =  useRef(null)
     const [dragOffset, setDragOffset]  =  useState({x : 0, y : 0})
