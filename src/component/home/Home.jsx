@@ -44,7 +44,8 @@ const Home =  ()  => {
                     x : action.payload.event.clientX - rect.left,
                     y : action.payload.event.clientY - rect.top
                 }}
-            case "onMouseDownDocts" :
+        
+                case "onMouseDownDocts" :
                 const rectDots =  DotsMenuRef.current.getBoundingClientRect();
                 action.payload.event.preventDefault()
 
@@ -67,7 +68,7 @@ const Home =  ()  => {
     // veiw projects 
     const  [view, setView] =   useState(true)   
     return(
-        <div className={`bg-[#10131c] min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} >
+        <div className={`bg-[blue] z-[10000]! min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} >
             <div  
                 onMouseUp={() => {dispatchDrag({type : "onMouseUp", payload : { drag :  false}})}} 
                 onMouseLeave={() => {dispatchDrag({type : "onMouseUp", payload : { drag :  false}})}}  
