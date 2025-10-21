@@ -46,7 +46,7 @@ function MouseDragComponent() {
 
   return (
     <div
-      className="drag-container"
+      className="drag-container "
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseLeave}
