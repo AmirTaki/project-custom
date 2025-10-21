@@ -47,21 +47,20 @@ const Home =  ()  => {
                 }}
         
             // Dots
-            case "" :
-                return {...state, }
-
+            case "onMouseUpDots" :
+                return {...state, dragLocatoin : action.payload.drag }
 
             case "onMouseDownDocts" :
                 const rectDots =  DotsMenuRef.current.getBoundingClientRect();
                 action.payload.event.preventDefault()
 
-                return {...state, flagDrag : action.payload.flag, drag : {
+                return {...state, dragLocatoin : action.payload.flag, drag : {
                     x : action.payload.event.clientX - rectDots.left,
                     y : action.payload.event.clientY - rectDots.top
                 }}
 
             case "onMouseMoveDots" :
-                if(!state.flagDrag) return {...state}      
+                if(!state.dragLocatoin) return {...state}      
 
                 return {...state, location : {
                     x : action.payload.event.clientX - state.dragLocation.x,
