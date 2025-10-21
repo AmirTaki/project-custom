@@ -15,7 +15,7 @@ import SelectMenu from "../selectMenu/index.jsx"
  
 const Home =  ()  => {
 
-    const  [view, setView] =   useState(false)
+    const  [view, setView] =   useState(true)
     return(
         <div className={`bg-[#10131c] min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} >
             <div  
@@ -57,10 +57,11 @@ const Home =  ()  => {
 
                 {/* custom right click */}
                 <CustomRightClick />
+                
+                {/* select menu */}
+                <SelectMenu />
             </div>
 
-            {/* select menu */}
-            <SelectMenu />
 
             <div className="h-100 w-100 text-white"></div>
         </div>
