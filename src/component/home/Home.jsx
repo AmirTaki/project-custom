@@ -29,6 +29,9 @@ const Home =  ()  => {
                 const {event} = action.payload
                 if(!state.DragingNavigation) return {...state}             
                 return {...state, positionNavigation: {x : event.clientX - state.dragOffset.x, y : event.clientY - state.clientY - state.dragOffset.y}}
+
+            case 'onMouseDown' : 
+                
         }
     }
     const [dragState, dispatchDrag] = useReducer(reducerDrag, {
