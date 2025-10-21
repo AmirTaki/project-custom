@@ -92,6 +92,11 @@ const Home =  ()  => {
         dispatchDrag({type : "onMouseUp", payload : { drag :  false}}),
         dispatchDrag({type : "onMouseUpDots", payload : { drag :  false}})
     }, [])
+
+    const handlerMouseMove = useMemo( () => (event) => {
+        dispatchDrag({type : "onMouseMove", payload : {event : event}}),
+        dispatchDrag({type : "onMouseMoveDots", payload : {event : event}})
+    }, [])
     // veiw projects 
     const  [view, setView] =   useState(true)   
     return(
@@ -101,10 +106,7 @@ const Home =  ()  => {
             <div 
                 onMouseUp={handlerMouseUp}
                 onMouseLeave={handlerMouseLeave}  
-                onMouseMove={() => {
-                    dispatchDrag({type : "onMouseMove", payload : {event : event}}),
-                    dispatchDrag({type : "onMouseMoveDots", payload : {event : event}})
-                }} 
+                onMouseMove={handlerMouseMove} 
                 className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-35 `}
             >        
                 <navigationContext.Provider value = {{dragState, dispatchDrag, NavigationRef, DotsMenuRef}} >
