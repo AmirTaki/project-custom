@@ -1,4 +1,4 @@
-import {  createContext, useRef, useState } from "react"
+import {  createContext, useReducer, useRef, useState } from "react"
 import AnimatedOnScroll from "../animatedOnScroll/index.jsx"
 import Card from "../card3D/index.jsx"
 import ComponentNavigation from "../componentNavigation"
@@ -20,6 +20,13 @@ export const navigationContext = createContext ()
 
 const Home =  ()  => {
 
+    const reducerDrag = (state, action) => {
+        switch(action.type){
+            case '': 
+                return state
+        }
+    }
+    const [dragState, dispatchDrag] = useReducer(reducerDrag, [])
     // drag navigation
     const NavigationRef =  useRef(null)
     const [dragOffset, setDragOffset]  =  useState({x : 0, y : 0})
