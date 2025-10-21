@@ -9,10 +9,10 @@ const DoctsMenu = () => {
 
     const {DotsMenuRef, dispatchDrag, dragState} = useContext(navigationContext)
     const [toggle, setToggle] = useState(false)
-    const [TouchLocation, setTouchLocation] = useState({
-        x : 122, 
-        y : 200
-    })
+    // const [TouchLocation, setTouchLocation] = useState({
+    //     x : 122, 
+    //     y : 200
+    // })
     return(
         // navigation
         <div 
@@ -21,7 +21,7 @@ const DoctsMenu = () => {
                   bg-[#212532] rounded-[10px] cursor-pointer   fixed 
                  duration-[500ms] flex items-center  justify-center z-[1000]! ` 
             }
-            style={{top : `${TouchLocation.x}px`, left : `${TouchLocation.y}px`}}
+            style={{top : `${dragState.location.x}px`, left : `${dragState.location.y}px`}}
             onClick={() => {setToggle((prev) => (!prev))}}
             >
     
