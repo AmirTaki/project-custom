@@ -18,8 +18,9 @@ const DoctsMenu = () => {
         <div 
             ref = {DotsMenuRef}
             onMouseDown={() => {dispatchDrag({type : 'onMouseDownDocts', payload : {flag : true, event, event }})}}
+            // delay-[800ms]
             className={` 
-                ${toggle ? "w-[200px] h-[200px] delay-0 " : "w-[70px] h-[70px] delay-[800ms]"}
+                ${toggle ? "w-[200px] h-[200px] delay-0 " : "w-[70px] h-[70px] "}
                   bg-[#212532] rounded-[10px] cursor-pointer   fixed 
                  duration-[500ms] flex items-center  justify-center z-[1000]! ` 
             }

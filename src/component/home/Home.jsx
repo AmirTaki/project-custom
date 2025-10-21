@@ -50,6 +50,14 @@ const Home =  ()  => {
             case "onMouseUpDots" :
                 return {...state, dragLocatoin : action.payload.drag }
 
+            case "onMouseMoveDots" :
+                if(!state.dragLocatoin) return {...state}      
+
+                return {...state, location : {
+                    x : action.payload.event.clientX - state.dragLocation.x,
+                    y : action.payload.event.clientY - state.dragLocation.y
+                } }
+        
             case "onMouseDownDocts" :
                 const rectDots =  DotsMenuRef.current.getBoundingClientRect();
                 action.payload.event.preventDefault()
@@ -58,23 +66,17 @@ const Home =  ()  => {
                     x : action.payload.event.clientX - rectDots.left,
                     y : action.payload.event.clientY - rectDots.top
                 }}
-
-            case "onMouseMoveDots" :
-                if(!state.dragLocatoin) return {...state}      
-
-                return {...state, location : {
-                    x : action.payload.event.clientX - state.dragLocation.x,
-                    y : action.payload.event.clientY - state.dragLocation.y
-                } }
         }
     }
     
     const [dragState, dispatchDrag] = useReducer(reducerDrag, {
+        // navigation
         drag : {x : 0, y : 0},
-        dragLocation : {x : 0, y:0},
         position :  {x : 120, y : 500},
-        location : {x : 122, y : 200},
         flagDrag : false, 
+        // dots
+        dragLocation : {x : 0, y:0},
+        location : {x : 122, y : 200},
         dragLocatoin : false
         }
     )
