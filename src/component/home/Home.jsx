@@ -61,9 +61,10 @@ const Home =  ()  => {
                 onMouseLeave={handleMouseLeave}  
                 className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-35 `}
             >        
-
-                {/* component navigation */}
-                <ComponentNavigation />
+                <navigationContext.Provider value = {{position, handleMouseDown}} >
+                    {/* component navigation */}
+                    <ComponentNavigation />
+                </navigationContext.Provider>
 
                 {/* Navbar */}
                 <NavbarPaeg />
