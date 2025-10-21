@@ -23,7 +23,7 @@ const DoctsMenu = () => {
                   bg-[#212532] rounded-[10px] cursor-pointer   fixed 
                  duration-[500ms] flex items-center  justify-center z-[1000]! ` 
             }
-            style={{top : `${dragState.location.x}px`, left : `${dragState.location.y}px`}}
+            style={{left : `${dragState.location.x}px`, top : `${dragState.location.y}px`}}
             onClick={() => {setToggle((prev) => (!prev))}}
             >
     

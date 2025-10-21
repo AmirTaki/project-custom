@@ -54,7 +54,7 @@ const Home =  ()  => {
                 const rectDots =  DotsMenuRef.current.getBoundingClientRect();
                 action.payload.event.preventDefault()
 
-                return {...state, dragLocatoin : action.payload.flag, drag : {
+                return {...state, dragLocatoin : action.payload.flag, dragLocation : {
                     x : action.payload.event.clientX - rectDots.left,
                     y : action.payload.event.clientY - rectDots.top
                 }}
