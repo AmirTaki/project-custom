@@ -85,8 +85,8 @@ const Home =  ()  => {
     return(
         <div 
             // onMouseUp={() => {}} 
-            onMouseLeave={() => {}}  
-            onMouseMove={() => {dispatchDrag({type : "onMouseMoveDots", payload : {event : event}})}} 
+            // onMouseLeave={() => {}}  
+            // onMouseMove={() => {}} 
             className={`bg-[blue] z-[10000]! min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} 
         >
             <div  
@@ -98,7 +98,10 @@ const Home =  ()  => {
                     dispatchDrag({type : "onMouseUp", payload : { drag :  false}}),
                     dispatchDrag({type : "onMouseUpDots", payload : { drag :  false}})
                 }}  
-                onMouseMove={() => {dispatchDrag({type : "onMouseMove", payload : {event : event}})}} 
+                onMouseMove={() => {
+                    dispatchDrag({type : "onMouseMove", payload : {event : event}}),
+                    dispatchDrag({type : "onMouseMoveDots", payload : {event : event}})
+                }} 
                 className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-35 `}
             >        
                 <navigationContext.Provider value = {{dragState, dispatchDrag, NavigationRef, DotsMenuRef}} >
