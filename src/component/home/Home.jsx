@@ -45,6 +45,13 @@ const Home =  ()  => {
                     y : action.payload.event.clientY - rect.top
                 }}
             case "onMouseDownDocts" :
+                const rectDots =  DotsMenuRef.current.getBoundingClientRect();
+                action.payload.event.preventDefault()
+
+                return {...state, flagDrag : action.payload.flag, drag : {
+                    x : action.payload.event.clientX - rectDots.left,
+                    y : action.payload.event.clientY - rectDots.top
+                }}
         }
     }
     
