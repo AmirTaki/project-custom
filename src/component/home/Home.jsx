@@ -20,9 +20,8 @@ import MouseDragComponent from "../drag/index.jsx"
 const Home =  ()  => {
     const [dragOffset, setDragOffset]  =  useState({x : 0, y : 0})
     const [isDragging, setIsDragging] = useState(false)
-    const handleMouseUp = () => {
-        setIsDragging(false)
-    }
+    const handleMouseUp = () => { setIsDragging(false)}
+    const handleMouseDown = () => {setIsDragging(true)}
 
 
 
@@ -31,7 +30,8 @@ const Home =  ()  => {
     return(
         <div className={`bg-[#10131c] min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} >
             <div  
-                onMouseUp={handleMouseUp}    
+                onMouseUp={handleMouseUp} 
+                onMouseDown={handleMouseDown}   
                 className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-35 `}
             >        
 
