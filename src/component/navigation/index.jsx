@@ -17,6 +17,8 @@ const Navigation = () => {
         y : 500
     })
 
+    const [dragOffset, setDragOffset]  =  useState({x : 0, y : 0})
+
     
     return (
         // flex justify-center items-center relative
