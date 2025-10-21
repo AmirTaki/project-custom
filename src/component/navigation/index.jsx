@@ -12,10 +12,7 @@ const Navigation = () => {
         setToggle((prevToggle) => !prevToggle)
     }
 
-    const [position, setPosition] = useState({
-        x : 120,
-        y : 500
-    })
+
     
     return (
         // flex justify-center items-center relative
