@@ -24,19 +24,23 @@ const Home =  ()  => {
     const reducerDrag = (state, action) => {
         switch(action.type){
             case 'onMouseUp': 
-            return {...state, DragingNavigation : action.payload.drag}
+            return {...state, flagDrag : action.payload.drag}
             
-            case "onMouseMove" :
-                const {event} = action.payload
-                if(!state.DragingNavigation) return {...state}             
-                return {...state, positionNavigation: {x : event.clientX - state.dragOffset.x, y : event.clientY - state.clientY - state.dragOffset.y}}
+            case "onMouseMove" :          
+                if(!state.flagDrag) return {...state}      
+
+                return {...state, position : {
+                    x : action.payload.event.clientX - state.drag.x,
+                    y : action.payload.event.clientY - state.drag.y
+                } }
 
             case 'onMouseDown' :
                 const rect =  NavigationRef.current.getBoundingClientRect();
-                event.preventDefault()
+                action.payload.event.preventDefault()
+                console.log(action.payload.event)
                 return {...state, DragingNavigation : action.payload.flag, dragNavigation : {
-                    x : event.clientX - rect.left,
-                    y : event.clientY - rect.top
+                    x : action.payload.event.clientX - rect.left,
+                    y : action.payload.event.clientY - rect.top
                 } }
 
         }
@@ -53,9 +57,9 @@ const Home =  ()  => {
     
         // }
     const [dragState, dispatchDrag] = useReducer(reducerDrag, {
-        dragNavigation : {x : 0, y : 0},
-        positionNavigation :  {x : 120, y : 500},
-        DragingNavigation : false, 
+        drag : {x : 0, y : 0},
+        position :  {x : 120, y : 500},
+        flagDrag : false, 
     }
     )
     // drag navigation
