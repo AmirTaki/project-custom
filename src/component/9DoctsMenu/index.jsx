@@ -20,7 +20,7 @@ const DoctsMenu = () => {
             onMouseDown={handlerMouseDown}
             // delay-[800ms]
             className={` 
-                ${toggle ? "w-[200px] h-[200px] delay-0  transition-[transform,width,height,background-color] duration-500  " : "w-[70px] h-[70px] transition-[transform,width,height,background-color] duration-500    "}
+                ${toggle ? "w-[200px] h-[200px]   transition-[transform,width,height,background-color] duration-500 delay-75 " : "w-[70px] h-[70px] transition-[transform,width,height,background-color] duration-500 delay-500   "}
                   bg-[#212532] rounded-[10px] cursor-pointer   fixed 
                 flex items-center  justify-center z-[1000]! ` 
             }
