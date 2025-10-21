@@ -32,6 +32,9 @@ const Home =  ()  => {
             event.target.appendChild(dragElement)
         }
     }
+    const dragHandler = (event) => {
+        event.dataTransfer.setData('navigation', event.target.id)
+    }
     return(
         <dragContext.Provider value = {{navigationRef}}>
 
