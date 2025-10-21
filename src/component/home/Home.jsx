@@ -1,4 +1,4 @@
-import {  createContext, useReducer, useRef, useState } from "react"
+import {  createContext, useEffect, useReducer, useRef, useState } from "react"
 import AnimatedOnScroll from "../animatedOnScroll/index.jsx"
 import Card from "../card3D/index.jsx"
 import ComponentNavigation from "../componentNavigation"
@@ -21,6 +21,7 @@ export const navigationContext = createContext ()
 const Home =  ()  => {
 
     const NavigationRef =  useRef(null)
+ 
     const reducerDrag = (state, action) => {
         switch(action.type){
             case 'onMouseUp': 
@@ -38,48 +39,21 @@ const Home =  ()  => {
                 const rect =  NavigationRef.current.getBoundingClientRect();
                 action.payload.event.preventDefault()
         
-                return {...state, drag : {
+                return {...state, flagDrag : action.payload.flag  ,drag : {
                     x : action.payload.event.clientX - rect.left,
-                    y : action.payload.event.clientY - React.top
+                    y : action.payload.event.clientY - rect.top
                 }}
         }
     }
     
-        // const handleMouseDown = (event) => {
-        //     setIsDragging(true)
-        //     const rect =  NavigationRef.current.getBoundingClientRect();
-        //     setDragOffset({
-        //         x : event.clientX - rect.left,
-        //         y : event.clientY - rect.top
-        //     })
-        //     event.preventDefault()
-    
-        // }
+
     const [dragState, dispatchDrag] = useReducer(reducerDrag, {
         drag : {x : 0, y : 0},
         position :  {x : 120, y : 500},
         flagDrag : false, 
     }
     )
-    // drag navigation
-    // 
-    // const [dragOffset, setDragOffset]  =  useState({x : 0, y : 0})
-    // const [position, setPosition] = useState({ x : 120, y : 500})
-    // const [isDragging, setIsDragging] = useState(false)
-    
-    // const handleMouseUp = () => { setIsDragging(false)}
-    // const handleMouseLeave = () => {setIsDragging(false)}
 
-    // const handleMouseMove = (event) => {
-    //     if(!isDragging) return;
-       
-    //     setPosition({
-    //         x:event.clientX - dragOffset.x,
-    //         y:event.clientY - dragOffset.y
-    //     })
-    // }
-
-    // 
 
     // veiw projects 
     const  [view, setView] =   useState(true)   
