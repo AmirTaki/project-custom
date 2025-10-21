@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext, useMemo, useState } from "react"
 import { BrowserRouter, Link } from "react-router-dom"
 import LinkNavigation from "./linkNavigation"
 import { navigationContext } from "../home/Home"
@@ -13,12 +13,16 @@ const Navigation = () => {
     }
 
     const {dragState, dispatchDrag, NavigationRef} =  useContext(navigationContext)
+
+    const handlerMouseDown = useMemo(() => (event) => {
+        dispatchDrag({type : "onMouseDown", payload : {event : event, flag : true}})
+    }, [NavigationRef])
     
     return (
         // flex justify-center items-center relative
         <div 
             ref = {NavigationRef}
-            onMouseDown = {() => {dispatchDrag({type : "onMouseDown", payload : {event : event, flag : true}})}} 
+            onMouseDown = {handlerMouseDown} 
             className={`fixed  list-none   w-[2px] h-[2px]   z-300`}
             style={{left : `${dragState.position.x}px`, top :`${dragState.position.y}px`}}
         >
