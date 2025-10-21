@@ -102,7 +102,7 @@ const Home =  ()  => {
     const  [view, setView] =   useState(true)   
     return(
         <div 
-            className={`bg-[blue] z-[10000]! min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} 
+            className={`bg-[blue] min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} 
         >
             <div 
                 onMouseUp={handlerMouseUp}
