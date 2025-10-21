@@ -21,7 +21,7 @@ export const navigationContext = createContext ()
 const Home =  ()  => {
 
     // drag navigation
-    const dragRef =  useRef(null)
+    const NavigationRef =  useRef(null)
     const [dragOffset, setDragOffset]  =  useState({x : 0, y : 0})
     const [position, setPosition] = useState({ x : 120, y : 500})
     const [isDragging, setIsDragging] = useState(false)
@@ -40,7 +40,7 @@ const Home =  ()  => {
 
     const handleMouseDown = (event) => {
         setIsDragging(true)
-        const rect =  dragRef.current.getBoundingClientRect();
+        const rect =  NavigationRef.current.getBoundingClientRect();
         setDragOffset({
             x : event.clientX - rect.left,
             y : event.clientY - rect.top
@@ -52,7 +52,7 @@ const Home =  ()  => {
     // 
 
     // veiw projects 
-    const  [view, setView] =   useState(false)   
+    const  [view, setView] =   useState(true)   
     return(
         <div className={`bg-[#10131c] min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} >
             <div  
@@ -61,7 +61,7 @@ const Home =  ()  => {
                 onMouseLeave={handleMouseLeave}  
                 className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-35 `}
             >        
-                <navigationContext.Provider value = {{position, handleMouseDown}} >
+                <navigationContext.Provider value = {{position, handleMouseDown, NavigationRef}} >
                     {/* component navigation */}
                     <ComponentNavigation />
                 </navigationContext.Provider>
@@ -103,7 +103,7 @@ const Home =  ()  => {
                 <SelectMenu />
             </div>
 
-            <MouseDragComponent />
+            {/* <MouseDragComponent /> */}
             <div className="h-100 w-100 text-white"></div>
         </div>   
     )

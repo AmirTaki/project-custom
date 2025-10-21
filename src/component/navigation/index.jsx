@@ -1,7 +1,7 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { BrowserRouter, Link } from "react-router-dom"
 import LinkNavigation from "./linkNavigation"
-
+import { navigationContext } from "../home/Home"
 
 
 const Navigation = () => {
@@ -12,11 +12,14 @@ const Navigation = () => {
         setToggle((prevToggle) => !prevToggle)
     }
 
-
+    const {position, handleMouseDown, NavigationRef} =  useContext(navigationContext)
     
     return (
         // flex justify-center items-center relative
-        <div className={`fixed  list-none   w-[2px] h-[2px]   z-300`}
+        <div 
+            ref = {NavigationRef}
+            onMouseDown = {handleMouseDown}
+            className={`fixed  list-none   w-[2px] h-[2px]   z-300`}
             style={{left : `${position.x}px`, top :`${position.y}px`}}
         >
                 <div
