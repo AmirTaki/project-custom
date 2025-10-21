@@ -84,14 +84,20 @@ const Home =  ()  => {
     const  [view, setView] =   useState(true)   
     return(
         <div 
-            onMouseUp={() => {dispatchDrag({type : "onMouseUpDots", payload : { drag :  false}})}} 
-            onMouseLeave={() => {dispatchDrag({type : "onMouseUpDots", payload : { drag :  false}})}}  
+            // onMouseUp={() => {}} 
+            onMouseLeave={() => {}}  
             onMouseMove={() => {dispatchDrag({type : "onMouseMoveDots", payload : {event : event}})}} 
             className={`bg-[blue] z-[10000]! min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} 
         >
             <div  
-                onMouseUp={() => {dispatchDrag({type : "onMouseUp", payload : { drag :  false}})}} 
-                onMouseLeave={() => {dispatchDrag({type : "onMouseUp", payload : { drag :  false}})}}  
+                onMouseUp={() => {
+                    dispatchDrag({type : "onMouseUp", payload : { drag :  false}}),
+                    dispatchDrag({type : "onMouseUpDots", payload : { drag :  false}})
+                }} 
+                onMouseLeave={() => {
+                    dispatchDrag({type : "onMouseUp", payload : { drag :  false}}),
+                    dispatchDrag({type : "onMouseUpDots", payload : { drag :  false}})
+                }}  
                 onMouseMove={() => {dispatchDrag({type : "onMouseMove", payload : {event : event}})}} 
                 className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-35 `}
             >        
