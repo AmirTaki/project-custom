@@ -7,11 +7,11 @@ import { navigationContext } from "../home/Home";
 
 const DoctsMenu = () => {
 
-    const handlerMouseDown = useMemo(() => {
-        dispatchDrag({type : 'onMouseDownDocts', payload : {flag : true, event, event }})
-    }, [])
     const {DotsMenuRef, dispatchDrag, dragState} = useContext(navigationContext)
     const [toggle, setToggle] = useState(false)
+    const handlerMouseDown = useMemo(() =>(event) => {
+        dispatchDrag({type : 'onMouseDownDocts', payload : {flag : true, event, event }})
+    }, [DotsMenuRef])
 
     return(
         // navigation
