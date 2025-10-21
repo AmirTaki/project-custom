@@ -1,4 +1,4 @@
-import {  useRef, useState } from "react"
+import {  createContext, useRef, useState } from "react"
 import AnimatedOnScroll from "../animatedOnScroll/index.jsx"
 import Card from "../card3D/index.jsx"
 import ComponentNavigation from "../componentNavigation"
@@ -15,9 +15,12 @@ import SelectMenu from "../selectMenu/index.jsx"
 
 // 
 import MouseDragComponent from "../drag/index.jsx"
-
+// create context
+export const navigationContext = createContext ()
 
 const Home =  ()  => {
+
+    // drag navigation
     const dragRef =  useRef(null)
     const [dragOffset, setDragOffset]  =  useState({x : 0, y : 0})
     const [position, setPosition] = useState({ x : 120, y : 500})
@@ -46,7 +49,9 @@ const Home =  ()  => {
 
     }
 
+    // 
 
+    // veiw projects 
     const  [view, setView] =   useState(false)   
     return(
         <div className={`bg-[#10131c] min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} >
