@@ -8,19 +8,14 @@ const DoctsMenu = () => {
 
     const [toggle, setToggle] = useState(false)
 
-    const {DotsMenuRef,  dragLocationRef, isDraggingRef} = useContext(navigationContext)
+    const {DotsMenuRef, dragState, dispatchDrag } = useContext(navigationContext)
 
-    const handlerMouseDown = useCallback((event) => {
-    const rect = DotsMenuRef.current.getBoundingClientRect();
-    dragLocationRef.current = {
-        x: event.clientX - rect.left,
-        y: event.clientY - rect.top,
-    };
-    isDraggingRef.current = true;
-    }, []);
+  
+    const handlerMouseDown = useCallback( (event) => {
+       dispatchDrag({type : "onMouseDownDocts", payload : {event : event, flag : true}})
+    }, [DotsMenuRef])
 
-
-
+  
     return(
         // navigation
         <div 
@@ -29,10 +24,12 @@ const DoctsMenu = () => {
             // delay-[800ms]
             className={` 
                 ${toggle ? "w-[200px] h-[200px]   transition-[transform,width,height,background-color] duration-500 delay-75 " : "w-[70px] h-[70px] transition-[transform,width,height,background-color] duration-500 delay-500   "}
-                  bg-[#212532] rounded-[10px] cursor-pointer   fixed top-[150px] left-[100px]
+                  bg-[#212532] rounded-[10px] cursor-pointer   fixed 
                 flex items-center  justify-center z-[1000]! ` 
             }
             onClick={() => {setToggle((prev) => (!prev))}}
+            style={{left : `${dragState.location.x}px`, top :`${dragState.location.y}px`}}
+
             >
     
             <BrowserRouter >

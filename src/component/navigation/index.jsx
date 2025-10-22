@@ -12,11 +12,11 @@ const Navigation = () => {
         setToggle((prevToggle) => !prevToggle)
     }
 
-    const {dragState, NavigationRef} =  useContext(navigationContext)
+    const {dragState, NavigationRef, dispatchDrag} =  useContext(navigationContext)
 
 
     
-    const handlerMouseDown = useMemo(() => (event) => {
+    const handlerMouseDown = useCallback((event) => {
         dispatchDrag({type : "onMouseDown", payload : {event : event, flag : true}})
     }, [NavigationRef])
     
