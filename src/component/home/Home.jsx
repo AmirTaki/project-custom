@@ -12,6 +12,8 @@ import CardHoverEffect from "../cardHoverEffect/index.jsx"
 import LoadingAnimation from "../loadingAnimation/index.jsx"
 import CustomRightClick from "../customRightClick/index.jsx"
 import SelectMenu from "../selectMenu/index.jsx"
+import DropDrownMenu from "../dropDrownMenu.jsx/index.jsx"
+
 // create context
 export const navigationContext = createContext ()
 
@@ -121,6 +123,9 @@ const Home =  ()  => {
 
 
             {/* <MouseDragComponent /> */}
+
+            {/* drop drown menu */}
+            <DropDrownMenu />
             <div className="h-100 w-100 text-white"></div>
         </div>   
     )
