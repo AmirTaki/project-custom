@@ -7,7 +7,7 @@ const DropDrownMenu = () => {
         <div
             className={` ${active ? "w-[300px] h-[400px]" : "w-[120px] h-[60px]"}
                 bg-white shadow-[10px_25px_35px_rgba(0,0,0,.1)] flex justify-between 
-                transition-[width .5s_height .5s]   
+                transition-[width,height] duration-500 delay-[0ms,750ms]   
             `}
             >
 
