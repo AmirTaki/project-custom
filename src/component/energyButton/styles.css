@@ -9,7 +9,7 @@
 }
 
 
-@keyframes  energy{
+@keyframes  animate-pulse-custom{
     0%{
         box-shadow:  0 0 15px rgba(80, 241, 0, 1),
                      0 0 25px rgba(80, 241, 0, 1);
