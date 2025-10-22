@@ -49,7 +49,11 @@ const Home =  ()  => {
            DoctsMenuRef.current.style.top = `${y}px`
         }
 
-        
+        else if(isDraggingNavigation.current){
+            const x = e.clientX - dragPostionRef.current.x;
+            const y = e.clientY - dragPostionRef.current.y;
+        }
+
 
         else {
             return
