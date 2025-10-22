@@ -11,8 +11,8 @@ const LinkNavigation = ({icon, index, toggle}) => {
                 transform : `${toggle ? `rotate(0deg) translateX(80px)` : `rotate(calc(360deg / 8 * ${index})`}`,
                 // left : `${dragState.position.x - 70}px`, top :`${dragState.position.y + 10}px`
             }}
-        //   absolute  left-0
-            className={`fixed left-0  list-none origin-[100px] transition-transform duration-[500ms]!`}
+        //   absolute  left-0 left-[clac(250-70)px] top-[clac(130+10)px]
+            className={`absolute  -left-18! top-3 list-none origin-[100px] transition-transform duration-[500ms]!  `}
         >
             <Link 
                 // style={{transform : `${toggle ? `` : `rotate(calc(360deg / -8 * ${index}))`} `}}
