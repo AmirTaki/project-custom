@@ -6,12 +6,9 @@ import { navigationContext } from "../home/Home";
 
 const DoctsMenu = () => {
 
-    const {DotsMenuRef,  dragLocationRef, isDraggingRef} = useContext(navigationContext)
     const [toggle, setToggle] = useState(false)
- 
 
-
-
+    const {DotsMenuRef,  dragLocationRef, isDraggingRef} = useContext(navigationContext)
 
     const handlerMouseDown = useCallback((event) => {
     const rect = DotsMenuRef.current.getBoundingClientRect();

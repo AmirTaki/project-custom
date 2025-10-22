@@ -20,32 +20,9 @@ export const navigationContext = createContext ()
 
 const Home =  ()  => {
 
-
-    
-    const dragLocationRef = useRef({ x: 0, y: 0 });
-    const isDraggingRef = useRef(false);
-
-    const handleMouseMove = useCallback((e) => {
-    if (!isDraggingRef.current) return;
-    const x = e.clientX - dragLocationRef.current.x;
-    const y = e.clientY - dragLocationRef.current.y;
-    DotsMenuRef.current.style.left = `${x}px`;
-    DotsMenuRef.current.style.top = `${y}px`;
-    }, []);
-
-
-    const handleMouseLeave = useCallback( () => {
-        isDraggingRef.current = false
-    }, [])
-
-    const handleMouseUp = useCallback( () => {
-        isDraggingRef.current = false
-    }, [])
- 
-
     const NavigationRef =  useRef(null)
     const DotsMenuRef =  useRef(null)
- 
+
     const reducerDrag = useCallback( (state, action) => {
         switch(action.type){
             case 'onMouseUp': 
@@ -128,12 +105,12 @@ const Home =  ()  => {
             className={`bg-[blue] min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} 
         >
             <div 
-                onMouseUp={handleMouseUp}
-                onMouseLeave={handleMouseLeave}  
-                onMouseMove={handleMouseMove} 
+                onMouseUp={handlerMouseUp}
+                onMouseLeave={handlerMouseLeave}  
+                onMouseMove={handlerMouseMove} 
                 className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-35 `}
             >        
-                <navigationContext.Provider value = {{dragState, dispatchDrag, NavigationRef, DotsMenuRef, dragLocationRef, isDraggingRef}} >
+                <navigationContext.Provider value = {{DotsMenuRef,  dragLocationRef, isDraggingRef, NavigationRef, dragNavigatioRef, isdragNavigationRef }} >
                     {/* component navigation */}
                     <ComponentNavigation />
                 </navigationContext.Provider>

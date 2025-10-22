@@ -1,4 +1,4 @@
-import { useContext, useMemo, useState } from "react"
+import { useContext, useMemo, useState, useCallback } from "react"
 import { BrowserRouter, Link } from "react-router-dom"
 import LinkNavigation from "./linkNavigation"
 import { navigationContext } from "../home/Home"
@@ -12,19 +12,29 @@ const Navigation = () => {
         setToggle((prevToggle) => !prevToggle)
     }
 
-    const {dragState, dispatchDrag, NavigationRef} =  useContext(navigationContext)
+    const {dragNavigatioRef, NavigationRef, isdragNavigationRef} =  useContext(navigationContext)
 
-    const handlerMouseDown = useMemo(() => (event) => {
-        dispatchDrag({type : "onMouseDown", payload : {event : event, flag : true}})
-    }, [NavigationRef])
+
+    const handlerMouseDown = useCallback((event) => {
+        const rect = NavigationRef.current.getBoundingClientRect();
+        dragNavigatioRef.current = {
+            x: event.clientX - rect.left,
+            y: event.clientY - rect.top,
+        };
+        isdragNavigationRef.current = true;
+        }, []);
+    
+    // const handlerMouseDown = useMemo(() => (event) => {
+    //     dispatchDrag({type : "onMouseDown", payload : {event : event, flag : true}})
+    // }, [NavigationRef])
     
     return (
         // flex justify-center items-center relative
         <div 
             ref = {NavigationRef}
             onMouseDown = {handlerMouseDown} 
-            className={`fixed  list-none   w-[2px] h-[2px]   z-300`}
-            style={{left : `${dragState.position.x}px`, top :`${dragState.position.y}px`}}
+            className={`fixed  list-none top-[250px] left-[130px]   w-[2px] h-[2px]   z-300`}
+            // style={{left : `${dragState.position.x}px`, top :`${dragState.position.y}px`}}
         >
                 <div
                     onClick={handleToggle}
@@ -38,7 +48,7 @@ const Navigation = () => {
                     <BrowserRouter >
                         {listIcons.map((item, index) => {
                             return(
-                                <LinkNavigation icon =  {item} key = {index} index = {index} toggle = {toggle} dragState = {dragState}/>
+                                <LinkNavigation icon =  {item} key = {index} index = {index} toggle = {toggle} dragNavigatioRef = {dragNavigatioRef}/>
                             )
                         })}
                     </BrowserRouter>
