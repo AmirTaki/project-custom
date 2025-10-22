@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ItemsIcon from "./itemsIcon";
 import { BrowserRouter } from "react-router-dom";
-
+import { ListIcon } from "./listIcon";
 const DropDrownMenu = () => {
     const [active, setActive] = useState(false)
     return(
@@ -42,7 +42,11 @@ const DropDrownMenu = () => {
             {/* menu */}
             <ul className=" overflow-hidden absolute h-[calc(100%-60px)] w-[100%]  mt-[60px] p-[20px] border-t-1 border-t-[rgba(0,0,0,.1)]">
                 <BrowserRouter >
-                    <ItemsIcon />
+                    {ListIcon.map((item) => {
+                        return(
+                            <ItemsIcon key = {item.id} item = {item} />
+                        )
+                    })}
                 </BrowserRouter>
             </ul>
 

@@ -1,4 +1,4 @@
-const ListIcon = [
+export const ListIcon = [
     {
         id : 0,
         icon : 'bi bi-person',
