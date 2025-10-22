@@ -26,7 +26,8 @@ const Navigation = () => {
         <div 
             ref = {NavigationRef}
             onMouseDown = {handlerMouseDown} 
-            className={`absolute  list-none top-[300px] left-[130px]   w-[2px] h-[2px]   z-300`}
+            style={{left : `40px`, top : `50px`}}
+            className={`fixed  list-none  w-[2px] h-[2px]   z-[500]!`}
         >
             <div
                 onClick={handleToggle}
@@ -40,7 +41,7 @@ const Navigation = () => {
             <BrowserRouter >
                 {listIcons.map((item, index) => {
                     return(
-                        <LinkNavigation icon =  {item} key = {index} index = {index} toggle = {toggle} />
+                        <LinkNavigation icon =  {item} key = {index} index = {index} toggle = {toggle}  />
                     )
                 })}
             </BrowserRouter>

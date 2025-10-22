@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const LinkNavigation = ({icon, index, toggle}) => {
+const LinkNavigation = ({icon, index, toggle,}) => {
     return (
 
         <li 
@@ -8,8 +8,9 @@ const LinkNavigation = ({icon, index, toggle}) => {
                 // transitionDelay : `${toggle ? `calc(.1s * ${index}` : `calc(.1s * ${index}`}` ,
                 transitionDelay : `calc(.1s * ${index}` ,
                 transform : `${toggle ? `rotate(0deg) translateX(80px)` : `rotate(calc(360deg / 8 * ${index})`}`,
+                // left : `(${NavigationRef.current.x} px` , top : `${NavigationRef.current.y - 40 }px`
             }}
-            className={`absolute  -left-18! top-3 list-none origin-[100px] transition-transform duration-[500ms]!  `}
+            className={`absolute -left-17 top-2  list-none origin-[100px] transition-transform duration-[500ms]!  `}
         >
             <Link 
                 // style={{transform : `${toggle ? `` : `rotate(calc(360deg / -8 * ${index}))`} `}}

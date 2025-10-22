@@ -26,7 +26,7 @@ const Home =  ()  => {
     
     // navigation
     const NavigationRef =  useRef(null)
-    const dragPostionRef = useRef({x : 0, y : 0})
+    const dragPostionRef = useRef({x : 120, y : 120})
     const isDraggingNavigation = useRef(false)
 
 
@@ -67,7 +67,7 @@ const Home =  ()  => {
     }, [])
 
     // veiw projects 
-    const  [view, setView] =   useState(false)   
+    const  [view, setView] =   useState(true)   
     return(
         <div 
             className={`bg-[#10131c] min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} 
@@ -76,7 +76,7 @@ const Home =  ()  => {
                 onMouseUp={handlerMouseUp}
                 onMouseLeave={handlerMouseLeave}  
                 onMouseMove={handlerMouseMove} 
-                className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-35 `}
+                className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-52 `}
             >        
                 <navigationContext.Provider value = {{DoctsMenuRef, dragLocationRef, isDraggingDocts, NavigationRef, dragPostionRef, isDraggingNavigation}}>
                     {/* component navigation */}
@@ -118,14 +118,15 @@ const Home =  ()  => {
                 
                 {/* select menu */}
                 <SelectMenu />
+
+                {/* drop drown menu */}
+                <DropDrownMenu />
             </div>
 
 
 
             {/* <MouseDragComponent /> */}
 
-            {/* drop drown menu */}
-            <DropDrownMenu />
             <div className="h-100 w-100 text-white"></div>
         </div>   
     )
