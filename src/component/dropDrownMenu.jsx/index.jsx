@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ItemsIcon from "./itemsIcon";
 
 const DropDrownMenu = () => {
     const [active, setActive] = useState(false)
@@ -39,12 +40,7 @@ const DropDrownMenu = () => {
 
             {/* menu */}
             <ul className=" overflow-hidden absolute h-[calc(100%-60px)] w-[100%]  mt-[60px] p-[20px] border-t-1 border-t-[rgba(0,0,0,.1)]">
-                <li>
-                    <a href="" className="flex items-center my-[20px] mx-0 text-[1em] gap-[10px] decoration-0 text-[#555] hover:text-[#4e65ff]"> 
-                        <i className="bi bi-person text-[1.5em] "></i>
-                        My Profile
-                    </a>
-                </li>
+                <ItemsIcon />
             </ul>
 
         </div>
