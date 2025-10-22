@@ -8,7 +8,7 @@ const DoctsMenu = () => {
 
     const [toggle, setToggle] = useState(false)
 
-    const {DoctsMenuRef, dragLocationRef} = useContext(navigationContext)
+    const {DoctsMenuRef, dragLocationRef, isDraggingDocts} = useContext(navigationContext)
 
     const handlerMouseDown = useCallback((e) => {
         const rect =  DoctsMenuRef.current.getBoundingClientRect();
@@ -16,6 +16,7 @@ const DoctsMenu = () => {
             x : e.clientX - rect.left,
             y : e.clientY - rect.top
         }
+        isDraggingDocts.current = true
     }, [])
   
   
