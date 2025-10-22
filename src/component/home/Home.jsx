@@ -68,7 +68,7 @@ const Home =  ()  => {
     }, [])
 
     // veiw projects 
-    const  [view, setView] =   useState(false)   
+    const  [view, setView] =   useState(true)   
     return(
         <div 
             className={`bg-[#10131c] min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} 
@@ -122,14 +122,15 @@ const Home =  ()  => {
 
                 {/* drop drown menu */}
                 <DropDrownMenu />
+               
+                {/* energy button */}
+                <EnergyButton />
             </div>
 
 
 
             {/* <MouseDragComponent /> */}
 
-            {/* energy button */}
-            <EnergyButton />
 
             <div className="h-100 w-100 text-white"></div>
         </div>   
