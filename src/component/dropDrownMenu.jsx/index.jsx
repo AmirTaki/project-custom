@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ItemsIcon from "./itemsIcon";
+import { BrowserRouter } from "react-router-dom";
 
 const DropDrownMenu = () => {
     const [active, setActive] = useState(false)
@@ -40,7 +41,9 @@ const DropDrownMenu = () => {
 
             {/* menu */}
             <ul className=" overflow-hidden absolute h-[calc(100%-60px)] w-[100%]  mt-[60px] p-[20px] border-t-1 border-t-[rgba(0,0,0,.1)]">
-                <ItemsIcon />
+                <BrowserRouter >
+                    <ItemsIcon />
+                </BrowserRouter>
             </ul>
 
         </div>
