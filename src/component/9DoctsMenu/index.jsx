@@ -10,6 +10,9 @@ const DoctsMenu = () => {
 
     const { DoctsMenuRef} = useContext(navigationContext)
 
+    const handlerMouseDown = () => {
+        
+    }
   
   
     return(
