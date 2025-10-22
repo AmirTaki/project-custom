@@ -19,5 +19,15 @@ const ListIcon = [
         icon : 'bi bi-gear',
         title : 'Settings'
     },
+    {
+        id : 4,
+        icon : 'bi bi-question-lg',
+        title : 'Help & Support'
+    },
+    {
+        id : 5,
+        icon : 'bi bi-box-arrow-right',
+        title : 'Logout'
+    },
 
 ]
