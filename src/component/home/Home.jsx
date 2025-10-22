@@ -13,13 +13,10 @@ import LoadingAnimation from "../loadingAnimation/index.jsx"
 import CustomRightClick from "../customRightClick/index.jsx"
 import SelectMenu from "../selectMenu/index.jsx"
 
-// 
-import MouseDragComponent from "../drag/index.jsx"
 // create context
 export const navigationContext = createContext ()
 
 const Home =  ()  => {
-
 
     // doctMenu
     const DoctsMenuRef = useRef(null)
@@ -57,7 +54,7 @@ const Home =  ()  => {
            DoctsMenuRef.current.style.top = `${y}px`
         }
 
-        else if(isDraggingNavigation.current){
+        if(isDraggingNavigation.current){
             const x = e.clientX - dragPostionRef.current.x;
             const y = e.clientY - dragPostionRef.current.y;
             NavigationRef.current.style.left = `${x}px`
@@ -68,33 +65,6 @@ const Home =  ()  => {
             return
         }
     }, [])
-
-
-    // const dragLocationRef = useRef({ x: 0, y: 0 });
-    // const isDraggingRef = useRef(false);
-
-    // const NavigationRef =  useRef(null)
-    // const DotsMenuRef =  useRef(null)
-
-    // const handleMouseMove = useCallback((e) => {
-    // if (!isDraggingRef.current) return;
-    // const x = e.clientX - dragLocationRef.current.x;
-    // const y = e.clientY - dragLocationRef.current.y;
-    // DotsMenuRef.current.style.left = `${x}px`;
-    // DotsMenuRef.current.style.top = `${y}px`;
-    // }, []);
-
-
-    //     const handlerMouseDown = useCallback((event) => {
-    //   const rect = DotsMenuRef.current.getBoundingClientRect();
-    //   dragLocationRef.current = {
-    //     x: event.clientX - rect.left,
-    //     y: event.clientY - rect.top,
-    //   };
-    //   isDraggingRef.current = true;
-    // }, []);
-
-
 
     // veiw projects 
     const  [view, setView] =   useState(true)   

@@ -16,10 +16,10 @@ const Navigation = () => {
 
     const handlerMouseDown = useCallback((e) => {
         const rect = NavigationRef.current.getBoundingClientRect();
-        dragPostionRef.current ({
+        dragPostionRef.current ={
             x : e.clientX - rect.left,
             y : e.clientY - rect.top
-        })
+        }
         isDraggingNavigation.current = true
     }, [])
 
@@ -28,7 +28,7 @@ const Navigation = () => {
         <div 
             ref = {NavigationRef}
             onMouseDown = {handlerMouseDown} 
-            className={`fixed  list-none top-[250px] left-[130px]   w-[2px] h-[2px]   z-300`}
+            className={`absolute  list-none top-[250px] left-[130px]   w-[2px] h-[2px]   z-300`}
             // style={{left : `${dragState.position.x}px`, top :`${dragState.position.y}px`}}
         >
                 <div
