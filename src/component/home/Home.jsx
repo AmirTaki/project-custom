@@ -13,6 +13,7 @@ import LoadingAnimation from "../loadingAnimation/index.jsx"
 import CustomRightClick from "../customRightClick/index.jsx"
 import SelectMenu from "../selectMenu/index.jsx"
 import DropDrownMenu from "../dropDrownMenu.jsx/index.jsx"
+import EnergyButton from "../energyButton/index.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -126,6 +127,9 @@ const Home =  ()  => {
 
 
             {/* <MouseDragComponent /> */}
+
+            {/* energy button */}
+            <EnergyButton />
 
             <div className="h-100 w-100 text-white"></div>
         </div>   
