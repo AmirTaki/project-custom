@@ -7,12 +7,12 @@ const DropDrownMenu = () => {
         {/* navigation overflow-hidden */}
         <div
             className={` ${active ? "w-[300px] h-[400px]  transition-[width,height]  delay-[0ms,750ms]  " : "w-[120px] h-[60px] transition-[height,width]  delay-[0ms,750ms]"}
-                bg-white shadow-[10px_25px_35px_rgba(0,0,0,.1)] flex justify-between duration-500   overflow-hidden
+                bg-white shadow-[10px_25px_35px_rgba(0,0,0,.1)] flex justify-between duration-500   overflow-hidden relative
             `}
             >
             {/* userBx overflow-hidden */}
             <div className={` ${active ?  "w-[calc(100%-60px)] delay-0": "w-[60px] delay-500"}
-                relative  h-[60px] flex items-center duration-500 overflow-hidden
+                  h-[60px] flex items-center duration-500 overflow-hidden
             `}
             >
                 {/* imgBx */}
@@ -35,10 +35,14 @@ const DropDrownMenu = () => {
                 after:content-[''] after:absolute after:w-[30px] after:h-[2px] after:bg-[#555] after:duration-500
                 before:content-[''] before:absolute before:w-[32px] before:h-[2px] before:bg-[#555]  before:duration-500
             `}>
-                {/* menu */}
-                <ul className="absolute w-[100%] h-[calc(100%-60px)]  mt-[60px] p-[20px] border-t-1 border-t-[rgba(0,0,0,.1)]"></ul>
             </div>
 
+            {/* menu */}
+            <ul className=" overflow-hidden absolute h-[calc(100%-60px)] w-[100%] bg-red-400 mt-[60px] p-[20px] border-t-1 border-t-[rgba(0,0,0,.1)]">
+                <li>
+                    <a href=""> <i className="bi bi-person"></i>My Profile</a>
+                </li>
+            </ul>
 
         </div>
         </>
