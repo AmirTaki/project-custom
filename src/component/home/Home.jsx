@@ -1,4 +1,4 @@
-import {  createContext, useCallback, useEffect, useMemo, useReducer, useRef, useState } from "react"
+import { createContext, useCallback, useRef, useState} from "react"
 import AnimatedOnScroll from "../animatedOnScroll/index.jsx"
 import Card from "../card3D/index.jsx"
 import ComponentNavigation from "../componentNavigation"
@@ -12,7 +12,6 @@ import CardHoverEffect from "../cardHoverEffect/index.jsx"
 import LoadingAnimation from "../loadingAnimation/index.jsx"
 import CustomRightClick from "../customRightClick/index.jsx"
 import SelectMenu from "../selectMenu/index.jsx"
-
 // create context
 export const navigationContext = createContext ()
 
@@ -28,6 +27,7 @@ const Home =  ()  => {
     const dragPostionRef = useRef({x : 0, y : 0})
     const isDraggingNavigation = useRef(false)
 
+
     const handlerMouseUp = useCallback(() => {
         if(isDraggingDocts.current){
             isDraggingDocts.current = false
@@ -37,7 +37,7 @@ const Home =  ()  => {
         }
     }, [])
 
-    const handlerMouseLeave = useCallback(() => {
+   const handlerMouseLeave = useCallback(() => {
         if(isDraggingDocts.current){
             isDraggingDocts.current = false
         }
@@ -48,10 +48,10 @@ const Home =  ()  => {
 
     const handlerMouseMove = useCallback((e) => {
         if(isDraggingDocts.current){
-           const x =  e.clientX - dragLocationRef.current.x;
-           const y =  e.clientY - dragLocationRef.current.y;
-           DoctsMenuRef.current.style.left = `${x}px`;
-           DoctsMenuRef.current.style.top = `${y}px`
+            const x =  e.clientX - dragLocationRef.current.x;
+            const y =  e.clientY - dragLocationRef.current.y;
+            DoctsMenuRef.current.style.left = `${x}px`;
+            DoctsMenuRef.current.style.top = `${y}px`
         }
         if(isDraggingNavigation.current){
             const x = e.clientX - dragPostionRef.current.x;
@@ -65,10 +65,10 @@ const Home =  ()  => {
     }, [])
 
     // veiw projects 
-    const  [view, setView] =   useState(true)   
+    const  [view, setView] =   useState(false)   
     return(
         <div 
-            className={`bg-[blue] min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} 
+            className={`bg-[#10131c] min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} 
         >
             <div 
                 onMouseUp={handlerMouseUp}
