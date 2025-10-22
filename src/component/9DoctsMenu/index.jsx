@@ -11,10 +11,6 @@ const DoctsMenu = () => {
     const {DotsMenuRef, dragState, dispatchDrag } = useContext(navigationContext)
 
   
-    const handlerMouseDown = useCallback( (event) => {
-       dispatchDrag({type : "onMouseDownDocts", payload : {event : event, flag : true}})
-    }, [DotsMenuRef])
-
   
     return(
         // navigation
