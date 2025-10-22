@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 
-const LinkNavigation = ({icon, index, toggle, dragState}) => {
+const LinkNavigation = ({icon, index, toggle}) => {
     return (
 
         <li 

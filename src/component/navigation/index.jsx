@@ -43,7 +43,7 @@ const Navigation = () => {
                     <BrowserRouter >
                         {listIcons.map((item, index) => {
                             return(
-                                <LinkNavigation icon =  {item} key = {index} index = {index} toggle = {toggle} dragState = {dragState}/>
+                                <LinkNavigation icon =  {item} key = {index} index = {index} toggle = {toggle} />
                             )
                         })}
                     </BrowserRouter>

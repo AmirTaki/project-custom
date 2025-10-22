@@ -32,13 +32,21 @@ const Home =  ()  => {
     const isDraggingNavigation = useRef(false)
 
     const handlerMouseUp = useCallback(() => {
-        isDraggingDocts.current = false
-        isDraggingNavigation.current = false
+        if(isDraggingDocts.current){
+            isDraggingDocts.current = false
+        }
+        else if(isDraggingNavigation.current){
+            isDraggingNavigation.current = false
+        }
     }, [])
 
     const handlerMouseLeave = useCallback(() => {
-        isDraggingDocts.current = false
-        isDraggingDocts.current = false
+        if(isDraggingDocts.current){
+            isDraggingDocts.current = false
+        }
+        else if(isDraggingNavigation.current){
+            isDraggingNavigation.current = false
+        }
     }, [])
 
     const handlerMouseMove = useCallback((e) => {
