@@ -26,7 +26,9 @@ const DropDrownMenu = () => {
                 <p className="whitespace-nowrap text-[#555] text-[1.1em]">Amir Taki</p>
             </div>
             {/* menu toggle */}
-            <div className="relative w-[60px] h-[60px] cursor-pointer flex justify-center items-center bg-amber-400
+            <div 
+            onClick={() => {setActive((prevActive) => (!prevActive))}}
+            className="relative w-[60px] h-[60px] cursor-pointer flex justify-center items-center bg-amber-400
                 after:content-[''] after:absolute after:w-[30px] after:h-[2px] after:bg-[#555] after:translate-y-[10px] after:duration-500
                 before:content-[''] before:absolute before:w-[32px] before:h-[2px] before:bg-[#555] before:translate-y-[-10px] before:shadow-[0_10px_#555] before:duration-500
             ">
@@ -35,7 +37,7 @@ const DropDrownMenu = () => {
 
 
         </div>
-        <div className="text-red-500" onClick={() => {setActive(!active)}}>click me</div>
+        <div className="text-red-500" o>click me</div>
         </>
     )
 }
