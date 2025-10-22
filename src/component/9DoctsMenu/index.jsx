@@ -28,11 +28,11 @@ const DoctsMenu = () => {
             // delay-[800ms]
             className={` 
                 ${toggle ? "w-[200px] h-[200px]   transition-[transform,width,height,background-color] duration-500 delay-75 " : "w-[70px] h-[70px] transition-[transform,width,height,background-color] duration-500 delay-500   "}
-                  bg-[#212532] rounded-[10px] cursor-pointer   fixed 
+                  bg-[#212532] rounded-[10px] cursor-pointer   fixed left-[150px] top-[100px]
                 flex items-center  justify-center z-[1000]! ` 
             }
             onClick={() => {setToggle((prev) => (!prev))}}
-            style={{left : `${dragState.location.x}px`, top :`${dragState.location.y}px`}}
+            // style={{left : `${dragState.location.x}px`, top :`${dragState.location.y}px`}}
 
             >
     
