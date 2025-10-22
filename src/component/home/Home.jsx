@@ -37,7 +37,8 @@ const Home =  ()  => {
 
     const handlerMouseMove = useCallback((e) => {
         if(isDraggingDocts.current){
-
+           const x =  e.clientX - dragLocationRef.current.x;
+           const y =  e.clientY - dragLocationRef.current.y;
         }
 
         else {
