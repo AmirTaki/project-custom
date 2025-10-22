@@ -52,8 +52,9 @@ const Home =  ()  => {
         else if(isDraggingNavigation.current){
             const x = e.clientX - dragPostionRef.current.x;
             const y = e.clientY - dragPostionRef.current.y;
+            NavigationRef.current.style.left = `${x}px`
+            NavigationRef.current.style.top = `${y}px`
         }
-
 
         else {
             return
