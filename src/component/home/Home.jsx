@@ -39,6 +39,8 @@ const Home =  ()  => {
         if(isDraggingDocts.current){
            const x =  e.clientX - dragLocationRef.current.x;
            const y =  e.clientY - dragLocationRef.current.y;
+           DoctsMenuRef.current.style.left = `${x}px`;
+           DoctsMenuRef.current.style.top = `${y}px`
         }
 
         else {
