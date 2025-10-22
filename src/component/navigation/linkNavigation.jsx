@@ -9,7 +9,7 @@ const LinkNavigation = ({icon, index, toggle, dragState}) => {
                 // transitionDelay : `${toggle ? `calc(.1s * ${index}` : `calc(.1s * ${index}`}` ,
                 transitionDelay : `calc(.1s * ${index}` ,
                 transform : `${toggle ? `rotate(0deg) translateX(80px)` : `rotate(calc(360deg / 8 * ${index})`}`,
-                left : `${dragState.position.x - 70}px`, top :`${dragState.position.y + 10}px`
+                // left : `${dragState.position.x - 70}px`, top :`${dragState.position.y + 10}px`
             }}
         //   absolute  left-0
             className={`fixed left-0  list-none origin-[100px] transition-transform duration-[500ms]!`}
