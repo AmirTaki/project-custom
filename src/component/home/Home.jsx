@@ -64,7 +64,7 @@ const Home =  ()  => {
                 onMouseMove={handlerMouseMove} 
                 className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-35 `}
             >        
-                <navigationContext.Provider value = {{DoctsMenuRef, }}>
+                <navigationContext.Provider value = {{DoctsMenuRef, dragLocationRef}}>
                     {/* component navigation */}
                     <ComponentNavigation />
                 </navigationContext.Provider>

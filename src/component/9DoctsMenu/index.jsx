@@ -8,11 +8,15 @@ const DoctsMenu = () => {
 
     const [toggle, setToggle] = useState(false)
 
-    const { DoctsMenuRef} = useContext(navigationContext)
+    const {DoctsMenuRef, dragLocationRef} = useContext(navigationContext)
 
-    const handlerMouseDown = () => {
-        
-    }
+    const handlerMouseDown = useCallback((e) => {
+        const rect =  DoctsMenuRef.current.getBoundingClientRect();
+        dragLocationRef.current = {
+            x : e.clientX - rect.left,
+            y : e.clientY - rect.top
+        }
+    }, [])
   
   
     return(
