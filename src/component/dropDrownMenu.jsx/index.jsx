@@ -11,7 +11,9 @@ const DropDrownMenu = () => {
             `}
             >
             {/* userBx */}
-            <div className="relative w-[60px] h-[60px] bg-white flex items-center duration-500 delay-500"
+            <div className={` ${active ?  "w-[calc(100%-60px)] delay-0": "w-[60px] delay-500"}
+                relative  h-[60px] bg-blue-300 flex items-center duration-500 
+            `}
             ></div>
 
 
