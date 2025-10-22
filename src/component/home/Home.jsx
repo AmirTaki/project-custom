@@ -25,6 +25,7 @@ const Home =  ()  => {
     const DoctsMenuRef = useRef(null)
     const dragLocationRef = useRef({x : 0, y : 0})
     const isDraggingDocts = useRef(false)
+    
     // navigation
     const NavigationRef =  useRef(null)
     const dragPostionRef = useRef({x : 0, y : 0})

@@ -16,7 +16,11 @@ const Navigation = () => {
 
     const handlerMouseDown = useCallback((e) => {
         const rect = NavigationRef.current.getBoundingClientRect();
-        
+        dragPostionRef.current ({
+            x : e.clientX - rect.left,
+            y : e.clientY - rect.top
+        })
+        isDraggingNavigation.current = true
     }, [])
 
     return (
