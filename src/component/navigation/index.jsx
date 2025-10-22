@@ -12,21 +12,13 @@ const Navigation = () => {
         setToggle((prevToggle) => !prevToggle)
     }
 
-    const {dragNavigatioRef, NavigationRef, isdragNavigationRef} =  useContext(navigationContext)
+    const {dragState, NavigationRef} =  useContext(navigationContext)
 
 
-    const handlerMouseDown = useCallback((event) => {
-        const rect = NavigationRef.current.getBoundingClientRect();
-        dragNavigatioRef.current = {
-            x: event.clientX - rect.left,
-            y: event.clientY - rect.top,
-        };
-        isdragNavigationRef.current = true;
-        }, []);
     
-    // const handlerMouseDown = useMemo(() => (event) => {
-    //     dispatchDrag({type : "onMouseDown", payload : {event : event, flag : true}})
-    // }, [NavigationRef])
+    const handlerMouseDown = useMemo(() => (event) => {
+        dispatchDrag({type : "onMouseDown", payload : {event : event, flag : true}})
+    }, [NavigationRef])
     
     return (
         // flex justify-center items-center relative
@@ -34,7 +26,7 @@ const Navigation = () => {
             ref = {NavigationRef}
             onMouseDown = {handlerMouseDown} 
             className={`fixed  list-none top-[250px] left-[130px]   w-[2px] h-[2px]   z-300`}
-            // style={{left : `${dragState.position.x}px`, top :`${dragState.position.y}px`}}
+            style={{left : `${dragState.position.x}px`, top :`${dragState.position.y}px`}}
         >
                 <div
                     onClick={handleToggle}
@@ -48,7 +40,7 @@ const Navigation = () => {
                     <BrowserRouter >
                         {listIcons.map((item, index) => {
                             return(
-                                <LinkNavigation icon =  {item} key = {index} index = {index} toggle = {toggle} dragNavigatioRef = {dragNavigatioRef}/>
+                                <LinkNavigation icon =  {item} key = {index} index = {index} toggle = {toggle} dragState = {dragState}/>
                             )
                         })}
                     </BrowserRouter>

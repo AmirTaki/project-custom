@@ -79,7 +79,7 @@ const Home =  ()  => {
         dragLocation : {x : 0, y:0},
         location : {x : 122, y : 200},
         dragLocatoin : false
-        }),[NavigationRef, DotsMenuRef])
+    }),[NavigationRef, DotsMenuRef])
 
     const [dragState, dispatchDrag] = useReducer(reducerDrag,initaionDragStae )
 
@@ -110,7 +110,7 @@ const Home =  ()  => {
                 onMouseMove={handlerMouseMove} 
                 className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-35 `}
             >        
-                <navigationContext.Provider value = {{DotsMenuRef,  dragLocationRef, isDraggingRef, NavigationRef, dragNavigatioRef, isdragNavigationRef }} >
+                <navigationContext.Provider value = {{dragState, DotsMenuRef, NavigationRef}} >
                     {/* component navigation */}
                     <ComponentNavigation />
                 </navigationContext.Provider>
