@@ -25,6 +25,8 @@ const DropDrownMenu = () => {
                 {/* username */}
                 <p className="whitespace-nowrap text-[#555] text-[1.1em]">Amir Taki</p>
             </div>
+            {/* menu toggle */}
+            <div className="relative w-[60px] h-[60px] cursor-pointer flex justify-center items-center"></div>
 
 
         </div>
