@@ -20,6 +20,32 @@ export const navigationContext = createContext ()
 
 const Home =  ()  => {
 
+    // const dragLocationRef = useRef({ x: 0, y: 0 });
+    // const isDraggingRef = useRef(false);
+
+    // const NavigationRef =  useRef(null)
+    // const DotsMenuRef =  useRef(null)
+
+    // const handleMouseMove = useCallback((e) => {
+    // if (!isDraggingRef.current) return;
+    // const x = e.clientX - dragLocationRef.current.x;
+    // const y = e.clientY - dragLocationRef.current.y;
+    // DotsMenuRef.current.style.left = `${x}px`;
+    // DotsMenuRef.current.style.top = `${y}px`;
+    // }, []);
+
+
+    //     const handlerMouseDown = useCallback((event) => {
+    //   const rect = DotsMenuRef.current.getBoundingClientRect();
+    //   dragLocationRef.current = {
+    //     x: event.clientX - rect.left,
+    //     y: event.clientY - rect.top,
+    //   };
+    //   isDraggingRef.current = true;
+    // }, []);
+
+
+
     const NavigationRef =  useRef(null)
     const DotsMenuRef =  useRef(null)
 
@@ -31,7 +57,6 @@ const Home =  ()  => {
             // navigation
             case "onMouseMove" :          
                 if(!state.flagDrag) return {...state}      
-
                 return {...state, position : {
                     x : action.payload.event.clientX - state.drag.x,
                     y : action.payload.event.clientY - state.drag.y
@@ -83,24 +108,21 @@ const Home =  ()  => {
 
     const [dragState, dispatchDrag] = useReducer(reducerDrag,initaionDragStae )
 
-    const handlerMouseUp = useMemo( () => (event) => {
+    const handlerMouseUp = useCallback( () => {
         dispatchDrag({type : "onMouseUp", payload : { drag :  false}}),
         dispatchDrag({type : "onMouseUpDots", payload : { drag :  false}}) 
     }, [DotsMenuRef, NavigationRef])
 
-    const handlerMouseLeave = useMemo(() => (event) => {
+    const handlerMouseLeave = useCallback( () => {
         dispatchDrag({type : "onMouseUp", payload : { drag :  false}}),
         dispatchDrag({type : "onMouseUpDots", payload : { drag :  false}})
     }, [DotsMenuRef, NavigationRef])
 
-    const handlerMouseMove = useMemo( () => (event) => {
+    const handlerMouseMove = useCallback( (event) => {
         dispatchDrag({type : "onMouseMove", payload : {event : event}}),
         dispatchDrag({type : "onMouseMoveDots", payload : {event : event}})
     }, [DotsMenuRef, NavigationRef])
 
-    useEffect(() => {
-        console.log('ok')
-    },)
 
     // veiw projects 
     const  [view, setView] =   useState(true)   
