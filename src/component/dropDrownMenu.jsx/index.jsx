@@ -16,7 +16,15 @@ const DropDrownMenu = () => {
             `}
             >
                 {/* imgBx */}
-                <img src="" alt="" className="" />
+                <div className="">
+                    <img src="" alt="" 
+                        className=""
+                    />
+                </div>
+                <img src="" alt="" className={` 
+                    ${active ? "absolute top-0 left-0 w-[100%] h-[100%] object-cover" : "relative min-w-[60px] h-[60px]"}
+                    bg-[#000] rounded-[50%] border-[10px] border-white overflow-hidden 
+                `} />
                 {/* username */}
                 <p className="whitespace-nowrap text-[#555] text-[1.1em]">Amir Taki</p>
             </div>
