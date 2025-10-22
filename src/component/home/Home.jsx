@@ -98,6 +98,10 @@ const Home =  ()  => {
         dispatchDrag({type : "onMouseMoveDots", payload : {event : event}})
     }, [DotsMenuRef, NavigationRef])
 
+    useEffect(() => {
+        console.log('ok')
+    },)
+
     // veiw projects 
     const  [view, setView] =   useState(true)   
     return(
