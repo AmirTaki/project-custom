@@ -27,7 +27,7 @@ const Navigation = () => {
         // flex justify-center items-center relative
         <div 
             ref = {NavigationRef}
-            // onMouseDown = {handlerMouseDown} 
+            onMouseDown = {handlerMouseDown} 
             className={`fixed  list-none top-[250px] left-[130px]   w-[2px] h-[2px]   z-300`}
             // style={{left : `${dragState.position.x}px`, top :`${dragState.position.y}px`}}
         >

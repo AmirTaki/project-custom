@@ -33,9 +33,11 @@ const Home =  ()  => {
 
     const handlerMouseUp = useCallback(() => {
         isDraggingDocts.current = false
+        isDraggingNavigation.current = false
     }, [])
 
     const handlerMouseLeave = useCallback(() => {
+        isDraggingDocts.current = false
         isDraggingDocts.current = false
     }, [])
 
@@ -46,6 +48,8 @@ const Home =  ()  => {
            DoctsMenuRef.current.style.left = `${x}px`;
            DoctsMenuRef.current.style.top = `${y}px`
         }
+
+        
 
         else {
             return
