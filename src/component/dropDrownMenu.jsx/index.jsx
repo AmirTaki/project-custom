@@ -6,7 +6,7 @@ const DropDrownMenu = () => {
         <>
         {/* navigation overflow-hidden */}
         <div
-            className={` ${active ? "w-[300px] h-[400px] transition-[height,width]  delay-[0ms,750ms] " : "w-[120px] h-[60px] transition-[width,height]  delay-[0ms,750ms]  "}
+            className={` ${active ? "w-[300px] h-[400px]  transition-[width,height]  delay-[0ms,750ms]  " : "w-[120px] h-[60px] transition-[height,width]  delay-[0ms,750ms]"}
                 bg-white shadow-[10px_25px_35px_rgba(0,0,0,.1)] flex justify-between duration-500   overflow-hidden
             `}
             >
