@@ -1,0 +1,21 @@
+.energy {
+    box-shadow: 0 0 15px rgba(80, 241, 0, 1), 
+                0 0 25px rgba(80, 241, 0, 1) ;
+}
+.energy:hover {
+    animation: energy 1s linear forwards
+}
+
+
+@keyframes  energy{
+    0%{
+
+    }
+    50%{
+
+    }
+    100%{
+        
+    }
+    
+}
