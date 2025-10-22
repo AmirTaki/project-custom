@@ -12,7 +12,7 @@ const DropDrownMenu = () => {
             >
             {/* userBx overflow-hidden */}
             <div className={` ${active ?  "w-[calc(100%-60px)] delay-0": "w-[60px] delay-500"}
-                relative  h-[60px] bg-blue-300 flex items-center duration-500 overflow-hidden
+                relative  h-[60px] flex items-center duration-500 overflow-hidden
             `}
             >
                 {/* imgBx */}
@@ -28,12 +28,15 @@ const DropDrownMenu = () => {
             {/* menu toggle */}
             <div 
             onClick={() => {setActive((prevActive) => (!prevActive))}}
-            className={` ${active ? "before:translate-y-0 before:rotate-45 before:shadow-[0_0_#555] after:translate-y-0 after:-rotate-45" : "before:translate-y-[-10px] before:shadow-[0_10px_#555] after:translate-y-[10px]"}
-                relative w-[60px] h-[60px] cursor-pointer flex justify-center items-center bg-amber-400
+            className={` ${active ? 
+                "before:translate-y-0 before:rotate-45 before:shadow-[0_0_#555] after:translate-y-0 after:-rotate-45" : 
+                "before:translate-y-[-10px] before:shadow-[0_10px_#555] after:translate-y-[10px]"}
+                relative w-[60px] h-[60px] cursor-pointer flex justify-center items-center 
                 after:content-[''] after:absolute after:w-[30px] after:h-[2px] after:bg-[#555] after:duration-500
                 before:content-[''] before:absolute before:w-[32px] before:h-[2px] before:bg-[#555]  before:duration-500
             `}>
-
+                {/* menu */}
+                <ul className="absolute w-[100%] h-[calc(100%-60px)]  mt-[60px] p-[20px] border-t-1 border-t-[rgba(0,0,0,.1)]"></ul>
             </div>
 
 
