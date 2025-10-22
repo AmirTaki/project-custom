@@ -26,7 +26,9 @@ const Home =  ()  => {
     const dragLocationRef = useRef({x : 0, y : 0})
     const isDraggingDocts = useRef(false)
     // navigation
-    const navigationRef =  useRef(null)
+    const NavigationRef =  useRef(null)
+    const dragPostionRef = useRef({x : 0, y : 0})
+    const isDraggingNavigation = useRef(false)
 
     const handlerMouseUp = useCallback(() => {
         isDraggingDocts.current = false
@@ -88,7 +90,7 @@ const Home =  ()  => {
                 onMouseMove={handlerMouseMove} 
                 className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-35 `}
             >        
-                <navigationContext.Provider value = {{DoctsMenuRef, dragLocationRef, isDraggingDocts, navigationRef}}>
+                <navigationContext.Provider value = {{DoctsMenuRef, dragLocationRef, isDraggingDocts, NavigationRef, dragPostionRef, isDraggingNavigation}}>
                     {/* component navigation */}
                     <ComponentNavigation />
                 </navigationContext.Provider>

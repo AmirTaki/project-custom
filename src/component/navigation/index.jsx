@@ -12,18 +12,17 @@ const Navigation = () => {
         setToggle((prevToggle) => !prevToggle)
     }
 
-    const {navigationRef} =  useContext(navigationContext)
+    const {NavigationRef, dragPostionRef, isDraggingNavigation} =  useContext(navigationContext)
 
+    const handlerMouseDown = useCallback((e) => {
+        const rect = NavigationRef.current.getBoundingClientRect();
+        
+    }, [])
 
-    
-    // const handlerMouseDown = useCallback((event) => {
-    //     dispatchDrag({type : "onMouseDown", payload : {event : event, flag : true}})
-    // }, [NavigationRef])
-    
     return (
         // flex justify-center items-center relative
         <div 
-            ref = {navigationRef}
+            ref = {NavigationRef}
             // onMouseDown = {handlerMouseDown} 
             className={`fixed  list-none top-[250px] left-[130px]   w-[2px] h-[2px]   z-300`}
             // style={{left : `${dragState.position.x}px`, top :`${dragState.position.y}px`}}
