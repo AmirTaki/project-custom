@@ -53,14 +53,12 @@ const Home =  ()  => {
            DoctsMenuRef.current.style.left = `${x}px`;
            DoctsMenuRef.current.style.top = `${y}px`
         }
-
         if(isDraggingNavigation.current){
             const x = e.clientX - dragPostionRef.current.x;
             const y = e.clientY - dragPostionRef.current.y;
             NavigationRef.current.style.left = `${x}px`
             NavigationRef.current.style.top = `${y}px`
         }
-
         else {
             return
         }
@@ -119,6 +117,8 @@ const Home =  ()  => {
                 {/* select menu */}
                 <SelectMenu />
             </div>
+
+
 
             {/* <MouseDragComponent /> */}
             <div className="h-100 w-100 text-white"></div>
