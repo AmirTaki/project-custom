@@ -35,6 +35,16 @@ const Home =  ()  => {
         isDraggingDocts.current = false
     }, [])
 
+    const handlerMouseMove = useCallback((e) => {
+        if(isDraggingDocts.current){
+
+        }
+
+        else {
+            return
+        }
+    }, [])
+
 
     // const dragLocationRef = useRef({ x: 0, y: 0 });
     // const isDraggingRef = useRef(false);
