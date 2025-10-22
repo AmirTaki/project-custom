@@ -8,7 +8,7 @@ const DropDrownMenu = () => {
         <>
         {/* navigation overflow-hidden */}
         <div
-            className={` ${active ? "w-[300px] h-[400px]  transition-[width,height]  delay-[0ms,750ms]  " : "w-[120px] h-[60px] transition-[height,width]  delay-[0ms,750ms]"}
+            className={` ${active ? "w-[300px] h-[440px]  transition-[width,height]  delay-[0ms,750ms]  " : "w-[120px] h-[60px] transition-[height,width]  delay-[0ms,750ms]"}
                 bg-white shadow-[10px_25px_35px_rgba(0,0,0,.1)] flex justify-between duration-500   overflow-hidden relative
             `}
             >
@@ -40,7 +40,9 @@ const DropDrownMenu = () => {
             </div>
 
             {/* menu */}
-            <ul className=" overflow-hidden absolute h-[calc(100%-60px)] w-[100%]  mt-[60px] p-[20px] border-t-1 border-t-[rgba(0,0,0,.1)]">
+            <ul 
+                style={{ height: 'calc(100% - 60px)' }}
+                className=" overflow-hidden absolute  w-[100%]  mt-[60px] p-[20px] border-t-1 border-t-[rgba(0,0,0,.1)]">
                 <BrowserRouter >
                     {ListIcon.map((item) => {
                         return(
