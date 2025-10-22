@@ -8,14 +8,14 @@ const DoctsMenu = () => {
 
     const [toggle, setToggle] = useState(false)
 
-    const {DotsMenuRef, dragState, dispatchDrag } = useContext(navigationContext)
+    const { DoctsMenuRef} = useContext(navigationContext)
 
   
   
     return(
         // navigation
         <div 
-            ref = {DotsMenuRef}
+            ref = {DoctsMenuRef}
             onMouseDown={handlerMouseDown}
             // delay-[800ms]
             className={` 

@@ -20,6 +20,12 @@ export const navigationContext = createContext ()
 
 const Home =  ()  => {
 
+
+
+    const DoctsMenuRef = useRef(null)
+    const dragLocationRef = useRef({x : 0, y : 0})
+    const isDraggingDocts = useRef(false)
+
     // const dragLocationRef = useRef({ x: 0, y: 0 });
     // const isDraggingRef = useRef(false);
 
@@ -46,9 +52,6 @@ const Home =  ()  => {
 
 
 
-    const NavigationRef =  useRef(null)
-    const DotsMenuRef =  useRef(null)
-
     // veiw projects 
     const  [view, setView] =   useState(true)   
     return(
@@ -61,7 +64,7 @@ const Home =  ()  => {
                 onMouseMove={handlerMouseMove} 
                 className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-35 `}
             >        
-                <navigationContext.Provider value = {{dragState, DotsMenuRef, NavigationRef, dispatchDrag}} >
+                <navigationContext.Provider value = {{DoctsMenuRef, }}>
                     {/* component navigation */}
                     <ComponentNavigation />
                 </navigationContext.Provider>
