@@ -1,7 +1,18 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const FlashLight = () => {
     const mouseRef = useRef({x : 0, y : 0})
+
+    useEffect(() => {
+
+        window.addEventListener("mousemove", )
+        window.addEventListener("touchmove", )
+
+        return () => {
+            window.removeEventListener("mousemove",)
+            window.removeEventListener('touchmove',)
+        }
+    })
     return(
         <>
             {/* flash light */}
