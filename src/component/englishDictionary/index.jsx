@@ -9,7 +9,9 @@ const EnglishDictionary = () => {
         try{
             infoText.current.style.display = "block"
             meaningContainer.current.style.display = 'none'
-            infoText.current.innerText = `Searching the meaning of "${word}"`         
+            infoText.current.innerText = `Searching the meaning of "${word}"`        
+            const url =  `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`; 
+            const result =  await fetch(url).then((res) => res.json())
 
         }   
         catch (err) {
