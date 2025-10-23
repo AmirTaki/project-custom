@@ -15,6 +15,17 @@ const FlashLight = () => {
         }
 
         const onMove = (e) => {
+
+            let x = 0, y = 0;
+
+            if(e.type === "touchmove" || e.type === "touchstart"){
+
+            }
+            else {
+                
+            }
+
+
             if(animationRef.current) cancelAnimationFrame(animationRef.current);
             animationRef.current = requestAnimationFrame(() => setPostion(x, y))
         }
