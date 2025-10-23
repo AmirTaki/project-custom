@@ -29,6 +29,7 @@ const FlashLight = () => {
                 window.removeEventListener('mousemove', onMove)
                 window.removeEventListener('touchmove', onMove)
             }
+            if(animationRef.current) cancelAnimationFrame(animationRef.current)
         }
     },[])
 
