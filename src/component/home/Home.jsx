@@ -15,6 +15,7 @@ import SelectMenu from "../selectMenu/index.jsx"
 import DropDrownMenu from "../dropDrownMenu.jsx/index.jsx"
 import EnergyButton from "../energyButton/index.jsx"
 import EnglishDictionary from "../englishDictionary/index.jsx"
+import FlashLight from "../flashLightEffect/index.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -129,10 +130,12 @@ const Home =  ()  => {
             
                 {/* english dictionary */}
                 <EnglishDictionary />
-            
             </div>
 
 
+            
+                {/* flash light effect */}
+                <FlashLight />
 
             {/* <MouseDragComponent /> */}
 
