@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
 
 const EnglishDictionary = () => {
     
@@ -7,7 +7,8 @@ const EnglishDictionary = () => {
     const title = useRef(null)
     const meaning = useRef(null)
     const audioRef = useRef(null)
-    
+    const [value, setValue] = useState('')
+
     const FetchApi = async (word) => {
         try{
             infoText.current.style.display = "block"
@@ -38,6 +39,7 @@ const EnglishDictionary = () => {
     }
     const handleKeyDown = (e) => {
         if(e.target.value && e.key === "enter"){
+            console.log(ok)
             FetchApi(e.target.value)
         }
     }
