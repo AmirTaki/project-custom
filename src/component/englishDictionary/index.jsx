@@ -8,6 +8,8 @@ const EnglishDictionary = () => {
     const FetchApi = async (word) => {
         try{
             infoText.current.style.display = "block"
+            meaningContainer.current.style.display = 'none'
+            infoText.current.innerText = `Searching the meaning of "${word}"`         
 
         }   
         catch (err) {
