@@ -10,7 +10,8 @@ const FlashLight = () => {
         
 
         const setPostion  = (x, y) => {
-            
+            flash.style.setProperty("--Xpos", `${x}px`)
+            flash.style.setProperty('--Ypos', `${y}px`)
         }
 
         const onMove = (e) => {
