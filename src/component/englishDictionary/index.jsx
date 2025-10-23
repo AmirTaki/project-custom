@@ -38,8 +38,8 @@ const EnglishDictionary = () => {
         }
     }
     const handleKeyDown = (e) => {
-        if(e.target.value && e.key === "enter"){
-            console.log(ok)
+        if(e.target.value && e.key === "Enter"){
+            console.log("ok")
             FetchApi(e.target.value)
         }
     }
@@ -56,6 +56,7 @@ const EnglishDictionary = () => {
             {/* input */}
             <input 
                 onKeyDown={handleKeyDown}
+                onChange={(e) => {setValue(e.target.value)}}
                 type="text" placeholder="Search a word" 
                 className="h-[53px] w-[300px] bg-[rgba(255,255,255,.6)] border-[rgba(255,255,255,.4)] text-[16px] px-[42px] rounded-[5px]    "
             />
@@ -64,7 +65,7 @@ const EnglishDictionary = () => {
                 Type a word and press enter
             </p>
             {/* meaning-container */}
-            <div className="hidden">
+            <div className="hidden" ref = {meaningContainer}>
                 {/* title */}
                 <p>Word Title <span ref = {title}>___</span></p>
                 {/* meaning */}
