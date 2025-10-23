@@ -2,6 +2,7 @@ import { useState } from "react";
 import ItemsIcon from "./itemsIcon";
 import { BrowserRouter } from "react-router-dom";
 import { ListIcon } from "./listIcon";
+
 const DropDrownMenu = () => {
     const [active, setActive] = useState(false)
     return(
@@ -19,7 +20,7 @@ const DropDrownMenu = () => {
             >
                 {/* imgBx */}
                 <div className="relative min-w-[60px] h-[60px] bg-[#000] rounded-[50%] border-[10px] border-white overflow-hidden">
-                    <img src={null} alt="" 
+                    <img src= "https://avatars.githubusercontent.com/u/206402590?v=4" 
                         className="absolute top-0 left-0 w-[100%] h-[100%] object-cover"
                     />
                 </div>

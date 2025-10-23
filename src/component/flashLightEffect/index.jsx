@@ -51,14 +51,15 @@ const FlashLight = () => {
             if(animationRef.current) cancelAnimationFrame(animationRef.current)
         }
     },[])
-
+    
     return(
         <>
             {/* flash light */}
             <div  
-                className={` before:content-[''] before:block before:w-[100%] before:h-[100%] before:top-0 before:absolute before:pointer-events-none 
-                    before:bg-[radial-gradient(circle_9em_at_var(--Xpos)_var(--Ypos),rgba(0,0,0,.1),rgba(0,0,0,1))]`
-                }
+        className={`
+            before:content-[''] before:block before:w-[100%] before:h-[100%]  before:pointer-events-none 
+            before:bg-[radial-gradient(circle_9em_at_var(--Xpos)_var(--Ypos),rgba(0,0,0,.1),rgba(0,0,0,1))]`
+        }
                 ref = {flashRef}
             ></div>
 

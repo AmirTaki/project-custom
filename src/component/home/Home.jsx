@@ -70,7 +70,7 @@ const Home =  ()  => {
     }, [])
 
     // veiw projects 
-    const  [view, setView] =   useState(false)   
+    const  [view, setView] =   useState(true)   
     return(
         <div 
             className={`bg-[#10131c] min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} 
@@ -130,12 +130,12 @@ const Home =  ()  => {
             
                 {/* english dictionary */}
                 <EnglishDictionary />
+            
+                {/* flash light effect */}
+                {/* <FlashLight /> */}
             </div>
 
 
-            
-                {/* flash light effect */}
-                <FlashLight />
 
             {/* <MouseDragComponent /> */}
 

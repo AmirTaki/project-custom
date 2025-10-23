@@ -73,7 +73,7 @@ const EnglishDictionary = () => {
                 {/* meaning */}
                 <p>Meaning : <span ref = {meaning}>___</span></p>
                 {/* audio */}
-                <audio ref = {audioRef} src="" controls ></audio>
+                <audio ref = {audioRef}  controls ></audio>
             </div>
 
         </div>
