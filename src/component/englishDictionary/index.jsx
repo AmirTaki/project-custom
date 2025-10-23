@@ -1,8 +1,17 @@
+import { useRef } from "react"
+
 const EnglishDictionary = () => {
     
+    const infoText =  useRef('')
     
     const FetchApi = async (word) => {
-        
+        try{
+
+        }   
+        catch (err) {
+            console.log(err)
+            infoText.current.innerText = "an error happened, try again later"   
+        }
     }
     
     
@@ -19,7 +28,7 @@ const EnglishDictionary = () => {
                 className="h-[53px] w-[300px] bg-[rgba(255,255,255,.6)] border-[rgba(255,255,255,.4)] text-[16px] px-[42px] rounded-[5px]    "
             />
             {/* info-text */}
-            <p>
+            <p ref = {infoText}>
                 Type a word and press enter
             </p>
             {/* meaning-container */}
