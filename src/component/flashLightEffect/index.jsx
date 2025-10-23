@@ -15,18 +15,17 @@ const FlashLight = () => {
         };
 
 
-        const onMove = (e) => {
+        const onMove = (event) => {
             let x = 0, y = 0;
 
-            if(e.type === "touchmove" || e.type === "touchstart"){
-                const t =  e.touches && e.touches[0];
-                if(!t) return;
-                x = t.pageX
-                y = t.pageY
-            }
-            else {
-                x = e.clientX ?? e.pageX;
-                y = e.clientY ?? e.pageY;
+            if (event.type === "touchmove" || event.type === "touchstart") {
+                const t = event.touches && event.touches[0];
+                if (!t) return;
+                x = t.pageX;
+                y = t.pageY;
+            } else {
+                x = event.clientX ?? event.pageX;
+                y = event.clientY ?? event.pageY;
             }
 
             if(animationRef.current) cancelAnimationFrame(animationRef.current);
