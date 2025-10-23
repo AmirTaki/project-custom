@@ -29,7 +29,7 @@ const EnglishDictionary = () => {
                 meaningContainer.current.style.display = 'block'
                 audioRef.current.style.display = 'inline-flex'
                 title.current.innerText = result[0].word
-                meaning.innerText = result[0].meaning[0].definitions[0].definitions
+                meaning.current.innerText = result[0].meanings[0].definitions[0].definition;
                 audioRef.current.src = result[0].phonetics[0].audio;
             }
         }   
