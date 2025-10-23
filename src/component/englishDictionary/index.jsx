@@ -16,7 +16,9 @@ const EnglishDictionary = () => {
             </p>
             {/* meaning-container */}
             <div className="">
-                
+                {/* title */}
+                <p>Word Title <span>___</span></p>
+                {/* audio */}
             </div>
 
         </div>
