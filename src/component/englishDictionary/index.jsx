@@ -17,6 +17,8 @@ const EnglishDictionary = () => {
             const url =  `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`; 
             const result =  await fetch(url).then((res) => res.json())
 
+            console.log(result)
+
             if(result.title) {
                 meaningContainer.current.style.display = 'flex'
                 infoText.current.style.display = "none"
@@ -45,11 +47,10 @@ const EnglishDictionary = () => {
         }
     }
     
-    
     return(
         // container
         <div className="bg-[rgba(255,255,255,.3)] p-[28px] rounded-[7px] shadow-[0_10px_10px_rgba(0,0,0,.3)]
-             m-[100px] w-[800px]! text-center text-[18px] font-[500] 
+             m-[100px] w-[50%] min-w-[400px] text-center text-[18px] font-[500] 
             flex flex-col gap-5  justify-center items-center"
         >
             {/* heading*/}
