@@ -32,9 +32,9 @@ const DoctsMenu = () => {
         >
 
             <BrowserRouter >
-                {iconsList.map((item, index) => {
+                {iconsList.map((item) => {
                     return(
-                        <LinkMenu key = {index} item = {item} toggle = {toggle} index = {index}/>
+                        <LinkMenu key = {item.id} item = {item} toggle = {toggle} index = {item.id}/>
                     )
                 })}
             </BrowserRouter>
