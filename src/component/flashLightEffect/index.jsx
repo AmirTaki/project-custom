@@ -9,10 +9,21 @@ const FlashLight = () => {
         if(!false) return;
         
 
-       return () => {
-
+        const onMove = (e) => {
+            
         }
-    })
+
+        const supportsPointer =  typeof window !== "undefined" && "onpointermove" in window;
+        if (supportsPointer){
+            window.addEventListener("pointermove", onMove, {passive : true})
+        }
+        
+        return () => {
+            if(supportsPointer){
+                window.removeEventListener ('pointermove', onMove)
+            }
+        }
+    },[])
 
     return(
         <>
