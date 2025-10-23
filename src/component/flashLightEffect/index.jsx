@@ -5,7 +5,10 @@ const FlashLight = () => {
     return(
         <>
             {/* flash light */}
-            <div className=""></div>
+            <div  
+                ref = {mouseRef}
+                className="before:content-[''] before:block before:w-[100%] before:h-[100%] before:absolute before:pointer-events-none before:bg-[]"
+            ></div>
 
             <div className="bg-amber-200">
                 <p
