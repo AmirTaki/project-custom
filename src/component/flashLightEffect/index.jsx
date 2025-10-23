@@ -28,8 +28,8 @@ const FlashLight = () => {
                 y = event.clientY ?? event.pageY;
             }
 
-            if(animationRef.current) cancelAnimationFrame(animationRef.current);
-            animationRef.current = requestAnimationFrame(() => setPostion(x, y))
+            if (animationRef.current) cancelAnimationFrame(animationRef.current);
+            animationRef.current = requestAnimationFrame(() => setPostion(x, y));
         }
 
         const supportsPointer =  typeof window !== "undefined" && "onpointermove" in window;
