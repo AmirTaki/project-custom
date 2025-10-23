@@ -18,7 +18,7 @@ const EnglishDictionary = () => {
             const result =  await fetch(url).then((res) => res.json())
 
             if(result.title) {
-                meaningContainer.current.style.display = 'block'
+                meaningContainer.current.style.display = 'flex'
                 infoText.current.style.display = "none"
                 title.current.innerText = word;
                 meaning.current.innerText = "N/A";
@@ -26,7 +26,7 @@ const EnglishDictionary = () => {
             }
             else {
                 infoText.current.style.display = 'none'
-                meaningContainer.current.style.display = 'block'
+                meaningContainer.current.style.display = 'flex'
                 audioRef.current.style.display = 'inline-flex'
                 title.current.innerText = result[0].word
                 meaning.current.innerText = result[0].meanings[0].definitions[0].definition;
@@ -46,11 +46,11 @@ const EnglishDictionary = () => {
     }
     
     
-    
     return(
         // container
         <div className="bg-[rgba(255,255,255,.3)] p-[28px] rounded-[7px] shadow-[0_10px_10px_rgba(0,0,0,.3)]
-            w-[90%] m-[100px] max-w-[450px] text-center text-[18px] font-[500]  "
+             m-[100px] w-[800px]! text-center text-[18px] font-[500] 
+            flex flex-col gap-5  justify-center items-center"
         >
             {/* heading*/}
             <h1 className="text-[28px]">English Dictionary</h1>
@@ -59,14 +59,14 @@ const EnglishDictionary = () => {
                 onKeyDown={handleKeyDown}
                 onChange={(e) => {setValue(e.target.value)}}
                 type="text" placeholder="Search a word" 
-                className="h-[53px] w-[300px] bg-[rgba(255,255,255,.6)] border-[rgba(255,255,255,.4)] text-[16px] px-[42px] rounded-[5px]    "
+                className="h-[53px] w-[80%] bg-[rgba(255,255,255,.6)] border-[rgba(255,255,255,.4)] text-[16px] px-[42px] rounded-[5px]    "
             />
             {/* info-text */}
             <p ref = {infoText}>
                 Type a word and press enter
             </p>
             {/* meaning-container */}
-            <div className="hidden" ref = {meaningContainer}>
+            <div className="hidden  flex-col gap-4 items-center justify-center" ref = {meaningContainer}>
                 {/* title */}
                 <p>Word Title <span ref = {title}>___</span></p>
                 {/* meaning */}
