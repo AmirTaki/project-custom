@@ -1,4 +1,12 @@
 const EnglishDictionary = () => {
+    
+    
+    const FetchApi = async (word) => {
+        
+    }
+    
+    
+    
     return(
         // container
         <div className="bg-[rgba(255,255,255,.3)] p-[28px] rounded-[7px] shadow-[0_10px_10px_rgba(0,0,0,.3)]
@@ -19,6 +27,7 @@ const EnglishDictionary = () => {
                 {/* title */}
                 <p>Word Title <span>___</span></p>
                 {/* audio */}
+                <audio src="" controls ></audio>
             </div>
 
         </div>
