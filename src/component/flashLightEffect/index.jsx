@@ -7,7 +7,9 @@ const FlashLight = () => {
             {/* flash light */}
             <div  
                 ref = {mouseRef}
-                className="before:content-[''] before:block before:w-[100%] before:h-[100%] before:absolute before:pointer-events-none before:bg-[]"
+                style={{"--Xpos" : mouseRef.current.x, "--Ypos" : mouseRef.current.y}}
+                className={`before:content-[''] before:block before:w-[100%] before:h-[100%] before:absolute before:pointer-events-none 
+                before:bg-[radial-gradient(circle_9em_at_var(--Xpos)_var(--Ypos),rgba(0,0,0,0),rgba(0,0,0,1))]`}
             ></div>
 
             <div className="bg-amber-200">
