@@ -4,6 +4,7 @@ const EnglishDictionary = () => {
     
     const infoText =  useRef(null)
     const meaningContainer  = useRef(null)
+    const title = useRef(null)
     const meaning = useRef(null)
     
     const FetchApi = async (word) => {
@@ -17,6 +18,8 @@ const EnglishDictionary = () => {
             if(result.title) {
                 meaningContainer.current.style.display = 'block'
                 infoText.current.style.display = "none"
+                title.current.innerText = word;
+
 
 
             }
@@ -50,7 +53,9 @@ const EnglishDictionary = () => {
             {/* meaning-container */}
             <div className="hidden">
                 {/* title */}
-                <p>Word Title <span ref = {meaning}>___</span></p>
+                <p>Word Title <span ref = {title}>___</span></p>
+                {/* meaning */}
+                <p>Meaning : <span ref = {meaning}>___</span></p>
                 {/* audio */}
                 <audio src="" controls ></audio>
             </div>
