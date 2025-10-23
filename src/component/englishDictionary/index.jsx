@@ -27,7 +27,8 @@ const EnglishDictionary = () => {
             else {
                 infoText.current.style.display = 'none'
                 meaningContainer.current.style.display = 'block'
-                audioRef.current.innerText = result[0].word;
+                audioRef.current.style.display = 'inline-flex'
+                title.current.innerText = result[0].word
                 meaning.innerText = result[0].meaning[0].definitions[0].definitions
                 audioRef.current.src = result[0].phonetics[0].audio;
             }
@@ -40,7 +41,7 @@ const EnglishDictionary = () => {
     const handleKeyDown = (e) => {
         if(e.target.value && e.key === "Enter"){
             console.log("ok")
-            FetchApi(e.target.value)
+            FetchApi(value)
         }
     }
     
