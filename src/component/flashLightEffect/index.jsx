@@ -19,6 +19,10 @@ const FlashLight = () => {
             let x = 0, y = 0;
 
             if(e.type === "touchmove" || e.type === "touchstart"){
+                const t =  e.touches && e.touches[0]
+                if(!t) return;
+                x = t.pageX
+                y = t.pageY
 
             }
             else {
