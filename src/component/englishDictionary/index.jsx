@@ -59,7 +59,7 @@ const EnglishDictionary = () => {
                 onKeyDown={handleKeyDown}
                 onChange={(e) => {setValue(e.target.value)}}
                 type="text" placeholder="Search a word" 
-                className="h-[53px] w-[80%] bg-[rgba(255,255,255,.6)] border-[rgba(255,255,255,.4)] text-[16px] px-[42px] rounded-[5px]    "
+                className="h-[53px] w-[70%] bg-[rgba(255,255,255,.6)] border-[rgba(255,255,255,.4)] text-[16px] px-[42px] rounded-[5px]    "
             />
             {/* info-text */}
             <p ref = {infoText}>
