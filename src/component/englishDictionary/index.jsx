@@ -2,7 +2,8 @@ import { useRef } from "react"
 
 const EnglishDictionary = () => {
     
-    const infoText =  useRef('')
+    const infoText =  useRef(null)
+    const meaningContainer  = useRef(null)
     
     const FetchApi = async (word) => {
         try{
