@@ -3,6 +3,19 @@ import { useEffect, useRef } from "react";
 const FlashLight = () => {
     const mouseRef = useRef({x : 0, y : 0})
 
+    const isTouchDevice = () => {
+        try{
+            document.createEvent('TouchEvent')
+            return true
+        }
+        catch(e){return false}
+    }
+
+    const getMousePostion = (e) => {
+        mouseRef.current.x = !isTouchDevice() ? e.pageX : e.touches[0].pageX;
+        mouseRef.current.Y = !isTouchDevice() ? e.pageY : e.touches[0].pageY;
+    }
+
     useEffect(() => {
 
         window.addEventListener("mousemove", )
@@ -12,7 +25,7 @@ const FlashLight = () => {
             window.removeEventListener("mousemove",)
             window.removeEventListener('touchmove',)
         }
-    })
+    }, [])
     return(
         <>
             {/* flash light */}
