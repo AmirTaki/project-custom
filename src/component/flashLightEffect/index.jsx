@@ -22,7 +22,8 @@ const FlashLight = () => {
 
             }
             else {
-                
+                x = e.clientX ?? e.pageX;
+                y = e.clientY ?? e.pageY;
             }
 
 
