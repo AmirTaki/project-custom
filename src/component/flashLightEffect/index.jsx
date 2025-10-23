@@ -10,14 +10,17 @@ const FlashLight = () => {
         
 
         const onMove = (e) => {
-            
+
         }
 
         const supportsPointer =  typeof window !== "undefined" && "onpointermove" in window;
         if (supportsPointer){
             window.addEventListener("pointermove", onMove, {passive : true})
         }
-        
+        else {
+            window.addEventListener("mousemove", onMove, {passive : true})
+            window.addEventListener("touchmove", onMove, {passive : true})
+        }
         return () => {
             if(supportsPointer){
                 window.removeEventListener ('pointermove', onMove)
