@@ -9,8 +9,13 @@ const FlashLight = () => {
         if(!false) return;
         
 
-        const onMove = (e) => {
+        const setPostion  = (x, y) => {
+            
+        }
 
+        const onMove = (e) => {
+            if(animationRef.current) cancelAnimationFrame(animationRef.current);
+            animationRef.current = requestAnimationFrame(() => setPostion(x, y))
         }
 
         const supportsPointer =  typeof window !== "undefined" && "onpointermove" in window;
