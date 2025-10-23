@@ -24,7 +24,11 @@ const EnglishDictionary = () => {
                 audioRef.current.style.display = 'none'
             }
             else {
-
+                infoText.current.style.display = 'none'
+                meaningContainer.current.style.display = 'block'
+                audioRef.current.innerText = result[0].word;
+                meaning.innerText = result[0].meaning[0].definitions[0].definitions
+                audioRef.current.src = result[0].phonetics[0].audio;
             }
         }   
         catch (err) {
