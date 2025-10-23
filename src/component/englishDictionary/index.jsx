@@ -6,6 +6,7 @@ const EnglishDictionary = () => {
     
     const FetchApi = async (word) => {
         try{
+            infoText.current.style.display = "block"
 
         }   
         catch (err) {
@@ -32,7 +33,7 @@ const EnglishDictionary = () => {
                 Type a word and press enter
             </p>
             {/* meaning-container */}
-            <div className="">
+            <div className="hidden">
                 {/* title */}
                 <p>Word Title <span>___</span></p>
                 {/* audio */}
