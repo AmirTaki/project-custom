@@ -14,6 +14,7 @@ import CustomRightClick from "../customRightClick/index.jsx"
 import SelectMenu from "../selectMenu/index.jsx"
 import DropDrownMenu from "../dropDrownMenu.jsx/index.jsx"
 import EnergyButton from "../energyButton/index.jsx"
+import EnglishDictionary from "../englishDictionary/index.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -68,7 +69,7 @@ const Home =  ()  => {
     }, [])
 
     // veiw projects 
-    const  [view, setView] =   useState(true)   
+    const  [view, setView] =   useState(false)   
     return(
         <div 
             className={`bg-[#10131c] min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} 
@@ -130,7 +131,10 @@ const Home =  ()  => {
 
 
             {/* <MouseDragComponent /> */}
-
+            
+            {/* english dictionary */}
+            <EnglishDictionary />
+            
 
             <div className="h-100 w-100 text-white"></div>
         </div>   
