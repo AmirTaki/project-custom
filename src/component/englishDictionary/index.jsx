@@ -6,6 +6,11 @@ const EnglishDictionary = () => {
         >
             {/* heading*/}
             <h1 className="text-[28px]">English Dictionary</h1>
+            <input type="text" placeholder="Search a word" 
+                className="h-[53px] w-[300px] bg-[rgba(255,255,255,.6)] border-[rgba(255,255,255,.4)]
+                text-[16px] py-[42px] rounded-[5px]
+                "
+            />
 
         </div>
     )
