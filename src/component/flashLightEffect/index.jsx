@@ -5,31 +5,29 @@ const FlashLight = () => {
     const animationRef = useRef(null);
 
     useEffect(() => {
-        const flash = flashRef.current
-        if(!false) return;
-        
+        const flash = flashRef.current;
+        if (!flash) return;
+    
 
-        const setPostion  = (x, y) => {
-            flash.style.setProperty("--Xpos", `${x}px`)
-            flash.style.setProperty('--Ypos', `${y}px`)
-        }
+        const setPostion = (x, y) => {
+            flash.style.setProperty("--Xpos", `${x}px`);
+            flash.style.setProperty("--Ypos", `${y}px`);
+        };
+
 
         const onMove = (e) => {
-
             let x = 0, y = 0;
 
             if(e.type === "touchmove" || e.type === "touchstart"){
-                const t =  e.touches && e.touches[0]
+                const t =  e.touches && e.touches[0];
                 if(!t) return;
                 x = t.pageX
                 y = t.pageY
-
             }
             else {
                 x = e.clientX ?? e.pageX;
                 y = e.clientY ?? e.pageY;
             }
-
 
             if(animationRef.current) cancelAnimationFrame(animationRef.current);
             animationRef.current = requestAnimationFrame(() => setPostion(x, y))
@@ -45,7 +43,7 @@ const FlashLight = () => {
         }
         return () => {
             if(supportsPointer){
-                window.removeEventListener ('pointermove', onMove)
+                window.removeEventListener('pointermove', onMove)
             }
             else {
                 window.removeEventListener('mousemove', onMove)
