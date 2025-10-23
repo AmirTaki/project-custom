@@ -1,4 +1,7 @@
+import { useRef } from "react";
+
 const FlashLight = () => {
+    const mouseRef = useRef({x : 0, y : 0})
     return(
         <>
             {/* flash light */}
