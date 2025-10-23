@@ -37,7 +37,9 @@ const EnglishDictionary = () => {
         }
     }
     const handleKeyDown = (e) => {
-        
+        if(e.target.value && e.key === "enter"){
+            FetchApi(e.target.value)
+        }
     }
     
     
