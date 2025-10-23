@@ -1,67 +1,19 @@
 import { useEffect, useRef } from "react";
 
 const FlashLight = () => {
-    const ref = useRef(null);
-    const rafRef = useRef(null);
+    const flashRef = useRef(null);
+    const animationRef = useRef(null);
 
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    const setPos = (x, y) => {
-      el.style.setProperty("--Xpos", `${x}px`);
-      el.style.setProperty("--Ypos", `${y}px`);
-    };
-
-    const onMove = (event) => {
-      let x = 0, y = 0;
-
-      // normalize pointer / mouse / touch
-      if (event.type === "touchmove" || event.type === "touchstart") {
-        const t = event.touches && event.touches[0];
-        if (!t) return;
-        x = t.pageX;
-        y = t.pageY;
-      } else {
-        // pointermove and mousemove have clientX/clientY
-        x = event.clientX ?? event.pageX;
-        y = event.clientY ?? event.pageY;
-      }
-
-      // throttle with rAF
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
-      rafRef.current = requestAnimationFrame(() => setPos(x, y));
-    };
-
-    const supportsPointer = typeof window !== "undefined" && "onpointermove" in window;
-
-    if (supportsPointer) {
-      window.addEventListener("pointermove", onMove, { passive: true });
-    } else {
-      window.addEventListener("mousemove", onMove, { passive: true });
-      window.addEventListener("touchmove", onMove, { passive: true });
-    }
-
-    return () => {
-      if (supportsPointer) {
-        window.removeEventListener("pointermove", onMove);
-      } else {
-        window.removeEventListener("mousemove", onMove);
-        window.removeEventListener("touchmove", onMove);
-      }
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
-    };
-  }, []);
-  
 
 
     return(
         <>
             {/* flash light */}
             <div  
-              className={` before:content-[''] before:block before:w-[100%] before:h-[100%] before:top-0 before:absolute before:pointer-events-none 
-  before:bg-[radial-gradient(circle_9em_at_var(--Xpos)_var(--Ypos),rgba(0,0,0,.5),rgba(0,0,0,1))]`}
-                ref = {ref}
+                className={` before:content-[''] before:block before:w-[100%] before:h-[100%] before:top-0 before:absolute before:pointer-events-none 
+                    before:bg-[radial-gradient(circle_9em_at_var(--Xpos)_var(--Ypos),rgba(0,0,0,.1),rgba(0,0,0,1))]`
+                }
+                ref = {flashRef}
             ></div>
 
             <div className="">
