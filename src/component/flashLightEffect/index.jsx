@@ -1,48 +1,74 @@
 import { useEffect, useRef } from "react";
 
 const FlashLight = () => {
-    const mouseRef = useRef({x : 0, y : 0})
+    const ref = useRef(null);
+    const rafRef = useRef(null);
 
-    const isTouchDevice = () => {
-        try{
-            document.createEvent('TouchEvent')
-            return true
-        }
-        catch(e){
-            return false
-        }
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const setPos = (x, y) => {
+      el.style.setProperty("--Xpos", `${x}px`);
+      el.style.setProperty("--Ypos", `${y}px`);
+    };
+
+    const onMove = (event) => {
+      let x = 0, y = 0;
+
+      // normalize pointer / mouse / touch
+      if (event.type === "touchmove" || event.type === "touchstart") {
+        const t = event.touches && event.touches[0];
+        if (!t) return;
+        x = t.pageX;
+        y = t.pageY;
+      } else {
+        // pointermove and mousemove have clientX/clientY
+        x = event.clientX ?? event.pageX;
+        y = event.clientY ?? event.pageY;
+      }
+
+      // throttle with rAF
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      rafRef.current = requestAnimationFrame(() => setPos(x, y));
+    };
+
+    const supportsPointer = typeof window !== "undefined" && "onpointermove" in window;
+
+    if (supportsPointer) {
+      window.addEventListener("pointermove", onMove, { passive: true });
+    } else {
+      window.addEventListener("mousemove", onMove, { passive: true });
+      window.addEventListener("touchmove", onMove, { passive: true });
     }
 
-    const getMousePostion = (e) => {
-        mouseRef.current.x = !isTouchDevice() ? e.pageX : e.touches[0].pageX;
-        mouseRef.current.y = !isTouchDevice() ? e.pageY : e.touches[0].pageY;
-    }
+    return () => {
+      if (supportsPointer) {
+        window.removeEventListener("pointermove", onMove);
+      } else {
+        window.removeEventListener("mousemove", onMove);
+        window.removeEventListener("touchmove", onMove);
+      }
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
+  }, []);
+  
 
-    useEffect(() => {
 
-        window.addEventListener("mousemove", getMousePostion)
-        window.addEventListener("touchmove", getMousePostion)
-
-        return () => {
-            window.removeEventListener("mousemove", getMousePostion)
-            window.removeEventListener('touchmove', getMousePostion)
-        }
-    }, [])
     return(
         <>
             {/* flash light */}
             <div  
-                ref = {mouseRef}
-                style={{"--Xpos" : `${mouseRef.current.x}vw`, "--Ypos" : `${mouseRef.current.y}vh`}}
-                className={`before:content-[''] before:block before:w-[100%] before:h-[100%] before:absolute before:pointer-events-none 
-                before:bg-[radial-gradient(circle_9em_at_var(--Xpos)_var(--Ypos),rgba(0,0,0,0),rgba(0,0,0,1))]`}
+              className={` before:content-[''] before:block before:w-[100%] before:h-[100%] before:top-0 before:absolute before:pointer-events-none 
+  before:bg-[radial-gradient(circle_9em_at_var(--Xpos)_var(--Ypos),rgba(0,0,0,.5),rgba(0,0,0,1))]`}
+                ref = {ref}
             ></div>
 
             <div className="">
                 <p
-                    className="text-[1em] text-justify leading-[1.8em] p-[.2em]"
+                    className="text-[1em] text-justify leading-[1.8em] p-[.2em] text-gray-100"
                 >Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam est sequi quo voluptates molestiae? Blanditiis recusandae voluptatem nam officiis optio sint distinctio cupiditate dolorem, officia fuga rerum doloremque iure quaerat voluptate quas consequatur porro. Et quaerat tempore dicta deleniti perferendis distinctio dolore alias non dolor necessitatibus. Dolores eum at sit eos quasi numquam, odio, delectus voluptatum, quibusdam non nesciunt itaque! Quam ratione aliquid dolores! Aspernatur impedit dolorum tempore possimus odit eos, nemo nesciunt ipsum blanditiis excepturi soluta veritatis eveniet quisquam ad est dicta accusantium unde tempora commodi ea rem expedita omnis. Ex sed sunt nihil at, dolorum in quam numquam.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam est sequi quo voluptates molestiae? Blanditiis recusandae voluptatem nam officiis optio sint distinctio cupiditate dolorem, officia fuga rerum doloremque iure quaerat voluptate quas consequatur porro. Et quaerat tempore dicta deleniti perferendis distinctio dolore alias non dolor necessitatibus. Dolores eum at sit eos quasi numquam, odio, delectus voluptatum, quibusdam non nesciunt itaque! Quam ratione aliquid dolores! Aspernatur impedit dolorum tempore possimus odit eos, nemo nesciunt ipsum blanditiis excepturi soluta veritatis eveniet quisquam ad est dicta accusantium unde tempora commodi ea rem expedita omnis. Ex sed sunt nihil at, dolorum in quam numquam.</p>
+                {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam est sequi quo voluptates molestiae? Blanditiis recusandae voluptatem nam officiis optio sint distinctio cupiditate dolorem, officia fuga rerum doloremque iure quaerat voluptate quas consequatur porro. Et quaerat tempore dicta deleniti perferendis distinctio dolore alias non dolor necessitatibus. Dolores eum at sit eos quasi numquam, odio, delectus voluptatum, quibusdam non nesciunt itaque! Quam ratione aliquid dolores! Aspernatur impedit dolorum tempore possimus odit eos, nemo nesciunt ipsum blanditiis excepturi soluta veritatis eveniet quisquam ad est dicta accusantium unde tempora commodi ea rem expedita omnis. Ex sed sunt nihil at, dolorum in quam numquam.</p> */}
             </div>
         </>
     )
