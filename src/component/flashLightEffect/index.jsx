@@ -4,7 +4,14 @@ const FlashLight = () => {
     const flashRef = useRef(null);
     const animationRef = useRef(null);
 
+    useEffect(() => {
+    
+        
 
+       return () => {
+
+        }
+    })
 
     return(
         <>
