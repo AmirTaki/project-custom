@@ -8,22 +8,24 @@ const FlashLight = () => {
             document.createEvent('TouchEvent')
             return true
         }
-        catch(e){return false}
+        catch(e){
+            return false
+        }
     }
 
     const getMousePostion = (e) => {
         mouseRef.current.x = !isTouchDevice() ? e.pageX : e.touches[0].pageX;
-        mouseRef.current.Y = !isTouchDevice() ? e.pageY : e.touches[0].pageY;
+        mouseRef.current.y = !isTouchDevice() ? e.pageY : e.touches[0].pageY;
     }
 
     useEffect(() => {
 
-        window.addEventListener("mousemove", )
-        window.addEventListener("touchmove", )
+        window.addEventListener("mousemove", getMousePostion)
+        window.addEventListener("touchmove", getMousePostion)
 
         return () => {
-            window.removeEventListener("mousemove",)
-            window.removeEventListener('touchmove',)
+            window.removeEventListener("mousemove", getMousePostion)
+            window.removeEventListener('touchmove', getMousePostion)
         }
     }, [])
     return(
@@ -31,12 +33,12 @@ const FlashLight = () => {
             {/* flash light */}
             <div  
                 ref = {mouseRef}
-                style={{"--Xpos" : mouseRef.current.x, "--Ypos" : mouseRef.current.y}}
+                style={{"--Xpos" : `${mouseRef.current.x}vw`, "--Ypos" : `${mouseRef.current.y}vh`}}
                 className={`before:content-[''] before:block before:w-[100%] before:h-[100%] before:absolute before:pointer-events-none 
                 before:bg-[radial-gradient(circle_9em_at_var(--Xpos)_var(--Ypos),rgba(0,0,0,0),rgba(0,0,0,1))]`}
             ></div>
 
-            <div className="bg-amber-200">
+            <div className="">
                 <p
                     className="text-[1em] text-justify leading-[1.8em] p-[.2em]"
                 >Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam est sequi quo voluptates molestiae? Blanditiis recusandae voluptatem nam officiis optio sint distinctio cupiditate dolorem, officia fuga rerum doloremque iure quaerat voluptate quas consequatur porro. Et quaerat tempore dicta deleniti perferendis distinctio dolore alias non dolor necessitatibus. Dolores eum at sit eos quasi numquam, odio, delectus voluptatum, quibusdam non nesciunt itaque! Quam ratione aliquid dolores! Aspernatur impedit dolorum tempore possimus odit eos, nemo nesciunt ipsum blanditiis excepturi soluta veritatis eveniet quisquam ad est dicta accusantium unde tempora commodi ea rem expedita omnis. Ex sed sunt nihil at, dolorum in quam numquam.</p>
