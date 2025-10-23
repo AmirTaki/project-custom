@@ -25,6 +25,10 @@ const FlashLight = () => {
             if(supportsPointer){
                 window.removeEventListener ('pointermove', onMove)
             }
+            else {
+                window.removeEventListener('mousemove', onMove)
+                window.removeEventListener('touchmove', onMove)
+            }
         }
     },[])
 
