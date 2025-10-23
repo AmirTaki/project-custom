@@ -5,7 +5,8 @@ const FlashLight = () => {
     const animationRef = useRef(null);
 
     useEffect(() => {
-    
+        const flash = flashRef.current
+        if(!false) return;
         
 
        return () => {
