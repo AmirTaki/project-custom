@@ -4,60 +4,60 @@ const FlashLight = () => {
     const flashRef = useRef(null);
     const animationRef = useRef(null);
 
-    useEffect(() => {
-        const flash = flashRef.current;
-        if (!flash) return;
+    // useEffect(() => {
+    //     const flash = flashRef.current;
+    //     if (!flash) return;
     
 
-        const setPostion = (x, y) => {
-            flash.style.setProperty("--Xpos", `${x}px`);
-            flash.style.setProperty("--Ypos", `${y}px`);
-        };
+    //     const setPostion = (x, y) => {
+    //         flash.style.setProperty("--Xpos", `${x}px`);
+    //         flash.style.setProperty("--Ypos", `${y}px`);
+    //     };
 
 
-        const onMove = (event) => {
-            let x = 0, y = 0;
+    //     const onMove = (event) => {
+    //         let x = 0, y = 0;
 
-            if (event.type === "touchmove" || event.type === "touchstart") {
-                const t = event.touches && event.touches[0];
-                if (!t) return;
-                x = t.pageX;
-                y = t.pageY;
-            } else {
-                x = event.clientX ?? event.pageX;
-                y = event.clientY ?? event.pageY;
-            }
+    //         if (event.type === "touchmove" || event.type === "touchstart") {
+    //             const t = event.touches && event.touches[0];
+    //             if (!t) return;
+    //             x = t.pageX;
+    //             y = t.pageY;
+    //         } else {
+    //             x = event.clientX ?? event.pageX;
+    //             y = event.clientY ?? event.pageY;
+    //         }
 
-            if (animationRef.current) cancelAnimationFrame(animationRef.current);
-            animationRef.current = requestAnimationFrame(() => setPostion(x, y));
-        }
+    //         if (animationRef.current) cancelAnimationFrame(animationRef.current);
+    //         animationRef.current = requestAnimationFrame(() => setPostion(x, y));
+    //     }
 
-        const supportsPointer =  typeof window !== "undefined" && "onpointermove" in window;
-        if (supportsPointer){
-            window.addEventListener("pointermove", onMove, {passive : true})
-        }
-        else {
-            window.addEventListener("mousemove", onMove, {passive : true})
-            window.addEventListener("touchmove", onMove, {passive : true})
-        }
-        return () => {
-            if(supportsPointer){
-                window.removeEventListener('pointermove', onMove)
-            }
-            else {
-                window.removeEventListener('mousemove', onMove)
-                window.removeEventListener('touchmove', onMove)
-            }
-            if(animationRef.current) cancelAnimationFrame(animationRef.current)
-        }
-    },[])
+    //     const supportsPointer =  typeof window !== "undefined" && "onpointermove" in window;
+    //     if (supportsPointer){
+    //         window.addEventListener("pointermove", onMove, {passive : true})
+    //     }
+    //     else {
+    //         window.addEventListener("mousemove", onMove, {passive : true})
+    //         window.addEventListener("touchmove", onMove, {passive : true})
+    //     }
+    //     return () => {
+    //         if(supportsPointer){
+    //             window.removeEventListener('pointermove', onMove)
+    //         }
+    //         else {
+    //             window.removeEventListener('mousemove', onMove)
+    //             window.removeEventListener('touchmove', onMove)
+    //         }
+    //         if(animationRef.current) cancelAnimationFrame(animationRef.current)
+    //     }
+    // },[])
     
     return(
         <div className="relative  h-[100vh] ">
             {/* flash light */}
             <div  
         className={` 
-            before:content-[''] before:block before:w-[100%]  before:absolute  before:top-0 before:h-[100%]  before:pointer-events-none 
+            before:content-[''] before:block before:w-[100%]  before:absolute  before:top-0 before:h-[100%]   before:pointer-events-none 
             before:bg-[radial-gradient(circle_9em_at_var(--Xpos)_var(--Ypos),rgba(0,0,0,.1),rgba(0,0,0,1))]`
         }
                 ref = {flashRef}

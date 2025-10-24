@@ -132,7 +132,7 @@ const Home =  ()  => {
                 <EnglishDictionary />
             
                 {/* flash light effect */}
-                <FlashLight />
+                {/* <FlashLight /> */}
         
             </div>
 
