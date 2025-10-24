@@ -35,21 +35,16 @@ const GenerateQrCode = () => {
         isEmptyInput()
     }
     const handlerDownload = () => {
-        const canvas = qrContainer.current?.querySelector('canvas');
-        if (!canvas) {
-            alert("QR code not generated yet");
-            return;
-        }
-        const dataUrl = canvas.toDataURL('image/png');
-     
-        if (imgRef.current) imgRef.current.src = dataUrl;
+        const canvas =  qrContainer.current?.querySelector('canvas')
+        if(!canvas){alert('QR code not generated yet'); return;}
 
-        // یا دانلود خودکار:
-        const a = document.createElement('a');
+        const dataUrl = canvas.toDataURL('image/png')
+
+        if(imgRef.current) imgRef.current.src = dataUrl;
+
+        const a =  document.createElement('a')
         a.href = dataUrl;
-        a.download = 'qr-code.png';
-        a.click();
-        a.remove();
+
     };
     return(
         // box
