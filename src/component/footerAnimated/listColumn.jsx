@@ -1,7 +1,10 @@
-const ListColumn = () => {
+import { Link } from "react-router-dom";
+
+
+const ListColumn = ({link}) => {
     return (
         <li className="list-none mb-[12px]">
-            <a href="" className="decoration-0 cursor-pointer text-whtie">Home</a>
+            <Link to = '/' className="decoration-0 cursor-pointer text-whtie">{link}</Link>
         </li> 
     )
 }

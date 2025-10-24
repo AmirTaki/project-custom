@@ -30,7 +30,7 @@ const FooterAnimated  = () => {
                 <ColumnFooter title = {"Links"} >
                     <BrowserRouter>
                         <ul>
-                            <ListColumn link = {} />
+                            <ListColumn link = {'home'} />
                         </ul>
                     </BrowserRouter>
                 </ColumnFooter >
