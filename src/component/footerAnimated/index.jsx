@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import ColumnFooter from "./columnFotter";
 import ListColumn from "./listColumn";
 import FormFooter from "./formFooter";
+import SocialIcons from "./socialIcons";
 const listLink = ['home', 'Services', 'AboutUs', 'Features', 'Contacts']
 
 const FooterAnimated  = () => {
@@ -42,13 +43,7 @@ const FooterAnimated  = () => {
                 {/* col 4 */}
                 <ColumnFooter title = {'Newsletter'}>
                     <FormFooter />
-
-                    <div className="">
-                        <i className="bi bi-facebook"></i>
-                        <i className="bi bi-twitter"></i>
-                        <i className="bi bi-whatsapp"></i>
-                 
-                    </div>
+                    <SocialIcons />
                 </ColumnFooter>
            </div>
         </footer>
