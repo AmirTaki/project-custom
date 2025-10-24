@@ -49,7 +49,7 @@ const FooterAnimated  = () => {
            </div>
            <hr className="w-[90%] border-0 border-b-1 border-b-[#ccc] my-[20px] mx-auto" />
            {/* copy right */}
-           <p className="">Easy Totorials © 2021 - All Rights Reserved</p>
+           <p className="text-center">Easy Totorials © 2021 - All Rights Reserved</p>
         </footer>
     )
 }
