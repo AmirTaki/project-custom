@@ -7,7 +7,7 @@ const SocialIcons = () => {
                     <i 
                         key = {index}
                         className={`${icon}
-                        w-[40px] h-[40px] rounded-[50%] text-center leading-[40px] bg-transparent mr-[15px] cursor-pointer
+                        w-[40px] h-[40px] text-xl rounded-[50%] text-center leading-[40px] bg-transparent mr-[15px] cursor-pointer
                     `}></i>
                 )
             })}
