@@ -5,13 +5,15 @@ const options = ['100', '200', '300', '400', '500', '600', '700', '800', '900', 
 const GenerateQrCode = () => {
 
     const [valueInput, setValueInput] =  useState('')
+    const [sizes, setSizes] = useState(100)
 
     const downloadBtn =  useRef(null)
     const generateBtn =  useRef(null)
     const inputQr = useRef(valueInput)
-    const sizesRef = useRef(null)
+    const sizesRef = useRef(sizes)
 
-   
+
+
     const isEmptyInput = () => {
 
     }
@@ -39,16 +41,19 @@ const GenerateQrCode = () => {
                     >
                         Select Size :
                     </label>
-                    <select 
-                        ref = {sizesRef}
-                        name="" 
-                        id="sizes" 
-                        className="p-[8px] rounded-[8px] text-[18px] outline-0 border-2 bg-white border-[#7fb7c9]">
-                        {options.map((opt, ind) => {
-                            return(
-                                <option value = {opt} key = {ind}>{opt}x{opt}</option>
-                            )
-                        })}
+                    <select
+                        value={sizes}
+                        onChange={(e) => {
+                            setSizes(e.target.value);
+                        }}
+                        ref={sizesRef}
+                        name="sizes"
+                        id="sizes"
+                        className="p-[8px] rounded-[8px] text-[18px] outline-0 border-2 bg-white border-[#7fb7c9]"
+                    >
+                        {options.map((opt) => (
+                            <option value={opt} key={opt}>{opt}x{opt}</option>
+                        ))}
                     </select>
                 </div>
             </div>
