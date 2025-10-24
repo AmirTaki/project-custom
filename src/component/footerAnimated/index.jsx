@@ -22,6 +22,10 @@ const FooterAnimated  = () => {
                             <span className="w-[15px] h-[100%] bg-[#fff] rounded-[3px] absolute top-0 left-[10px] animate-[movingFooter_2s_linear_infinite]"></span>
                         </div>
                     </h3>
+                    {/* col p */}
+                    <p>ITPL Road Whitefield, Bangalore Karnataka, PIN 560066, Tehran</p>
+                    <p></p>
+                    <p className="w-fit border-b-1 border-b-[#ccc] my-[20px]">email@gamil.com</p>
                 </div>
            </div>
         </footer>
