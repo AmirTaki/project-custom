@@ -9,7 +9,7 @@ const listLink = ['home', 'Services', 'AboutUs', 'Features', 'Contacts']
 const FooterAnimated  = () => {
     return(
         <footer className="w-[100%] absolute bottom-0  bg-[linear-gradient(to_right,#00093c,#2d0b00)]
-            text-white p-[100px_0_30px] rounded-tl-[125px] text-[13px] leading-[20px]     max-md:bottom-auto font-sans
+            text-white p-[100px_0_30px] rounded-tl-[125px] text-[14px] leading-[20px]     max-md:bottom-auto font-sans
             max-md:unset
         ">
             {/* row */}
