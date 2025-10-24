@@ -1,3 +1,4 @@
+import "./styles.css"
 const FooterAnimated  = () => {
     return(
         <footer className="w-[100%] absolute bottom-0  bg-[linear-gradient(to_right,#00093c,#2d0b00)]
@@ -17,8 +18,8 @@ const FooterAnimated  = () => {
                     <h3 className="w-fit mb-[40px] relative">
                         Office 
                         {/* underline */}
-                        <div className="w-[100%] h-[5px] bg-[#767676] absolute top-[25px] left-0  rounded-[3px]">
-                            <span className="w-[15px] h-[100%] bg-[#fff] rounded-[3px] absolute top-0 left-[10px] animate-none"></span>
+                        <div className="w-[100%] h-[5px] bg-[#767676] absolute top-[25px] left-0  rounded-[3px] overflow-hidden">
+                            <span className="w-[15px] h-[100%] bg-[#fff] rounded-[3px] absolute top-0 left-[10px] animate-[movingFooter_2s_linear_infinite]"></span>
                         </div>
                     </h3>
                 </div>
