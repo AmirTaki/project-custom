@@ -44,6 +44,9 @@ const GenerateQrCode = () => {
 
         const a =  document.createElement('a')
         a.href = dataUrl;
+        a.download = dataUrl;
+        a.click()
+        a.remove()
 
     };
     return(
