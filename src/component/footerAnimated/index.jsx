@@ -11,6 +11,12 @@ const FooterAnimated  = () => {
                     <img src="https://cdn.pixabay.com/photo/2017/05/31/16/39/windows-2360920_1280.png" alt="" className="w-[80px]"/>
                     <p>Subscribe Easy Tutorials Youtube channel to watch more videos on website development and Press the bell icon to get immediate notification of latest videos.</p>
                 </div>
+                {/* col 2 */}
+                <div className="p-[10px] basis-[15%]">
+                    {/* col h3 */}
+                    <h3 className="w-fit mb-[40px] relative">
+                        Office <div className=""><span></span></div></h3>
+                </div>
            </div>
         </footer>
     )
