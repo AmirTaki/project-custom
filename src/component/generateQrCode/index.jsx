@@ -10,6 +10,17 @@ const GenerateQrCode = () => {
                     type = 'text'
                     placeholder="Type your text ot URL"
                 />
+
+
+                {/* select */}
+                <div className="flex justify-between">
+                    <label htmlFor="sizes" 
+                        className="text-white text-[20px]"
+                    >
+                        Select Size :
+                    </label>
+                    <select name="" id="sizes"></select>
+                </div>
             </div>
         </div>
     )
