@@ -5,6 +5,9 @@ const GenerateQrCode = () => {
             {/* qr header */}
             <div>
                 <h1 className="text-[26px] text-center text-white mb-[26px] uppercase">Generate QR Code</h1>
+                <input 
+                    className="w-[100%] mb-[12px] p-[15px] outline-0 rounded-[8px]"
+                />
             </div>
         </div>
     )
