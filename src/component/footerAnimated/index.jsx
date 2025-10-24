@@ -45,6 +45,7 @@ const FooterAnimated  = () => {
                         <input type="email" placeholder="Enter your email id" required 
                             className="w-[100%] bg-transparent text-[#ccc] border-0 outline-0"
                         />
+                        <button type="submit"><i className="bi bi-arrow-right"></i></button>
                     </form>
                 </ColumnFooter>
            </div>
