@@ -34,6 +34,23 @@ const GenerateQrCode = () => {
         event.preventDefault();
         isEmptyInput()
     }
+    const handlerDownload = () => {
+        const canvas = qrContainer.current?.querySelector('canvas');
+        if (!canvas) {
+            alert("QR code not generated yet");
+            return;
+        }
+        const dataUrl = canvas.toDataURL('image/png');
+     
+        if (imgRef.current) imgRef.current.src = dataUrl;
+
+        // یا دانلود خودکار:
+        const a = document.createElement('a');
+        a.href = dataUrl;
+        a.download = 'qr-code.png';
+        a.click();
+        a.remove();
+    };
     return(
         // box
         <div className="w-[400px] bg-[#155e75] p-[30px] rounded-[8px]">
@@ -75,9 +92,12 @@ const GenerateQrCode = () => {
                 ref = {qrContainer}
                 className="grid place-items-center"
             >
-                <img ref = {imgRef} src="" alt=""  className="max-w-[100%] max-h-[100%] mb-[10px] p-[20px]
-                    border-[.5px] border-white rounded-[8px]
-                "/>
+                <img 
+                    ref = {imgRef} 
+                    src="" alt="" 
+                    
+                    // className={`${  ? "max-w-[100%] max-h-[100%] mb-[10px] p-[20px]border-[.5px] border-white rounded-[8px]" : ""}`} 
+                />
             </div>
 
             {/* qr footer */}
@@ -91,6 +111,7 @@ const GenerateQrCode = () => {
                 </button>
 
                 <button 
+                    onClick={handlerDownload}
                     ref = {downloadBtn}
                     className="bg-white text-[20px] py-[14px] px-[36px] mx-[2px] text-[#155e75] font-[600] rounded-[8px] cursor-pointer"
                 >
