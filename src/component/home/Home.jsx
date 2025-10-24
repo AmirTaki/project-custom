@@ -17,7 +17,7 @@ import EnergyButton from "../energyButton/index.jsx"
 import EnglishDictionary from "../englishDictionary/index.jsx"
 import FlashLight from "../flashLightEffect/index.jsx"
 import FooterAnimated from "../footerAnimated/index.jsx"
-
+import GenerateQrCode from "../generateQrCode/index.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -143,8 +143,10 @@ const Home =  ()  => {
 
 
             {/* <MouseDragComponent /> */}
+            {/* Generate Qr Code */}
+            <GenerateQrCode />
 
-            {/* <div className="h-100 w-100 text-white"></div> */}
+            <div className="h-100 w-100 text-white"></div>
         </div>   
     )
 }

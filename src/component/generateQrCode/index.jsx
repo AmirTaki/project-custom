@@ -1,6 +1,9 @@
 const GenerateQrCode = () => {
     return(
-        <div className=""></div>
+        // box
+        <div className="w-[400px] bg-[#155e75] p-[30px] rounded-[8px]">
+
+        </div>
     )
 }
 
