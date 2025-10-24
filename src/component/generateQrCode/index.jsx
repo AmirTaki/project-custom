@@ -38,7 +38,7 @@ const GenerateQrCode = () => {
 
             {/* qr footer */}
             <div className="mt-[30px] flex justify-center">
-                
+                <button className="">Generate</button>
             </div>
         </div>
     )
