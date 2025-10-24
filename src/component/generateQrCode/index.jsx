@@ -13,9 +13,12 @@ const GenerateQrCode = () => {
     const sizesRef = useRef(sizes)
 
 
+    const generateQRCode = () => {
+        
+    }
 
     const isEmptyInput = () => {
-        inputQr.current.value.length > 0 ? console.log('ok') : window.alert('Enter the text or URL to generate your QR code')
+        inputQr.current.value.length > 0 ? generateQRCode() : window.alert('Enter the text or URL to generate your QR code')
     }   
     const handerGenerate = (event) => {
         event.preventDefault();
