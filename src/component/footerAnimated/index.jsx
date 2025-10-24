@@ -38,7 +38,10 @@ const FooterAnimated  = () => {
                     </BrowserRouter>
                 </ColumnFooter >
 
-           
+                {/* col 4 */}
+                <ColumnFooter title = {'Newsletter'}>
+                
+                </ColumnFooter>
            </div>
         </footer>
     )
