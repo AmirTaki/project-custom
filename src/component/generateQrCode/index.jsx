@@ -1,5 +1,10 @@
+import { useRef } from "react"
+
+
 const options = ['100', '200', '300', '400', '500', '600', '700', '800', '900', '1000' ]
 const GenerateQrCode = () => {
+    const downloadBtn =  useRef(null)
+    const generateBtn =  useRef(null)
     return(
         // box
         <div className="w-[400px] bg-[#155e75] p-[30px] rounded-[8px]">
@@ -11,8 +16,6 @@ const GenerateQrCode = () => {
                     type = 'text'
                     placeholder="Type your text ot URL"
                 />
-
-
                 {/* select */}
                 <div className="flex justify-between">
                     <label htmlFor="sizes" 
@@ -39,12 +42,14 @@ const GenerateQrCode = () => {
             {/* qr footer */}
             <div className="mt-[30px] flex justify-center">
                 <button 
+                    ref = {generateBtn}
                     className="bg-white text-[20px] py-[14px] px-[36px] mx-[2px] text-[#155e75] font-[600] rounded-[8px] cursor-pointer"
                 >
                     Generate
                 </button>
 
                 <button 
+                    ref = {downloadBtn}
                     className="bg-white text-[20px] py-[14px] px-[36px] mx-[2px] text-[#155e75] font-[600] rounded-[8px] cursor-pointer"
                 >
                     Download
