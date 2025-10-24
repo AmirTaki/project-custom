@@ -1,9 +1,8 @@
+import "./styles.css"
 import { BrowserRouter } from "react-router-dom";
 import ColumnFooter from "./columnFotter";
 import ListColumn from "./listColumn";
-import "./styles.css"
-
-
+const listLink = ['home', 'Services', 'AboutUs', 'Features', 'Contacts']
 
 const FooterAnimated  = () => {
     return(
@@ -30,7 +29,11 @@ const FooterAnimated  = () => {
                 <ColumnFooter title = {"Links"} >
                     <BrowserRouter>
                         <ul>
-                            <ListColumn link = {'home'} />
+                            {listLink.map((link, index) => {
+                                return(
+                                    <ListColumn link = {link} key = {index} />
+                                )
+                            })}
                         </ul>
                     </BrowserRouter>
                 </ColumnFooter >
