@@ -53,11 +53,11 @@ const FlashLight = () => {
     },[])
     
     return(
-        <>
+        <div className="relative  h-[100vh] ">
             {/* flash light */}
             <div  
-        className={`
-            before:content-[''] before:block before:w-[100%] before:h-[100%]  before:pointer-events-none 
+        className={` 
+            before:content-[''] before:block before:w-[100%]  before:absolute  before:top-0 before:h-[100%]  before:pointer-events-none 
             before:bg-[radial-gradient(circle_9em_at_var(--Xpos)_var(--Ypos),rgba(0,0,0,.1),rgba(0,0,0,1))]`
         }
                 ref = {flashRef}
@@ -69,7 +69,7 @@ const FlashLight = () => {
                 >Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam est sequi quo voluptates molestiae? Blanditiis recusandae voluptatem nam officiis optio sint distinctio cupiditate dolorem, officia fuga rerum doloremque iure quaerat voluptate quas consequatur porro. Et quaerat tempore dicta deleniti perferendis distinctio dolore alias non dolor necessitatibus. Dolores eum at sit eos quasi numquam, odio, delectus voluptatum, quibusdam non nesciunt itaque! Quam ratione aliquid dolores! Aspernatur impedit dolorum tempore possimus odit eos, nemo nesciunt ipsum blanditiis excepturi soluta veritatis eveniet quisquam ad est dicta accusantium unde tempora commodi ea rem expedita omnis. Ex sed sunt nihil at, dolorum in quam numquam.</p>
                 {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam est sequi quo voluptates molestiae? Blanditiis recusandae voluptatem nam officiis optio sint distinctio cupiditate dolorem, officia fuga rerum doloremque iure quaerat voluptate quas consequatur porro. Et quaerat tempore dicta deleniti perferendis distinctio dolore alias non dolor necessitatibus. Dolores eum at sit eos quasi numquam, odio, delectus voluptatum, quibusdam non nesciunt itaque! Quam ratione aliquid dolores! Aspernatur impedit dolorum tempore possimus odit eos, nemo nesciunt ipsum blanditiis excepturi soluta veritatis eveniet quisquam ad est dicta accusantium unde tempora commodi ea rem expedita omnis. Ex sed sunt nihil at, dolorum in quam numquam.</p> */}
             </div>
-        </>
+        </div>
     )
 }
 export default FlashLight;
