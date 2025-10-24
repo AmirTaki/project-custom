@@ -1,4 +1,4 @@
-const QRBody = ({qrContainer, QRBody}) => {
+const QRBody = ({qrContainer, imgRef}) => {
     return(
         <div 
             ref = {qrContainer}
