@@ -6,7 +6,11 @@ const FooterAnimated  = () => {
             {/* row */}
             <div className="w-[85%] m-auto flex flex-wrap items-start justify-between">
                 {/* col */}
-                <div className="basis-[25%] p-[10px]"></div>
+                <div className="basis-[25%] p-[10px]">
+                    {/* logo img */}
+                    <img src="https://cdn.pixabay.com/photo/2017/05/31/16/39/windows-2360920_1280.png" alt="" className="w-[80px]"/>
+                    <p>Subscribe Easy Tutorials Youtube channel to watch more videos on website development and Press the bell icon to get immediate notification of latest videos.</p>
+                </div>
            </div>
         </footer>
     )
