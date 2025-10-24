@@ -24,7 +24,11 @@ const FooterAnimated  = () => {
                 
                 {/* col 3 */}
                 <ColumnFooter title = {"Links"} >
-                    
+                    <ul>
+                        <li className="list-none mb-[12px]">
+                            <a href=""></a>
+                        </li>
+                    </ul>
                 </ColumnFooter >
 
            
