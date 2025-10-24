@@ -19,7 +19,9 @@ const GenerateQrCode = () => {
                     >
                         Select Size :
                     </label>
-                    <select name="" id="sizes"></select>
+                    <select name="" id="sizes" className="p-[8px] rounded-[8px] text-[18px] outline-0 border-2 border-[#7fb7c9]">
+
+                    </select>
                 </div>
             </div>
         </div>
