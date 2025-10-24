@@ -18,7 +18,7 @@ const FooterAnimated  = () => {
                         Office 
                         {/* underline */}
                         <div className="w-[100%] h-[5px] bg-[#767676] absolute top-[25px] left-0  rounded-[3px]">
-                            <span className="w-[15px] h-[100%] bg-[#fff] rounded-[3px] absolute top-0 left-[10px]"></span>
+                            <span className="w-[15px] h-[100%] bg-[#fff] rounded-[3px] absolute top-0 left-[10px] animate-none"></span>
                         </div>
                     </h3>
                 </div>
