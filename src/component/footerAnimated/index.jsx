@@ -40,7 +40,9 @@ const FooterAnimated  = () => {
 
                 {/* col 4 */}
                 <ColumnFooter title = {'Newsletter'}>
-                
+                    <form className="pb-[15px] flex items-center justify-between border-b-1 border-b-[#ccc] mb-[50px]">
+
+                    </form>
                 </ColumnFooter>
            </div>
         </footer>
