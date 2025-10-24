@@ -41,7 +41,10 @@ const FooterAnimated  = () => {
                 {/* col 4 */}
                 <ColumnFooter title = {'Newsletter'}>
                     <form className="pb-[15px] flex items-center justify-between border-b-1 border-b-[#ccc] mb-[50px]">
-
+                        <i className="bi bi-envelope text-[18px] mr-[10px]"></i>
+                        <input type="email" placeholder="Enter your email id" required 
+                            className="w-[100%] bg-transparent text-[#ccc] border-0 outline-0"
+                        />
                     </form>
                 </ColumnFooter>
            </div>
