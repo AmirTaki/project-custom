@@ -26,7 +26,7 @@ const FooterAnimated  = () => {
                 <ColumnFooter title = {"Links"} >
                     <ul>
                         <li className="list-none mb-[12px]">
-                            <a href=""></a>
+                            <a href="" className="decoration-0 cursor-pointer text-whtie">Home</a>
                         </li>
                     </ul>
                 </ColumnFooter >
