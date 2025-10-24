@@ -2,6 +2,7 @@ import "./styles.css"
 import { BrowserRouter } from "react-router-dom";
 import ColumnFooter from "./columnFotter";
 import ListColumn from "./listColumn";
+import FormFooter from "./formFooter";
 const listLink = ['home', 'Services', 'AboutUs', 'Features', 'Contacts']
 
 const FooterAnimated  = () => {
@@ -40,7 +41,7 @@ const FooterAnimated  = () => {
 
                 {/* col 4 */}
                 <ColumnFooter title = {'Newsletter'}>
-
+                    <FormFooter />
                 </ColumnFooter>
            </div>
         </footer>
