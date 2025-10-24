@@ -16,7 +16,8 @@ const GenerateQrCode = () => {
 
     const generateQRCode = () => {
     
-        qrContainer.current.style.innerText = ''
+       qrContainer.current.innerHTML = ''
+        
         new QRCode (qrContainer.current, {
             text : inputQr.current.value,
             width : sizesRef.current.value,
