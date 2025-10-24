@@ -1,16 +1,25 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useReducer, useRef, useState } from "react"
 
 
 const options = ['100', '200', '300', '400', '500', '600', '700', '800', '900', '1000' ]
 const GenerateQrCode = () => {
 
+    const reducer = (state, action)=>{
+        switch(action.type){    
+            case "":
+                return [...state]
+        }
+    }
+    const [state, disptach] =   useReducer(reducer, {
+        value : '',
+        size : 100
+    })
+
     const [valueInput, setValueInput] =  useState('')
     const [sizes, setSizes] = useState(100)
 
-    const downloadBtn =  useRef(null)
-    const generateBtn =  useRef(null)
-    const inputQr = useRef(valueInput)
-    const sizesRef = useRef(sizes)
+    const inputQr = useRef(state.value)
+    const sizesRef = useRef(state.size)
     const qrContainer = useRef(null)
     const imgRef = useRef(null)
 
@@ -57,7 +66,8 @@ const GenerateQrCode = () => {
                 <h1 className="text-[26px] text-center text-white mb-[26px] uppercase">Generate QR Code</h1>
                 <input 
                     ref = {inputQr}
-                    onChange={(e) => {setValueInput(e.target.value)}}
+                    onChange = {(e) => {disptach({type : "input", payload : {event : e.target.value}})}}
+                    // onChange={(e) => {setValueInput(e.target.value)}}
                     className="w-[100%] mb-[12px] p-[15px] outline-0 rounded-[8px] text-[18px] border-2 border-[#7fb7c9] bg-white"
                     type = 'text'
                     placeholder="Type your text ot URL"
@@ -92,9 +102,8 @@ const GenerateQrCode = () => {
             >
                 <img 
                     ref = {imgRef} 
-                    src="" alt="" 
-                    
-                    // className={`${  ? "max-w-[100%] max-h-[100%] mb-[10px] p-[20px]border-[.5px] border-white rounded-[8px]" : ""}`} 
+                    src="a" alt="" 
+                    className= "max-w-[100%] max-h-[100%] mb-[10px] p-[20px]border-[.5px] border-white rounded-[8px]"
                 />
             </div>
 
@@ -102,7 +111,6 @@ const GenerateQrCode = () => {
             <div className="mt-[30px] flex justify-center">
                 <button 
                     onClick={handerGenerate}
-                    ref = {generateBtn}
                     className="bg-white text-[20px] py-[14px] px-[36px] mx-[2px] text-[#155e75] font-[600] rounded-[8px] cursor-pointer"
                 >
                     Generate
@@ -110,7 +118,6 @@ const GenerateQrCode = () => {
 
                 <button 
                     onClick={handlerDownload}
-                    ref = {downloadBtn}
                     className="bg-white text-[20px] py-[14px] px-[36px] mx-[2px] text-[#155e75] font-[600] rounded-[8px] cursor-pointer"
                 >
                     Download
