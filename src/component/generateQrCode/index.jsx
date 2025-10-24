@@ -5,6 +5,7 @@ const options = ['100', '200', '300', '400', '500', '600', '700', '800', '900', 
 const GenerateQrCode = () => {
     const downloadBtn =  useRef(null)
     const generateBtn =  useRef(null)
+    const inputQr = useRef(null)
     return(
         // box
         <div className="w-[400px] bg-[#155e75] p-[30px] rounded-[8px]">
@@ -12,6 +13,7 @@ const GenerateQrCode = () => {
             <div>
                 <h1 className="text-[26px] text-center text-white mb-[26px] uppercase">Generate QR Code</h1>
                 <input 
+                    ref = {inputQr}
                     className="w-[100%] mb-[12px] p-[15px] outline-0 rounded-[8px] text-[18px] border-2 border-[#7fb7c9] bg-white"
                     type = 'text'
                     placeholder="Type your text ot URL"
