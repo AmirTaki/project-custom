@@ -16,6 +16,8 @@ import DropDrownMenu from "../dropDrownMenu.jsx/index.jsx"
 import EnergyButton from "../energyButton/index.jsx"
 import EnglishDictionary from "../englishDictionary/index.jsx"
 import FlashLight from "../flashLightEffect/index.jsx"
+import FooterAnimated from "../footerAnimated/index.jsx"
+
 
 // create context
 export const navigationContext = createContext ()
@@ -70,7 +72,7 @@ const Home =  ()  => {
     }, [])
 
     // veiw projects 
-    const  [view, setView] =   useState(true)   
+    const  [view, setView] =   useState(false)   
     return(
         <div 
             className={`bg-[#10131c] min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} 
@@ -136,7 +138,8 @@ const Home =  ()  => {
         
             </div>
 
-
+            {/* footer animated */}
+            <FooterAnimated />
 
             {/* <MouseDragComponent /> */}
 
