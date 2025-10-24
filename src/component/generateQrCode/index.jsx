@@ -3,26 +3,32 @@ import { useEffect, useReducer, useRef, useState } from "react"
 
 const options = ['100', '200', '300', '400', '500', '600', '700', '800', '900', '1000' ]
 const GenerateQrCode = () => {
-
+    
     const reducer = (state, action)=>{
         switch(action.type){    
             case "input":
                 return {...state, value : action.payload.event}
-
-            case "size" : 
+                
+                case "size" : 
                 return {...state, size : action.payload.event}
-        }
-    }
-    const [state, disptach] =   useReducer(reducer, {
-        value : '',
-        size : 100
-    })
+                
+                case "handerGenerate" :
+                    state.value.length > 0 ? generateQRCode() : window.alert('Enter the text or URL to generate your QR code')
+                    return {...state} 
+                }
+            }
 
-    const [valueInput, setValueInput] =  useState('')
-    const [sizes, setSizes] = useState(100)
-
-    const inputQr = useRef(state.value)
-    const sizesRef = useRef(state.size)
+        const [state, disptach] =   useReducer(reducer, {
+            value : '',
+            size : 100
+        })
+        
+        const [valueInput, setValueInput] =  useState('')
+        const [sizes, setSizes] = useState(100)
+        
+        const inputQr = useRef(state.value)
+        const sizesRef = useRef(state.size)
+            
     const qrContainer = useRef(null)
     const imgRef = useRef(null)
 
@@ -114,7 +120,8 @@ const GenerateQrCode = () => {
             {/* qr footer */}
             <div className="mt-[30px] flex justify-center">
                 <button 
-                    onClick={handerGenerate}
+                    // onClick={handerGenerate}
+                    onClick={() => {disptach({type : 'handerGenerate'})}}
                     className="bg-white text-[20px] py-[14px] px-[36px] mx-[2px] text-[#155e75] font-[600] rounded-[8px] cursor-pointer"
                 >
                     Generate
