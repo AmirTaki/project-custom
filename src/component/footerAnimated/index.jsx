@@ -28,6 +28,12 @@ const FooterAnimated  = () => {
                     <p className="w-fit border-b-1 border-b-[#ccc] my-[20px]">email@gamil.com</p>
                     <h4>+98-0123456789</h4>
                 </div>
+                {/* col 3 */}
+                <div className="p-[10px] basis-[15%]">
+                    <h3 className="w-fit mb-[40px] relative">
+                        Links 
+                    </h3>
+                </div>
            </div>
         </footer>
     )
