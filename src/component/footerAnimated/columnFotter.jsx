@@ -1,7 +1,7 @@
 const ColumnFooter = ({title, children}) => {
     return(
            
-        <div className="p-[10px] basis-[15%]">
+        <div className="p-[10px] basis-[15%] max-md:basis-[100%]">
             {/* col h3 */}
             <h3 className="w-fit mb-[40px] relative">
                 {title} 
