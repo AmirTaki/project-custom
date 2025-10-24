@@ -13,6 +13,18 @@ const GenerateQrCode = () => {
                 return {...state, size : action.payload.event}
                 
                 case "handerGenerate" :
+                    const generateQRCode = () => {
+                        state.value.innerHTML = ''
+        
+                        new QRCode (qrContainer.current, {
+                        text : inputQr.current.value,
+                        width : sizesRef.current.value,
+                        height : sizesRef.current.value,
+                        colorDark : '#000000',
+                        colorLight : '#ffffff'
+                        })
+                    }
+
                     state.value.length > 0 ? generateQRCode() : window.alert('Enter the text or URL to generate your QR code')
                     return {...state} 
                 }
@@ -37,9 +49,9 @@ const GenerateQrCode = () => {
        qrContainer.current.innerHTML = ''
         
         new QRCode (qrContainer.current, {
-            text : inputQr.current.value,
-            width : sizesRef.current.value,
-            height : sizesRef.current.value,
+            text : state.value,
+            width : state.size,
+            height : state.size,
             colorDark : '#000000',
             colorLight : '#ffffff'
         })
