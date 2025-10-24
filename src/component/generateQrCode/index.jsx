@@ -6,6 +6,7 @@ import QRFooter from "./qrFooter";
 const GenerateQrCode = () => {
     const qrContainer = useRef(null);
     const imgRef = useRef(null);
+    
     const reducerQrCode = (state, action)=>{
     switch(action.type){    
         case "input":
