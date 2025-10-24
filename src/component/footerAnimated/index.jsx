@@ -23,7 +23,9 @@ const FooterAnimated  = () => {
                 </ColumnFooter>
                 
                 {/* col 3 */}
-                <ColumnFooter title = {"Links"} />
+                <ColumnFooter title = {"Links"} >
+                    
+                </ColumnFooter >
 
            
            </div>
