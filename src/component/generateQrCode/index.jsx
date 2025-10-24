@@ -12,10 +12,11 @@ const GenerateQrCode = () => {
     const inputQr = useRef(valueInput)
     const sizesRef = useRef(sizes)
     const qrContainer = useRef(null)
+    const imgRef = useRef(null)
 
     const generateQRCode = () => {
-        qrContainer.innerHTML = ''
-
+    
+        qrContainer.current.style.innerText = ''
         new QRCode (qrContainer.current, {
             text : inputQr.current.value,
             width : sizesRef.current.value,
@@ -73,7 +74,7 @@ const GenerateQrCode = () => {
                 ref = {qrContainer}
                 className="grid place-items-center"
             >
-                <img src="" alt=""  className="max-w-[100%] max-h-[100%] mb-[10px] p-[20px]
+                <img ref = {imgRef} src="" alt=""  className="max-w-[100%] max-h-[100%] mb-[10px] p-[20px]
                     border-[.5px] border-white rounded-[8px]
                 "/>
             </div>
