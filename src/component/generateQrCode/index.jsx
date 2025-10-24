@@ -35,6 +35,11 @@ const GenerateQrCode = () => {
                     border-[.5px] border-white rounded-[8px]
                 "/>
             </div>
+
+            {/* qr footer */}
+            <div className="mt-[30px] flex justify-center">
+                
+            </div>
         </div>
     )
 }
