@@ -1,4 +1,4 @@
-const ColumnFooter = ({}) => {
+const ColumnFooter = ({title, children}) => {
     return(
            
         <div className="p-[10px] basis-[15%]">
@@ -11,10 +11,8 @@ const ColumnFooter = ({}) => {
                 </div>
             </h3>
             {/* col p */}
-            <p>ITPL Road Whitefield, Bangalore Karnataka, PIN 560066, Tehran</p>
-            <p></p>
-            <p className="w-fit border-b-1 border-b-[#ccc] my-[20px]">email@gamil.com</p>
-            <h4>+98-0123456789</h4>
+            {children}
+       
         </div>
     )
 }
