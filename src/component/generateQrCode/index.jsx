@@ -18,8 +18,8 @@ const GenerateQrCode = () => {
 
         new QRCode (qrContainer.current, {
             text : inputQr.current.value,
-            width : sizes.current.value,
-            height : sizes.current.value,
+            width : sizesRef.current.value,
+            height : sizesRef.current.value,
             colorDark : '#000000',
             colorLight : '#ffffff'
         })
