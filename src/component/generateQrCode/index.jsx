@@ -6,8 +6,11 @@ const GenerateQrCode = () => {
 
     const reducer = (state, action)=>{
         switch(action.type){    
-            case "":
-                return [...state]
+            case "input":
+                return {...state, value : action.payload.event}
+
+            case "size" : 
+                return {...state, size : action.payload.event}
         }
     }
     const [state, disptach] =   useReducer(reducer, {
@@ -80,9 +83,10 @@ const GenerateQrCode = () => {
                         Select Size :
                     </label>
                     <select
-                        value={sizes}
+                        value={state.size}
                         onChange={(e) => {
-                            setSizes(e.target.value);
+                            // setSizes(e.target.value);
+                            disptach({type : 'size', payload : {event : e.target.value}})
                         }}
                         ref={sizesRef}
                         name="sizes"
