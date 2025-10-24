@@ -15,7 +15,12 @@ const FooterAnimated  = () => {
                 <div className="p-[10px] basis-[15%]">
                     {/* col h3 */}
                     <h3 className="w-fit mb-[40px] relative">
-                        Office <div className=""><span></span></div></h3>
+                        Office 
+                        {/* underline */}
+                        <div className="w-[100%] h-[5px] bg-[#767676] absolute top-[25px] left-0  rounded-[3px]">
+                            <span></span>
+                        </div>
+                    </h3>
                 </div>
            </div>
         </footer>
