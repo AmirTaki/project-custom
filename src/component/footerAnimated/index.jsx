@@ -5,7 +5,9 @@ const FooterAnimated  = () => {
         ">
             {/* row */}
             <div className="w-[85%] m-auto flex flex-wrap items-start justify-between">
-\            </div>
+                {/* col */}
+                <div className="basis-[25%] p-[10px]"></div>
+           </div>
         </footer>
     )
 }
