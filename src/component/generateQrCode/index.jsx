@@ -11,10 +11,18 @@ const GenerateQrCode = () => {
     const generateBtn =  useRef(null)
     const inputQr = useRef(valueInput)
     const sizesRef = useRef(sizes)
-
+    const qrContainer = useRef(null)
 
     const generateQRCode = () => {
-        
+        qrContainer.innerHTML = ''
+
+        new QRCode (qrContainer.current, {
+            text : inputQr.current.value,
+            width : sizes.current.value,
+            height : sizes.current.value,
+            colorDark : '#000000',
+            colorLight : '#ffffff'
+        })
     }
 
     const isEmptyInput = () => {
@@ -61,7 +69,10 @@ const GenerateQrCode = () => {
                 </div>
             </div>
             {/* qr body */}
-            <div className="grid place-items-center">
+            <div 
+                ref = {qrContainer}
+                className="grid place-items-center"
+            >
                 <img src="" alt=""  className="max-w-[100%] max-h-[100%] mb-[10px] p-[20px]
                     border-[.5px] border-white rounded-[8px]
                 "/>
