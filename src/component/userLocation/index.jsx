@@ -20,11 +20,29 @@ const UserLocation = () => {
             }   
     }
 
-    const  showLocation = async (position) => {
-        let responsive =    await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${position.coords.latitude}&lon=${position.coords.longitude}&format=json`)
-        let data = responsive.json()
-        locationDetails.current.innerText = `${data.address.city}, ${data.address.country}`
-    }   
+    const showLocation = async (position) => {
+        try {
+            const response = await fetch(
+                `https://nominatim.openstreetmap.org/reverse?lat=${position.coords.latitude}&lon=${position.coords.longitude}&format=json`
+            );
+
+            if (!response.ok) throw new Error(`Reverse geocode failed: ${response.status}`);
+
+            const data = await response.json();
+            const address = data?.address || {};
+
+            // city may be missing; fall back to other locality fields
+            const locality = address.city || address.town || address.village || address.county || 'Unknown location';
+            const country = address.country || '';
+
+            if (locationDetails.current) {
+                locationDetails.current.innerText = `${locality}${country ? `, ${country}` : ''}`;
+            }
+        } catch (err) {
+            console.error('showLocation error', err);
+            if (locationDetails.current) locationDetails.current.innerText = 'Unable to resolve location';
+        }
+    }
 
 
     const handlerLocation = () => {
