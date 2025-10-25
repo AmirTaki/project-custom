@@ -109,9 +109,7 @@ const Home =  ()  => {
         
             </div>
 
-
-            {/* <MouseDragComponent /> */}
-      
+            {/* user location */}
 
             <div className="h-100 w-100 text-white"></div>
         </div>   
