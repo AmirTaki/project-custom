@@ -1,10 +1,14 @@
-import { useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 
 const NumberSpinner = () => {
-    const outPut = useRef(0)
+    const outPut = useRef(null)
+    const [conter, setConter] =  useState(0)
     const plusHandler = () => {
-        
+        outPut.current += 1
     }
+    useEffect(() => {
+        outPut.current.innerText = 
+    }, [outPut.current])
     return (
         // box
         <div className="w-[80px] h-[500px] flex justify-center items-center bg-[#333] rounded-[50px] shadow-[0_5px_50px_rgba(0,0,0,.5)]">
@@ -12,8 +16,9 @@ const NumberSpinner = () => {
             <div className="relative flex items-center justify-center flex-col w-[40px] gap-3 select-none">
                 
                 {/* output */}
-                <span className="relative text-white text-[2em] text-shadow-[0_0_5px_#fff]">
-                    {outPut.current}
+                <span 
+                    ref = {outPut}
+                    className="relative text-white text-[2em] text-shadow-[0_0_5px_#fff]">
                 </span>
 
                 {/* progress */}
