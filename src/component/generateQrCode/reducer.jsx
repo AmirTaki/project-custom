@@ -8,21 +8,15 @@ export  const reducerQrCode = (state, action)=>{
             
             case "handerGenerate" :
                 const generateQRCode = () => {
-                    try{
+                    qrContainer.current.innerHTML = ''
 
-                        qrContainer.current.innerHTML = ''
-
-                        new QRCode (qrContainer.current, {
-                        text : state.value,
-                        width : state.size,
-                        height : state.size,
-                        colorDark : '#000000',
-                        colorLight : '#ffffff'
-                        })
-                    }
-                    catch (err) {
-                        alert('please entert connection check!!!')
-                    }
+                    new QRCode (qrContainer.current, {
+                    text : state.value,
+                    width : state.size,
+                    height : state.size,
+                    colorDark : '#000000',
+                    colorLight : '#ffffff'
+                    })
                 }
 
                 state.value.length > 0 ? generateQRCode() : window.alert('Enter the text or URL to generate your QR code')
