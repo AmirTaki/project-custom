@@ -26,6 +26,18 @@ const UserLocation = () => {
         
            if(!response.ok) throw new Error (`Reverse geocode failed: ${response.status}`)
 
+           const data = await response.json()
+           const address = (data?.address || {})
+
+           console.log(address.city)
+           console.log(address.country)
+
+           const locality = address.city || address.town || address.village || address.county || 'Unknown Location';
+           const country = address.country || ''
+           if(locationDetails.current){
+            locationDetails.current.innerText `${locality}, ${country}`
+           }
+
         }
         catch (err) {
             alert ('showLoaction error', err);
