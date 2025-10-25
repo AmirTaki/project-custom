@@ -1,8 +1,15 @@
+import { useRef } from "react"
 import imgUser from "./img/free-location-icon-2955-thumb.png"
 const UserLocation = () => {
+    const  locationDetails = useRef()
 
     const handlerLocation = () => {
-        console.log(navigator.geolocation)
+        if(navigator.geolocation){
+
+        }
+        else {
+            locationDetails.current.innerText = `The browser does not support geolocation`
+        }
     }
 
     return (
@@ -16,7 +23,9 @@ const UserLocation = () => {
                 className="w-[6.25em] block m-auto" 
             />
             {/* location details */}
-            <div className="text-[1.75em] text-center m-[1em_0_1.7em_0] text-[#021d38] font-[500]">
+            <div
+                ref = {locationDetails} 
+                className="text-[1.75em] text-center m-[1em_0_1.7em_0] text-[#021d38] font-[500]">
                 Click on the 'Get Location' Button
             </div>
             {/* button */}
