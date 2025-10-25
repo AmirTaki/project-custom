@@ -3,20 +3,47 @@ import imgUser from "./img/free-location-icon-2955-thumb.png"
 const UserLocation = () => {
     const  locationDetails = useRef()
 
+
+
+
+
+    //     const checkError = (error) => {
+
+    //     // Use the error.code numeric values for compatibility
+    //     switch (error?.code) {
+    //         case 1: // PERMISSION_DENIED
+    //             if (locationDetails.current) locationDetails.current.innerText = "Please allow access to location";
+    //             break;
+
+    //         case 2: // POSITION_UNAVAILABLE
+    //             if (locationDetails.current) locationDetails.current.innerText = 'Location information unavailable';
+    //             break;
+
+    //         case 3: // TIMEOUT
+    //             if (locationDetails.current) locationDetails.current.innerText = 'The request to get user location timed out';
+    //             break;
+
+    //         default:
+    //             if (locationDetails.current) locationDetails.current.innerText = 'Unable to determine location error';
+    //     }
+    // }
     const checkError = (error) => {
 
-        switch(error){
-            case error.PERMISSION_DENIED : 
-                locationDetails.current.innerText = "Please allow access to location"
+        switch(error?.code){
+            case 1 : //PERMISSION_DENIED : 
+                if(locationDetails.current) locationDetails.current.innerText = "Please allow access to location"
                 break;
 
-            case error.POSITION_UNAVAILABLE : 
-                locationDetails.current.innerText = 'Location Information unavailable'
+            case 2 ://POSITION_UNAVAILABLE  
+                if(locationDetails.current) locationDetails.current.innerText = 'Location Information unavailable'
                 break;
 
-            case error.TIMEOUT : 
-                locationDetails.current.innerText = 'The request to get user location timed out'
-
+            case 3: //TIMEOUT 
+                if(locationDetails.current) locationDetails.current.innerText = 'The request to get user location timed out'
+                break;
+           
+            default:
+                if(locationDetails.current) locationDetails.current.innerText = 'Unable to determine location error'
             }   
     }
 
@@ -32,6 +59,8 @@ const UserLocation = () => {
             const locality = address.city || address.town || address.village || address.county || 'Unknown Location';
             const country = address.country || ''
        
+
+            console.log(address)
             if(locationDetails.current){
                 locationDetails.current.innerText =  `${locality}, ${country}`
             }
