@@ -6,8 +6,7 @@ import { reducerQrCode } from "./reducer";
 
 
 const GenerateQrCode = () => {
-     const qrContainer = useRef(null);
-     const imgRef = useRef(null);
+
     
 
 
