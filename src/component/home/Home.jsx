@@ -18,8 +18,6 @@ import EnglishDictionary from "../englishDictionary/index.jsx"
 import FlashLight from "../flashLightEffect/index.jsx"
 import FooterAnimated from "../footerAnimated/index.jsx"
 import GenerateQrCode from "../generateQrCode/index.jsx"
-import QRProvider from "../generateQrCode/QrProvider.jsx"
-
 
 // create context
 export const navigationContext = createContext ()
@@ -141,14 +139,12 @@ const Home =  ()  => {
                 {/* footer animated */}
                 <FooterAnimated />
         
+                {/* Generate Qr Code */}
+                <GenerateQrCode />
             </div>
 
 
             {/* <MouseDragComponent /> */}
-            {/* Generate Qr Code */}
-            <QRProvider>
-                <GenerateQrCode />
-            </QRProvider>
       
 
             <div className="h-100 w-100 text-white"></div>
