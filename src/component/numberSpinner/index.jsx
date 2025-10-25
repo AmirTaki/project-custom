@@ -5,36 +5,36 @@ const NumberSpinner = () => {
     const meter = useRef(null)
     const [conter, setConter] =  useState(0)
 
-    const plusHandler = () => {
-        if(conter >= 10) return
+    // const plusHandler = () => {
+    //     if(conter >= 10) return
 
-        if(conter >= 7){
-            meter.current.style.backgroundColor = "#f00";
-            meter.current.style.filter = 'drop-shadow(0 0 2.5px #f00) drop-shadow(0 0 10px #f00)'
-        }
+    //     if(conter >= 7){
+    //         meter.current.style.backgroundColor = ;
+    //         meter.current.style.filter = 
+    //     }
 
-        setConter((prevConter) => (prevConter + 1))
+    //     setConter((prevConter) => (prevConter + 1))
      
-    }
+    // }
 
-    const minsHandler = () => {
-        if (conter <= 0) return 
+    // const minsHandler = () => {
+    //     if (conter <= 0) return 
 
-        if(conter <= 7){
-            meter.current.style.backgroundColor = "#0f0"
-            meter.current.style.filter = 'drop-shadow(0 0 2.5px #0f0) drop-shadow(0 0 10px #0f0f)'
-        }
+    //     if(conter <= 7){
+    //         meter.current.style.backgroundColor = 
+    //         meter.current.style.filter = 
+    //     }
 
-        setConter((prevConter) => (prevConter - 1))
-    }
+    //     setConter((prevConter) => (prevConter - 1))
+    // }
 
     const HandlerVolume = (tip) => {
-
         setConter(tip ? conter >= 10 ? conter : conter + 1 : conter <= 0 ? conter : conter - 1 )
-        
     }
 
     useEffect(() => {
+        meter.current.style.backgroundColor = conter <= 7 ? "#0f0" : "#f00"
+        meter.current.style.filter = conter <= 7 ? 'drop-shadow(0 0 2.5px #0f0) drop-shadow(0 0 10px #0f0f)' : 'drop-shadow(0 0 2.5px #f00) drop-shadow(0 0 10px #f00)'
         outPut.current.innerText = conter
         meter.current.style.height = `${conter*10}%`
     }, [conter])
