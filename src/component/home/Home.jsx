@@ -1,4 +1,5 @@
 import { createContext, useCallback, useEffect, useRef, useState} from "react"
+import { handlerMouseLeave, handlerMouseMove, handlerMouseUp } from "./navigationFunctional.jsx"
 import AnimatedOnScroll from "../animatedOnScroll/index.jsx"
 import Card from "../card3D/index.jsx"
 import ComponentNavigation from "../componentNavigation"
@@ -18,7 +19,6 @@ import EnglishDictionary from "../englishDictionary/index.jsx"
 import FlashLight from "../flashLightEffect/index.jsx"
 import FooterAnimated from "../footerAnimated/index.jsx"
 import GenerateQrCode from "../generateQrCode/index.jsx"
-import { handlerMouseLeave, handlerMouseMove, handlerMouseUp } from "./navigationFunctional.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -35,8 +35,6 @@ const Home =  ()  => {
     const dragPostionRef = useRef({x : 120, y : 120})
     const isDraggingNavigation = useRef(false)
 
-
-
     // veiw projects 
     const  [view, setView] =   useState(true)   
     return(
@@ -47,6 +45,7 @@ const Home =  ()  => {
                 onMouseUp={() => {handlerMouseUp(isDraggingDocts, isDraggingNavigation)}}
                 onMouseLeave={() => {handlerMouseLeave(isDraggingDocts, isDraggingNavigation)}}  
                 onMouseMove={(e) => {handlerMouseMove(e, isDraggingDocts, dragLocationRef, DoctsMenuRef, isDraggingNavigation, dragPostionRef, NavigationRef)}} 
+            
                 className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-52 `}
             >        
                 <navigationContext.Provider value = {{DoctsMenuRef, dragLocationRef, isDraggingDocts, NavigationRef, dragPostionRef, isDraggingNavigation}}>

@@ -1,6 +1,3 @@
-import { useCallback } from "react"
-
-
 export const handlerMouseUp = (isDraggingDocts, isDraggingNavigation) => {
     if(isDraggingDocts.current){
         isDraggingDocts.current = false
