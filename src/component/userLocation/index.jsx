@@ -13,6 +13,10 @@ const UserLocation = () => {
             case error.POSITION_UNAVAILABLE : 
                 locationDetails.current.innerText = 'Location Information unavailable'
                 break;
+
+            case error.TIMEOUT : 
+                locationDetails.current.innerText = 'The request to get user location timed out'
+
             }   
     }
 
