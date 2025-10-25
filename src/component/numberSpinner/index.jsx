@@ -11,7 +11,10 @@ const NumberSpinner = () => {
                 {/* progress */}
                 <div className="relative w-[10px] h-[300px] bg-[#222] rounded-[20px] flex flex-col-reverse">
                     {/* meter */}
-                    <span></span>
+                    <span 
+                        style={{filter : "drop-shadow(0 0 2.5px #0f0) drop-shadow(0 0 10px #0f0f)"}}
+                        className="absolute w-[100%] h-7 bg-[#0f0] rounded-[20px] duration-500 transition-all  "
+                        ></span>
                 </div>
 
             </div>
