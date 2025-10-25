@@ -1,15 +1,13 @@
-import {  useReducer, useRef } from "react"
+import {  useContext, useReducer, useRef } from "react"
 import QrHeader from "./qrHeader"
 import QRBody from "./qrBody";
 import QRFooter from "./qrFooter";
 import { reducerQrCode } from "./reducer";
-
+import { QRContext } from "./QrProvider";
 
 const GenerateQrCode = () => {
-
+    const {qrContainer, imgRef} =  useContext(QRContext)
     
-
-
     const [state, disptach] = useReducer(reducerQrCode, {
         value : '',
         size : 100,
