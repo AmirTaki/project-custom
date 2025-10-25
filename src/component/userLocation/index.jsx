@@ -3,14 +3,17 @@ import imgUser from "./img/free-location-icon-2955-thumb.png"
 const UserLocation = () => {
     const  locationDetails = useRef()
 
-
     const checkError = (error) => {
 
         switch(error){
             case error.PERMISSION_DENIED : 
-                locationDetails.current.innerText = ""
+                locationDetails.current.innerText = "Please allow access to location"
                 break;
-        }
+
+            case error.POSITION_UNAVAILABLE : 
+                locationDetails.current.innerText = 'Location Information unavailable'
+                break;
+            }   
     }
 
     const  showLocation = async (position) => {
