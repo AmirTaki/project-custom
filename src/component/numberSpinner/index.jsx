@@ -5,6 +5,15 @@ const NumberSpinner = () => {
             {/* spinner */}
             <div className="relative flex items-center justify-center flex-col w-[40px] select-none">
                 
+                {/* output */}
+                <span>0</span>
+
+                {/* progress */}
+                <div className="relative w-[10px] h-[300px] bg-[#222] rounded-[20px] flex flex-col-reverse">
+                    {/* meter */}
+                    <span></span>
+                </div>
+
             </div>
         </div>
     )
