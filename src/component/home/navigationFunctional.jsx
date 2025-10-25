@@ -1,23 +1,25 @@
+import { useCallback } from "react"
 
-export const handlerMouseUp = useCallback((isDraggingDocts, isDraggingNavigation) => {
+
+export const handlerMouseUp = (isDraggingDocts, isDraggingNavigation) => {
     if(isDraggingDocts.current){
         isDraggingDocts.current = false
     }
     else if(isDraggingNavigation.current){
         isDraggingNavigation.current = false
     }
-}, [])
+}
 
-export const handlerMouseLeave = useCallback((isDraggingDocts, isDraggingNavigation) => {
+export const handlerMouseLeave = (isDraggingDocts, isDraggingNavigation) => {
     if(isDraggingDocts.current){
         isDraggingDocts.current = false
     }
     else if(isDraggingNavigation.current){
         isDraggingNavigation.current = false
     }
-}, [])
+}
 
-export const handlerMouseMove = useCallback((e, isDraggingDocts, dragLocationRef, DoctsMenuRef, isDraggingNavigation, dragPostionRef, NavigationRef) => {
+export const handlerMouseMove = (e, isDraggingDocts, dragLocationRef, DoctsMenuRef, isDraggingNavigation, dragPostionRef, NavigationRef) => {
     if(isDraggingDocts.current){
         const x =  e.clientX - dragLocationRef.current.x;
         const y =  e.clientY - dragLocationRef.current.y;
@@ -33,4 +35,4 @@ export const handlerMouseMove = useCallback((e, isDraggingDocts, dragLocationRef
     else {
         return
     }
-}, [])
+}

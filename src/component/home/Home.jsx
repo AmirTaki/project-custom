@@ -1,4 +1,4 @@
-import { createContext, useCallback, useRef, useState} from "react"
+import { createContext, useCallback, useEffect, useRef, useState} from "react"
 import AnimatedOnScroll from "../animatedOnScroll/index.jsx"
 import Card from "../card3D/index.jsx"
 import ComponentNavigation from "../componentNavigation"
@@ -18,6 +18,7 @@ import EnglishDictionary from "../englishDictionary/index.jsx"
 import FlashLight from "../flashLightEffect/index.jsx"
 import FooterAnimated from "../footerAnimated/index.jsx"
 import GenerateQrCode from "../generateQrCode/index.jsx"
+import { handlerMouseLeave, handlerMouseMove, handlerMouseUp } from "./navigationFunctional.jsx"
 
 // create context
 export const navigationContext = createContext ()
