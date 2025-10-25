@@ -28,6 +28,12 @@ const NumberSpinner = () => {
         setConter((prevConter) => (prevConter - 1))
     }
 
+    const HandlerVolume = (tip) => {
+
+        setConter(tip ? conter >= 10 ? conter : conter + 1 : conter <= 0 ? conter : conter - 1 )
+        
+    }
+
     useEffect(() => {
         outPut.current.innerText = conter
         meter.current.style.height = `${conter*10}%`
@@ -56,8 +62,8 @@ const NumberSpinner = () => {
                     </span>
                 </div>
                 {/* button plus & minus */}
-                <div onClick={plusHandler} className="relative w-[40px] h-[40px] text-center leading-[35px] text-[1.5em] text-white rounded-[50%] text-shadow-[0_0_5px_#fff,0_0_10px_#fff] cursor-pointer font-[500] active:text-[1.25em] active:shadow-[inset_0_0_15px_rgba(0,0,0,.9)]" >+</div>
-                <div onClick={minsHandler} className="relative w-[40px] h-[40px] text-center leading-[35px] text-[1.5em] text-white rounded-[50%] text-shadow-[0_0_5px_#fff,0_0_10px_#fff] cursor-pointer font-[500] active:text-[1.25em] active:shadow-[inset_0_0_15px_rgba(0,0,0,.9)]" >-</div>
+                <div onClick={() => {HandlerVolume(true)}} className="relative w-[40px] h-[40px] text-center leading-[35px] text-[1.5em] text-white rounded-[50%] text-shadow-[0_0_5px_#fff,0_0_10px_#fff] cursor-pointer font-[500] active:text-[1.25em] active:shadow-[inset_0_0_15px_rgba(0,0,0,.9)]" >+</div>
+                <div onClick={() => {HandlerVolume(false)}} className="relative w-[40px] h-[40px] text-center leading-[35px] text-[1.5em] text-white rounded-[50%] text-shadow-[0_0_5px_#fff,0_0_10px_#fff] cursor-pointer font-[500] active:text-[1.25em] active:shadow-[inset_0_0_15px_rgba(0,0,0,.9)]" >-</div>
             </div>
         </div>
     )
