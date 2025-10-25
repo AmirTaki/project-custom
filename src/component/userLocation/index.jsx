@@ -22,6 +22,9 @@ const UserLocation = () => {
 
     const showLocation = async (position) => {
         try {
+           const response =  await fetch (`https://nominatim.openstreetmap.org/reverse?lat=${position.coords.latitude}&lon=${position.coords.longitude}&format=json`)
+        
+           if(!response.ok) throw new Error (`Reverse geocode failed: ${response.status}`)
 
         }
         catch (err) {
