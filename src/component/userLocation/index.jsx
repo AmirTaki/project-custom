@@ -1,5 +1,10 @@
 import imgUser from "./img/free-location-icon-2955-thumb.png"
 const UserLocation = () => {
+
+    const handlerLocation = () => {
+        console.log(navigator.geolocation)
+    }
+
     return (
         // container 
         <div className="w-[80vw] max-w-[37.5em] bg-white py-[3em] px-[1.8em] absolute
@@ -15,7 +20,9 @@ const UserLocation = () => {
                 Click on the 'Get Location' Button
             </div>
             {/* button */}
-            <button className="block m-auto bg-[#42a1ff] text-white border-0 text-[1.25em] py-[1em] px-[2.5em] rounded-[.25em] cursor-pointer">
+            <button 
+                onClick={handlerLocation}
+                className="block m-auto bg-[#42a1ff] text-white border-0 text-[1.25em] py-[1em] px-[2.5em] rounded-[.25em] cursor-pointer">
                 Get Location
             </button>
 
