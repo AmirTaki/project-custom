@@ -8,17 +8,19 @@ const NumberSpinner = () => {
     const plusHandler = () => {
         if(conter >= 10) return
 
-        if(conter >= 7){
+        if(conter <= 7){
             meter.current.style.backgroundColor = "#f00";
             meter.current.style.filter = 'drop-shadow(0 0 2.5px #f00) drop-shadow(0 0 10px #f00)'
         }
 
         setConter((prevConter) => (prevConter + 1))
-        meter.current.style.hight = `${conter*10}%`
+     
     }
     useEffect(() => {
         outPut.current.innerText = conter
+        meter.current.style.height = `${conter*10}%`
     }, [conter])
+
     return (
         // box
         <div className="w-[80px] h-[500px] flex justify-center items-center bg-[#333] rounded-[50px] shadow-[0_5px_50px_rgba(0,0,0,.5)]">
@@ -37,7 +39,7 @@ const NumberSpinner = () => {
                     <span 
                         ref = {meter}
                         style={{filter : "drop-shadow(0 0 2.5px #0f0) drop-shadow(0 0 10px #0f0f)"}}
-                        className="absolute w-[100%] h-7 bg-[#0f0] rounded-[20px] duration-500 transition-all  "
+                        className="absolute w-[100%]  bg-[#0f0] rounded-[20px] duration-500 transition-all  "
                     >
                     </span>
                 </div>
