@@ -11,7 +11,9 @@ const UserLocation = () => {
     const  showLocation = async (position) => {
         let responsive =    await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${position.coords.latitude}&lon=${position.coords.longitude}&format=json`)
         let data = responsive.json()
+        locationDetails.current.innerText = `${data.address.city}, ${data.address.country}`
     }   
+
 
     const handlerLocation = () => {
         if(navigator.geolocation){
