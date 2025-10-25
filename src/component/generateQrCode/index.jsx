@@ -23,7 +23,7 @@ const GenerateQrCode = () => {
             <QRBody qrContainer={qrContainer} imgRef = {imgRef} />
 
             {/* qr footer */}
-            <QRFooter disptach={disptach}/>
+            <QRFooter disptach={disptach} qrContainer={qrContainer} imgRef = {imgRef} />
         </div>
     )
 }

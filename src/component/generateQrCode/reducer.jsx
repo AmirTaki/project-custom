@@ -8,6 +8,7 @@ export  const reducerQrCode = (state, action)=>{
             
             case "handerGenerate" :
                 const generateQRCode = () => {
+                    const  {qrContainer} = action.payload 
                     qrContainer.current.innerHTML = ''
 
                     new QRCode (qrContainer.current, {
@@ -23,7 +24,9 @@ export  const reducerQrCode = (state, action)=>{
                 return {...state} 
             
 
-            case "handlerDownload" : 
+            case "handlerDownload" :
+                const  {qrContainer} = action.payload 
+                const  {imgRef} = action.payload 
                 const canvas =  qrContainer.current?.querySelector('canvas')
                 if(!canvas){alert('QR code not generated yet'); return;}
 
