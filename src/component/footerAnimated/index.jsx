@@ -13,7 +13,7 @@ const FooterAnimated  = () => {
             max-md:unset
         ">
             {/* row */}
-            <div className="w-[85%] m-auto flex flex-wrap items-start justify-between">
+            <div className="w-[90%] m-auto flex flex-wrap items-strat justify-between ">
                 {/* col */}
                 <div className="basis-[25%] p-[10px] max-md:basis-[100%]">
                     {/* logo img */}
