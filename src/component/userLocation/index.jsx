@@ -3,30 +3,6 @@ import imgUser from "./img/free-location-icon-2955-thumb.png"
 const UserLocation = () => {
     const  locationDetails = useRef()
 
-
-
-
-
-    //     const checkError = (error) => {
-
-    //     // Use the error.code numeric values for compatibility
-    //     switch (error?.code) {
-    //         case 1: // PERMISSION_DENIED
-    //             if (locationDetails.current) locationDetails.current.innerText = "Please allow access to location";
-    //             break;
-
-    //         case 2: // POSITION_UNAVAILABLE
-    //             if (locationDetails.current) locationDetails.current.innerText = 'Location information unavailable';
-    //             break;
-
-    //         case 3: // TIMEOUT
-    //             if (locationDetails.current) locationDetails.current.innerText = 'The request to get user location timed out';
-    //             break;
-
-    //         default:
-    //             if (locationDetails.current) locationDetails.current.innerText = 'Unable to determine location error';
-    //     }
-    // }
     const checkError = (error) => {
 
         switch(error?.code){
@@ -44,7 +20,7 @@ const UserLocation = () => {
            
             default:
                 if(locationDetails.current) locationDetails.current.innerText = 'Unable to determine location error'
-            }   
+        }   
     }
 
     const showLocation = async (position) => {
