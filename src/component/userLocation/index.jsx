@@ -14,6 +14,10 @@ const UserLocation = () => {
             <div className="text-[1.75em] text-center m-[1em_0_1.7em_0] text-[#021d38] font-[500]">
                 Click on the 'Get Location' Button
             </div>
+            {/* button */}
+            <button className="block m-auto bg-[#42a1ff] text-white border-0 text-[1.25em] py-[1em] px-[2.5em] rounded-[.25em] cursor-pointer">
+                Get Location
+            </button>
 
         </div>
     )
