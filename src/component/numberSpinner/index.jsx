@@ -14,8 +14,11 @@ const NumberSpinner = () => {
                     <span 
                         style={{filter : "drop-shadow(0 0 2.5px #0f0) drop-shadow(0 0 10px #0f0f)"}}
                         className="absolute w-[100%] h-7 bg-[#0f0] rounded-[20px] duration-500 transition-all  "
-                        ></span>
+                    >
+                    </span>
                 </div>
+                {/* button plus */}
+                <div className="relative w-[40px] h-[30px] text-center leading-[40px] text-[1.5em] text-white rounded-[50%] text-shadow-[0_0_5px_#fff,0_0_10px_#fff] cursor-pointer font-[500]" >+</div>
 
             </div>
         </div>
