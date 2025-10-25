@@ -20,6 +20,7 @@ import FlashLight from "../flashLightEffect/index.jsx"
 import FooterAnimated from "../footerAnimated/index.jsx"
 import GenerateQrCode from "../generateQrCode/index.jsx"
 import UserLocation from "../userLocation/index.jsx"
+import GoogleLoader from "../googleLoader/index.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -104,14 +105,18 @@ const Home =  ()  => {
             
                 {/* Generate Qr Code */}
                 <GenerateQrCode />
+
+                {/* user location */}
+                <UserLocation />
                
                 {/* footer animated */}
                 <FooterAnimated />
-        
+
             </div>
 
-            {/* user location */}
-            <UserLocation />
+            {/* google loader */}
+            <GoogleLoader />
+
             <div className="h-100 w-100 text-white"></div>
         </div>   
     )
