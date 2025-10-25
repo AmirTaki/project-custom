@@ -3,7 +3,7 @@ const NumberSpinner = () => {
         // box
         <div className="w-[80px] h-[500px] flex justify-center items-center bg-[#333] rounded-[50px] shadow-[0_5px_50px_rgba(0,0,0,.5)]">
             {/* spinner */}
-            <div className="relative flex items-center justify-center flex-col w-[40px] select-none">
+            <div className="relative flex items-center justify-center flex-col w-[40px] gap-3 select-none">
                 
                 {/* output */}
                 <span>0</span>
@@ -17,9 +17,9 @@ const NumberSpinner = () => {
                     >
                     </span>
                 </div>
-                {/* button plus */}
-                <div className="relative w-[40px] h-[30px] text-center leading-[40px] text-[1.5em] text-white rounded-[50%] text-shadow-[0_0_5px_#fff,0_0_10px_#fff] cursor-pointer font-[500]" >+</div>
-
+                {/* button plus & minus */}
+                <div className="relative w-[40px] h-[40px] text-center leading-[35px] text-[1.5em] text-white rounded-[50%] text-shadow-[0_0_5px_#fff,0_0_10px_#fff] cursor-pointer font-[500] active:text-[1.25em] active:shadow-[inset_0_0_15px_rgba(0,0,0,.9)]" >+</div>
+                <div className="relative w-[40px] h-[40px] text-center leading-[35px] text-[1.5em] text-white rounded-[50%] text-shadow-[0_0_5px_#fff,0_0_10px_#fff] cursor-pointer font-[500] active:text-[1.25em] active:shadow-[inset_0_0_15px_rgba(0,0,0,.9)]" >-</div>
             </div>
         </div>
     )
