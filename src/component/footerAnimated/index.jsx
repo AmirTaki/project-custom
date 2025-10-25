@@ -21,7 +21,7 @@ const FooterAnimated  = () => {
                     <p>Subscribe Easy Tutorials Youtube channel to watch more videos on website development and Press the bell icon to get immediate notification of latest videos.</p>
                 </div>
                 {/* col 2 */}
-                <ColumnFooter  title = {"Office"} >
+                <ColumnFooter  title = {"Office"} basis={15}>
                     <p>ITPL Road Whitefield, Bangalore Karnataka, PIN 560066, Tehran</p>
                     <p></p>
                     <p className="w-fit border-b-1 border-b-[#ccc] my-[20px]">email@gamil.com</p>
@@ -29,7 +29,7 @@ const FooterAnimated  = () => {
                 </ColumnFooter>
                 
                 {/* col 3 */}
-                <ColumnFooter title = {"Links"} >
+                <ColumnFooter title = {"Links"} basis={15}>
                     <BrowserRouter>
                         <ul>
                             {listLink.map((link, index) => {
@@ -42,7 +42,7 @@ const FooterAnimated  = () => {
                 </ColumnFooter >
 
                 {/* col 4 */}
-                <ColumnFooter title = {'Newsletter'}>
+                <ColumnFooter title = {'Newsletter'} basis={25}>
                     <FormFooter />
                     <SocialIcons />
                 </ColumnFooter>
