@@ -3,9 +3,19 @@ import imgUser from "./img/free-location-icon-2955-thumb.png"
 const UserLocation = () => {
     const  locationDetails = useRef()
 
+
+    const checkError = () => {
+
+    }
+
+    const  showLocation = async (position) => {
+        let responsive =    await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${position.coords.latitude}&lon=${position.coords.longitude}&format=json`)
+        let data = responsive.json()
+    }   
+
     const handlerLocation = () => {
         if(navigator.geolocation){
-            navigator.geolocation.getCurrentPosition()
+            navigator.geolocation.getCurrentPosition(showLocation, checkError)
         }
         else {
             alert('The browser does not support geolocation')
