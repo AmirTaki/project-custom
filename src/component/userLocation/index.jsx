@@ -5,10 +5,10 @@ const UserLocation = () => {
 
     const handlerLocation = () => {
         if(navigator.geolocation){
-
+            navigator.geolocation.getCurrentPosition()
         }
         else {
-            locationDetails.current.innerText = `The browser does not support geolocation`
+            alert('The browser does not support geolocation')
         }
     }
 
