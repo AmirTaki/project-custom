@@ -22,21 +22,19 @@ const UserLocation = () => {
 
     const showLocation = async (position) => {
         try {
-           const response =  await fetch (`https://nominatim.openstreetmap.org/reverse?lat=${position.coords.latitude}&lon=${position.coords.longitude}&format=json`)
+            const response =  await fetch (`https://nominatim.openstreetmap.org/reverse?lat=${position.coords.latitude}&lon=${position.coords.longitude}&format=json`)
         
-           if(!response.ok) throw new Error (`Reverse geocode failed: ${response.status}`)
+            if(!response.ok) throw new Error (`Reverse geocode failed: ${response.status}`)
 
-           const data = await response.json()
-           const address = (data?.address || {})
+            const data = await response.json()
+            const address = data?.address || {}
 
-           console.log(address.city)
-           console.log(address.country)
-
-           const locality = address.city || address.town || address.village || address.county || 'Unknown Location';
-           const country = address.country || ''
-           if(locationDetails.current){
-            locationDetails.current.innerText `${locality}, ${country}`
-           }
+            const locality = address.city || address.town || address.village || address.county || 'Unknown Location';
+            const country = address.country || ''
+       
+            if(locationDetails.current){
+                locationDetails.current.innerText =  `${locality}, ${country}`
+            }
 
         }
         catch (err) {
