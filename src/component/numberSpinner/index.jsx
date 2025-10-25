@@ -8,7 +8,7 @@ const NumberSpinner = () => {
     const plusHandler = () => {
         if(conter >= 10) return
 
-        if(conter <= 7){
+        if(conter >= 7){
             meter.current.style.backgroundColor = "#f00";
             meter.current.style.filter = 'drop-shadow(0 0 2.5px #f00) drop-shadow(0 0 10px #f00)'
         }
@@ -16,6 +16,18 @@ const NumberSpinner = () => {
         setConter((prevConter) => (prevConter + 1))
      
     }
+
+    const minsHandler = () => {
+        if (conter <= 0) return 
+
+        if(conter <= 7){
+            meter.current.style.backgroundColor = "#0f0"
+            meter.current.style.filter = 'drop-shadow(0 0 2.5px #0f0) drop-shadow(0 0 10px #0f0f)'
+        }
+
+        setConter((prevConter) => (prevConter - 1))
+    }
+
     useEffect(() => {
         outPut.current.innerText = conter
         meter.current.style.height = `${conter*10}%`
@@ -45,7 +57,7 @@ const NumberSpinner = () => {
                 </div>
                 {/* button plus & minus */}
                 <div onClick={plusHandler} className="relative w-[40px] h-[40px] text-center leading-[35px] text-[1.5em] text-white rounded-[50%] text-shadow-[0_0_5px_#fff,0_0_10px_#fff] cursor-pointer font-[500] active:text-[1.25em] active:shadow-[inset_0_0_15px_rgba(0,0,0,.9)]" >+</div>
-                <div className="relative w-[40px] h-[40px] text-center leading-[35px] text-[1.5em] text-white rounded-[50%] text-shadow-[0_0_5px_#fff,0_0_10px_#fff] cursor-pointer font-[500] active:text-[1.25em] active:shadow-[inset_0_0_15px_rgba(0,0,0,.9)]" >-</div>
+                <div onClick={minsHandler} className="relative w-[40px] h-[40px] text-center leading-[35px] text-[1.5em] text-white rounded-[50%] text-shadow-[0_0_5px_#fff,0_0_10px_#fff] cursor-pointer font-[500] active:text-[1.25em] active:shadow-[inset_0_0_15px_rgba(0,0,0,.9)]" >-</div>
             </div>
         </div>
     )
