@@ -1,7 +1,9 @@
-const ColumnFooter = ({title, children}) => {
+const ColumnFooter = ({title, children, basis}) => {
     return(
            
-        <div className="p-[10px]  basis-[23%] max-md:basis-[100%] bg-gray-600 flex flex-col" >
+        <div 
+            style={{"--basis" : `${basis}%` }}
+            className="p-[10px]  basis-[var(--basis)] max-md:basis-[100%] bg-gray-600 flex flex-col" >
             {/* col h3 */}
             <h3 className="w-fit mb-[40px] relative text-[16px] font-bold">
                 {title} 
