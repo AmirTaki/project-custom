@@ -6,7 +6,7 @@ const NumberSpinner = () => {
             <div className="relative flex items-center justify-center flex-col w-[40px] gap-3 select-none">
                 
                 {/* output */}
-                <span>0</span>
+                <span className="relative text-white text-[2em] text-shadow-[0_0_5px_#fff]">0</span>
 
                 {/* progress */}
                 <div className="relative w-[10px] h-[300px] bg-[#222] rounded-[20px] flex flex-col-reverse">
