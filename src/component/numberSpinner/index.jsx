@@ -3,12 +3,13 @@ import { useEffect, useRef, useState } from "react"
 const NumberSpinner = () => {
     const outPut = useRef(null)
     const [conter, setConter] =  useState(0)
+
     const plusHandler = () => {
-        outPut.current += 1
+        setConter((prevConter) => (prevConter + 1))
     }
     useEffect(() => {
-        outPut.current.innerText = 
-    }, [outPut.current])
+        outPut.current.innerText = conter
+    }, [conter])
     return (
         // box
         <div className="w-[80px] h-[500px] flex justify-center items-center bg-[#333] rounded-[50px] shadow-[0_5px_50px_rgba(0,0,0,.5)]">
