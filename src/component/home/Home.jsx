@@ -43,9 +43,9 @@ const Home =  ()  => {
             className={`bg-[#10131c] min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} 
         >
             <div 
-                onMouseUp={handlerMouseUp}
-                onMouseLeave={handlerMouseLeave}  
-                onMouseMove={handlerMouseMove} 
+                onMouseUp={() => {handlerMouseUp(isDraggingDocts, isDraggingNavigation)}}
+                onMouseLeave={() => {handlerMouseLeave(isDraggingDocts, isDraggingNavigation)}}  
+                onMouseMove={(e) => {handlerMouseMove(e, isDraggingDocts, dragLocationRef, DoctsMenuRef, isDraggingNavigation, dragPostionRef, NavigationRef)}} 
                 className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-52 `}
             >        
                 <navigationContext.Provider value = {{DoctsMenuRef, dragLocationRef, isDraggingDocts, NavigationRef, dragPostionRef, isDraggingNavigation}}>
