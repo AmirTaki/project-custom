@@ -4,8 +4,13 @@ const UserLocation = () => {
     const  locationDetails = useRef()
 
 
-    const checkError = () => {
+    const checkError = (error) => {
 
+        switch(error){
+            case error.PERMISSION_DENIED : 
+                locationDetails.current.innerText = ""
+                break;
+        }
     }
 
     const  showLocation = async (position) => {
@@ -16,6 +21,7 @@ const UserLocation = () => {
 
 
     const handlerLocation = () => {
+
         if(navigator.geolocation){
             navigator.geolocation.getCurrentPosition(showLocation, checkError)
         }
