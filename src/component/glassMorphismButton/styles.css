@@ -15,13 +15,13 @@
                 0 0  30px #2db2ff,
                 0 0  60px #2db2ff;
 }
-.btn:nth-child(3):before, .btn:nth-child(3)::after{
+/* .btn:nth-child(3):before, .btn:nth-child(3)::after{
     background: #1eff45;
     box-shadow: 0 0  5px  #1eff45,
                 0 0  15px #1eff45,
                 0 0  30px #1eff45,
                 0 0  60px #1eff45;
-}
+} */
 
 
 
@@ -37,6 +37,7 @@
         @apply after:rounded-[10px] after:duration-500 after:delay-0 ;
         @apply hover:after:top-0 hover:after:h-[50%] hover:after:w-[80%] hover:after:rounded-[30px] hover:after:delay-[.5s]; 
         @apply hover:before:bottom-0 hover:before:h-[50%] hover:before:w-[80%] hover:before:rounded-[30px] hover:before:delay-[.5s];
+
     }
 
     .link-morphism {
