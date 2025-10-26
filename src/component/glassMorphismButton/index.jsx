@@ -18,7 +18,12 @@ const GlassMorphism = () => {
                 after:rounded-[10px] after:duration-500 after:delay-0
                 btn
             ">
-                <Link to = "/" className = ""> Read More</Link>
+                <Link to = "/" 
+                    className = "absolute top-0 left-0 w-[100%] h-[100%] flex items-center justify-center
+                        bg-[rgba(255,255,255,.5)] shadow-[0_15px_35px_rgba(0,0,0,.2)] border-t-1 border-t-[rgba(255,255,255,.1)] border-b-1 border-b-[rgba(255,255,255,.1)]
+                        rounded-[30px]
+                        "> Read More
+                </Link>
             </div>
             
             </BrowserRouter>
