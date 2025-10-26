@@ -8,8 +8,8 @@ const GlowingCorner = () => {
                 className="relative w-[320px] h-[400px] bg-[rgba(45,45,45,1)] rounded-[20px] overflow-hidden
                 before:content-[''] before:absolute before:-translate-x-1/2 before:-translate-y-1/2
                 before:left-[var(--left-position)] before:top-[var(--top-position)] before:bg-[linear-gradient(var(--color-bg),blue,red)]
-                before:w-[360px] before:h-[360px] before:rounded-[102%] before:opacity-100 before:transition-[left 0s_top 0s] duration-500
-                
+                before:w-[360px] before:h-[360px] before:rounded-[102%] before:opacity-0 before:transition-[left 0s_top 0s] duration-500
+                hover:before:opacity-100!
             "></div>
         </div>
     )
