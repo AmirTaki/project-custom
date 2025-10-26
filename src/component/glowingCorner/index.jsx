@@ -5,7 +5,10 @@ const GlowingCorner = () => {
     const cardRef =  useRef(null)
     const handlerMouseMove = (e) => {
         const x =  e.pageX - cardRef.current.offsetLeft;
-        const y =  e.pageY - cardRef.current.offsetTop;        
+        const y =  e.pageY - cardRef.current.offsetTop;   
+        
+        cardRef.current.style.setProperty('--x', x + 'px')
+        cardRef.current.style.setProperty('--y', y + 'px')
     } 
 
     return( 
