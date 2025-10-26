@@ -1,6 +1,7 @@
 const GlowingCorner = () => {
-    return(
-
+    return( 
+        // container
+        <div className="relative flex items-center justify-center min-h-[100vh] gap-[50px] bg-[#222]"></div>
     )
 }
 

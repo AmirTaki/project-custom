@@ -23,6 +23,7 @@ import UserLocation from "../userLocation/index.jsx"
 import GoogleLoader from "../googleLoader/index.jsx"
 import NumberSpinner from "../numberSpinner/index.jsx"
 import GlassMorphism from "../glassMorphismButton/index.jsx"
+import GlowingCorner from "../glowingCorner/index.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -123,8 +124,9 @@ const Home =  ()  => {
                 {/* footer animated */}
                 <FooterAnimated />
 
-
             </div>
+            {/* Glowing Corner */}
+            <GlowingCorner />
             <div className="h-100 w-100 text-white"></div>
         </div>   
     )
