@@ -1,23 +1,21 @@
-import { useRef, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 
 const GlowingCorner = () => {
     const [state, setState] = useState({top : "20px", left : "20px"})
 
     const cardRef =  useRef(null)
-    const handlerMouseMove = (e) => {
+    const handlerMouseMove = useCallback((e) => {
+
         const x =  e.pageX - cardRef.current.offsetLeft;
         const y =  e.pageY - cardRef.current.offsetTop;   
         
+        setState({...state, left:y , top : x})
+    }, [] )
 
-        console.log(x)
-        console.log(y)
 
-        setState = {
-            ...state, 
-            top : x,
-            left : y
-        }
-    } 
+    useEffect(() => {
+        console.log(state)
+    }, [state])
 
     return( 
         // container
