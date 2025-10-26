@@ -11,14 +11,11 @@ const GlassMorphism = () => {
             <div
                 className="
               
-             before:bg-[#ff1f71]
-                before:rounded-[10px] before:duration-500 before:delay-0
-                after:content-[''] after:absolute after:left-[50%] after:-translate-x-1/2
-                after:top-[-5px] after:w-[30px] after:h-[10px] after:bg-[#ff1f71] 
-                after:rounded-[10px] after:duration-500 after:delay-0 
+
+             
                 btn group
-                hover:after:top-0 hover:after:h-[50%] hover:after:w-[80%] hover:after:rounded-[30px] hover:after:delay-[.5s]
-                hover:before:bottom-0 hover:before:h-[50%] hover:before:w-[80%] hover:before:rounded-[30px] hover:before:delay-[.5s]
+                
+             
                 ">
                 <Link 
                     to = "/" 
