@@ -1,5 +1,6 @@
 import { useCallback, useRef } from "react"
 import './styles.css'
+
 const GlowingCorner = () => {
     const cardRef =  useRef(null)
     const handlerMouseMove = useCallback((e) => {
@@ -23,14 +24,10 @@ const GlowingCorner = () => {
                 ref = {cardRef}
                 onMouseMove={handlerMouseMove}
                 style={{ "--color-bg" : "#0f0"}}
-                className="
-                
-                
-                
-                
-                
-                
-            "></div>
+                className=" cardGlowingCorner"
+            >
+
+            </div>
         </div>
     )
 }
