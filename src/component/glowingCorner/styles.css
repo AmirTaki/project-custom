@@ -2,11 +2,15 @@
 
 @layer utilities {
     .cardGlowingCorner {
-        @apply ;
-        @apply ;
-        @apply ;
-        @apply ;
-        @apply ;
+        @apply relative w-[320px] h-[400px] bg-[rgba(45,45,45,1)] ;
+        @apply rounded-[20px] overflow-hidden;
+        @apply before:content-[''] before:absolute before:-translate-x-1/2 before:-translate-y-1/2;
+        @apply before:left-[var(--x)] before:top-[var(--y)] ;
+        @apply before:bg-[linear-gradient(var(--color-bg),blue,red)];
+        @apply before:w-[360px] before:h-[360px] before:rounded-[102%] ;
+        @apply before:opacity-0  duration-500 translate-[left_0s,top_0s];
+        @apply after:content-[''] after:absolute after:inset-[2px] after:bg-[rgba(45,45,45,.9)];
+        @apply  after:rounded-[18px] hover:before:opacity-100!;
     }
 }
 
