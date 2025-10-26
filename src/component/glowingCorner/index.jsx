@@ -1,9 +1,15 @@
 const GlowingCorner = () => {
+
+    const handlerMouseMove = (e) => {
+        
+    } 
+
     return( 
         // container
         <div className="relative flex items-center justify-center min-h-[100vh] gap-[50px] bg-[#222] flex-wrap">
             {/* card */}
             <div 
+                onMouseMove={handlerMouseMove}
                 style={{'--left-position' : "20px", '--top-position' : '50px', "--color-bg" : "#0f0"}}
                 className="relative w-[320px] h-[400px] bg-[rgba(45,45,45,1)] rounded-[20px] overflow-hidden
                 before:content-[''] before:absolute before:-translate-x-1/2 before:-translate-y-1/2
