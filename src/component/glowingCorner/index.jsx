@@ -1,5 +1,6 @@
 import { useCallback, useRef } from "react"
 import './styles.css'
+import { DataCard } from "./dataCrard"
 
 const GlowingCorner = () => {
     const cardRef =  useRef(null)
@@ -20,14 +21,18 @@ const GlowingCorner = () => {
         // container
         <div className="relative flex items-center justify-center min-h-[100vh] gap-[50px] bg-[#222] flex-wrap">
             {/* card */}
-            <div 
-                ref = {cardRef}
-                onMouseMove={handlerMouseMove}
-                style={{ "--color-bg" : "#0f0"}}
-                className=" cardGlowingCorner"
-            >
-
-            </div>
+            {DataCard.map((card) => {
+                return(
+                    <div 
+                        key = {card.id}
+                        ref = {cardRef}
+                        onMouseMove={handlerMouseMove}
+                        style={{ "--color-bg" : `${card.color}` }}
+                        className=" cardGlowingCorner"
+                    >
+                    </div>
+                )
+            })}
         </div>
     )
 }
