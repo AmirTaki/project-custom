@@ -1,5 +1,6 @@
 import { BrowserRouter, Link } from "react-router-dom";
 import "./styles.css"
+import { ColorsItems } from "./colorsItem";
 
 
 const GlassMorphism = () => {
@@ -7,17 +8,22 @@ const GlassMorphism = () => {
         // container
         <div className="w-[600px] flex flex-wrap justify-around">
             {/* btn */}
-            <BrowserRouter >            
-            <div
-                style = {{'--color-bg' : ""}}
-                className=" btn group btn-morphism">
-                <Link 
-                    to = "/" 
-                    className ="link-morphism  "                    
-                > 
-                    Read More
-                </Link>
-            </div>
+            <BrowserRouter > 
+            {ColorsItems.map((item) => {
+                return(
+                    <div
+                        key = {item.id}
+                        style = {{'--color-bg' : item.color}}
+                        className=" btn group btn-morphism">
+                        <Link 
+                            to = "/" 
+                            className ="link-morphism  "                    
+                        > 
+                            Read More
+                        </Link>
+                    </div>
+                )
+            })}           
             </BrowserRouter>
         </div>
     )
