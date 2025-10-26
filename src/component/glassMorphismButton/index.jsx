@@ -21,6 +21,7 @@ const GlassMorphism = () => {
             <div
                 className=" btn group btn-morphism">
                 <Link 
+                    style={{"--i" : "#2db2ff"}}
                     to = "/" 
                     className ="link-morphism group-hover:before:skew-x-45 group-hover:before:translate-x-[200%] group-hover:tracking-[3px] "                    
                 > 
@@ -30,6 +31,7 @@ const GlassMorphism = () => {
             <div
                 className=" btn group btn-morphism">
                 <Link 
+                    style={{"--i" : "#1eff45"}}
                     to = "/" 
                     className ="link-morphism group-hover:before:skew-x-45 group-hover:before:translate-x-[200%] group-hover:tracking-[3px] "                    
                 > 

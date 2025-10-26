@@ -2,11 +2,11 @@
 @tailwind utilities;
 
 .btn::before, .btn::after{
-    background: var(--i);
-    box-shadow: 0 0  5px  var(--i),
-                0 0  15px var(--i),
-                0 0  30px var(--i),
-                0 0  60px var(--i);
+    background: "var(--i)";
+    box-shadow: 0 0  5px  "var(--i)",
+                0 0  15px "var(--i)",
+                0 0  30px "var(--i)",
+                0 0  60px "var(--i)";
 }
 /* .btn:nth-child(2):before, .btn:nth-child(2)::after{
     background: #2db2ff;
