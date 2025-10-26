@@ -32,6 +32,7 @@
         @apply before:content-[''] before:absolute before:top-0 before:left-0;
         @apply before:w-[50%] before:h-[100%] ;
         @apply before:bg-[linear-gradient(to_left,rgba(255,255,255,.15),transparent)];
+        @apply before:skew-x-45 before:translate-x-0;
         /* @apply; */
     }
 }
