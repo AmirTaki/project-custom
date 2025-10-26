@@ -25,6 +25,8 @@
         @apply flex justify-center items-center;
         @apply bg-[rgba(255,255,255,.05)] shadow-[0_15px_35px_rgba(0,0,0,.2)];
         @apply border-t-1 border-t-[rgba(255,255,255,.1)] border-b-1 border-b-[rgba(255,255,255,.1)] ;
+        @apply rounded-[30px] text-white z-20;
+        /* @apply; */
         /* @apply; */
     }
 }
