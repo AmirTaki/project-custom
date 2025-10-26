@@ -9,6 +9,8 @@ const GlowingCorner = () => {
                 before:content-[''] before:absolute before:-translate-x-1/2 before:-translate-y-1/2
                 before:left-[var(--left-position)] before:top-[var(--top-position)] before:bg-[linear-gradient(var(--color-bg),blue,red)]
                 before:w-[360px] before:h-[360px] before:rounded-[102%] before:opacity-0 before:transition-[left 0s_top 0s] duration-500
+                after:content-[''] after
+
                 hover:before:opacity-100!
             "></div>
         </div>
