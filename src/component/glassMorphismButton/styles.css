@@ -1,12 +1,14 @@
 @import "tailwindcss";
 @tailwind utilities;
-.btn:nth-child(1):before, .btn:nth-child(1)::after{
-    box-shadow: 0 0  5px #ff1f71,
-                0 0  15px #ff1f71,
-                0 0  30px #ff1f71,
-                0 0  60px #ff1f71;
+
+.btn::before, .btn::after{
+    background: var(--i);
+    box-shadow: 0 0  5px  var(--i),
+                0 0  15px var(--i),
+                0 0  30px var(--i),
+                0 0  60px var(--i);
 }
-.btn:nth-child(2):before, .btn:nth-child(2)::after{
+/* .btn:nth-child(2):before, .btn:nth-child(2)::after{
     background: #2db2ff;
     box-shadow: 0 0  5px  #2db2ff,
                 0 0  15px #2db2ff,
@@ -19,12 +21,11 @@
                 0 0  15px #1eff45,
                 0 0  30px #1eff45,
                 0 0  60px #1eff45;
-}
+} */
 
 
 
 @layer utilities{
-
 
     .btn-morphism {
         @apply relative w-[155px] h-[50px] m-[20px];
