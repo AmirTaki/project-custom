@@ -9,6 +9,6 @@ export const DataCard = [
     },
     {
         id : 2,
-        color : '#ff0'
+        color : '#00f'
     },
 ]

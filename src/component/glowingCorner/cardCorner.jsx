@@ -1,6 +1,7 @@
+import './styles.css'
 import { useCallback, useRef } from "react"
 
-const CardCorner = () => {
+const CardCorner = ({card}) => {
     const cardRef =  useRef(null)
     const handlerMouseMove = useCallback((e) => {
 
@@ -14,7 +15,13 @@ const CardCorner = () => {
         node.style.setProperty('--y', `${y}px`)
     }, [] )
     return(
-        <div className=""></div>
+        <div 
+            ref = {cardRef}
+            onMouseMove={handlerMouseMove}
+            style={{ "--color-bg" : `${card.color}` }}
+            className=" cardGlowingCorner"
+        >
+        </div>
     )
 }
 
