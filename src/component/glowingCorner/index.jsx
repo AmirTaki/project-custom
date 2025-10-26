@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react"
+import { useCallback, useRef } from "react"
 
 const GlowingCorner = () => {
     const cardRef =  useRef(null)
