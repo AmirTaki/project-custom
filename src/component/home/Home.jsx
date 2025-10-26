@@ -22,6 +22,7 @@ import GenerateQrCode from "../generateQrCode/index.jsx"
 import UserLocation from "../userLocation/index.jsx"
 import GoogleLoader from "../googleLoader/index.jsx"
 import NumberSpinner from "../numberSpinner/index.jsx"
+import glassMorphism from "../glassMorphismButton/index.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -122,6 +123,7 @@ const Home =  ()  => {
             </div>
 
             {/* glassMorphism Button */}
+            <glassMorphism />
             <div className="h-100 w-100 text-white"></div>
         </div>   
     )
