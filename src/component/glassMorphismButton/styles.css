@@ -17,7 +17,8 @@
         @apply after:-translate-x-1/2 after:top-[-5px] after:w-[30px]  after:h-[10px] after:bg-[#ff1f71]; 
         @apply after:rounded-[10px] after:duration-500 after:delay-0 ;
         @apply hover:after:top-0 hover:after:h-[50%] hover:after:w-[80%] hover:after:rounded-[30px] hover:after:delay-[.5s];
-        @apply hover:before:bottom-0 hover:before:h-[50%] hover:before:w-[80%] hover:before:rounded-[30px] hover:before:delay-[.5s]
+        @apply hover:before:bottom-0 hover:before:h-[50%] hover:before:w-[80%] hover:before:rounded-[30px] hover:before:delay-[.5s];
+        /* @apply z-20; */
     }
 
     .link-morphism {
@@ -25,7 +26,9 @@
         @apply flex justify-center items-center;
         @apply bg-[rgba(255,255,255,.05)] shadow-[0_15px_35px_rgba(0,0,0,.2)];
         @apply border-t-1 border-t-[rgba(255,255,255,.1)] border-b-1 border-b-[rgba(255,255,255,.1)] ;
-        @apply rounded-[30px] text-white z-20;
+        @apply rounded-[30px] text-white ;
+        @apply font-[400] leading-[1px] decoration-0 ;
+        @apply overflow-hidden duration-500 blur-[15px];
         /* @apply; */
         /* @apply; */
     }
