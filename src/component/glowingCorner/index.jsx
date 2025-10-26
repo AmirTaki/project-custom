@@ -12,8 +12,11 @@ const GlowingCorner = () => {
         console.log(x)
         console.log(y)
 
-        cardRef.current.style.setProperty('--x', x + 'px')
-        cardRef.current.style.setProperty('--y', y + 'px')
+        setState = {
+            ...state, 
+            top : x,
+            left : y
+        }
     } 
 
     return( 
@@ -23,7 +26,7 @@ const GlowingCorner = () => {
             <div 
                 ref = {cardRef}
                 onMouseMove={handlerMouseMove}
-                style={{'--left-position' : "20px", '--top-position' : '50px', "--color-bg" : "#0f0"}}
+                style={{'--left-position' : `${state.top}`, '--top-position' : `${state.left}`, "--color-bg" : "#0f0"}}
                 className="relative w-[320px] h-[400px] bg-[rgba(45,45,45,1)] rounded-[20px] overflow-hidden
                 before:content-[''] before:absolute before:-translate-x-1/2 before:-translate-y-1/2
                 before:left-[var(--left-position)] before:top-[var(--top-position)] before:bg-[linear-gradient(var(--color-bg),blue,red)]
