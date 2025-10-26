@@ -9,6 +9,7 @@ const GlassMorphism = () => {
             <BrowserRouter >
             
             <div
+                style = {{'--color-bg' : "#ff1f71"}}
                 className=" btn group btn-morphism">
                 <Link 
                     to = "/" 
@@ -18,6 +19,7 @@ const GlassMorphism = () => {
                 </Link>
             </div>
             <div
+                style = {{'--color-bg' : "#2db2ff"}}
                 className=" btn group btn-morphism">
                 <Link 
                     to = "/" 
@@ -28,12 +30,8 @@ const GlassMorphism = () => {
             </div>
             <div
                 style = {{'--color-bg' : "#1eff45"}}
-                className=" btn group btn-morphism 
-                        
-                        
-                        
-                        
-                ">
+                className=" btn group btn-morphism "
+            >
                 <Link 
                     to = "/" 
                     className ="link-morphism group-hover:before:skew-x-45 group-hover:before:translate-x-[200%] group-hover:tracking-[3px]"> 
