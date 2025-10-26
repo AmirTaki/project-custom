@@ -1,6 +1,6 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Link } from "react-router-dom";
 
-const glassMorphism = () => {
+const GlassMorphism = () => {
     return (
         // container
         <div className="w-[600px] flex flex-wrap justify-around">
@@ -12,11 +12,11 @@ const glassMorphism = () => {
                 before:bottom-[-5px] before:w-[30px] before:h-[10px] before:bg-[#ff1f71]
                 before:rounded-[10px] before:duration-[.5s] before:delay-0
             ">
-                <Link to = "/"> Read More</Link>
+                <Link to = "/" className = "text-white"> Read More</Link>
             </div>
             
             </BrowserRouter>
         </div>
     )
 }
-export default glassMorphism;
+export default GlassMorphism;
