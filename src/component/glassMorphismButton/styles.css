@@ -28,8 +28,10 @@
         @apply border-t-1 border-t-[rgba(255,255,255,.1)] border-b-1 border-b-[rgba(255,255,255,.1)] ;
         @apply rounded-[30px] text-white ;
         @apply font-[400] leading-[1px] decoration-0 ;
-        @apply overflow-hidden duration-500 blur-[15px];
-        /* @apply; */
+        @apply overflow-hidden duration-500 blur-[0px];
+        @apply before:content-[''] before:absolute before:top-0 before:left-0;
+        @apply before:w-[50%] before:h-[100%] ;
+        @apply before:bg-[linear-gradient(to_left,rgba(255,255,255,.15),transparent)];
         /* @apply; */
     }
 }

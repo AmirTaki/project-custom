@@ -12,7 +12,7 @@ const GlassMorphism = () => {
                 className=" btn group btn-morphism">
                 <Link 
                     to = "/" 
-                    className ="link-morphism"                    
+                    className ="link-morphism group-hover:leading-[3px]"                    
                 > 
                     Read More
                 </Link>
