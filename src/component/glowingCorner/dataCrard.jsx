@@ -1,14 +1,14 @@
 export const DataCard = [
     {
         id : 0,
-        color : '#0f0'
+        color : 'yellow'
     },
     {
         id : 1,
-        color : '#ff0'
+        color : 'white'
     },
     {
         id : 2,
-        color : '#00f'
+        color : 'green'
     },
 ]
