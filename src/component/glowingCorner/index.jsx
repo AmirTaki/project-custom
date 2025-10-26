@@ -6,8 +6,11 @@ const GlowingCorner = () => {
     const cardRef =  useRef(null)
     const handlerMouseMove = useCallback((e) => {
 
-        const x =  e.pageX - cardRef.current.offsetLeft;
-        const y =  e.pageY - cardRef.current.offsetTop;   
+        const node = ref.current ;
+        if(!node) return;
+        const rect = node.getBoundingClientRect()
+        const x =  e.clientX - rect.left
+        const y =  e.clientY - rect.top   
         
         setState({...state, left:y , top : x})
     }, [] )
