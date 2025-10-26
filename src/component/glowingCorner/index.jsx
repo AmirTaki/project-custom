@@ -12,6 +12,8 @@ const GlowingCorner = () => {
         const x =  e.clientX - rect.left
         const y =  e.clientY - rect.top   
         
+        node.style.setProperty('--x', `${x}px`)
+        node.style.setProperty('--y', `${x}px`)
         setState({...state, left:y , top : x})
     }, [] )
 
