@@ -26,7 +26,7 @@ const GlowingCorner = () => {
                 className="
                 before:bg-[linear-gradient(var(--color-bg),blue,red)]
                 relative w-[320px] h-[400px] bg-[rgba(45,45,45,1)] rounded-[20px] overflow-hidden
-                before:content-[''] before:absolute before:-translate-x-1/2 before:-translate-y-1/3
+                before:content-[''] before:absolute before:-translate-x-1/2 before:-translate-y-1/2
                 before:left-[var(--x)] before:top-[var(--y)] 
                 before:w-[360px] before:h-[360px] before:rounded-[102%] before:opacity-0  duration-500 translate-[left_0s,top_0s]
                 after:content-[''] after:absolute after:inset-[2px] after:bg-[rgba(45,45,45,.9)] after:rounded-[18px]
