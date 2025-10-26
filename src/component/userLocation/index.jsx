@@ -35,8 +35,6 @@ const UserLocation = () => {
             const locality = address.city || address.town || address.village || address.county || 'Unknown Location';
             const country = address.country || ''
        
-
-            console.log(address)
             if(locationDetails.current){
                 locationDetails.current.innerText =  `${locality}, ${country}`
             }
