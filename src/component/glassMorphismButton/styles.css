@@ -1,13 +1,30 @@
 @import "tailwindcss";
 @tailwind utilities;
-.btn::before, .btn::after{
+.btn:nth-child(1):before, .btn:nth-child(1)::after{
+    box-shadow: 0 0  5px #ff1f71,
+                0 0  15px #ff1f71,
+                0 0  30px #ff1f71,
+                0 0  60px #ff1f71;
+}
+.btn:nth-child(2):before, .btn:nth-child(2)::after{
+    background: #2db2ff;
+    box-shadow: 0 0  5px  #2db2ff,
+                0 0  15px #2db2ff,
+                0 0  30px #2db2ff,
+                0 0  60px #2db2ff;
+}
+.btn:nth-child(3):before, .btn:nth-child(3)::after{
     box-shadow: 0 0  5px #ff1f71,
                 0 0  15px #ff1f71,
                 0 0  30px #ff1f71,
                 0 0  60px #ff1f71;
 }
 
+
+
 @layer utilities{
+
+
     .btn-morphism {
         @apply relative w-[155px] h-[50px] m-[20px];
         @apply before:content-[''] before:absolute before:left-[50%] ;
@@ -18,7 +35,6 @@
         @apply after:rounded-[10px] after:duration-500 after:delay-0 ;
         @apply hover:after:top-0 hover:after:h-[50%] hover:after:w-[80%] hover:after:rounded-[30px] hover:after:delay-[.5s]; 
         @apply hover:before:bottom-0 hover:before:h-[50%] hover:before:w-[80%] hover:before:rounded-[30px] hover:before:delay-[.5s];
-        /* @apply z-20; */
     }
 
     .link-morphism {
@@ -33,6 +49,5 @@
         @apply before:w-[50%] before:h-[100%] ;
         @apply before:bg-[linear-gradient(to_left,rgba(255,255,255,.15),transparent)];
         @apply before:skew-x-45 before:translate-x-0 before:duration-500 z-30;
-        /* @apply; */
     }
 }
