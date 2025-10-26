@@ -31,5 +31,6 @@
         @apply before:w-[50%] before:h-[100%] ;
         @apply before:bg-[linear-gradient(to_left,rgba(255,255,255,.15),transparent)];
         @apply before:skew-x-45 before:translate-x-0 before:duration-500 z-30;
+        @apply group-hover:before:skew-x-45 group-hover:before:translate-x-[200%] group-hover:tracking-[3px] ;
     }
 }
