@@ -1,3 +1,4 @@
+@import "tailwindcss";
 @tailwind utilities;
 .btn::before, .btn::after{
     box-shadow: 0 0  5px #ff1f71,
@@ -16,6 +17,14 @@
         @apply after:-translate-x-1/2 after:top-[-5px] after:w-[30px]  after:h-[10px] after:bg-[#ff1f71]; 
         @apply after:rounded-[10px] after:duration-500 after:delay-0 ;
         @apply hover:after:top-0 hover:after:h-[50%] hover:after:w-[80%] hover:after:rounded-[30px] hover:after:delay-[.5s];
-        @apply    hover:before:bottom-0 hover:before:h-[50%] hover:before:w-[80%] hover:before:rounded-[30px] hover:before:delay-[.5s]
+        @apply hover:before:bottom-0 hover:before:h-[50%] hover:before:w-[80%] hover:before:rounded-[30px] hover:before:delay-[.5s]
+    }
+
+    .link-morphism {
+        @apply absolute top-0 left-0 w-[100%] h-[100%];
+        @apply flex justify-center items-center;
+        @apply bg-[rgba(255,255,255,.05)] shadow-[0_15px_35px_rgba(0,0,0,.2)];
+        @apply border-t-1 border-t-[rgba(255,255,255,.1)] border-b-1 border-b-[rgba(255,255,255,.1)] ;
+        /* @apply; */
     }
 }
