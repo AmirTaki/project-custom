@@ -1,8 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react"
 
 const GlowingCorner = () => {
-    const [state, setState] = useState({top : "20px", left : "20px"})
-
     const cardRef =  useRef(null)
     const handlerMouseMove = useCallback((e) => {
 
@@ -13,15 +11,10 @@ const GlowingCorner = () => {
         const y =  e.clientY - rect.top   
         
         node.style.setProperty('--x', `${x}px`)
-        node.style.setProperty('--y', `${x}px`)
-        setState({...state, left:y , top : x})
+        node.style.setProperty('--y', `${y}px`)
     }, [] )
 
 
-    useEffect(() => {
-        console.log(state)
-    }, [state])
-// before:bg-[linear-gradient(var(--color-bg),blue,red)]
     return( 
         // container
         <div className="relative flex items-center justify-center min-h-[100vh] gap-[50px] bg-[#222] flex-wrap">
@@ -29,13 +22,13 @@ const GlowingCorner = () => {
             <div 
                 ref = {cardRef}
                 onMouseMove={handlerMouseMove}
-                style={{'--x' : `${state.top}`, '--y' : `${state.left}`, "--color-bg" : "#0f0"}}
+                style={{ "--color-bg" : "#0f0"}}
                 className="
                 before:bg-[linear-gradient(var(--color-bg),blue,red)]
                 relative w-[320px] h-[400px] bg-[rgba(45,45,45,1)] rounded-[20px] overflow-hidden
-                before:content-[''] before:absolute before:-translate-x-1/2 before:-translate-y-1/2
+                before:content-[''] before:absolute before:-translate-x-1/2 before:-translate-y-1/3
                 before:left-[var(--x)] before:top-[var(--y)] 
-                before:w-[360px] before:h-[360px] before:rounded-[102%] before:opacity-0  duration-500
+                before:w-[360px] before:h-[360px] before:rounded-[102%] before:opacity-0  duration-500 translate-[left_0s,top_0s]
                 after:content-[''] after:absolute after:inset-[2px] after:bg-[rgba(45,45,45,.9)] after:rounded-[18px]
                 hover:before:opacity-100!
             "></div>
