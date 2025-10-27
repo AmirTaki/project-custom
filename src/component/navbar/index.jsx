@@ -24,8 +24,8 @@ const Navbar = () => {
 
 
     return(
-        <div className="flex justify-between items-center  px-[5rem] max-lg:px-[2rem] text-white
-        w-[100%] fixed! top-0 bg-[rgba(0,0,0,.2)] h-[60px] z-[2000]! 
+        <div className="flex! justify-between! items-center!  px-[5rem]! max-lg:px-[2rem]! text-white
+        w-[100%]! fixed! top-0 bg-[rgba(0,0,0,.2)] h-[60px] z-[2000]! 
         ">
       
             <BrowserRouter >

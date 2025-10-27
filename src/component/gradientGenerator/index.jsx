@@ -11,7 +11,7 @@ const GradientGenerator = () => {
         // box
         <div 
             style = {{backgroundImage : `${state.backGround}`}}
-            className="w-[80%]! h-[500px] mx-auto flex items-center justify-center rounded-4xl ">
+            className="w-[80%] h-[500px] mx-auto flex items-center justify-center rounded-4xl ">
             {/* container */}
             <div className="bg-[#fff] w-[440px] px-[50px] p-[30px] 
                
