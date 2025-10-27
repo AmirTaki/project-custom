@@ -5,7 +5,7 @@ import { ColorsItems } from "./colorsItem";
 const GlassMorphism = () => {
     return (
         // container
-        <div className="w-[600px] flex flex-wrap justify-around">
+        <div className="max-w-[600px] flex flex-wrap justify-around">
             {/* btn */}
             <BrowserRouter > 
             {ColorsItems.map((item) => {

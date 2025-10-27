@@ -15,7 +15,7 @@ const FooterAnimated  = () => {
             {/* row */}
             <div className="w-[90%] m-auto flex flex-wrap items-strat justify-between ">
                 {/* col */}
-                <div className="basis-[23%] p-[10px] max-md:basis-[100%]">
+                <div className="basis-[23%] p-[10px] max-md:basis-[100%]!">
                     {/* logo img */}
                     <img src="https://cdn.pixabay.com/photo/2017/05/31/16/39/windows-2360920_1280.png" alt="" className="w-[80px]"/>
                     <p>Subscribe Easy Tutorials Youtube channel to watch more videos on website development and Press the bell icon to get immediate notification of latest videos.</p>

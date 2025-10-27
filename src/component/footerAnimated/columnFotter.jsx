@@ -3,7 +3,7 @@ const ColumnFooter = ({title, children, basis}) => {
            
         <div 
             style={{"--basis" : `${basis}%` }}
-            className="p-[10px]  basis-[var(--basis)] max-md:basis-[100%] " >
+            className="p-[10px]  basis-[var(--basis)]! max-md:basis-[100%]! " >
             {/* col h3 */}
             <h3 className="w-fit mb-[40px] relative text-[16px] font-bold">
                 {title} 

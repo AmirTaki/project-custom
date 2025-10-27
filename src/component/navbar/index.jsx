@@ -25,7 +25,7 @@ const Navbar = () => {
 
     return(
         <div className="flex! justify-between! items-center!  px-[5rem]! max-lg:px-[2rem]! text-white
-        w-[100%]! fixed! top-0 bg-[rgba(0,0,0,.2)] h-[60px] z-[2000]! 
+        w-[100%]! fixed! top-0 bg-[rgba(0,0,0,.7)] h-[60px] z-[2000]! 
         ">
       
             <BrowserRouter >
@@ -38,9 +38,9 @@ const Navbar = () => {
     
                 <ul  className={`
                     ${stateSearch.active ? "flex" : "hidden"}
-                    ${dropMenu ? "hidden" : "flex "} 
-                    ${resize ? " h-0 overflow-hidden  flex! flex-col items-center justify-center fixed right-[2rem] max-md:right-[5%] max-md:left-[5%]  max-md:w-[90%] w-[300px] rounded-2xl top-[60px] " : "flex flex-row justify-center items-center gap-10"}
-                    ${dropMenu && resize ? " transition-[height]! duration-500! ease-[cubic-bezier(.175,.885,.32,1.275)]! h-[260px]!  bg-[rgba(0,0,0,.2)]  overflow-hidden" 
+                    ${dropMenu ? "hidden" : "flex"} 
+                    ${resize ? " h-0 overflow-hidden  flex! flex-col items-center justify-center fixed right-[2rem] max-md:right-[5%] max-md:left-[5%]  max-md:w-[90%]! w-[300px] rounded-2xl top-[60px] " : "flex flex-row justify-center items-center gap-10"}
+                    ${dropMenu && resize ? " transition-[height]! duration-500! ease-[cubic-bezier(.175,.885,.32,1.275)]! h-[260px]!  bg-[rgba(0,0,0,.7)]  overflow-hidden" 
                     : "h-0! duration-500 "}` 
                 }>
                     <li  className={`${dropMenu ? " p-[.7rem] text-md" : "text-md"} cursor-pointer duration-300 hover:text-[orange] `} ><Link to = '/'>Home</Link></li>
@@ -54,7 +54,7 @@ const Navbar = () => {
          
                     
                 <div 
-                    className={`flex items-center justify-center  max-lg:hidden ${stateSearch.active ? "flex" : "hidden"} `}
+                    className={`flex items-center justify-center  max-lg:hidden! ${stateSearch.active ? "flex" : "hidden"} `}
                 >
                     <div className="border-0 outline-0 px-[1rem] py-[.5rem]
                         rounded-[20px] cursor-pointer text-[.8rem] font-bold bg-[orange]
