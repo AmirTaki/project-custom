@@ -1,7 +1,7 @@
 import { useReducer, useRef } from 'react';
 import { ListButtons } from './listButtons';
-
 import './styles.css'
+
 const GradientGenerator = () => {
     const codeRef = useRef(null)
 
@@ -11,19 +11,22 @@ const GradientGenerator = () => {
                 const newSatate =  state.buttons.map((item) => ({...item, flag : item.id === action.payload.id ? true : false }))
                 return {...state, buttons : newSatate}
            
-                case "HandlerColor" :
+            case "HandlerColor" :
                 return action.payload.data === 'A' ? {...state , colorA : action.payload.color} : {...state , colorB : action.payload.color}
-           
-                case "HandlerGenerate" : 
+        
+            case "HandlerGenerate" : 
                 const itemButtons =  state.buttons.find((item) => item.flag)
                 if(codeRef.current) codeRef.current.value = `background-image: linear-gradient(${itemButtons.value}, ${state.colorA}, ${state.colorB});`
                 return {...state, backGround : `linear-gradient(${itemButtons.value}, ${state.colorA}, ${state.colorB})` }
+        
+            case "HandlerCopy" :
+                codeRef.current.select();
+                document.execCommand('copy')
+                window.alert('Gradient Copied!')
+            return {...state}
         }
     }
     const [state, dispatch] =  useReducer(reducer, ListButtons)    
-
-
-
 
     return(
         // box
@@ -72,7 +75,9 @@ const GradientGenerator = () => {
                     {/* code */}
                     <textarea ref = {codeRef}  name="" rows = "2" className='w-[100%] resize-none text-[#30304a] py-[10px] px-[20px] bg-transparent' ></textarea>
                     {/* copy */}
-                    <button className='text-[14px] bg-[#4a6ee0] text-white relative left-[85%] bottom-[10px] rounded-[3px] p-[5px] cursor-pointer'>
+                    <button 
+                        onClick={() => {dispatch({type : 'HandlerCopy'})}} 
+                        className='text-[14px] bg-[#4a6ee0] text-white relative left-[85%] bottom-[10px] rounded-[3px] p-[5px] cursor-pointer'>
                         Copy
                     </button>
                 </div>
