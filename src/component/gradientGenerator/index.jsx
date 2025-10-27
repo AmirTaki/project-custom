@@ -11,10 +11,10 @@ const GradientGenerator = () => {
         // box
         <div 
             style = {{backgroundImage : `${state.backGround}`}}
-            className="w-[3000px]! h-[500px] mx-auto ">
+            className="w-[80%]! h-[500px] mx-auto flex items-center justify-center rounded-4xl ">
             {/* container */}
-            <div className="bg-[#fff] w-[440px] px-[50px] p-[30px] absolute 
-                -translate-x-1/2 -translate-y-1/2 top-[50%] left-[50%]
+            <div className="bg-[#fff] w-[440px] px-[50px] p-[30px] 
+               
                 rounded-[10px] shadow-[0_20px_25px_rgba(0,0,0,0.25)]
             ">
                 {/* colors */}
@@ -53,7 +53,7 @@ const GradientGenerator = () => {
                     <textarea ref = {codeRef}  name="" rows = "2" className='w-[100%] resize-none text-[#30304a] py-[10px] px-[20px] bg-transparent' ></textarea>
                     {/* copy */}
                     <button 
-                        onClick={() => {dispatch({type : 'HandlerCopy'})}} 
+                        onClick={() => {dispatch({type : 'HandlerCopy', payload : {ref : codeRef.current}})}} 
                         className='text-[14px] bg-[#4a6ee0] text-white relative left-[85%] bottom-[10px] rounded-[3px] p-[5px] cursor-pointer'>
                         Copy
                     </button>

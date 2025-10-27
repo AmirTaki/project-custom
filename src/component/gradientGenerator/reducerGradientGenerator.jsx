@@ -8,13 +8,14 @@ export const ReducerGradientGenerator = (state, action) => {
             return action.payload.data === 'A' ? {...state , colorA : action.payload.color} : {...state , colorB : action.payload.color}
     
         case "HandlerGenerate" : 
-            const {ref} = action.payload
+            var {ref} = action.payload
             const itemButtons =  state.buttons.find((item) => item.flag)
             if(ref) ref.value = `background-image: linear-gradient(${itemButtons.value}, ${state.colorA}, ${state.colorB});`
             return {...state, backGround : `linear-gradient(${itemButtons.value}, ${state.colorA}, ${state.colorB})` }
     
         case "HandlerCopy" :
-            codeRef.current.select();
+            var {ref} = action.payload
+            ref.select();
             document.execCommand('copy')
             window.alert('Gradient Copied!')
         return {...state}
