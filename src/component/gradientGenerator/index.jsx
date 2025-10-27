@@ -14,18 +14,20 @@ const GradientGenerator = () => {
                 const newSatate =  state.buttons.map((item) => ({...item, flag : item.id === action.payload.id ? true : false }))
                 return {...state, buttons : newSatate}
             
+            case "HandlerGenerate" : 
+                return {...state}
         }
     }
     const [state, dispatch] =  useReducer(reducer, ListButtons)    
 
-    const HandlerGenerate = () => {
-        
-    }
+
 
 
     return(
         // box
-        <div className="w-[3000px]! h-[500px] mx-auto bg-amber-700">
+        <div 
+            style = {{'--background-color' : `${state.backGround}`}}
+            className="w-[3000px]! h-[500px] mx-auto bg-[var(--background-color)]">
             {/* container */}
             <div className="bg-[#fff] w-[440px] px-[50px] p-[30px] absolute 
                 -translate-x-1/2 -translate-y-1/2 top-[50%] left-[50%]
@@ -57,7 +59,7 @@ const GradientGenerator = () => {
                 </div>
                 {/* submit */}
                 <button 
-                    onClick={HandlerGenerate}
+                    onClick={()=> {dispatch({type : 'HandlerGenerate'})}}
                     className='block bg-[#4a6ee0] text-white text-[16px] py-[12px] px-[70px] rounded-[25px] m-[0_auto_30px_auto] cursor-pointer'
                 >
                     Generate
