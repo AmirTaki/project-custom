@@ -6,7 +6,7 @@ import './styles.css'
 const GradientGenerator = () => {
     const codeRef = useRef(null)
     const [state, dispatch] =  useReducer(ReducerGradientGenerator, ListButtons)    
-    
+
     return(
         // box
         <div 
@@ -41,7 +41,7 @@ const GradientGenerator = () => {
 
                 {/* submit */}
                 <button 
-                    onClick={()=> {dispatch({type : 'HandlerGenerate'})}}
+                    onClick={()=> {dispatch({type : 'HandlerGenerate', payload : {ref : codeRef.current}})}}
                     className='block bg-[#4a6ee0] text-white text-[16px] py-[12px] px-[70px] rounded-[25px] m-[0_auto_30px_auto] cursor-pointer'
                 >
                     Generate

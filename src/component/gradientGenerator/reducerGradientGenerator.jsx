@@ -8,8 +8,9 @@ export const ReducerGradientGenerator = (state, action) => {
             return action.payload.data === 'A' ? {...state , colorA : action.payload.color} : {...state , colorB : action.payload.color}
     
         case "HandlerGenerate" : 
+            const {ref} = action.payload
             const itemButtons =  state.buttons.find((item) => item.flag)
-            if(codeRef.current) codeRef.current.value = `background-image: linear-gradient(${itemButtons.value}, ${state.colorA}, ${state.colorB});`
+            if(ref) ref.value = `background-image: linear-gradient(${itemButtons.value}, ${state.colorA}, ${state.colorB});`
             return {...state, backGround : `linear-gradient(${itemButtons.value}, ${state.colorA}, ${state.colorB})` }
     
         case "HandlerCopy" :
