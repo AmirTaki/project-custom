@@ -23,8 +23,8 @@ const GradientGenerator = () => {
             ">
                 {/* colors */}
                 <div className="w-[100%] flex justify-around">
-                  <input ref = {colorA} onChange={(e) => {colorA.current = e.target.value}} value = {colorA.current} type="color" className="input-color-custom "/>  
-                  <input ref = {colorB} onChange={(e) => {colorB.current = e.target.value}}  value = {colorB.current}  type="color" className="input-color-custom " />  
+                  <input ref = {colorA} onChange={(e) => {colorA.current = e.target.value}}  type="color" className="input-color-custom "/>  
+                  <input ref = {colorB} onChange={(e) => {colorB.current = e.target.value}}  type="color" className="input-color-custom " />  
                 </div>
 
                 {/* buttons  */}
