@@ -44,7 +44,15 @@ const CardCorner = ({card}) => {
 
     const handlerMouseLeave =  useCallback(() => {
 
-    }, [])
+        const node =  cardRef.current
+        if(!node) return;
+
+        const rect = node.getBoundingClientRect();
+        postionRef.current.x = rect.width / 2;
+        postionRef.current.y = rect.height / 2
+
+        handlerAnimation()
+    }, [handlerAnimation])
 
     useEffect(() => {
         return() => {
