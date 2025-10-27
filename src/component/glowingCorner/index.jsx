@@ -2,10 +2,10 @@ import CardCorner from "./cardCorner"
 import { DataCard } from "./dataCrard"
 
 const GlowingCorner = () => {
- 
+
     return( 
         // container
-        <div className="relative flex items-center justify-center min-h-[100vh] gap-[50px] bg-[#222] flex-wrap">
+        <div className="relative flex items-center justify-center  gap-[50px]  flex-wrap">
             {/* card */}
             {DataCard.map((card) => {
                 return(

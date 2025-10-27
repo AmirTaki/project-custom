@@ -2,7 +2,7 @@ export const handlerMouseUp = (isDraggingDocts, isDraggingNavigation) => {
     if(isDraggingDocts.current){
         isDraggingDocts.current = false
     }
-    else if(isDraggingNavigation.current){
+    if(isDraggingNavigation.current){
         isDraggingNavigation.current = false
     }
 }
@@ -11,7 +11,7 @@ export const handlerMouseLeave = (isDraggingDocts, isDraggingNavigation) => {
     if(isDraggingDocts.current){
         isDraggingDocts.current = false
     }
-    else if(isDraggingNavigation.current){
+    if(isDraggingNavigation.current){
         isDraggingNavigation.current = false
     }
 }

@@ -17,7 +17,7 @@ const EnglishDictionary = () => {
             const url =  `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`; 
             const result =  await fetch(url).then((res) => res.json())
 
-            console.log(result)
+            // console.log(result)
 
             if(result.title) {
                 meaningContainer.current.style.display = 'flex'
@@ -36,13 +36,12 @@ const EnglishDictionary = () => {
             }
         }   
         catch (err) {
-            console.log(err)
+            // console.log(err)
             infoText.current.innerText = "an error happened, try again later"   
         }
     }
     const handleKeyDown = (e) => {
         if(e.target.value && e.key === "Enter"){
-            console.log("ok")
             FetchApi(value)
         }
     }
