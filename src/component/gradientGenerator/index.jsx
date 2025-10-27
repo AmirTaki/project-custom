@@ -29,7 +29,9 @@ const GradientGenerator = () => {
 
                 </div>
                 {/* submit */}
-                <button >Generate</button>
+                <button 
+                    className='block bg-[#4a6ee0] text-white text-[16px] py-[12px] px-[70px] rounded-[25px] m-[0_auto_30px_auto] cursor-pointer'
+                >Generate</button>
             </div>
         </div>
         
