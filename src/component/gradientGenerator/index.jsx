@@ -10,12 +10,15 @@ const GradientGenerator = () => {
             case "handlerButton":
                 const newSatate =  state.buttons.map((item) => ({...item, flag : item.id === action.payload.id ? true : false }))
                 return {...state, buttons : newSatate}
-            
-
+            case "HandlerColor" :
+                if(action.payload.data === 'A'){
+                    return {...state , colorA : action.payload.color}
+                }
+                return  {...state , colorB : action.payload.color}
 
             case "HandlerGenerate" : 
                 const itemButtons =  state.buttons.find((item) => item.flag)
-                return {...state, backGround : `linear-gradient(${itemButtons.value}, ${colorA.current}, ${colorB.current})` }
+                return {...state, backGround : `linear-gradient(${itemButtons.value}, ${state.colorA}, ${state.colorB})` }
         }
     }
     const [state, dispatch] =  useReducer(reducer, ListButtons)    
@@ -35,8 +38,8 @@ const GradientGenerator = () => {
             ">
                 {/* colors */}
                 <div className="w-[100%] flex justify-around">
-                  <input value = {state.colorA} onChange={(e) => {dispatch({type : 'color', payload : {data : 'A', color : e.target.value}})}}  type="color" className="input-color-custom "/>  
-                  <input value = {state.colorB} onChange={(e) => {dispatch({type : 'color', payload : {data : "B", color : e.target.value}})}}  type="color" className="input-color-custom " />  
+                  <input value = {state.colorA} onChange={(e) => {dispatch({type : 'HandlerColor', payload : {data : 'A', color : e.target.value}})}}  type="color" className="input-color-custom "/>  
+                  <input value = {state.colorB} onChange={(e) => {dispatch({type : 'HandlerColor', payload : {data : "B", color : e.target.value}})}}  type="color" className="input-color-custom " />  
                 </div>
 
                 {/* buttons  */}
