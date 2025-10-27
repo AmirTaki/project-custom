@@ -1,5 +1,5 @@
-import './styles.css'
 import { useCallback, useEffect, useRef } from "react"
+import './styles.css'
 
 const CardCorner = ({card}) => {
     const cardRef = useRef(null)
@@ -57,7 +57,7 @@ const CardCorner = ({card}) => {
     useEffect(() => {
         return() => {
             if(checkRef.current) {
-                cancelAnimationFrame(chekRef.current)
+                cancelAnimationFrame(checkRef.current)
                 checkRef.current = null
             }
         }
