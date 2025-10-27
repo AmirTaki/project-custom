@@ -10,10 +10,18 @@ const GradientGenerator = () => {
             ">
                 {/* colors */}
                 <div className="w-[100%] flex justify-around">
-                  <input type="color" className="input-color-custom" value = "#1488cc"/>  
-                  <input type="color"  className="input-color-custom" value = "#2b32b2"/>  
+                  <input type="color" className="input-color-custom " value = "#1488cc"/>  
+                  <input type="color" className="input-color-custom " value = "#2b32b2"/>  
                 </div>
 
+                {/* buttons  */}
+                <div className="w-[100%] flex justify-between mx-[30px] my-0">
+                    {/* button */}
+                    <button className='h-[35px] w-[35px] bg-transparent  border-2 border-[#d5d5dc] text-[#d5d5dc] rounded-[5px] cursor-pointer'>
+                        <i className='fas fa-arrow-up'></i>
+                    </button>
+
+                </div>
             </div>
         </div>
         
