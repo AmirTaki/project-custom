@@ -3,6 +3,7 @@ import { useCallback, useEffect, useRef } from "react"
 
 const CardCorner = ({card}) => {
     const cardRef = useRef(null)
+    const postionRef = useRef({x : 0, y : 0})
   
     const handlerMouseMove = useCallback( (e) => {
 
@@ -13,8 +14,11 @@ const CardCorner = ({card}) => {
         const x = e.clientX - rect.left
         const y = e.clientY - rect.top
 
-        node.style.setProperty('--x', `${x}px`)
-        node.style.setProperty('--y', `${y}px`)
+        // node.style.setProperty('--x', `${x}px`)
+        // node.style.setProperty('--y', `${y}px`)
+
+        postionRef.current.x = x;
+        postionRef.current.y = y
     },[])
 
     return(
