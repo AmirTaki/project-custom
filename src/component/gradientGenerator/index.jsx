@@ -15,7 +15,8 @@ const GradientGenerator = () => {
                 return {...state, buttons : newSatate}
             
             case "HandlerGenerate" : 
-                return {...state}
+                const itemButtons =  state.buttons.find((item) => item.flag)
+                return {...state, backGround : `linear-gradient(${itemButtons.value}, ${colorA.current}, ${colorB.current})` }
         }
     }
     const [state, dispatch] =  useReducer(reducer, ListButtons)    
@@ -26,8 +27,8 @@ const GradientGenerator = () => {
     return(
         // box
         <div 
-            style = {{'--background-color' : `${state.backGround}`}}
-            className="w-[3000px]! h-[500px] mx-auto bg-[var(--background-color)]">
+            style = {{backgroundImage : `${state.backGround}`}}
+            className="w-[3000px]! h-[500px] mx-auto ">
             {/* container */}
             <div className="bg-[#fff] w-[440px] px-[50px] p-[30px] absolute 
                 -translate-x-1/2 -translate-y-1/2 top-[50%] left-[50%]
