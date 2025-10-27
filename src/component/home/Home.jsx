@@ -24,6 +24,7 @@ import GoogleLoader from "../googleLoader/index.jsx"
 import NumberSpinner from "../numberSpinner/index.jsx"
 import GlassMorphism from "../glassMorphismButton/index.jsx"
 import GlowingCorner from "../glowingCorner/index.jsx"
+import GradientGenerator from "../gradientGenerator/index.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -44,7 +45,7 @@ const Home =  ()  => {
     const  [view, setView] =   useState(false)   
     return(
         <div 
-            className={`bg-[#10131c] min-h-[100vh] ${view ? "" : "flex justify-center items-center"}`} 
+            className={`bg-[#10131c]  min-h-[100vh] ${view ? "" : "flex justify-center items-center "}`} 
         >
             <div 
                 onMouseUp={() => {handlerMouseUp(isDraggingDocts, isDraggingNavigation)}}
@@ -130,7 +131,8 @@ const Home =  ()  => {
             </div>
 
             {/* Gradient Generator */}
-            
+            <GradientGenerator />
+
             <div className="h-100 w-100 text-white"></div>
         </div>   
     )
