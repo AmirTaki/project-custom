@@ -1,0 +1,10 @@
+
+@layer utilities {
+    .input-color-custom {
+        @apply  bg-transparent w-[100px] h-[45px]  cursor-pointer select-none ;
+    }
+    .input-color-custom::-webkit-color-swatch {
+      @apply rounded-[20px] border-none;
+    }
+  
+}
