@@ -3,7 +3,18 @@ import { useCallback, useEffect, useRef } from "react"
 
 const CardCorner = ({card}) => {
     const cardRef = useRef(null)
+    const checkRef = useRef(false)
     const postionRef = useRef({x : 0, y : 0})
+
+    const handlerPosition = useCallback(() => {
+
+    }, [])
+
+    const handlerAnimation = useCallback(() => {
+        if(checkRef.current == false){
+            cardRef.current  = requestAnimationFrame(handlerPosition)
+        }
+    }, [handlerPosition])
   
     const handlerMouseMove = useCallback( (e) => {
 
@@ -18,8 +29,9 @@ const CardCorner = ({card}) => {
         // node.style.setProperty('--y', `${y}px`)
 
         postionRef.current.x = x;
-        postionRef.current.y = y
-    },[])
+        postionRef.current.y = y;
+        handlerAnimation()
+    },[handlerAnimation])
 
     return(
         <div 
