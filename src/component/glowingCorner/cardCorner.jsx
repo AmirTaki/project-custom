@@ -2,70 +2,17 @@ import './styles.css'
 import { useCallback, useEffect, useRef } from "react"
 
 const CardCorner = ({card}) => {
-    const cardRef =  useRef(null)
-    const chekRef = useRef(null)
-    const postionRef = useRef({x : 0, y :0})
+    const cardRef = useRef(null)
+  
+    const handlerMouseMove = useCallback( () => {
 
-    const handlerPosition = () => {
-        chekRef.current = null;
-        const node = cardRef.current;
-
-        if(!node) return;
-
-        const {x, y} = postionRef.current
-        node.style.setProperty('--x', `${x}px`)
-        node.style.setProperty('--y', `${y}px`)
-    }
-
-    const handlerAnimaion = useCallback(() => {
-        if(chekRef.current == null){
-            chekRef.current = requestAnimationFrame(handlerPosition)
-        }
-    }, [handlerPosition])
-    
-    const handlerMouseMove = useCallback((e) => {
-
-        const node = cardRef.current ;
-        if(!node) return;
-        const rect = node.getBoundingClientRect()
-        const x =  e.clientX - rect.left
-        const y =  e.clientY - rect.top   
-        
-        // node.style.setProperty('--x', `${x}px`)
-        // node.style.setProperty('--y', `${y}px`)
-
-        postionRef.current.x = x;
-        postionRef.current.y = y
-        handlerAnimaion()
-    }, [handlerAnimaion] )
-
-
-    const handleMouseLeave = useCallback((e) => {
-
-        const node = cardRef.current;
-        if(!node) return;
-
-        const rect = node.getBoundingClientRect();
-        postionRef.current.x = rect.width / 2
-        postionRef.current.y = rect.height /2
-
-        handlerAnimaion()
-    },[handlerAnimaion])
-
-    useEffect(() => {
-        return() => {
-            if(chekRef.current){
-                cancelAnimationFrame(chekRef.current)
-                chekRef.current = null
-            }
-        }
-    }, [])
+    })
 
     return(
         <div 
             ref = {cardRef}
             onMouseMove={handlerMouseMove}
-            onMouseLeave={handleMouseLeave}
+      
             style={{ "--color-bg" : `${card.color}` }}
             className=" cardGlowingCorner"
         >
