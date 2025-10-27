@@ -10,14 +10,13 @@ const GradientGenerator = () => {
             case "handlerButton":
                 const newSatate =  state.buttons.map((item) => ({...item, flag : item.id === action.payload.id ? true : false }))
                 return {...state, buttons : newSatate}
-            case "HandlerColor" :
-                if(action.payload.data === 'A'){
-                    return {...state , colorA : action.payload.color}
-                }
-                return  {...state , colorB : action.payload.color}
-
-            case "HandlerGenerate" : 
+           
+                case "HandlerColor" :
+                return action.payload.data === 'A' ? {...state , colorA : action.payload.color} : {...state , colorB : action.payload.color}
+           
+                case "HandlerGenerate" : 
                 const itemButtons =  state.buttons.find((item) => item.flag)
+                if(codeRef.current) codeRef.current.value = `background-image: linear-gradient(${itemButtons.value}, ${state.colorA}, ${state.colorB});`
                 return {...state, backGround : `linear-gradient(${itemButtons.value}, ${state.colorA}, ${state.colorB})` }
         }
     }
