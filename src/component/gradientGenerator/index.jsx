@@ -2,13 +2,17 @@ import { useRef, useState } from 'react';
 import './styles.css'
 const GradientGenerator = () => {
     const [active, setActive] = useState(false)
-    const colorA = useRef(null)
-    const colorB = useRef(null)
+    const colorA = useRef("#1488cc")
+    const colorB = useRef("#2b32b2")
     const codeRef = useRef(null)
 
+    
+
     const HandlerGenerate = () => {
-        
+        console.log(colorA.current)
     }
+
+
     return(
         // box
         <div className="w-[3000px]! h-[500px] mx-auto bg-amber-700">
@@ -19,8 +23,8 @@ const GradientGenerator = () => {
             ">
                 {/* colors */}
                 <div className="w-[100%] flex justify-around">
-                  <input ref = {colorA} type="color" className="input-color-custom " value = "#1488cc"/>  
-                  <input ref = {colorB} type="color" className="input-color-custom " value = "#2b32b2"/>  
+                  <input ref = {colorA} onChange={(e) => {colorA.current = e.target.value}} value = {colorA.current} type="color" className="input-color-custom "/>  
+                  <input ref = {colorB} onChange={(e) => {colorB.current = e.target.value}}  value = {colorB.current}  type="color" className="input-color-custom " />  
                 </div>
 
                 {/* buttons  */}
