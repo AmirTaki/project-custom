@@ -1,4 +1,4 @@
-const ListButtons = {
+export const ListButtons = {
     buttons :[ 
         {
             id : 0,
