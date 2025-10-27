@@ -1,9 +1,8 @@
-import { useReducer, useRef, useState } from 'react';
+import { useReducer, useRef } from 'react';
 import { ListButtons } from './listButtons';
 
 import './styles.css'
 const GradientGenerator = () => {
-    const [active, setActive] = useState(false)
     const colorA = useRef("#1488cc")
     const colorB = useRef("#2b32b2")
     const codeRef = useRef(null)
@@ -11,8 +10,18 @@ const GradientGenerator = () => {
 
     const reducer = (state, action) => {
         switch(action.type){
-            case "button":
-
+            case "handlerButton":
+                const newSatate =  state.buttons.map((item) => {
+                    if (item.id === action.payload.id){
+                        return {...item, flag : true}
+                    }
+                    else {
+                        return {...item, flag : false}
+                    }
+                })
+                console.log(newSatate)
+                return {...state, buttons : newSatate}
+                // return {...state, buttons : {...newSatate}}
         }
     }
     const [state, dispatch] =  useReducer(reducer, ListButtons)    
@@ -44,7 +53,7 @@ const GradientGenerator = () => {
                         return(
                             <button 
                                 key = {btn.id}
-                                onClick={() => {dispatch({type : 'button', payload : {id : btn.id}})}}
+                                onClick={() => {dispatch({type : 'handlerButton', payload : {id : btn.id}})}}
                                 className={`${btn.flag ? "border-0 bg-[#4a6ee0]! text-white" : "border-2 border-[#d5d5dc] text-[#d5d5dc] "} h-[35px] w-[35px] bg-transparent  rounded-[5px] cursor-pointer`}
                             >
                                 <i className={`${btn.icon} ${btn.rotateIcon ? "rotate-45" : ""} `}></i>
