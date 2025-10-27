@@ -17,11 +17,13 @@ const GradientGenerator = () => {
                 }, {})
 
 
-                return {...state, buttons :  {...newButtons , [action.payload.index] : true}}
+                return {...state, buttons :  {...newButtons , [action.payload.index] : true, [] = }}
         }
     }
     const [state, dispatch] =  useReducer(reducer, {
-        buttons : {}
+        buttons : {
+            
+        }
     })    
 
     const HandlerGenerate = () => {
@@ -47,14 +49,14 @@ const GradientGenerator = () => {
                 <div className={` w-[100%] flex justify-between my-[30px] mx-0`}>
                     {/* button */}
                     <button 
-                        onClick={() => {dispatch({type : 'button', payload : {index : 0}})}}
+                        onClick={() => {dispatch({type : 'button', payload : {index : 0, value : 'to top'}})}}
                         className={`${state.buttons[0] ? "border-0 bg-[#4a6ee0]! text-white" : "border-2 border-[#d5d5dc] text-[#d5d5dc] "} h-[35px] w-[35px] bg-transparent  rounded-[5px] cursor-pointer`}
                     >
                         <i className='fas fa-arrow-up'></i>
                     </button>
                     {/* button */}
                     <button 
-                        onClick={() => {dispatch({type : 'button', payload : {index : 1}})}}
+                        onClick={() => {dispatch({type : 'button', payload : {index : 1, value : 'to bottom'}})}}
                         className={`${state.buttons[1] ? "border-0 bg-[#4a6ee0]! text-white" : "border-2 border-[#d5d5dc] text-[#d5d5dc] "} h-[35px] w-[35px] bg-transparent  rounded-[5px] cursor-pointer`}
                     >
                         <i className='fas fa-arrow-down'></i>
