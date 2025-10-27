@@ -39,6 +39,10 @@ const GradientGenerator = () => {
                 <div className="bg-[#f0f2fc]">
                     {/* code */}
                     <textarea name="" rows = "2" className='w-[100%] resize-none text-[#30304a] py-[10px] px-[20px] bg-transparent' ></textarea>
+                    {/* copy */}
+                    <button className='text-[14px] bg-[#4a6ee0] text-white relative left-[85%] bottom-[10px] rounded-[3px] p-[5px] cursor-pointer'>
+                        Copy
+                    </button>
                 </div>
             </div>
         </div>
