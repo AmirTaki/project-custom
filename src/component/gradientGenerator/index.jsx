@@ -11,17 +11,19 @@ const GradientGenerator = () => {
     const reducer = (state, action) => {
         switch(action.type){
             case "handlerButton":
-                const newSatate =  state.buttons.map((item) => {
-                    if (item.id === action.payload.id){
-                        return {...item, flag : true}
-                    }
-                    else {
-                        return {...item, flag : false}
-                    }
-                })
-                console.log(newSatate)
+                // const newSatate =  state.buttons.map((item) => {
+                //     if (item.id === action.payload.id){
+                //         return {...item, flag : true}
+                //     }
+                //     else {
+                //         return {...item, flag : false}
+                //     }
+                // })
+
+                const newSatate =  state.buttons.map((item) => ({...item, flag : item.id === action.payload.id ? true : false }))
+
                 return {...state, buttons : newSatate}
-                // return {...state, buttons : {...newSatate}}
+            
         }
     }
     const [state, dispatch] =  useReducer(reducer, ListButtons)    
