@@ -10,9 +10,14 @@ const GradientGenerator = () => {
     const reducer = (state, action) => {
         switch(action.type){
             case "button":
-                return {...state, buttons : {
-                    ...state.buttons, [action.payload.index] : true
-                }};
+
+                const newButtons =  Object.keys(state.buttons).reduce((a, b) => {
+                    a[b] = false;
+                    return a
+                }, {})
+
+
+                return {...state, buttons :  {...newButtons , [action.payload.index] : true}}
         }
     }
     const [state, dispatch] =  useReducer(reducer, {
