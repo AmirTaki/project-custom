@@ -3,10 +3,7 @@ import { ListButtons } from './listButtons';
 
 import './styles.css'
 const GradientGenerator = () => {
-    const colorA = useRef("#1488cc")
-    const colorB = useRef("#2b32b2")
     const codeRef = useRef(null)
-
 
     const reducer = (state, action) => {
         switch(action.type){
@@ -14,6 +11,8 @@ const GradientGenerator = () => {
                 const newSatate =  state.buttons.map((item) => ({...item, flag : item.id === action.payload.id ? true : false }))
                 return {...state, buttons : newSatate}
             
+
+
             case "HandlerGenerate" : 
                 const itemButtons =  state.buttons.find((item) => item.flag)
                 return {...state, backGround : `linear-gradient(${itemButtons.value}, ${colorA.current}, ${colorB.current})` }
@@ -36,8 +35,8 @@ const GradientGenerator = () => {
             ">
                 {/* colors */}
                 <div className="w-[100%] flex justify-around">
-                  <input ref = {colorA} onChange={(e) => {colorA.current = e.target.value}}  type="color" className="input-color-custom "/>  
-                  <input ref = {colorB} onChange={(e) => {colorB.current = e.target.value}}  type="color" className="input-color-custom " />  
+                  <input value = {state.colorA} onChange={(e) => {dispatch({type : 'color', payload : {data : 'A', color : e.target.value}})}}  type="color" className="input-color-custom "/>  
+                  <input value = {state.colorB} onChange={(e) => {dispatch({type : 'color', payload : {data : "B", color : e.target.value}})}}  type="color" className="input-color-custom " />  
                 </div>
 
                 {/* buttons  */}

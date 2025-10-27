@@ -9,7 +9,7 @@ export const ListButtons = {
         },
         {
             id : 1,
-            value : 'to bpttom',
+            value : 'to bottom',
             icon : 'fas fa-arrow-down',
             rotateIcon : false,
             flag : false,
@@ -58,5 +58,7 @@ export const ListButtons = {
         },
 
     ],
-    backGround : "blue"
+    backGround : "blue",
+    colorA : '#1488cc',
+    colorB : '#2b32b2'
 }
