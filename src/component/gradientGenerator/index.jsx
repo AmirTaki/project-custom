@@ -17,13 +17,19 @@ const GradientGenerator = () => {
                 </div>
 
                 {/* buttons  */}
-                <div className={` w-[100%] flex justify-between mx-[30px] my-0`}>
+                <div className={` w-[100%] flex justify-between my-[30px] mx-0`}>
                     {/* button */}
                     <button className={`${active ? "border-0 bg-[#4a6ee0]! text-white" : "border-2 border-[#d5d5dc] text-[#d5d5dc] "} h-[35px] w-[35px] bg-transparent  rounded-[5px] cursor-pointer`}>
                         <i className='fas fa-arrow-up'></i>
                     </button>
+                    {/* button */}
+                    <button className={`${active ? "border-0 bg-[#4a6ee0]! text-white" : "border-2 border-[#d5d5dc] text-[#d5d5dc] "} h-[35px] w-[35px] bg-transparent  rounded-[5px] cursor-pointer`}>
+                        <i className='fas fa-arrow-down'></i>
+                    </button>
 
                 </div>
+                {/* submit */}
+                <button >Generate</button>
             </div>
         </div>
         
