@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import './styles.css'
 const GradientGenerator = () => {
+    const [active, setActive] = useState(false)
     return(
         // box
         <div className="w-[3000px]! h-[500px] mx-auto bg-amber-700">
@@ -15,9 +17,9 @@ const GradientGenerator = () => {
                 </div>
 
                 {/* buttons  */}
-                <div className="w-[100%] flex justify-between mx-[30px] my-0">
+                <div className={` w-[100%] flex justify-between mx-[30px] my-0`}>
                     {/* button */}
-                    <button className='h-[35px] w-[35px] bg-transparent  border-2 border-[#d5d5dc] text-[#d5d5dc] rounded-[5px] cursor-pointer'>
+                    <button className={`${active ? "border-0 bg-[#4a6ee0]! text-white" : "border-2 border-[#d5d5dc] text-[#d5d5dc] "} h-[35px] w-[35px] bg-transparent  rounded-[5px] cursor-pointer`}>
                         <i className='fas fa-arrow-up'></i>
                     </button>
 
