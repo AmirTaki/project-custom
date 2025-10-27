@@ -1,33 +1,12 @@
 import { useReducer, useRef } from 'react';
 import { ListButtons } from './listButtons';
+import { ReducerGradientGenerator } from './reducerGradientGenerator';
 import './styles.css'
 
 const GradientGenerator = () => {
     const codeRef = useRef(null)
-
-    const reducer = (state, action) => {
-        switch(action.type){
-            case "handlerButton":
-                const newSatate =  state.buttons.map((item) => ({...item, flag : item.id === action.payload.id ? true : false }))
-                return {...state, buttons : newSatate}
-           
-            case "HandlerColor" :
-                return action.payload.data === 'A' ? {...state , colorA : action.payload.color} : {...state , colorB : action.payload.color}
-        
-            case "HandlerGenerate" : 
-                const itemButtons =  state.buttons.find((item) => item.flag)
-                if(codeRef.current) codeRef.current.value = `background-image: linear-gradient(${itemButtons.value}, ${state.colorA}, ${state.colorB});`
-                return {...state, backGround : `linear-gradient(${itemButtons.value}, ${state.colorA}, ${state.colorB})` }
-        
-            case "HandlerCopy" :
-                codeRef.current.select();
-                document.execCommand('copy')
-                window.alert('Gradient Copied!')
-            return {...state}
-        }
-    }
-    const [state, dispatch] =  useReducer(reducer, ListButtons)    
-
+    const [state, dispatch] =  useReducer(ReducerGradientGenerator, ListButtons)    
+    
     return(
         // box
         <div 
@@ -46,7 +25,6 @@ const GradientGenerator = () => {
 
                 {/* buttons  */}
                 <div className={` w-[100%] flex justify-between my-[40px] mx-0 gap-1`}>
-                   
                     {state.buttons.map((btn) => {
                         {/* button */}
                         return(
@@ -59,9 +37,8 @@ const GradientGenerator = () => {
                             </button>
                         )
                     })}                   
-                  
-
                 </div>
+
                 {/* submit */}
                 <button 
                     onClick={()=> {dispatch({type : 'HandlerGenerate'})}}
