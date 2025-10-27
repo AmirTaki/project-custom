@@ -1,4 +1,3 @@
-import { channel } from 'diagnostics_channel'
 import './styles.css'
 import { useCallback, useEffect, useRef } from "react"
 
@@ -16,7 +15,7 @@ const CardCorner = ({card}) => {
         const {x, y} = postionRef.current
         node.style.setProperty('--x', `${x}px`)
         node.style.setProperty('--y', `${y}px`)
-    }, [])
+    },[])
 
     const handlerAnimation = useCallback(() => {
         if(checkRef.current == null){
@@ -43,11 +42,24 @@ const CardCorner = ({card}) => {
 
     },[handlerAnimation])
 
+    const handlerMouseLeave =  useCallback(() => {
+
+    }, [])
+
+    useEffect(() => {
+        return() => {
+            if(checkRef.current) {
+                cancelAnimationFrame(chekRef.current)
+                checkRef.current = null
+            }
+        }
+    },[])
+
     return(
         <div 
             ref = {cardRef}
             onMouseMove={handlerMouseMove}
-      
+            onMouseLeave={handlerMouseLeave}
             style={{ "--color-bg" : `${card.color}` }}
             className=" cardGlowingCorner"
         >
