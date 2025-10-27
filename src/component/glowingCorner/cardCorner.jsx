@@ -1,18 +1,26 @@
+import { channel } from 'diagnostics_channel'
 import './styles.css'
 import { useCallback, useEffect, useRef } from "react"
 
 const CardCorner = ({card}) => {
     const cardRef = useRef(null)
-    const checkRef = useRef(false)
+    const checkRef = useRef(null)
     const postionRef = useRef({x : 0, y : 0})
 
     const handlerPosition = useCallback(() => {
-
+        checkRef.current = null;
+        
+        const node =  cardRef.current
+        if(!node) return;
+    
+        const {x, y} = postionRef.current
+        node.style.setProperty('--x', `${x}px`)
+        node.style.setProperty('--y', `${y}px`)
     }, [])
 
     const handlerAnimation = useCallback(() => {
-        if(checkRef.current == false){
-            cardRef.current  = requestAnimationFrame(handlerPosition)
+        if(checkRef.current == null){
+            checkRef.current  = requestAnimationFrame(handlerPosition)
         }
     }, [handlerPosition])
   
@@ -30,7 +38,9 @@ const CardCorner = ({card}) => {
 
         postionRef.current.x = x;
         postionRef.current.y = y;
+
         handlerAnimation()
+
     },[handlerAnimation])
 
     return(
