@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useReducer, useRef, useState } from 'react';
 import './styles.css'
 const GradientGenerator = () => {
     const [active, setActive] = useState(false)
@@ -6,7 +6,14 @@ const GradientGenerator = () => {
     const colorB = useRef("#2b32b2")
     const codeRef = useRef(null)
 
-    
+
+    const reducer = (state, action) => {
+        switch(action.type){
+            case "":
+                return state;
+        }
+    }
+    const [state, dispatch] =  useReducer(reducer, {})    
 
     const HandlerGenerate = () => {
         console.log(colorA.current)
@@ -30,7 +37,10 @@ const GradientGenerator = () => {
                 {/* buttons  */}
                 <div className={` w-[100%] flex justify-between my-[30px] mx-0`}>
                     {/* button */}
-                    <button className={`${active ? "border-0 bg-[#4a6ee0]! text-white" : "border-2 border-[#d5d5dc] text-[#d5d5dc] "} h-[35px] w-[35px] bg-transparent  rounded-[5px] cursor-pointer`}>
+                    <button 
+
+                        className={`${active ? "border-0 bg-[#4a6ee0]! text-white" : "border-2 border-[#d5d5dc] text-[#d5d5dc] "} h-[35px] w-[35px] bg-transparent  rounded-[5px] cursor-pointer`}
+                    >
                         <i className='fas fa-arrow-up'></i>
                     </button>
                     {/* button */}
