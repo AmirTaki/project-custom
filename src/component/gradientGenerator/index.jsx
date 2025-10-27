@@ -9,8 +9,10 @@ const GradientGenerator = () => {
 
     const reducer = (state, action) => {
         switch(action.type){
-            case "":
-                return state;
+            case "button":
+                return {...state, buttons : {
+                    ...state.buttons, [action.payload.index] : true
+                }};
         }
     }
     const [state, dispatch] =  useReducer(reducer, {
@@ -46,7 +48,10 @@ const GradientGenerator = () => {
                         <i className='fas fa-arrow-up'></i>
                     </button>
                     {/* button */}
-                    <button className={`${active ? "border-0 bg-[#4a6ee0]! text-white" : "border-2 border-[#d5d5dc] text-[#d5d5dc] "} h-[35px] w-[35px] bg-transparent  rounded-[5px] cursor-pointer`}>
+                    <button 
+                        onClick={() => {dispatch({type : 'button', payload : {index : 1}})}}
+                        className={`${state.buttons[1] ? "border-0 bg-[#4a6ee0]! text-white" : "border-2 border-[#d5d5dc] text-[#d5d5dc] "} h-[35px] w-[35px] bg-transparent  rounded-[5px] cursor-pointer`}
+                    >
                         <i className='fas fa-arrow-down'></i>
                     </button>
 
