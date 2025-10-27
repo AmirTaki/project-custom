@@ -5,6 +5,10 @@ const GradientGenerator = () => {
     const colorA = useRef(null)
     const colorB = useRef(null)
     const codeRef = useRef(null)
+
+    const HandlerGenerate = () => {
+        
+    }
     return(
         // box
         <div className="w-[3000px]! h-[500px] mx-auto bg-amber-700">
@@ -33,6 +37,7 @@ const GradientGenerator = () => {
                 </div>
                 {/* submit */}
                 <button 
+                    onClick={HandlerGenerate}
                     className='block bg-[#4a6ee0] text-white text-[16px] py-[12px] px-[70px] rounded-[25px] m-[0_auto_30px_auto] cursor-pointer'
                 >
                     Generate
