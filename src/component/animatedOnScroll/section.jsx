@@ -6,7 +6,7 @@ const Section = ({section}) => {
         // sec- show-animate
         className={`
             ${section.status ? section.showSection : section.hideSection}
-            flex justify-center  flex-wrap items-center flex-col min-h-[100vh] overflow-x-hidden   duration-1000 w-[100%]
+            flex justify-center  flex-wrap items-center flex-col min-h-[100vh] overflow-x-hidden   duration-1000 
         `}
         >
             {/* animate */}
