@@ -17,6 +17,12 @@ const HorzinotalScrolling = () => {
                     <span>
                         <img src={img1} alt="" className="w-[100%] grayscale-100 duration-500 hover:grayscale-0 cursor-pointer hover:scale-110" />
                     </span>
+                    <span>
+                        <img src={img2} alt="" className="w-[100%] grayscale-100 duration-500 hover:grayscale-0 cursor-pointer hover:scale-110" />
+                    </span>
+                    <span>
+                        <img src={img3} alt="" className="w-[100%] grayscale-100 duration-500 hover:grayscale-0 cursor-pointer hover:scale-110" />
+                    </span>
                 </div>
             </div>
 
