@@ -46,12 +46,12 @@ const HorzinotalScrolling = () => {
     }
 
     return(
-            <div className="bg-red-400">
+            <div className="relative bg-green-500">
                 {/* back */}
                 <img 
                     src= {imgBack} 
                     alt="" 
-                        className="w-[50px] cursor-pointer m-[40px]" 
+                        className="w-[50px] cursor-pointer m-[40px] absolute -left-20 top-50 z-50" 
                         onClick={() => {handlerBack()}}
                 />
                 
@@ -76,7 +76,7 @@ const HorzinotalScrolling = () => {
                 <img 
                     src={imgNext} 
                     alt="" 
-                    className="w-[50px] cursor-pointer m-[40px]" 
+                    className="w-[50px] cursor-pointer m-[40px] absolute -right-20 top-50 z-50" 
                     onClick={()=> {handlerNext()}}    
                 />
 
