@@ -1,4 +1,7 @@
 import imgBack from "./img/back.png"
+import img1 from './img/image-1.png'
+import img2 from './img/image-2.png'
+import img3 from './img/image-3.png'
 
 const HorzinotalScrolling = () => {
     return(
@@ -10,7 +13,11 @@ const HorzinotalScrolling = () => {
 
             {/* gallery */}
             <div className="w-[900px] flex overflow-scroll">
-                <div className="w-[100%] grid grid-cols-3 gap-[20px] p-[10px] flex-none"></div>
+                <div className="w-[100%] grid grid-cols-3 gap-[20px] p-[10px] flex-none">
+                    <span>
+                        <img src="" alt="" />
+                    </span>
+                </div>
             </div>
 
         </div>
