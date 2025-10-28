@@ -14,9 +14,10 @@ const HorzinotalScrolling = () => {
     const handlerWheel = (event) => {
         event.preventDefault();
 
+        console.log(event)
         const container =  galleryRef.current
         if(!container) return;
-        
+
         container.scrollLeft += event.deltaY;
     }
 
@@ -52,7 +53,7 @@ const HorzinotalScrolling = () => {
                 src= {imgBack} 
                 alt="" 
                 className="w-[50px] cursor-pointer m-[40px]" 
-                onClick={() => {handlerBack}}
+                onClick={() => {handlerBack()}}
             />
 
 
@@ -87,7 +88,7 @@ const HorzinotalScrolling = () => {
                 src={imgNext} 
                 alt="" 
                 className="w-[50px] cursor-pointer m-[40px]" 
-                onClick={()=> {handlerNext}}    
+                onClick={()=> {handlerNext()}}    
             />
         </div>
     )
