@@ -15,7 +15,7 @@ const HorzinotalScrolling = () => {
             <div className="w-[900px] flex overflow-scroll">
                 <div className="w-[100%] grid grid-cols-3 gap-[20px] p-[10px] flex-none">
                     <span>
-                        <img src="" alt="" />
+                        <img src={img1} alt="" className="w-[100%] grayscale-100 duration-500 hover:grayscale-0 cursor-pointer hover:scale-110" />
                     </span>
                 </div>
             </div>
