@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useEffect, useRef,} from "react"
 import imgBack from "./img/back.png"
 import imgNext from './img/next.png'
 import img1 from './img/image-1.png'
@@ -10,6 +10,17 @@ import img6 from './img/image-6.png'
 
 const HorzinotalScrolling = () => {
     const galleryRef =  useRef(null)
+
+    const handlerWheel = () => {
+        
+    }
+
+    useEffect(() => {
+        const container = galleryRef.current
+        if(!container) return;
+
+        container.addEventListener('wheel', handlerWheel, {passive : false})
+    }, [])
 
     const handlerBack = () => {
 
