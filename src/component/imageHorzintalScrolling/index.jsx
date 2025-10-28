@@ -1,3 +1,4 @@
+import { useRef } from "react"
 import imgBack from "./img/back.png"
 import imgNext from './img/next.png'
 import img1 from './img/image-1.png'
@@ -8,12 +9,13 @@ import img5 from './img/image-5.png'
 import img6 from './img/image-6.png'
 
 const HorzinotalScrolling = () => {
+    const galleryRef =  useRef(null)
 
     const handlerBack = () => {
 
     }
     const handlerNext = () => {
-        
+
     }
 
     return(
@@ -29,7 +31,7 @@ const HorzinotalScrolling = () => {
 
 
             {/* gallery */}
-            <div className="w-[900px] flex overflow-x-scroll overflow-y-hidden">
+            <div ref = {galleryRef} className="w-[900px] flex overflow-x-scroll overflow-y-hidden">
                 <div className="w-[100%] grid grid-cols-3 gap-[20px] p-[10px] flex-none">
                     <span>
                         <img src={img1} alt="" className="w-[100%] grayscale-100 duration-500 hover:grayscale-0 cursor-pointer hover:scale-110" />
