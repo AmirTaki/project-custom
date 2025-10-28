@@ -15,8 +15,8 @@ const HorzinotalScrolling = () => {
         event.preventDefault();
         const container =  galleryRef.current
         if(!container) return;
+        container.scrollLeft += event.deltaY;
 
-        
 
     }
 
