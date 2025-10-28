@@ -9,7 +9,9 @@ import img4 from './img/image-4.png'
 import img5 from './img/image-5.png'
 import img6 from './img/image-6.png'
 
+
 const HorzinotalScrolling = () => {
+    const imgList = [img1, img2, img3, img4, img5, img6]
     const galleryRef =  useRef(null)
 
     const handlerWheel = useCallback((event) => {
@@ -56,6 +58,15 @@ const HorzinotalScrolling = () => {
 
 
             {/* gallery */}
+            <div className="bg-white w-[960px] max-lg:w-[640px]!  max-sm:w-[320px]! h-[500px] mt-20 flex flex-wrap  flex-col  justify-evenly   overflow-x-scroll">
+
+            {imgList.map((item) => {
+                return(
+                    <div className=""></div>
+                )
+            })}
+            </div>
+            
             <div ref = {galleryRef} className=" bg-amber-300  w-[90%] h-[100%]  flex overflow-x-scroll overflow-y-hidden  scrollbar-hide">
                 <div className=" w-[100%] md:w-100 grid grid-cols-3 gap-[20px] p-[10px] flex-none">
                     <span>
