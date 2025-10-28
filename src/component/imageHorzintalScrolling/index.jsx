@@ -32,17 +32,21 @@ const HorzinotalScrolling = () => {
         }
     }, [handlerWheel])
 
-    const handlerBack = () => {
+    // const handlerBack = () => {
+    //     const container = galleryRef.current
+    //     if(!container) return
+    //     container.style.scrollBehavior = 'smooth'
+ 
+    // }
+    // const handlerNext = () => {
+   
+    //     container.scrollLeft += container.offsetWidth
+    // }
+    const handlerChange = (move) => {
         const container = galleryRef.current
         if(!container) return
         container.style.scrollBehavior = 'smooth'
-        container.scrollLeft -= container.offsetWidth
-    }
-    const handlerNext = () => {
-        const container = galleryRef.current
-        if(!container) return
-        container.style.scrollBehavior = 'smooth'
-        container.scrollLeft += container.offsetWidth
+        move === 'next' ?   container.scrollLeft += container.offsetWidth : container.scrollLeft -= container.offsetWidth
     }
 
     return(
@@ -52,12 +56,12 @@ const HorzinotalScrolling = () => {
                     src= {imgBack} 
                     alt="" 
                         className="w-[50px] cursor-pointer m-[40px] absolute -left-20 top-50 z-50" 
-                        onClick={() => {handlerBack()}}
+                        onClick={() => {handlerChange('back')}}
                 />
                 
                 <div 
                     ref = {galleryRef}
-                    className="bg-white w-[960px] max-lg:w-[640px]!  max-sm:w-[320px]! h-[380px] mt-20 flex flex-wrap  flex-col  justify-evenly overflow-x-scroll overflow-y-hidden  scrollbar-hide"
+                    className="bg-white w-[960px] max-lg:w-[640px]!  max-md:w-[320px]! h-[380px] mt-20 flex flex-wrap  flex-col  justify-evenly overflow-x-scroll overflow-y-hidden  scrollbar-hide"
                 >
 
                     {imgList.map((item,index) => {
@@ -77,7 +81,7 @@ const HorzinotalScrolling = () => {
                     src={imgNext} 
                     alt="" 
                     className="w-[50px] cursor-pointer m-[40px] absolute -right-20 top-50 z-50" 
-                    onClick={()=> {handlerNext()}}    
+                    onClick={()=> {handlerChange('next')}}    
                 />
 
             </div>

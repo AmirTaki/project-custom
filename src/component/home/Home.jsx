@@ -130,7 +130,7 @@ const Home =  ()  => {
                 <GradientGenerator />
 
                 {/* HorzinotalScrolling */}
-                {/* <HorzinotalScrolling /> */}
+                <HorzinotalScrolling />
 
                 {/* footer animated */}
                 <FooterAnimated />
