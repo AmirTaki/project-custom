@@ -46,7 +46,7 @@ const HorzinotalScrolling = () => {
     }
 
     return(
-            <div className="relative bg-green-500">
+            <div className="relative ">
                 {/* back */}
                 <img 
                     src= {imgBack} 
