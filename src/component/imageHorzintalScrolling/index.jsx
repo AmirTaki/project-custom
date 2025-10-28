@@ -12,7 +12,7 @@ const HorzinotalScrolling = () => {
         // gallery wrap
         <div className="flex justify-items items-center mx-auto my-[10%]">
             {/* back */}
-            <img src= {imgBack} alt="" className="" />
+            <img src= {imgBack} alt="" className="w-[50px] cursor-pointer m-[40px]" />
 
 
             {/* gallery */}
@@ -41,6 +41,8 @@ const HorzinotalScrolling = () => {
                 </div>
             </div>
 
+            {/* next */}
+            <img src={imgNext} alt="" className="w-[50px] cursor-pointer m-[40px]" />
         </div>
     )
 }
