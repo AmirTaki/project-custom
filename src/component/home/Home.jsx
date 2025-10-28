@@ -47,7 +47,7 @@ const Home =  ()  => {
     const  [view, setView] =   useState(false)   
     return(
         <div 
-            className={`bg-[#10131c]  min-h-[100vh] ${view ? "" : "flex! justify-center! items-center! "}`} 
+            className={`bg-[#10131c]   min-h-[100vh] ${view ? "" : "flex! flex-col justify-center! items-center! "}`} 
         >
             <div 
                 onMouseUp={() => {handlerMouseUp(isDraggingDocts, isDraggingNavigation)}}
