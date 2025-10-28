@@ -63,10 +63,10 @@ export default ImgComponent;
             // </div>
 
             {/* next */}
-            <img 
-                src={imgNext} 
-                alt="" 
-                className="w-[50px] cursor-pointer m-[40px]" 
-                onClick={()=> {handlerNext()}}    
-            />
+            // <img 
+            //     src={imgNext} 
+            //     alt="" 
+            //     className="w-[50px] cursor-pointer m-[40px]" 
+            //     onClick={()=> {handlerNext()}}    
+            // />
         // </div>

@@ -36,13 +36,13 @@ const HorzinotalScrolling = () => {
         const container = galleryRef.current
         if(!container) return
         container.style.scrollBehavior = 'smooth'
-        container.scrollLeft -= 900
+        container.scrollLeft -= container.innerWidth
     }
     const handlerNext = () => {
         const container = galleryRef.current
         if(!container) return
         container.style.scrollBehavior = 'smooth'
-        container.scrollLeft += 900
+        container.scrollLeft += container.innerWidth
     }
 
     return(
@@ -64,7 +64,7 @@ const HorzinotalScrolling = () => {
                         return(
                             <div 
                                 key = {index}
-                                className="bg-red-500 w-[300px] h-[95%] mx-[10px] "
+                                className="bg-gray-200 w-[300px] h-[95%] mx-[10px] "
                             >
                                 <img src={item} alt="" className="w-[100%] h-[100%] grayscale-100 duration-500 hover:grayscale-0 cursor-pointer hover:scale-110"  />
                             </div>          
