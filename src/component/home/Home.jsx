@@ -26,6 +26,7 @@ import GlassMorphism from "../glassMorphismButton/index.jsx"
 import GlowingCorner from "../glowingCorner/index.jsx"
 import GradientGenerator from "../gradientGenerator/index.jsx"
 import HorzinotalScrolling from "../imageHorzintalScrolling/index.jsx"
+import ImgComponent from "../componentImg.jsx/index.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -43,10 +44,10 @@ const Home =  ()  => {
     const isDraggingNavigation = useRef(false)
 
     // veiw projects 
-    const  [view, setView] =   useState(true)   
+    const  [view, setView] =   useState(false)   
     return(
         <div 
-            className={`bg-[#10131c]  min-h-[100vh] ${view ? "" : "flex justify-center items-center "}`} 
+            className={`bg-[#10131c]  min-h-[100vh] ${view ? "" : "flex! justify-center! items-center! "}`} 
         >
             <div 
                 onMouseUp={() => {handlerMouseUp(isDraggingDocts, isDraggingNavigation)}}
@@ -138,7 +139,7 @@ const Home =  ()  => {
             </div>
 
 
-
+            <ImgComponent />
             <div className="h-100 w-100 text-white"></div>
         </div>   
     )
