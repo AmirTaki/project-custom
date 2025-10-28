@@ -6,14 +6,15 @@ const NumberSpinner = () => {
     const [conter, setConter] =  useState(0)
 
     const HandlerVolume = (tip) => {
-        meter.current.style.backgroundColor = conter <= 7 ? "#0f0" : "#f00"
-        meter.current.style.filter = conter <= 7 ? 'drop-shadow(0 0 2.5px #0f0) drop-shadow(0 0 10px #0f0f)' : 'drop-shadow(0 0 2.5px #f00) drop-shadow(0 0 10px #f00)'
         setConter(tip ? conter >= 10 ? conter : conter + 1 : conter <= 0 ? conter : conter - 1 )
     }
 
     useEffect(() => {
         outPut.current.innerText = conter
         meter.current.style.height = `${conter*10}%`
+        meter.current.style.filter = conter <= 7 ? 'drop-shadow(0 0 2.5px #0f0) drop-shadow(0 0 10px #0f0f)' : 'drop-shadow(0 0 2.5px #f00) drop-shadow(0 0 10px #f00)'
+        meter.current.style.backgroundColor = conter <= 7 ? "#0f0" : "#f00"
+
     }, [conter])
 
 
