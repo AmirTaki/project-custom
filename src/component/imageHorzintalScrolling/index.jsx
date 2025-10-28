@@ -8,11 +8,24 @@ import img5 from './img/image-5.png'
 import img6 from './img/image-6.png'
 
 const HorzinotalScrolling = () => {
+
+    const handlerBack = () => {
+
+    }
+    const handlerNext = () => {
+        
+    }
+
     return(
         // gallery wrap
         <div className="flex justify-items items-center mx-auto my-[10%]">
             {/* back */}
-            <img src= {imgBack} alt="" className="w-[50px] cursor-pointer m-[40px]" />
+            <img 
+                src= {imgBack} 
+                alt="" 
+                className="w-[50px] cursor-pointer m-[40px]" 
+                onClick={() => {handlerBack}}
+            />
 
 
             {/* gallery */}
@@ -42,7 +55,12 @@ const HorzinotalScrolling = () => {
             </div>
 
             {/* next */}
-            <img src={imgNext} alt="" className="w-[50px] cursor-pointer m-[40px]" />
+            <img 
+                src={imgNext} 
+                alt="" 
+                className="w-[50px] cursor-pointer m-[40px]" 
+                onClick={()=> {handlerNext}}    
+            />
         </div>
     )
 }
