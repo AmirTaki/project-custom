@@ -1,6 +1,7 @@
 const HorzinotalScrolling = () => {
     return(
-        <div className=""></div>
+        // gallery wrap
+        <div className="flex justify-items items-center m-[10%_auto]"></div>
     )
 }
 
