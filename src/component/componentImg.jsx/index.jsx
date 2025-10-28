@@ -1,7 +1,7 @@
 const ImgComponent = () => {
     return(
 
-    <div className="bg-white w-[970px] max-lg:w-[650px]!  max-sm:w-[320px]! h-[500px] mt-20 flex flex-wrap  flex-col  justify-evenly   overflow-x-scroll">
+    <div className="bg-white w-[960px] max-lg:w-[640px]!  max-sm:w-[320px]! h-[500px] mt-20 flex flex-wrap  flex-col  justify-evenly   overflow-x-scroll">
       
         <div className="bg-red-500 w-[300px] h-[95%] mx-[10px] ">
         </div>
