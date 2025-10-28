@@ -14,19 +14,9 @@ const HorzinotalScrolling = () => {
 
     const handlerWheel = useCallback((event) => {
         event.preventDefault();
-
-        console.log(event)
         const container =  galleryRef.current
         if(!container) return;
-
-        container.scrollLeft += event.deltaY;
-
-        const scrollAmount =  event.deltaY * .5
-
-        // container.scrollTo({
-        //     left : container.scrollLeft + scrollAmount,
-        //     behavior : 'smooth'
-        // })
+        container.scrollLeft += event.deltaY ;
     },[])
 
     useEffect(() => {
@@ -54,8 +44,8 @@ const HorzinotalScrolling = () => {
     }
 
     return(
-        // gallery wrap
-        <div className="flex justify-items items-center mx-auto my-[10%] bg-blue-700 w-[90%] h-[500px]">
+        // gallery 
+        <div className="flex justify-center items-center mx-auto my-[10%] bg-blue-700 w-[90%] h-[400px] ">
             {/* back */}
             <img 
                 src= {imgBack} 
@@ -66,10 +56,10 @@ const HorzinotalScrolling = () => {
 
 
             {/* gallery */}
-            <div ref = {galleryRef} className="w-[900px] bg-amber-300 h-[350px] flex overflow-x-scroll overflow-y-hidden  scrollbar-hide">
-                <div className="w-[100%] grid grid-cols-3 gap-[20px] p-[10px] flex-none">
+            <div ref = {galleryRef} className=" bg-amber-300  w-[90%] h-[100%]  flex overflow-x-scroll overflow-y-hidden  scrollbar-hide">
+                <div className=" w-[100%] md:w-100 grid grid-cols-3 gap-[20px] p-[10px] flex-none">
                     <span>
-                        <img src={img1} alt="" className="w-[100%]  grayscale-100 duration-500 hover:grayscale-0 cursor-pointer hover:scale-110" />
+                        <img src={img1} alt="" className="w-[100%] h-100 grayscale-100 duration-500 hover:grayscale-0 cursor-pointer hover:scale-110" />
                     </span>
                     <span>
                         <img src={img2} alt="" className="w-[100%] grayscale-100 duration-500 hover:grayscale-0 cursor-pointer hover:scale-110" />
@@ -78,7 +68,7 @@ const HorzinotalScrolling = () => {
                         <img src={img3} alt="" className="w-[100%] grayscale-100 duration-500 hover:grayscale-0 cursor-pointer hover:scale-110" />
                     </span>
                 </div>
-                <div className="w-[100%] grid grid-cols-3 gap-[20px] p-[10px] flex-none">
+                <div className="w-[100%] grid grid-cols-3 gap-[20px] p-[10px] flex-none ">
                     <span>
                         <img src={img4} alt="" className="w-[100%] grayscale-100 duration-500 hover:grayscale-0 cursor-pointer hover:scale-110" />
                     </span>
