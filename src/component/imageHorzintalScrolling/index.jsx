@@ -36,13 +36,13 @@ const HorzinotalScrolling = () => {
         const container = galleryRef.current
         if(!container) return
         container.style.scrollBehavior = 'smooth'
-        container.scrollLeft -= container.innerWidth
+        container.scrollLeft -= container.offsetWidth
     }
     const handlerNext = () => {
         const container = galleryRef.current
         if(!container) return
         container.style.scrollBehavior = 'smooth'
-        container.scrollLeft += container.innerWidth
+        container.scrollLeft += container.offsetWidth
     }
 
     return(
