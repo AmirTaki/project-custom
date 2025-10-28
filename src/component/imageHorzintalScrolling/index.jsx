@@ -13,11 +13,11 @@ const HorzinotalScrolling = () => {
 
     const handlerWheel = (event) => {
         event.preventDefault();
+
         const container =  galleryRef.current
         if(!container) return;
+        
         container.scrollLeft += event.deltaY;
-
-
     }
 
     useEffect(() => {
@@ -32,10 +32,16 @@ const HorzinotalScrolling = () => {
     }, [handlerWheel])
 
     const handlerBack = () => {
-
+        const container = galleryRef.current
+        if(!container) return
+        container.style.scrollBehavior = 'smooth'
+        container.scrollLeft -= 900
     }
     const handlerNext = () => {
-
+        const container = galleryRef.current
+        if(!container) return
+        container.style.scrollBehavior = 'smooth'
+        container.scrollLeft += 900
     }
 
     return(
