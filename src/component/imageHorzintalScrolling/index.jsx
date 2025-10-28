@@ -14,6 +14,7 @@ const HorzinotalScrolling = () => {
     const imgList = [img1, img2, img3, img4, img5, img6]
     const galleryRef =  useRef(null)
 
+ 
     const handlerWheel = useCallback((event) => {
         event.preventDefault();
         const container =  galleryRef.current
@@ -32,16 +33,6 @@ const HorzinotalScrolling = () => {
         }
     }, [handlerWheel])
 
-    // const handlerBack = () => {
-    //     const container = galleryRef.current
-    //     if(!container) return
-    //     container.style.scrollBehavior = 'smooth'
- 
-    // }
-    // const handlerNext = () => {
-   
-    //     container.scrollLeft += container.offsetWidth
-    // }
     const handlerChange = (move) => {
         const container = galleryRef.current
         if(!container) return
