@@ -11,7 +11,12 @@ import img6 from './img/image-6.png'
 const HorzinotalScrolling = () => {
     const galleryRef =  useRef(null)
 
-    const handlerWheel = () => {
+    const handlerWheel = (event) => {
+        event.preventDefault();
+        const container =  galleryRef.current
+        if(!container) return;
+
+        
 
     }
 
