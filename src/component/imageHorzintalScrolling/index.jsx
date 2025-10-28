@@ -46,60 +46,42 @@ const HorzinotalScrolling = () => {
     }
 
     return(
-        // gallery 
-        <div className="flex justify-center items-center mx-auto my-[10%] bg-blue-700 w-[90%] h-[400px] ">
-            {/* back */}
-            <img 
-                src= {imgBack} 
-                alt="" 
-                className="w-[50px] cursor-pointer m-[40px]" 
-                onClick={() => {handlerBack()}}
-            />
+            <div className="bg-red-400">
+                {/* back */}
+                <img 
+                    src= {imgBack} 
+                    alt="" 
+                        className="w-[50px] cursor-pointer m-[40px]" 
+                        onClick={() => {handlerBack()}}
+                />
+                
+                <div 
+                    ref = {galleryRef}
+                    className="bg-white w-[960px] max-lg:w-[640px]!  max-sm:w-[320px]! h-[380px] mt-20 flex flex-wrap  flex-col  justify-evenly overflow-x-scroll overflow-y-hidden  scrollbar-hide"
+                >
 
-
-            {/* gallery */}
-            <div className="bg-white w-[960px] max-lg:w-[640px]!  max-sm:w-[320px]! h-[500px] mt-20 flex flex-wrap  flex-col  justify-evenly   overflow-x-scroll">
-
-            {imgList.map((item) => {
-                return(
-                    <div className=""></div>
-                )
-            })}
-            </div>
-            
-            <div ref = {galleryRef} className=" bg-amber-300  w-[90%] h-[100%]  flex overflow-x-scroll overflow-y-hidden  scrollbar-hide">
-                <div className=" w-[100%] md:w-100 grid grid-cols-3 gap-[20px] p-[10px] flex-none">
-                    <span>
-                        <img src={img1} alt="" className="w-[100%] h-100 grayscale-100 duration-500 hover:grayscale-0 cursor-pointer hover:scale-110" />
-                    </span>
-                    <span>
-                        <img src={img2} alt="" className="w-[100%] grayscale-100 duration-500 hover:grayscale-0 cursor-pointer hover:scale-110" />
-                    </span>
-                    <span>
-                        <img src={img3} alt="" className="w-[100%] grayscale-100 duration-500 hover:grayscale-0 cursor-pointer hover:scale-110" />
-                    </span>
+                    {imgList.map((item,index) => {
+                        return(
+                            <div 
+                                key = {index}
+                                className="bg-red-500 w-[300px] h-[95%] mx-[10px] "
+                            >
+                                <img src={item} alt="" className="w-[100%] h-[100%] grayscale-100 duration-500 hover:grayscale-0 cursor-pointer hover:scale-110"  />
+                            </div>          
+                        )
+                    })}
                 </div>
-                <div className="w-[100%] grid grid-cols-3 gap-[20px] p-[10px] flex-none ">
-                    <span>
-                        <img src={img4} alt="" className="w-[100%] grayscale-100 duration-500 hover:grayscale-0 cursor-pointer hover:scale-110" />
-                    </span>
-                    <span>
-                        <img src={img5} alt="" className="w-[100%] grayscale-100 duration-500 hover:grayscale-0 cursor-pointer hover:scale-110" />
-                    </span>
-                    <span>
-                        <img src={img6} alt="" className="w-[100%] grayscale-100 duration-500 hover:grayscale-0 cursor-pointer hover:scale-110" />
-                    </span>
-                </div>
+
+                {/* next */}
+                <img 
+                    src={imgNext} 
+                    alt="" 
+                    className="w-[50px] cursor-pointer m-[40px]" 
+                    onClick={()=> {handlerNext()}}    
+                />
+
             </div>
 
-            {/* next */}
-            <img 
-                src={imgNext} 
-                alt="" 
-                className="w-[50px] cursor-pointer m-[40px]" 
-                onClick={()=> {handlerNext()}}    
-            />
-        </div>
     )
 }
 

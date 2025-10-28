@@ -130,16 +130,16 @@ const Home =  ()  => {
                 {/* Gradient Generator */}
                 <GradientGenerator />
 
-                {/* HorzinotalScrolling */}
-                <HorzinotalScrolling />
 
                 {/* footer animated */}
                 <FooterAnimated />
 
             </div>
 
+                {/* HorzinotalScrolling */}
+                <HorzinotalScrolling />
 
-            <ImgComponent />
+            {/* <ImgComponent /> */}
             <div className="h-100 w-100 text-white"></div>
         </div>   
     )
