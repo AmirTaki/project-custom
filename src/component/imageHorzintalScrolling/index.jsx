@@ -12,7 +12,7 @@ const HorzinotalScrolling = () => {
     const galleryRef =  useRef(null)
 
     const handlerWheel = () => {
-        
+
     }
 
     useEffect(() => {
@@ -20,7 +20,11 @@ const HorzinotalScrolling = () => {
         if(!container) return;
 
         container.addEventListener('wheel', handlerWheel, {passive : false})
-    }, [])
+
+        return () => {
+            container.removeEventListener('wheel', handlerWheel)
+        }
+    }, [handlerWheel])
 
     const handlerBack = () => {
 
