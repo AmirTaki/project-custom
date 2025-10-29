@@ -39,7 +39,7 @@ const ImageEditor = () => {
     const [state, dispath] =  useReducer(reducerEditor, initialEditor)
 
     return(
-        <EditorContect.Provider value={{fileInput, filterName, filterValue, filterSlider, previewImg }}>
+        <EditorContect.Provider value={{fileInput, filterName, filterValue, filterSlider, previewImg, dispath }}>
             {/* // container  // disable */}
             <div className="w-[750px] p-[30px_35px_35px] bg-white rounded-[10px] shadow-[0_10px_20px_rgba(0,0,0,.1)] max-md:p-[25px]! max-md:w-[90%]! ">
                 <h2 className="-mt-[8px] text-[22px] font-[500] ">
