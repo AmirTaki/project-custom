@@ -27,7 +27,7 @@ const Wrapper  = ({disable, img}) => {
                             return(
                                 <button
                                     key = {item.id}
-                                    onClick={() => {dispath({type:`${item.name}`, payload : {id : item.id}})}}
+                                    onClick={() => {dispath({type:`Grayscale`, payload : {id : item.id}})}}
                                     className={`outline-0 h-[40px] text-[14px]  rounded-[3px] mb-[8px]  w-[calc(50%-4px)] 
                                         ${item.active? "text-white bg-[#5372F0] border-1 border-[#5372F0]" : "text-[#6c757D] bg-white border-1 border-[#aaa] hover:bg-[#f5f5f5]!"}    
                                     `}
