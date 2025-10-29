@@ -28,7 +28,10 @@ const ImageEditor = () => {
     
     const reducerEditor = (state, action) => {
         switch(action.type){
-            case "":
+            case "applyFilter":
+                if(previewImg.current){
+                    previewImg.current.style.transform = `rotate(${state.rotate}deg) scale(${state.flipHorizontal}, ${state.flipVertical})`
+                }
                 return {...state}
         }
     }
