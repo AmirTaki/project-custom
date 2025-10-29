@@ -26,6 +26,7 @@ import GlassMorphism from "../glassMorphismButton/index.jsx"
 import GlowingCorner from "../glowingCorner/index.jsx"
 import GradientGenerator from "../gradientGenerator/index.jsx"
 import HorzinotalScrolling from "../imageHorzintalScrolling/index.jsx"
+import ImageEditor from "../imageEditor/index.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -136,6 +137,8 @@ const Home =  ()  => {
                 <FooterAnimated />
 
             </div>
+            {/* image editor */}
+            <ImageEditor />
 
             <div className="h-100 w-100 text-white"></div>
         </div>   
