@@ -39,6 +39,12 @@ const ImageEditor = () => {
                                 )
                             })}
                         </div>
+
+                        {/* slider */}
+                        <div className="mt-[12px]">
+                            {/* filter-info */}
+                            <div className="flex text-[#464646] text-[14px] justify-between"></div>
+                        </div>
                     </div>
                     
                     {/* rotate */}
