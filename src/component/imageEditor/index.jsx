@@ -2,6 +2,7 @@ import { createContext, useEffect, useReducer, useRef, useState } from "react";
 import img from "./img/cadillac.jpg"
 import Wrapper from "./wrapper";
 import Controls from "./controls";
+import { initialEditor } from "./dataReducer";
 
 export const EditorContect =  createContext('')
 const ImageEditor = () => {
@@ -31,7 +32,7 @@ const ImageEditor = () => {
     const [state, dispath] =  useReducer(reducerEditor, initialEditor)
 
     return(
-        <EditorContect.Provider value={{fileInput, filterName, filterValue, filterSlider, previewImg, dispath }}>
+        <EditorContect.Provider value={{fileInput, filterName, filterValue, filterSlider, previewImg, dispath, state }}>
             {/* // container  // disable */}
             <div className="w-[750px] p-[30px_35px_35px] bg-white rounded-[10px] shadow-[0_10px_20px_rgba(0,0,0,.1)] max-md:p-[25px]! max-md:w-[90%]! ">
                 <h2 className="-mt-[8px] text-[22px] font-[500] ">

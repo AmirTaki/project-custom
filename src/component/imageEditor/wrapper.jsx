@@ -1,11 +1,11 @@
 import { useContext } from "react"
 import { EditorContect } from "."
 
-const Wrapper  = ({active, disable, img}) => {
-    const buttons = ['Brighteness', 'Saturation', 'Inversion', 'Grayscale']
+const Wrapper  = ({disable, img}) => {
+    // const buttons = ['Brighteness', 'Saturation', 'Inversion', 'Grayscale']
     const buttonsRotate = ['fa-solid fa-rotate-left', 'fa-solid fa-rotate-right', 'bx bx-reflect-vertical', 'bx bx-reflect-horizontal']
     
-    const {filterName, filterValue, filterSlider, previewImg, dispath} = useContext(EditorContect)
+    const {filterName, filterValue, filterSlider, previewImg, dispath, state} = useContext(EditorContect)
  
     return (
         // wrapper
@@ -23,16 +23,16 @@ const Wrapper  = ({active, disable, img}) => {
                     
                     {/* options */}
                     <div className="flex flex-wrap justify-between">
-                        {buttons.map((item, index) => {
+                        {state.buttonsFilter.map((item) => {
                             return(
                                 <button
-                                    key = {index}
-                                    onClick={() => {dispath({type:`${item}`})}}
+                                    key = {item.id}
+                                    onClick={() => {dispath({type:`${item.name}`})}}
                                     className={`outline-0 h-[40px] text-[14px]  rounded-[3px] mb-[8px]  w-[calc(50%-4px)] 
-                                        ${active? "text-white bg-[#5372F0] border-1 border-[#5372F0]" : "text-[#6c757D] bg-white border-1 border-[#aaa] hover:bg-[#f5f5f5]!"}    
+                                        ${item.active? "text-white bg-[#5372F0] border-1 border-[#5372F0]" : "text-[#6c757D] bg-white border-1 border-[#aaa] hover:bg-[#f5f5f5]!"}    
                                     `}
                                 >
-                                    {item}
+                                    {item.name}
                                 </button>
                                 
                             )
