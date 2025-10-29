@@ -47,6 +47,8 @@ const ImageEditor = () => {
                                 <p>Brighteness</p>  {/*  name */} 
                                 <p>100%</p>    {/* value */}
                             </div>
+                            {/* input */}
+                            <input type="range" value = '100' min = '0' max = '200' />
                         </div>
                     </div>
                     
