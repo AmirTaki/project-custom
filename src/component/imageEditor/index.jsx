@@ -2,6 +2,7 @@ import { useState } from "react";
 
 const ImageEditor = () => {
     const buttons = ['Brighteness', 'Saturation', 'Inversion', 'Grayscale']
+    const buttonsRotate = ['', '', '', '']
     const [disable, setDisable] = useState(false)
     const [active, setActive] = useState(false)
     return(
@@ -55,6 +56,14 @@ const ImageEditor = () => {
                     </div>
                     
                     {/* rotate */}
+                    <div className="mt-[17px]">
+                        {/* title */}
+                        <label htmlFor="" className="block text-[16px] mb-[12px]">Rotate & Flip</label>
+                        {/* options */}
+                        <div className="flex flex-wrap justify-between">
+                            {/* buttons */}
+                        </div>
+                    </div>
                 </div>
 
                 {/* preview-img */}
