@@ -6,7 +6,7 @@ const ImageEditor = () => {
                 Easy Image Editor
             </h2>
             {/* wrapper */}
-            <div className=""></div>
+            <div className="flex my-[20px] mx-0 min-h-[335px]"></div>
         </div>
     )
 }
