@@ -1,4 +1,5 @@
 import { useState } from "react";
+import img from "./img/cadillac.jpg"
 
 const ImageEditor = () => {
     const buttons = ['Brighteness', 'Saturation', 'Inversion', 'Grayscale']
@@ -81,8 +82,8 @@ const ImageEditor = () => {
                 </div>
 
                 {/* preview-img */}
-                <div className="flex justify-center items-center ml-[20px] rounded-[5px] ">
-                    
+                <div className="flex justify-center items-center ml-[20px] rounded-[5px] overflow-hidden ">
+                    <img src={img} alt="" />
                 </div>
             </div>
 
