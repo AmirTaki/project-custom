@@ -27,22 +27,22 @@ const ImageEditor = () => {
         buttonsFilter : [
             {
                 id : 0, 
-                name : '',
+                name : 'Brighteness',
                 active : false
             },
             {
-                id : 0, 
-                name : '',
+                id : 1, 
+                name : 'Saturation',
                 active : false
             },
             {
-                id : 0, 
-                name : '',
+                id : 2, 
+                name : 'Inversion',
                 active : false
             },
             {
-                id : 0, 
-                name : '',
+                id : 3, 
+                name : 'Grayscale',
                 active : false
             },
         ]
