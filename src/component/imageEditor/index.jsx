@@ -26,7 +26,17 @@ const ImageEditor = () => {
                     previewImg.current.style.filter =  `brightness(${state.brightness}%) saturate(${state.saturation}%) invert(${state.inversion}%) grayscale(${state.grayscale}%)`
                 }
                 return {...state}
-            case "Brighteness" || 'Saturation' || 'Inversion' || 'Grayscale':
+            case "OptionButton":
+                // const newState =  state.map((item) => {
+                //     if (item.id === action.paylod.id) {
+                //         return {...item , active : true}
+                //     } 
+                //     else {
+                //         return {...item, active: false}
+                //     }
+                // })
+                // return {...state, buttonsFilter : newState}
+            return{...state}
         }
     }
     const [state, dispath] =  useReducer(reducerEditor, initialEditor)
