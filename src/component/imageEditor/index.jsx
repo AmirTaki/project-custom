@@ -97,6 +97,14 @@ const ImageEditor = () => {
                 >
                     Reset Filters
                 </button>
+
+                {/* row */}
+                <div className="">
+                    {/* file-input */}
+                    <input type="file" accept="image/*" hidden />
+                    <button>Choose Image</button>
+                    <button>Save Image</button>
+                </div>
             </div>
         </div>
     )
