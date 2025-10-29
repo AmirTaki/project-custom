@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const ImageEditor = () => {
-    const [disable, setDisable] = useState(true)
+    const [disable, setDisable] = useState(false)
     return(
         // container  // disable
         <div className="w-[850px] p-[30px_35px_35px] bg-white rounded-[10px] shadow-[0_10px_20px_rgba(0,0,0,.1)]">
@@ -14,7 +14,11 @@ const ImageEditor = () => {
                 <div className={`${disable ?"opacity-50 pointer-events-none" : "opacity-100 pointer-events-auto" } 
                     py-[15px] px-[20px] w-[280px] rounded-[5px] border-1 border-[#ccc]
                 `}>
-
+                    {/* filter */}
+                    <div className="">
+                        {/* title => label*/}
+                        <label className="block text-[16px] mb-[12px]">Filters</label>
+                    </div>
                 </div>
             </div>
 
