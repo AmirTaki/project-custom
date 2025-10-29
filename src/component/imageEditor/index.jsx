@@ -10,14 +10,14 @@ const ImageEditor = () => {
     return(
         // container  // disable
         <div className="w-[850px] p-[30px_35px_35px] bg-white rounded-[10px] shadow-[0_10px_20px_rgba(0,0,0,.1)]">
-            <h2 className="-mt-[8px] text-[22px] font-[500]">
+            <h2 className="-mt-[8px] text-[22px] font-[500] max-md:p-[25px]">
                 Easy Image Editor
             </h2>
             {/* wrapper */}
             <div className="flex my-[20px] mx-0 min-h-[335px]">
                 {/* editor-panel */}
                 <div className={`${disable ?"opacity-50 pointer-events-none" : "opacity-100 pointer-events-auto" } 
-                    py-[15px] px-[20px] w-[280px] rounded-[5px] border-1 border-[#ccc]
+                    py-[15px] px-[20px] w-[280px] rounded-[5px] border-1 border-[#ccc] max-md:w-[100%]
                 `}>
                     
                     {/* filter */}
@@ -82,7 +82,7 @@ const ImageEditor = () => {
                 </div>
 
                 {/* preview-img */}
-                <div className="flex flex-1 justify-center items-center ml-[20px] rounded-[5px] overflow-hidden ">
+                <div className="flex flex-1 justify-center items-center ml-[20px] rounded-[5px] overflow-hidden max-md:w-[100%] max-md:m-[0_0_15px]">
                     {/* img */}
                     <img src={img} alt="" className="max-w-[490px] max-h-[335px] w-[100%] h-[100%] object-contain" />
                 </div>
