@@ -25,7 +25,7 @@ const ImageEditor = () => {
                         {/* options */}
                         <div className="flex flex-wrap justify-between">
                             <button
-                                className={`outline-0 h-[40px] text-[14px]  rounded-[3px] mb-[8px]  w-[calc(100% / (2 - 4)px)]
+                                className={`outline-0 h-[40px] text-[14px]  rounded-[3px] mb-[8px]  w-[calc(50%-4px)] hover:bg-[#f5f5f5]
                                     ${active? "text-white bg-[#5372F0] border-1 border-[#5372F0]" : "text-[#6c757D] bg-white border-1 border-[#aaa]"}    
                                 `}
                             >
