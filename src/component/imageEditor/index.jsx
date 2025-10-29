@@ -25,7 +25,7 @@ const ImageEditor = () => {
                         {/* options */}
                         <div className="flex flex-wrap justify-between">
                             <button
-                                className={`outline-0 h-[40px] text-[14px] text-[#6c757D] bg-white rounded-[3px] mb-[8px] border-1 border-[#aaa]`}
+                                className={`outline-0 h-[40px] text-[14px] text-[#6c757D] bg-white rounded-[3px] mb-[8px] border-1 border-[#aaa] w-[calc(100% / (2 - 4)px)]`}
                             >
                                 Brighteness
                             </button>
