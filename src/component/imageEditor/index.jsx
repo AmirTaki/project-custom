@@ -35,9 +35,8 @@ const ImageEditor = () => {
                 return {...state, buttonsFilter : newState}
 
             case "inputRange":
-                // if(filterSlider.current){
-                //     filterSlider.current.value = action.payload.value
-                // }
+                const find =  state.buttonsFilter.find((item) => item.active )
+                console.log(find)
                 return{...state}
               
         }
@@ -46,7 +45,6 @@ const ImageEditor = () => {
 
     useEffect(() => {
         state;
-        console.log(inputFilter.current.style.max)
     }, [state])
 
     return(
