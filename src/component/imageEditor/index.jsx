@@ -81,7 +81,9 @@ const ImageEditor = () => {
                 </div>
 
                 {/* preview-img */}
-                <div className="flex justify-center items-center ml-[20px] rounded-[5px] "></div>
+                <div className="flex justify-center items-center ml-[20px] rounded-[5px] ">
+                    
+                </div>
             </div>
 
             {/* controls  */}
