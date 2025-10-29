@@ -1,4 +1,4 @@
-import { createContext, useReducer, useRef, useState } from "react";
+import { createContext, useEffect, useReducer, useRef, useState } from "react";
 import img from "./img/cadillac.jpg"
 import Wrapper from "./wrapper";
 import Controls from "./controls";
@@ -11,7 +11,13 @@ const ImageEditor = () => {
     const [text, setText] = useState(false)
 
     const fileInput = useRef(null)
+    const filterName = useRef(null)
+    const filterValue = useRef(null)
 
+
+    useEffect(() => {
+        console.log(fileInput.current)
+    }, [])
 
     const initialEditor = {}
     
