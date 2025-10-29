@@ -5,6 +5,7 @@ const ImageEditor = () => {
     const buttonsRotate = ['fa-solid fa-rotate-left', 'fa-solid fa-rotate-right', 'bx bx-reflect-vertical', 'bx bx-reflect-horizontal']
     const [disable, setDisable] = useState(false)
     const [active, setActive] = useState(false)
+    const [text, setText] = useState(false)
     return(
         // container  // disable
         <div className="w-[850px] p-[30px_35px_35px] bg-white rounded-[10px] shadow-[0_10px_20px_rgba(0,0,0,.1)]">
@@ -66,7 +67,8 @@ const ImageEditor = () => {
                                 return(
                                     <button
                                         key = {index}
-                                        className={`outline-0 h-[40px] text-[14px]  rounded-[3px] mb-[8px]  w-[calc(25%-3px)] 
+                                        // child (3) child (4) text => 18px
+                                        className={` text-[14px] outline-0 h-[40px]   rounded-[3px] mb-[8px]  w-[calc(25%-3px)] 
                                             ${active? "text-white bg-[#5372F0] border-1 border-[#5372F0]" : "text-[#6c757D] bg-white border-1 border-[#aaa] hover:bg-[#f5f5f5]!"}    
                                         `}
                                     >
