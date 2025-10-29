@@ -18,41 +18,8 @@ const ImageEditor = () => {
                 <Wrapper disable = {disable} active = {active} img = {img} />
 
             {/* controls  */}
-                <Controls />
-            <div className="flex flex-wrap justify-between">
-                {/* reset-filters */}
-                <button 
-                    className={`${disable ?"opacity-50 pointer-events-none" : "opacity-100 pointer-events-auto" } 
-                        py-[11px] px-[20px] text-[14px] rounded-[3px] outline-0 text-[#6C757D] hover:text-white!
-                        border-1 border-[#6C757D] cursor-pointer hover:bg-[#6C757D] 
-                        bg-none transition-all duration-300 ease-in uppercase 
-                        max-sm:w-[100%]! max-sm:mb-[10px]
-                    `}
-                >
-                    Reset Filters
-                </button>
+                <Controls disable = {disable}/>
 
-                {/* row */}
-                <div className="max-sm:w-[100%]!">
-                    {/* file-input */}
-                    <input type="file" accept="image/*" hidden />
-                    {/* chose image */}
-                    <button
-                        className="py-[11px] px-[20px] text-[14px] rounded-[3px] outline-0 text-white cursor-pointer
-                        bg-[#6C757D] transition-all duration-300 ease-in uppercase    border-1 border-[#6C757D]
-                        max-sm:w-[100%]! max-sm:mb-[10px]
-                        "
-                    >Choose Image</button>
-                    {/* save image */}
-                    <button
-                        className={` ${disable ?"opacity-50 pointer-events-none" : "opacity-100 pointer-events-auto" } 
-                            py-[11px] px-[20px] text-[14px] rounded-[3px] outline-0 text-white cursor-pointer
-                            bg-[#5372F0] transition-all duration-300 ease-in uppercase ml-[5px] border-1 border-[#5372F0]
-                            max-sm:w-[100%]! max-sm:mb-[10px]! max-sm:ml-0!
-                        `}
-                    >Save Image</button>
-                </div>
-            </div>
         </div>
     )
 }
