@@ -4,20 +4,20 @@ import img from "./img/cadillac.jpg"
 const ImageEditor = () => {
     const buttons = ['Brighteness', 'Saturation', 'Inversion', 'Grayscale']
     const buttonsRotate = ['fa-solid fa-rotate-left', 'fa-solid fa-rotate-right', 'bx bx-reflect-vertical', 'bx bx-reflect-horizontal']
-    const [disable, setDisable] = useState(true)
+    const [disable, setDisable] = useState(false)
     const [active, setActive] = useState(false)
     const [text, setText] = useState(false)
     return(
         // container  // disable
-        <div className="w-[850px] p-[30px_35px_35px] bg-white rounded-[10px] shadow-[0_10px_20px_rgba(0,0,0,.1)] max-md:p-[25px] ">
+        <div className="w-[850px] p-[30px_35px_35px] bg-white rounded-[10px] shadow-[0_10px_20px_rgba(0,0,0,.1)] max-md:p-[25px]! max-md:w-[90%]! ">
             <h2 className="-mt-[8px] text-[22px] font-[500] ">
                 Easy Image Editor
             </h2>
             {/* wrapper */}
-            <div className="flex my-[20px] mx-0 min-h-[335px] max-md:flex-wrap-reverse!">
+            <div className="flex my-[20px] mx-0 min-h-[335px] max-md:flex-wrap-reverse! ">
                 {/* editor-panel */}
                 <div className={`${disable ?"opacity-50 pointer-events-none" : "opacity-100 pointer-events-auto" } 
-                    py-[15px] px-[20px] w-[280px] rounded-[5px] border-1 border-[#ccc] max-md:w-[100%]!
+                    py-[15px] px-[20px] w-[280px] rounded-[5px] border-1 border-[#ccc] 
                 `}>
                     
                     {/* filter */}
