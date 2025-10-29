@@ -1,6 +1,7 @@
 import { useState } from "react";
 import img from "./img/cadillac.jpg"
 import Wrapper from "./wrapper";
+import Controls from "./controls";
 
 const ImageEditor = () => {
  
@@ -14,9 +15,10 @@ const ImageEditor = () => {
                 Easy Image Editor
             </h2>
             {/* wrapper */}
-                <Wrapper />
+                <Wrapper disable = {disable} active = {active} img = {img} />
 
             {/* controls  */}
+                <Controls />
             <div className="flex flex-wrap justify-between">
                 {/* reset-filters */}
                 <button 

@@ -1,4 +1,4 @@
-const Wrapper  = () => {
+const Wrapper  = ({active, disable, img}) => {
     const buttons = ['Brighteness', 'Saturation', 'Inversion', 'Grayscale']
     const buttonsRotate = ['fa-solid fa-rotate-left', 'fa-solid fa-rotate-right', 'bx bx-reflect-vertical', 'bx bx-reflect-horizontal']
     return (
