@@ -90,7 +90,13 @@ const ImageEditor = () => {
 
             {/* controls  */}
             <div className="flex flex-wrap justify-between">
+                {/* reset-filters */}
+                <button 
+                    className="py-[11px] px-[20px] text-[14px] rounded-[3px] outline-0 text-white cursor-pointer
+                    bg-none transition-all duration-300 ease-in
 
+                
+                ">Reset Filters</button>
             </div>
         </div>
     )
