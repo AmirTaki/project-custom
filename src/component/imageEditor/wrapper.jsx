@@ -50,7 +50,7 @@ const Wrapper  = ({disable, img}) => {
                         <input type="range"  
                             min={filterSlider.current.min}
                             max={filterSlider.current.max}
-                            onChange={(e)=> {console.log(e.target.value)}}
+                            onChange={(e)=> {dispath({type : "inputRange"})}}
                             ref = {filterSlider}
                             className="w-[100%] h-[5px] accent-[#5372F0]"
                         />

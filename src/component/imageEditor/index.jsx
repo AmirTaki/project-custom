@@ -38,12 +38,18 @@ const ImageEditor = () => {
 
                     }
                 }
+                
                 return {...state, buttonsFilter : newState}
-             
+            case "inputRange":
+                return{...state}
               
         }
     }
     const [state, dispath] =  useReducer(reducerEditor, initialEditor)
+
+    useEffect(() => {
+        state;
+    }, [state])
 
     return(
         <EditorContect.Provider value={{fileInput, filterName, filterValue, filterSlider, previewImg, dispath, state }}>

@@ -28,5 +28,4 @@ export const initialEditor = {
             active : false
         },
     ],
-    filterSlider : 100
 }
