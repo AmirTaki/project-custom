@@ -96,6 +96,7 @@ const ImageEditor = () => {
                         py-[11px] px-[20px] text-[14px] rounded-[3px] outline-0 text-[#6C757D] hover:text-white!
                         border-1 border-[#6C757D] cursor-pointer hover:bg-[#6C757D] 
                         bg-none transition-all duration-300 ease-in uppercase 
+                        max-sm:w-[100%]! max-sm:mb-[10px]
                     `}
                 >
                     Reset Filters
