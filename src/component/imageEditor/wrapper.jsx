@@ -43,15 +43,15 @@ const Wrapper  = ({disable, img}) => {
                     <div className="mt-[12px]">
                         {/* filter-info */}
                         <div className="flex text-[#464646] text-[14px] justify-between">
-                            <p ref = {filterName}>Brighteness</p>  {/*  name */} 
-                            <p ref = {filterValue}>100%</p>    {/* value */}
+                            <p>Brighteness</p>  {/*  name */} 
+                            <p >100%</p>    {/* value */}
                         </div>
                         {/* input */}
                         <input type="range"  
-                            min={filterSlider.current.min}
-                            max={filterSlider.current.max}
+                            min='0'
+                            max='100'
                             onChange={(e)=> {dispath({type : "inputRange", payload : {value : e.target.value}})}}
-                            ref = {filterSlider}
+                            // ref = {filterSlider}
                             className="w-[100%] h-[5px] accent-[#5372F0]"
                         />
                     </div>

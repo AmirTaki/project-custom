@@ -52,7 +52,7 @@ const ImageEditor = () => {
 
     useEffect(() => {
         state;
-        console.log(filterSlider.current.value)
+        // console.log(filterSlider.current.value)
     }, [state])
 
     return(
