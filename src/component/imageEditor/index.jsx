@@ -14,7 +14,7 @@ const ImageEditor = () => {
     const fileInput = useRef(null)
     const filterName = useRef(null)
     const filterValue = useRef(null)
-    const filterSlider = useRef({value : 200, max : 200, min : 0 })
+    const filterSlider = useRef({value : 100, max : 200, min : 0 })
     const previewImg = useRef(null)
 
    
