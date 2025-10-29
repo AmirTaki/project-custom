@@ -93,8 +93,7 @@ const ImageEditor = () => {
                 {/* reset-filters */}
                 <button 
                     className="py-[11px] px-[20px] text-[14px] rounded-[3px] outline-0 text-[#6C757D] hover:text-white!
-                    border-1 border-[#6C757D]
-                    cursor-pointer hover:bg-[#6C757D] 
+                    border-1 border-[#6C757D] cursor-pointer hover:bg-[#6C757D] 
                     bg-none transition-all duration-300 ease-in uppercase "
                 >
                     Reset Filters
@@ -107,7 +106,7 @@ const ImageEditor = () => {
                     {/* chose image */}
                     <button
                         className="py-[11px] px-[20px] text-[14px] rounded-[3px] outline-0 text-white cursor-pointer
-                        bg-none transition-all duration-300 ease-in uppercase "
+                        bg-[#6C757D] transition-all duration-300 ease-in uppercase    border-1 border-[#6C757D "
                     >Choose Image</button>
                     {/* save image */}
                     <button
