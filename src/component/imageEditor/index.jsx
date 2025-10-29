@@ -23,7 +23,29 @@ const ImageEditor = () => {
         grayscale : '0',
         rotate : 0,
         flipHorizontal : 1,
-        flipVertical : 1
+        flipVertical : 1,
+        buttonsFilter : [
+            {
+                id : 0, 
+                name : '',
+                active : false
+            },
+            {
+                id : 0, 
+                name : '',
+                active : false
+            },
+            {
+                id : 0, 
+                name : '',
+                active : false
+            },
+            {
+                id : 0, 
+                name : '',
+                active : false
+            },
+        ]
     }
     
     const reducerEditor = (state, action) => {
@@ -34,6 +56,7 @@ const ImageEditor = () => {
                     previewImg.current.style.filter =  `brightness(${state.brightness}%) saturate(${state.saturation}%) invert(${state.inversion}%) grayscale(${state.grayscale}%)`
                 }
                 return {...state}
+            case "Brighteness":
         }
     }
     const [state, dispath] =  useReducer(reducerEditor, initialEditor)
