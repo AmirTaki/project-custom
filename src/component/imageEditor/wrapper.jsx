@@ -5,7 +5,7 @@ const Wrapper  = ({active, disable, img}) => {
     const buttons = ['Brighteness', 'Saturation', 'Inversion', 'Grayscale']
     const buttonsRotate = ['fa-solid fa-rotate-left', 'fa-solid fa-rotate-right', 'bx bx-reflect-vertical', 'bx bx-reflect-horizontal']
     
-    const {filterName, filterValue, filterSlider} = useContext(EditorContect)
+    const {filterName, filterValue, filterSlider, previewImg} = useContext(EditorContect)
  
     return (
         // wrapper
@@ -80,7 +80,7 @@ const Wrapper  = ({active, disable, img}) => {
             {/* preview-img */}
             <div className="flex  justify-center items-center ml-[20px] rounded-[5px] overflow-hidden max-md:w-[100%]! max-md:m-[0_0_15px]! ">
                 {/* img */}
-                <img src={img} alt="" className="max-w-[490px] max-h-[335px] w-[100%]! h-[100%]! object-contain " />
+                <img src={img} ref = {previewImg} alt="" className="max-w-[490px] max-h-[335px] w-[100%]! h-[100%]! object-contain " />
             </div>
         </div>
     )
