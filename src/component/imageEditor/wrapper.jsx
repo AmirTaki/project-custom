@@ -5,7 +5,7 @@ const Wrapper  = ({disable, img}) => {
     // const buttons = ['Brighteness', 'Saturation', 'Inversion', 'Grayscale']
     const buttonsRotate = ['fa-solid fa-rotate-left', 'fa-solid fa-rotate-right', 'bx bx-reflect-vertical', 'bx bx-reflect-horizontal']
     
-    const {previewImg, dispath, state} = useContext(EditorContect)
+    const {nameFilter, valueFilter, previewImg, dispath, state} = useContext(EditorContect)
  
     return (
         // wrapper
@@ -27,7 +27,7 @@ const Wrapper  = ({disable, img}) => {
                             return(
                                 <button
                                     key = {item.id}
-                                    onClick={() => {dispath({type:`optionalButton`, payload : {id : item.id, name : item.name}})}}
+                                    onClick={() => {dispath({type:`optionalButton`, payload : {id : item.id, name : item.name, value : item.value}})}}
                                     className={`outline-0 h-[40px] text-[14px]  rounded-[3px] mb-[8px]  w-[calc(50%-4px)] 
                                         ${item.active? "text-white bg-[#5372F0] border-1 border-[#5372F0]" : "text-[#6c757D] bg-white border-1 border-[#aaa] hover:bg-[#f5f5f5]!"}    
                                     `}
@@ -43,8 +43,8 @@ const Wrapper  = ({disable, img}) => {
                     <div className="mt-[12px]">
                         {/* filter-info */}
                         <div className="flex text-[#464646] text-[14px] justify-between">
-                            <p>Brighteness</p>  {/*  name */} 
-                            <p >100%</p>    {/* value */}
+                            <p ref = {nameFilter}>Brighteness</p>  {/*  name */} 
+                            <p ref = {valueFilter}>100%</p>    {/* value */}
                         </div>
                         {/* input */}
                         <input type="range"  

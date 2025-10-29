@@ -18,14 +18,14 @@ export const initialEditor = {
             id : 1, 
             name : 'Saturation',
             active : false,
-            value : 100,
+            value : 50,
             max: 200
         },
         {
             id : 2, 
             name : 'Inversion',
             active : false,
-            value : 100,
+            value : 60,
             max : 100
         },
         {
