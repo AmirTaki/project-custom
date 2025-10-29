@@ -5,7 +5,7 @@ const Wrapper  = ({active, disable, img}) => {
     const buttons = ['Brighteness', 'Saturation', 'Inversion', 'Grayscale']
     const buttonsRotate = ['fa-solid fa-rotate-left', 'fa-solid fa-rotate-right', 'bx bx-reflect-vertical', 'bx bx-reflect-horizontal']
     
-    const {filterName, filterValue} = useContext(EditorContect)
+    const {filterName, filterValue, filterSlider} = useContext(EditorContect)
  
     return (
         // wrapper
@@ -42,11 +42,12 @@ const Wrapper  = ({active, disable, img}) => {
                     <div className="mt-[12px]">
                         {/* filter-info */}
                         <div className="flex text-[#464646] text-[14px] justify-between">
-                            <p>Brighteness</p>  {/*  name */} 
-                            <p>100%</p>    {/* value */}
+                            <p ref = {filterName}>Brighteness</p>  {/*  name */} 
+                            <p ref = {filterValue}>100%</p>    {/* value */}
                         </div>
                         {/* input */}
-                        <input type="range" value = '100' min = '0' max = '200'
+                        <input type="range" value = '100' min = '0' max = '200' 
+                            ref = {filterSlider}
                             className="w-[100%] h-[5px] accent-[#5372F0]"
                         />
                     </div>
