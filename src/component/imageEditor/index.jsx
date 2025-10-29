@@ -48,7 +48,9 @@ const ImageEditor = () => {
                                 <p>100%</p>    {/* value */}
                             </div>
                             {/* input */}
-                            <input type="range" value = '100' min = '0' max = '200' />
+                            <input type="range" value = '100' min = '0' max = '200'
+                                className="w-[100%] h-[5px] accent-[#5372F0]"
+                            />
                         </div>
                     </div>
                     
