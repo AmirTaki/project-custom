@@ -4,7 +4,7 @@ import img from "./img/cadillac.jpg"
 const ImageEditor = () => {
     const buttons = ['Brighteness', 'Saturation', 'Inversion', 'Grayscale']
     const buttonsRotate = ['fa-solid fa-rotate-left', 'fa-solid fa-rotate-right', 'bx bx-reflect-vertical', 'bx bx-reflect-horizontal']
-    const [disable, setDisable] = useState(false)
+    const [disable, setDisable] = useState(true)
     const [active, setActive] = useState(false)
     const [text, setText] = useState(false)
     return(
@@ -92,9 +92,11 @@ const ImageEditor = () => {
             <div className="flex flex-wrap justify-between">
                 {/* reset-filters */}
                 <button 
-                    className="py-[11px] px-[20px] text-[14px] rounded-[3px] outline-0 text-[#6C757D] hover:text-white!
-                    border-1 border-[#6C757D] cursor-pointer hover:bg-[#6C757D] 
-                    bg-none transition-all duration-300 ease-in uppercase "
+                    className={`${disable ?"opacity-50 pointer-events-none" : "opacity-100 pointer-events-auto" } 
+                        py-[11px] px-[20px] text-[14px] rounded-[3px] outline-0 text-[#6C757D] hover:text-white!
+                        border-1 border-[#6C757D] cursor-pointer hover:bg-[#6C757D] 
+                        bg-none transition-all duration-300 ease-in uppercase 
+                    `}
                 >
                     Reset Filters
                 </button>
