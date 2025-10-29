@@ -106,12 +106,12 @@ const ImageEditor = () => {
                     {/* chose image */}
                     <button
                         className="py-[11px] px-[20px] text-[14px] rounded-[3px] outline-0 text-white cursor-pointer
-                        bg-[#6C757D] transition-all duration-300 ease-in uppercase    border-1 border-[#6C757D "
+                        bg-[#6C757D] transition-all duration-300 ease-in uppercase    border-1 border-[#6C757D] "
                     >Choose Image</button>
                     {/* save image */}
                     <button
                         className="py-[11px] px-[20px] text-[14px] rounded-[3px] outline-0 text-white cursor-pointer
-                        bg-none transition-all duration-300 ease-in uppercase "
+                        bg-[#5372F0] transition-all duration-300 ease-in uppercase ml-[5px] border-1 border-[#5372F0]"
                     >Save Image</button>
                 </div>
             </div>
