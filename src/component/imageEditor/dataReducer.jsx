@@ -10,7 +10,7 @@ export const initialEditor = {
         {
             id : 0, 
             name : 'Brighteness',
-            active : false
+            active : true
         },
         {
             id : 1, 

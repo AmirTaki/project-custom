@@ -26,7 +26,7 @@ const ImageEditor = () => {
                     previewImg.current.style.filter =  `brightness(${state.brightness}%) saturate(${state.saturation}%) invert(${state.inversion}%) grayscale(${state.grayscale}%)`
                 }
                 return {...state}
-            case "Brighteness":
+            case "Brighteness" || 'Saturation' || 'Inversion' || 'Grayscale':
         }
     }
     const [state, dispath] =  useReducer(reducerEditor, initialEditor)
