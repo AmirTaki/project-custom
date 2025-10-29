@@ -26,15 +26,8 @@ const ImageEditor = () => {
                     previewImg.current.style.filter =  `brightness(${state.brightness}%) saturate(${state.saturation}%) invert(${state.inversion}%) grayscale(${state.grayscale}%)`
                 }
                 return {...state}
-            case 'Grayscale':
-                const newState =  state.buttonsFilter.map((item) => {
-                    if (item.id === action.payload.id) {
-                        return {...item , active : true}
-                    } 
-                    else {
-                        return {...item, active: false}
-                    }
-                })
+            case 'optionalButton':
+                const newState = state.buttonsFilter.map((item) => ({...item, active :  item.id === action.payload.id ? true : false}))
                 return {...state, buttonsFilter : newState}
              
               
