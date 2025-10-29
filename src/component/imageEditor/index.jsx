@@ -50,6 +50,8 @@ const ImageEditor = () => {
                 {/* controls  */}
                     <Controls disable = {disable}/>
 
+
+                <div className="" onClick={() => {dispath({type : "applyFilter"})}}>click</div>
             </div>
         </EditorContect.Provider>
     )
