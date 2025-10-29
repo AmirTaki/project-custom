@@ -43,7 +43,10 @@ const ImageEditor = () => {
                         {/* slider */}
                         <div className="mt-[12px]">
                             {/* filter-info */}
-                            <div className="flex text-[#464646] text-[14px] justify-between"></div>
+                            <div className="flex text-[#464646] text-[14px] justify-between">
+                                <p>Brighteness</p>  {/*  name */} 
+                                <p>100%</p>    {/* value */}
+                            </div>
                         </div>
                     </div>
                     
