@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const ImageEditor = () => {
     const buttons = ['Brighteness', 'Saturation', 'Inversion', 'Grayscale']
-    const buttonsRotate = ['', '', '', '']
+    const buttonsRotate = ['fa-solid fa-rotate-left', 'fa-solid fa-rotate-right', 'bx bx-reflect-vertical', 'bx bx-reflect-horizontal']
     const [disable, setDisable] = useState(false)
     const [active, setActive] = useState(false)
     return(
@@ -62,6 +62,19 @@ const ImageEditor = () => {
                         {/* options */}
                         <div className="flex flex-wrap justify-between">
                             {/* buttons */}
+                            {buttonsRotate.map((item, index) => {
+                                return(
+                                    <button
+                                        key = {index}
+                                        className={`outline-0 h-[40px] text-[14px]  rounded-[3px] mb-[8px]  w-[calc(50%-4px)] 
+                                            ${active? "text-white bg-[#5372F0] border-1 border-[#5372F0]" : "text-[#6c757D] bg-white border-1 border-[#aaa] hover:bg-[#f5f5f5]!"}    
+                                        `}
+                                    >
+                                        {item}
+                                    </button>
+                                    
+                                )
+                            })}
                         </div>
                     </div>
                 </div>
