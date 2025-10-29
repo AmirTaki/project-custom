@@ -5,7 +5,7 @@ const Wrapper  = ({disable, img}) => {
     // const buttons = ['Brighteness', 'Saturation', 'Inversion', 'Grayscale']
     const buttonsRotate = ['fa-solid fa-rotate-left', 'fa-solid fa-rotate-right', 'bx bx-reflect-vertical', 'bx bx-reflect-horizontal']
     
-    const {nameFilter, valueFilter, previewImg, dispath, state} = useContext(EditorContect)
+    const {inputFilter ,nameFilter, valueFilter, previewImg, dispath, state} = useContext(EditorContect)
  
     return (
         // wrapper
@@ -27,7 +27,7 @@ const Wrapper  = ({disable, img}) => {
                             return(
                                 <button
                                     key = {item.id}
-                                    onClick={() => {dispath({type:`optionalButton`, payload : {id : item.id, name : item.name, value : item.value}})}}
+                                    onClick={() => {dispath({type:`optionalButton`, payload : {id : item.id, name : item.name, value : item.value, max : item.max}})}}
                                     className={`outline-0 h-[40px] text-[14px]  rounded-[3px] mb-[8px]  w-[calc(50%-4px)] 
                                         ${item.active? "text-white bg-[#5372F0] border-1 border-[#5372F0]" : "text-[#6c757D] bg-white border-1 border-[#aaa] hover:bg-[#f5f5f5]!"}    
                                     `}
@@ -51,7 +51,7 @@ const Wrapper  = ({disable, img}) => {
                             min='0'
                             max='100'
                             onChange={(e)=> {dispath({type : "inputRange", payload : {value : e.target.value}})}}
-                            // ref = {filterSlider}
+                            ref = {inputFilter}
                             className="w-[100%] h-[5px] accent-[#5372F0]"
                         />
                     </div>

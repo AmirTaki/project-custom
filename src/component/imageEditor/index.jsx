@@ -14,7 +14,7 @@ const ImageEditor = () => {
     const fileInput = useRef(null)
     const nameFilter = useRef(null)
     const valueFilter = useRef(null)
-    // const filterSlider = useRef({value : 100, max : 200, min : 0 })
+    const inputFilter = useRef(null)
     const previewImg = useRef(null)
 
    
@@ -26,20 +26,14 @@ const ImageEditor = () => {
                     previewImg.current.style.filter =  `brightness(${state.brightness}%) saturate(${state.saturation}%) invert(${state.inversion}%) grayscale(${state.grayscale}%)`
                 }
                 return {...state}
-            case 'optionalButton':
+          
+                case 'optionalButton':
                 const newState = state.buttonsFilter.map((item) => ({...item, active :  item.id === action.payload.id ? true : false}))
                 if(nameFilter.current) {nameFilter.current.innerText = action.payload.name}
                 if(valueFilter.current) {valueFilter.current.innerText = `${action.payload.value}%` }
-                // if(action.payload.name === "Brighteness"){
-                //     if(filterSlider.current){
-                //         filterSlider.current.max = '200'
-                //         filterSlider.current.value = state.brightness;
-                //         filterValue.current.innerText = `${state.brightness}%`
-
-                //     }
-                // }
-                
+                if(inputFilter.current) {inputFilter.current.style.max = action.payload.max}
                 return {...state, buttonsFilter : newState}
+
             case "inputRange":
                 // if(filterSlider.current){
                 //     filterSlider.current.value = action.payload.value
@@ -52,11 +46,11 @@ const ImageEditor = () => {
 
     useEffect(() => {
         state;
-        // console.log(filterSlider.current.value)
+        console.log(inputFilter.current.style.max)
     }, [state])
 
     return(
-        <EditorContect.Provider value={{fileInput, previewImg, dispath, state, nameFilter, valueFilter }}>
+        <EditorContect.Provider value={{fileInput, previewImg, dispath, state, nameFilter, valueFilter, inputFilter }}>
             {/* // container  // disable */}
             <div className="w-[750px] p-[30px_35px_35px] bg-white rounded-[10px] shadow-[0_10px_20px_rgba(0,0,0,.1)] max-md:p-[25px]! max-md:w-[90%]! ">
                 <h2 className="-mt-[8px] text-[22px] font-[500] ">
