@@ -2,6 +2,7 @@ import { useState } from "react";
 
 const ImageEditor = () => {
     const [disable, setDisable] = useState(false)
+    const [active, setActive] = useState(false)
     return(
         // container  // disable
         <div className="w-[850px] p-[30px_35px_35px] bg-white rounded-[10px] shadow-[0_10px_20px_rgba(0,0,0,.1)]">
@@ -23,7 +24,14 @@ const ImageEditor = () => {
                         
                         {/* options */}
                         <div className="flex flex-wrap justify-between">
-                            
+                            <button
+                                className={`outline-0 h-[40px] text-[14px] text-[#6c757D] bg-white rounded-[3px] mb-[8px] border-1 border-[#aaa]`}
+                            >
+                                Brighteness
+                            </button>
+                            <button>Saturation</button>
+                            <button>Inversion</button>
+                            <button>Grayscale</button>
                         </div>
                     </div>
                     
