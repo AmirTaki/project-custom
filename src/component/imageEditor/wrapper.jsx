@@ -1,6 +1,12 @@
+import { useContext } from "react"
+import { EditorContect } from "."
+
 const Wrapper  = ({active, disable, img}) => {
     const buttons = ['Brighteness', 'Saturation', 'Inversion', 'Grayscale']
     const buttonsRotate = ['fa-solid fa-rotate-left', 'fa-solid fa-rotate-right', 'bx bx-reflect-vertical', 'bx bx-reflect-horizontal']
+    
+    const {filterName, filterValue} = useContext(EditorContect)
+ 
     return (
         // wrapper
         <div className="flex my-[20px] mx-0 min-h-[335px] max-md:flex-wrap-reverse! ">
