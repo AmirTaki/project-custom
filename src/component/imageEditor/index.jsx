@@ -14,12 +14,23 @@ const ImageEditor = () => {
                 <div className={`${disable ?"opacity-50 pointer-events-none" : "opacity-100 pointer-events-auto" } 
                     py-[15px] px-[20px] w-[280px] rounded-[5px] border-1 border-[#ccc]
                 `}>
+                    
                     {/* filter */}
                     <div className="">
+                        
                         {/* title => label*/}
                         <label className="block text-[16px] mb-[12px]">Filters</label>
+                        
+                        {/* options */}
+                        <div className="flex flex-wrap justify-between">
+                            
+                        </div>
                     </div>
+                    
+                    {/* rotate */}
                 </div>
+
+                {/* preview-img */}
             </div>
 
             {/* controls  */}
