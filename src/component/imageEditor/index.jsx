@@ -28,6 +28,7 @@ const ImageEditor = () => {
                 return {...state}
             case 'optionalButton':
                 const newState = state.buttonsFilter.map((item) => ({...item, active :  item.id === action.payload.id ? true : false}))
+                if(filterName.current) {filterName.current.innerText = action.payload.name}
                 return {...state, buttonsFilter : newState}
              
               
