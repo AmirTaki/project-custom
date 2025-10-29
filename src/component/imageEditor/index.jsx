@@ -102,8 +102,16 @@ const ImageEditor = () => {
                 <div className="">
                     {/* file-input */}
                     <input type="file" accept="image/*" hidden />
-                    <button>Choose Image</button>
-                    <button>Save Image</button>
+                    {/* chose image */}
+                    <button
+                        className="py-[11px] px-[20px] text-[14px] rounded-[3px] outline-0 text-white cursor-pointer
+                        bg-none transition-all duration-300 ease-in uppercase "
+                    >Choose Image</button>
+                    {/* save image */}
+                    <button
+                        className="py-[11px] px-[20px] text-[14px] rounded-[3px] outline-0 text-white cursor-pointer
+                        bg-none transition-all duration-300 ease-in uppercase "
+                    >Save Image</button>
                 </div>
             </div>
         </div>
