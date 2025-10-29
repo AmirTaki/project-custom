@@ -10,22 +10,26 @@ export const initialEditor = {
         {
             id : 0, 
             name : 'Brighteness',
-            active : true
+            active : true,
+            value : 100,
         },
         {
             id : 1, 
             name : 'Saturation',
-            active : false
+            active : false,
+            value : 100
         },
         {
             id : 2, 
             name : 'Inversion',
-            active : false
+            active : false,
+            value : 100
         },
         {
             id : 3, 
             name : 'Grayscale',
-            active : false
+            active : false,
+            value : 100
         },
     ],
 }

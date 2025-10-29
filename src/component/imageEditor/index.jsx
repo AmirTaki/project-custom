@@ -12,9 +12,9 @@ const ImageEditor = () => {
     const [text, setText] = useState(false)
 
     const fileInput = useRef(null)
-    const filterName = useRef(null)
-    const filterValue = useRef(null)
-    const filterSlider = useRef({value : 100, max : 200, min : 0 })
+    // const filterName = useRef(null)
+    // const filterValue = useRef(null)
+    // const filterSlider = useRef({value : 100, max : 200, min : 0 })
     const previewImg = useRef(null)
 
    
@@ -41,6 +41,9 @@ const ImageEditor = () => {
                 
                 return {...state, buttonsFilter : newState}
             case "inputRange":
+                if(filterSlider.current){
+                    filterSlider.current.value = action.payload.value
+                }
                 return{...state}
               
         }
@@ -49,10 +52,11 @@ const ImageEditor = () => {
 
     useEffect(() => {
         state;
+        console.log(filterSlider.current.value)
     }, [state])
 
     return(
-        <EditorContect.Provider value={{fileInput, filterName, filterValue, filterSlider, previewImg, dispath, state }}>
+        <EditorContect.Provider value={{fileInput, previewImg, dispath, state }}>
             {/* // container  // disable */}
             <div className="w-[750px] p-[30px_35px_35px] bg-white rounded-[10px] shadow-[0_10px_20px_rgba(0,0,0,.1)] max-md:p-[25px]! max-md:w-[90%]! ">
                 <h2 className="-mt-[8px] text-[22px] font-[500] ">
