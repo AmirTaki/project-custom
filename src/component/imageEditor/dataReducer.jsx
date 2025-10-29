@@ -27,5 +27,6 @@ export const initialEditor = {
             name : 'Grayscale',
             active : false
         },
-    ]
+    ],
+    filterSlider : 100
 }

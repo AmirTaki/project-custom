@@ -47,7 +47,10 @@ const Wrapper  = ({disable, img}) => {
                             <p ref = {filterValue}>100%</p>    {/* value */}
                         </div>
                         {/* input */}
-                        <input type="range"  min = {filterSlider.current.min} max =  {filterSlider.current.max} value = {filterSlider.current.value}
+                        <input type="range"  
+                            min={filterSlider.current.min}
+                            max={filterSlider.current.max}
+                            onChange={(e)=> {console.log(e.target.value)}}
                             ref = {filterSlider}
                             className="w-[100%] h-[5px] accent-[#5372F0]"
                         />

@@ -29,6 +29,15 @@ const ImageEditor = () => {
             case 'optionalButton':
                 const newState = state.buttonsFilter.map((item) => ({...item, active :  item.id === action.payload.id ? true : false}))
                 if(filterName.current) {filterName.current.innerText = action.payload.name}
+
+                if(action.payload.name === "Brighteness"){
+                    if(filterSlider.current){
+                        filterSlider.current.max = '200'
+                        filterSlider.current.value = state.brightness;
+                        filterValue.current.innerText = `${state.brightness}%`
+
+                    }
+                }
                 return {...state, buttonsFilter : newState}
              
               
