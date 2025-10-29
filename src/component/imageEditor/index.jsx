@@ -31,6 +31,7 @@ const ImageEditor = () => {
             case "applyFilter":
                 if(previewImg.current){
                     previewImg.current.style.transform = `rotate(${state.rotate}deg) scale(${state.flipHorizontal}, ${state.flipVertical})`
+                    previewImg.current.style.filter =  `brightness(${state.brightness}%) saturate(${state.saturation}%) invert(${state.inversion}%) grayscale(${state.grayscale}%)`
                 }
                 return {...state}
         }
