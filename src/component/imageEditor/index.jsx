@@ -82,8 +82,9 @@ const ImageEditor = () => {
                 </div>
 
                 {/* preview-img */}
-                <div className="flex justify-center items-center ml-[20px] rounded-[5px] overflow-hidden ">
-                    <img src={img} alt="" />
+                <div className="flex flex-1 justify-center items-center ml-[20px] rounded-[5px] overflow-hidden ">
+                    {/* img */}
+                    <img src={img} alt="" className="max-w-[490px] max-h-[335px] w-[100%] h-[100%] object-contain" />
                 </div>
             </div>
 
