@@ -1,4 +1,8 @@
+import { useContext } from "react";
+import { EditorContect } from ".";
+
 const Controls = ({disable}) => {
+    const {fileInput} =  useContext(EditorContect)
     return(
         <div className="flex flex-wrap justify-between">
             {/* reset-filters */}
@@ -16,7 +20,7 @@ const Controls = ({disable}) => {
             {/* row */}
             <div className="max-sm:w-[100%]!">
                 {/* file-input */}
-                <input type="file" accept="image/*" hidden />
+                <input type="file" accept="image/*" hidden  ref = {fileInput}/>
                 {/* chose image */}
                 <button
                     className="py-[11px] px-[20px] text-[14px] rounded-[3px] outline-0 text-white cursor-pointer
