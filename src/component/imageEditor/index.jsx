@@ -19,7 +19,6 @@ const ImageEditor = () => {
         switch(action.type){
             case "resetart":
                 const newButtonsFilter = state.buttonsFilter.map((item) => ({...item, value : item.name == "Brighteness" || item.name == "Saturation" ? 100 : 0 }))
-
                 return {...state, rotate : 0, flipHorizontal : 1, flipVertical : 1, value: 100, buttonsFilter : newButtonsFilter}
           
             case 'optionalButton':
@@ -48,6 +47,8 @@ const ImageEditor = () => {
     const [state, dispath] =  useReducer(reducerEditor, initialEditor)
 
     useEffect(() => {
+        const findItemActive = state.buttonsFilter.find((item) => item.active)
+        
         if(previewImg.current){
             previewImg.current.style.transform = `rotate(${state.rotate}deg) scale(${state.flipHorizontal}, ${state.flipVertical})`
             previewImg.current.style.filter =  `brightness(${state.buttonsFilter[0].value}%) saturate(${state.buttonsFilter[1].value}%) invert(${state.buttonsFilter[2].value}%) grayscale(${state.buttonsFilter[3].value}%)`
@@ -69,7 +70,6 @@ const ImageEditor = () => {
                     <Controls disable = {disable}/>
 
 
-                <div className="" onClick={() => {dispath({type : "applyFilter"})}}>click</div>
             </div>
         </EditorContect.Provider>
     )
