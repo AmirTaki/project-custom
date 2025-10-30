@@ -60,22 +60,24 @@ const BackgroundChangeEffect = () => {
     return(
         // {/*  container */}
         <div className="w-[100%] h-[100vh] flex items-center justify-center bg-[#f3fbff]">
+            {/* img box */}
             <div 
                 style={{backgroundImage : `url(${imgBackGround})`}}
                 onMouseDown={handlerMouseDown}
                 onTouchStart={handlerTouchStart}
                 ref = {sliderContainerRef}
-                className="top-10 relative w-full max-w-4xl aspect-[1.5/1] overflow-hidden select-none cursor-ew-resize rounded-lg shadow-2xl bg-slate-900"
+                // top-10 relative w-full max-w-4xl aspect-[1.5/1] overflow-hidden select-none cursor-ew-resize rounded-lg shadow-2xl bg-slate-900
+                className="w-[60%] m-auto leading-0 overflow-hidden relative h-100 z-20"
             >
 
-                <img 
+                {/* <img 
                     src={imgOrginal} alt="" 
                     className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                     draggable = {false}     
-                />
+                /> */}
 
             </div>
-            <div 
+            {/* <div 
                 className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none"
                 style = {{clipPath : `inset(0 ${100 - sliderPostion }% 0 0 )`}}
             >
@@ -91,7 +93,7 @@ const BackgroundChangeEffect = () => {
                     style = {{left : `calc(${sliderPostion}%) -1 px`}}
                 >
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
