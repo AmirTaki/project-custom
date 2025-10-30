@@ -23,7 +23,7 @@ const BackgroundChangeEffect = () => {
 
     }
     const handleEndDrag = () => {
-        
+
     }
 
     useEffect(() => {
@@ -31,11 +31,13 @@ const BackgroundChangeEffect = () => {
             window.addEventListener('mousemove', handlerMouseMove)
             window.addEventListener("touchmove", handlerTouchMove)
             window.addEventListener("mouseup", handleEndDrag)
+            window.addEventListener("touchend", handleEndDrag)
 
             return() => {
                 window.removeEventListener("mousemove", handlerMouseMove)
                 window.removeEventListener("touchmove", handlerTouchMove)
                 window.removeEventListener("mouseup", handleEndDrag)
+                window.removeEventListener("touchend", handleEndDrag)
             }
         }
     })
