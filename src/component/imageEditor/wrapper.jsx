@@ -1,8 +1,8 @@
 import { useContext } from "react"
 import { EditorContect } from "."
 
-const Wrapper  = ({disable, img}) => {
-    const {nameFilter, valueFilter, previewImg, dispath, state} = useContext(EditorContect)
+const Wrapper  = ({disable}) => {
+    const {nameFilter, valueFilter, previewImg, dispath, state, img} = useContext(EditorContect)
  
     return (
         // wrapper

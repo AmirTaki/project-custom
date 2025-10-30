@@ -2,11 +2,12 @@ import { useContext } from "react";
 import { EditorContect } from ".";
 
 const Controls = ({disable}) => {
-    const {fileInput} =  useContext(EditorContect)
+    const {fileInput, dispath} =  useContext(EditorContect)
     return(
         <div className="flex flex-wrap justify-between">
             {/* reset-filters */}
             <button 
+                onClick={() => {dispath({type : 'resetart'})}}
                 className={`${disable ?"opacity-50 pointer-events-none" : "opacity-100 pointer-events-auto" } 
                     py-[11px] px-[20px] text-[14px] rounded-[3px] outline-0 text-[#6C757D] hover:text-white!
                     border-1 border-[#6C757D] cursor-pointer hover:bg-[#6C757D] 
