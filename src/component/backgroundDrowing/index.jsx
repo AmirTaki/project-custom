@@ -19,10 +19,15 @@ const BackgroundChangeEffect = () => {
     const handlerMouseMove = () => {
 
     }
-    const handlerTouchMove = () => {
+    const handlerTouchMove = useCallback((e) => {
+        if(e.touches[0]){
+            handleMove(e.touches[0].clientX);
+        }
+    }, [handleMove])
+    const handleEndDrag = () => {
 
     }
-    const handleEndDrag = () => {
+    const handleMove = () => {
 
     }
 
@@ -40,7 +45,8 @@ const BackgroundChangeEffect = () => {
                 window.removeEventListener("touchend", handleEndDrag)
             }
         }
-    })
+    }, [isDragging, handlerMouseMove, handlerTouchMove, handleEndDrag])
+
     return(
         <>
             <div 
