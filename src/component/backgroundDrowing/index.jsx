@@ -2,13 +2,30 @@ import imgBackGround from "./img/background.png"
 import imgTransparent from "./img/transparent.png"
 import imgOrginal from "./img/original.jpg"
 import imgArrwo from "./img/arrow.png"
-import { useRef } from "react"
+import { useEffect, useRef } from "react"
 
 const BackgroundChangeEffect = () => {
     const imgBox =  useRef(null)
     const imgWrap = useRef(null)
     const originalImg = useRef(null)
     const line = useRef(null)
+
+    useEffect(() => {
+
+        imgBox = imgBox.current;
+        imgWrap = imgWrap.current;
+        
+
+        const handlerMouseMove = () => {
+
+        }
+        if(imgBox.current)
+        document.addEventListener("mousemove", handlerMouseMove)
+        return() => {
+            document.removeEventListener('mousemove', handlerMouseMove)
+        }
+    })
+
     return(
         //  container
         <div className="w-[100%] h-[100vh] flex justify-center items-center-safe bg-[#f3fbff]">
