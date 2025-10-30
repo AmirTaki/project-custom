@@ -1,8 +1,8 @@
 export const initialEditor = {
-    brightness : '100',
-    saturation : '100',
-    inversion : '0',
-    grayscale : '0',
+    // brightness : '100',
+    // saturation : '100',
+    // inversion : '0',
+    // grayscale : '0',
     rotate : 0,
     flipHorizontal : 1,
     flipVertical : 1,
@@ -39,4 +39,27 @@ export const initialEditor = {
             max : 100
         },
     ],
+    buttonssRotate : [
+        {
+            id : 0,
+            icon : 'fa-solid fa-rotate-left',
+            size : '14'
+        },
+        {
+            id : 1,
+            icon : 'fa-solid fa-rotate-right',
+            size : '18'
+        },
+        {
+            id : 2,
+            icon : 'bx bx-reflect-vertical',
+            size : '18'
+        },
+        {
+            id : 3,
+            icon : 'bx bx-reflect-horizontal',
+            size : '18'
+        },
+
+    ]
 }

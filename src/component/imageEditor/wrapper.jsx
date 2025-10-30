@@ -2,7 +2,6 @@ import { useContext } from "react"
 import { EditorContect } from "."
 
 const Wrapper  = ({disable, img}) => {
-    // const buttons = ['Brighteness', 'Saturation', 'Inversion', 'Grayscale']
     const buttonsRotate = ['fa-solid fa-rotate-left', 'fa-solid fa-rotate-right', 'bx bx-reflect-vertical', 'bx bx-reflect-horizontal']
     
     const {nameFilter, valueFilter, previewImg, dispath, state} = useContext(EditorContect)
