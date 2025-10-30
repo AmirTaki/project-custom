@@ -37,7 +37,10 @@ const ImageEditor = () => {
                 find.value = action.payload.value
                 if(valueFilter.current) {valueFilter.current.innerText = `${action.payload.value}%` }
                 return{...state, value : action.payload.value}
-              
+            
+            case "rotateOptions": 
+
+                return {...state}
         }
     }
     const [state, dispath] =  useReducer(reducerEditor, initialEditor)
