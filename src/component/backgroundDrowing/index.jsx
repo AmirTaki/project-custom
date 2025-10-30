@@ -1,5 +1,6 @@
 import imgBackGround from "./img/background.png"
 import imgTransparent from "./img/transparent.png"
+import imgOrginal from "./img/original.jpg"
 
 const BackgroundChangeEffect = () => {
     return(
@@ -14,6 +15,9 @@ const BackgroundChangeEffect = () => {
                 <img src={imgTransparent} alt="" className="w-[100%]" />
 
                 {/* img-wrap */}
+                <div className="w-[20px] absolute left-0 top-0 overflow-hidden">
+                    <img src={imgOrginal} alt="" />
+                </div>
             </div>
         </div>
     )
