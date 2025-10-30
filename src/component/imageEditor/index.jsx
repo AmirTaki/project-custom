@@ -48,12 +48,15 @@ const ImageEditor = () => {
 
     useEffect(() => {
         const findItemActive = state.buttonsFilter.find((item) => item.active)
+        if(nameFilter.current && valueFilter.current){
+            nameFilter.current.innerText = findItemActive.name
+            valueFilter.current.innerText = findItemActive.value
+        }
         
         if(previewImg.current){
             previewImg.current.style.transform = `rotate(${state.rotate}deg) scale(${state.flipHorizontal}, ${state.flipVertical})`
             previewImg.current.style.filter =  `brightness(${state.buttonsFilter[0].value}%) saturate(${state.buttonsFilter[1].value}%) invert(${state.buttonsFilter[2].value}%) grayscale(${state.buttonsFilter[3].value}%)`
         }
-        console.log(state.buttonsFilter)
     }, [state])
 
     return(
