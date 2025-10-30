@@ -2,10 +2,13 @@ import imgBackGround from "./img/background.png"
 import imgTransparent from "./img/transparent.png"
 import imgOrginal from "./img/original.jpg"
 import imgArrwo from "./img/arrow.png"
+import { useRef, useState } from "react"
 
 
 const BackgroundChangeEffect = () => {
-
+    const [sliderPostion, setSliderPostion] =  useState(50)
+    const [isDragging, setIsDragging] = useState(false)
+    const  sliderContainerRef = useRef(null)
 
     return(
         <>
@@ -27,7 +30,7 @@ const BackgroundChangeEffect = () => {
 
                 <div 
                     className="absolute top-0 bottom-0 w-1 bg-white/80 backdrop-blur-sm cursor-ew-resize pointer-events-none"
-                    style = {{left : `calc(${}%) -1 px`}}
+                    // style = {{left : `calc(${}%) -1 px`}}
                 >
                 </div>
             </div>
