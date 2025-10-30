@@ -2,8 +2,13 @@ import imgBackGround from "./img/background.png"
 import imgTransparent from "./img/transparent.png"
 import imgOrginal from "./img/original.jpg"
 import imgArrwo from "./img/arrow.png"
+import { useRef } from "react"
 
 const BackgroundChangeEffect = () => {
+    const imgBox =  useRef(null)
+    const imgWrap = useRef(null)
+    const originalImg = useRef(null)
+    const line = useRef(null)
     return(
         //  container
         <div className="w-[100%] h-[100vh] flex justify-center items-center-safe bg-[#f3fbff]">
