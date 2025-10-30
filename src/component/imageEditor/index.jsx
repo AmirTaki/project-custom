@@ -14,7 +14,6 @@ const ImageEditor = () => {
     const fileInput = useRef(null)
     const nameFilter = useRef(null)
     const valueFilter = useRef(null)
-    // const inputFilter = useRef(null)
     const previewImg = useRef(null)
 
    
@@ -23,7 +22,7 @@ const ImageEditor = () => {
             case "applyFilter":
                 if(previewImg.current){
                     previewImg.current.style.transform = `rotate(${state.rotate}deg) scale(${state.flipHorizontal}, ${state.flipVertical})`
-                    previewImg.current.style.filter =  `brightness(${state.brightness}%) saturate(${state.saturation}%) invert(${state.inversion}%) grayscale(${state.grayscale}%)`
+                    previewImg.current.style.filter =  `brightness(${state.buttonsFilter[0].value}%) saturate(${state.buttonsFilter[1].value}%) invert(${state.buttonsFilter[2].value}%) grayscale(${state.buttonsFilter[3].value}%)`
                 }
                 return {...state}
           
@@ -44,8 +43,10 @@ const ImageEditor = () => {
     const [state, dispath] =  useReducer(reducerEditor, initialEditor)
 
     useEffect(() => {
-        state;
-        console.log(state.buttonsFilter)
+        if(previewImg.current){
+            previewImg.current.style.transform = `rotate(${state.rotate}deg) scale(${state.flipHorizontal}, ${state.flipVertical})`
+            previewImg.current.style.filter =  `brightness(${state.buttonsFilter[0].value}%) saturate(${state.buttonsFilter[1].value}%) invert(${state.buttonsFilter[2].value}%) grayscale(${state.buttonsFilter[3].value}%)`
+        }
     }, [state])
 
     return(
