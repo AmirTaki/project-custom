@@ -12,18 +12,21 @@ const BackgroundChangeEffect = () => {
 
     useEffect(() => {
 
-        imgBox = imgBox.current;
-        imgWrap = imgWrap.current;
-        originalImg = originalImg.current;
-        line = line.current;
+        // imgBox = imgBox.current;
+        // imgWrap = imgWrap.current;
+        // originalImg = originalImg.current;
+        // line = line.current;
 
         const handlerMouseMove = () => {
 
         }
-        if(imgBox.current)
-        document.addEventListener("mousemove", handlerMouseMove)
+        if(imgBox.current){
+            imgBox.current.addEventListener("mousemove", handlerMouseMove)
+        }
         return() => {
-            document.removeEventListener('mousemove', handlerMouseMove)
+            if(imgBox.current){
+                imgBox.current.removeEventListener('mousemove', handlerMouseMove)
+            }
         }
     })
 
