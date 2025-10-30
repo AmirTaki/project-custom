@@ -22,7 +22,7 @@ const Controls = ({disable}) => {
             <div className="max-sm:w-[100%]!">
                 {/* file-input */}
                 <input 
-                    onChange={(e) => {dispath({type : '', payload : {event : e.target.files}})}}
+                    onChange={(e) => {dispath({type : 'imageInput', payload : {event : e.target.files}})}}
                     type="file" 
                     accept="image/*" hidden  
                     ref = {fileInput}/>

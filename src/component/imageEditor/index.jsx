@@ -43,8 +43,13 @@ const ImageEditor = () => {
             case 'loadImage' :
                 if(fileInput.current){
                     fileInput.current?.click();
+
                 }
                 return {...state}
+            case "imageInput" : 
+                const file = action.payload.event
+                console.log(file)
+                return{...state}
         }
     }
     const [state, dispath] =  useReducer(reducerEditor, initialEditor)
