@@ -10,23 +10,6 @@ const BackgroundChangeEffect = () => {
     const [isDragging, setIsDragging] = useState(false)
     const  sliderContainerRef = useRef(null)
 
-    const handlerMouseDown = () => {
-
-    }
-    const handlerTouchStart = () => {
-
-    }
-    const handlerMouseMove = () => {
-
-    }
-    const handlerTouchMove = useCallback((e) => {
-        if(e.touches[0]){
-            handleMove(e.touches[0].clientX);
-        }
-    }, [handleMove])
-    const handleEndDrag = () => {
-
-    }
     const handleMove = useCallback((clientX) => {
         if(!isDragging || !sliderContainerRef.current) return;
 
@@ -36,6 +19,27 @@ const BackgroundChangeEffect = () => {
 
         setIsDragging(percent)
     }, [isDragging])
+
+    const handlerMouseDown = (e) => {
+        e.preventDefault();
+        setIsDragging(true)
+    }
+    const handlerTouchStart = (e) => {
+        setIsDragging(true)
+    }
+    const handlerMouseMove = useCallback((e) => {
+        handleMove(e.clientX)
+    }, [handleMove])
+
+    const handlerTouchMove = useCallback((e) => {
+        if(e.touches[0]){
+            handleMove(e.touches[0].clientX);
+        }
+    }, [handleMove])
+    
+    const handleEndDrag = useCallback( () => {
+        setIsDragging(false)
+    }, [])
 
     useEffect(() => {
         if (isDragging) {
