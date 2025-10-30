@@ -44,13 +44,13 @@ export const initialEditor = {
             id : 0,
             icon : 'fa-solid fa-rotate-left',
             size : '14',
-            name : 'rotate',
+            name : 'rotate-left',
         },
         {
             id : 1,
             icon : 'fa-solid fa-rotate-right',
             size : '14',
-            name : 'rotate',
+            name : 'rotate-right',
         },
         {
             id : 2,

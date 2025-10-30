@@ -65,7 +65,7 @@ const Wrapper  = ({disable}) => {
                             return(
                                 <button
                                     key = {item.id}
-                                    onClick={() => {dispath({type : item.name, payload : {name : item.icon} })}}
+                                    onClick={() => {dispath({type : "OptionalRotate", payload : {name : item.name} })}}
                                     style={{ fontSize : `${item.size}px`}}
                                     className= {` outline-0 h-[40px]   rounded-[3px] mb-[8px]  w-[calc(25%-3px)] active:text-white! active:bg-[#5372F0]! active:border-[#5372F0]!
                                         text-[#6c757D] bg-white border-1 border-[#aaa] hover:bg-[#f5f5f5]

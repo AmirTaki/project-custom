@@ -18,13 +18,9 @@ const ImageEditor = () => {
     const reducerEditor = (state, action) => {
         switch(action.type){
             case "resetart":
-                const newButtonsFilter = state.buttonsFilter.map((item) => {
-                    return {...item, value : item.name == "Brighteness" || item.name == "Saturation" ? 100 : 0 }
-                    
-                })
-
+                const newButtonsFilter = state.buttonsFilter.map((item) => ({...item, value : item.name == "Brighteness" || item.name == "Saturation" ? 100 : 0 }))
                 return {...state, rotate : 0, flipHorizontal : 1, flipVertical : 1, value: 100, buttonsFilter : newButtonsFilter}
-          
+        
             case 'optionalButton':
                 const newState = state.buttonsFilter.map((item) => ({...item, active :  item.id === action.payload.id ? true : false}))
                 if(nameFilter.current) {nameFilter.current.innerText = action.payload.name}
@@ -37,8 +33,15 @@ const ImageEditor = () => {
                 if(valueFilter.current) {valueFilter.current.innerText = `${action.payload.value}%` }
                 return{...state, value : action.payload.value}
             
-            case "rotate": 
-                action.payload.name == "fa-solid fa-rotate-left"? state.rotate -= 45 : state.rotate += 45
+            case "OptionalRotate": 
+
+                if(action.payload.name == 'vertical' || action.payload.name == 'horizontal'){
+
+                }
+                else {
+
+                }
+                action.payload.name == "fa-solid fa-rotate-left"? state.roate -= 45 : state.rotate += 45
                 return{...state }
            
             case "vertical" :
