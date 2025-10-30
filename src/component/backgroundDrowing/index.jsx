@@ -2,7 +2,7 @@ import imgBackGround from "./img/background.png"
 import imgTransparent from "./img/transparent.png"
 import imgOrginal from "./img/original.jpg"
 import imgArrwo from "./img/arrow.png"
-import { useRef, useState } from "react"
+import { useCallback, useRef, useState } from "react"
 
 
 const BackgroundChangeEffect = () => {
@@ -10,10 +10,20 @@ const BackgroundChangeEffect = () => {
     const [isDragging, setIsDragging] = useState(false)
     const  sliderContainerRef = useRef(null)
 
+    const handlerMouseDown = () => {
+
+    }
+    const handlerTouchStart = () => {
+        
+    }
     return(
         <>
             <div 
-            className="top-10 relative w-full max-w-4xl aspect-[1.5/1] overflow-hidden select-none cursor-ew-resize rounded-lg shadow-2xl bg-slate-900">
+                onMouseDown={handlerMouseDown}
+                onTouchStart={handlerTouchStart}
+                ref = {sliderContainerRef}
+                className="top-10 relative w-full max-w-4xl aspect-[1.5/1] overflow-hidden select-none cursor-ew-resize rounded-lg shadow-2xl bg-slate-900"
+            >
 
                 <img src={imgOrginal} alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" />
 
