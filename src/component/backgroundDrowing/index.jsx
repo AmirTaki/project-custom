@@ -14,7 +14,8 @@ const BackgroundChangeEffect = () => {
 
         imgBox = imgBox.current;
         imgWrap = imgWrap.current;
-        
+        originalImg = originalImg.current;
+        line = line.current;
 
         const handlerMouseMove = () => {
 
