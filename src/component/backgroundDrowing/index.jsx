@@ -70,11 +70,19 @@ const BackgroundChangeEffect = () => {
                 className="w-[60%] m-auto leading-0 overflow-hidden relative h-100 z-20"
             >
 
-                {/* <img 
+                <img 
                     src={imgOrginal} alt="" 
-                    className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                    className="absolute  inset-0 w-full h-full object-cover pointer-events-none"
                     draggable = {false}     
-                /> */}
+                />
+                {/* img wrap */}
+                <div className="w-[100%] h-[100%] absolute left-0 top-0 overflow-hidden">
+                    <img 
+                        src={imgTransparent} alt="" 
+                        className="absolute inset-0 w-[100%] h-[100%] top-0 object-cover pointer-events-none"
+                        draggable = {false}
+                    />
+                </div>
 
             </div>
             {/* <div 
