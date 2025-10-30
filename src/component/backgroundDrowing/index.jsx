@@ -39,12 +39,13 @@ const BackgroundChangeEffect = () => {
                 <img 
                     src={imgTransparent} alt="" 
                     className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                    draggable = {false}
                />
                <div className="absolute top-2 left-2 bg-black bg-opacity-60 text-white text-xs sm:text-sm px-2 py-1 rounded-md pointer-events-none"></div>
 
                 <div 
                     className="absolute top-0 bottom-0 w-1 bg-white/80 backdrop-blur-sm cursor-ew-resize pointer-events-none"
-                    // style = {{left : `calc(${}%) -1 px`}}
+                    style = {{left : `calc(${sliderPostion}%) -1 px`}}
                 >
                 </div>
             </div>
