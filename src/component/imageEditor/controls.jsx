@@ -36,7 +36,7 @@ const Controls = () => {
                 >Choose Image</button>
                 {/* save image */}
                 <button
-                    onClick={() => {dispath({type : 'downloadImage'})}}
+                    onClick={() => {dispath({type : 'downloadImage', payload : {previewImg : previewImg.current}})}}
                     className={` ${state.disable ?"opacity-50 pointer-events-none" : "opacity-100 pointer-events-auto" } 
                         py-[11px] px-[20px] text-[14px] rounded-[3px] outline-0 text-white cursor-pointer
                         bg-[#5372F0] transition-all duration-300 ease-in uppercase ml-[5px] border-1 border-[#5372F0]

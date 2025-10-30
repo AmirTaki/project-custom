@@ -31,6 +31,8 @@ export const ReducerEditor = (state, action) => {
             return {...state}
         
         case "imageInput" : 
+            var {previewImg} = action.payload
+
             const file = action.payload.files?.[0]
             if(!file) return{...state}
 
@@ -38,27 +40,28 @@ export const ReducerEditor = (state, action) => {
                 alert('Please select an image file.')
                 return{...state}
             }
-            if(previewImg.current){
-                URL.revokeObjectURL(previewImg.current)
+            if(previewImg){
+                URL.revokeObjectURL(previewImg)
             }
             const newURL = URL.createObjectURL(file)
 
-            if(previewImg.current){
-                previewImg.current.src = newURL
+            if(previewImg){
+                previewImg.src = newURL
             }
 
             return{...state, disable : false}
 
         case "downloadImage" :
-            const image = previewImg.current;
-            if (!image) return {...state};
+            var {previewImg} = action.payload
+            
+            if (!previewImg) return {...state};
 
             const canvas = document.createElement("canvas");
             const ctx = canvas.getContext('2d');
             if (!ctx)  return {...state};
 
-            canvas.width = image.naturalWidth;
-            canvas.height = image.naturalHeight;
+            canvas.width = previewImg.naturalWidth;
+            canvas.height = previewImg.naturalHeight;
 
             ctx.filter = `brightness(${state.buttonsFilter[0].value}%) saturate(${state.buttonsFilter[1].value}%) invert(${state.buttonsFilter[2].value}%) grayscale(${state.buttonsFilter[3].value}%)`
             ctx.translate(canvas.width / 2, canvas.height / 2);
@@ -68,10 +71,10 @@ export const ReducerEditor = (state, action) => {
             }
 
             ctx.scale(state.flipHorizontal, state.flipVertical);
-            ctx.drawImage(image, -canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);
+            ctx.drawImage(previewImg, -canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);
 
             const link = document.createElement('a');
-            link.download = `${image.src}`;
+            link.download = `${previewImg.src}`;
             link.href = canvas.toDataURL();
             link.click(); 
 
