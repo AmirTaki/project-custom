@@ -39,7 +39,7 @@ const ImageEditor = () => {
                 return{...state, value : action.payload.value}
             
             case "rotateOptions": 
-
+                
                 return {...state}
         }
     }

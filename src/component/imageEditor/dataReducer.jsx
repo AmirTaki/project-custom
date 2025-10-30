@@ -45,7 +45,7 @@ export const initialEditor = {
             icon : 'fa-solid fa-rotate-left',
             size : '14',
             name : 'rotate-left',
-            deg : '90'
+            Rotation : '90'
         
         },
         {
@@ -53,7 +53,7 @@ export const initialEditor = {
             icon : 'fa-solid fa-rotate-right',
             size : '14',
             name : 'rotate-right',
-            deg : '90'
+            Rotation : '90'
         },
         {
             id : 2,
@@ -66,6 +66,7 @@ export const initialEditor = {
             id : 3,
             icon : 'bx bx-reflect-horizontal',
             size : '18',
+            name : 'vertical',
             Rotation : 1
         },
 
