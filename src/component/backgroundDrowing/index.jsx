@@ -59,49 +59,42 @@ const BackgroundChangeEffect = () => {
 
     return(
         // {/*  container */}
-        <div className="w-[100%] h-[100vh] flex items-center justify-center bg-[#f3fbff]">
+        <div className="">
             {/* img box */}
             <div 
-                style={{backgroundImage : `url(${imgBackGround})`}}
+               
                 onMouseDown={handlerMouseDown}
                 onTouchStart={handlerTouchStart}
                 ref = {sliderContainerRef}
-                // top-10 relative w-full max-w-4xl aspect-[1.5/1] overflow-hidden select-none cursor-ew-resize rounded-lg shadow-2xl bg-slate-900
-                className="w-[60%] m-auto leading-0 overflow-hidden relative h-100 z-20"
+                // 
+                className="top-10 relative w-[500px] h-[300px] max-w-4xl aspect-[1.5/1] overflow-hidden select-none cursor-ew-resize rounded-lg shadow-2xl bg-slate-900"
             >
 
                 <img 
                     src={imgOrginal} alt="" 
-                    className="absolute  inset-0 w-full h-full object-cover pointer-events-none"
+                    className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                     draggable = {false}     
-                />
+                    />
+
+
                 {/* img wrap */}
-                <div className="w-[100%] h-[100%] absolute left-0 top-0 overflow-hidden">
+                <div className="absolute inset-0  bg-white w-full h-full overflow-hidden pointer-events-none"
+                    style = {{clipPath : `inset(0 ${100 - sliderPostion }% 0 0 )`, backgroundImage : `url(${imgBackGround})`}}
+                >
                     <img 
                         src={imgTransparent} alt="" 
                         className="absolute inset-0 w-[100%] h-[100%] top-0 object-cover pointer-events-none"
                         draggable = {false}
+                        style = {{left : `calc(${sliderPostion}%) -1 px`}}
                     />
                 </div>
 
+                {/* line */}
+                {/* <span className="w-[10px] h-[100%] cursor-ew-resize bg-blue-500 z-20 absolute top-10">
+                    <img src={imgArrwo} alt="" className=" h-[80px] absolute top-[50%] ml-[-20px] mt-[-20px]"/>
+                </span> */}
             </div>
-            {/* <div 
-                className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none"
-                style = {{clipPath : `inset(0 ${100 - sliderPostion }% 0 0 )`}}
-            >
-                <img 
-                    src={imgTransparent} alt="" 
-                    className="absolute inset-0 w-[100%] h-[100%] top-0 object-cover pointer-events-none"
-                    draggable = {false}
-               />
-               <div className="absolute top-2 left-2 bg-black bg-opacity-60 text-white text-xs sm:text-sm px-2 py-1 rounded-md pointer-events-none"></div>
-
-                <div 
-                    className="absolute top-0 bottom-0 w-1 bg-white/80 backdrop-blur-sm cursor-ew-resize pointer-events-none"
-                    style = {{left : `calc(${sliderPostion}%) -1 px`}}
-                >
-                </div>
-            </div> */}
+         
         </div>
     )
 }
