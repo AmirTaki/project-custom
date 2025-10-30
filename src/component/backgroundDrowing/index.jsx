@@ -62,12 +62,10 @@ const BackgroundChangeEffect = () => {
         <div className="">
             {/* img box */}
             <div 
-               
                 onMouseDown={handlerMouseDown}
                 onTouchStart={handlerTouchStart}
                 ref = {sliderContainerRef}
-                // 
-                className="top-10 relative w-[500px] h-[300px] max-w-4xl aspect-[1.5/1] overflow-hidden select-none cursor-ew-resize rounded-lg shadow-2xl bg-slate-900"
+                className="top-10 relative w-[700px] h-[100%] max-w-4xl aspect-[1.5/1] overflow-hidden select-none cursor-ew-resize rounded-lg shadow-2xl bg-slate-900"
             >
 
                 <img 
@@ -78,7 +76,7 @@ const BackgroundChangeEffect = () => {
 
 
                 {/* img wrap */}
-                <div className="absolute inset-0  bg-white w-full h-full overflow-hidden pointer-events-none"
+                <div className=" inset-0 absolute bg-white w-full h-full overflow-hidden pointer-events-none"
                     style = {{clipPath : `inset(0 ${100 - sliderPostion }% 0 0 )`, backgroundImage : `url(${imgBackGround})`}}
                 >
                     <img 
@@ -87,12 +85,12 @@ const BackgroundChangeEffect = () => {
                         draggable = {false}
                         style = {{left : `calc(${sliderPostion}%) -1 px`}}
                     />
-                </div>
 
-                {/* line */}
-                {/* <span className="w-[10px] h-[100%] cursor-ew-resize bg-blue-500 z-20 absolute top-10">
-                    <img src={imgArrwo} alt="" className=" h-[80px] absolute top-[50%] ml-[-20px] mt-[-20px]"/>
-                </span> */}
+                    <img src={imgArrwo} 
+                        style = {{clipPath : `inset(0 ${100 - sliderPostion }% 0 0 )`}}
+                        className="absolute inset-0 w-[40px] h-[50px] top-50 overflow-hidden  pointer-events-none"
+                    />
+                </div>
             </div>
          
         </div>
