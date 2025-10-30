@@ -17,9 +17,14 @@ const BackgroundChangeEffect = () => {
         // originalImg = originalImg.current;
         // line = line.current;
 
+        if(imgBox.current && originalImg.current){
+            originalImg.current.style.width = imgBox.current.offsetWidth + "px"
+        }        
+
         const handlerMouseMove = () => {
 
         }
+
         if(imgBox.current){
             imgBox.current.addEventListener("mousemove", handlerMouseMove)
         }
