@@ -23,14 +23,13 @@ const ImageEditor = () => {
           
             case 'optionalButton':
                 const newState = state.buttonsFilter.map((item) => ({...item, active :  item.id === action.payload.id ? true : false}))
-                if(nameFilter.current) {nameFilter.current.innerText = action.payload.name}
-                if(valueFilter.current) {valueFilter.current.innerText = `${action.payload.value}%` }
+                
                 return {...state, buttonsFilter : newState, value : action.payload.value, max : action.payload.max}
 
             case "inputRange":
                 const find =  state.buttonsFilter.find((item) => item.active )
                 find.value = action.payload.value
-                if(valueFilter.current) {valueFilter.current.innerText = `${action.payload.value}%` }
+                // if(valueFilter.current) {valueFilter.current.innerText = `${action.payload.value}%` }
                 return{...state, value : action.payload.value}
             
             case "rotate": 
@@ -52,6 +51,8 @@ const ImageEditor = () => {
             nameFilter.current.innerText = findItemActive.name
             valueFilter.current.innerText = findItemActive.value
         }
+        state.value = findItemActive.value;
+        state.max = findItemActive.max
         
         if(previewImg.current){
             previewImg.current.style.transform = `rotate(${state.rotate}deg) scale(${state.flipHorizontal}, ${state.flipVertical})`
