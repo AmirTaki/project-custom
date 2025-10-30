@@ -2,7 +2,7 @@ import imgBackGround from "./img/background.png"
 import imgTransparent from "./img/transparent.png"
 import imgOrginal from "./img/original.jpg"
 import imgArrwo from "./img/arrow.png"
-import { useCallback, useRef, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 
 
 const BackgroundChangeEffect = () => {
@@ -16,6 +16,24 @@ const BackgroundChangeEffect = () => {
     const handlerTouchStart = () => {
 
     }
+    const handlerMouseMove = () => {
+
+    }
+    const handlerTouchMove = () => {
+        
+    }
+
+    useEffect(() => {
+        if (isDragging) {
+            window.addEventListener('mousemove', handlerMouseMove)
+            window.addEventListener("touchmove", handlerTouchMove)
+
+            return() => {
+                window.removeEventListener("mousemove", handlerMouseMove)
+                window.removeEventListener("touchmove", handlerTouchMove)
+            }
+        }
+    })
     return(
         <>
             <div 
