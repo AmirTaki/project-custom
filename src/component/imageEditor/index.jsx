@@ -83,6 +83,13 @@ const ImageEditor = () => {
 
                 ctx.scale(state.flipHorizontal, state.flipVertical)
                 ctx.drawImage(previewImg, -canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height)
+     
+                const link = document.createElement('a');
+                link.download = 'image.jpg';
+                link.href = canvas.toDataURL();
+                link.click();
+
+                return {...state}
             }
     }
     const [state, dispath] =  useReducer(reducerEditor, initialEditor)
