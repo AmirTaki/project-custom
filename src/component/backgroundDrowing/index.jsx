@@ -17,7 +17,7 @@ const BackgroundChangeEffect = () => {
         const x = Math.max(0, Math.min(clientX - rect.left, rect.width))
         const percent = (x / rect.width * 100)
 
-        setIsDragging(percent)
+        setSliderPostion(percent)
     }, [isDragging])
 
     const handlerMouseDown = (e) => {
@@ -58,8 +58,10 @@ const BackgroundChangeEffect = () => {
     }, [isDragging, handlerMouseMove, handlerTouchMove, handleEndDrag])
 
     return(
-        <>
+        // {/*  container */}
+        <div className="w-[100%] h-[100vh] flex items-center justify-center bg-[#f3fbff]">
             <div 
+                style={{backgroundImage : `url(${imgBackGround})`}}
                 onMouseDown={handlerMouseDown}
                 onTouchStart={handlerTouchStart}
                 ref = {sliderContainerRef}
@@ -79,7 +81,7 @@ const BackgroundChangeEffect = () => {
             >
                 <img 
                     src={imgTransparent} alt="" 
-                    className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                    className="absolute inset-0 w-[100%] h-[100%] top-0 object-cover pointer-events-none"
                     draggable = {false}
                />
                <div className="absolute top-2 left-2 bg-black bg-opacity-60 text-white text-xs sm:text-sm px-2 py-1 rounded-md pointer-events-none"></div>
@@ -90,7 +92,7 @@ const BackgroundChangeEffect = () => {
                 >
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 export default BackgroundChangeEffect
