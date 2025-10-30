@@ -7,8 +7,6 @@ import { initialEditor } from "./dataReducer";
 export const EditorContect =  createContext('')
 const ImageEditor = () => {
  
-    const [disable, setDisable] = useState(false)
-
     const fileInput = useRef(null)
     const nameFilter = useRef(null)
     const valueFilter = useRef(null)
@@ -43,8 +41,8 @@ const ImageEditor = () => {
             case 'loadImage' :
                 if(fileInput.current){
                     fileInput.current?.click();
-
                 }
+
                 return {...state}
             case "imageInput" : 
                 const file = action.payload.files?.[0]
@@ -62,7 +60,7 @@ const ImageEditor = () => {
                     previewImg.current.src = newURL
                 }
 
-                return{...state}
+                return{...state, disable : false}
         }
     }
     const [state, dispath] =  useReducer(reducerEditor, initialEditor)
@@ -100,10 +98,10 @@ const ImageEditor = () => {
                     Easy Image Editor
                 </h2>
                 {/* wrapper */}
-                    <Wrapper disable = {disable}/>
+                    <Wrapper />
 
                 {/* controls  */}
-                    <Controls disable = {disable}/>
+                    <Controls />
 
 
             </div>

@@ -1,14 +1,14 @@
 import { useContext } from "react"
 import { EditorContect } from "."
 
-const Wrapper  = ({disable}) => {
+const Wrapper  = () => {
     const {nameFilter, valueFilter, previewImg, dispath, state, img, inputRange} = useContext(EditorContect)
  
     return (
         // wrapper
         <div className="flex my-[20px] mx-0 min-h-[335px] max-md:flex-wrap-reverse! ">
             {/* editor-panel */}
-            <div className={`${disable ?"opacity-50 pointer-events-none" : "opacity-100 pointer-events-auto" } 
+            <div className={`${state.disable ?"opacity-50 pointer-events-none" : "opacity-100 pointer-events-auto" } 
                 py-[15px] px-[20px] w-[280px] rounded-[5px] border-1 border-[#ccc] max-md:w-[100%]!
             `}>
                 
