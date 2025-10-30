@@ -6,6 +6,9 @@ export const initialEditor = {
     rotate : 0,
     flipHorizontal : 1,
     flipVertical : 1,
+    value : 50,
+    min : 0,
+    max : 100,
     buttonsFilter : [
         {
             id : 0, 

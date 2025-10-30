@@ -5,7 +5,7 @@ const Wrapper  = ({disable, img}) => {
     // const buttons = ['Brighteness', 'Saturation', 'Inversion', 'Grayscale']
     const buttonsRotate = ['fa-solid fa-rotate-left', 'fa-solid fa-rotate-right', 'bx bx-reflect-vertical', 'bx bx-reflect-horizontal']
     
-    const {inputFilter ,nameFilter, valueFilter, previewImg, dispath, state} = useContext(EditorContect)
+    const {nameFilter, valueFilter, previewImg, dispath, state} = useContext(EditorContect)
  
     return (
         // wrapper
@@ -48,10 +48,12 @@ const Wrapper  = ({disable, img}) => {
                         </div>
                         {/* input */}
                         <input type="range"  
+                            value = {state.value}
                             min='0'
                             max='100'
                             onChange={(e)=> {dispath({type : "inputRange", payload : {value : e.target.value}})}}
-                            ref = {inputFilter}
+                            // ref = {inputFilter}
+                            
                             className="w-[100%] h-[5px] accent-[#5372F0]"
                         />
                     </div>
