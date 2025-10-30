@@ -72,6 +72,11 @@ const ImageEditor = () => {
 
                 if(!ctx) return{...state}
                 return {...state}
+
+                canvas.width = previewImg.naturalWidth;
+                canvas.height = previewImg.naturalHeight;
+                ctx.filter = `brightness(${state.buttonsFilter[0].value}%) saturate(${state.buttonsFilter[1].value}%) invert(${state.buttonsFilter[2].value}%) grayscale(${state.buttonsFilter[3].value}%)`
+                ctx.translate(canvas.width / 2, canvas.height / 2);
         }
     }
     const [state, dispath] =  useReducer(reducerEditor, initialEditor)
