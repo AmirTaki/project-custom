@@ -47,8 +47,21 @@ const ImageEditor = () => {
                 }
                 return {...state}
             case "imageInput" : 
-                const file = action.payload.event
-                console.log(file)
+                const file = action.payload.files?.[0]
+                if(!file) return{...state}
+
+                if(!file.type.startsWith('image/')){
+                    alert('Please select an image file.')
+                }
+                if(previewImg.current){
+                    URL.revokeObjectURL(previewImg.current)
+                }
+                const newURL = URL.createObjectURL(file)
+
+                if(previewImg.current){
+                    previewImg.current.src = newURL
+                }
+
                 return{...state}
         }
     }
