@@ -31,11 +31,11 @@ const ImageEditor = () => {
                 const newState = state.buttonsFilter.map((item) => ({...item, active :  item.id === action.payload.id ? true : false}))
                 if(nameFilter.current) {nameFilter.current.innerText = action.payload.name}
                 if(valueFilter.current) {valueFilter.current.innerText = `${action.payload.value}%` }
-                return {...state, buttonsFilter : newState}
+                return {...state, buttonsFilter : newState, value : action.payload.value, max : action.payload.max}
 
             case "inputRange":
                 const find =  state.buttonsFilter.find((item) => item.active )
-                const newValue = find.value = action.payload.value
+                find.value = action.payload.value
                 if(valueFilter.current) {valueFilter.current.innerText = `${action.payload.value}%` }
                 return{...state, value : action.payload.value}
               
