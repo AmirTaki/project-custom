@@ -8,7 +8,7 @@ const BackgroundChangeEffect = () => {
         <div className="w-[100%] h-[100vh] flex justify-center items-center-safe bg-[#f3fbff]">
             {/* img-box */}
             <div 
-                style={{backgroundImage : imgBackGround}}
+                style={{backgroundImage : `url(${imgBackGround})` }}
                 className="w-[60%] m-auto leading-0 overflow-hidden relative"
             >
                 {/* img-box */}
