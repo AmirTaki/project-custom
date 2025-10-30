@@ -19,6 +19,9 @@ const BackgroundChangeEffect = () => {
                     <img src={imgOrginal} alt="" />
                 </div>
             </div>
+
+            {/* line */}
+            <span className="w-[1px] h-[100%] cursor-ew-resize bg-white absolute left-[20%] top-[0]"></span>
         </div>
     )
 }
