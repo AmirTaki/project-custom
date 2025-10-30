@@ -1,6 +1,7 @@
 import imgBackGround from "./img/background.png"
 import imgTransparent from "./img/transparent.png"
 import imgOrginal from "./img/original.jpg"
+import imgArrwo from "./img/arrow.png"
 
 const BackgroundChangeEffect = () => {
     return(
@@ -21,7 +22,10 @@ const BackgroundChangeEffect = () => {
             </div>
 
             {/* line */}
-            <span className="w-[1px] h-[100%] cursor-ew-resize bg-white absolute left-[20%] top-[0]"></span>
+            <span className="w-[40px]  h-[100%] cursor-ew-resize bg-blue absolute left-[20%] top-[0]">
+                {/* arrow */}
+                <img src={imgArrwo} alt="" className="w-[100px] absolute top-[50%] ml-[-20px] mt-[-20px]"/>
+            </span>
         </div>
     )
 }
