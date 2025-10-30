@@ -13,8 +13,7 @@ const Wrapper  = () => {
             `}>
                 
                 {/* filter */}
-                <div className="">
-                    
+                <div className="">       
                     {/* title => label*/}
                     <label className="block text-[16px] mb-[12px]">Filters</label>
                     
