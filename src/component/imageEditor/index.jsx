@@ -69,7 +69,7 @@ const ImageEditor = () => {
 
                 const canvas = document.createElement("canvas");
                 const ctx = canvas.getContext('2d');
-                if (!ctx)  return {...state};
+                // if (!ctx)  return {...state};
 
                 canvas.width = image.naturalWidth;
                 canvas.height = image.naturalHeight;
