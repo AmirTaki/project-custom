@@ -48,7 +48,7 @@ export const initialEditor = {
         {
             id : 1,
             icon : 'fa-solid fa-rotate-right',
-            size : '18'
+            size : '14'
         },
         {
             id : 2,

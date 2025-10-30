@@ -2,8 +2,6 @@ import { useContext } from "react"
 import { EditorContect } from "."
 
 const Wrapper  = ({disable, img}) => {
-    const buttonsRotate = ['fa-solid fa-rotate-left', 'fa-solid fa-rotate-right', 'bx bx-reflect-vertical', 'bx bx-reflect-horizontal']
-    
     const {nameFilter, valueFilter, previewImg, dispath, state} = useContext(EditorContect)
  
     return (
@@ -63,16 +61,17 @@ const Wrapper  = ({disable, img}) => {
                     {/* options */}
                     <div className="flex flex-wrap justify-between">
                         {/* buttons */}
-                        {buttonsRotate.map((item, index) => {
+                        {state.buttonssRotate.map((item) => {
                             return(
                                 <button
-                                    key = {index}
+                                    key = {item.id}
                                     // child (3) child (4) text => 18px
-                                    className={` text-[14px] outline-0 h-[40px]   rounded-[3px] mb-[8px]  w-[calc(25%-3px)] active:text-white! active:bg-[#5372F0]! active:border-[#5372F0]!
+                                    style={{ fontSize : `${item.size}px`}}
+                                    className= {` outline-0 h-[40px]   rounded-[3px] mb-[8px]  w-[calc(25%-3px)] active:text-white! active:bg-[#5372F0]! active:border-[#5372F0]!
                                         text-[#6c757D] bg-white border-1 border-[#aaa] hover:bg-[#f5f5f5]
                                     `}
                                 >
-                                    <i className={item}></i>
+                                    <i className={item.icon}></i>
                                 </button>                                    
                             )
                         })}
