@@ -9,12 +9,9 @@ const BackgroundChangeEffect = () => {
 
     return(
         <div 
-            style={{backgroundImage : `url(${imgBackGround})`}}
-            className="mt-10 w-[700px] bg-white h-100 relative">
-            
+           className="top-10 relative w-full max-w-4xl aspect-[1.5/1] overflow-hidden select-none cursor-ew-resize rounded-lg shadow-2xl bg-slate-900">
 
-            <img src={imgTransparent} alt="" className="z-20! absolute "/>
-            <img src={imgOrginal} className="absolute top-0  h-[100%] z-10" alt="" />
+            <img src={imgTransparent} alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" />
         </div>
     )
 }
