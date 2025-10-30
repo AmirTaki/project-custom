@@ -21,7 +21,11 @@ const Controls = ({disable}) => {
             {/* row */}
             <div className="max-sm:w-[100%]!">
                 {/* file-input */}
-                <input type="file" accept="image/*" hidden  ref = {fileInput}/>
+                <input 
+                    onChange={(e) => {dispath({type : '', payload : {event : e.target.files}})}}
+                    type="file" 
+                    accept="image/*" hidden  
+                    ref = {fileInput}/>
                 {/* chose image */}
                 <button
                     onClick={() => {dispath({type : "loadImage"})}}

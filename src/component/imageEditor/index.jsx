@@ -42,7 +42,7 @@ const ImageEditor = () => {
         
             case 'loadImage' :
                 if(fileInput.current){
-                    console.log(fileInput.current.files[0])
+                    fileInput.current?.click();
                 }
                 return {...state}
         }
