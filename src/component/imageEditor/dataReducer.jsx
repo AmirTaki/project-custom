@@ -6,7 +6,7 @@ export const initialEditor = {
     rotate : 0,
     flipHorizontal : 1,
     flipVertical : 1,
-    value : 50,
+    value : 100,
     min : 0,
     max : 100,
     buttonsFilter : [
@@ -15,27 +15,27 @@ export const initialEditor = {
             name : 'Brighteness',
             active : true,
             value : 100,
-            max : 200
+            max : 100
         },
         {
             id : 1, 
             name : 'Saturation',
             active : false,
-            value : 50,
-            max: 200
+            value : 100,
+            max: 100
         },
         {
             id : 2, 
             name : 'Inversion',
             active : false,
-            value : 60,
+            value : 0,
             max : 100
         },
         {
             id : 3, 
             name : 'Grayscale',
             active : false,
-            value : 100,
+            value : 0,
             max : 100
         },
     ],
