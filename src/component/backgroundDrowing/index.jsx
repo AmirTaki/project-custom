@@ -76,7 +76,9 @@ const BackgroundChangeEffect = () => {
 
 
                 {/* img wrap */}
-                <div className=" inset-0 absolute bg-white w-full h-full overflow-hidden pointer-events-none"
+                <div className={` inset-0 absolute bg-white w-full h-full overflow-hidden pointer-events-none
+                    before:content-['image-set("image1x.png" 1x, "image2x.png" 2x)`
+                }
                     style = {{clipPath : `inset(0 ${100 - sliderPostion }% 0 0 )`, backgroundImage : `url(${imgBackGround})`}}
                 >
                     <img 
