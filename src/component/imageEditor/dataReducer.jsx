@@ -56,7 +56,7 @@ export const initialEditor = {
             id : 2,
             icon : 'bx bx-reflect-vertical',
             size : '18',
-            name : 'horizontal',
+            name : 'vertical',
             Rotation : 1,
         },
         {

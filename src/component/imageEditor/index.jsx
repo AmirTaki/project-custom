@@ -42,6 +42,11 @@ const ImageEditor = () => {
                 action.payload.name == "fa-solid fa-rotate-left"? state.rotate -= 45 : state.rotate += 45
                 return{...state }
            
+            case "vertical" :
+                return {...state, flipVertical : state.flipVertical == 1 ? -1 : 1}
+            
+            case "horizontal" :
+                return {...state, flipHorizontal : state.flipHorizontal == 1 ? -1 : 1} 
         }
     }
     const [state, dispath] =  useReducer(reducerEditor, initialEditor)
