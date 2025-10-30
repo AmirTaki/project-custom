@@ -1,8 +1,4 @@
 export const initialEditor = {
-    // brightness : '100',
-    // saturation : '100',
-    // inversion : '0',
-    // grayscale : '0',
     rotate : 0,
     flipHorizontal : 1,
     flipVertical : 1,
