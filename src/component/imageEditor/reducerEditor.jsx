@@ -81,3 +81,22 @@ export const ReducerEditor = (state, action) => {
             return {...state}
         }
 }
+
+
+export const render = (nameFilter, valueFilter, previewImg, inputRange, state) => {
+    const findItemActive = state.buttonsFilter.find((item) => item.active)
+        if(nameFilter.current && valueFilter.current){
+            nameFilter.current.innerText = findItemActive.name
+            valueFilter.current.innerText = `${findItemActive.value}%`
+        }
+        state.value = findItemActive.value;
+        state.max = findItemActive.max
+        if(inputRange.current){
+            inputRange.current.value = state.value
+            inputRange.current.max = state.max
+        }
+        if(previewImg.current){
+            previewImg.current.style.transform = `rotate(${state.rotate}deg) scale(${state.flipHorizontal}, ${state.flipVertical})`
+            previewImg.current.style.filter =  `brightness(${state.buttonsFilter[0].value}%) saturate(${state.buttonsFilter[1].value}%) invert(${state.buttonsFilter[2].value}%) grayscale(${state.buttonsFilter[3].value}%)`
+        }
+}
