@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { EditorContect } from ".";
 
 const Controls = () => {
-    const {fileInput, dispath, state} =  useContext(EditorContect)
+    const {fileInput, previewImg, dispath, state} =  useContext(EditorContect)
     return(
         <div className="flex flex-wrap justify-between">
             {/* reset-filters */}
@@ -22,7 +22,7 @@ const Controls = () => {
             <div className="max-sm:w-[100%]!">
                 {/* file-input */}
                 <input 
-                    onChange={(e) => {dispath({type : 'imageInput', payload : {files : e.target.files}})}}
+                    onChange={(e) => {dispath({type : 'imageInput', payload : {files : e.target.files, previewImg : previewImg.current }})}}
                     type="file" 
                     accept="image/*" hidden  
                     ref = {fileInput}/>
