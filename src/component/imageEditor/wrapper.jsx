@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { EditorContect } from "."
 
 const Wrapper  = ({disable}) => {
-    const {nameFilter, valueFilter, previewImg, dispath, state, img} = useContext(EditorContect)
+    const {nameFilter, valueFilter, previewImg, dispath, state, img, inputRange} = useContext(EditorContect)
  
     return (
         // wrapper
@@ -44,7 +44,8 @@ const Wrapper  = ({disable}) => {
                             <p ref = {valueFilter}>100%</p>    {/* value */}
                         </div>
                         {/* input */}
-                        <input type="range"  
+                        <input type="range" 
+                            ref = {inputRange}
                             value = {state.value}
                             min={state.min}
                             max={state.max}

@@ -15,7 +15,7 @@ export const initialEditor = {
             name : 'Brighteness',
             active : true,
             value : 100,
-            max : 100
+            max : 200
         },
         {
             id : 1, 
