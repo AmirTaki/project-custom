@@ -3,7 +3,6 @@ import img from "./img/cadillac.jpg"
 import Wrapper from "./wrapper";
 import Controls from "./controls";
 import { initialEditor } from "./dataReducer";
-import { stat } from "fs";
 
 export const EditorContect =  createContext('')
 const ImageEditor = () => {
@@ -65,29 +64,30 @@ const ImageEditor = () => {
                 return{...state, disable : false}
 
             case "downloadImage" :
-                const previewImg = previewImg.current;
-                if(!previewImg) return{...state}
+                const image = previewImg.current;
+                if (!image) return {...state};
 
-                const canvas = document.createElement('canvas')
-                const ctx = canvas.getContext('2d')
+                const canvas = document.createElement("canvas");
+                const ctx = canvas.getContext('2d');
+                if (!ctx)  return {...state};
 
-                if(!ctx) return{...state}
-                return {...state}
+                canvas.width = image.naturalWidth;
+                canvas.height = image.naturalHeight;
 
-                canvas.width = previewImg.naturalWidth;
-                canvas.height = previewImg.naturalHeight;
                 ctx.filter = `brightness(${state.buttonsFilter[0].value}%) saturate(${state.buttonsFilter[1].value}%) invert(${state.buttonsFilter[2].value}%) grayscale(${state.buttonsFilter[3].value}%)`
                 ctx.translate(canvas.width / 2, canvas.height / 2);
-                
-                if(state.rotate !== 0){ctx.rotate(state.rotate * Math.PI / 180)}
 
-                ctx.scale(state.flipHorizontal, state.flipVertical)
-                ctx.drawImage(previewImg, -canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height)
-     
+                if (state.rotate !== 0) {
+                    ctx.rotate(state.rotate * Math.PI / 180);
+                }
+
+                ctx.scale(state.flipHorizontal, state.flipVertical);
+                ctx.drawImage(image, -canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);
+
                 const link = document.createElement('a');
-                link.download = 'image.jpg';
+                link.download = `${image.src}`;
                 link.href = canvas.toDataURL();
-                link.click();
+                link.click(); 
 
                 return {...state}
             }

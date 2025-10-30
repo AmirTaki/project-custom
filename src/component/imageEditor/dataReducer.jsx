@@ -5,7 +5,7 @@ export const initialEditor = {
     value : 100,
     min : 0,
     max : 100,
-    disable : true,
+    disable : false,
     buttonsFilter : [
         {
             id : 0, 
