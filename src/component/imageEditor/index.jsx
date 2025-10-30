@@ -39,6 +39,12 @@ const ImageEditor = () => {
             
             case "horizontal" :
                 return {...state, flipHorizontal : state.flipHorizontal == 1 ? -1 : 1} 
+        
+            case 'loadImage' :
+                if(fileInput.current){
+                    console.log(fileInput.current.files[0])
+                }
+                return {...state}
         }
     }
     const [state, dispath] =  useReducer(reducerEditor, initialEditor)

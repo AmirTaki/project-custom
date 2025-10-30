@@ -24,6 +24,7 @@ const Controls = ({disable}) => {
                 <input type="file" accept="image/*" hidden  ref = {fileInput}/>
                 {/* chose image */}
                 <button
+                    onClick={() => {dispath({type : "loadImage"})}}
                     className="py-[11px] px-[20px] text-[14px] rounded-[3px] outline-0 text-white cursor-pointer
                     bg-[#6C757D] transition-all duration-300 ease-in uppercase    border-1 border-[#6C757D]
                     max-sm:w-[100%]! max-sm:mb-[10px]
