@@ -66,7 +66,11 @@ const ImageEditor = () => {
             case "downloadImage" :
                 const previewImg = previewImg.current;
                 if(!previewImg) return{...state}
-                 
+
+                const canvas = document.createElement('canvas')
+                const ctx = canvas.getContext('2d')
+
+                if(!ctx) return{...state}
                 return {...state}
         }
     }
