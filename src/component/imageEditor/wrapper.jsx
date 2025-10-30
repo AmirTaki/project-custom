@@ -49,11 +49,9 @@ const Wrapper  = ({disable, img}) => {
                         {/* input */}
                         <input type="range"  
                             value = {state.value}
-                            min='0'
-                            max='100'
-                            onChange={(e)=> {dispath({type : "inputRange", payload : {value : e.target.value}})}}
-                            // ref = {inputFilter}
-                            
+                            min={state.min}
+                            max={state.max}
+                            onChange={(e)=> {dispath({type : "inputRange", payload : {value : e.target.value}})}}                            
                             className="w-[100%] h-[5px] accent-[#5372F0]"
                         />
                     </div>
