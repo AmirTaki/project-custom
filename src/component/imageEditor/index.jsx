@@ -3,6 +3,7 @@ import img from "./img/cadillac.jpg"
 import Wrapper from "./wrapper";
 import Controls from "./controls";
 import { initialEditor } from "./dataReducer";
+import { stat } from "fs";
 
 export const EditorContect =  createContext('')
 const ImageEditor = () => {
@@ -77,7 +78,12 @@ const ImageEditor = () => {
                 canvas.height = previewImg.naturalHeight;
                 ctx.filter = `brightness(${state.buttonsFilter[0].value}%) saturate(${state.buttonsFilter[1].value}%) invert(${state.buttonsFilter[2].value}%) grayscale(${state.buttonsFilter[3].value}%)`
                 ctx.translate(canvas.width / 2, canvas.height / 2);
-        }
+                
+                if(state.rotate !== 0){ctx.rotate(state.rotate * Math.PI / 180)}
+
+                ctx.scale(state.flipHorizontal, state.flipVertical)
+                ctx.drawImage(previewImg, -canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height)
+            }
     }
     const [state, dispath] =  useReducer(reducerEditor, initialEditor)
 
