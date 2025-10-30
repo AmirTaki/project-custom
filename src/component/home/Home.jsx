@@ -27,6 +27,7 @@ import GlowingCorner from "../glowingCorner/index.jsx"
 import GradientGenerator from "../gradientGenerator/index.jsx"
 import HorzinotalScrolling from "../imageHorzintalScrolling/index.jsx"
 import ImageEditor from "../imageEditor/index.jsx"
+import BackgroundChangeEffect from "../backgroundDrowing/index.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -44,7 +45,7 @@ const Home =  ()  => {
     const isDraggingNavigation = useRef(false)
 
     // veiw projects 
-    const  [view, setView] =   useState(true)   
+    const  [view, setView] =   useState(false)   
     return(
         <div 
             className={`bg-[#10131c]   min-h-[100vh] ${view ? "" : "flex! flex-col justify-center! items-center! "}`} 
@@ -141,6 +142,8 @@ const Home =  ()  => {
 
             </div>
 
+            {/* background drawing & change effect background */}
+            <BackgroundChangeEffect />
             <div className="h-100 w-100 text-white"></div>
         </div>   
     )
