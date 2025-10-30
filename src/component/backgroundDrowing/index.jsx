@@ -14,7 +14,7 @@ const BackgroundChangeEffect = () => {
 
     }
     const handlerTouchStart = () => {
-        
+
     }
     return(
         <>
@@ -25,12 +25,16 @@ const BackgroundChangeEffect = () => {
                 className="top-10 relative w-full max-w-4xl aspect-[1.5/1] overflow-hidden select-none cursor-ew-resize rounded-lg shadow-2xl bg-slate-900"
             >
 
-                <img src={imgOrginal} alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+                <img 
+                    src={imgOrginal} alt="" 
+                    className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                    draggable = {false}     
+                />
 
             </div>
             <div 
                 className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none"
-                // style = {{clipPath : `inset(0 ${100 - }% 0 0 )`}}
+                style = {{clipPath : `inset(0 ${100 - sliderPostion }% 0 0 )`}}
             >
                 <img 
                     src={imgTransparent} alt="" 
