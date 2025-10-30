@@ -22,7 +22,7 @@ export const initialEditor = {
             name : 'Saturation',
             active : false,
             value : 100,
-            max: 100
+            max: 200
         },
         {
             id : 2, 
