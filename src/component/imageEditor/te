@@ -1,47 +1,26 @@
-    const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-    const [isImageLoaded, setIsImageLoaded] = useState<boolean>(false);
-    const [activeFilter, setActiveFilter] = useState<string>('None');
+    const saveImage = () => {
+        const previewImg = previewImgRef.current;
+        if (!previewImg) return;
 
-    const fileInputRef = useRef<HTMLInputElement>(null);
-    const resetFilterBtnRef = useRef<HTMLButtonElement>(null);
+        const canvas = document.createElement("canvas");
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return;
 
-    const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const file = event.target.files?.[0];
-        if (!file) return;
+        canvas.width = previewImg.naturalWidth;
+        canvas.height = previewImg.naturalHeight;
 
-        if (!file.type.startsWith('image/')) {
-            alert('Please select an image file.');
-            return;
+        ctx.filter = `brightness(${options.brightness.value}%) saturate(${options.saturation.value}%) invert(${options.inversion.value}%) grayscale(${options.grayscale.value}%)`;
+        ctx.translate(canvas.width / 2, canvas.height / 2);
+
+        if (rotate !== 0) {
+            ctx.rotate(rotate * Math.PI / 180);
         }
 
-        if (previewUrl) {
-            URL.revokeObjectURL(previewUrl);
-        }
+        ctx.scale(flipHorizontal, flipVertical);
+        ctx.drawImage(previewImg, -canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);
 
-        const newUrl = URL.createObjectURL(file);
-        setPreviewUrl(newUrl);
-        setIsImageLoaded(false); 
+        const link = document.createElement('a');
+        link.download = 'image.jpg';
+        link.href = canvas.toDataURL();
+        link.click();
     };
-
-    const handleImageLoad = useCallback(() => {
-        setIsImageLoaded(true);
-        resetFilterBtnRef.current?.click();
-    }, []);
-
-    const handleResetFilters = useCallback(() => {
-        console.log("Filters reset!");
-        setActiveFilter('None');
-    }, []);
-
-    const handleChooseImageClick = () => {
-        fileInputRef.current?.click();
-    };
-    
-    useEffect(() => {
-        // Cleanup object URL on component unmount
-        return () => {
-            if (previewUrl) {
-                URL.revokeObjectURL(previewUrl);
-            }
-        };
-    }, [previewUrl]);

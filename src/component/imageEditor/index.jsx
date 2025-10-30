@@ -42,14 +42,15 @@ const ImageEditor = () => {
                 if(fileInput.current){
                     fileInput.current?.click();
                 }
-
                 return {...state}
+           
             case "imageInput" : 
                 const file = action.payload.files?.[0]
                 if(!file) return{...state}
 
                 if(!file.type.startsWith('image/')){
                     alert('Please select an image file.')
+                    return{...state}
                 }
                 if(previewImg.current){
                     URL.revokeObjectURL(previewImg.current)
@@ -61,6 +62,12 @@ const ImageEditor = () => {
                 }
 
                 return{...state, disable : false}
+
+            case "downloadImage" :
+                const previewImg = previewImg.current;
+                if(!previewImg) return{...state}
+                 
+                return {...state}
         }
     }
     const [state, dispath] =  useReducer(reducerEditor, initialEditor)
