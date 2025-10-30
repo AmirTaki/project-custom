@@ -20,9 +20,15 @@ const BackgroundChangeEffect = () => {
         if(imgBox.current && originalImg.current){
             originalImg.current.style.width = imgBox.current.offsetWidth + "px"
         }        
+        const leftSpace = imgBox.current?.offsetLeft || 0;
 
-        const handlerMouseMove = () => {
-
+        const handlerMouseMove = (e) => {
+            const boxWidth = `${e.pageX - leftSpace}px`
+            const 
+            if(imgWrap.current && line.current){
+                imgWrap.current.style.width = boxWidth
+                line.current.style.left = 
+            }
         }
 
         if(imgBox.current){
