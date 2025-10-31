@@ -13,7 +13,13 @@ const BackgroundChangeEffect = () => {
   
 
     const handleMove = useCallback((clientX) => {
+        if(!isDragging || !sliderContainerRef.current) return;
 
+        const rect = sliderContainerRef.current.getBoundingClientRect();
+        const x =  Math.max(0, Math.min(clientX - rect.left, rect.width))
+        const percent = (x / rect.width * 100)
+
+        setSliderPosition(percent)
     }, [isDragging])
 
     const handlerMouseDown = (e) => {
