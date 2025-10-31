@@ -2,6 +2,7 @@ import imgBackGround from "./img/background.png"
 import imgTransparent from "./img/transparent.png"
 import imgOrginal from "./img/original.jpg"
 import imgArrwo from "./img/arrow.png"
+import './styles.css'
 import { useCallback, useEffect, useRef, useState } from "react"
 
 
@@ -67,7 +68,6 @@ const BackgroundChangeEffect = () => {
                 ref = {sliderContainerRef}
                 className="top-10 relative w-[700px] h-[100%] max-w-4xl aspect-[1.5/1] overflow-hidden select-none cursor-ew-resize rounded-lg shadow-2xl bg-slate-900"
             >
-
                 <img 
                     src={imgOrginal} alt="" 
                     className="absolute inset-0 w-full h-full object-cover pointer-events-none"
@@ -76,22 +76,20 @@ const BackgroundChangeEffect = () => {
 
 
                 {/* img wrap */}
-                <div className={` inset-0 absolute bg-white w-full h-full overflow-hidden pointer-events-none
-                    before:content-['image-set("image1x.png" 1x, "image2x.png" 2x)`
-                }
-                    style = {{clipPath : `inset(0 ${100 - sliderPostion }% 0 0 )`, backgroundImage : `url(${imgBackGround})`}}
+                <div 
+                    style = {{"--i" : `${sliderPostion}%`  ,clipPath : `inset(0 ${100 - sliderPostion }% 0 0 )`, backgroundImage : `url(${imgBackGround})`}}
+                    className={` inset-0 absolute bg-white w-full h-full overflow-hidden pointer-events-none
+                    clipPath `
+                    }
                 >
                     <img 
                         src={imgTransparent} alt="" 
                         className="absolute inset-0 w-[100%] h-[100%] top-0 object-cover pointer-events-none"
                         draggable = {false}
-                        style = {{left : `calc(${sliderPostion}%) -1 px`}}
+                        style = {{left : `calc(${sliderPostion}%) - 1px`}}
                     />
 
-                    <img src={imgArrwo} 
-                        style = {{clipPath : `inset(0 ${100 - sliderPostion }% 0 0 )`}}
-                        className="absolute inset-0 w-[40px] h-[50px] top-50 overflow-hidden  pointer-events-none"
-                    />
+               
                 </div>
             </div>
          

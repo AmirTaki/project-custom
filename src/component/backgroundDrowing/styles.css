@@ -1,0 +1,8 @@
+.clipPath::before {
+    content: '<->';
+    width: 500px;
+    left : 10px;
+    position: absolute;
+    top: 50%;
+    z-index: 60 !important;
+}
