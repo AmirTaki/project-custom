@@ -12,6 +12,10 @@ const BackgroundChangeEffect = () => {
     const sliderContainerRef = useRef(null)
   
 
+    const handleMove = useCallback((clientX) => {
+
+    }, [isDragging])
+
     const handlerMouseDown = (e) => {
         e.preventDefault();
         setIsDragging(true)   
@@ -19,6 +23,13 @@ const BackgroundChangeEffect = () => {
     const handlerTouchStart = () => {
         setIsDragging(true)
     }
+    const handlerMouseMove = useCallback(() => {
+
+    }, [handleMove])
+
+    useEffect(() => {
+
+    }, [isDragging, handlerMouseMove, ])
     return(
         // container
         <div className="bg-amber-50 ">
