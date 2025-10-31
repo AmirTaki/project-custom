@@ -40,15 +40,15 @@ const BackgroundChangeEffect = () => {
     useEffect(() => {   
         if(isDragging){
             window.addEventListener('mousemove', handlerMouseMove )
-            window.addEventListener('', )
-            window.addEventListener('', )
-            window.addEventListener('', )
+            window.addEventListener('touchmove', handlerTouchMove )
+            window.addEventListener('mouseup', handlerEndDrag )
+            window.addEventListener('touchend', handlerEndDrag )
 
             return() => {
                 window.removeEventListener('mousemove', handlerMouseMove )
-                window.removeEventListener('', )
-                window.removeEventListener('', )
-                window.removeEventListener('', )
+                window.removeEventListener('touchmove', handlerTouchMove )
+                window.removeEventListener('mouseup', handlerEndDrag )
+                window.removeEventListener('touchend', handlerEndDrag )
             }
         }
 
