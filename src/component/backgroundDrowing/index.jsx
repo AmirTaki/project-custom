@@ -37,7 +37,7 @@ const BackgroundChangeEffect = () => {
                         src={imgOrginal} alt=""
                         draggable = {false}
                         className="absolute inset-0 w-full h-full top-0 object-cover pointer-events-none"
-
+                        style = {{left : `calc(${sliderPosition}%) - 1px`}}
                     />
                 </div>
 
