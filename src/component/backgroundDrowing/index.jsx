@@ -33,11 +33,24 @@ const BackgroundChangeEffect = () => {
         }
     }, [handleMove])
 
-    const handlerEndDrag = useCallback(() = {
+    const handlerEndDrag = useCallback(() => {
         setIsDragging(false)
     }, [])
 
-    useEffect(() => {
+    useEffect(() => {   
+        if(isDragging){
+            window.addEventListener('mousemove', handlerMouseMove )
+            window.addEventListener('', )
+            window.addEventListener('', )
+            window.addEventListener('', )
+
+            return() => {
+                window.removeEventListener('mousemove', handlerMouseMove )
+                window.removeEventListener('', )
+                window.removeEventListener('', )
+                window.removeEventListener('', )
+            }
+        }
 
     }, [isDragging, handlerMouseMove, handlerTouchMove, handlerEndDrag])
     return(
