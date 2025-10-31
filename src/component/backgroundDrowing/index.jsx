@@ -16,6 +16,7 @@ const BackgroundChangeEffect = () => {
         <div className="bg-amber-50 ">
             {/* img box */}
             <div 
+                ref = {sliderContainerRef}
                 style={{backgroundImage : `url(${imgBackGround})`}}
                 className="top-20 relative w-[800px] h-[100%] max-w-4xl aspect-[1.5/1] overflow-hidden select-none cursor-ew-resize rounded-2xl bg-white shadow-2xl"
             >
@@ -27,7 +28,7 @@ const BackgroundChangeEffect = () => {
 
                 {/* line wrap */}
                 <div 
-                    style={{'--i': `calc(${sliderPostion}% - 30px)`}}
+                    style={{'--i': `calc(${sliderPosition}% - 30px)`, clipPath : `inset(0 ${100 - sliderPosition}% 0 0 )`}}
                     className="inset-0 absolute bg-amber-600 w-full  h-full overflow-hidden pointer-events-none clipPath"
                 >
 
