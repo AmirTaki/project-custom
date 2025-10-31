@@ -7,6 +7,9 @@ import { useCallback, useEffect, useRef, useState } from "react"
 
 
 const BackgroundChangeEffect = () => {
+    const [sliderPosition, setSliderPosition] =  useState(50)
+    const [isDragging, setIsDragging] =  useState(false)
+    const sliderContainerRef = useRef(null)
   
     return(
         // container
