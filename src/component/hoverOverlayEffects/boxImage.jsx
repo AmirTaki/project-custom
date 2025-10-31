@@ -8,7 +8,7 @@ const BoxImage = () => {
                 {/* img  */}
                 <img 
                     className="absolute top-0 left-0 w-full h-full object-cover"
-                    src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d29ybGR8ZW58MHx8MHx8fDA%3D" alt="" 
+                    src="" alt="" 
                 />
             </div>
             {/* content */}
