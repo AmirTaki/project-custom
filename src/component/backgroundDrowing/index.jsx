@@ -61,14 +61,14 @@ const BackgroundChangeEffect = () => {
     }, [isDragging, handlerMouseMove, handlerTouchMove, handlerEndDrag])
     return(
         // container
-        <div className="bg-amber-50 ">
+        <div className="">
             {/* img box */} 
             <div 
                 onMouseDown={handlerMouseDown}
                 onTouchStart={handlerTouchStart}
                 ref = {sliderContainerRef}
                 style={{backgroundImage : `url(${imgBackGround})`}}
-                className="top-20 relative w-[800px] h-[100%] max-w-4xl aspect-[1.5/1] overflow-hidden select-none cursor-ew-resize rounded-2xl bg-white shadow-2xl"
+                className="top-20 relative w-[800px] h-[100%] max-w-4xl aspect-[1.9/1] overflow-hidden select-none cursor-ew-resize rounded-2xl bg-white shadow-2xl"
             >
                 {/* img before */}
                 <img src={imgTransparent} alt=""
