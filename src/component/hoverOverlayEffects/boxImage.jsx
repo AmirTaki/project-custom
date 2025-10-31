@@ -1,4 +1,4 @@
-const BoxImage = () => {
+const BoxImage = ({box}) => {
     return(
         //   box  
         <div className="relative w-[275px] h-[275px] duration-500 hover:z-10! overflow-hidden hover:scale-125 hover:shadow-[0_25px_40px_rgba(0,0,0,.5)] group">
@@ -8,7 +8,7 @@ const BoxImage = () => {
                 {/* img  */}
                 <img 
                     className="absolute top-0 left-0 w-full h-full object-cover"
-                    src="" alt="" 
+                    src={box.image} alt="" 
                 />
             </div>
             {/* content */}
@@ -17,12 +17,12 @@ const BoxImage = () => {
                     <h2
                         className="text-white duration-500 uppercase text-[20px] mb-[5px] transform translate-y-[200px] group-hover:translate-y-0! group-hover:delay-700!"
                     >
-                        Image Title
+                       {box.title}
                     </h2>
                     <p 
                         className="text-white duration-500 text-[14px] transform translate-y-[200px] group-hover:translate-y-0! group-hover:delay-1000! "
                     >
-                        
+                        {box.decription}
                     </p>
                 </div>
             </div>
