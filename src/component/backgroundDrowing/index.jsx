@@ -33,13 +33,17 @@ const BackgroundChangeEffect = () => {
         }
     }, [handleMove])
 
+    const handlerEndDrag = useCallback(() = {
+        setIsDragging(false)
+    }, [])
+
     useEffect(() => {
 
-    }, [isDragging, handlerMouseMove, handlerTouchMove,])
+    }, [isDragging, handlerMouseMove, handlerTouchMove, handlerEndDrag])
     return(
         // container
         <div className="bg-amber-50 ">
-            {/* img box */}
+            {/* img box */} 
             <div 
                 onMouseDown={handlerMouseDown}
                 onTouchStart={handlerTouchStart}
