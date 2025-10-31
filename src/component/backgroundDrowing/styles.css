@@ -1,8 +1,8 @@
 .clipPath::before {
-    content: '<->';
+    content: url('./img/arrow.png');
     width: 500px;
-    left : 10px;
+    left : var(--i);
     position: absolute;
     top: 50%;
-    z-index: 60 !important;
+    z-index: 360 !important;
 }

@@ -77,7 +77,7 @@ const BackgroundChangeEffect = () => {
 
                 {/* img wrap */}
                 <div 
-                    style = {{"--i" : `${sliderPostion}%`  ,clipPath : `inset(0 ${100 - sliderPostion }% 0 0 )`, backgroundImage : `url(${imgBackGround})`}}
+                    style = {{"--i" : `calc(${sliderPostion}% - 30px)`  ,clipPath : `inset(0 ${100 - sliderPostion }% 0 0 )`, backgroundImage : `url(${imgBackGround})`}}
                     className={` inset-0 absolute bg-white w-full h-full overflow-hidden pointer-events-none
                     clipPath `
                     }
