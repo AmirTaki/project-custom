@@ -3,10 +3,10 @@ const ImageHoverOverlayEffects = () => {
         // container
         <div className="relative w-[90%] flex flex-wrap bg-amber-100">
             {/* box  overflow hidden*/}
-            <div className="relative w-[275px] h-[275px] duration-500 hover:z-10! hover:scale-125 hover:shadow-[0_25px_40px_rgba(0,0,0,.5)]">
+            <div className="relative w-[275px] h-[275px] duration-500 hover:z-10! hover:scale-125 hover:shadow-[0_25px_40px_rgba(0,0,0,.5)] group">
                 {/* imgBx */}
                 <div className="absolute top-0 left-0 w-full h-full
-                   before:content-['asdf'] before:w-full before:h-full before:z-10! before:absolute before:top-0 before:left-0 before:bg-[linear-gradient(180deg,#f00,#000)]! before:mix-blend-multiply!">
+                   before:content-['asdf'] before:w-full before:h-full before:z-10! before:absolute before:top-0 before:left-0 before:bg-[linear-gradient(180deg,#f00,#000)]! before:mix-blend-multiply! before:duration-500 before:opacity-0 group-hover:before:opacity-100! ">
                     {/* img  */}
                     <img 
                         // className="absolute top-0 left-0 w-full h-full object-cover"
