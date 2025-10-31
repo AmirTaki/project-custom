@@ -61,32 +61,32 @@ const BackgroundChangeEffect = () => {
     }, [isDragging, handlerMouseMove, handlerTouchMove, handlerEndDrag])
     return(
         // container
-        <div className="">
+        <div className="w-[900px] max-md:w-[90%]! h-[580px] max-md:h-[400px]! mx-10">
             {/* img box */} 
             <div 
                 onMouseDown={handlerMouseDown}
                 onTouchStart={handlerTouchStart}
                 ref = {sliderContainerRef}
                 style={{backgroundImage : `url(${imgBackGround})`}}
-                className="top-20 relative w-[800px] h-[100%] max-w-4xl aspect-[1.9/1] overflow-hidden select-none cursor-ew-resize rounded-2xl bg-white shadow-2xl"
+                className="top-20 relative w-[100%]  h-[100%]  aspect-[15/10] overflow-hidden  select-none cursor-ew-resize rounded-2xl bg-white shadow-2xl "
             >
                 {/* img before */}
                 <img src={imgTransparent} alt=""
                     draggable = {false}
-                    className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                className="absolute inset-0 w-full h-full md:object-cover object-center! pointer-events-none  "
                 />
 
                 {/* line wrap */}
                 <div 
                     style={{'--i': `calc(${sliderPosition}% - 30px)`, clipPath : `inset(0 ${100 - sliderPosition}% 0 0 )`,}}
-                    className="inset-0 absolute bg-amber-600 w-full  h-full overflow-hidden pointer-events-none clipPath"
+                    className="inset-0 relative  w-[100%]   h-full overflow-hidden!  pointer-events-none clipPath "
                 >
 
                     {/* img after */}
                     <img 
                         src={imgOrginal} alt=""
                         draggable = {false}
-                        className="absolute inset-0 w-full h-full top-0 object-cover pointer-events-none"
+                        className="absolute inset-0 w-full h-full top-0 md:object-cover object-center! pointer-events-none "
                         style = {{left : `calc(${sliderPosition}%) - 1px`}}
                     />
                 </div>
