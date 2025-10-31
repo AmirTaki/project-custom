@@ -23,13 +23,19 @@ const BackgroundChangeEffect = () => {
     const handlerTouchStart = () => {
         setIsDragging(true)
     }
-    const handlerMouseMove = useCallback(() => {
+    const handlerMouseMove = useCallback((e) => {
+        handleMove(e.clientX)
+    }, [handleMove])
 
+    const handlerTouchMove = useCallback((e) => {
+        if(e.touches[0]){
+            handleMove(e.touches[0].clientX)
+        }
     }, [handleMove])
 
     useEffect(() => {
 
-    }, [isDragging, handlerMouseMove, ])
+    }, [isDragging, handlerMouseMove, handlerTouchMove,])
     return(
         // container
         <div className="bg-amber-50 ">
