@@ -1,12 +1,17 @@
 const ImageHoverOverlayEffects = () => {
     return(
         // container
-        <div className="relative w-[1100px] flex flex-wrap">
+        <div className="relative w-[90%] flex flex-wrap bg-amber-100">
             {/* box  overflow hidden*/}
-            <div className="relative w-[275px] h-[275px] duration-500 hover:z-10 hover:scale-125 hover:shadow-[0_25px_40px_rgba(0,0,0,.5)]">
+            <div className="relative w-[275px] h-[275px] duration-500 hover:z-10! hover:scale-125 hover:shadow-[0_25px_40px_rgba(0,0,0,.5)]">
                 {/* imgBx */}
-                <div className="absolute top-0 left-0 w-full h-full">
+                <div className="absolute top-0 left-0 w-full h-full
+                   before:content-['asdf'] before:w-[100%] before:h-full before:z-10! before:absolute before:top-0 before:left-0 before:bg-red-400! before:mix-blend-multiply!">
                     {/* img  */}
+                    <img 
+                        // className="absolute top-0 left-0 w-full h-full object-cover"
+                        src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d29ybGR8ZW58MHx8MHx8fDA%3D" alt="" 
+                        />
                 </div>
             </div>
         </div>
