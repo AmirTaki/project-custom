@@ -19,8 +19,13 @@ const ImageHoverOverlayEffects = () => {
                         <h2
                             className="text-white duration-500 uppercase text-[20px] mb-[5px] transform translate-y-[200px] group-hover:translate-y-0! group-hover:delay-700!"
                         >
-                            Image Title</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime vel veniam quos officiis veritatis ex non, cum aliquid animi ut voluptatum? Suscipit, blanditiis accusantium nam ex tenetur facilis totam molestiae.</p>
+                            Image Title
+                        </h2>
+                        <p 
+                            className="text-white duration-500 text-[14px] transform translate-y-[200px] group-hover:translate-y-0! group-hover:delay-1000! "
+                        >
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime vel veniam quos officiis veritatis ex non, cum aliquid animi ut voluptatum? Suscipit, blanditiis accusantium nam ex tenetur facilis totam molestiae.
+                        </p>
                     </div>
                 </div>
             </div>
