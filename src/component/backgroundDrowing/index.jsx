@@ -68,7 +68,7 @@ const BackgroundChangeEffect = () => {
                 onTouchStart={handlerTouchStart}
                 ref = {sliderContainerRef}
                 style={{backgroundImage : `url(${imgBackGround})`}}
-                className="top-20 relative w-[100%]  h-[100%]  aspect-[15/10] overflow-hidden  select-none cursor-ew-resize rounded-2xl bg-white shadow-2xl "
+                className="top-20 relative w-[100%]  h-[100%]  aspect-[15/10] overflow-hidden  select-none cursor-ew-resize! rounded-2xl bg-white shadow-2xl "
             >
                 {/* img before */}
                 <img src={imgTransparent} alt=""
@@ -79,7 +79,7 @@ const BackgroundChangeEffect = () => {
                 {/* line wrap */}
                 <div 
                     style={{'--i': `calc(${sliderPosition}% - 30px)`, clipPath : `inset(0 ${100 - sliderPosition}% 0 0 )`,}}
-                    className="inset-0 relative  w-[100%]   h-full overflow-hidden!  pointer-events-none clipPath "
+                    className="inset-0 relative  w-[100%]   h-full overflow-hidden!  pointer-events-none  cursor-ew-resize!"
                 >
 
                     {/* img after */}
@@ -91,6 +91,7 @@ const BackgroundChangeEffect = () => {
                     />
                 </div>
 
+            \
 
             </div>
         </div>
