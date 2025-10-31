@@ -24,7 +24,8 @@ const BackgroundChangeEffect = () => {
 
                 {/* line wrap */}
                 <div 
-                    className=""
+                    style={{'--i': `calc(${sliderPostion}% - 30px)`}}
+                    className="inset-0 absolute bg-amber-600 w-full  h-full overflow-hidden pointer-events-none clipPath"
                 >
 
                     {/* img after */}
@@ -32,7 +33,7 @@ const BackgroundChangeEffect = () => {
                         src={imgOrginal} alt=""
                         draggable = {false}
                         className="absolute inset-0 w-full h-full top-0 object-cover pointer-events-none"
-                        
+
                     />
                 </div>
 
