@@ -22,7 +22,7 @@ const BoxImage = () => {
                     <p 
                         className="text-white duration-500 text-[14px] transform translate-y-[200px] group-hover:translate-y-0! group-hover:delay-1000! "
                     >
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime vel veniam quos officiis veritatis ex non, cum aliquid animi ut voluptatum? Suscipit, blanditiis accusantium nam ex tenetur facilis totam molestiae.
+                        
                     </p>
                 </div>
             </div>
