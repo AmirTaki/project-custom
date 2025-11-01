@@ -1,5 +1,4 @@
-import { DataImage } from "./dataItem";
-import ItemImage from "./itemImage";
+
 import ListSlider from "./listSlider";
 
 const ImageSlider = () => {
@@ -10,14 +9,8 @@ const ImageSlider = () => {
         <div className="h-[100vh] w-[100vw] relative overflow-hidden -mt-[50px]">
             {/* list */}
             <ListSlider />
-            <div className="">
-                {DataImage.map((item) => {
-                    return(
-                        <ItemImage key = {item.id} item = {item} />
-                    )
-                })}
-                {/* item */}
-            </div>
+
+            
         </div>
     </div>
     )
