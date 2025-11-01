@@ -6,30 +6,30 @@ import img4 from "./image/img4.jpg"
 export const DataImage = [
     {
         id : 0,
-        title : '',
+        title : 'MAGIC SLIDER',
         type : '',
-        description : '',
-        image : ''
+        description : '                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur velit provident pariatur optio sapiente et mollitia, in ut odit placeat accusantium officia, ipsa quae, fugit sequi expedita dignissimos cum doloremque.',
+        image : img1
     },
     {
         id : 1,
         title : '',
         type : '',
-        description : '',
-        image : ''
+        description : '                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur velit provident pariatur optio sapiente et mollitia, in ut odit placeat accusantium officia, ipsa quae, fugit sequi expedita dignissimos cum doloremque.',
+        image : img2
     },
     {
         id : 2,
         title : '',
         type : '',
-        description : '',
-        image : ''
+        description : '                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur velit provident pariatur optio sapiente et mollitia, in ut odit placeat accusantium officia, ipsa quae, fugit sequi expedita dignissimos cum doloremque.',
+        image : img3
     },
     {
         id : 3,
         title : '',
         type : '',
-        description : '',
-        image : ''
+        description : '                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur velit provident pariatur optio sapiente et mollitia, in ut odit placeat accusantium officia, ipsa quae, fugit sequi expedita dignissimos cum doloremque.',
+        image : img4
     },
 ]

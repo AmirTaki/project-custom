@@ -1,4 +1,3 @@
-import img1 from "./image/img1.jpg"
 const ImageSlider = () => {
     return(
     <div className="w-full h-[100vh] bg-red-200 overflow-hidden">

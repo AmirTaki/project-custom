@@ -11,7 +11,7 @@ const ItemImage = () => {
                 <div className="text-[5em] font-bold leading-[1.3em] text-[#14ff72cb]">FLOWER</div>
                 {/* discription */}
                 <div className="">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur velit provident pariatur optio sapiente et mollitia, in ut odit placeat accusantium officia, ipsa quae, fugit sequi expedita dignissimos cum doloremque.
+
                 </div>
                 {/* button */}
                 <div className="grid grid-cols-[130px_130px] grid-rows-[40px] gap-[5px] mt-[20px]">
