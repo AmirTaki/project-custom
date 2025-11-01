@@ -10,28 +10,32 @@ export const DataImage = {
         title : 'MAGIC SLIDER',
         type : 'FLOWER',
         description : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur velit provident pariatur optio sapiente et mollitia, in ut odit placeat accusantium officia, ipsa quae, fugit sequi expedita dignissimos cum doloremque.',
-        image : img1
+        image : img1,
+        flag : false,
     },
     {
         id : 1,
         title : 'MAGIC SLIDER',
         type : 'NATURE',
         description : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur velit provident pariatur optio sapiente et mollitia, in ut odit placeat accusantium officia, ipsa quae, fugit sequi expedita dignissimos cum doloremque.',
-        image : img2
+        image : img2,
+        flag : false
     },
     {
         id : 2,
         title : 'MAGIC SLIDER',
         type : 'NATURE',
         description : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur velit provident pariatur optio sapiente et mollitia, in ut odit placeat accusantium officia, ipsa quae, fugit sequi expedita dignissimos cum doloremque.',
-        image : img3
+        image : img3,
+        flag : false
     },
     {
         id : 3,
         title : 'MAGIC SLIDER',
         type : 'PLANT',
         description : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur velit provident pariatur optio sapiente et mollitia, in ut odit placeat accusantium officia, ipsa quae, fugit sequi expedita dignissimos cum doloremque.',
-        image : img4
+        image : img4,
+        flag : true
     }],
     buttons : [
         {

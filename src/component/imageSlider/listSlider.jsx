@@ -5,7 +5,7 @@ import { imageSliderContext } from ".";
 const ListSlider = () => {
     const {state, dispatch, } =  useContext(imageSliderContext)
     return(
-        <div className="sliderList"  >
+        <div className=""  >
             {state.image.map((item) => {
                 return(
                     <ItemImage key = {item.id} item = {item} />
