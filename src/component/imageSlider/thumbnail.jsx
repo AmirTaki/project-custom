@@ -1,9 +1,19 @@
+import { DataImage } from "./dataItem";
+
 const Thumbnail = () => {
     return(
         // thumbnail
         <div className="absolute bottom-[50px] left-[50%] w-max z-[100] flex gap-[20px]">
             {/* item */}
-            <div className="w-[150px] h-[220px] shrink-0 reative"></div>
+            {DataImage.map((item) => {
+                return(
+                    <div key = {item.id} className="w-[150px] h-[220px] shrink-0 reative">
+                        <img src={item.image} 
+                            className=""
+                        alt="" />
+                    </div>
+                )
+            })}
         </div>
     )
 }
