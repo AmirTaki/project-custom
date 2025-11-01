@@ -3,9 +3,9 @@ import ItemImage from "./itemImage";
 import { imageSliderContext } from ".";
 
 const ListSlider = () => {
-    const {state, dispatch} =  useContext(imageSliderContext)
+    const {state, dispatch, } =  useContext(imageSliderContext)
     return(
-        <div className="">
+        <div className="sliderList"  >
             {state.image.map((item) => {
                 return(
                     <ItemImage key = {item.id} item = {item} />
