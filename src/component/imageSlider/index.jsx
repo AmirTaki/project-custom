@@ -18,7 +18,10 @@ const ImageSlider = () => {
 
                 var newStateImg =  state.image.map((item) => ({...item, flag : item.id === value ? true : false }))
                
-                console.log(state.Thumbnail[value])
+                const newTh = state.Thumbnail[value]
+                state.Thumbnail[value] = state.Thumbnail[state.Thumbnail.length - 1] 
+                state.Thumbnail[state.Thumbnail.length - 1] = newTh
+                console.log()
                 return {...state, image : newStateImg, value : value, }
                 
             case 'next':
