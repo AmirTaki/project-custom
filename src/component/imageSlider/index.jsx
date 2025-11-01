@@ -17,10 +17,12 @@ const ImageSlider = () => {
                 var  value =  state.value === 0 ? length : state.value - 1;
 
                 var newStateImg =  state.image.map((item) => ({...item, flag : item.id === value ? true : false , prev : true, next : false }))
-                setTimeout(() => {
 
-                    state.Thumbnail.unshift(state.Thumbnail.pop())
-                }, 1000)
+                console.log(newStateImg.unshift(newStateImg.pop()))
+
+
+                // newStateImg =    (delete  Object.keys(state.image)[0])
+            
                 
                 return {...state, image : newStateImg, value : value,   }
                 
@@ -28,7 +30,7 @@ const ImageSlider = () => {
                 var  value =  state.value === length ? 0 : state.value + 1;
 
                 var newStateImg =  state.image.map((item) => ({...item, flag : item.id === value ? true : false , next : true, prev : false}))
-                state.Thumbnail.push(state.Thumbnail.shift())
+                state.image.push(state.image.shift())
                 return {...state, image : newStateImg, value : value}
         }
     }

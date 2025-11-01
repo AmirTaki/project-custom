@@ -46,3 +46,13 @@
     }
     
 }
+
+.nextThumbnial  {
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);
+    }
+}
