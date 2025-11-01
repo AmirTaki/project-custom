@@ -8,8 +8,13 @@ export const imageSliderContext =  createContext()
 const ImageSlider = () => {
     const reducerSlider = (state, action) => {
         switch (action.type){
-            case  '' :
-                return  state
+            case  'prev' :
+                console.log('prev')
+                return  {...state}
+            
+            case 'next':
+                console.log('next')
+                return {...state}
         }
     }
     const [state, dispatch]  = useReducer(reducerSlider, DataImage)
