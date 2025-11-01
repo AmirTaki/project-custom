@@ -23,7 +23,9 @@ const ImageSlider = () => {
                         </div>
                         {/* button */}
                         <div className="grid grid-cols-[130px_130px] grid-rows-[40px] gap-[5px] mt-[20px]">
-                            <button>SEE MORE</button>
+                            <button 
+                                className="border-0 bg-[#eee] font-[Poppins] cursor-pointer transition-all duration-500 leading-2"
+                            >SEE MORE</button>
                         </div>
                     </div>
 
