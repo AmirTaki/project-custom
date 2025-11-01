@@ -12,8 +12,10 @@ const ImageSlider = () => {
     const reducerSlider = (state, action) => {
         switch (action.type){
             case  'prev' :
-                const sliderItem = document.querySelector('.sliderList').querySelectorAll('.item')
-                console.log(sliderItem)
+                const sliderList = document.querySelector('.sliderList')
+                const sliderItem = sliderList.querySelectorAll('.item')
+                sliderList.prepend(sliderItem[sliderItem.length - 1]);
+                
                 return  {...state}
             
             case 'next':
