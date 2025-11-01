@@ -3,7 +3,8 @@ import img2 from "./image/img2.jpg"
 import img3 from "./image/img3.jpg"
 import img4 from "./image/img4.jpg"
 
-export const DataImage = [
+export const DataImage = {
+    image : [
     {
         id : 0,
         title : 'MAGIC SLIDER',
@@ -31,5 +32,17 @@ export const DataImage = [
         type : 'PLANT',
         description : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur velit provident pariatur optio sapiente et mollitia, in ut odit placeat accusantium officia, ipsa quae, fugit sequi expedita dignissimos cum doloremque.',
         image : img4
-    },
-]
+    }],
+    buttons : [
+        {
+            id : 0, 
+            symbol : '<',
+            name : 'prev'
+        },
+        {
+            id : 1, 
+            symbol : '>',
+            name : 'next'
+        },
+    ]
+}

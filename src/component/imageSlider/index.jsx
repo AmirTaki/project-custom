@@ -3,7 +3,7 @@ import NextPrevButton from "./buttonPrevArrows";
 import ListSlider from "./listSlider";
 import Thumbnail from "./thumbnail";
 
-export const imageSliderContect =  createContext()
+export const imageSliderContext =  createContext()
 const ImageSlider = () => {
     const reducerSlider = (state, action) => {
         switch (action.type){
@@ -18,7 +18,7 @@ const ImageSlider = () => {
         
         {/*slider  overflow-hidden*/}
         <div className="h-[100vh] w-[100vw] relative overflow-hidden -mt-[10px]">
-            <imageSliderContect.Provider value ={{}}>
+            <imageSliderContext.Provider value ={{state, dispatch}}>
 
                 {/* list */}
                 <ListSlider />
@@ -29,7 +29,7 @@ const ImageSlider = () => {
                 {/* next prev Arrows */}
                 <NextPrevButton />
 
-            </imageSliderContect.Provider>
+            </imageSliderContext.Provider>
         </div>
     </div>
     )

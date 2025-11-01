@@ -1,4 +1,8 @@
+import { useContext } from "react"
+import { imageSliderContext } from "."
+
 const NextPrevButton = () => {
+    const {dispatch} = useContext(imageSliderContext)
     const bt = ["<", ">"]
     return(
         <div 
@@ -6,7 +10,9 @@ const NextPrevButton = () => {
         >
             {bt.map((b, i) => {
                 return(
-                    <button key = {i} 
+                    <button 
+                    key = {i} 
+                    onClick={() => {dispatch (type = {b})}}
                     className="w-[40px] h-[40px] rounded-[50%] text-white bg-[#14ff72cb] border-0 font-[monospace] font-bold
                         transition-all duration-500 cursor-pointer hover:bg-white! hover:text-[#000]
                     ">
