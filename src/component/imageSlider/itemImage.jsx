@@ -1,17 +1,17 @@
-const ItemImage = () => {
+const ItemImage = ({item}) => {
     return(
         <div className="w-full h-full absolute inset-0">
             {/* img */}
-            <img src = {img1} alt="" className="w-full h-full object-cover" />
+            <img src = {item.img} alt="" className="w-full h-full object-cover" />
             {/* content */}
             <div className="absolute top-[20%] w-[1140px] max-w-[80%] left-[50%]  transform -translate-x-1/2 pr-[30%] max-md:pr-[0]! box-border text-white text-shadow-[0_5px_10px_#0004] ">
                 {/* title */}
-                <div className="text-[5em] font-bold leading-[1.3em] max-md:text-[50px]!">MAGIC SLIDER</div>
+                <div className="text-[5em] font-bold leading-[1.3em] max-md:text-[50px]!">{item.title}</div>
                 {/* type */}
-                <div className="text-[5em] font-bold leading-[1.3em] text-[#14ff72cb]">FLOWER</div>
+                <div className="text-[5em] font-bold leading-[1.3em] text-[#14ff72cb]">{item.type}</div>
                 {/* discription */}
                 <div className="">
-
+                    {item.description}
                 </div>
                 {/* button */}
                 <div className="grid grid-cols-[130px_130px] grid-rows-[40px] gap-[5px] mt-[20px]">
