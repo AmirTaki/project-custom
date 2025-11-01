@@ -16,15 +16,18 @@ const ImageSlider = () => {
             case  'prev' :
                 var  value =  state.value === 0 ? length : state.value - 1;
 
-                var newStateImg =  state.image.map((item) => ({...item, flag : item.id === value ? true : false }))
-                state.Thumbnail.unshift(state.Thumbnail.pop())
+                var newStateImg =  state.image.map((item) => ({...item, flag : item.id === value ? true : false , prev : true, next : false }))
+                setTimeout(() => {
+
+                    state.Thumbnail.unshift(state.Thumbnail.pop())
+                }, 1000)
                 
                 return {...state, image : newStateImg, value : value,   }
                 
             case 'next':
                 var  value =  state.value === length ? 0 : state.value + 1;
 
-                var newStateImg =  state.image.map((item) => ({...item, flag : item.id === value ? true : false }))
+                var newStateImg =  state.image.map((item) => ({...item, flag : item.id === value ? true : false , next : true, prev : false}))
                 state.Thumbnail.push(state.Thumbnail.shift())
                 return {...state, image : newStateImg, value : value}
         }
