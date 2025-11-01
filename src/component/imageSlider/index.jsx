@@ -17,17 +17,15 @@ const ImageSlider = () => {
                 var  value =  state.value === 0 ? length : state.value - 1;
 
                 var newStateImg =  state.image.map((item) => ({...item, flag : item.id === value ? true : false }))
-               
-                const newTh = state.Thumbnail[value]
-                state.Thumbnail[value] = state.Thumbnail[state.Thumbnail.length - 1] 
-                state.Thumbnail[state.Thumbnail.length - 1] = newTh
-                console.log()
-                return {...state, image : newStateImg, value : value, }
+                state.Thumbnail.unshift(state.Thumbnail.pop())
+                
+                return {...state, image : newStateImg, value : value,   }
                 
             case 'next':
                 var  value =  state.value === length ? 0 : state.value + 1;
 
                 var newStateImg =  state.image.map((item) => ({...item, flag : item.id === value ? true : false }))
+                state.Thumbnail.push(state.Thumbnail.shift())
                 return {...state, image : newStateImg, value : value}
         }
     }
