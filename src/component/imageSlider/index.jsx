@@ -1,5 +1,5 @@
-
 import ListSlider from "./listSlider";
+import Thumbnail from "./thumbnail";
 
 const ImageSlider = () => {
     return(
@@ -10,7 +10,9 @@ const ImageSlider = () => {
             {/* list */}
             <ListSlider />
 
-            
+            {/* thumbnail */}
+            <Thumbnail />
+
         </div>
     </div>
     )
