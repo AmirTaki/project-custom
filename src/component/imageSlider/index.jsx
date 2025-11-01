@@ -18,11 +18,7 @@ const ImageSlider = () => {
 
                 var newStateImg =  state.image.map((item) => ({...item, flag : item.id === value ? true : false , prev : true, next : false }))
 
-                console.log(newStateImg.unshift(newStateImg.pop()))
-
-
-                // newStateImg =    (delete  Object.keys(state.image)[0])
-            
+                newStateImg.unshift(newStateImg.pop())            
                 
                 return {...state, image : newStateImg, value : value,   }
                 
@@ -30,7 +26,9 @@ const ImageSlider = () => {
                 var  value =  state.value === length ? 0 : state.value + 1;
 
                 var newStateImg =  state.image.map((item) => ({...item, flag : item.id === value ? true : false , next : true, prev : false}))
-                state.image.push(state.image.shift())
+               
+                newStateImg.push(newStateImg.shift())
+               
                 return {...state, image : newStateImg, value : value}
         }
     }
