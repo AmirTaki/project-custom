@@ -10,20 +10,20 @@ const ImageSlider = () => {
     // const sliderItems = useRef(null)
 
     const reducerSlider = (state, action) => {
+        const length = state.image.length - 1;
+        const value =  state.value === length ? 0 : state.value;
+        
         switch (action.type){
             case  'prev' :
-                var sliderList = document.querySelector('.sliderList')
-                var sliderItem = sliderList.querySelectorAll('.item')
-                sliderList.prepend(sliderItem[sliderItem.length - 1]);
-
-                console.log(sliderList)
-                
+                         
                 return  {...state}
             
             case 'next':
-                var sliderList = document.querySelector('.sliderList')
-                var sliderItem = sliderList.querySelectorAll('.item')
-                sliderList.appendChild(sliderItem[0])
+                console.log(state.value, length, value)
+                state.image.map((item) => {
+                    
+                    return {...item, flag : false} 
+                })
                 return {...state}
         }
     }
