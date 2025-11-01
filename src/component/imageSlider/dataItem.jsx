@@ -38,7 +38,7 @@ export const DataImage = {
         image : img4,
         flag : true
     }],
-    Thumbnail : [img4, img3, img2, img1],
+    Thumbnail : [img1, img2, img3, img4],
     buttons : [
         {
             id : 0, 
