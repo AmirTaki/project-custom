@@ -11,20 +11,24 @@ const ImageSlider = () => {
 
     const reducerSlider = (state, action) => {
         const length = state.image.length - 1;
-        const value =  state.value === length ? 0 : state.value;
         
         switch (action.type){
             case  'prev' :
-                         
+                
                 return  {...state}
-            
+                
             case 'next':
-                console.log(state.value, length, value)
-                state.image.map((item) => {
-                    
-                    return {...item, flag : false} 
-                })
-                return {...state}
+                var  value =  state.value === length ? 0 : state.value + 1;
+                const newStateImg =  state.image.map((item) => {
+                        if(item.id === value){
+                            return {...item, flag : true}
+                        }
+                        else {
+
+                            return {...item , flag : false} 
+                        }
+                    })
+                return {...state, image : newStateImg, value : value}
         }
     }
     const [state, dispatch]  = useReducer(reducerSlider, DataImage)
