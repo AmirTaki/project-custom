@@ -2,6 +2,7 @@ import { createContext, useReducer } from "react";
 import NextPrevButton from "./buttonPrevArrows";
 import ListSlider from "./listSlider";
 import Thumbnail from "./thumbnail";
+import { DataImage } from "./dataItem";
 
 export const imageSliderContext =  createContext()
 const ImageSlider = () => {
@@ -11,7 +12,7 @@ const ImageSlider = () => {
                 return  state
         }
     }
-    const [state, dispatch]  = useReducer(reducerSlider, [])
+    const [state, dispatch]  = useReducer(reducerSlider, DataImage)
 
     return(
     <div className="w-full h-[100vh] bg-red-200 overflow-hidden">

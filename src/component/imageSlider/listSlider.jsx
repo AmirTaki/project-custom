@@ -1,9 +1,12 @@
-import { DataImage } from "./dataItem";
+import { useContext } from "react";
 import ItemImage from "./itemImage";
+import { imageSliderContext } from ".";
+
 const ListSlider = () => {
+    const {state, dispatch} =  useContext(imageSliderContext)
     return(
         <div className="">
-            {DataImage.map((item) => {
+            {state.image.map((item) => {
                 return(
                     <ItemImage key = {item.id} item = {item} />
                 )
