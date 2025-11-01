@@ -1,0 +1,6 @@
+.sliderAnimation {
+    transform: translateY(50px);
+    filter : blur(20px);
+    opacity : 0;
+    
+}
