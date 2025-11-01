@@ -1,3 +1,4 @@
+import NextPrevButton from "./buttonPrevArrows";
 import ListSlider from "./listSlider";
 import Thumbnail from "./thumbnail";
 
@@ -13,6 +14,8 @@ const ImageSlider = () => {
             {/* thumbnail */}
             <Thumbnail />
 
+            {/* next prev Arrows */}
+            <NextPrevButton />
         </div>
     </div>
     )
