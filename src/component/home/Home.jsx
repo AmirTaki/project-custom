@@ -29,6 +29,7 @@ import HorzinotalScrolling from "../imageHorzintalScrolling/index.jsx"
 import ImageEditor from "../imageEditor/index.jsx"
 import BackgroundChangeEffect from "../backgroundDrowing/index.jsx"
 import ImageHoverOverlayEffects from "../hoverOverlayEffects/index.jsx"
+import ImageSlider from "../imageSlider/index.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -148,6 +149,8 @@ const Home =  ()  => {
                 <FooterAnimated />
 
             </div>
+            {/* image slider */}
+            <ImageSlider />
             <div className="h-100 w-100 text-white"></div>
         </div>   
     )

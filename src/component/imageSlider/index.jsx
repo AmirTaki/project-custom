@@ -1,5 +1,6 @@
 const ImageSlider = () => {
     return(
+        // slider
         <div className=""></div>
     )
 }
