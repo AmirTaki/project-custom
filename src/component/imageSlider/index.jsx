@@ -15,6 +15,16 @@ const ImageSlider = () => {
                     <div className="absolute top-[20%] w-[1140px] max-w-[80%] left-[50%] h-10 bg-amber-600 transform -translate-x-1/2 pr-[30%] max-md:pr-[0]! box-border text-white shadow-[0_5px_10px_#0004] ">
                         {/* title */}
                         <div className="text-[5em] font-bold leading-[1.3em] max-md:text-[50px]!">MAGIC SLIDER</div>
+                        {/* type */}
+                        <div className="text-[5em] font-bold leading-[1.3em] text-[#14ff72cb]">FLOWER</div>
+                        {/* discription */}
+                        <div className="">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur velit provident pariatur optio sapiente et mollitia, in ut odit placeat accusantium officia, ipsa quae, fugit sequi expedita dignissimos cum doloremque.
+                        </div>
+                        {/* button */}
+                        <div className="grid grid-cols-[130px_130px] grid-rows-[40px] gap-[5px] mt-[20px]">
+                            <button>SEE MORE</button>
+                        </div>
                     </div>
 
                 </div>
