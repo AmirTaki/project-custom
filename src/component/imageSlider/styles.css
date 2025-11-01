@@ -12,3 +12,16 @@
         opacity : 1
     }
 }
+
+.titleContent {
+    animation-delay: .4s !important;
+}
+.typeContent {
+    animation-delay: .4s !important;
+}
+.descriptionContent {
+    animation-delay: .4s !important;
+}
+.buttonsContent {
+    animation-delay: .4s !important;
+}

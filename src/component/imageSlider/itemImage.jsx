@@ -11,13 +11,13 @@ const ItemImage = ({item}) => {
                     {item.title}
                 </div>
                 {/* type */}
-                <div className="text-[5em] font-bold leading-[1.3em] text-[#14ff72cb] sliderAnimation">{item.type}</div>
+                <div className="text-[5em] font-bold leading-[1.3em] text-[#14ff72cb] sliderAnimation ">{item.type}</div>
                 {/* discription */}
-                <div className="sliderAnimation">
+                <div className="sliderAnimation ">
                     {item.description}
                 </div>
                 {/* button */}
-                <div className="grid grid-cols-[130px_130px] grid-rows-[40px] gap-[5px] mt-[20px] sliderAnimation">
+                <div className="grid grid-cols-[130px_130px] grid-rows-[40px] gap-[5px] mt-[20px] sliderAnimation ">
                     <button 
                         className="border-0  text-black bg-[#eee] font-[Poppins]! font-[500]! cursor-pointer transition-all duration-500 tracking-[2px] hover:tracking-[3px] "
                     >SEE MORE</button>
