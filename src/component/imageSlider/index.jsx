@@ -1,10 +1,18 @@
-import { createContext } from "react";
+import { createContext, useReducer } from "react";
 import NextPrevButton from "./buttonPrevArrows";
 import ListSlider from "./listSlider";
 import Thumbnail from "./thumbnail";
 
 export const imageSliderContect =  createContext()
 const ImageSlider = () => {
+    const reducerSlider = (state, action) => {
+        switch (action.type){
+            case  '' :
+                return  state
+        }
+    }
+    const [state, dispatch]  = useReducer(reducerSlider, [])
+
     return(
     <div className="w-full h-[100vh] bg-red-200 overflow-hidden">
         
@@ -20,11 +28,11 @@ const ImageSlider = () => {
 
                 {/* next prev Arrows */}
                 <NextPrevButton />
-                
+
             </imageSliderContect.Provider>
         </div>
     </div>
     )
 }
 
-export default ImageSlider;
+export default ImageSlider;  
