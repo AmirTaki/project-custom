@@ -15,28 +15,14 @@ const ImageSlider = () => {
         switch (action.type){
             case  'prev' :
                 var  value =  state.value === 0 ? length : state.value - 1;
-                var newStateImg =  state.image.map((item) => {
-                        if(item.id === value){
-                            return {...item, flag : true}
-                        }
-                        else {
 
-                            return {...item , flag : false} 
-                        }
-                    })
+                var newStateImg =  state.image.map((item) => ({...item, flag : item.id === value ? true : false }))
                 return {...state, image : newStateImg, value : value}
                 
             case 'next':
                 var  value =  state.value === length ? 0 : state.value + 1;
-                var newStateImg =  state.image.map((item) => {
-                        if(item.id === value){
-                            return {...item, flag : true}
-                        }
-                        else {
 
-                            return {...item , flag : false} 
-                        }
-                    })
+                var newStateImg =  state.image.map((item) => ({...item, flag : item.id === value ? true : false }))
                 return {...state, image : newStateImg, value : value}
         }
     }
