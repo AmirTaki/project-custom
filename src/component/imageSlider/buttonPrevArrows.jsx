@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { imageSliderContext } from "."
 
 const NextPrevButton = () => {
-    const {DataImage} = useContext(imageSliderContext)
+    const {DataImage, } = useContext(imageSliderContext)
 
     return(
         <div 
@@ -12,7 +12,7 @@ const NextPrevButton = () => {
                 return(
                     <button 
                     key = {but.id} 
-                    onClick={() => {dispatch ({type : but.name})}}
+                    // onClick={() => {dispatch ({type : })}}
                     className="w-[40px] h-[40px] rounded-[50%] text-white bg-[#14ff72cb] border-0 font-[monospace] font-bold
                         transition-all duration-500 cursor-pointer hover:bg-white! hover:text-[#000]
                     ">
