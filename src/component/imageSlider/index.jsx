@@ -12,14 +12,12 @@ const ImageSlider = () => {
     const reducer = (state, action)=>{
         switch(action.type){
             case "next":
-                // const unshift = state.image.unshift(state.image.pop())
                 const unshift = state.image.push(state.image.shift())
                         console.log(state.image)
 
                 return {...state,  next : true, }
 
             case "prev":
-                // const push =  state.image.push(state.image.shift())
                 const push =  state.image.unshift(state.image.pop())
                 return {...state, prev : true, }
 
