@@ -7,6 +7,9 @@ import { DataImage } from "./dataItem";
 export const imageSliderContext =  createContext()
 const ImageSlider = () => {
 
+    const sliderRef =  useRef(null)
+    const sliderListRef =  useRef(null)
+    const thumbnailRef =  useRef(null)
 
     // const reducerSlider = (state, action) => {
     //     const length = state.image.length - 1;

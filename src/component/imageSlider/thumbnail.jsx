@@ -7,7 +7,7 @@ const Thumbnail = () => {
     const {DataImage} = useContext(imageSliderContext)
     return(
         // thumbnail
-        <div className="absolute bottom-[50px] left-[50%] w-max z-[100] flex gap-[20px] nextThumbnial">
+        <div className="absolute bottom-[50px] left-[50%] w-max z-[100] flex gap-[20px] ">
           
 
             {/* item */}
