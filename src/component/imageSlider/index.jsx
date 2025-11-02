@@ -7,19 +7,24 @@ const ImageSlider = () => {
     const slider = useRef(null)
     const sliderList = useRef(null)
     const thumbnail = useRef(null)
-    const thumbnailItems = useRef(null)
     
+   
+
     const reducer = (state, action) => {
+        var thumbnailItems = thumbnail.current.querySelectorAll('.item')
+        console.log(thumbnailItems)
         switch (action.type){
-            case "":
-                return state;
+            case "next":
+                return {...state};
+            case "prev" : 
+                return {...state}
         }
     }
     const [state, dispatch] = useReducer(reducer, DataImage)
     return(
-        <div className="slider">
+        <div className="slider" ref = {slider}>
             {/* list */}
-            <div className="list">
+            <div className="list" ref = {sliderList}>
                 {state.image.map((item) => {
                     return(
                         <div className="item" key = {item.id}>
@@ -38,7 +43,7 @@ const ImageSlider = () => {
             </div>
 
             {/* thumbnail */}
-            <div className="thumbnail">
+            <div className="thumbnail" ref = {thumbnail}>
                 {state.image.map((item) => {
                     return(
                         <div className="item" key = {item.id}>
