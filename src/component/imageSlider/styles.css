@@ -41,7 +41,6 @@
     color: #14ff72cb;
 }
 .slider .list .item .button{
-    position: absolute;
     display: grid;
     grid-template-columns: repeat(2, 130px);
     grid-template-rows: 40px;
@@ -51,7 +50,7 @@
 }
 .slider .list .item .button button{
     border: none;
-    background-color: #ff0000;
+    background-color: #eee;
     font-family: Poppins;
     font-weight: 500;
     cursor: pointer;

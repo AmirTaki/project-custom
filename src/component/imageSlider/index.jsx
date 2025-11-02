@@ -29,6 +29,13 @@ const ImageSlider = () => {
     const [state, dispatch] = useReducer(reducer, DataImage)
 
     useEffect(() => {
+        if(thumbnail.current){
+            var thItems = thumbnail.current.querySelectorAll('.item')
+            thumbnail.current.appendChild(thItems[0])
+        }
+    },[])
+
+    useEffect(() => {
         if(slider.current){
             slider.current.addEventListener('animationend', () => {
                 slider.current.classList.remove('next')
