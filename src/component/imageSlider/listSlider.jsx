@@ -3,10 +3,10 @@ import ItemImage from "./itemImage";
 import { imageSliderContext } from ".";
 
 const ListSlider = () => {
-    const {state, dispatch, } =  useContext(imageSliderContext)
+    const {DataImage} =  useContext(imageSliderContext)
     return(
         <div className=""  >
-            {state.image.map((item) => {
+            {DataImage.image.map((item) => {
                 return(
                     <ItemImage key = {item.id} item = {item} />
                 )
