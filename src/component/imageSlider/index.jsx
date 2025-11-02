@@ -3,6 +3,7 @@ import { DataImage } from "./dataItem";
 import './style.css'
 import ItemImage from "./itemImage";
 import NextPrevButton from "./buttonPrevArrows";
+import Thumbnail from "./thumbnail";
 
 
 const ImageSlider = () => {
@@ -47,26 +48,11 @@ const ImageSlider = () => {
             }) }
         </div>
 
-        <NextPrevButton Data = {Data} dispatch = {dispatch } />
-        <div 
-            onClick={() => {dispatch({type : 'next'})}}
-        className="bg-blue-500 z-[1000]! absolute -bottom-100 w-20 cursor-pointer ">next
-        </div>
-        <div 
-            onClick={() => {dispatch({type : 'prev'})}}
-        className="bg-red-500 z-[1000]! absolute -bottom-10 right-0 w-20 cursor-pointer">prev
-        </div>
-
-
-        <div className="absolute w-30  h-10 flex bottom-0 right-29 gap-2 ">
-            {Data.image.map((item) => {
-                return(
-                    <div className="">
-                        <img src={item.image} alt="" className="rounded-2xl" />
-                    </div>
-                )
-            })}
-        </div>
+        <NextPrevButton Data = {Data} dispatch = {dispatch}  />
+            
+        {/* thumbnail */}
+        <Thumbnail Data = {Data}  />
+     
     </div>
     )
 }

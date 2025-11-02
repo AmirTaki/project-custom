@@ -1,17 +1,15 @@
-import { useContext } from "react";
-import { imageSliderContext } from ".";
+;
 import './styles.css'
 
 
-const Thumbnail = () => {
-    const {DataImage, thumbnailRef} = useContext(imageSliderContext)
+const Thumbnail = ({Data}) => {
     return(
         // thumbnail
-        <div className="absolute bottom-[50px] left-[50%] w-max z-[100] flex gap-[20px] " ref = {thumbnailRef}>
+        <div className="absolute bottom-[50px] left-[50%] w-max z-[100] flex gap-[20px] " >
           
 
             {/* item */}
-            {DataImage.image.map((item) => {
+            {Data.image.map((item) => {
                 return(
                     <div key = {item.id} className="w-[150px] h-[220px] shrink-0 reative item">
                         <img src={item.image} 

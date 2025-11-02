@@ -1,7 +1,4 @@
-
-
 const NextPrevButton = ({Data, dispatch}) => {
-    // const {DataImage, } = useContext(imageSliderContext)
 
     return(
         <div 

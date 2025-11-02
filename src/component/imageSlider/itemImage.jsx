@@ -2,7 +2,7 @@ import "./styles.css"
 const ItemImage = ({item}) => {
     return(
         // item
-        <div className={` w-full h-full absolute inset-0 item`}>
+        <div className={` w-full h-full absolute inset-0 sliderAnimation`}>
             {/* img */}
             <img src = {item.image} alt="" className={` w-full h-full object-cover `} />
             {/* content */}
