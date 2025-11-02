@@ -58,6 +58,13 @@
 } */
 
 
+
+.thumbnailPrev:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+
 @keyframes showThumbnail{
     from{
         width: 0;
@@ -77,7 +84,7 @@
 
 
 /*  */
-.sliderPrev {
+.sliderPrev:nth-child(2) {
     position: absolute;
     bottom: 0;
     left: 0;

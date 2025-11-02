@@ -11,7 +11,7 @@ const Thumbnail = ({Data}) => {
             {/* item */}
             {Data.image.map((item) => {
                 return(
-                    <div key = {item.id} className="w-[150px] h-[220px] shrink-0 reative thumbnailNext">
+                    <div key = {item.id} className={`w-[150px] h-[220px] shrink-0 reative ${Data.next ? "thumbnailNext" : ""}  ${Data.prev ? "thumbnailPrev": ""} `}>
                         <img src={item.image} 
                             className={`w-full h-full object-cover rounded-[20px] shadow-[5px_0_15px_rgba(0,0,0,.3)]`}
                         alt="" />

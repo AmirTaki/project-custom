@@ -18,7 +18,7 @@ const ImageSlider = () => {
                 const newState =  state.image.map((item) => {
                     return {...item, next : item.id  === pop.id  ? true : false}
                 })
-                return {...state,  next : true, prev : false}
+                return {...state,  next : true, }
 
             case "prev":
                 const shift = state.image.shift()
@@ -27,7 +27,7 @@ const ImageSlider = () => {
                 const newstate =  state.image.map((item) => {
                     return {...item, animation : item.id === shift.id ? true : false}
                 })
-                return {...state, prev : true, next : false}
+                return {...state, prev : true, }
 
             case "nextPrevAnimation" : 
                 return {...state, next : false, prev : false}

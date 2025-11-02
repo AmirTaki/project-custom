@@ -4,7 +4,7 @@ const ItemImage = ({item}) => {
         // item
         <div className={` w-full h-full absolute inset-0 `}>
             {/* img */}
-            <img src = {item.image} alt="" className={` w-full h-full object-cover sliderNext ` } />
+            <img src = {item.image} alt="" className={` w-full h-full object-cover sliderNext  ` } />
             {/* content */}
             <div className="absolute top-[15%] w-[1140px] max-w-[80%] left-[50%]  transform -translate-x-1/2 pr-[30%] max-md:pr-[0]! box-border text-white text-shadow-[0_5px_10px_#0004] ">
                 {/* title */}
