@@ -14,10 +14,13 @@ const ImageSlider = () => {
         <div className="slider">
             {/* list */}
             <div className="list">
-                {}
-                <div className="item">
+                {state.image.map((item) => {
+                    return(
+                        <div className="item">
 
-                </div>
+                        </div>
+                    )
+                })}
             </div>
         </div>
     )

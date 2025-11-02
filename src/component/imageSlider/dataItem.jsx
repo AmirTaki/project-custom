@@ -4,9 +4,6 @@ import img3 from "./image/img3.jpg"
 import img4 from "./image/img4.jpg"
 
 export const DataImage = {
-    value : 3,
-    next : false,
-    prev : false,
     image : [
     {
         id : 0,
