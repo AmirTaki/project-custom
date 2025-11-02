@@ -11,7 +11,7 @@ const ImageSlider = () => {
                 const pop = state.image.pop()
                 const unshift = state.image.unshift(pop)
                 // pop.animation = true
-                console.log(unshift)
+              
                 const newState =  state.image.map((item) => {
                     return {...item, animation : item.id  === pop.id  ? true : false}
                 })
@@ -42,7 +42,7 @@ const ImageSlider = () => {
             return(
                 <div 
                     className={`h-full w-full absolute   `}
-                    style={{width : `${item.width}px`,  zIndex : item.zidex}} key = {item.id}>
+                    style={{width : `${item.width}px`,}} key = {item.id}>
                     <img src={item.image} alt="" className="w-full h-full"/>
                 </div>      
             )
