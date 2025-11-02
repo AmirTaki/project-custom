@@ -16,8 +16,13 @@ const ImageSlider = () => {
             <div className="list">
                 {state.image.map((item) => {
                     return(
-                        <div className="item">
-
+                        <div className="item" key = {item.id}>
+                            <img src={item.image} alt="" />
+                            <div className="content">
+                                <div className="title">{item.title}</div>
+                                <div className="type">{item.type}</div>
+                                <div className="description">{item.description}</div>
+                            </div>
                         </div>
                     )
                 })}
