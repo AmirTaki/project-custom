@@ -23,6 +23,20 @@ const ImageSlider = () => {
                                 <div className="type">{item.type}</div>
                                 <div className="description">{item.description}</div>
                             </div>
+                            <div className="button">
+                                <button>SEE MORE</button>
+                            </div>
+                        </div>
+                    )
+                })}
+            </div>
+
+            {/* thumbnail */}
+            <div className="thumbnail">
+                {state.image.map((item) => {
+                    return(
+                        <div className="item" key = {item.id}>
+                            <img src={item.image} alt="" />
                         </div>
                     )
                 })}
