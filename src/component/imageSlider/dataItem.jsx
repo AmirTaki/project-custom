@@ -12,8 +12,9 @@ export const DataImage = {
         type : 'FLOWER',
         description : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur velit provident pariatur optio sapiente et mollitia, in ut odit placeat accusantium officia, ipsa quae, fugit sequi expedita dignissimos cum doloremque.',
         image : img1,
-        width : 50,
-        zidex : 10
+        width : 100,
+        zidex : 10,  
+        animation: false
     },
     {
         id : 1,
@@ -21,8 +22,9 @@ export const DataImage = {
         type : 'NATURE',
         description : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur velit provident pariatur optio sapiente et mollitia, in ut odit placeat accusantium officia, ipsa quae, fugit sequi expedita dignissimos cum doloremque.',
         image : img2,
-        width : 60,
-        zidex : 9
+        width : 100,
+        zidex : 9,
+        animation: false
     },
     {
         id : 2,
@@ -30,8 +32,10 @@ export const DataImage = {
         type : 'NATURE',
         description : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur velit provident pariatur optio sapiente et mollitia, in ut odit placeat accusantium officia, ipsa quae, fugit sequi expedita dignissimos cum doloremque.',
         image : img3,
-        width : 70,
-        zidex : 8
+        width : 100,
+        zidex : 8,
+        
+        animation: false
     },
     {
         id : 3,
@@ -39,8 +43,10 @@ export const DataImage = {
         type : 'PLANT',
         description : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur velit provident pariatur optio sapiente et mollitia, in ut odit placeat accusantium officia, ipsa quae, fugit sequi expedita dignissimos cum doloremque.',
         image : img4,
-        width : 80,
-        zidex : 7
+        width : 100,
+        zidex : 7,
+        
+        animation: false
        
     }],
     buttons : [
