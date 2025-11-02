@@ -2,6 +2,7 @@ import { useReducer } from "react";
 import "./styles.css"
 import { DataImage } from "./dataItem";
 
+
 const ImageSlider = () => {
     const reducer = (state, action) => {
         switch (action.type){
@@ -38,6 +39,15 @@ const ImageSlider = () => {
                         <div className="item" key = {item.id}>
                             <img src={item.image} alt="" />
                         </div>
+                    )
+                })}
+            </div>
+
+            {/* next prev arrows */}
+            <div className="nextPrevArrows">
+                {state.buttons.map((item) => {
+                    return(
+                        <button className={`${item.name}`} key = {item.id}>{item.symbol}</button>
                     )
                 })}
             </div>
