@@ -34,15 +34,15 @@ const ImageSlider = () => {
     },[Data])
     return(
     //    slider
-    <div className="w-[100%]  h-[100vh] bg-red-200 relative  " >
+    <div className="w-[50%]  h-[20vh] bg-red-200 relative " >
         {/* item */}
         <div className=""ref = {sliderRef}>
 
         {Data.image.map((item) => {
             return(
                 <div 
-                    className={`h-full w-full absolute  item   duration-1000   ${item.animation ? "block nextAnimation" : "block BackAnimation scale-100"} `}
-                    style={{width : `${item.width}%`,  }} key = {item.id}>
+                    className={`h-full w-full absolute   `}
+                    style={{width : `${item.width}px`,  zIndex : item.zidex}} key = {item.id}>
                     <img src={item.image} alt="" className="w-full h-full"/>
                 </div>      
             )

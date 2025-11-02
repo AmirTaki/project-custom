@@ -22,7 +22,7 @@ export const DataImage = {
         type : 'NATURE',
         description : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur velit provident pariatur optio sapiente et mollitia, in ut odit placeat accusantium officia, ipsa quae, fugit sequi expedita dignissimos cum doloremque.',
         image : img2,
-        width : 100,
+        width : 130,
         zidex : 9,
         animation: false
     },
@@ -32,7 +32,7 @@ export const DataImage = {
         type : 'NATURE',
         description : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur velit provident pariatur optio sapiente et mollitia, in ut odit placeat accusantium officia, ipsa quae, fugit sequi expedita dignissimos cum doloremque.',
         image : img3,
-        width : 100,
+        width : 160,
         zidex : 8,
         
         animation: false
@@ -43,7 +43,7 @@ export const DataImage = {
         type : 'PLANT',
         description : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur velit provident pariatur optio sapiente et mollitia, in ut odit placeat accusantium officia, ipsa quae, fugit sequi expedita dignissimos cum doloremque.',
         image : img4,
-        width : 100,
+        width : 190,
         zidex : 7,
         
         animation: false
