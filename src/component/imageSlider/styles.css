@@ -1,8 +1,9 @@
 
+
 .slider{
     height: 100vh;
     margin-top: -50px;
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
     position: relative;
 }
@@ -40,20 +41,23 @@
     color: #14ff72cb;
 }
 .slider .list .item .button{
+    position: absolute;
     display: grid;
     grid-template-columns: repeat(2, 130px);
     grid-template-rows: 40px;
     gap: 5px;
     margin-top: 20px;
+    z-index: 100 !important;
 }
 .slider .list .item .button button{
     border: none;
-    background-color: #eee;
+    background-color: #ff0000;
     font-family: Poppins;
     font-weight: 500;
     cursor: pointer;
     transition: 0.4s;
     letter-spacing: 2px;
+    z-index: 100 !important;
 }
 
 

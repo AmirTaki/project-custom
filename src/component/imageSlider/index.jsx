@@ -1,7 +1,6 @@
 import { useEffect, useReducer, useRef } from "react";
-import "./styles.css"
 import { DataImage } from "./dataItem";
-
+import "./styles.css"
 
 const ImageSlider = () => {
     const slider = useRef(null)
@@ -34,7 +33,7 @@ const ImageSlider = () => {
             slider.current.addEventListener('animationend', () => {
                 slider.current.classList.remove('next')
                 slider.current.classList.remove('prev')
-            }, {once : true})
+            }, {once : false})
         }
     }, [state])
 
@@ -84,6 +83,7 @@ const ImageSlider = () => {
                 })}
             </div>
         </div>
+
     )
 }
 
