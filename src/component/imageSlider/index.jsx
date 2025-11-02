@@ -1,9 +1,14 @@
-import { useReducer } from "react";
+import { useReducer, useRef } from "react";
 import "./styles.css"
 import { DataImage } from "./dataItem";
 
 
 const ImageSlider = () => {
+    const slider = useRef(null)
+    const sliderList = useRef(null)
+    const thumbnail = useRef(null)
+    const thumbnailItems = useRef(null)
+    
     const reducer = (state, action) => {
         switch (action.type){
             case "":
@@ -47,7 +52,12 @@ const ImageSlider = () => {
             <div className="nextPrevArrows">
                 {state.buttons.map((item) => {
                     return(
-                        <button className={`${item.name}`} key = {item.id}>{item.symbol}</button>
+                        <button 
+                            className={`${item.name}`} key = {item.id}
+                            onClick={() => {dispatch({type : `${item.name}`})}}
+                        >
+                            {item.symbol}
+                        </button>
                     )
                 })}
             </div>
