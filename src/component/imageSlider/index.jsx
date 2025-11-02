@@ -7,8 +7,6 @@ const ImageSlider = () => {
     const slider = useRef(null)
     const sliderList = useRef(null)
     const thumbnail = useRef(null)
-    
-   
 
     const reducer = (state, action) => {
         var thumbnailItems = thumbnail.current.querySelectorAll('.item')
@@ -19,25 +17,27 @@ const ImageSlider = () => {
                 sliderList.current.appendChild(sliderItems[0])
                 thumbnail.current.appendChild(thumbnailItems[0])
                 slider.current.classList.add('next')
-                return {...state};
-                
+            return {...state};
+
             case "prev" : 
                 sliderList.current.prepend(sliderItems[sliderItems.length - 1])
                 thumbnail.current.prepend(thumbnailItems[thumbnailItems.length - 1])
                 slider.current.classList.add('prev')
-                return {...state}
+            return {...state}
         }
     }
 
     const [state, dispatch] = useReducer(reducer, DataImage)
+
     useEffect(() => {
         if(slider.current){
             slider.current.addEventListener('animationend', () => {
                 slider.current.classList.remove('next')
                 slider.current.classList.remove('prev')
-            })
+            }, {once : true})
         }
     }, [state])
+
     return(
         <div className="slider" ref = {slider}>
             {/* list */}
