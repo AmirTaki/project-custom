@@ -1,4 +1,4 @@
-import { useReducer, useRef } from "react";
+import { useEffect, useReducer, useRef } from "react";
 import "./styles.css"
 import { DataImage } from "./dataItem";
 
@@ -12,15 +12,28 @@ const ImageSlider = () => {
 
     const reducer = (state, action) => {
         var thumbnailItems = thumbnail.current.querySelectorAll('.item')
-        console.log(thumbnailItems)
+        var sliderItems = sliderList.current.querySelectorAll(".item")
+ 
         switch (action.type){
             case "next":
+                sliderList.current.appendChild(sliderItems[0])
+                thumbnail.current.appendChild(thumbnailItems[0])
+                slider.current.classList.add('next')
                 return {...state};
             case "prev" : 
                 return {...state}
         }
     }
+
     const [state, dispatch] = useReducer(reducer, DataImage)
+    useEffect(() => {
+        if(slider.current){
+            slider.current.addEventListener('animationend', () => {
+                slider.current.classList.remove('next')
+                slider.current.classList.remove('prev')
+            })
+        }
+    }, [state])
     return(
         <div className="slider" ref = {slider}>
             {/* list */}
