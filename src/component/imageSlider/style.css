@@ -1,3 +1,9 @@
 .nextAnimation {
-    translate: ;
+    transform: scale(1);
+    animation:  show 2s linear forwards;
+}
+@keyframes show {
+    to {
+        transform:  scale(0.3);
+    }
 }

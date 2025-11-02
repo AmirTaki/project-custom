@@ -9,10 +9,11 @@ const ImageSlider = () => {
         switch(action.type){
             case "next":
                 const pop = state.image.pop()
-                state.image.unshift(pop)
+                const unshift = state.image.unshift(pop)
                 // pop.animation = true
+                console.log(unshift)
                 const newState =  state.image.map((item) => {
-                    return {...item, animation : item.id === pop.id ? true : false}
+                    return {...item, animation : item.id  === pop.id  ? true : false}
                 })
                 return {...state,  image : newState}
 
@@ -20,24 +21,27 @@ const ImageSlider = () => {
                 const shift = state.image.shift()
                 state.image.push(shift)
                 // shift.animation = false
-                return {...state, value : pop.id}
+                const newstate =  state.image.map((item) => {
+                    return {...item, animation : item.id === shift.id ? true : false}
+                })
+                return {...state,  image : newstate}
         }
     }
     const [Data, dispatch] = useReducer(reducer, DataImage)
 
     useEffect(() => {
-        console.log(Data.value)
+        // console.log(Data.value)
     },[Data])
     return(
     //    slider
-    <div className="w-[100%]  h-[50vh] bg-red-200 relative  " >
+    <div className="w-[100%]  h-[100vh] bg-red-200 relative  " >
         {/* item */}
-        <div className="flex flex-row"ref = {sliderRef}>
+        <div className=""ref = {sliderRef}>
 
         {Data.image.map((item) => {
             return(
                 <div 
-                    className={`h-full w-full  item   duration-1000 ${Data.value == item.id ? "scale-200!" : "scale-100!"} `}
+                    className={`h-full w-full absolute  item   duration-1000   ${item.animation ? "block nextAnimation" : "scale-100"} `}
                     style={{width : `${item.width}%`,  }} key = {item.id}>
                     <img src={item.image} alt="" className="w-full h-full"/>
                 </div>      
@@ -47,7 +51,7 @@ const ImageSlider = () => {
 
         <div 
             onClick={() => {dispatch({type : 'next'})}}
-        className="bg-blue-500 z-[1000]! absolute -bottom-10 w-20 cursor-pointer">next
+        className="bg-blue-500 z-[1000]! absolute -bottom-10 w-20 cursor-pointer ">next
         </div>
         <div 
             onClick={() => {dispatch({type : 'prev'})}}
