@@ -1,11 +1,11 @@
-import { useEffect, useReducer, useRef, useState } from "react";
+import { createContext, useEffect, useReducer, useRef, useState } from "react";
 import { DataImage } from "./dataItem";
 import './style.css'
 import ItemImage from "./itemImage";
 import NextPrevButton from "./buttonPrevArrows";
 import Thumbnail from "./thumbnail";
-import { data } from "react-router-dom";
 
+export const SliderImage = createContext('')
 
 const ImageSlider = () => {
 
@@ -31,7 +31,7 @@ const ImageSlider = () => {
     useEffect(() => {
         const time = setInterval(() => {
             dispatch({type : 'nextPrevAnimation'})
-        }, 750);
+        }, 2000);
         return() => {
             clearInterval(time)
         }
@@ -42,24 +42,27 @@ const ImageSlider = () => {
 
    
     return(
-    //    slider
-    <div className="h-[100vh]  -mt-[50px] w-[100vw] overflow-hidden relative " >
-        {/* list */}
-        <div className="">
-        {/* item */}
-            {Data.image.map((item) => {
-                return(
-                    <ItemImage key = {item.id} item = {item} />    
-                )
-            }) }
-        </div>
+    <SliderImage.Provider value = {{Data}} >
 
-        <NextPrevButton Data = {Data} dispatch = {dispatch}  />
-            
-        {/* thumbnail */}
-        <Thumbnail Data = {Data}  />
-     
-    </div>
+        {/* //    slider */}
+        <div className="h-[100vh]  -mt-[50px] w-[100vw] overflow-hidden relative " >
+            {/* list */}
+            <div className="">
+            {/* item */}
+                {Data.image.map((item) => {
+                    return(
+                        <ItemImage key = {item.id} item = {item}  />    
+                    )
+                }) }
+            </div>
+
+            <NextPrevButton Data = {Data} dispatch = {dispatch}  />
+                
+            {/* thumbnail */}
+            <Thumbnail Data = {Data}  />
+        
+        </div>
+    </SliderImage.Provider>
     )
 }
 
