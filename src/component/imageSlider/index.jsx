@@ -8,21 +8,16 @@ const ImageSlider = () => {
     const reducer = (state, action) => {
         switch(action.type){
             case "next" :
-                // const slide =  slider.current
-                // if(slide){
-                //     const slideNext  = slide.querySelectorAll('.item')
-                //     slide.appendChild(slideNext[0])
-                //     console.log(slideNext[0])
-                // }  
                 
-                state.item.push(state.item.shift())
-                // const newItem = state.item.map((item) => {
-                //     return {...item}
-                // })
-                return {...state, move : true, }
+                const shift = state.item.shift()
+                state.item.push(shift)
+
+                const newItem = state.item.map((item) => {({...item, scale : item.id == shift.id ? true : false})})
+                return {...state, move : true, item : newItem}
 
             case "moveFalse" :
-                return {...state, move : false}
+                const newState =  state.item.map((item) => {({...item, scale : false})}) 
+                return {...state, move : false, item : newState}
         }
     }
     const [state, dispatch]  = useReducer(reducer, {
