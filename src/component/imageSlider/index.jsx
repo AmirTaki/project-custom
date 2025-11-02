@@ -7,14 +7,8 @@ const ImageSlider = () => {
    const sliderRef =  useRef(null)
     const reducer = (state, action)=>{
         switch(action.type){
-            case "click":
-                if(sliderRef.current)
-                {
-                   const slider = sliderRef.current;
-                    const items = slider.querySelectorAll('.item')
-                    slider.appendChild(items[0])
-                    console.log(slider)
-                }
+            case "next":
+                state.image.unshift(state.image.pop())
                 return {...state, }
         }
     }
@@ -22,14 +16,14 @@ const ImageSlider = () => {
 
     return(
     //    slider
-    <div className="w-[100%]  h-[50vh] bg-red-200 relative " >
+    <div className="w-[100%]  h-[50vh] bg-red-200 relative  " >
         {/* item */}
-        <div className=""ref = {sliderRef}>
+        <div className="flex flex-row"ref = {sliderRef}>
 
         {Data.image.map((item) => {
             return(
                 <div 
-                    className="h-full w-full absolute item"
+                    className="h-full w-full  item"
                     style={{width : `${item.width}%`, zIndex : item.zidex }} key = {item.id}>
                     <img src={item.image} alt="" className="w-full h-full"/>
                 </div>      
@@ -39,7 +33,12 @@ const ImageSlider = () => {
 
         <div 
             onClick={() => {dispatch({type : 'click'})}}
-        className="bg-blue-500 z-[1000]! absolute -bottom-10 w-20 cursor-pointer">click</div>
+        className="bg-blue-500 z-[1000]! absolute -bottom-10 w-20 cursor-pointer">next
+        </div>
+        <div 
+            onClick={() => {dispatch({type : 'click'})}}
+        className="bg-blue-500 z-[1000]! absolute -bottom-10 w-20 cursor-pointer">next
+        </div>
     </div>
     )
 }
