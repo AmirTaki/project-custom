@@ -1,3 +1,5 @@
+import "./styles.css"
+
 const ImageSlider = () => {
     return(
         <div className=""></div>
