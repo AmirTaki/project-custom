@@ -7,3 +7,12 @@
         transform:  scale(0.3);
     }
 }
+.BackAnimation {
+    transform: scale(.3);
+    animation:  showBack 2s linear forwards;
+}
+@keyframes showBack {
+    to {
+        transform:  scale(1);
+    }
+}

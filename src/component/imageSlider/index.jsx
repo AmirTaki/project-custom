@@ -41,7 +41,7 @@ const ImageSlider = () => {
         {Data.image.map((item) => {
             return(
                 <div 
-                    className={`h-full w-full absolute  item   duration-1000   ${item.animation ? "block nextAnimation" : "scale-100"} `}
+                    className={`h-full w-full absolute  item   duration-1000   ${item.animation ? "block nextAnimation" : "block BackAnimation scale-100"} `}
                     style={{width : `${item.width}%`,  }} key = {item.id}>
                     <img src={item.image} alt="" className="w-full h-full"/>
                 </div>      
