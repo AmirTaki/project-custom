@@ -1,11 +1,13 @@
 import { useContext } from "react";
 import ItemImage from "./itemImage";
 import { imageSliderContext } from ".";
+import Slider from "./te";
 
 const ListSlider = () => {
-    const {DataImage} =  useContext(imageSliderContext)
+    const {DataImage, sliderListRef} =  useContext(imageSliderContext)
     return(
-        <div className=""  >
+        // slider
+        <div className="" ref = {sliderListRef}  >
             {DataImage.image.map((item) => {
                 return(
                     <ItemImage key = {item.id} item = {item} />

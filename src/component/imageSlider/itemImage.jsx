@@ -1,7 +1,8 @@
 import "./styles.css"
 const ItemImage = ({item}) => {
     return(
-        <div className={` w-full h-full absolute inset-0 `}>
+        // item
+        <div className={` w-full h-full absolute inset-0 item`}>
             {/* img */}
             <img src = {item.image} alt="" className={` w-full h-full object-cover `} />
             {/* content */}

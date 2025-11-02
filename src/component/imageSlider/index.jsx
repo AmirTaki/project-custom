@@ -41,7 +41,7 @@ const ImageSlider = () => {
         
         {/*slider  overflow-hidden*/}
         <div className="h-[100vh] w-[100vw] relative overflow-hidden -mt-[10px]">
-            <imageSliderContext.Provider value ={{DataImage}}>
+            <imageSliderContext.Provider value ={{DataImage, sliderRef, thumbnailRef, sliderListRef}}>
 
                 {/* list */}
                 <ListSlider />
