@@ -4,6 +4,7 @@ import { useEffect, useReducer, useRef, useState } from "react";
 
 const ImageSlider = () => {
     const slider = useRef(null)
+    const testRef = useRef(null)
 
     const reducer = (state, action) => {
         switch(action.type){
@@ -30,16 +31,16 @@ const ImageSlider = () => {
         ]
     })  
   
+//     useEffect(() => {
+//     const timer = setTimeout(() => {
+//        dispatch({type : 'moveFalse'})
+//        console.log('ok')
+//         }, 500); // 2-second delay
 
-    // useEffect(() => {
-    //     const timer = setTimeout(() => {
-    //         console.log('ok')
-    //         dispatch({type : 'moveFalse'})    }, 
-    //     500); // 3 seconds
+//     return () => clearTimeout(timer); // cleanup
+//   }, [state]);
 
-    //     // Cleanup to avoid memory leaks
-    //     return () => clearTimeout(timer);
-    // }, []);
+
 
 
 
@@ -59,7 +60,7 @@ const ImageSlider = () => {
 
 
 
-        <div  className = {`absolue bg-white w-30 h-30 flex justify-center items-center text-6xl item duration-500 ` }>1</div>
+        <div  ref = {testRef} className = {`absolue bg-white w-30 h-30 flex justify-center items-center text-6xl item duration-500  ` }>1</div>
 
         </div>
 
