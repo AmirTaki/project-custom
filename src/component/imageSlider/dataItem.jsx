@@ -14,7 +14,7 @@ export const DataImage = {
         image : img1,
         width : 190,
         zidex : 10,  
-        animation: false
+        animation: true
     },
     {
         id : 1,
@@ -24,7 +24,7 @@ export const DataImage = {
         image : img2,
         width : 190,
         zidex : 9,
-        animation: false
+        animation: true
     },
     {
         id : 2,
@@ -35,7 +35,7 @@ export const DataImage = {
         width : 190,
         zidex : 8,
         
-        animation: false
+        animation: true
     },
     {
         id : 3,
@@ -46,7 +46,7 @@ export const DataImage = {
         width : 190,
         zidex : 7,
         
-        animation: false
+        animation: true
        
     }],
     buttons : [
