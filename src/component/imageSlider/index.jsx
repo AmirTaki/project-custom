@@ -1,6 +1,8 @@
 import { useEffect, useReducer, useRef, useState } from "react";
 import { DataImage } from "./dataItem";
 import './style.css'
+import ItemImage from "./itemImage";
+import NextPrevButton from "./buttonPrevArrows";
 
 
 const ImageSlider = () => {
@@ -35,25 +37,20 @@ const ImageSlider = () => {
     return(
     //    slider
     <div className="h-[100vh]  -mt-[50px] w-[100vw] overflow-hidden relative " >
-        {/* item */}
+        {/* list */}
         <div className="">
-
-        {Data.image.map((item) => {
-            return(
-                <div 
-                    className={`h-full w-full absolute  duration-500 
-                        `}
-                        style={{width : `${item.width}px`,}} key = {item.id}>
-                    <img src={item.image} alt="" className={`w-full h-full ${item.animation ? '' : ''}`} />
-                </div>      
-            )
-        }) }
+        {/* item */}
+            {Data.image.map((item) => {
+                return(
+                    <ItemImage key = {item.id} item = {item} />    
+                )
+            }) }
         </div>
 
-        {/* ${item.animation ? "w-14! h-14! bottom-0 right-25 rounded-2xl"  :"h-full w-full absolute " } */}
+        <NextPrevButton Data = {Data} dispatch = {dispatch } />
         <div 
             onClick={() => {dispatch({type : 'next'})}}
-        className="bg-blue-500 z-[1000]! absolute -bottom-10 w-20 cursor-pointer ">next
+        className="bg-blue-500 z-[1000]! absolute -bottom-100 w-20 cursor-pointer ">next
         </div>
         <div 
             onClick={() => {dispatch({type : 'prev'})}}
