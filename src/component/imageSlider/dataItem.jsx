@@ -5,6 +5,8 @@ import img4 from "./image/img4.jpg"
 
 export const DataImage = {
     value : 3,
+    next : false,
+    prev : false,
     image : [
     {
         id : 0,
@@ -14,7 +16,8 @@ export const DataImage = {
         image : img1,
         width : 190,
         zidex : 10,  
-        animation: true
+        animation: true,
+        next : false,
     },
     {
         id : 1,
@@ -24,7 +27,8 @@ export const DataImage = {
         image : img2,
         width : 190,
         zidex : 9,
-        animation: true
+        animation: true,
+        next : false,
     },
     {
         id : 2,
@@ -34,7 +38,7 @@ export const DataImage = {
         image : img3,
         width : 190,
         zidex : 8,
-        
+        next : false,
         animation: true
     },
     {
@@ -46,6 +50,7 @@ export const DataImage = {
         width : 190,
         zidex : 7,
         
+        next : false,
         animation: true
        
     }],

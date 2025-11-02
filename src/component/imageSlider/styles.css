@@ -25,8 +25,8 @@
 .buttonsContent {
     animation-delay: 1s !important;
 }
-
-.sliderNext {
+/*  */
+.sliderNext:nth-child(1) {
     width: 150px;
     height: 200px;
     position: absolute;
@@ -46,7 +46,37 @@
     }
     
 }
+/*  */
 
+
+.thumbnailNext:nth-last-child(1){
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+/* .slider.prev .list .item img{
+    z-index: 100;
+} */
+
+
+@keyframes showThumbnail{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+
+.nextThumbnial  {
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);
+    }
+}
+
+
+/*  */
 .sliderPrev {
     position: absolute;
     bottom: 0;
@@ -60,15 +90,6 @@
         bottom: 50px;
         left: 50%;
         border-radius: 20px;
-    }
-}
-.nextThumbnial  {
-    animation: effectNext .5s linear 1 forwards;
-}
-
-@keyframes effectNext{
-    from{
-        transform: translateX(150px);
     }
 }
 

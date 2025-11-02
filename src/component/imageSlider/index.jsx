@@ -14,11 +14,11 @@ const ImageSlider = () => {
                 const pop = state.image.pop()
                 const unshift = state.image.unshift(pop)
                 // pop.animation = true
-              
+              console.log(pop.id)
                 const newState =  state.image.map((item) => {
-                    return {...item, animation : item.id  === pop.id  ? true : false}
+                    return {...item, next : item.id  === pop.id  ? true : false}
                 })
-                return {...state,  image : newState}
+                return {...state,  next : true, prev : false}
 
             case "prev":
                 const shift = state.image.shift()
@@ -27,10 +27,22 @@ const ImageSlider = () => {
                 const newstate =  state.image.map((item) => {
                     return {...item, animation : item.id === shift.id ? true : false}
                 })
-                return {...state, image: newstate  }
+                return {...state, prev : true, next : false}
+
+            case "nextPrevAnimation" : 
+                return {...state, next : false, prev : false}
         }
     }
     const [Data, dispatch] = useReducer(reducer, DataImage)
+    useEffect(() => {
+        const time =  setInterval(() => {
+            dispatch({type : 'nextPrevAnimation'})
+        }, [500])
+
+        return()=> {
+            clearInterval(time)
+        }
+    })
 
     useEffect(() => {
         // console.log(Data.value)
