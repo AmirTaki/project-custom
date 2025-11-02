@@ -30,32 +30,38 @@ const ImageSlider = () => {
         ]
     })  
   
-    useEffect(() => {
-       const time = setInterval(() => {
-            dispatch({type : 'moveFalse'})
-        
-        }, 500);
-        return() => [
-            clearInterval(time)
-        ]
-    }, [state.item])
+
+    // useEffect(() => {
+    //     const timer = setTimeout(() => {
+    //         console.log('ok')
+    //         dispatch({type : 'moveFalse'})    }, 
+    //     500); // 3 seconds
+
+    //     // Cleanup to avoid memory leaks
+    //     return () => clearTimeout(timer);
+    // }, []);
+
 
 
     return(
-        <>
+        <div className="relative">
         {/* // slider */}
         <div className={`flex flex-row gap-2 duration-500 ${state.moveNext ? "translate-x-10" : "translate-x-0"} ${state.movePrev ?  '-translate-x-10!': 'translate-x-0' }`} ref = {slider}>
             {/* item */}
             {state.item.map((item) => (
-                <div key = {item.id} className = {`bg-white w-30 h-30 flex justify-center items-center text-6xl item duration-500 ${item.scale ? "scale-200" : "scale-100"}` }>{item.id}</div>
+                <div key = {item.id} className = {`bg-white w-30 h-30 flex justify-center items-center text-6xl item duration-500 ` }>{item.id}</div>
             ))}
         </div>
 
 
         <button onClick = {() => {dispatch ({type : 'next'})}} className="bg-white mt-10 w-10 cursor-pointer">next</button>
         <button onClick = {() => {dispatch ({type : 'prev'})}} className="bg-white mt-10 w-10 cursor-pointer">prev</button>
-        
-        </>
+
+
+
+        <div  className = {`absolue bg-white w-30 h-30 flex justify-center items-center text-6xl item duration-500 ` }>1</div>
+
+        </div>
 
 
     )
