@@ -3,6 +3,7 @@ import { DataImage } from "./dataItem";
 import "./styles.css"
 import ListSlider from "./listSlider";
 import Thumbnail from "./thumbnail";
+import ButtonArrows from "./buttonArrows";
 
 const ImageSlider = () => {
     const slider = useRef(null)
@@ -49,7 +50,8 @@ const ImageSlider = () => {
     return(
         <div className="slider
             h-[100vh] mt-[-50px] w-[100%] overflow-hidden relative" 
-            ref = {slider}>
+            ref = {slider}
+        >
             {/* list */}
                 <ListSlider state = {state}  sliderList = {sliderList}/>
 
@@ -57,24 +59,7 @@ const ImageSlider = () => {
                 <Thumbnail state= {state} thumbnail = {thumbnail} />
 
             {/* next prev arrows */}
-            <div className="nextPrevArrows
-                absolute top-[80%] right-[52%] z-[100] w-[300px] max-w-[30%] flex gap-[10px] items-center
-            ">
-                {state.buttons.map((item) => {
-                    return(
-                        <button 
-                            className={`${item.name}
-                                w-[40px] h-[40px] rounded-[50%] bg-[#14ff72cb] border-0 text-white font-[monospace]
-                                font-bold duration-500 cursor-pointer hover:bg-white! hover:text-black    
-                            `} 
-                            key = {item.id}
-                            onClick={() => {dispatch({type : `${item.name}`})}}
-                        >
-                            {item.symbol}
-                        </button>
-                    )
-                })}
-            </div>
+                <ButtonArrows state={state} dispatch={dispatch} />
         </div>
 
     )
