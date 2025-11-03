@@ -52,9 +52,17 @@ const ImageSlider = () => {
             <div className="list" ref = {sliderList}>
                 {state.image.map((item) => {
                     return(
-                        <div className="item" key = {item.id}>
-                            <img src={item.image} alt="" />
-                            <div className="content">
+                        <div className="item
+                        w-[100%] h-[100%] absolute inset-0
+                        " key = {item.id}>
+                            <img src={item.image} alt="" 
+                                className="w-[100%] h-[100%] object-cover"
+                            />
+                            <div className="content
+                                absolute top-[20%] w-[1140px] max-w-[80%] left-[50%]
+                                h-[100%] -translate-x-1/2 pr-[30%] box-border text-white 
+                                text-shadow-[0_5px_10px_#0004]
+                            ">
                                 <div className="title">{item.title}</div>
                                 <div className="type">{item.type}</div>
                                 <div className="description">{item.description}</div>
