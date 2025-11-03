@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import {useState } from "react";
 
 const SearchInput = () => {
     const [search, setSearch] = useState('')

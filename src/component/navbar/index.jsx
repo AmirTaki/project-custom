@@ -4,29 +4,21 @@ import SearchInput from "./search"
 // import { searchContext } from "../navbarPage.jsx"
 
 const Navbar = () => {
-    const [dropMenu, setDrompMenu] =  useState(false)
-    const [resize, setResize] = useState(false)
-
-    // const {stateSearch, dispathSearch} =  useContext(searchContext)
-
-    const handlerNavbar = () => {
-        setDrompMenu(false)
-        setResize(window.innerWidth <= 1024 ? true : false)
-    }
-  
     
-
     const reducer =(state, action) => {
         switch(action.type){
             case "handlerResize":
                 return {...state, resize : action.payload.size}
             case "hadlerDropMenu" : 
                 return {...state, dropMenu : !state.dropMenu}
+            case 'handlerSearch' : 
+                return{...state, search : action.payload.flag }
         }
     }
     const [state, dispatch] =  useReducer(reducer, {
         resize : false,
-        dropMenu : false
+        dropMenu : false,
+        search : false
 
     })
 
@@ -88,11 +80,13 @@ const Navbar = () => {
                             <i className={`${state.dropMenu ? "fa-solid fa-xmark" : "fa-solid fa-bars"}`}></i>
                         </div>
                     </div>
-                    {/* onClick = {() => {dispathSearch({type : 'openSearch', payload : {flag : false}})}} className={`absolute  ${resize ? "right-20" : "right-10"} ${stateSearch.active ? "flex" : "hidden"} hover:scale-125! duration-300 `} */}
-                    <div className= {`absolute ${state.resize ? "right-20" : "right-10"}  `}>
+                    <div 
+                        className= {`absolute ${state.resize ? "right-20" : "right-10"}`}
+                        onClick={() => {dispatch({type : "handlerSearch", payload : {flag : true}})}}
+                    >
                         <i className="bi bi-search hover:text-blue-500 duration-200 cursor-pointer!  bg--400"></i>
                     </div>
-                    <div className={`${true ? "hidden!" : "absolute  left-10! right-10 bg-transparent "} `}>
+                    <div className={`${state.search ?  "absolute  left-10! right-10 bg-transparent " :  "hidden!"} `}>
                         <SearchInput  />
                     </div>
                 </div>
