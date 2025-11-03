@@ -1,4 +1,4 @@
-import { useContext, useEffect, useReducer, useState } from "react"
+import {  useEffect, useReducer,  } from "react"
 import { BrowserRouter, Link } from "react-router-dom"
 import SearchInput from "./search"
 import './styles.css'
@@ -67,8 +67,8 @@ const Navbar = () => {
                     </div>
                     <ul className =
                         {`
-                            ${state.resize ? " overflow-hidden  duration-500 h-0 flex! flex-col items-center justify-center fixed right-[2rem] max-md:right-[5%] max-md:left-[5%]  max-md:w-[90%]! w-[300px] rounded-2xl top-[60px]" : " flex justify-center items-center gap-10 "}
-                            ${state.resize && state.dropMenu ? "h-[260px] duration-500 " : ""} bg-[rgba(0,0,0,.7)]
+                            ${state.resize ? " overflow-hidden  duration-500 h-0 flex! flex-col items-center justify-center fixed right-[2rem] max-md:right-[5%] max-md:left-[5%]  max-md:w-[90%]! w-[300px] rounded-2xl top-[60px] bg-[rgba(0,0,0,.7)]" : " flex justify-center items-center gap-10 "}
+                            ${state.resize && state.dropMenu ? "h-[260px] duration-500 " : ""} 
                         `}    
                     >
                         <li  className={`${state.resize ? " p-[.7rem] text-md" : "text-md"} cursor-pointer duration-300 hover:text-[orange] `} ><Link to = '/'>Home</Link></li>
