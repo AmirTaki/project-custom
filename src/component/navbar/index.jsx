@@ -1,7 +1,7 @@
 import { useContext, useEffect, useReducer, useState } from "react"
 import { BrowserRouter, Link } from "react-router-dom"
 import SearchInput from "../search"
-import { searchContext } from "../navbarPage.jsx"
+// import { searchContext } from "../navbarPage.jsx"
 
 const Navbar = () => {
     const [dropMenu, setDrompMenu] =  useState(false)
@@ -19,7 +19,7 @@ const Navbar = () => {
     const reducer =(state, action) => {
         switch(action.type){
             case "handlerResize":
-                return {...state}
+                return {...state, resize : window.innerWidth <= 1024 ? true : false}
         }
     }
     const [state, dispatch] =  useReducer(reducer, {
@@ -34,12 +34,12 @@ const Navbar = () => {
         }
     }, [])
 
-    useEffect(() => {
-        handlerNavbar()     
-        return() => {
-            window.addEventListener('resize', handlerNavbar)           
-      }
-    },[])
+    // useEffect(() => {
+    //     handlerNavbar()     
+    //     return() => {
+    //         window.addEventListener('resize', handlerNavbar)           
+    //   }
+    // },[])
 
 
 
