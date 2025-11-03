@@ -26,7 +26,7 @@ const IconImage = ({item}) => {
                         before:rotate-45 before:-z-1
                     ">
                         {/* details */}
-                        <div className="details">
+                        <div className="details relative bg-white p-[10px] rounded-[12px] text-center opacity-0 transform translate-y-[10px]">
                             {/* name */}
                             <div className="name">{item.name}</div>
                             {/* job */}

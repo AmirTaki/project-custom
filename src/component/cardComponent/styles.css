@@ -80,7 +80,7 @@
     transform: translateX(-50%) rotate(45deg);
     z-index: -1;
 } */
-.details {
+/* .details {
     position: relative;
     background-color: #fff;  
     padding: 10px;    
@@ -88,7 +88,7 @@
     text-align: center;
     opacity: 0;
     transform: translateY(10px);
-}
+} */
 .icon-image:hover  .details {
     transition: all .5s ease;
     opacity: 1;
