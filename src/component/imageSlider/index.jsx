@@ -109,7 +109,9 @@ const ImageSlider = () => {
                         
                             key = {item.id}
                         >
-                            <img src={item.image} alt="" />
+                            <img src={item.image} alt="" 
+                                className="w-full h-full object-cover rounded-[20px] shadow-[5px_0_15px_rgba(0,0,0,.3)]"
+                            />
                         </div>
                     )
                 })}
