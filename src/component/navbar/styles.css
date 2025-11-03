@@ -20,16 +20,3 @@
         width: 10%;
     }
 }
-
-.viewNavbar {
-    animation: viewNavbar 2s linear forwards;
-}
-
-@keyframes viewNavbar {
-    from {
-        display:  hidden;
-    }
-    to {
-        display: flex;
-    }
-}

@@ -32,7 +32,7 @@ const Navbar = () => {
 
         window.addEventListener("resize", handlerResize)
         return()=> {
-             window.removeEventListener('resize', handlerResize)
+            window.removeEventListener('resize', handlerResize)
         }
     }, )
     useEffect(() => {handlerResize()},[])
@@ -52,12 +52,12 @@ const Navbar = () => {
         `}>
             {state.search ? (
 
-                <div className={`${state.search ?  " " :  ""} absolute  left-10! right-10 bg-transparent flex duration-1000!  `}>
+                <div className={` absolute  left-10! right-10 bg-transparent flex   `}>
                     <SearchInput state = {state} dispatch = {dispatch}/>
                 </div>
             ):(
                 <BrowserRouter>
-                <div className={`${state.search ? "hidden" : 'flex'} transition-all duration-1000  justify-between items-center  h-[60px] px-[5rem]! max-lg:px-[2rem]!`}>
+                <div className={`flex transition-all duration-1000  justify-between items-center  h-[60px] px-[5rem]! max-lg:px-[2rem]!`}>
 
                     <div className={`flex  items-center justify-center  `}>
                         {/* logo */}
