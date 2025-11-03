@@ -2,27 +2,11 @@ import {  useEffect, useReducer,  } from "react"
 import { BrowserRouter, Link } from "react-router-dom"
 import SearchInput from "./search"
 import './styles.css'
+import { inialState, reducer } from "./inialState"
 
 const Navbar = () => {
     
-    const reducer =(state, action) => {
-        switch(action.type){
-            case "handlerResize":
-                return {...state, resize : action.payload.size}
-            case "hadlerDropMenu" : 
-                return {...state, dropMenu : !state.dropMenu}
-            case 'handlerSearch' : 
-                return{...state, search : action.payload.flag, input : true  }
-            case "handerWidth" : 
-                return {...state, input : false }
-        }
-    }
-    const [state, dispatch] =  useReducer(reducer, {
-        resize : false,
-        dropMenu : false,
-        search : false,
-        input : false 
-    })
+    const [state, dispatch] =  useReducer(reducer, inialState)
 
     const handlerResize = () => {
         dispatch({type : 'handlerResize', payload : {size : window.innerWidth <= 1024 ? true : false  }})  
@@ -65,10 +49,9 @@ const Navbar = () => {
                             ${state.resize && state.dropMenu ? "h-[260px] duration-500 " : ""} 
                         `}    
                     >
-                        <li  className={`${state.resize ? " p-[.7rem] text-md" : "text-md"} cursor-pointer duration-300 hover:text-[orange] `} ><Link to = '/'>Home</Link></li>
-                        <li  className={`${state.resize ? " p-[.7rem] text-md" : "text-md"} cursor-pointer duration-300 hover:text-[orange] `} ><Link to = '/'>About</Link></li>
-                        <li  className={`${state.resize ? " p-[.7rem] text-md" : "text-md"} cursor-pointer duration-300 hover:text-[orange] `} ><Link to = '/'>Services</Link></li>
-                        <li  className={`${state.resize ? " p-[.7rem] text-md" : "text-md"} cursor-pointer duration-300 hover:text-[orange] `} ><Link to = '/'>Contact</Link></li>
+                        {state.list.map((link) => (
+                            <li key = {link}  className={`${state.resize ? " p-[.7rem] text-md" : "text-md"} cursor-pointer duration-300 hover:text-[orange] `} ><Link to = '/'>{link}</Link></li>
+                        ))}
                         <div className="border-0 w-[80%] text-center oumdine-0 px-[1rem] py-[.5rem] rounded-[20px] cursor-pointer text-[.8rem] font-bold bg-[orange] hover:scale-111 duration-200 active:scale-95 lg:hidden!">
                             Get Started
                         </div>
