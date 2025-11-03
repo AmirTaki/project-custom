@@ -31,9 +31,9 @@ const IconImage = ({item}) => {
                             before:-bottom-[10px] before:-translate-x-1/2 before:rotate-45 before:-z-1
                         ">
                             {/* name */}
-                            <div className="name">{item.name}</div>
+                            <div className="text-[20px] font-[500]">{item.name}</div>
                             {/* job */}
-                            <div className="job">{item.job}</div>
+                            <div className="text-[17px] text-[#0396FF] m-[-3px_0_5px_0]">{item.job}</div>
                         </div>
 
                     </div>
