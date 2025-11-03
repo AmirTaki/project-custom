@@ -47,7 +47,7 @@ const Home =  ()  => {
     const isDraggingNavigation = useRef(false)
 
     // veiw projects 
-    const  [view, setView] =   useState(true)   
+    const  [view, setView] =   useState(false)   
     return(
         <div 
             className={`bg-[#10131c]   min-h-[100vh] ${view ? "" : "flex! flex-col justify-center! items-center! "}`} 
@@ -140,18 +140,18 @@ const Home =  ()  => {
                 <ImageEditor />
 
                 {/* background drawing & change effect background */}
-                {/* <BackgroundChangeEffect /> */}
+                <BackgroundChangeEffect />
 
                 {/* image hover overlay effects */}
-                {/* <ImageHoverOverlayEffects /> */}
+                <ImageHoverOverlayEffects />
 
-                {/* image slider */}
-                <ImageSlider />
 
                 {/* footer animated */}
                 <FooterAnimated />
 
             </div>
+                {/* image slider */}
+                <ImageSlider />
         
             <div className="h-100 w-100 text-white"></div>
         </div>   

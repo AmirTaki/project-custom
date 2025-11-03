@@ -1,9 +1,9 @@
 import {  useEffect, useReducer,  } from "react"
 import { BrowserRouter } from "react-router-dom"
-import SearchInput from "./search"
-import './styles.css'
 import { inialState, reducer } from "./inialState"
+import SearchInput from "./search"
 import Header from "./header"
+import './styles.css'
 
 const Navbar = () => {
     
@@ -34,7 +34,6 @@ const Navbar = () => {
         className={`text-white w-[100%]   fixed! top-0 bg-[rgba(0,0,0,.7)]  z-[2000]! h-[60px]
             ${state.search ? "flex justify-center items-center" : ""}  
         `}>
-
             <BrowserRouter>
                 <Header state = {state} dispatch = {dispatch} />
             </BrowserRouter>
@@ -42,12 +41,6 @@ const Navbar = () => {
             <div className={` absolute  left-10! right-10 bg-transparent ${state.search ? "flex" : "hidden"}   `}>
                 <SearchInput state = {state} dispatch = {dispatch}/>
             </div>
-
-           
-
-          
-      
-   
         </div>
     )
 }

@@ -45,7 +45,9 @@ const ImageSlider = () => {
     }, [state])
 
     return(
-        <div className="slider" ref = {slider}>
+        <div className="slider
+        h-[100vh] mt-[-50px] w-[100%] overflow-hidden relative
+        " ref = {slider}>
             {/* list */}
             <div className="list" ref = {sliderList}>
                 {state.image.map((item) => {
