@@ -119,12 +119,15 @@
     margin: -3px 0 5px 0;
 }
 
-.last .hover-image {
+
+
+.icon-image:last-child .hover-image {
     transition: none;
 }
-.last:hover .hover-image {
+
+.icon-image:hover:last-child .hover-image {
     transition: none;
 }
-.last:hover .details {
-    transition-delay:0s ;
+.icon-image:hover:last-child .details {
+    transition-delay:  0;
 }
