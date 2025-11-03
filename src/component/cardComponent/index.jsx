@@ -16,14 +16,14 @@ const ImageCardHover = () => {
                 </div>
                 {/* hover-image */}
                 <div className="h-[350px] w-[300px] absolute bottom-[110px] left-[50%] rounded-[25px] -translate-x-1/2
-                    shadow-[0_5px_10px_rgba(0,0,0,.25)] z-0 pointer-events-none hover-image 
+                    shadow-[0_5px_10px_rgba(0,0,0,.25)] z-0! pointer-events-none hover-image 
                 ">
                     {/* img */}
                     <div className="absolute w-[100%] h-[100%] object-cover border-[3px] border-white rounded-[25px]">
                         <img src={img1} alt="" className="absolute w-full h-full object-cover border-[3px] border-white  rounded-[25px]"/>
                     </div>
                     {/* content */}
-                    <div className=""></div>
+                    <div className="absolute w-full bottom-[-10px] left-0 py-0 px-[10px]"></div>
                 </div>
             </div>
         </div>

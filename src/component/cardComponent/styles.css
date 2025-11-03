@@ -7,7 +7,7 @@
   }
   .icon-image:hover .hover-image{
     left : -200px;
-    z-index: 12;
+    z-index: 12 !important;
     transform: translateX(80px);
     transition: left .5s, z-index 0s, transform .5s;
     transition-delay: 0s, .5s, .5s ;
