@@ -8,6 +8,8 @@ export  const reducer =(state, action) => {
             return{...state, search : action.payload.flag, input : true  }
         case "handerWidth" : 
             return {...state, input : false }
+        case "handlerWrite":
+            return {...state, write : action.payload.search }
     }
 }
 
@@ -16,6 +18,7 @@ export const inialState = {
         dropMenu : false,
         search : false,
         input : false , 
+        write : '',
         list : ['Home', 'About', 'Services', 'Contact']
     }
 

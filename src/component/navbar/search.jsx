@@ -2,8 +2,6 @@ import {useState } from "react";
 import './styles.css'
 
 const SearchInput = ({state, dispatch}) => {
-    const [search, setSearch] = useState('')
-
     return (
         <div 
             className ={`
@@ -20,7 +18,7 @@ const SearchInput = ({state, dispatch}) => {
 
             <input 
                 type="text" placeholder={`Search ...`} 
-                onChange={(e)=> {setSearch(e.target.value)}}
+                onChange={(e)=> {dispatch({type : "handlerWrite", payload : {search  : e.target.value}})}}
                 className={`${state.input ? 'w-full' : "w-0! "} border-0  mx-12   outline-0 text-white transition-all  delay-500 duration-1000 `}
             />
            
