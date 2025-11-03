@@ -15,34 +15,33 @@ const Navbar = () => {
                 return{...state, search : action.payload.flag, input : true  }
             case "handerWidth" : 
                 return {...state, input : false }
-
         }
     }
     const [state, dispatch] =  useReducer(reducer, {
         resize : false,
         dropMenu : false,
-        search : true,
+        search : false,
         input : false 
     })
 
     const handlerResize = () => {
         dispatch({type : 'handlerResize', payload : {size : window.innerWidth <= 1024 ? true : false  }})  
-     } 
-    useEffect(() => {
+    } 
 
+    useEffect(() => {
         window.addEventListener("resize", handlerResize)
         return()=> {
             window.removeEventListener('resize', handlerResize)
         }
     }, )
+   
     useEffect(() => {handlerResize()},[])
 
     useEffect(() => {
-        if(state.search){
+        if(!state.input){
             const timer = setTimeout(() => {dispatch({type : 'handlerSearch', payload : {flag : false}})}, [1000])
             return() => {clearInterval(timer)}
         }
-
     },[state.input])
 
     return(
@@ -50,16 +49,11 @@ const Navbar = () => {
         className={`text-white w-[100%]   fixed! top-0 bg-[rgba(0,0,0,.7)]  z-[2000]! h-[60px]
             ${state.search ? "flex justify-center items-center" : ""}  
         `}>
-            {state.search ? (
 
-                <div className={` absolute  left-10! right-10 bg-transparent flex   `}>
-                    <SearchInput state = {state} dispatch = {dispatch}/>
-                </div>
-            ):(
-                <BrowserRouter>
-                <div className={`flex transition-all duration-1000  justify-between items-center  h-[60px] px-[5rem]! max-lg:px-[2rem]!`}>
+            <BrowserRouter>
+                <div className={`${state.search ? 'hidden' : "flex"} transition-all duration-1000  justify-between items-center  h-[60px] px-[5rem]! max-lg:px-[2rem]!`}>
 
-                    <div className={`flex  items-center justify-center  `}>
+                    <div className={` flex items-center justify-center  `}>
                         {/* logo */}
                         <div className="">
                             <div className="text-[1.5rem] font-bold  cursor-pointer duration-300 hover:text-[orange]" >Web developer </div>
@@ -104,12 +98,13 @@ const Navbar = () => {
                     >
                         <i className="bi bi-search hover:text-blue-500 duration-200 cursor-pointer!  bg--400"></i>
                     </div>
-           
                 </div>
-
-          
             </BrowserRouter>
-            )}
+            
+            <div className={` absolute  left-10! right-10 bg-transparent ${state.search ? "flex" : "hidden"}   `}>
+                <SearchInput state = {state} dispatch = {dispatch}/>
+            </div>
+
            
 
           
