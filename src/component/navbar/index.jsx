@@ -1,8 +1,9 @@
 import {  useEffect, useReducer,  } from "react"
-import { BrowserRouter, Link } from "react-router-dom"
+import { BrowserRouter } from "react-router-dom"
 import SearchInput from "./search"
 import './styles.css'
 import { inialState, reducer } from "./inialState"
+import Header from "./header"
 
 const Navbar = () => {
     
@@ -35,53 +36,7 @@ const Navbar = () => {
         `}>
 
             <BrowserRouter>
-                <div className={`${state.search ? 'hidden' : "flex"} transition-all duration-1000  justify-between items-center  h-[60px] px-[5rem]! max-lg:px-[2rem]!`}>
-
-                    <div className={` flex items-center justify-center  `}>
-                        {/* logo */}
-                        <div className="">
-                            <div className="text-[1.5rem] font-bold  cursor-pointer duration-300 hover:text-[orange]" >Web developer </div>
-                        </div>
-                    </div>
-                    <ul className =
-                        {`
-                            ${state.resize ? " overflow-hidden  duration-500 h-0 flex! flex-col items-center justify-center fixed right-[2rem] max-md:right-[5%] max-md:left-[5%]  max-md:w-[90%]! w-[300px] rounded-2xl top-[60px] bg-[rgba(0,0,0,.7)]" : " flex justify-center items-center gap-10 "}
-                            ${state.resize && state.dropMenu ? "h-[260px] duration-500 " : ""} 
-                        `}    
-                    >
-                        {state.list.map((link) => (
-                            <li key = {link}  className={`${state.resize ? " p-[.7rem] text-md" : "text-md"} cursor-pointer duration-300 hover:text-[orange] `} ><Link to = '/'>{link}</Link></li>
-                        ))}
-                        <div className="border-0 w-[80%] text-center oumdine-0 px-[1rem] py-[.5rem] rounded-[20px] cursor-pointer text-[.8rem] font-bold bg-[orange] hover:scale-111 duration-200 active:scale-95 lg:hidden!">
-                            Get Started
-                        </div>
-                    </ul>
-
-                    <div 
-                        className={`flex items-center justify-center  max-lg:hidden!  } `}
-                    >
-                        <div className="border-0 outline-0 px-[1rem] py-[.5rem]
-                            rounded-[20px] cursor-pointer text-[.8rem] font-bold bg-[orange]
-                            hover:scale-111 duration-200 active:scale-95 
-                            ">
-                            Get Started
-                        </div>
-                    </div>
-
-                    <div className={`${state.resize ? 'block' : 'hidden'} `}>
-                        <div 
-                            onClick={()=>{dispatch({type : 'hadlerDropMenu'})}}
-                            className="text-white text-[1.5rem] cursor-pointer">
-                            <i className={`${state.dropMenu ? "fa-solid fa-xmark" : "fa-solid fa-bars"}`}></i>
-                        </div>
-                    </div>
-                    <div 
-                        className= {`absolute ${state.resize ? "right-20" : "right-10"} top-4 ${state.search ? "hidden" : "block"}  ` }
-                        onClick={() => {dispatch({type : "handlerSearch", payload : {flag : true}})}}
-                    >
-                        <i className="bi bi-search hover:text-blue-500 duration-200 cursor-pointer!  bg--400"></i>
-                    </div>
-                </div>
+                <Header state = {state} dispatch = {dispatch} />
             </BrowserRouter>
             
             <div className={` absolute  left-10! right-10 bg-transparent ${state.search ? "flex" : "hidden"}   `}>
