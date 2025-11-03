@@ -62,7 +62,7 @@
     border-radius: 25px;
 } */
 
-.content {
+/* .content {
     position: absolute;
     width: 100%;
     bottom: -10px;
@@ -79,7 +79,7 @@
     bottom:1px;
     transform: translateX(-50%) rotate(45deg);
     z-index: -1;
-}
+} */
 .details {
     position: relative;
     background-color: #fff;  
