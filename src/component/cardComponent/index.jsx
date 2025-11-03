@@ -10,9 +10,10 @@ const ImageCardHover = () => {
         <div className="w-[400px] h-[400px] flex items-end">
             
             {ImageData.map((item) => {
-                <IconImage item = {item} />
-               
-            }) }
+                return(
+                    <IconImage item = {item} />
+                ) 
+            })}
         </div>
     )
 }
