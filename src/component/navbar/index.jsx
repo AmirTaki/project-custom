@@ -27,16 +27,17 @@ const Navbar = () => {
 
     })
 
+    const handlerResize = () => {
+         dispatch({type : 'handlerResize', payload : {size : window.innerWidth <= 1024 ? true : false  }})  
+     } 
     useEffect(() => {
         console.log(state.resize)
-       const handlerResize = () => {
-            dispatch({type : 'handlerResize', payload : {size : window.innerWidth <= 1024 ? true : false  }})  
-        } 
         window.addEventListener("resize", handlerResize)
         return()=> {
              window.removeEventListener('resize', handlerResize)
         }
     }, )
+    useEffect(() => {handlerResize()},[])
 
 
     return(
@@ -71,6 +72,13 @@ const Navbar = () => {
                     </div>
                 </div>
 
+                <div className={`${state.resize ? 'block' : 'hidden'}`}>
+                       <div 
+                        onClick={()=>{setDrompMenu((prevDropMenu) => (!prevDropMenu))}}
+                        className="text-white text-[1.5rem] cursor-pointer">
+                        <i className={`${state.resize ? "fa-solid fa-xmark" : "fa-solid fa-bars"}`}></i>
+                    </div>
+                </div>
                    
           
             </BrowserRouter>
