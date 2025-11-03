@@ -58,15 +58,28 @@ const ImageSlider = () => {
                             <img src={item.image} alt="" 
                                 className="w-[100%] h-[100%] object-cover"
                             />
+                            {/* content */}
                             <div className="content
                                 absolute top-[20%] w-[1140px] max-w-[80%] left-[50%]
                                 h-[100%] -translate-x-1/2 pr-[30%] box-border text-white 
                                 text-shadow-[0_5px_10px_#0004]
                             ">
-                                <div className="title">{item.title}</div>
-                                <div className="type">{item.type}</div>
+                                {/* title */}
+                                <div className="title 
+                                    text-[5em]  font-bold leading-[1.3em]
+                                ">
+                                    {item.title}
+                                </div>
+                                {/* type */}
+                                <div className="type
+                                    text-[5em]  font-bold leading-[1.3em] text-[#14ff72cb]
+                                ">
+                                    {item.type}
+                                </div>
+                                {/* description */}
                                 <div className="description">{item.description}</div>
                             </div>
+                            {/* button */}
                             <div className="button">
                                 <button>SEE MORE</button>
                             </div>
