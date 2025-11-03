@@ -9,7 +9,7 @@ const ImageCardHover = () => {
             {ImageData.map((item) => {
                 return(
                     // {/* icon-image */}
-                    <div key = {item.id} className="relative bg-white rounded-[50%] h-[70px] w-[70px] my-0 mx-[5px] shadow-[0_5px_10px_rgba(0,0,0,.25)] icon-image group">
+                    <div key = {item.id} className="relative bg-white rounded-[50%] h-[70px] w-[70px] m-[0_5px] shadow-[0_5px_10px_rgba(0,0,0,.25)] icon-image group">
                         {/* icon */}
                         <div className="">
                             <img src={item.image} alt=""  
@@ -19,11 +19,11 @@ const ImageCardHover = () => {
                             />
                         </div>
                         {/* hover-image */}
-                        <div className="h-[350px] w-[300px] absolute bottom-[110px] left-[50%] rounded-[25px] -translate-x-1/2
-                            shadow-[0_5px_10px_rgba(0,0,0,.25)] z-0! pointer-events-none hover-image  
+                        <div className="h-[350px] w-[300px] absolute bottom-[100px] left-[50%] rounded-[25px] -translate-x-1/2
+                            shadow-[0_5px_10px_rgba(0,0,0,.25)] z-0 pointer-events-none hover-image  
                         ">
                             {/* img */}
-                            <div className="absolute w-[95%] h-[95%] left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 object-cover rounded-[50%] border-[3px] border-[#0396FF]">
+                            <div className="absolute w-full h-full object-cover border-[3px] border-white rounded-[25px]">
                                 <img src={item.image} alt="" className="absolute w-full h-full object-cover border-[3px] border-white  rounded-[25px]"/>
                             </div>
                             {/* content */}
