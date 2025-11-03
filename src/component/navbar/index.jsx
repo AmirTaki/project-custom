@@ -20,10 +20,13 @@ const Navbar = () => {
         switch(action.type){
             case "handlerResize":
                 return {...state, resize : action.payload.size}
+            case "hadlerDropMenu" : 
+                return {...state, dropMenu : !state.dropMenu}
         }
     }
     const [state, dispatch] =  useReducer(reducer, {
         resize : false,
+        dropMenu : false
 
     })
 
@@ -74,9 +77,9 @@ const Navbar = () => {
 
                 <div className={`${state.resize ? 'block' : 'hidden'}`}>
                        <div 
-                        onClick={()=>{setDrompMenu((prevDropMenu) => (!prevDropMenu))}}
+                        onClick={()=>{dispatch({type : 'hadlerDropMenu'})}}
                         className="text-white text-[1.5rem] cursor-pointer">
-                        <i className={`${state.resize ? "fa-solid fa-xmark" : "fa-solid fa-bars"}`}></i>
+                        <i className={`${state.dropMenu ? "fa-solid fa-xmark" : "fa-solid fa-bars"}`}></i>
                     </div>
                 </div>
                    
