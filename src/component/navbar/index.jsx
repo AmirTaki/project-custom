@@ -13,15 +13,12 @@ const Navbar = () => {
                 return {...state, dropMenu : !state.dropMenu}
             case 'handlerSearch' : 
                 return{...state, search : action.payload.flag }
-            case "widthSearch":
-                return {...state, widthSearch : true}
         }
     }
     const [state, dispatch] =  useReducer(reducer, {
         resize : false,
         dropMenu : false,
         search : false, 
-        widthSearch : false,
     })
 
     const handlerResize = () => {
@@ -45,7 +42,7 @@ const Navbar = () => {
             ${state.search ? "flex justify-center items-center " : ""}
         `}>
             <BrowserRouter>
-                <div className={`${state.search ? "hidden" : ' viewNavbar'} justify-between items-center  h-[60px] px-[5rem]! max-lg:px-[2rem]!`}>
+                <div className={`${state.search ? "hidden" : ' flex'} delay-2000  justify-between items-center  h-[60px] px-[5rem]! max-lg:px-[2rem]!`}>
 
                     <div className={`flex  items-center justify-center  `}>
                         {/* logo */}
