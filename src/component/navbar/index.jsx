@@ -7,24 +7,32 @@ const Navbar = () => {
     const [dropMenu, setDrompMenu] =  useState(false)
     const [resize, setResize] = useState(false)
 
-    const {stateSearch, dispathSearch} =  useContext(searchContext)
+    // const {stateSearch, dispathSearch} =  useContext(searchContext)
 
     const handlerNavbar = () => {
         setDrompMenu(false)
         setResize(window.innerWidth <= 1024 ? true : false)
     }
   
-    const initalNavbar = () => {
-
-    }
+    
 
     const reducer =(state, action) => {
         switch(action.type){
-            case "":
+            case "handlerResize":
                 return {...state}
         }
     }
-    const [state, dispatch] =  useReducer(reducer, initalNavbar)
+    const [state, dispatch] =  useReducer(reducer, {
+        resize : false,
+
+    })
+
+    useEffect(() => {
+        window.addEventListener('resize', dispatch({type : 'handlerResize'}))
+        return()=> {
+            window.removeEventListener('resize', dispatch({type : 'handlerResize'}))
+        }
+    }, [])
 
     useEffect(() => {
         handlerNavbar()     
@@ -57,7 +65,7 @@ const Navbar = () => {
                 </ul>
 
                 <div 
-                    className={`flex items-center justify-center  max-lg:hidden!  ${stateSearch.active ? "flex" : "hidden"} `}
+                    className={`flex items-center justify-center  max-lg:hidden!  } `}
                 >
                     <div className="border-0 outline-0 px-[1rem] py-[.5rem]
                         rounded-[20px] cursor-pointer text-[.8rem] font-bold bg-[orange]
@@ -66,6 +74,9 @@ const Navbar = () => {
                         Get Started
                     </div>
                 </div>
+
+                   
+          
             </BrowserRouter>
       
    
