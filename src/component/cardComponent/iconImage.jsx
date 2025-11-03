@@ -20,7 +20,7 @@ const IconImage = ({item}) => {
                         />
                     </div>
                     {/* content */}
-                    <div className="content">
+                    <div className="absolute  w-full bottom-[-10px] left-0 py-0 px-[10px] ">
                         {/* details */}
                         <div className="details">
                             {/* name */}
