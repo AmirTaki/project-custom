@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react"
+import { useContext, useEffect, useReducer, useState } from "react"
 import { BrowserRouter, Link } from "react-router-dom"
 import SearchInput from "../search"
 import { searchContext } from "../navbarPage.jsx"
@@ -14,6 +14,14 @@ const Navbar = () => {
     }
   
 
+    const reducer =(state, action) => {
+        switch(action.type){
+            case "":
+                return {...state}
+        }
+    }
+    const [state, dispatch] =  useReducer(reducer, initalNavbar)
+
     useEffect(() => {
         handlerNavbar()     
         return() => {
@@ -24,12 +32,12 @@ const Navbar = () => {
 
 
     return(
-        <div className="flex! justify-between! items-center!  px-[5rem]! max-lg:px-[2rem]! text-white
-        w-[100%]! fixed! top-0 bg-[rgba(0,0,0,.7)] h-[60px] z-[2000]! 
+        <div className="flex justify-between items-center  px-[5rem]! max-lg:px-[2rem]! text-white
+        w-[100%]! fixed! top-0 bg-[rgba(0,0,0,.7)] h-[60px] z-[2000]! bg-[red]! 
         ">
       
             <BrowserRouter >
-                <div className={`items-center justify-center ${stateSearch.active ? "flex" : "hidden"}`}>
+                <div className={`items-center justify-center ${stateSearch.active ? "flex!" : "hidden"}`}>
                     {/* logo */}
                     <div className="">
                         <a className="text-[1.5rem] font-bold  cursor-pointer duration-300 hover:text-[orange]" href="">Web developer </a>
@@ -54,26 +62,26 @@ const Navbar = () => {
          
                     
                 <div 
-                    className={`flex items-center justify-center  max-lg:hidden! ${stateSearch.active ? "flex" : "hidden"} `}
+                    className={`flex items-center justify-center  max-lg:hidden!  ${stateSearch.active ? "flex" : "hidden"} `}
                 >
                     <div className="border-0 outline-0 px-[1rem] py-[.5rem]
                         rounded-[20px] cursor-pointer text-[.8rem] font-bold bg-[orange]
-                        hover:scale-111 duration-200 active:scale-95
+                        hover:scale-111 duration-200 active:scale-95 
                         ">
                         Get Started
                     </div>
                 </div>
 
        
-                <div  className={` lg:hidden! ${stateSearch.active ? "flex" : "hidden"}`}  >
+                <div  className={` lg:hidden!  ${stateSearch.active ? "flex!" : "hidden!"}`}  >
                     <div 
                         onClick={()=>{setDrompMenu((prevDropMenu) => (!prevDropMenu))}}
                         className="text-white text-[1.5rem] cursor-pointer">
                         <i className={`${dropMenu ? "fa-solid fa-xmark" : "fa-solid fa-bars"}`}></i>
                     </div>
                 </div>
-                <div onClick = {() => {dispathSearch({type : 'openSearch', payload : {flag : false}})}} className={`absolute  ${resize ? "right-20!" : "right-10!"} ${stateSearch.active ? "flex" : "hidden"} hover:scale-125! duration-300 `}>
-                    <i className="bi bi-search hover:text-blue-500 duration-200 cursor-pointer "></i>
+                <div onClick = {() => {dispathSearch({type : 'openSearch', payload : {flag : false}})}} className={`absolute  ${resize ? "right-20" : "right-10"} ${stateSearch.active ? "flex" : "hidden"} hover:scale-125! duration-300 `}>
+                    <i className="bi bi-search hover:text-blue-500 duration-200 cursor-pointer  bg--400"></i>
                 </div>
                 <div className={`${stateSearch.active ? "hidden!" : "absolute  left-10! right-10 bg-transparent "} `}>
                     <SearchInput  />
