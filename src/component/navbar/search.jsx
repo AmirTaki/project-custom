@@ -14,14 +14,14 @@ const SearchInput = ({state, dispatch}) => {
         >
    
             <i 
-                onClick={() => {dispatch({type : "handlerSearch", payload : {flag : true}})}}
+                onClick={() => {dispatch({type : "handlerSearch", payload : {flag : false}})}}
                 className="bi bi-search text-xl  cursor-pointer absolute left-[13px] text-blue-500 ">
             </i>
 
             <input 
                 type="text" placeholder={`Search ...`} 
                 onChange={(e)=> {setSearch(e.target.value)}}
-                className={`${state.search ? 'animationMove' : "w-0! animationMoveReverse"} border-0  mx-12   outline-0 text-white transition-all  delay-500 duration-1000 `}
+                className={`${state.search ? 'w-100' : "w-0! animationMoveReverse"} border-0  mx-12   outline-0 text-white transition-all  delay-500 duration-1000 `}
             />
            
             <i className={`${state.search ? 'text-2xl' : 'text-[0px]'} bi bi-mic-fill absolute text-blue-500 hover:text-red-400! hover:delay-0 cursor-pointer not-hover:delay-0 right-[10px] delay-850! transition-all duration-200`}></i>
