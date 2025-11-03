@@ -36,6 +36,8 @@ const ImageCardHover = () => {
                         ">
                             {/* name */}
                             <div className="text-[20px] font-[500]">David Carls</div>
+                            {/* job */}
+                            <div className="text-[17px] text-[#0396FF] m-[-3px_0_5px_0]">Designer || Developer</div>
                         </div>
 
                     </div>
