@@ -37,20 +37,21 @@ const Navbar = () => {
 
     return(
         <div 
-            className={`text-white w-[100%]   fixed! top-0 bg-[rgba(0,0,0,.7)]  z-[2000]! h-[60px]
+        className={`text-white w-[100%]   fixed! top-0 bg-[rgba(0,0,0,.7)]  z-[2000]! h-[60px]
             ${state.search ? "flex justify-center items-center " : ""}
         `}>
             <BrowserRouter>
-                <div className={`${state.search ? "hidden" : 'flex'}  justify-between items-center  h-[60px] px-[5rem]! max-lg:px-[2rem]!`}>
+                <div className={`${state.search ? "hidden" : 'flex'} justify-between items-center  h-[60px] px-[5rem]! max-lg:px-[2rem]!`}>
 
-                    <div className={`items-center justify-center flex `}>
+                    <div className={`flex  items-center justify-center  `}>
                         {/* logo */}
                         <div className="">
                             <a className="text-[1.5rem] font-bold  cursor-pointer duration-300 hover:text-[orange]" href="">Web developer </a>
                         </div>
                     </div>
                     <ul className=
-                        {` ${state.resize ? " overflow-hidden  duration-500 h-0 flex! flex-col items-center justify-center fixed right-[2rem] max-md:right-[5%] max-md:left-[5%]  max-md:w-[90%]! w-[300px] rounded-2xl top-[60px]" : " flex justify-center items-center gap-10 "}
+                        {`
+                            ${state.resize ? " overflow-hidden  duration-500 h-0 flex! flex-col items-center justify-center fixed right-[2rem] max-md:right-[5%] max-md:left-[5%]  max-md:w-[90%]! w-[300px] rounded-2xl top-[60px]" : " flex justify-center items-center gap-10 "}
                             ${state.resize && state.dropMenu ? "h-[260px] duration-500 " : ""} bg-[rgba(0,0,0,.7)]
                         `}    
                     >
@@ -74,7 +75,7 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    <div className={`${state.resize ? 'block' : 'hidden'}`}>
+                    <div className={`${state.resize ? 'block' : 'hidden'} `}>
                         <div 
                             onClick={()=>{dispatch({type : 'hadlerDropMenu'})}}
                             className="text-white text-[1.5rem] cursor-pointer">
@@ -82,6 +83,7 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
+                
                 <div 
                     className= {`absolute ${state.resize ? "right-20" : "right-10"} top-4 ${state.search ? "hidden" : "block"}  ` }
                     onClick={() => {dispatch({type : "handlerSearch", payload : {flag : true}})}}
@@ -89,9 +91,8 @@ const Navbar = () => {
                     <i className="bi bi-search hover:text-blue-500 duration-200 cursor-pointer!  bg--400"></i>
                 </div>
                 <div className={`${state.search ?  "absolute  left-10! right-10 bg-transparent " :  "hidden!"} `}>
-                    <SearchInput state = {state} />
+                    <SearchInput state = {state} dispatch = {dispatch}/>
                 </div>
-                   
           
             </BrowserRouter>
       
