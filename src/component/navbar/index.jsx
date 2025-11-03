@@ -21,7 +21,7 @@ const Navbar = () => {
     const [state, dispatch] =  useReducer(reducer, {
         resize : false,
         dropMenu : false,
-        search : false,
+        search : true,
         input : false 
     })
 
@@ -48,7 +48,7 @@ const Navbar = () => {
     return(
         <div 
         className={`text-white w-[100%]   fixed! top-0 bg-[rgba(0,0,0,.7)]  z-[2000]! h-[60px]
-            ${state.search ? "  " : ""}  
+            ${state.search ? "flex justify-center items-center" : ""}  
         `}>
             {state.search ? (
 
