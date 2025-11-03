@@ -1,3 +1,5 @@
+import img1 from "./image/image1.avif"
+
 const ImageCardHover = () => {
     return(
         // container
@@ -6,7 +8,11 @@ const ImageCardHover = () => {
             <div className="relative bg-white rounded-[50%] h-[70px] w-[70px] my-0 mx-[5px] shadow-[0_5px_10px_rgba(0,0,0,.25)]">
                 {/* icon */}
                 <div className="">
-                    <img src="" alt="" />
+                    <img src={img1} alt=""  
+                        className="absolute h-[95%] w-[95%] left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2
+                        object-cover rounded-[50%] border-[3px] border-[#0396FF]
+                        "
+                    />
                 </div>
             </div>
         </div>
