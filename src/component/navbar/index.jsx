@@ -1,6 +1,6 @@
 import { useContext, useEffect, useReducer, useState } from "react"
 import { BrowserRouter, Link } from "react-router-dom"
-import SearchInput from "../search"
+import SearchInput from "./search"
 // import { searchContext } from "../navbarPage.jsx"
 
 const Navbar = () => {
@@ -87,6 +87,13 @@ const Navbar = () => {
                             className="text-white text-[1.5rem] cursor-pointer">
                             <i className={`${state.dropMenu ? "fa-solid fa-xmark" : "fa-solid fa-bars"}`}></i>
                         </div>
+                    </div>
+                    {/* onClick = {() => {dispathSearch({type : 'openSearch', payload : {flag : false}})}} className={`absolute  ${resize ? "right-20" : "right-10"} ${stateSearch.active ? "flex" : "hidden"} hover:scale-125! duration-300 `} */}
+                    <div >
+                        <i className="bi bi-search hover:text-blue-500 duration-200 cursor-pointer  bg--400"></i>
+                    </div>
+                    <div className={`${true ? "hidden!" : "absolute  left-10! right-10 bg-transparent "} `}>
+                        <SearchInput  />
                     </div>
                 </div>
                    
