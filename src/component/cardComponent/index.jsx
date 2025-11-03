@@ -23,7 +23,7 @@ const ImageCardHover = () => {
                             shadow-[0_5px_10px_rgba(0,0,0,.25)] z-0! pointer-events-none hover-image  
                         ">
                             {/* img */}
-                            <div className="absolute w-[100%] h-[100%] object-cover border-[3px] border-white rounded-[25px]">
+                            <div className="absolute w-[95%] h-[95%] left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 object-cover rounded-[50%] border-[3px] border-[#0396FF]">
                                 <img src={item.image} alt="" className="absolute w-full h-full object-cover border-[3px] border-white  rounded-[25px]"/>
                             </div>
                             {/* content */}
