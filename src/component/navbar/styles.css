@@ -9,3 +9,27 @@
         width: 100%;
     }
 }
+.animationMoveReverse {
+    animation: moveReverse 1s linear forwards;
+}
+@keyframes moveReverse {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 10%;
+    }
+}
+
+.viewNavbar {
+    animation: viewNavbar 2s linear forwards;
+}
+
+@keyframes viewNavbar {
+    from {
+        display:  hidden;
+    }
+    to {
+        display: flex;
+    }
+}

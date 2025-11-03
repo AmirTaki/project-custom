@@ -1,7 +1,7 @@
 import { useContext, useEffect, useReducer, useState } from "react"
 import { BrowserRouter, Link } from "react-router-dom"
 import SearchInput from "./search"
-// import { searchContext } from "../navbarPage.jsx"
+import './styles.css'
 
 const Navbar = () => {
     
@@ -13,15 +13,15 @@ const Navbar = () => {
                 return {...state, dropMenu : !state.dropMenu}
             case 'handlerSearch' : 
                 return{...state, search : action.payload.flag }
-            case "handerDelay": 
-                return {...state, delay : true}
+            case "widthSearch":
+                return {...state, widthSearch : true}
         }
     }
     const [state, dispatch] =  useReducer(reducer, {
         resize : false,
         dropMenu : false,
         search : false, 
-        delay : false,
+        widthSearch : false,
     })
 
     const handlerResize = () => {
@@ -36,13 +36,7 @@ const Navbar = () => {
     }, )
     useEffect(() => {handlerResize()},[])
 
-    // useEffect(() => {
-    //         const timer = setTimeout(() => {
-    //             dispatch({type : "handerDelay"  })
-    //         }, 1000); // 2-second delay
-
-    //         return () => clearTimeout(timer); // Cleanup on unmount
-    // }, [state.search]);
+  
 
 
     return(
@@ -51,7 +45,7 @@ const Navbar = () => {
             ${state.search ? "flex justify-center items-center " : ""}
         `}>
             <BrowserRouter>
-                <div className={`${state.search ? "hidden" : 'flex'} justify-between items-center  h-[60px] px-[5rem]! max-lg:px-[2rem]!`}>
+                <div className={`${state.search ? "hidden" : ' viewNavbar'} justify-between items-center  h-[60px] px-[5rem]! max-lg:px-[2rem]!`}>
 
                     <div className={`flex  items-center justify-center  `}>
                         {/* logo */}
