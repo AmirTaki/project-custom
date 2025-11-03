@@ -1,4 +1,4 @@
-const ButtonArrows = ({state, dispatch}) => {
+const ButtonArrows = ({state, dispatch, thumbnail, sliderList, slider}) => {
     return(
         <div className="nextPrevArrows
             absolute top-[80%] right-[52%] z-[100] w-[300px] max-w-[30%] flex gap-[10px] items-center
@@ -11,7 +11,7 @@ const ButtonArrows = ({state, dispatch}) => {
                             font-bold duration-500 cursor-pointer hover:bg-white! hover:text-black    
                         `} 
                         key = {item.id}
-                        onClick={() => {dispatch({type : `${item.name}`})}}
+                        onClick={() => {dispatch({type : `${item.name}`, payload : {thumbnail : thumbnail , sliderList : sliderList, slider : slider}})}}
                     >
                         {item.symbol}
                     </button>

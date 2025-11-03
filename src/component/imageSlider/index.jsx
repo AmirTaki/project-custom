@@ -4,32 +4,16 @@ import "./styles.css"
 import ListSlider from "./listSlider";
 import Thumbnail from "./thumbnail";
 import ButtonArrows from "./buttonArrows";
+import { reducerSlider } from "./reducerSlider";
 
 const ImageSlider = () => {
     const slider = useRef(null)
     const sliderList = useRef(null)
     const thumbnail = useRef(null)
 
-    const reducer = (state, action) => {
-        var thumbnailItems = thumbnail.current.querySelectorAll('.item')
-        var sliderItems = sliderList.current.querySelectorAll(".item")
- 
-        switch (action.type){
-            case "next":
-                sliderList.current.appendChild(sliderItems[0])
-                thumbnail.current.appendChild(thumbnailItems[0])
-                slider.current.classList.add('next')
-            return {...state};
 
-            case "prev" : 
-                sliderList.current.prepend(sliderItems[sliderItems.length - 1])
-                thumbnail.current.prepend(thumbnailItems[thumbnailItems.length - 1])
-                slider.current.classList.add('prev')
-            return {...state}
-        }
-    }
 
-    const [state, dispatch] = useReducer(reducer, DataImage)
+    const [state, dispatch] = useReducer(reducerSlider, DataImage)
 
     useEffect(() => {
         if(thumbnail.current){
@@ -53,13 +37,13 @@ const ImageSlider = () => {
             ref = {slider}
         >
             {/* list */}
-                <ListSlider state = {state}  sliderList = {sliderList}/>
+            <ListSlider state = {state}  sliderList = {sliderList} />
 
             {/* thumbnail */}
-                <Thumbnail state= {state} thumbnail = {thumbnail} />
+            <Thumbnail state= {state} thumbnail = {thumbnail} />
 
             {/* next prev arrows */}
-                <ButtonArrows state={state} dispatch={dispatch} />
+            <ButtonArrows state={state} dispatch={dispatch} sliderList = {sliderList} thumbnail = {thumbnail} slider = {slider} />
         </div>
 
     )
