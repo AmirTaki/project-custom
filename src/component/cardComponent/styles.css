@@ -97,7 +97,7 @@
     transition-delay : .9s
 
 }
-.details::before {
+/* .details::before {
     content : "";
     position: absolute;
     height: 20px;
@@ -107,7 +107,7 @@
     bottom:-10px;
     transform: translateX(-50%) rotate(45deg);
     z-index: -1;
-}
+} */
 
 .name {
     font-size: 20px;
