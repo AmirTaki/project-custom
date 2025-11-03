@@ -1,14 +1,11 @@
 import IconImage from "./iconImage"
 import { ImageData } from "./imageData"
-
 import './styles.css'
 
-const ImageCardHover = () => {
-    
+const ImageCardHover = () => {    
     return(
         // container
         <div className="w-[400px] h-[400px] flex items-end">
-            
             {ImageData.map((item) => {
                 return(
                     <IconImage item = {item} />
