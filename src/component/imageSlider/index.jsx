@@ -1,17 +1,15 @@
 import { useEffect, useReducer, useRef } from "react";
+import { reducerSlider } from "./reducerSlider";
 import { DataImage } from "./dataItem";
-import "./styles.css"
 import ListSlider from "./listSlider";
 import Thumbnail from "./thumbnail";
 import ButtonArrows from "./buttonArrows";
-import { reducerSlider } from "./reducerSlider";
+import "./styles.css"
 
 const ImageSlider = () => {
     const slider = useRef(null)
     const sliderList = useRef(null)
     const thumbnail = useRef(null)
-
-
 
     const [state, dispatch] = useReducer(reducerSlider, DataImage)
 

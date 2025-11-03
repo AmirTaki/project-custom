@@ -30,6 +30,7 @@ import ImageEditor from "../imageEditor/index.jsx"
 import BackgroundChangeEffect from "../backgroundDrowing/index.jsx"
 import ImageHoverOverlayEffects from "../hoverOverlayEffects/index.jsx"
 import ImageSlider from "../imageSlider/index.jsx"
+import imageCardHover from "../cardComponent/index.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -145,14 +146,15 @@ const Home =  ()  => {
                 {/* image hover overlay effects */}
                 <ImageHoverOverlayEffects />
 
+                {/* image slider */}
+                <ImageSlider />
 
                 {/* footer animated */}
                 <FooterAnimated />
 
             </div>
-                {/* image slider */}
-                <ImageSlider />
-        
+            {/* image hover animation card postal */}
+            <imageCardHover />
             <div className="h-100 w-100 text-white"></div>
         </div>   
     )
