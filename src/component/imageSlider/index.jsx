@@ -80,7 +80,7 @@ const ImageSlider = () => {
                                 <div className="description">{item.description}</div>
                                
                                 {/* button */}
-                                <div className="button
+                                <div className="buttons
                                     grid grid-cols-[130px_130px] grid-rows-[40px] gap-[5px] mt-[20px] 
                                 ">
                                     <button
