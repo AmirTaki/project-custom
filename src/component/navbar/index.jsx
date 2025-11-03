@@ -36,11 +36,12 @@ const Navbar = () => {
 
 
     return(
-        <div className="  text-white
-        w-[100%]! fixed! top-0 bg-[rgba(0,0,0,.7)]  z-[2000]! 
-        ">
+        <div 
+            className={`text-white w-[100%]   fixed! top-0 bg-[rgba(0,0,0,.7)]  z-[2000]! h-[60px]
+            ${state.search ? "flex justify-center items-center " : ""}
+        `}>
             <BrowserRouter>
-                <div className="flex justify-between items-center  h-[60px] px-[5rem]! max-lg:px-[2rem]!">
+                <div className={`${state.search ? "hidden" : 'flex'}  justify-between items-center  h-[60px] px-[5rem]! max-lg:px-[2rem]!`}>
 
                     <div className={`items-center justify-center flex `}>
                         {/* logo */}
@@ -49,7 +50,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <ul className=
-                        {`${state.resize ? " overflow-hidden  duration-500 h-0 flex! flex-col items-center justify-center fixed right-[2rem] max-md:right-[5%] max-md:left-[5%]  max-md:w-[90%]! w-[300px] rounded-2xl top-[60px]" : " flex justify-center items-center gap-10 "}
+                        {` ${state.resize ? " overflow-hidden  duration-500 h-0 flex! flex-col items-center justify-center fixed right-[2rem] max-md:right-[5%] max-md:left-[5%]  max-md:w-[90%]! w-[300px] rounded-2xl top-[60px]" : " flex justify-center items-center gap-10 "}
                             ${state.resize && state.dropMenu ? "h-[260px] duration-500 " : ""} bg-[rgba(0,0,0,.7)]
                         `}    
                     >
@@ -80,15 +81,15 @@ const Navbar = () => {
                             <i className={`${state.dropMenu ? "fa-solid fa-xmark" : "fa-solid fa-bars"}`}></i>
                         </div>
                     </div>
-                    <div 
-                        className= {`absolute ${state.resize ? "right-20" : "right-10"}`}
-                        onClick={() => {dispatch({type : "handlerSearch", payload : {flag : true}})}}
-                    >
-                        <i className="bi bi-search hover:text-blue-500 duration-200 cursor-pointer!  bg--400"></i>
-                    </div>
-                    <div className={`${state.search ?  "absolute  left-10! right-10 bg-transparent " :  "hidden!"} `}>
-                        <SearchInput  />
-                    </div>
+                </div>
+                <div 
+                    className= {`absolute ${state.resize ? "right-20" : "right-10"} top-4 ${state.search ? "hidden" : "block"}  ` }
+                    onClick={() => {dispatch({type : "handlerSearch", payload : {flag : true}})}}
+                >
+                    <i className="bi bi-search hover:text-blue-500 duration-200 cursor-pointer!  bg--400"></i>
+                </div>
+                <div className={`${state.search ?  "absolute  left-10! right-10 bg-transparent " :  "hidden!"} `}>
+                    <SearchInput state = {state} />
                 </div>
                    
           
