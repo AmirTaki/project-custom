@@ -1,9 +1,9 @@
 import img1 from "./image/image1.avif"
-
+import './styles.css'
 const ImageCardHover = () => {
     return(
         // container
-        <div className="min-w-[400px] h-[400px] flex items-end bg-amber-500">
+        <div className="min-w-[400px] h-[400px] flex items-end bg-amber-500 mt-30">
             {/* icon-image */}
             <div className="relative bg-white rounded-[50%] h-[70px] w-[70px] my-0 mx-[5px] shadow-[0_5px_10px_rgba(0,0,0,.25)]">
                 {/* icon */}
@@ -14,6 +14,10 @@ const ImageCardHover = () => {
                         "
                     />
                 </div>
+                {/* hover-image */}
+                <div className="h-[350px] w-[300px] absolute bottom-[110px] left-[50%] rounded-[25px] -translate-x-1/2
+                    shadow-[0_5px_10px_rgba(0,0,0,.25)] z-0 pointer-events-none complex-transition 
+                "></div>
             </div>
         </div>
     )
