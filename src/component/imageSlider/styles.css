@@ -102,7 +102,7 @@
 
 
 /* nextPrevArrows Section  */
-.nextPrevArrows{
+/* .nextPrevArrows{
     position: absolute;
     top: 80%;
     right: 52%;
@@ -112,8 +112,8 @@
     display: flex;
     gap: 10px;
     align-items: center;
-}
-.nextPrevArrows button{
+} */
+/* .nextPrevArrows button{
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -128,7 +128,7 @@
 .nextPrevArrows button:hover{
     background-color: #fff;
     color: #000;
-}
+} */
 
 /* Animation Part */
 .slider .list .item:nth-child(1){
