@@ -30,7 +30,7 @@ import ImageEditor from "../imageEditor/index.jsx"
 import BackgroundChangeEffect from "../backgroundDrowing/index.jsx"
 import ImageHoverOverlayEffects from "../hoverOverlayEffects/index.jsx"
 import ImageSlider from "../imageSlider/index.jsx"
-import imageCardHover from "../cardComponent/index.jsx"
+import ImageCardHover from "../cardComponent/index.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -154,7 +154,8 @@ const Home =  ()  => {
 
             </div>
             {/* image hover animation card postal */}
-            <imageCardHover />
+            <ImageCardHover
+ />
             <div className="h-100 w-100 text-white"></div>
         </div>   
     )
