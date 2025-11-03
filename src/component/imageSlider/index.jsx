@@ -53,10 +53,10 @@ const ImageSlider = () => {
                 {state.image.map((item) => {
                     return(
                         <div className="item
-                        w-[100%] h-[100%] absolute inset-0
+                        w-[100%] h-[100%] absolute inset-0 
                         " key = {item.id}>
                             <img src={item.image} alt="" 
-                                className="w-[100%] h-[100%] object-cover"
+                                className="w-[100%] h-[100%] object-cover z-10"
                             />
                             {/* content */}
                             <div className="content
@@ -78,10 +78,17 @@ const ImageSlider = () => {
                                 </div>
                                 {/* description */}
                                 <div className="description">{item.description}</div>
-                            </div>
-                            {/* button */}
-                            <div className="button">
-                                <button>SEE MORE</button>
+                               
+                                {/* button */}
+                                <div className="button
+                                    grid grid-cols-[130px_130px] grid-rows-[40px] gap-[5px] mt-[20px] 
+                                ">
+                                    <button
+                                    className="border-0 bg-[#eee] text-black font-[Poppins] font-[500] cursor-pointer duration-500
+                                    tracking-[2px] hover:tracking-[3px]
+                                    "
+                                    >SEE MORE</button>
+                                </div>
                             </div>
                         </div>
                     )
@@ -89,10 +96,19 @@ const ImageSlider = () => {
             </div>
 
             {/* thumbnail */}
-            <div className="thumbnail" ref = {thumbnail}>
+            <div className="thumbnail
+                absolute bottom-[50px] left-[50%] w-[max-content] z-[100] flex gap-[20px]
+            " ref = {thumbnail}>
+
                 {state.image.map((item) => {
                     return(
-                        <div className="item" key = {item.id}>
+                        // item
+                        <div className="item
+                            w-[150px] h-[220px] shrink-0 relative
+                        "
+                        
+                            key = {item.id}
+                        >
                             <img src={item.image} alt="" />
                         </div>
                     )
