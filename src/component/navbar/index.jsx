@@ -12,14 +12,17 @@ const Navbar = () => {
             case "hadlerDropMenu" : 
                 return {...state, dropMenu : !state.dropMenu}
             case 'handlerSearch' : 
-                return{...state, search : action.payload.flag,  }
+                return{...state, search : action.payload.flag, input : true  }
+            case "handerWidth" : 
+                return {...state, input : false }
 
         }
     }
     const [state, dispatch] =  useReducer(reducer, {
         resize : false,
         dropMenu : false,
-        search : false, 
+        search : false,
+        input : false 
     })
 
     const handlerResize = () => {
@@ -40,7 +43,7 @@ const Navbar = () => {
             return() => {clearInterval(timer)}
         }
 
-    },[state.search])
+    },[state.input])
 
     return(
         <div 

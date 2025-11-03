@@ -7,14 +7,14 @@ const SearchInput = ({state, dispatch}) => {
     return (
         <div 
             className ={`
-                ${state.search ? "animationMove" : "animationMoveReverse"}
+                ${state.input ? "animationMove" : "animationMoveReverse"}
                 flex items-center bg-transparent p-[5px] border-2 h-[40px] hover:border-blue-500 border-gray-500 rounded-[50px]  transition-all
                 shadow-[6px_6px_10px_rgba(0_0_0_.2),-6px_-6px_10px_rgba(255_255_255_.7)] overflow-hidden    relative mx-[1%]  duration-900!
             `}
         >
    
             <i 
-                onClick={() => {dispatch({type : "handlerSearch", payload : {flag : false}})}}
+                onClick={() => {dispatch({type : "handerWidth", payload : {flag : false}})}}
                 className="bi bi-search text-xl  cursor-pointer absolute left-[13px] text-blue-500 ">
             </i>
 
