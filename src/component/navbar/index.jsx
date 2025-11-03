@@ -89,7 +89,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     {/* onClick = {() => {dispathSearch({type : 'openSearch', payload : {flag : false}})}} className={`absolute  ${resize ? "right-20" : "right-10"} ${stateSearch.active ? "flex" : "hidden"} hover:scale-125! duration-300 `} */}
-                    <div >
+                    <div className= {`absolute ${state.resize ? "right-20" : "right-10"} `}>
                         <i className="bi bi-search hover:text-blue-500 duration-200 cursor-pointer  bg--400"></i>
                     </div>
                     <div className={`${true ? "hidden!" : "absolute  left-10! right-10 bg-transparent "} `}>
