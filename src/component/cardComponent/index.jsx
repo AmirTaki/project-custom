@@ -5,7 +5,7 @@ const ImageCardHover = () => {
         // container
         <div className="min-w-[400px] h-[400px] flex items-end bg-amber-500 mt-30">
             {/* icon-image */}
-            <div className="relative bg-white rounded-[50%] h-[70px] w-[70px] my-0 mx-[5px] shadow-[0_5px_10px_rgba(0,0,0,.25)] icon-image">
+            <div className="relative bg-white rounded-[50%] h-[70px] w-[70px] my-0 mx-[5px] shadow-[0_5px_10px_rgba(0,0,0,.25)] icon-image group">
                 {/* icon */}
                 <div className="">
                     <img src={img1} alt=""  
@@ -31,7 +31,7 @@ const ImageCardHover = () => {
                         <div className="relative bg-white p-[10px] rounded-[12px] text-center opacity-0 translate-y-[10px]
                             before:content before:absolute before:h-[20px] before:w-[20px] before:bg-white before:left-[50%] before:-bottom-[10px]
                             before:-translate-x-1/2 before:rotate-45 before:-z-1
-                            
+                            group-hover:transition-all group-hover:duration- group-hover:ease-in group-hover:opacity-100 
                         ">
                             {/* name */}
                             <div className="">David Carls</div>
