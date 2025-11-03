@@ -20,4 +20,7 @@
   .last:hover .hover-image {
     transition: none;
   }
+  .last:hover .details {
+    transition-delay: 0s ;
+  }
 }
