@@ -2,7 +2,8 @@ const IconImage = ({item}) => {
 
     return(
             // {/* icon-image */}
-            <div key = {item.id} className="icon-image last:[&>.hover-image]:transition-none 
+            <div key = {item.id} className="icon-image    last:[&>.hover-image]:transition-none 
+            last:[&:hover_.hover-image]:transition-none   last:[&:hover_.details]:delay-0!
             relative bg-white rounded-[50%] h-[70px] w-[70px] my-0 mx-[5px] shadow-[0_5px_10px_rgba(0,0,0,.25)]
             ">
                 {/* icon */}

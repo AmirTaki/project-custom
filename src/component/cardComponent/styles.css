@@ -30,13 +30,13 @@
 
 }
 
-.icon-image:last-child .hover-image {
+/* .icon-image:last-child .hover-image {
     transition: none;
 }
 
 .icon-image:hover:last-child .hover-image {
     transition: none;
-}
-.icon-image:hover:last-child .details {
+} */
+/* .icon-image:hover:last-child .details {
     transition-delay:  0s;
-}
+} */
