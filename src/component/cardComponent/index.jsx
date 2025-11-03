@@ -25,8 +25,12 @@ const ImageCardHover = () => {
                     {/* content */}
                     <div className="absolute w-full bottom-[-10px] left-0 py-0 px-[10px]
                         before:content before:absolute before:h-[20px] before:w-[20px] before:bg-white 
-                        before:left-[50%] before:bottom-[1px] before:-translate-x-1/2 before:rotate-45
-                    "></div>
+                        before:left-[50%] before:bottom-[1px] before:-translate-x-1/2 before:rotate-45 before:-z-[1]
+                    ">
+                        {/* details */}
+                        <div className="relative bg-white p-[10px] rounded-[12px] text-center opacity-0 translate-y-[10px]"></div>
+
+                    </div>
                 </div>
             </div>
         </div>
