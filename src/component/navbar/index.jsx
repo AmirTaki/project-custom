@@ -29,7 +29,7 @@ const Navbar = () => {
         dispatch({type : 'handlerResize', payload : {size : window.innerWidth <= 1024 ? true : false  }})  
      } 
     useEffect(() => {
-        console.log(state.resize)
+
         window.addEventListener("resize", handlerResize)
         return()=> {
              window.removeEventListener('resize', handlerResize)
@@ -56,16 +56,16 @@ const Navbar = () => {
                     <SearchInput state = {state} dispatch = {dispatch}/>
                 </div>
             ):(
-                 <BrowserRouter>
+                <BrowserRouter>
                 <div className={`${state.search ? "hidden" : 'flex'} transition-all duration-1000  justify-between items-center  h-[60px] px-[5rem]! max-lg:px-[2rem]!`}>
 
                     <div className={`flex  items-center justify-center  `}>
                         {/* logo */}
                         <div className="">
-                            <a className="text-[1.5rem] font-bold  cursor-pointer duration-300 hover:text-[orange]" href="">Web developer </a>
+                            <div className="text-[1.5rem] font-bold  cursor-pointer duration-300 hover:text-[orange]" >Web developer </div>
                         </div>
                     </div>
-                    <ul className=
+                    <ul className =
                         {`
                             ${state.resize ? " overflow-hidden  duration-500 h-0 flex! flex-col items-center justify-center fixed right-[2rem] max-md:right-[5%] max-md:left-[5%]  max-md:w-[90%]! w-[300px] rounded-2xl top-[60px]" : " flex justify-center items-center gap-10 "}
                             ${state.resize && state.dropMenu ? "h-[260px] duration-500 " : ""} bg-[rgba(0,0,0,.7)]
