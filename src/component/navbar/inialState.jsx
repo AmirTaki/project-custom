@@ -18,3 +18,7 @@ export const inialState = {
         input : false , 
         list : ['Home', 'About', 'Services', 'Contact']
     }
+
+
+
+    

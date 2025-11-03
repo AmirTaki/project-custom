@@ -9,8 +9,10 @@ const Navbar = () => {
     const [state, dispatch] =  useReducer(reducer, inialState)
 
     const handlerResize = () => {
-        dispatch({type : 'handlerResize', payload : {size : window.innerWidth <= 1024 ? true : false  }})  
+        dispatch({type : 'handlerResize', payload : {size : window.innerWidth <= 1024 ? true : false }})  
     } 
+
+    useEffect(() => {handlerResize()},[])
 
     useEffect(() => {
         window.addEventListener("resize", handlerResize)
@@ -19,8 +21,6 @@ const Navbar = () => {
         }
     }, )
    
-    useEffect(() => {handlerResize()},[])
-
     useEffect(() => {
         if(!state.input){
             const timer = setTimeout(() => {dispatch({type : 'handlerSearch', payload : {flag : false}})}, [1000])
