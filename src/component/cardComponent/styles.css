@@ -1,11 +1,11 @@
 @tailwind utilities;
 
 @layer utilities {
-  .complex-transition {
+  .hover-image {
     transition: transform 0.5s, z-index 0s, left 0.5s;
     transition-delay: 0s, 0.5s, 0.5s;
   }
-  .icon-image:hover .complex-transition {
+  .icon-image:hover .hover-image{
     left : -200px;
     z-index: 12;
     transform: translateX(80px);
