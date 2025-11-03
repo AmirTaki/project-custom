@@ -19,7 +19,7 @@ const Navbar = () => {
     const reducer =(state, action) => {
         switch(action.type){
             case "handlerResize":
-                return {...state, resize : window.innerWidth <= 1024 ? true : false}
+                return {...state, resize : action.payload.size}
         }
     }
     const [state, dispatch] =  useReducer(reducer, {
@@ -28,19 +28,15 @@ const Navbar = () => {
     })
 
     useEffect(() => {
-        window.addEventListener('resize', dispatch({type : 'handlerResize'}))
+        console.log(state.resize)
+       const handlerResize = () => {
+            dispatch({type : 'handlerResize', payload : {size : window.innerWidth <= 1024 ? true : false  }})  
+        } 
+        window.addEventListener("resize", handlerResize)
         return()=> {
-            window.removeEventListener('resize', dispatch({type : 'handlerResize'}))
+             window.removeEventListener('resize', handlerResize)
         }
-    }, [])
-
-    // useEffect(() => {
-    //     handlerNavbar()     
-    //     return() => {
-    //         window.addEventListener('resize', handlerNavbar)           
-    //   }
-    // },[])
-
+    }, )
 
 
     return(
@@ -54,7 +50,7 @@ const Navbar = () => {
                         <a className="text-[1.5rem] font-bold  cursor-pointer duration-300 hover:text-[orange]" href="">Web developer </a>
                     </div>
                 </div>
-                <ul className={`flex justify-center items-center gap-10`}>
+                <ul className={`flex justify-center items-center gap-10 ${state.resize ? "" : ""}`}>
                     <li  className={`${dropMenu ? " p-[.7rem] text-md" : "text-md"} cursor-pointer duration-300 hover:text-[orange] `} ><Link to = '/'>Home</Link></li>
                     <li  className={`${dropMenu ? " p-[.7rem] text-md" : "text-md"} cursor-pointer duration-300 hover:text-[orange] `} ><Link to = '/'>About</Link></li>
                     <li  className={`${dropMenu ? " p-[.7rem] text-md" : "text-md"} cursor-pointer duration-300 hover:text-[orange] `} ><Link to = '/'>Services</Link></li>
