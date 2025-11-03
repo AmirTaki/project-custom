@@ -12,4 +12,12 @@
     transition: left .5s, z-index 0s, transform .5s;
     transition-delay: 0s, .5s, .5s ;
   }
+
+  .last .hover-image {
+    transition: none;
+  }
+
+  .last:hover .hover-image {
+    transition: none;
+  }
 }
