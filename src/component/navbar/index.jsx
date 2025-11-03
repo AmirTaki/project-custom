@@ -13,13 +13,15 @@ const Navbar = () => {
                 return {...state, dropMenu : !state.dropMenu}
             case 'handlerSearch' : 
                 return{...state, search : action.payload.flag }
+            case "handerDelay": 
+                return {...state, delay : true}
         }
     }
     const [state, dispatch] =  useReducer(reducer, {
         resize : false,
         dropMenu : false,
-        search : false
-
+        search : false, 
+        delay : false,
     })
 
     const handlerResize = () => {
@@ -33,6 +35,14 @@ const Navbar = () => {
         }
     }, )
     useEffect(() => {handlerResize()},[])
+
+    // useEffect(() => {
+    //         const timer = setTimeout(() => {
+    //             dispatch({type : "handerDelay"  })
+    //         }, 1000); // 2-second delay
+
+    //         return () => clearTimeout(timer); // Cleanup on unmount
+    // }, [state.search]);
 
 
     return(
@@ -83,7 +93,7 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-                
+
                 <div 
                     className= {`absolute ${state.resize ? "right-20" : "right-10"} top-4 ${state.search ? "hidden" : "block"}  ` }
                     onClick={() => {dispatch({type : "handlerSearch", payload : {flag : true}})}}
