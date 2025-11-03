@@ -1,36 +1,3 @@
-
-.container {
-    height : 400px;
-    min-width: 400px;
-    /* background-color: gray; */
-    display: flex;
-    align-items : flex-end; 
-}
-
-/* .icon-image {
-    position: relative;
-    background-color: #fff;
-    border-radius: 50%;
-    height: 70px;
-    width: 70px; 
-    margin: 0 5px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .25);  
-} */
-
-
-
-/* .icon-image img {
-    position: absolute;
-    height: 95%;
-    width:95%;
-    left:50%;
-    top:50%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid #0396FF;
-} */
-
 .hover-image{
     height: 350px;
     width: 300px;
@@ -53,42 +20,7 @@
     transition: left .5s, z-index 0s, transform .5s;
     transition-delay: 0s , .5s, .5s ;
 }
-/* .hover-image img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border:3px solid #fff;
-    border-radius: 25px;
-} */
 
-/* .content {
-    position: absolute;
-    width: 100%;
-    bottom: -10px;
-    left: 0;
-    padding: 0 10px ;
-}
-.content::before {
-    content : "";
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    background-color: #fff;
-    left:50%;
-    bottom:1px;
-    transform: translateX(-50%) rotate(45deg);
-    z-index: -1;
-} */
-/* .details {
-    position: relative;
-    background-color: #fff;  
-    padding: 10px;    
-    border-radius: 12px;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(10px);
-} */
 .icon-image:hover  .details {
     transition: all .5s ease;
     opacity: 1;
@@ -97,29 +29,6 @@
     transition-delay : .9s
 
 }
-/* .details::before {
-    content : "";
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    background-color: #fff;
-    left:50%;
-    bottom:-10px;
-    transform: translateX(-50%) rotate(45deg);
-    z-index: -1;
-} */
-
-.name {
-    font-size: 20px;
-    font-weight: 500;
-}
-.job {
-    font-size: 17px;
-    color: #0396FF;
-    margin: -3px 0 5px 0;
-}
-
-
 
 .icon-image:last-child .hover-image {
     transition: none;
@@ -129,5 +38,5 @@
     transition: none;
 }
 .icon-image:hover:last-child .details {
-    transition-delay:  0;
+    transition-delay:  0s;
 }
