@@ -19,10 +19,10 @@ const SearchInput = ({state, dispatch}) => {
             <input 
                 type="text" placeholder={`Search ...`} 
                 onChange={(e)=> {dispatch({type : "handlerWrite", payload : {search  : e.target.value}})}}
-                className={`${state.input ? 'w-full' : "w-0! "} border-0  mx-12   outline-0 text-white transition-all  delay-500 duration-1000 `}
+                className={`${state.input ? 'w-full' : "w-0! "} border-0  mx-12   outline-0 text-white transition-all   duration-1000! `}
             />
            
-            <i className={`${state.input ? 'text-2xl' : 'text-[0px]'} bi bi-mic-fill absolute text-blue-500 hover:text-red-400! hover:delay-0 cursor-pointer not-hover:delay-0 right-[10px] delay-850! transition-all duration-200`}></i>                        
+            <i className={`${state.input ? 'text-2xl duration-6000' : 'text-[0px] duration-4000!'} duration-500! bi bi-mic-fill absolute text-blue-500 hover:text-red-400!  cursor-pointer  right-[10px]   transition-all `}></i>                        
         </div>
     )
 }
