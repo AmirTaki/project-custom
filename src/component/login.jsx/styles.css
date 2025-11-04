@@ -1,5 +1,4 @@
-@import "tailwindcss";
-@tailwind utilities;
+
 @layer utilities {
     .boxContainer {
         @apply relative w-[150px] h-[150px] bg-[rgba(45,45,45,1)];

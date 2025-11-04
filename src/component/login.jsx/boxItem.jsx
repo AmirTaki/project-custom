@@ -1,5 +1,5 @@
-export const BoxItem = [
-    box = [
+export const BoxItem = {
+    box : [
         {
            id : 0,
            color : '#0f0' 
@@ -51,4 +51,4 @@ export const BoxItem = [
    
      
     ]
-]
+}
