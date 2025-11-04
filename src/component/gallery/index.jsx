@@ -1,7 +1,11 @@
+import { useReducer } from 'react';
 import { DataGallery } from './dataImg';
 import img1 from './image/img8.jpg'
 import './styles.css'
 const GalleryImage = () => {
+
+    const [state, disptach] = useReducer(reducer, DataGallery)
+
     return(
         <>
         {/* imageWrpper */}
@@ -15,7 +19,7 @@ const GalleryImage = () => {
         <div 
             className="w-[80%] h-[750px]  overflow-y-scroll m-[100px_auto_50px] grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[30px] scrollbarGarllery "
         >
-            {DataGallery.map((item) => {
+            {state.map((item) => {
                 return(
 
                     //  img 
