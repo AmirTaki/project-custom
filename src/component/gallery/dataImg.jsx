@@ -8,7 +8,7 @@ import img7 from "./image/img7.jpg"
 import img8 from "./image/img8.jpg"
 
 export const DataGallery = {
-    displayWarpper : true,
+    displayWarpper : false,
     image:[
         {
             id : 0,
