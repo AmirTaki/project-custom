@@ -40,6 +40,15 @@ export const BoxItem = [
            id : 9,
            color : '#0ff' 
         },
+        {
+           id : 10,
+           color : '#0f0' 
+        },
+        {
+           id : 11,
+           color : '#ff0' 
+        },
+   
      
     ]
 ]
