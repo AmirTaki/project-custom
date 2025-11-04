@@ -1,6 +1,6 @@
 const ImageWrapper = ({state, wrapperImage, disptach}) => {
     return(
-        <div className={`${state.displayWarpper ? 'flex' : 'hidden'} w-full h-screen bg-[rgba(0,0,0,.9)] fixed top-0 left-0  justify-center items-center z-[200]`}  >
+        <div className={`${state.displayWarpper ? 'flex' : 'hidden'} w-full h-screen bg-[rgba(0,0,0,.9)] fixed top-0 left-0  justify-center items-center z-[20000]!`}  >
             <img src = {state.image[0]} alt="" className='w-[90%] max-w-[500px]' ref = {wrapperImage}/>
             <span 
                 onClick={() => {disptach({type : 'handlerCross'})}}

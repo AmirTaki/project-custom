@@ -1,8 +1,8 @@
 import {useReducer, useRef } from 'react';
 import { DataGallery, reducerGallery } from './dataImg';
-import './styles.css'
 import ImageWrapper from './imageWrapper';
 import ImageGallery from './imageGallery';
+import './styles.css'
 
 const GalleryImage = () => {
     const wrapperImage =  useRef(null)
