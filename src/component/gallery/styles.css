@@ -1,0 +1,6 @@
+.scrollbarGarllery::-webkit-scrollbar {
+    width: 10px;
+    background-color: red;
+    border-radius: 20px;
+}
+
