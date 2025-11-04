@@ -7,6 +7,9 @@ const GalleryImage = () => {
     const reducer = (state, action) => {
         switch(action.type){
             case "handlerClick":
+                if(wrapperImage.current){
+                    wrapperImage.style.src = action.payload.src
+                }
                 return{...state}
         }
     }
@@ -15,8 +18,8 @@ const GalleryImage = () => {
     return(
         <>
         {/* imageWrpper */}
-        <div className="w-full h-screen bg-[rgba(0,0,0,.9)] fixed top-0 left-0 hidden justify-center items-center z-[200]">
-            <img src={img1} alt="" className='w-[90%] max-w-[500px]'/>
+        <div className="w-full h-screen bg-[rgba(0,0,0,.9)] fixed top-0 left-0 hidden justify-center items-center z-[200]"  >
+            <img src={img1} alt="" className='w-[90%] max-w-[500px]' ref = {wrapperImage}/>
             <span className='absolute top-[5%] right-[5%] text-[30px] font-[sans-serif]  text-white cursor-pointer'>
                 X
             </span>
