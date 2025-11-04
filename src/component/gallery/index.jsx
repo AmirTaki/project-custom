@@ -1,9 +1,15 @@
-import { useReducer } from 'react';
+import { act, useReducer } from 'react';
 import { DataGallery } from './dataImg';
 import img1 from './image/img8.jpg'
 import './styles.css'
 const GalleryImage = () => {
 
+    const reducer = (state, action) => {
+        switch(action.type){
+            case "":
+                return{...state}
+        }
+    }
     const [state, disptach] = useReducer(reducer, DataGallery)
 
     return(
