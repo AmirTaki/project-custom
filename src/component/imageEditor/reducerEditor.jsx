@@ -14,7 +14,7 @@ export const ReducerEditor = (state, action) => {
             return{...state, value : action.payload.value}
         
         case "rotate": 
-            action.payload.name == "fa-solid fa-rotate-left"? state.rotate -= 45 : state.rotate += 45
+            action.payload.name == "fa-solid fa-rotate-left"? state.rotate -= 90 : state.rotate += 90
             return{...state }
         
         case "vertical" :
