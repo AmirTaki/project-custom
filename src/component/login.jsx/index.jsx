@@ -3,7 +3,13 @@ const LoginForm = () => {
         // container
         <div className="grid grid-cols-[repeat(3,150px)] gap-[4px]">
             {/* box */}
-            <div className="relative w-[150px] h-[150px] bg-[rgba(45,45,45,1)]  flex overflow-hidden justify-center items-center"></div>
+            <div 
+                className="relative w-[150px] h-[150px] bg-[rgba(45,45,45,1)]  flex overflow-hidden justify-center items-center
+                after:content after:absolute after:inset-[2px] after:bg-[rgba(45,45,45,.9)]
+                "
+            >
+                    
+            </div>
         </div>
     )
 }
