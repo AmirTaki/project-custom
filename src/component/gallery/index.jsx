@@ -1,6 +1,7 @@
 import {useReducer, useRef } from 'react';
 import { DataGallery, reducerGallery } from './dataImg';
 import './styles.css'
+import ImageWrapper from './imageWrapper';
 
 const GalleryImage = () => {
     const wrapperImage =  useRef(null)
@@ -8,15 +9,7 @@ const GalleryImage = () => {
     return(
         <>
         {/* imageWrpper */}
-        <div className={`${state.displayWarpper ? 'flex' : 'hidden'} w-full h-screen bg-[rgba(0,0,0,.9)] fixed top-0 left-0  justify-center items-center z-[200]`}  >
-            <img src = {state.image[0]} alt="" className='w-[90%] max-w-[500px]' ref = {wrapperImage}/>
-            <span 
-                onClick={() => {disptach({type : 'handlerCross'})}}
-                className='absolute top-[5%] right-[5%] text-[30px] font-[sans-serif]  text-white cursor-pointer!'
-            >
-                X
-            </span>
-        </div>
+        <ImageWrapper state = {state} wrapperImage={wrapperImage} />
         {/* img-gallery */}
         <div 
             className="w-[80%] h-[700px] max-md:h-[900px]  overflow-y-scroll m-[100px_auto_50px] grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[30px] scrollbarGarllery "
