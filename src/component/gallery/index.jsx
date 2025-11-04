@@ -1,24 +1,11 @@
 import {useReducer, useRef } from 'react';
-import { DataGallery } from './dataImg';
-
+import { DataGallery, reducerGallery } from './dataImg';
 import './styles.css'
+
 const GalleryImage = () => {
     const wrapperImage =  useRef(null)
-    const reducer = (state, action) => {
-        switch(action.type){
-            case "handlerClick":
-                document.documentElement.style.overflow = "hidden";
-                if(wrapperImage.current ){      
-                    wrapperImage.current.src = action.payload.src
-                }
-            return{...state, displayWarpper : true}
 
-            case "handlerCross":
-                document.documentElement.style.overflow = "auto";
-            return{...state, displayWarpper : false}
-        }
-    }
-    const [state, disptach] = useReducer(reducer, DataGallery)
+    const [state, disptach] = useReducer(reducerGallery, DataGallery)
 
     return(
         <>

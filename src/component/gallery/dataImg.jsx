@@ -45,3 +45,18 @@ export const DataGallery = {
     ]
   
 }
+
+export const reducerGallery = (state, action) => {
+    switch(action.type){
+        case "handlerClick":
+            document.documentElement.style.overflow = "hidden";
+            if(wrapperImage.current ){      
+                wrapperImage.current.src = action.payload.src
+            }
+        return{...state, displayWarpper : true}
+
+        case "handlerCross":
+            document.documentElement.style.overflow = "auto";
+        return{...state, displayWarpper : false}
+    }
+}
