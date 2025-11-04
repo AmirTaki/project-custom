@@ -6,6 +6,7 @@ const LoginForm = () => {
             <div 
                 className="relative w-[150px] h-[150px] bg-[rgba(45,45,45,1)]  flex overflow-hidden justify-center items-center
                 after:content after:absolute after:inset-[2px] after:bg-[rgba(45,45,45,.9)]
+                before:content before:absolute before:transform before:-translate-x-1/2 before:-translate-y-1/2
                 "
             >
                     
