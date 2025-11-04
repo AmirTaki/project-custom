@@ -1,5 +1,6 @@
 @layer utilities {
     .boxContainer {
-        @apply 
+        @apply relative w-[150px] h-[150px] bg-[rgba(45,45,45,1)];
+        @apply flex justify-center items-center overflow-hidden;
     }
 }
