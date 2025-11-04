@@ -18,7 +18,7 @@ const GalleryImage = () => {
     return(
         <>
         {/* imageWrpper */}
-        <div className="w-full h-screen bg-[rgba(0,0,0,.9)] fixed top-0 left-0 hidden justify-center items-center z-[200]"  >
+        <div className={`${state.displayWarpper ? 'flex' : 'hidden'} w-full h-screen bg-[rgba(0,0,0,.9)] fixed top-0 left-0  justify-center items-center z-[200]`}  >
             <img src={img1} alt="" className='w-[90%] max-w-[500px]' ref = {wrapperImage}/>
             <span className='absolute top-[5%] right-[5%] text-[30px] font-[sans-serif]  text-white cursor-pointer'>
                 X
@@ -28,7 +28,7 @@ const GalleryImage = () => {
         <div 
             className="w-[80%] h-[750px]  overflow-y-scroll m-[100px_auto_50px] grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[30px] scrollbarGarllery "
         >
-            {state.map((item) => {
+            {state.image.map((item) => {
                 //  img 
                 return(
                     <img 
