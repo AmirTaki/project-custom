@@ -18,15 +18,28 @@ export const BoxItem = [
         },
         {
            id : 4,
-           color : '' 
+           color : '#0ff' 
         },
         {
            id : 5,
-           color : '' 
+           color : '#0f0' 
         },
         {
            id : 6,
-           color : '' 
+           color : '#ff0' 
         },
+        {
+           id : 7,
+           color : '#f00' 
+        },
+        {
+           id : 8,
+           color : '#f0f' 
+        },
+        {
+           id : 9,
+           color : '#0ff' 
+        },
+     
     ]
 ]
