@@ -32,6 +32,7 @@ import ImageHoverOverlayEffects from "../hoverOverlayEffects/index.jsx"
 import ImageSlider from "../imageSlider/index.jsx"
 import ImageCardHover from "../cardComponent/index.jsx"
 import GalleryImage from "../gallery/index.jsx"
+import LoginForm from "../login.jsx/index.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -160,8 +161,8 @@ const Home =  ()  => {
                 <FooterAnimated />
 
             </div>
-
-
+            {/* modern login form */}
+            <LoginForm />
             <div className="h-100 w-100 text-white"></div>
         </div>   
     )
