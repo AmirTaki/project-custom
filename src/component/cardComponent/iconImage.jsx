@@ -17,7 +17,7 @@ const IconImage = ({item}) => {
                 {/* img */}
                 <div className="img">
                     <img src={item.image} alt="" 
-                        className="absolute w-full h-full object-cover border-[3px] border-white rounded-[25px]"
+                        className="absolute w-full  h-full object-cover border-[3px] border-white rounded-[25px]"
                     />
                 </div>
                 {/* content */}

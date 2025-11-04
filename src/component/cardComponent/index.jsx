@@ -5,7 +5,7 @@ import './styles.css'
 const ImageCardHover = () => {    
     return(
         // container
-        <div className="w-[400px] h-[400px] flex items-end">
+        <div className="w-[400px]  h-[400px] flex items-end max-md:hidden!">
             {ImageData.map((item) => {
                 return(
                     <IconImage item = {item} />
