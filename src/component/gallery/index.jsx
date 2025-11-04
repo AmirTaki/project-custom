@@ -1,4 +1,6 @@
+import { DataGallery } from './dataImg';
 import img1 from './image/img8.jpg'
+
 const GalleryImage = () => {
     return(
         <>
@@ -13,10 +15,15 @@ const GalleryImage = () => {
         <div 
             className="w-[80%] m-[100px_auto_50px] grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[30px]"
         >
-            {/* img */}
-            <img src={img1} alt="" 
-                className='w-full cursor-pointer transition duration-1000 ease-in-out hover:scale-75 hover:shadow-[0_32px_75px_rgba(68,77,136,.2)]'
-            />
+            {DataGallery.map((item) => {
+                return(
+
+                    //  img 
+                    <img key = {item.id} src={item.image} alt="" 
+                        className='w-full cursor-pointer transition duration-1000 ease-in-out hover:scale-75 hover:shadow-[0_32px_75px_rgba(68,77,136,.2)]'
+                    />
+                )
+            })}
         </div>
         </>
         

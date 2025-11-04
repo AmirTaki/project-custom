@@ -6,7 +6,8 @@ import img5 from "./image/img5.jpg"
 import img6 from "./image/img6.jpg"
 import img7 from "./image/img7.jpg"
 import img8 from "./image/img8.jpg"
-const DataGallery = [
+
+export const DataGallery = [
     {
         id : 0,
         image : img1
