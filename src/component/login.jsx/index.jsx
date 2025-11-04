@@ -1,14 +1,12 @@
 import "./styles.css"
+
 const LoginForm = () => {
     return(
         // container
         <div className="grid grid-cols-[repeat(3,150px)] gap-[4px]">
             {/* box */}
             <div 
-                className="boxContainer
-                before:content before:absolute before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:bg-red-500
-                before:w-[300px] before:h-[300px] before:transition before:duration-[.5s,top_.1s,left_.1s]
-                "
+                className="boxContainer  "
             >
                     
             </div>
