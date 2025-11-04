@@ -1,6 +1,7 @@
 const LoginForm = () => {
     return(
-        <div className=""></div>
+        // container
+        <div className="grid grid-cols-[repeat(3,150px)] gap-[4px]"></div>
     )
 }
 
