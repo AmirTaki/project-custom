@@ -1,12 +1,12 @@
-import { act, useReducer } from 'react';
+import { act, useReducer, useRef } from 'react';
 import { DataGallery } from './dataImg';
 import img1 from './image/img8.jpg'
 import './styles.css'
 const GalleryImage = () => {
-
+    const wrapperImage =  useRef(null)
     const reducer = (state, action) => {
         switch(action.type){
-            case "":
+            case "handlerClick":
                 return{...state}
         }
     }
@@ -29,7 +29,7 @@ const GalleryImage = () => {
                 //  img 
                 return(
                     <img 
-                       onClick={() => {disptach({type : 'handlerClick', payload : {id : item.id}})}} 
+                       onClick={() => {disptach({type : 'handlerClick', payload : {src : item.image}})}} 
                         key = {item.id} src={item.image} alt="" 
                         className='w-[99%] h-full cursor-pointer transition duration-1000 ease-in-out hover:scale-75 hover:shadow-[0_32px_75px_rgba(68,77,136,.2)] ' 
                     />
