@@ -31,6 +31,7 @@ import BackgroundChangeEffect from "../backgroundDrowing/index.jsx"
 import ImageHoverOverlayEffects from "../hoverOverlayEffects/index.jsx"
 import ImageSlider from "../imageSlider/index.jsx"
 import ImageCardHover from "../cardComponent/index.jsx"
+import GalleryImage from "../gallery/index.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -48,7 +49,7 @@ const Home =  ()  => {
     const isDraggingNavigation = useRef(false)
 
     // veiw projects 
-    const  [view, setView] =   useState(true)   
+    const  [view, setView] =   useState(false)   
     return(
         <div 
             className={`bg-[#10131c]   min-h-[100vh] ${view ? "" : "flex! flex-col justify-center! items-center! "}`} 
@@ -156,6 +157,10 @@ const Home =  ()  => {
                 <FooterAnimated />
 
             </div>
+
+
+            {/* Gallery Image */}
+            <GalleryImage />
             <div className="h-100 w-100 text-white"></div>
         </div>   
     )
