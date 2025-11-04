@@ -9,7 +9,7 @@ const GalleryImage = () => {
     return(
         <>
         {/* imageWrpper */}
-        <ImageWrapper state = {state} wrapperImage={wrapperImage} />
+        <ImageWrapper state = {state} wrapperImage={wrapperImage} disptach={disptach} />
         {/* img-gallery */}
         <div 
             className="w-[80%] h-[700px] max-md:h-[900px]  overflow-y-scroll m-[100px_auto_50px] grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[30px] scrollbarGarllery "
