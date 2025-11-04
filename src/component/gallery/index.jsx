@@ -7,12 +7,16 @@ const GalleryImage = () => {
     const reducer = (state, action) => {
         switch(action.type){
             case "handlerClick":
-                if(wrapperImage.current){
-                    wrapperImage.style.src = action.payload.src
+                if(wrapperImage.current ){      
+                    wrapperImage.current.src = action.payload
                 }
             return{...state, displayWarpper : true}
 
-            case "handlerClick"
+            case "handlerCross":
+                // if(wrapperImage.current){      
+                //     wrapperImage.current.src = ""
+                // }
+            return{...state, displayWarpper : false}
         }
     }
     const [state, disptach] = useReducer(reducer, DataGallery)
@@ -21,10 +25,11 @@ const GalleryImage = () => {
         <>
         {/* imageWrpper */}
         <div className={`${state.displayWarpper ? 'flex' : 'hidden'} w-full h-screen bg-[rgba(0,0,0,.9)] fixed top-0 left-0  justify-center items-center z-[200]`}  >
-            <img src={img1} alt="" className='w-[90%] max-w-[500px]' ref = {wrapperImage}/>
+            <img  alt="" className='w-[90%] max-w-[500px]' ref = {wrapperImage}/>
             <span 
-                onClick={() => {disptach({type : 'handlerClick'})}}
-                className='absolute top-[5%] right-[5%] text-[30px] font-[sans-serif]  text-white cursor-pointer'>
+                onClick={() => {disptach({type : 'handlerCross'})}}
+                className='absolute top-[5%] right-[5%] text-[30px] font-[sans-serif]  text-white cursor-pointer'
+            >
                 X
             </span>
         </div>
@@ -36,7 +41,7 @@ const GalleryImage = () => {
                 //  img 
                 return(
                     <img 
-                       onClick={() => {disptach({type : 'handlerClick', payload : {src : item.image}})}} 
+                       onClick={() => {disptach({type : 'handlerClick', payload : item.image})}} 
                         key = {item.id} src={item.image} alt="" 
                         className='w-[99%] h-full cursor-pointer transition duration-1000 ease-in-out hover:scale-75 hover:shadow-[0_32px_75px_rgba(68,77,136,.2)] ' 
                     />
