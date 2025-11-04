@@ -25,14 +25,14 @@ const GalleryImage = () => {
             <img src = {img1} alt="" className='w-[90%] max-w-[500px]' ref = {wrapperImage}/>
             <span 
                 onClick={() => {disptach({type : 'handlerCross'})}}
-                className='absolute top-[5%] right-[5%] text-[30px] font-[sans-serif]  text-white cursor-pointer'
+                className='absolute top-[5%] right-[5%] text-[30px] font-[sans-serif]  text-white cursor-pointer!'
             >
                 X
             </span>
         </div>
         {/* img-gallery */}
         <div 
-            className="w-[80%] h-[750px]  overflow-y-scroll m-[100px_auto_50px] grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[30px] scrollbarGarllery "
+            className="w-[80%] h-[700px] max-md:h-[900px]  overflow-y-scroll m-[100px_auto_50px] grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[30px] scrollbarGarllery "
         >
             {state.image.map((item) => {
                 //  img 
@@ -40,7 +40,7 @@ const GalleryImage = () => {
                     <img 
                        onClick={() => {disptach({type : 'handlerClick', payload : {src : item.image}})}} 
                         key = {item.id} src={item.image} alt="" 
-                        className='w-[99%] h-full cursor-pointer transition duration-1000 ease-in-out hover:scale-75 hover:shadow-[0_32px_75px_rgba(68,77,136,.2)] ' 
+                        className='w-[99%] h-full cursor-pointer! transition duration-1000 ease-in-out hover:scale-75 hover:shadow-[0_32px_75px_rgba(68,77,136,.2)] ' 
                     />
                 )
             })}
