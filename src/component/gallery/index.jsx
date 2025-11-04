@@ -13,14 +13,14 @@ const GalleryImage = () => {
         </div>
         {/* img-gallery */}
         <div 
-            className="w-[80%] m-[100px_auto_50px] grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[30px]"
+            className="w-[80%] h-[700px]  overflow-y-scroll m-[100px_auto_50px] grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[30px]"
         >
             {DataGallery.map((item) => {
                 return(
 
                     //  img 
                     <img key = {item.id} src={item.image} alt="" 
-                        className='w-full cursor-pointer transition duration-1000 ease-in-out hover:scale-75 hover:shadow-[0_32px_75px_rgba(68,77,136,.2)]'
+                        className='w-full h-full cursor-pointer transition duration-1000 ease-in-out hover:scale-75 hover:shadow-[0_32px_75px_rgba(68,77,136,.2)]'
                     />
                 )
             })}
