@@ -4,9 +4,7 @@ import './styles.css'
 
 const GalleryImage = () => {
     const wrapperImage =  useRef(null)
-
     const [state, disptach] = useReducer(reducerGallery, DataGallery)
-
     return(
         <>
         {/* imageWrpper */}
@@ -27,7 +25,7 @@ const GalleryImage = () => {
                 //  img 
                 return(
                     <img 
-                       onClick={() => {disptach({type : 'handlerClick', payload : {src : item.image}})}} 
+                       onClick={() => {disptach({type : 'handlerClick', payload : {src : item.image, wrapperImage : wrapperImage.current}})}} 
                         key = {item.id} src={item.image} alt="" 
                         className='w-[99%] h-full cursor-pointer! transition duration-1000 ease-in-out hover:scale-75 hover:shadow-[0_32px_75px_rgba(68,77,136,.2)] ' 
                     />

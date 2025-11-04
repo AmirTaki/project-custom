@@ -49,9 +49,10 @@ export const DataGallery = {
 export const reducerGallery = (state, action) => {
     switch(action.type){
         case "handlerClick":
+            const {wrapperImage} = action.payload
             document.documentElement.style.overflow = "hidden";
-            if(wrapperImage.current ){      
-                wrapperImage.current.src = action.payload.src
+            if(wrapperImage ){      
+                wrapperImage.src = action.payload.src
             }
         return{...state, displayWarpper : true}
 
