@@ -8,14 +8,11 @@ const GalleryImage = () => {
         switch(action.type){
             case "handlerClick":
                 if(wrapperImage.current ){      
-                    wrapperImage.current.src = action.payload
+                    wrapperImage.current.src = action.payload.src
                 }
             return{...state, displayWarpper : true}
 
             case "handlerCross":
-                // if(wrapperImage.current){      
-                //     wrapperImage.current.src = ""
-                // }
             return{...state, displayWarpper : false}
         }
     }
@@ -25,7 +22,7 @@ const GalleryImage = () => {
         <>
         {/* imageWrpper */}
         <div className={`${state.displayWarpper ? 'flex' : 'hidden'} w-full h-screen bg-[rgba(0,0,0,.9)] fixed top-0 left-0  justify-center items-center z-[200]`}  >
-            <img  alt="" className='w-[90%] max-w-[500px]' ref = {wrapperImage}/>
+            <img src = {img1} alt="" className='w-[90%] max-w-[500px]' ref = {wrapperImage}/>
             <span 
                 onClick={() => {disptach({type : 'handlerCross'})}}
                 className='absolute top-[5%] right-[5%] text-[30px] font-[sans-serif]  text-white cursor-pointer'
@@ -41,7 +38,7 @@ const GalleryImage = () => {
                 //  img 
                 return(
                     <img 
-                       onClick={() => {disptach({type : 'handlerClick', payload : item.image})}} 
+                       onClick={() => {disptach({type : 'handlerClick', payload : {src : item.image}})}} 
                         key = {item.id} src={item.image} alt="" 
                         className='w-[99%] h-full cursor-pointer transition duration-1000 ease-in-out hover:scale-75 hover:shadow-[0_32px_75px_rgba(68,77,136,.2)] ' 
                     />
