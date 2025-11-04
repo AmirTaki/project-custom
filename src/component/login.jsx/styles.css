@@ -3,4 +3,8 @@
         @apply relative w-[150px] h-[150px] bg-[rgba(45,45,45,1)];
         @apply flex justify-center items-center overflow-hidden;
     }
+    .boxContainer::after {
+        @apply content absolute inset-[2px];
+        @apply bg-[rgba(45,45,45,.9)]
+    }
 }
