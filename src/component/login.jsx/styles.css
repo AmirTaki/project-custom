@@ -18,3 +18,10 @@
     transform: translate(-50%, -50%);
     transition: .5s, top .1s, left .1s;
 }
+
+.boxContainer::after{
+    content: '';
+    position: absolute;
+    inset : 2px;
+    background: rgba(45,45,45,.9);
+}

@@ -1,3 +1,4 @@
+import { BoxItem } from "./boxItem"
 import "./styles.css"
 
 const LoginForm = () => {
@@ -5,11 +6,11 @@ const LoginForm = () => {
         // container
         <div className="grid grid-cols-[repeat(3,150px)] gap-[4px]">
             {/* box */}
-            <div 
-                className="boxContainer  "
-            >
-                    
-            </div>
+            {BoxItem.box.map((box) => {
+                return(
+                    <div className="boxContainer"></div>
+                )
+            })}
         </div>
     )
 }
