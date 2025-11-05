@@ -10,6 +10,9 @@ const Box = ({box}) => {
         const box = boxRef.current
         if(!box) return;
 
+        const {x, y} = positionBox.current
+        box.style.setProperty('--x', `${x}px`)
+        box.style.setProperty('--y', `${y}px`)
     }, [])
     
     const handlerAnimation = useCallback(() => {
@@ -26,9 +29,6 @@ const Box = ({box}) => {
         const rect = box.getBoundingClientRect()
         const x = e.clientX - rect.left
         const y = e.clientY - rect.top        
-
-        // box.style.setProperty('--x', `${x}px`)
-        // box.style.setProperty('--y', `${y}px`)
 
         positionBox.current.x = x;
         positionBox.current.y = y;
