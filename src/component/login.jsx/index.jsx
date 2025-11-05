@@ -15,7 +15,13 @@ const LoginForm = () => {
             })}
 
             {/* login */}
-            <div className="absolute w-[450px] h-[600px] px-[60px] py-[40px] text-center pointer-events-none"></div>
+            <div className="absolute w-[450px] h-[600px] px-[40px] py-[60px] text-center pointer-events-none">
+                <h2 className="text-white text-[2em] mb-[60px] font-[600] uppercase leading-[.1em] pointer-events-auto">
+                    Login
+                </h2>
+                {/* inputBox */}
+                <div className="relative w-full mt-[30px]"></div>
+            </div>
         </div>
     )
 }
