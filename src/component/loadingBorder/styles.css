@@ -1,5 +1,5 @@
 .container::before {
-    background-image: conic-gradient(transparent, transparent, transparent ,#fff );
+    /* background-image: conic-gradient(transparent, transparent, transparent ,#fff ); */
     animation: rotate 4s linear infinite;
 }
 
