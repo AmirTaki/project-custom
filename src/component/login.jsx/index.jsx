@@ -25,8 +25,8 @@ const LoginForm = () => {
                         backdrop-blur-[10px] text-white text-[1em] uppercase leading-[.1em] pointer-events-auto group
                     "/>
                     <span className="absolute text-[1em] left-0 py-[20px] px-[25px] text-white uppercase rounded-4px duration-300 pointer-events-none
-                        group-focus:translate-x-[15px] group-focus:-translate-y-[10px] group-focus:text-[.75em] group-focus:bg-white group-focus:text-[#222]
-                        group-focus:py-[2px] group-focus:px-[5px] group-focus:border-[1px] group-focus:border-black
+                        peer-focus:translate-x-[15px] peer-focus:-translate-y-[10px] peer-focus:text-[.75em] peer-focus:bg-white peer-focus:text-[#222]
+                        peer-focus:py-[2px] peer-focus:px-[5px] peer-focus:border-[1px] peer-focus:border-black
                     ">
                         Username
                     </span>
