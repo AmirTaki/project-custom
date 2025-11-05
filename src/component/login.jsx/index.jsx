@@ -19,8 +19,10 @@ const LoginForm = () => {
                 <h2 className="text-white text-[2em] mb-[60px] font-[600] uppercase tracking-[.1em] pointer-events-auto">
                     Login
                 </h2>
-                <InputBox input = 'username'  type = 'text' />
-                <InputBox input = 'password'  type = 'password' />
+                <InputBox input = 'username'  type = 'text' value = "" />
+                <InputBox input = 'password'  type = 'password' value = ''/>
+                {/* submit */}
+                <InputBox input = 'submit' type = "" value = 'Sign in'/>
             </div>
         </div>
     )
