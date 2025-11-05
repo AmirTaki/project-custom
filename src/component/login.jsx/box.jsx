@@ -1,4 +1,5 @@
-const Box = () => {
+import { useCallback, useRef } from "react"
+const Box = ({box}) => {
     const boxRef = useRef(null)
     const handlerAnimation = useCallback(() => {
     

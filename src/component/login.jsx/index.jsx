@@ -1,8 +1,6 @@
-import { useCallback, useRef } from "react"
 import { BoxItem } from "./boxItem"
 import "./styles.css"
 import Box from "./box"
-
 
 const LoginForm = () => {
   
@@ -12,7 +10,7 @@ const LoginForm = () => {
             {/* box */}
             {BoxItem.box.map((box) => {
                 return(
-                    <Box />
+                    <Box  box = {box}/>
                 )
             })}
         </div>
