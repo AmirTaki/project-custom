@@ -24,6 +24,9 @@ const LoginForm = () => {
                 <InputBox input = 'password'  type = 'password' value = ''/>
                 {/* submit */}
                 <SubmitButton value = "login" />
+
+                {/* group */}
+                <div className="relative w-full mt-[50px] flex justify-between"></div>
             </div>
         </div>
     )
