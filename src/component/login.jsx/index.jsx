@@ -15,6 +15,8 @@ const LoginForm = () => {
         const x = e.clientX - rect.left
         const y = e.clientY - rect.top        
 
+        box.style.setProperty('--x', `${x}px`)
+        box.style.setProperty('--y', `${y}px`)
     }, [handlerAnimation])
     return(
         // container
