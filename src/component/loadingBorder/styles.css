@@ -1,0 +1,3 @@
+.container::before {
+    animation: rotate 4s linear infinite;
+}
