@@ -1,9 +1,11 @@
-import { useCallback, useRef } from "react"
+import { useCallback, useEffect, useRef } from "react"
 const Box = ({box}) => {
     const boxRef = useRef(null)
+    const animationCheck = useRef(null)
     const handlerAnimation = useCallback(() => {
     
         }, [])
+
         const  handlerMouseMove = ((e) => {
             const box = boxRef.current
             if(!box) return;
@@ -15,6 +17,9 @@ const Box = ({box}) => {
             box.style.setProperty('--x', `${x}px`)
             box.style.setProperty('--y', `${y}px`)
         })
+    useEffect(() => {
+        
+    })
     return(
         <div 
             ref = {boxRef}
