@@ -1,4 +1,10 @@
+import { useEffect, useState } from "react";
+
 const LoadingBorder = () => {
+    const [precent, setPercent] = useState(0)
+    useEffect(() => {
+
+    })
     return(
         // container
         <div className="flex items-center justify-center relative h-[450px] w-[350px] rounded-[16px] bg-white overflow-hidden
@@ -6,7 +12,7 @@ const LoadingBorder = () => {
         ">
             {/* overlay */}
             <span
-                className="flex items-center justify-center absolute h-[440px] w-[340px] text-[40px] font-[500] text-white rounded-[12px] bg-[#131221]"
+                className="flex items-center justify-center absolute h-[440px] w-[340px] text-[40px] font-[500] text-white rounded-[12px] bg-[#10131c] font-[Poopins]"
             >0%</span>
         </div>
     )
