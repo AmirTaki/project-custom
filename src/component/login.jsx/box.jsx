@@ -36,6 +36,10 @@ const Box = ({box}) => {
         handlerAnimation()
     }, [handlerAnimation])
     
+    const handlerMouseLeave = useCallback((e)=> {
+
+    }, [handlerAnimation])
+
     useEffect(() => {
         return() => {
             if(animationCheck.current){
@@ -47,6 +51,7 @@ const Box = ({box}) => {
     return(
         <div 
             ref = {boxRef}
+            onMouseLeave={handlerMouseLeave}
             onMouseMove={handlerMouseMove}
             style = {{"--clr" : box.color,  }}
             key = {box.id} 
