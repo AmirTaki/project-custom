@@ -6,14 +6,16 @@ const Box = ({box}) => {
     const positionBox = useRef({x : 0, y : 0})
 
     const handlerPostion = useCallback(() => {
-
+        const box = boxRef.current
+        if(!box) return;
+        
     }, [])
     
     const handlerAnimation = useCallback(() => {
         if(animationCheck.current == null){
-            animationCheck.current = requestAnimationFrame()
+            animationCheck.current = requestAnimationFrame(handlerPostion)
         }
-    }, [])
+    }, [handlerPostion])
 
  
     const  handlerMouseMove = useCallback((e) => {
