@@ -33,6 +33,7 @@ import ImageSlider from "../imageSlider/index.jsx"
 import ImageCardHover from "../cardComponent/index.jsx"
 import GalleryImage from "../gallery/index.jsx"
 import LoginForm from "../login.jsx/index.jsx"
+import LoadingBorder from "../loadingBorder/index.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -50,7 +51,7 @@ const Home =  ()  => {
     const isDraggingNavigation = useRef(false)
 
     // veiw projects 
-    const  [view, setView] =   useState(true)   
+    const  [view, setView] =   useState(false)   
     return(
         <div 
             className={`bg-[#10131c]   min-h-[100vh] ${view ? "" : "flex! flex-col justify-center! items-center! "}`} 
@@ -165,6 +166,9 @@ const Home =  ()  => {
 
             </div>
             <div className="h-100 w-100 text-white"></div>
+
+            {/* loding border */}
+            <LoadingBorder />
         </div>   
     )
 }
