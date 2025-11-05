@@ -37,7 +37,12 @@ const Box = ({box}) => {
     }, [handlerAnimation])
     
     useEffect(() => {
-    
+        return() => {
+            if(animationCheck.current){
+                cancelAnimationFrame(animationCheck.current)
+                animationCheck.current = null
+            }
+        }
     }, [])
     return(
         <div 
