@@ -4,9 +4,16 @@ const Box = ({box}) => {
     const boxRef = useRef(null)
     const animationCheck = useRef(null)
     const positionBox = useRef({x : 0, y : 0})
-    const handlerAnimation = useCallback(() => {
+
+    const handlerPostion = useCallback(() => {
+
+    }, [])
     
-        }, [])
+    const handlerAnimation = useCallback(() => {
+        if(animationCheck.current == null){
+            animationCheck.current = requestAnimationFrame()
+        }
+    }, [])
 
  
     const  handlerMouseMove = useCallback((e) => {
@@ -22,6 +29,8 @@ const Box = ({box}) => {
 
         positionBox.current.x = x;
         positionBox.current.y = y;
+
+        handlerAnimation()
     }, [handlerAnimation])
     
     useEffect(() => {
