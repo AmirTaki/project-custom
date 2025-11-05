@@ -6,7 +6,7 @@ const LoadingBorder = () => {
         ">
             {/* overlay */}
             <span
-                className="flex items-center justify-center"
+                className="flex items-center justify-center absolute h-[440px] w-[340px] text-[40px] font-[500] text-white rounded-[12px] bg-[#131221]"
             >0%</span>
         </div>
     )
