@@ -1,4 +1,5 @@
 import { BoxItem } from "./boxItem"
+import SubmitButton from "./submit"
 import InputBox from "./inputBox"
 import Box from "./box"
 import "./styles.css"
@@ -22,7 +23,7 @@ const LoginForm = () => {
                 <InputBox input = 'username'  type = 'text' value = "" />
                 <InputBox input = 'password'  type = 'password' value = ''/>
                 {/* submit */}
-                <InputBox input = 'submit' type = "" value = 'Sign in'/>
+                <SubmitButton value = "login" />
             </div>
         </div>
     )
