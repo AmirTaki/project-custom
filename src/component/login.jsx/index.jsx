@@ -7,7 +7,13 @@ const LoginForm = () => {
     const handlerAnimation = useCallback(() => {
 
     }, [])
-    const  handlerMouseMove = useCallback(() => {
+    const  handlerMouseMove = useCallback((e) => {
+        const box = boxRef.current
+        if(!box) return;
+
+        const rect = box.getBoundingClientRect()
+        const x = e.clientX - rect.left
+        const y = e.clientY - rect.top        
 
     }, [handlerAnimation])
     return(
