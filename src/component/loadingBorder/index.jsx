@@ -7,6 +7,12 @@ const LoadingBorder = () => {
 
     useEffect(() => {
         if(!active) return;
+
+        const timer =  setInterval(() => {
+            
+        }, 1000)
+
+        return() => clearInterval(timer)
     }, [active]) 
 
     return(
