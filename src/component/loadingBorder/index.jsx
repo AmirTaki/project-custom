@@ -1,18 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const LoadingBorder = () => {
-    const [precent, setPercent] = useState(0)
-    const [active, setActive] = useState(false)
+    // const [precent, setPercent] = useState(0)
+    const precent =  useRef(0)
+    const [active, setActive] = useState(true)
+
     useEffect(() => {
-        const timer = setInterval(() => {
-            setPercent(precent + 1)
-            return() => {
-                if(precent == 100){
-                    clearTimeout(timer)
-                }
-            }
-        }, 200)
-    })
+        if(!active) return;
+        
+    }, [active]) 
+
     return(
         // container
         <div className="flex items-center justify-center relative h-[450px] w-[350px] rounded-[16px] bg-white overflow-hidden
@@ -21,7 +18,7 @@ const LoadingBorder = () => {
             {/* overlay */}
             <span
                 className="flex items-center justify-center absolute h-[440px] w-[340px] text-[40px] font-[500] text-white rounded-[12px] bg-[#10131c] font-[Poopins]"
-            >{precent}%</span>
+            >{precent.current}%</span>
         </div>
     )
 }
