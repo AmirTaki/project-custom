@@ -1,7 +1,11 @@
+import { useCallback } from "react"
 import { BoxItem } from "./boxItem"
 import "./styles.css"
 
 const LoginForm = () => {
+    const  handlerMouseMove = useCallback(() => {
+        
+    })
     return(
         // container
         <div className="grid grid-cols-[repeat(3,150px)] gap-[4px] mt-5">
@@ -9,6 +13,7 @@ const LoginForm = () => {
             {BoxItem.box.map((box) => {
                 return(
                     <div 
+                        onMouseMove={handlerMouseMove}
                         style = {{"--clr" : box.color}}
                         key = {box.id} 
                         className="boxContainer"
