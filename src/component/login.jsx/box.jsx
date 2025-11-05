@@ -6,9 +6,10 @@ const Box = ({box}) => {
     const positionBox = useRef({x : 0, y : 0})
 
     const handlerPostion = useCallback(() => {
+        animationCheck.current = null
         const box = boxRef.current
         if(!box) return;
-        
+
     }, [])
     
     const handlerAnimation = useCallback(() => {
@@ -36,9 +37,7 @@ const Box = ({box}) => {
     }, [handlerAnimation])
     
     useEffect(() => {
-        if(animationCheck.current){
-
-        }
+    
     }, [])
     return(
         <div 
