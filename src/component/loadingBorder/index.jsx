@@ -8,14 +8,18 @@ const LoadingBorder = () => {
         if(!active) return;
 
         const timer =  setInterval(() => {
-          
-            setActive((prepercent) => {
-                return prepercent + 1
+            setPercent((prePercent) => {
+                if(prePercent >= 100) {
+                    clearInterval(timer)
+                    setActive(false)
+                    return 100
+                }
+                return prePercent + 1
             })
-        }, 1000)
+        }, 100)
 
         return() => clearInterval(timer)
-    }, [active]) 
+    }, [precent]) 
 
     return(
         // container
