@@ -3,9 +3,14 @@ import { useEffect, useState } from "react";
 const LoadingBorder = () => {
     const [precent, setPercent] = useState(0)
     useEffect(() => {
-        const itemer = setInterval(() => {
+        const timer = setInterval(() => {
             setPercent(precent + 1)
         }, 200)
+        return() => {
+            if(precent == 100){
+                clearTimeout(timer)
+            }
+        }
     })
     return(
         // container
