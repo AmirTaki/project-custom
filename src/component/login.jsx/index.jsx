@@ -24,9 +24,9 @@ const LoginForm = () => {
                 {/* inputBox */}
                 <div className="relative w-full mt-[30px]">
                     <input type="text"   required
-                        onChange={(e) => {setSearch(e.target.value)}}
+                        // onChange={(e) => {setSearch(e.target.value)}}
                         className="w-full py-[20px] px-[25px] outline-0 rounded-[10px] bg-[rgba(0,0,0,.25)] border-1 border-[#000]
-                        backdrop-blur-[10px] text-white
+                        backdrop-blur-[10px] text-white text-[1em] uppercase leading-[.1em] pointer-events-auto
                     "/>
                 </div>
             </div>
