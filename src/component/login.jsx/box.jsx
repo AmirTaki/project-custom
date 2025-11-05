@@ -41,6 +41,11 @@ const Box = ({box}) => {
         if(!box) return;
 
         const rect = box.getBoundingClientRect()
+
+        positionBox.current.x = rect.width / 2;
+        positionBox.current.y = rect.height /  2;
+
+        handlerAnimation()
     }, [handlerAnimation])
 
     useEffect(() => {
