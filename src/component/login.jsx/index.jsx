@@ -7,7 +7,7 @@ const LoginForm = () => {
     const handlerAnimation = useCallback(() => {
 
     }, [])
-    const  handlerMouseMove = useCallback((e) => {
+    const  handlerMouseMove = ((e) => {
         const box = boxRef.current
         if(!box) return;
 
@@ -17,7 +17,7 @@ const LoginForm = () => {
 
         box.style.setProperty('--x', `${x}px`)
         box.style.setProperty('--y', `${y}px`)
-    }, [handlerAnimation])
+    })
     return(
         // container
         <div className="grid grid-cols-[repeat(3,150px)] gap-[4px] mt-5">
@@ -27,7 +27,7 @@ const LoginForm = () => {
                     <div 
                         ref = {boxRef}
                         onMouseMove={handlerMouseMove}
-                        style = {{"--clr" : box.color}}
+                        style = {{"--clr" : box.color,  }}
                         key = {box.id} 
                         className="boxContainer"
                     ></div>
