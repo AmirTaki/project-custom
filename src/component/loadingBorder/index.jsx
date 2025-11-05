@@ -2,15 +2,16 @@ import { useEffect, useState } from "react";
 
 const LoadingBorder = () => {
     const [precent, setPercent] = useState(0)
+    const [active, setActive] = useState(false)
     useEffect(() => {
         const timer = setInterval(() => {
             setPercent(precent + 1)
-        }, 200)
-        return() => {
-            if(precent == 100){
-                clearTimeout(timer)
+            return() => {
+                if(precent == 100){
+                    clearTimeout(timer)
+                }
             }
-        }
+        }, 200)
     })
     return(
         // container
