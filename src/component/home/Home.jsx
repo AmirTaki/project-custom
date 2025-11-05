@@ -51,7 +51,7 @@ const Home =  ()  => {
     const isDraggingNavigation = useRef(false)
 
     // veiw projects 
-    const  [view, setView] =   useState(false)   
+    const  [view, setView] =   useState(true)   
     return(
         <div 
             className={`bg-[#10131c]   min-h-[100vh] ${view ? "" : "flex! flex-col justify-center! items-center! "}`} 
@@ -161,14 +161,15 @@ const Home =  ()  => {
                 {/* modern login form */}
                 <LoginForm />
 
+                {/* loding border */}
+                <LoadingBorder />
+                
                 {/* footer animated */}
                 <FooterAnimated />
 
             </div>
             <div className="h-100 w-100 text-white"></div>
 
-            {/* loding border */}
-            <LoadingBorder />
         </div>   
     )
 }

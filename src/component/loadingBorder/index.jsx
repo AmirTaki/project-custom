@@ -16,7 +16,7 @@ const LoadingBorder = () => {
                 }
                 return prePercent + 1
             })
-        }, 100)
+        }, 1000)
 
         return() => clearInterval(timer)
     }, [precent]) 
