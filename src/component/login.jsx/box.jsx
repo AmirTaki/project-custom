@@ -37,7 +37,10 @@ const Box = ({box}) => {
     }, [handlerAnimation])
     
     const handlerMouseLeave = useCallback((e)=> {
+        const box = boxRef.current
+        if(!box) return;
 
+        const rect = box.getBoundingClientRect()
     }, [handlerAnimation])
 
     useEffect(() => {
