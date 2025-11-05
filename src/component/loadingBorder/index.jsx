@@ -1,6 +1,7 @@
 const LoadingBorder = () => {
     return(
-        <div className=""></div>
+        // container
+        <div className="flex items-center justify-center"></div>
     )
 }
 export default LoadingBorder;
