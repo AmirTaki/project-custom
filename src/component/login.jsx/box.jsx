@@ -22,7 +22,7 @@ const Box = ({box}) => {
     }, [handlerPostion])
 
  
-    const  handlerMouseMove = useCallback((e) => {
+    const  handlerMouse = useCallback((e) => {
         const box = boxRef.current
         if(!box) return;
 
@@ -32,18 +32,6 @@ const Box = ({box}) => {
 
         positionBox.current.x = x;
         positionBox.current.y = y;
-
-        handlerAnimation()
-    }, [handlerAnimation])
-    
-    const handlerMouseLeave = useCallback((e)=> {
-        const box = boxRef.current
-        if(!box) return;
-
-        const rect = box.getBoundingClientRect()
-
-        positionBox.current.x = rect.width / 2;
-        positionBox.current.y = rect.height /  2;
 
         handlerAnimation()
     }, [handlerAnimation])
@@ -59,8 +47,8 @@ const Box = ({box}) => {
     return(
         <div 
             ref = {boxRef}
-            onMouseLeave={handlerMouseLeave}
-            onMouseMove={handlerMouseMove}
+            onMouseLeave={handlerMouse}
+            onMouseMove={handlerMouse}
             style = {{"--clr" : box.color,  }}
             key = {box.id} 
             className="boxContainer"
