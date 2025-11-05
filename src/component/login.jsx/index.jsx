@@ -4,6 +4,7 @@ import SubmitButton from "./submit"
 import InputBox from "./inputBox"
 import Box from "./box"
 import "./styles.css"
+import GroupForm from "./group"
 
 const LoginForm = () => {  
     return(
@@ -28,10 +29,8 @@ const LoginForm = () => {
 
                 {/* group */}
                 <BrowserRouter>
+                    <GroupForm />
                 </BrowserRouter>
-                <div className="relative w-full mt-[50px] flex justify-between">
-                    
-                </div>
             </div>
         </div>
     )
