@@ -22,9 +22,12 @@ const LoginForm = () => {
                 <div className="relative w-full mt-[30px]">
                     <input type="text"   required
                         className="w-full py-[20px] px-[25px] outline-0 rounded-[10px] bg-[rgba(0,0,0,.25)] border-1 border-[#000]
-                        backdrop-blur-[10px] text-white text-[1em] uppercase leading-[.1em] pointer-events-auto
+                        backdrop-blur-[10px] text-white text-[1em] uppercase leading-[.1em] pointer-events-auto group
                     "/>
-                    <span className="absolute text-[1em] left-0 py-[20px] px-[25px] text-white uppercase rounded-4px duration-300 pointer-events-none">
+                    <span className="absolute text-[1em] left-0 py-[20px] px-[25px] text-white uppercase rounded-4px duration-300 pointer-events-none
+                        group-focus:translate-x-[15px] group-focus:-translate-y-[10px] group-focus:text-[.75em] group-focus:bg-white group-focus:text-[#222]
+                        group-focus:py-[2px] group-focus:px-[5px] group-focus:border-[1px] group-focus:border-black
+                    ">
                         Username
                     </span>
                 </div>
