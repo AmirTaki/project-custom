@@ -1,4 +1,3 @@
-import { use } from "react"
 import { useCallback, useEffect, useRef } from "react"
 const Box = ({box}) => {
     const boxRef = useRef(null)
