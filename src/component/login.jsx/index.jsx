@@ -1,7 +1,6 @@
 import { BoxItem } from "./boxItem"
-import "./styles.css"
 import Box from "./box"
-import { useState } from "react"
+import "./styles.css"
 
 const LoginForm = () => {  
     return(
@@ -25,7 +24,7 @@ const LoginForm = () => {
                         className="w-full py-[20px] px-[25px] outline-0 rounded-[10px] bg-[rgba(0,0,0,.25)] border-1 border-[#000]
                         backdrop-blur-[10px] text-white text-[1em] uppercase leading-[.1em] pointer-events-auto
                     "/>
-                    <span className="">
+                    <span className="absolute text-[1em] left-0 py-[20px] px-[25px] text-white uppercase rounded-4px duration-300 pointer-events-none">
                         Username
                     </span>
                 </div>
