@@ -1,15 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 import "./styles.css"
 const LoadingBorder = () => {
-    // const [precent, setPercent] = useState(0)
-    const precent =  useRef(0)
+    const [precent, setPercent] = useState(0)
     const [active, setActive] = useState(true)
 
     useEffect(() => {
         if(!active) return;
 
         const timer =  setInterval(() => {
-            
+          
+            setActive((prepercent) => {
+                return prepercent + 1
+            })
         }, 1000)
 
         return() => clearInterval(timer)
@@ -24,7 +26,7 @@ const LoadingBorder = () => {
             {/* overlay */}
             <span
                 className="flex items-center justify-center absolute h-[440px] w-[340px] text-[40px] font-[500] text-white rounded-[12px] bg-[#10131c] font-[Poopins]"
-            >{precent.current}%</span>
+            >{precent}%</span>
         </div>
     )
 }
