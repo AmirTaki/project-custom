@@ -13,6 +13,9 @@ const LoginForm = () => {
                     <Box  box = {box}/>
                 )
             })}
+
+            {/* login */}
+            <div className="absolute w-[450px] h-[600px] px-[60px] py-[40px] text-center pointer-events-none"></div>
         </div>
     )
 }
