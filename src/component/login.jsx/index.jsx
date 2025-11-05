@@ -4,9 +4,12 @@ import "./styles.css"
 
 const LoginForm = () => {
     const boxRef = useRef(null)
+    const handlerAnimation = useCallback(() => {
+
+    }, [])
     const  handlerMouseMove = useCallback(() => {
 
-    })
+    }, [handlerAnimation])
     return(
         // container
         <div className="grid grid-cols-[repeat(3,150px)] gap-[4px] mt-5">
