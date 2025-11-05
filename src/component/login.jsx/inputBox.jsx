@@ -5,7 +5,7 @@ const InputBox = ({input, type, value}) => {
             <input type={type}  required id = {input} value = {value}
                 className={`
                     w-full py-[20px] px-[25px] outline-0 rounded-[10px] bg-[rgba(0,0,0,.25)]  border-1 border-[#000] text-white text-[1em] uppercase tracking-[.1em] backdrop-blur-[10px] peer pointer-events-auto  
-                    ${type == 'submit' && ""}    
+                    ${input == 'submit' && "cursor-pointer! text-[1.1em]! font-[500]! duration-300! text-center!"}    
                 `}
             />
             {input !== 'submit' && (       
