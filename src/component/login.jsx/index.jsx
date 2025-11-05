@@ -1,4 +1,5 @@
 import { BoxItem } from "./boxItem"
+import { BrowserRouter } from "react-router-dom"
 import SubmitButton from "./submit"
 import InputBox from "./inputBox"
 import Box from "./box"
@@ -26,7 +27,11 @@ const LoginForm = () => {
                 <SubmitButton value = "login" />
 
                 {/* group */}
-                <div className="relative w-full mt-[50px] flex justify-between"></div>
+                <BrowserRouter>
+                </BrowserRouter>
+                <div className="relative w-full mt-[50px] flex justify-between">
+                    
+                </div>
             </div>
         </div>
     )
