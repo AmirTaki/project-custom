@@ -3,8 +3,9 @@ import { BoxItem } from "./boxItem"
 import "./styles.css"
 
 const LoginForm = () => {
+    const boxRef = useRef(null)
     const  handlerMouseMove = useCallback(() => {
-        
+
     })
     return(
         // container
@@ -13,6 +14,7 @@ const LoginForm = () => {
             {BoxItem.box.map((box) => {
                 return(
                     <div 
+                        ref = {boxRef}
                         onMouseMove={handlerMouseMove}
                         style = {{"--clr" : box.color}}
                         key = {box.id} 
