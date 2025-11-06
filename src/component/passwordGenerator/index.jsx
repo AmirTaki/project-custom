@@ -4,30 +4,21 @@ import { DataInitial } from "./initailState";
 
  const PasswordGenerator = () => {
 
-    const inputPassword = useRef(null)
     const reducer = (state, action) => {
         switch(action.type){
             case "handlerGenerate" :
                 state.allChars = ''
                 let password = ""
-                state.inputCheckBox.map((box) => {
-                    if(box.checked) {
-                        state.allChars += box.chars
-                    }
-                })
+                state.inputCheckBox.map((box) => {(state.allChars += box.checked ? box.chars : "" )})
                
                 if(state.allChars === "" || state.value === 0) {
                     return {...state, password : password}
                 }
-                else {
-                   
-                    for (let i = 1; i < state.value ; i++){
-                        password += state.allChars.charAt(Math.floor(Math.random() * state.allChars.length))
-                    }
-                    return {...state, password : password} 
+                for (let i = 1; i < state.value ; i++){
+                    password += state.allChars.charAt(Math.floor(Math.random() * state.allChars.length))
                 }
-                
-
+                return {...state, password : password} 
+        
             case "handlerRange": 
                 return{...state, value : action.payload.event}
            
