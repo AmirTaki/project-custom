@@ -1,6 +1,9 @@
+import { useReducer } from "react";
 import RowGenerator from "./rowGenerator";
 
 const PasswordGenerator = () => {
+
+    const [state, dispatch] = useReducer(reducer, {})
     return(
         // container
         <div className="border-[.5px] border-white text-gray-400 rounded-[10px] py-[28px] px-[32px] flex flex-col bg-transparent shadow-[8px_8px_4px_#909090,8px_8px_0_#575757]">
