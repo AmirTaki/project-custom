@@ -62,14 +62,10 @@ import { DataInitial } from "./initailState";
                 <span 
                     ref = {iconRef}
                     onClick={() => {dispatch({type : 'handlerCopy'})}}
-                    className="material-symbols-outlined absolute top-[16px] right-[6px] text-black text-[28px] cursor-pointer! z-20" 
-                    id = "copyIcon"
+                    className=" absolute top-[16px] right-[6px] text-black text-[28px] cursor-pointer! z-20" 
                 >
-                    content_copy
                 </span>
-                <span class="material-symbols-outlined"  id = "copyIcon">
-        check
-            </span>
+       
             </div>
             {/* input range */}
             <input type="range" min = "0" max = '30' value={state.value} onChange={(e) => {dispatch({type: "handlerRange", payload : {event : e.target.value}})}}  />
