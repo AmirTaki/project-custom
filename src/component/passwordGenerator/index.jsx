@@ -1,7 +1,14 @@
 import { useReducer } from "react";
 import RowGenerator from "./rowGenerator";
+import { reducer } from "../navbar/inialState";
 
 const PasswordGenerator = () => {
+    const reducer = (state, action) => {
+        switch(action.type){
+            case "" :
+                return state;
+        }
+    }
 
     const [state, dispatch] = useReducer(reducer, {})
     return(
