@@ -33,7 +33,7 @@ const PasswordGenerator = () => {
             <RowGenerator type = 'checkbox' id = "symbols" text = "Include Symbols (@-*)"/>
         
             <button type = 'button'
-                className="border-0 outline-0 bg-[#2c719e] py-[12px] px-[24px] text-white my-[18px]"
+                className="border-0 outline-0 bg-[#2c719e] py-[12px] px-[24px] text-white my-[8px] text-[18px] font-[700] cursor-pointer rounded-[4px] "
             >
                 Generate Password
             </button>
