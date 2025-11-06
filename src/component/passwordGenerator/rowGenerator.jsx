@@ -3,7 +3,9 @@ const RowGenerator = ({row, dispatch}) => {
         /* row */ 
         <div className="flex items-center my-[8px]">
             <label htmlFor={row.id} className="basis-full text-[18px] ">{row.text}</label>
-            <input type={row.type}  className="w-[20px] h-[20px]" id = {row.id} onClick={(e) => {console.log( e.target.checked)}}/>
+            <input type={row.type}  className="w-[20px] h-[20px]" id = {row.id} 
+                onClick={(e) => {dispatch({type : "handlerCheckBox", payload : {checked : e.target.checked}})}}
+            />
         </div>
     )
 }

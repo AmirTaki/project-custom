@@ -9,6 +9,8 @@ const PasswordGenerator = () => {
                 return {...state};
             case "handlerRange": 
                 return{...state, value : action.payload.event}
+            case 'handlerCheckBox':
+                return{...state}
         }
     }
 
