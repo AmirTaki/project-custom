@@ -37,14 +37,17 @@ import { DataInitial } from "./initailState";
                 return{...state}
             
             case "handlerTime":
-                return {...state, icon : true, }
+                return {...state, icon : true, password : '' }
            
         }
     }
     
     const [state, dispatch] = useReducer(reducer, DataInitial)
     useEffect(() => {
-        console.log(state.password)
+        const timer = setTimeout(() => {
+            () => {dispatch({type : "handlerTime"})}
+        }, 3000)
+        return() => {clearInterval(timer)}
     }, [state.icon])
 
     return(
