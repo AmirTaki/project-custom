@@ -5,20 +5,21 @@ import { DataInitial } from "./initailState";
     const reducer = (state, action) => {
         switch(action.type){
             case "handlerGenerate" :
-
+                state.allChars = ''
                 state.inputCheckBox.map((box) => {
                     if(box.checked) {
-                        
+                        state.allChars += box.chars
                     }
                 })
-                return {...state} 
+                return {...state, } 
 
             case "handlerRange": 
                 return{...state, value : action.payload.event}
            
-                case 'handlerCheckBox':
+            case 'handlerCheckBox':
                 const {checked} =  action.payload
                 const {id} = action.payload
+                
                 const newInputCheckBox =  state.inputCheckBox.map((box) => ({...box, checked : box.id === id ? checked : box.checked  }))       
                 return{...state , inputCheckBox : newInputCheckBox }
            
@@ -26,6 +27,9 @@ import { DataInitial } from "./initailState";
     }
     
     const [state, dispatch] = useReducer(reducer, DataInitial)
+    useEffect(() => {
+        console.log(state.allChars)
+    })
 
     return(
         // container
