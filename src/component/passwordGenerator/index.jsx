@@ -10,6 +10,7 @@ const PasswordGenerator = () => {
             case "handlerRange": 
                 return{...state, value : action.payload.event}
             case 'handlerCheckBox':
+                console.log(action.payload.checked)
                 return{...state}
         }
     }
