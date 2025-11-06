@@ -16,7 +16,7 @@ export const DataInitial = {
             id : 'uppercase',
             type : 'checkbox',
             text : 'Include Uppercase Letters (A-Z)',
-            checked : false 
+            checked : true 
         },
         {
             key : 2, 

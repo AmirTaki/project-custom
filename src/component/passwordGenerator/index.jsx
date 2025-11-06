@@ -10,14 +10,9 @@ const PasswordGenerator = () => {
             case "handlerRange": 
                 return{...state, value : action.payload.event}
             case 'handlerCheckBox':
-                console.log(action.payload.checked)
-                state.inputCheckBox.map((box) => {
-                    if(box.id === action.payload.id){
-                        return {...box, }
-                    }
-                    return {...box}
-                })
-                return{...state , } 
+            
+                const newInputCheckBox =  state.inputCheckBox.map((box) => ({...box, checked : box.id === action.payload.id ? true : false }))       
+                return{...state , inputCheckBox : newInputCheckBox } 
         }
     }
 
