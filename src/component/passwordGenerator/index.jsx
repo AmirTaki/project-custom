@@ -48,7 +48,7 @@ import { DataInitial } from "./initailState";
         const timer = setTimeout(() => {
             console.log('ok');
            
-            () => {dispatch({type : "handlerTime"})}
+            dispatch({type : "handlerTime"})
             
         }, 3000)
         return() => {clearInterval(timer)}
