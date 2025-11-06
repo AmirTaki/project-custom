@@ -28,6 +28,9 @@ import { DataInitial } from "./initailState";
                 
                 const newInputCheckBox =  state.inputCheckBox.map((box) => ({...box, checked : box.id === id ? checked : box.checked  }))       
                 return{...state , inputCheckBox : newInputCheckBox }
+        
+            case "handlerCopy":
+                return{...state}
            
         }
     }
@@ -48,6 +51,7 @@ import { DataInitial } from "./initailState";
                 {/* passbox */}
                 <input value = {state.password} type="text" className="bg-[#909090] border-0 outline-0 p-[10px] w-[300px] rounded-[4px] text-[20px] my-[8px] text-ellipsis text-red-700" disabled  />
                 <span 
+                    onClick={() => {dispatch({type : 'handlerCopy'})}}
                     className="material-symbols-outlined absolute top-[16px] right-[6px] text-black text-[28px] cursor-pointer z-20" 
                     id = "copyIcon"
                 >
