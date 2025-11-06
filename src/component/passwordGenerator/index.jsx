@@ -16,6 +16,8 @@ const PasswordGenerator = () => {
                     content_copy
                 </span>
             </div>
+            {/* input range */}
+            <input type="range" min = "1" max = '30'  />
         </div>
     )
 }
