@@ -62,8 +62,9 @@ import { DataInitial } from "./initailState";
                 <span 
                     ref = {iconRef}
                     onClick={() => {dispatch({type : 'handlerCopy'})}}
-                    className=" absolute top-[16px] right-[6px] text-black text-[28px] cursor-pointer! z-20" 
+                    className="bi bi-copy absolute top-[16px] right-[6px] text-black  text-[24px] cursor-pointer! z-20" 
                 >
+                    
                 </span>
        
             </div>
