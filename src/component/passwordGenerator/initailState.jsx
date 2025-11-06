@@ -2,7 +2,7 @@ export const DataInitial = {
     value : 15,
     allChars : '',
     password : '',
-
+    icon : true,
     inputCheckBox : [
         {
             key : 0, 

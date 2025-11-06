@@ -33,7 +33,7 @@ import { DataInitial } from "./initailState";
                 if(state.value > 0 || state.allChars.length > 0 ){
                     navigator.clipboard.writeText(state.password)
                     if(iconRef.current){
-                        iconRef.current.innerHTML = ""
+                        console.log(iconRef.current.className.replace('bi-copy', ''))
                         setTimeout(() => {
 
                         }, 3000)
@@ -62,7 +62,7 @@ import { DataInitial } from "./initailState";
                 <span 
                     ref = {iconRef}
                     onClick={() => {dispatch({type : 'handlerCopy'})}}
-                    className="bi bi-copy absolute top-[16px] right-[6px] text-black  text-[24px] cursor-pointer! z-20" 
+                    className={`${state.icon ? "bi-copy" : "bi-check2"} bi bi-copy absolute top-[16px] right-[6px] text-black  text-[24px] cursor-pointer! z-20`} 
                 >
                     
                 </span>
