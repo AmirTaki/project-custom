@@ -7,6 +7,8 @@ const PasswordGenerator = () => {
         switch(action.type){
             case "handlerGenerate" :
                 return {...state};
+            case "handlerRange": 
+                return{...state, value : action.payload.event}
         }
     }
 
