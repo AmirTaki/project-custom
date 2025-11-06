@@ -44,7 +44,7 @@ const PasswordGenerator = () => {
             <RowGenerator dis type = 'checkbox' id = "lowercase" text = "Include Lowercase Letters (a-z)"/>
             <RowGenerator dis type = 'checkbox' id = "uppercase" text = ""/>
             <RowGenerator dis type = 'checkbox' id = "" text = ""/>
-            <RowGenerator dis type = 'checkbox' id = "symbols" text = "Include Symbols (@-*)"/>
+            <RowGenerator dis type = 'checkbox' id = "" text = ""/>
         
             <button 
                 onClick = {() => {dispatch({type : 'handlerGenerate'})}}
