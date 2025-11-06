@@ -1,5 +1,6 @@
 import { useReducer } from "react";
 import RowGenerator from "./rowGenerator";
+import { DataInitial } from "./initailState";
 
 const PasswordGenerator = () => {
     const reducer = (state, action) => {
@@ -11,9 +12,7 @@ const PasswordGenerator = () => {
         }
     }
 
-    const [state, dispatch] = useReducer(reducer, {
-      
-    })
+    const [state, dispatch] = useReducer(reducer, DataInitial)
     return(
         // container
         <div className="border-[.5px] border-white text-gray-400 rounded-[10px] py-[28px] px-[32px] flex flex-col bg-transparent shadow-[8px_8px_4px_#909090,8px_8px_0_#575757]">
@@ -39,9 +38,12 @@ const PasswordGenerator = () => {
                 <p className="basis-full text-[18px]">Password Length</p>
                 <span>{state.value}</span>
             </div>
-
-
-            <RowGenerator dis type = 'checkbox' id = "lowercase" text = "Include Lowercase Letters (a-z)"/>
+        
+            {state.inputCheckBox((row) => {
+                return(
+                    <RowGenerator key = {row.key}  row = {row}/>
+                )
+            })}
             <RowGenerator dis type = 'checkbox' id = "uppercase" text = ""/>
             <RowGenerator dis type = 'checkbox' id = "" text = ""/>
             <RowGenerator dis type = 'checkbox' id = "" text = ""/>

@@ -1,4 +1,4 @@
-const DataIntial = {
+export const DataInitial = {
     value : 15,
       
     inputCheckBox : [
