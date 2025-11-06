@@ -41,13 +41,10 @@ const PasswordGenerator = () => {
         
             {state.inputCheckBox((row) => {
                 return(
-                    <RowGenerator key = {row.key}  row = {row}/>
+                    <RowGenerator key = {row.key}  row = {row} dispatch = {dispatch}/>
                 )
             })}
-            <RowGenerator dis type = 'checkbox' id = "uppercase" text = ""/>
-            <RowGenerator dis type = 'checkbox' id = "" text = ""/>
-            <RowGenerator dis type = 'checkbox' id = "" text = ""/>
-        
+         
             <button 
                 onClick = {() => {dispatch({type : 'handlerGenerate'})}}
                 type = 'button'

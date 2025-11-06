@@ -163,7 +163,7 @@ const Home =  ()  => {
                 <LoginForm />
 
                 {/* loding border */}
-                <LoadingBorder />
+                {/* <LoadingBorder /> */}
                 
                 {/* footer animated */}
                 <FooterAnimated />
