@@ -5,7 +5,7 @@ import { reducer } from "../navbar/inialState";
 const PasswordGenerator = () => {
     const reducer = (state, action) => {
         switch(action.type){
-            case "" :
+            case "handlerGenerate" :
                 return state;
         }
     }
@@ -42,7 +42,9 @@ const PasswordGenerator = () => {
             <RowGenerator type = 'checkbox' id = "numbers" text = "Include Numbers (0-9)"/>
             <RowGenerator type = 'checkbox' id = "symbols" text = "Include Symbols (@-*)"/>
         
-            <button type = 'button'
+            <button 
+                onClick = {() => {dispatch({type : 'handlerGenerate'})}}
+                type = 'button'
                 className="border-0 outline-0 bg-[#2c719e] py-[12px] px-[24px] text-white my-[8px] text-[18px] font-[700] cursor-pointer rounded-[4px]  hover:bg-[#0066ff]"
             >
                 Generate Password
