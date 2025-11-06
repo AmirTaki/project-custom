@@ -22,7 +22,14 @@ const PasswordGenerator = () => {
             {/* row */}
             <div className="flex my-[8px]">
                 <p className="basis-full text-[18px]">Password Length</p>
+                <span></span>
             </div>
+
+            {/* row */}
+            <div className="flex my-[8px]">
+                <label htmlFor="">Include Lowercase Letters (a-z)</label>
+            </div>
+    
         </div>
     )
 }
