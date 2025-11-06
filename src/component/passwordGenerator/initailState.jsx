@@ -1,6 +1,7 @@
 export const DataInitial = {
     value : 15,
     allChars : '',
+    password : '',
 
     inputCheckBox : [
         {

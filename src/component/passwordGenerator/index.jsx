@@ -11,7 +11,16 @@ import { DataInitial } from "./initailState";
                         state.allChars += box.chars
                     }
                 })
-                return {...state, } 
+                if(state.allChars === "" || state.value === 0) {
+                    return {...state}
+                }
+                else {
+                    let password = ""
+                    for (let i = 1; i < state.value ; i++){
+                        password += state.allChars.charAt(Math.floor(Math.random() * state.allChars.length))
+                    }
+                    return {...state, password : password} 
+                }
 
             case "handlerRange": 
                 return{...state, value : action.payload.event}
