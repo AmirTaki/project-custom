@@ -35,6 +35,9 @@ import { DataInitial } from "./initailState";
                     return{...state, icon : false}
                 }
                 return{...state}
+            
+            case "handlerTime":
+                return {...state, icon : true, }
            
         }
     }
