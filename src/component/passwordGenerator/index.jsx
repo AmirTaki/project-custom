@@ -39,7 +39,8 @@ const PasswordGenerator = () => {
                 <span>{state.value}</span>
             </div>
         
-            {state.inputCheckBox((row) => {
+       
+            {state.inputCheckBox.map((row) => {
                 return(
                     <RowGenerator key = {row.key}  row = {row} dispatch = {dispatch}/>
                 )

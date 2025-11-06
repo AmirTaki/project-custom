@@ -1,9 +1,9 @@
-const RowGenerator = ({type, id, text}) => {
+const RowGenerator = ({row, dispatch}) => {
     return(
         /* row */ 
         <div className="flex items-center my-[8px]">
-            <label htmlFor={id} className="basis-full text-[18px] ">{text}</label>
-            <input type={type}  className="w-[20px] h-[20px]" id = {id} onClick={(e) => {console.log( e.target.checked)}}/>
+            <label htmlFor={row.id} className="basis-full text-[18px] ">{row.text}</label>
+            <input type={row.type}  className="w-[20px] h-[20px]" id = {row.id} onClick={(e) => {console.log( e.target.checked)}}/>
         </div>
     )
 }
