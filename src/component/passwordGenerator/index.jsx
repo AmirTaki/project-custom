@@ -1,6 +1,7 @@
 import { useReducer } from "react";
 import RowGenerator from "./rowGenerator";
 import { DataInitial } from "./initailState";
+import Box from "../animateEffect/box";
 
 const PasswordGenerator = () => {
     const reducer = (state, action) => {
@@ -10,8 +11,9 @@ const PasswordGenerator = () => {
             case "handlerRange": 
                 return{...state, value : action.payload.event}
             case 'handlerCheckBox':
-            
-                const newInputCheckBox =  state.inputCheckBox.map((box) => ({...box, checked : box.id === action.payload.id ? true : false }))       
+                const {checked} =  action.payload
+                const {id} = action.payload
+                const newInputCheckBox =  state.inputCheckBox.map((box) => ({...box, checked : box.id === id ? checked : box.checked  }))       
                 return{...state , inputCheckBox : newInputCheckBox } 
         }
     }
