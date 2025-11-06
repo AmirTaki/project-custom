@@ -28,11 +28,7 @@ const PasswordGenerator = () => {
             </div>
 
             <RowGenerator type = 'checkbox' id = "lowercase" text = "Include Lowercase Letters (a-z)"/>
-            {/* row */}
-            <div className="flex my-[8px]">
-                <label htmlFor="lowercase" className="basis-full text-[18px] ">Include Lowercase Letters (a-z)</label>
-                <input type="checkbox"  className="w-[20px] h-[20px]" id = "lowercase"/>
-            </div>
+        
     
         </div>
     )

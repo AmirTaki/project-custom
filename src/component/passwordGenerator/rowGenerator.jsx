@@ -1,6 +1,10 @@
-const RowGenerator = () => {
+const RowGenerator = ({type, id, text}) => {
     return(
-        <div className=""></div>
+        /* row */ 
+        <div className="flex my-[8px]">
+            <label htmlFor={id} className="basis-full text-[18px] ">{text}</label>
+            <input type={type}  className="w-[20px] h-[20px]" id = {id}/>
+        </div>
     )
 }
 export default RowGenerator;
