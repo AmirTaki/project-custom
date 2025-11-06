@@ -6,16 +6,17 @@ import { DataInitial } from "./initailState";
         switch(action.type){
             case "handlerGenerate" :
                 state.allChars = ''
+                let password = ""
                 state.inputCheckBox.map((box) => {
                     if(box.checked) {
                         state.allChars += box.chars
                     }
                 })
                 if(state.allChars === "" || state.value === 0) {
-                    return {...state}
+                    return {...state, password : password}
                 }
                 else {
-                    let password = ""
+                   
                     for (let i = 1; i < state.value ; i++){
                         password += state.allChars.charAt(Math.floor(Math.random() * state.allChars.length))
                     }
@@ -37,7 +38,7 @@ import { DataInitial } from "./initailState";
     
     const [state, dispatch] = useReducer(reducer, DataInitial)
     useEffect(() => {
-        console.log(state.allChars)
+        console.log(state.password)
     })
 
     return(
@@ -58,7 +59,7 @@ import { DataInitial } from "./initailState";
                 </span>
             </div>
             {/* input range */}
-            <input type="range" min = "1" max = '30' value={state.value} onChange={(e) => {dispatch({type: "handlerRange", payload : {event : e.target.value}})}}  />
+            <input type="range" min = "0" max = '30' value={state.value} onChange={(e) => {dispatch({type: "handlerRange", payload : {event : e.target.value}})}}  />
 
             {/* row */}
             <div className="flex my-[8px]">
