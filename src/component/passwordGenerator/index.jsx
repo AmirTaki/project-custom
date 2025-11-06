@@ -1,6 +1,5 @@
 import { useReducer } from "react";
 import RowGenerator from "./rowGenerator";
-import { reducer } from "../navbar/inialState";
 
 const PasswordGenerator = () => {
     const reducer = (state, action) => {
@@ -13,8 +12,7 @@ const PasswordGenerator = () => {
     }
 
     const [state, dispatch] = useReducer(reducer, {
-        value : 15,
-        x : [{},{}]
+      
     })
     return(
         // container
@@ -42,10 +40,11 @@ const PasswordGenerator = () => {
                 <span>{state.value}</span>
             </div>
 
-            <RowGenerator type = 'checkbox' id = "lowercase" text = "Include Lowercase Letters (a-z)"/>
-            <RowGenerator type = 'checkbox' id = "uppercase" text = "Include Uppercase Letters (A-Z)"/>
-            <RowGenerator type = 'checkbox' id = "numbers" text = "Include Numbers (0-9)"/>
-            <RowGenerator type = 'checkbox' id = "symbols" text = "Include Symbols (@-*)"/>
+
+            <RowGenerator dis type = 'checkbox' id = "lowercase" text = "Include Lowercase Letters (a-z)"/>
+            <RowGenerator dis type = 'checkbox' id = "uppercase" text = "Include Uppercase Letters (A-Z)"/>
+            <RowGenerator dis type = 'checkbox' id = "numbers" text = "Include Numbers (0-9)"/>
+            <RowGenerator dis type = 'checkbox' id = "symbols" text = "Include Symbols (@-*)"/>
         
             <button 
                 onClick = {() => {dispatch({type : 'handlerGenerate'})}}
