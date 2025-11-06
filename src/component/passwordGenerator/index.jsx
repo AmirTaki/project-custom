@@ -30,12 +30,8 @@ import { DataInitial } from "./initailState";
                 return{...state , inputCheckBox : newInputCheckBox }
         
             case "handlerCopy":
-                if(state.value > 0 || state.allChars.length > 0 ){
+                if(state.password.length > 0){
                     navigator.clipboard.writeText(state.password)
-                    
-                    setTimeout(() => {
-                        return{...state, icon : true}
-                    }, 3000)
                     return{...state, icon : false}
                 }
                 return{...state}
@@ -46,7 +42,7 @@ import { DataInitial } from "./initailState";
     const [state, dispatch] = useReducer(reducer, DataInitial)
     useEffect(() => {
         console.log(state.password)
-    })
+    }, [state.icon])
 
     return(
         // container
