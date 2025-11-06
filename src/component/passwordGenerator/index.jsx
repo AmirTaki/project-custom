@@ -18,6 +18,11 @@ const PasswordGenerator = () => {
             </div>
             {/* input range */}
             <input type="range" min = "1" max = '30'  />
+
+            {/* row */}
+            <div className="flex my-[8px]">
+                <p className="basis-full text-[18px]">Password Length</p>
+            </div>
         </div>
     )
 }
