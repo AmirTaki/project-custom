@@ -44,8 +44,12 @@ import { DataInitial } from "./initailState";
     
     const [state, dispatch] = useReducer(reducer, DataInitial)
     useEffect(() => {
+
         const timer = setTimeout(() => {
-            () => {dispatch({type : "handlerTime"})}
+            console.log('ok');
+            if(!state.icon){
+                () => {dispatch({type : "handlerTime"})}
+            }
         }, 3000)
         return() => {clearInterval(timer)}
     }, [state.icon])
