@@ -8,12 +8,9 @@ const PasswordGenerator = () => {
             {/* inputBox */}
             <div className="relative">
                 {/* passbox */}
-                <input type="text" className="bg-[#909090] border-0 outline-0 p-[10px] w-[300px] rounded-[4px] text-[20px] cursor-pointer z-20" disabled />
-                <span
-                    className="absolute top-[16px] right-[6px] text-black text-[28px] cursor-pointer z-20"
-                >
-                    content_copy
-                </span>
+                <input type="text" className="bg-[#909090] border-0 outline-0 p-[10px] w-[300px] rounded-[4px] text-[20px] my-[8px] text-ellipsis " disabled />
+                <span className="material-symbols-outlined" id = "copyIcon">content_copy</span>
+
             </div>
         </div>
     )
