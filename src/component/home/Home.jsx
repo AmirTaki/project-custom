@@ -34,6 +34,7 @@ import ImageCardHover from "../cardComponent/index.jsx"
 import GalleryImage from "../gallery/index.jsx"
 import LoginForm from "../login.jsx/index.jsx"
 import LoadingBorder from "../loadingBorder/index.jsx"
+import PasswordGenerator from "../passwordGenerator/index.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -168,8 +169,11 @@ const Home =  ()  => {
                 <FooterAnimated />
 
             </div>
+            {/* password Generator */}
+            <PasswordGenerator />
             <div className="h-100 w-100 text-white"></div>
 
+ 
         </div>   
     )
 }
