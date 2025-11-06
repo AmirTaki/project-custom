@@ -37,7 +37,7 @@ import { DataInitial } from "./initailState";
                 return{...state}
             
             case "handlerTime":
-                return {...state, icon : true, password : '' }
+                return state.icon ?  {...state} : {...state, icon : true, password : '' }
            
         }
     }
@@ -47,9 +47,9 @@ import { DataInitial } from "./initailState";
 
         const timer = setTimeout(() => {
             console.log('ok');
-            if(!state.icon){
-                () => {dispatch({type : "handlerTime"})}
-            }
+           
+            () => {dispatch({type : "handlerTime"})}
+            
         }, 3000)
         return() => {clearInterval(timer)}
     }, [state.icon])
