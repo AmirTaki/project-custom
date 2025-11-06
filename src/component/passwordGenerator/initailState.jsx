@@ -1,6 +1,7 @@
 export const DataInitial = {
     value : 15,
-    
+   
+
 
     inputCheckBox : [
         {
@@ -8,14 +9,14 @@ export const DataInitial = {
             id : 'lowercase',
             type : 'checkbox',
             text : 'Include Lowercase Letters (a-z)',
-            checked : false
+            checked : true
         },
         {
             key : 1, 
             id : 'uppercase',
             type : 'checkbox',
             text : 'Include Uppercase Letters (A-Z)',
-            checked : true 
+            checked : false 
         },
         {
             key : 2, 
