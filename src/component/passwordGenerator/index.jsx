@@ -30,7 +30,13 @@ const PasswordGenerator = () => {
             <RowGenerator type = 'checkbox' id = "lowercase" text = "Include Lowercase Letters (a-z)"/>
             <RowGenerator type = 'checkbox' id = "uppercase" text = "Include Uppercase Letters (A-Z)"/>
             <RowGenerator type = 'checkbox' id = "numbers" text = "Include Numbers (0-9)"/>
+            <RowGenerator type = 'checkbox' id = "symbols" text = "Include Symbols (@-*)"/>
         
+            <button type = 'button'
+                className="border-0 outline-0 bg-[#2c719e] py-[12px] px-[24px] text-white my-[18px]"
+            >
+                Generate Password
+            </button>
     
         </div>
     )
