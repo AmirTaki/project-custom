@@ -32,7 +32,12 @@ import { DataInitial } from "./initailState";
             case "handlerCopy":
                 if(state.value > 0 || state.allChars.length > 0 ){
                     navigator.clipboard.writeText(state.password)
+                    if(iconRef.current){
 
+                        setTimeout(() => {
+
+                        }, 3000)
+                    }
                 }
                 return{...state}
            
