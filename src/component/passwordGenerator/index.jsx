@@ -6,11 +6,14 @@ const PasswordGenerator = () => {
     const reducer = (state, action) => {
         switch(action.type){
             case "handlerGenerate" :
-                return state;
+                return {...state};
         }
     }
 
-    const [state, dispatch] = useReducer(reducer, {})
+    const [state, dispatch] = useReducer(reducer, {
+        value : 15,
+        x : [{},{}]
+    })
     return(
         // container
         <div className="border-[.5px] border-white text-gray-400 rounded-[10px] py-[28px] px-[32px] flex flex-col bg-transparent shadow-[8px_8px_4px_#909090,8px_8px_0_#575757]">
@@ -29,12 +32,12 @@ const PasswordGenerator = () => {
                 </span>
             </div>
             {/* input range */}
-            <input type="range" min = "1" max = '30'  />
+            <input type="range" min = "1" max = '30' value={state.value} onChange={(e) => {dispatch({type: "handlerRange", payload : {event : e.target.value}})}}  />
 
             {/* row */}
             <div className="flex my-[8px]">
                 <p className="basis-full text-[18px]">Password Length</p>
-                <span>20</span>
+                <span>{state.value}</span>
             </div>
 
             <RowGenerator type = 'checkbox' id = "lowercase" text = "Include Lowercase Letters (a-z)"/>
