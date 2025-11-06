@@ -4,7 +4,7 @@ const PasswordGenerator = () => {
     return(
         // container
         <div className="border-[.5px] border-white text-gray-400 rounded-[10px] py-[28px] px-[32px] flex flex-col bg-transparent shadow-[8px_8px_4px_#909090,8px_8px_0_#575757]">
-            <h1 className="text-[1.4em] my-[8px]">
+            <h1 className="text-[1.4em] my-[8px] text-white font-[700]">
                 Password Generator
             </h1>
             {/* inputBox */}
@@ -33,7 +33,7 @@ const PasswordGenerator = () => {
             <RowGenerator type = 'checkbox' id = "symbols" text = "Include Symbols (@-*)"/>
         
             <button type = 'button'
-                className="border-0 outline-0 bg-[#2c719e] py-[12px] px-[24px] text-white my-[8px] text-[18px] font-[700] cursor-pointer rounded-[4px] "
+                className="border-0 outline-0 bg-[#2c719e] py-[12px] px-[24px] text-white my-[8px] text-[18px] font-[700] cursor-pointer rounded-[4px]  hover:bg-[#0066ff]"
             >
                 Generate Password
             </button>
