@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import RowGenerator from "./rowGenerator";
 import { DataInitial } from "./initailState";
 import Box from "../animateEffect/box";
@@ -7,6 +7,9 @@ const PasswordGenerator = () => {
     const reducer = (state, action) => {
         switch(action.type){
             case "handlerGenerate" :
+
+
+
                 return {...state};
             case "handlerRange": 
                 return{...state, value : action.payload.event}
@@ -14,10 +17,18 @@ const PasswordGenerator = () => {
                 const {checked} =  action.payload
                 const {id} = action.payload
                 const newInputCheckBox =  state.inputCheckBox.map((box) => ({...box, checked : box.id === id ? checked : box.checked  }))       
-                return{...state , inputCheckBox : newInputCheckBox } 
+                return{...state , inputCheckBox : newInputCheckBox }
+            case 'handerAllChars' :
+                state.inputCheckBox.mpa((box) => {
+                    console.log(box.checked)
+                })
+                return {...state} 
         }
     }
 
+    useEffect(() => {
+        dispatch({type : 'handerAllChars'})
+    }, [state.inputCheckBox])
     const [state, dispatch] = useReducer(reducer, DataInitial)
     return(
         // container

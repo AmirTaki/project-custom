@@ -2,8 +2,9 @@ export const DataInitial = {
     value : 15,
     lowerChars : 'abcdefghijklmnopqrstuvwxyz',
     upperChars : "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-    allNumbers :  '0123456789',
+    allNumbers : '0123456789',
     allSymbols : "~!@#$%^&*",
+    allChars : '',
 
     inputCheckBox : [
         {
