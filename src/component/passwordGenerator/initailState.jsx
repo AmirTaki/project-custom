@@ -1,9 +1,5 @@
 export const DataInitial = {
     value : 15,
-    lowerChars : 'abcdefghijklmnopqrstuvwxyz',
-    upperChars : "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-    allNumbers : '0123456789',
-    allSymbols : "~!@#$%^&*",
     allChars : '',
 
     inputCheckBox : [
@@ -12,6 +8,7 @@ export const DataInitial = {
             id : 'lowercase',
             type : 'checkbox',
             text : 'Include Lowercase Letters (a-z)',
+            chars : 'abcdefghijklmnopqrstuvwxyz',
             checked : true
         },
         {
@@ -19,6 +16,7 @@ export const DataInitial = {
             id : 'uppercase',
             type : 'checkbox',
             text : 'Include Uppercase Letters (A-Z)',
+            chars : 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
             checked : true 
         },
         {
@@ -26,6 +24,7 @@ export const DataInitial = {
             id : 'numbers',
             type : 'checkbox',
             text : 'Include Numbers (0-9)',
+            chars : '0123456789',
             checked : false 
         },
         {
@@ -33,6 +32,7 @@ export const DataInitial = {
             id : 'symbols',
             type : 'checkbox',
             text : 'Include Symbols (@-*)' ,
+            chars : '~!@#$%^&*',
             checked : false
         },
     ]

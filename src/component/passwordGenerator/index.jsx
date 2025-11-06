@@ -1,35 +1,32 @@
 import { useEffect, useReducer } from "react";
 import RowGenerator from "./rowGenerator";
 import { DataInitial } from "./initailState";
-import Box from "../animateEffect/box";
-
-const PasswordGenerator = () => {
+ const PasswordGenerator = () => {
     const reducer = (state, action) => {
         switch(action.type){
             case "handlerGenerate" :
 
+                state.inputCheckBox.map((box) => {
+                    if(box.checked) {
+                        
+                    }
+                })
+                return {...state} 
 
-
-                return {...state};
             case "handlerRange": 
                 return{...state, value : action.payload.event}
-            case 'handlerCheckBox':
+           
+                case 'handlerCheckBox':
                 const {checked} =  action.payload
                 const {id} = action.payload
                 const newInputCheckBox =  state.inputCheckBox.map((box) => ({...box, checked : box.id === id ? checked : box.checked  }))       
                 return{...state , inputCheckBox : newInputCheckBox }
-            case 'handerAllChars' :
-                state.inputCheckBox.mpa((box) => {
-                    console.log(box.checked)
-                })
-                return {...state} 
+           
         }
     }
-
-    useEffect(() => {
-        dispatch({type : 'handerAllChars'})
-    }, [state.inputCheckBox])
+    
     const [state, dispatch] = useReducer(reducer, DataInitial)
+
     return(
         // container
         <div className="border-[.5px] border-white text-gray-400 rounded-[10px] py-[28px] px-[32px] flex flex-col bg-transparent shadow-[8px_8px_4px_#909090,8px_8px_0_#575757]">
