@@ -33,7 +33,7 @@ import { DataInitial } from "./initailState";
                 if(state.value > 0 || state.allChars.length > 0 ){
                     navigator.clipboard.writeText(state.password)
                     if(iconRef.current){
-
+                        iconRef.current.innerHTML = ""
                         setTimeout(() => {
 
                         }, 3000)
