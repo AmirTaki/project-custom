@@ -1,3 +1,5 @@
+import RowGenerator from "./rowGenerator";
+
 const PasswordGenerator = () => {
     return(
         // container
@@ -25,6 +27,7 @@ const PasswordGenerator = () => {
                 <span>20</span>
             </div>
 
+            <RowGenerator type = 'checkbox' id = "lowercase" text = "Include Lowercase Letters (a-z)"/>
             {/* row */}
             <div className="flex my-[8px]">
                 <label htmlFor="lowercase" className="basis-full text-[18px] ">Include Lowercase Letters (a-z)</label>
