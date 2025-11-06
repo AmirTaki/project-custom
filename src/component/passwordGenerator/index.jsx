@@ -9,6 +9,11 @@ const PasswordGenerator = () => {
             <div className="relative">
                 {/* passbox */}
                 <input type="text" className="bg-[#909090] border-0 outline-0 p-[10px] w-[300px] rounded-[4px] text-[20px] cursor-pointer z-20" disabled />
+                <span
+                    className="absolute top-[16px] right-[6px] text-black text-[28px] cursor-pointer z-20"
+                >
+                    content_copy
+                </span>
             </div>
         </div>
     )
