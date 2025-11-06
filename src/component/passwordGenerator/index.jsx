@@ -3,7 +3,7 @@ import RowGenerator from "./rowGenerator";
 import { DataInitial } from "./initailState";
 
  const PasswordGenerator = () => {
-
+    const iconRef =  useRef(null)
     const reducer = (state, action) => {
         switch(action.type){
             case "handlerGenerate" :
@@ -30,6 +30,10 @@ import { DataInitial } from "./initailState";
                 return{...state , inputCheckBox : newInputCheckBox }
         
             case "handlerCopy":
+                if(state.value > 0 || state.allChars.length > 0 ){
+                    navigator.clipboard.writeText(state.password)
+
+                }
                 return{...state}
            
         }
@@ -51,8 +55,9 @@ import { DataInitial } from "./initailState";
                 {/* passbox */}
                 <input value = {state.password} type="text" className="bg-[#909090] border-0 outline-0 p-[10px] w-[300px] rounded-[4px] text-[20px] my-[8px] text-ellipsis text-red-700" disabled  />
                 <span 
+                    ref = {iconRef}
                     onClick={() => {dispatch({type : 'handlerCopy'})}}
-                    className="material-symbols-outlined absolute top-[16px] right-[6px] text-black text-[28px] cursor-pointer z-20" 
+                    className="material-symbols-outlined absolute top-[16px] right-[6px] text-black text-[28px] cursor-pointer! z-20" 
                     id = "copyIcon"
                 >
                     content_copy
