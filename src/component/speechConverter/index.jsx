@@ -4,8 +4,8 @@ import { useEffect, useReducer } from "react"
 const TextSpeech = () => {
     const reducer = (state, action) => {
         switch(action.type){
-            case "" :
-                return {...state}
+            case "handlerVoices" :
+                return {...state, }
         }
     }
     const [state, dispatch] = useReducer(reducer, {
@@ -15,6 +15,9 @@ const TextSpeech = () => {
 
     useEffect(() => {
         let speech  = new SpeechSynthesisUtterance();
+        let availabeVoices =  window.speechSynthesis.getVoices()
+        dispatch({type : 'handlerVoices', payload : {availabe : availabeVoices}})
+        console.log(avild)
     },[])
     return(
         // hero
