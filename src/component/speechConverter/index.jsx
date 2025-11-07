@@ -6,6 +6,9 @@ const TextSpeech = () => {
         switch(action.type){
             case "handlerVoices" :
                 return {...state, voices : action.payload.availabe }
+            case "handlerSpeek":
+                const {value} = action.payload
+                return{...state,}
         }
     }
     const [state, dispatch] = useReducer(reducer, {
@@ -45,6 +48,7 @@ const TextSpeech = () => {
                 <select 
                     style={{backgroundPositionX : "calc(100% - 20px)", backgroundPositionY : "20px",backgroundImage: `url(${dropDwonImg})`}}
                     className={`flex-1 text-white bg-[#403d84] h-[50px] px-[20px] outline-none border-0 rounded-[35px] appearance-none bg-no-repeat  bg-[length:15px]`}
+                    onChange={(e) => {dispatch ({type : 'handlerSpeek', payload : {value : e.target.value}})}}
                 >
                     {state.voice.map((voice, index) => {
                         return(
