@@ -28,7 +28,10 @@ const ShareButton = () => {
                     {DataShare.map((share) => {
                         return(
                             <Link to = "./" key = {share.id} >
-                                <i className={`${share.icon} hover:${share.color} text-[22px] `}></i>
+                                <i 
+                                    style = {{"--color" : share.color}}
+                                    className={`${share.icon} hover:text-[var(--color)]! text-[22px] `}
+                                ></i>
                             </Link>
                         )
                     })}
