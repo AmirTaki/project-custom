@@ -35,6 +35,7 @@ import GalleryImage from "../gallery/index.jsx"
 import LoginForm from "../login.jsx/index.jsx"
 import LoadingBorder from "../loadingBorder/index.jsx"
 import PasswordGenerator from "../passwordGenerator/index.jsx"
+import TextSpeech from "../speechConverter/index.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -172,6 +173,8 @@ const Home =  ()  => {
                 <FooterAnimated />
 
             </div>
+            {/* text to speech coverter */}
+            <TextSpeech />
             <div className="h-100 w-100 text-white"></div>
 
  
