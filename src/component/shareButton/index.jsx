@@ -24,7 +24,9 @@ const ShareButton = () => {
                 before:transform before:rotate-45
             ">
                 <BrowserRouter>
-                    <Link to = "./" />
+                    <Link to = "./" >
+                        <i className="bi bi-facebook text-[22px] "></i>
+                    </Link>
                 </BrowserRouter>
             </div>
         </div>
