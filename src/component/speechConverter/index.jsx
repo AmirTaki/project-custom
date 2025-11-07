@@ -6,10 +6,10 @@ const TextSpeech = () => {
         switch(action.type){
             
             case "handleSpeech" :
-                return {...state, speech : new SpeechSynthesisUtterance(state.text)}
+                return {...state, speech : new SpeechSynthesisUtterance(state.text), }
             
             case "handlerAvailabe":
-                return {...state, availabe : window.speechSynthesis.getVoices()}
+                return {...state, availabe : window.speechSynthesis.getVoices() }
 
             case "handlerSpeechVoice": 
                 return{...state, }
