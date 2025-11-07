@@ -8,6 +8,7 @@ const TextSpeech = () => {
                 return {...state, voices : action.payload.availabe }
             case "handlerSpeek":
                 const {value} = action.payload
+                const speech = new SpeechSynthesisUtterance
                 return{...state,}
         }
     }
@@ -22,7 +23,7 @@ const TextSpeech = () => {
             let availabeVoices =  window.speechSynthesis.getVoices()
             dispatch({type : 'handlerVoices', payload : {availabe : availabeVoices}})
             speech.voice = state.voices[0]
-            console.log(speech.voice)
+            
         }
 
         window.speechSynthesis.onvoiceschanged = load
@@ -39,6 +40,7 @@ const TextSpeech = () => {
             </h1>
             {/* textarea */}
             <textarea 
+                onChange={(e) => {dispatch({type : 'handlerTextArea', payload : {text : e.target.value}})}}
                 name="" id="" placeholder="Write anything here..."
                 className="w-[600px] h-[250px] bg-[#493d84] text-[15px]! border-0 outline-none p-[20px] rounded-[10px] resize-none mb-[30px]
                 placeholder:text-[16px]! placeholder:text-[#ddd] text-white"    
@@ -50,7 +52,7 @@ const TextSpeech = () => {
                     className={`flex-1 text-white bg-[#403d84] h-[50px] px-[20px] outline-none border-0 rounded-[35px] appearance-none bg-no-repeat  bg-[length:15px]`}
                     onChange={(e) => {dispatch ({type : 'handlerSpeek', payload : {value : e.target.value}})}}
                 >
-                    {state.voice.map((voice, index) => {
+                    {state.voices.map((voice, index) => {
                         return(
                             <option key={index} value = {voice} >{voice.name}</option>
                         )
