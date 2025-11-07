@@ -36,6 +36,7 @@ import LoginForm from "../login.jsx/index.jsx"
 import LoadingBorder from "../loadingBorder/index.jsx"
 import PasswordGenerator from "../passwordGenerator/index.jsx"
 import TextSpeech from "../speechConverter/index.jsx"
+import ShareButton from "../shareButton/index.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -176,6 +177,8 @@ const Home =  ()  => {
                 <FooterAnimated />
 
             </div>
+            {/* share button */}
+            <ShareButton />
             <div className="h-100 w-100 text-white"></div>
 
  
