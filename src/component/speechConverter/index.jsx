@@ -5,7 +5,7 @@ const TextSpeech = () => {
     const reducer = (state, action) => {
         switch(action.type){
             case "handlerVoices" :
-                return {...state, }
+                return {...state, voices : action.payload.availabe }
         }
     }
     const [state, dispatch] = useReducer(reducer, {
@@ -18,6 +18,8 @@ const TextSpeech = () => {
         const load = () => {
             let availabeVoices =  window.speechSynthesis.getVoices()
             dispatch({type : 'handlerVoices', payload : {availabe : availabeVoices}})
+            speech.voice = state.voice[0]
+            console.log(speech.voice)
         }
 
         window.speechSynthesis.onvoiceschanged = load

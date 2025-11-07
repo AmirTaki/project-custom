@@ -1,0 +1,56 @@
+import React, { useEffect, useState } from 'react';
+
+const SpeechSynthesis = () => {
+  const [voices, setVoices] = useState([]);
+  const [selectedVoiceIndex, setSelectedVoiceIndex] = useState(0);
+  const [text, setText] = useState('');
+
+  useEffect(() => {
+    const speech = new SpeechSynthesisUtterance();
+
+    const loadVoices = () => {
+      const availableVoices = window.speechSynthesis.getVoices();
+      setVoices(availableVoices);
+      speech.voice = availableVoices[0];
+    };
+
+    window.speechSynthesis.onvoiceschanged = loadVoices;
+    loadVoices(); // in case voices are already available
+
+    return () => {
+      window.speechSynthesis.onvoiceschanged = null;
+    };
+  }, []);
+
+  const handleVoiceChange = (e) => {
+    setSelectedVoiceIndex(e.target.value);
+  };
+
+  const handleSpeak = () => {
+    const speech = new SpeechSynthesisUtterance(text);
+    speech.voice = voices[selectedVoiceIndex];
+    window.speechSynthesis.speak(speech);
+  };
+
+  return (
+    <div>
+      <select onChange={handleVoiceChange} value={selectedVoiceIndex}>
+        {voices.map((voice, index) => (
+          <option key={index} value={index}>
+            {voice.name}
+          </option>
+        ))}
+      </select>
+
+      <textarea
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        placeholder="Enter text to speak"
+      />
+
+      <button onClick={handleSpeak}>Speak</button>
+    </div>
+  );
+};
+
+export default SpeechSynthesis;
