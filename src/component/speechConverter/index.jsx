@@ -3,8 +3,13 @@ const TextSpeech = () => {
         // hero
         <div className="w-full min-h-screen bg-linear-[45deg,#010758,#490d61] text-white flex justify-center items-center flex-col ">
             <h1 className="text-[45px] font-[500] -mt-[50px] mb-[50px]">Text To Speech
-                <span>Converter</span>
+                <span className="text-[#ff2963]">Converter</span>
             </h1>
+            {/* textarea */}
+            <textarea 
+                name="" id="" placeholder="Write anything here..."
+                className="w-[600px] h-[250px] bg-[#493d84] text-[15px] border-0 outline-none p-[20px] rounded-[10px] resize-none mb-[30px]"    
+            ></textarea>
         </div>
     )
 }
