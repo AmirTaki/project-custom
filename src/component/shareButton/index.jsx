@@ -20,7 +20,7 @@ const ShareButton = () => {
             {/* icons */}
             <div className="absolute -top-[120px] left-[50%] transform -translate-1/2 bg-white
                 h-[110%] w-[140%] text-center flex justify-evenly items-center rounded-[35px] 
-                shadow-[0_0_4px_rgba(0,0,0,.5) transition-all duration-300 ease-in-out
+                shadow-[0_0_4px_rgba(0,0,0,.5) transition-all duration-300 ease-in-out pointer-events-
                 before:absolute before:content before:h-[18px] before:w-[18px] before:bg-white before:-bottom-[9px]
                 before:transform before:rotate-45
             ">
@@ -30,7 +30,7 @@ const ShareButton = () => {
                             <Link to = "./" key = {share.id} className="">
                                 <i 
                                     style = {{"--color" : share.color}}
-                                    className={`${share.icon} text-[#0984e3] hover:text-[var(--color)] cursor-pointer text-[22px]  `}
+                                    className={`${share.icon} text-[#0984e3] hover:text-[var(--color)] hover:-translate-y-[2px]! cursor-pointer text-[22px]  `}
                                 ></i>
                             </Link>
                         )
