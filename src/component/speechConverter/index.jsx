@@ -13,7 +13,7 @@ const TextSpeech = () => {
            
             case "handlerSpeek":
                 state.speech = new SpeechSynthesisUtterance(state.text)
-                speech.voice = state.voices[state.languge]
+                state.speech.voice = state.voices[state.languge]
                 window.speechSynthesis.speak(state.speech)
                 return{...state,}
 
@@ -34,9 +34,9 @@ const TextSpeech = () => {
     })
 
     useEffect(() => {
-        let speech  = new SpeechSynthesisUtterance()
         dispatch({type : "handleSpeech"})
      
+
         const load = () => {
             let availabeVoices =  window.speechSynthesis.getVoices()
             dispatch({type : 'handlerVoices', payload : {availabe : availabeVoices}})
