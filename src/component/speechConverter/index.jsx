@@ -7,7 +7,10 @@ const TextSpeech = () => {
             
             case "handleSpeech" :
                 return {...state, speech : new SpeechSynthesisUtterance(state.text)}
-       
+            
+            case "handlerAvailabe":
+                return {...state}
+
             case "handlerVoices" :
                 return {...state, voices : action.payload.availabe , }
            
@@ -19,7 +22,6 @@ const TextSpeech = () => {
 
             case "handlerLanguge" : 
                 const {value} = action.payload
-                console.log(value)
                 return{...state, languge : value}
             
             case  "handlerTextArea":
@@ -31,14 +33,18 @@ const TextSpeech = () => {
         voices : [],
         text : "",
         languge : 0,
-        speech : []
+        speech : [],
+        availabe : []
+        
     })
 
     useEffect(() => {
         dispatch({type : "handleSpeech"})
      
         const load = () => {
+            dispatch({type : 'handlerAvailabe'})
             let availabeVoices =  window.speechSynthesis.getVoices()
+            console.log(availabeVoices)
             dispatch({type : 'handlerVoices', payload : {availabe : availabeVoices}})
             state.speech.voice = state.voices[0]     
         }
@@ -49,6 +55,7 @@ const TextSpeech = () => {
             window.speechSynthesis.onvoiceschanged = null
         }
     },[])
+  
     return(
         // hero
         <div className="w-full min-h-screen bg-linear-[45deg,#010758,#490d61] text-white flex justify-center items-center flex-col ">
@@ -67,7 +74,6 @@ const TextSpeech = () => {
                 <select 
                     style={{backgroundPositionX : "calc(100% - 20px)", backgroundPositionY : "20px",backgroundImage: `url(${dropDwonImg})`}}
                     className={`flex-1 text-white bg-[#403d84] h-[50px] px-[20px] outline-none border-0 rounded-[35px] appearance-none bg-no-repeat  bg-[length:15px]`}
-                    
                     onChange={(e) => {dispatch ({type : 'handlerLanguge', payload : {value : e.target.value}})}}
                 >
                     {state.voices.map((voice, index) => {
