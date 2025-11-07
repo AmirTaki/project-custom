@@ -21,7 +21,10 @@ const TextSpeech = () => {
         }
 
         window.speechSynthesis.onvoiceschanged = load
-        console.log(avild)
+        load()
+        return() => {
+            window.speechSynthesis.onvoiceschanged = null
+        }
     },[])
     return(
         // hero
