@@ -1,43 +1,16 @@
 import playImg from "./image/play.png"
 import dropDwonImg from "./image/dropdown.png"
 import { useEffect, useReducer } from "react"
+import { ReducerSpeech } from "./reducerSpeech"
+
 const TextSpeech = () => {
-    const reducer = (state, action) => {
-        switch(action.type){
-            
-            case "handleSpeech" :
-                return {...state, speech : new SpeechSynthesisUtterance(state.text), }
-            
-            case "handlerAvailabe":
-                return {...state, availabe : window.speechSynthesis.getVoices() }
-
-            case "handlerSpeechVoice": 
-                return{...state, }
-            case "handlerVoices" :
-                return {...state, voices : state.availabe }
-           
-            case "handlerSpeek":
-                state.speech = new SpeechSynthesisUtterance(state.text)
-                state.speech.voice = state.voices[state.languge]
-                window.speechSynthesis.speak(state.speech)
-                return{...state}
-
-            case "handlerLanguge" : 
-                const {value} = action.payload
-                return{...state, languge : value}
-            
-            case  "handlerTextArea":
-                const {text} = action.payload
-                return {...state,text :text }
-        }
-    }
-    const [state, dispatch] = useReducer(reducer, {
+ 
+    const [state, dispatch] = useReducer(ReducerSpeech, {
         voices : [],
         text : "",
         languge : 0,
         speech : [],
         availabe : []
-        
     })
 
     useEffect(() => {
@@ -46,7 +19,7 @@ const TextSpeech = () => {
         const load = () => {
             dispatch({type : 'handlerAvailabe'})
             dispatch({type : 'handlerVoices'})
-            state.speech.voice = state.voices[0]     
+            dispatch({type : 'handlerSpeechVoice'})
         }
 
         window.speechSynthesis.onvoiceschanged = load
