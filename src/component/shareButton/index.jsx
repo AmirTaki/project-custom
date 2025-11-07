@@ -19,22 +19,22 @@ const ShareButton = () => {
             >Share</label>
             {/* icons */}
             <div className="absolute -top-[120px] left-[50%] transform -translate-1/2 bg-white
-                h-[110%] w-[140%] text-center flex justify-evenly items-center rounded-[35px] pointer-events-none
-                shadow-[0_0_4px_rgba(0,0,0,.5) transition-all duration-300 ease-in-out]
+                h-[110%] w-[140%] text-center flex justify-evenly items-center rounded-[35px] 
+                shadow-[0_0_4px_rgba(0,0,0,.5) transition-all duration-300 ease-in-out
                 before:absolute before:content before:h-[18px] before:w-[18px] before:bg-white before:-bottom-[9px]
                 before:transform before:rotate-45
             ">
                 <BrowserRouter>
-                    {DataShare.map((share) => {
-                        return(
+                    {DataShare.map((share) => 
+                        (
                             <Link to = "./" key = {share.id} className="">
                                 <i 
-                                    // style = {{"--color" : 'blue'}}
-                                    className={`${share.icon} icons text-red-100  text-[22px]  `}
+                                    style = {{"--color" : 'blue'}}
+                                    className={`${share.icon}  cursor-pointer text-[22px] z-50! `}
                                 ></i>
                             </Link>
                         )
-                    })}
+                    )}
                 </BrowserRouter>
             </div>
         </div>

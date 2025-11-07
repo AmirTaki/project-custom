@@ -1,3 +1,6 @@
+.icons {
+    color : red 
+}
 .icons:hover {
-    color : blue !important
+    color : blue!important
 }
