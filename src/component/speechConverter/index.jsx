@@ -9,13 +9,15 @@ const TextSpeech = () => {
             case "handlerSpeek":
                 
                 const speech = new SpeechSynthesisUtterance(state.text)
+                speech.voice = state.voices[languge]
+                window.speechSynthesis.speak(speech)
                 return{...state,}
 
             case "handlerLanguge" : 
                 const {value} = action.payload
-                console.log(value)
                 return{...state, languge : value}
-            case  "handlerTextArea":
+            
+                case  "handlerTextArea":
                 const {text} = action.payload
                 return {...state,text :text }
         }
@@ -33,6 +35,8 @@ const TextSpeech = () => {
             let availabeVoices =  window.speechSynthesis.getVoices()
             dispatch({type : 'handlerVoices', payload : {availabe : availabeVoices}})
             speech.voice = state.voices[0]
+
+            console.log(state.languge)
             
         }
 
@@ -69,9 +73,11 @@ const TextSpeech = () => {
                     })}
                 </select>
                 {/* button */}
-                <button className="bg-[#ff296c] text-white text-[16px] p-[10px_30px] rounded-[35px] border-0 outline-none cursor-pointer flex items-center">
-                    <img src={playImg} alt="" className="w-[16px] mr-[10px]" />
-                    Listen
+                <button 
+                    onClick={() => {dispatch({type : 'handlerSpeek'})}}
+                    className="bg-[#ff296c] text-white text-[16px] p-[10px_30px] rounded-[35px] border-0 outline-none cursor-pointer flex items-center">
+                        <img src={playImg} alt="" className="w-[16px] mr-[10px]" />
+                        Listen
                 </button>
             </div>
         </div>
