@@ -2,21 +2,21 @@ export const DataShare = [
     {
         id : 0, 
         icon : 'bi bi-facebook',
-        color : ''
+        color : '#426782'
     },
     {
         id : 1, 
         icon : 'bi bi-twitter',
-        color : ''
+        color : '#1da1f2'
     },
     {
         id : 2, 
         icon : 'bi bi-instagram',
-        color : ''
+        color : '#e1306c'
     },
     {
         id : 3, 
         icon : 'bi bi-youtube',
-        color : ''
+        color : '#ff0000'
     },
 ]
