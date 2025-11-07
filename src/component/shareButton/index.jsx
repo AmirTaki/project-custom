@@ -27,10 +27,10 @@ const ShareButton = () => {
                 <BrowserRouter>
                     {DataShare.map((share) => {
                         return(
-                            <Link to = "./" key = {share.id} >
+                            <Link to = "./" key = {share.id} className="text-[green] hover:text-[blue]!">
                                 <i 
-                                    style = {{"--color" : share.color}}
-                                    className={`${share.icon} hover:text-[var(--color)]! text-[22px] `}
+                                    style = {{"--color" : 'blue'}}
+                                    className={`${share.icon}  hover:text-blue-700! text-[22px] `}
                                 ></i>
                             </Link>
                         )
