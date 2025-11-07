@@ -29,8 +29,8 @@ const ShareButton = () => {
                         (
                             <Link to = "./" key = {share.id} className="">
                                 <i 
-                                    style = {{"--color" : 'blue'}}
-                                    className={`${share.icon}  cursor-pointer text-[22px] z-50! `}
+                                    style = {{"--color" : share.color}}
+                                    className={`${share.icon} text-[#0984e3] hover:text-[var(--color)] cursor-pointer text-[22px]  `}
                                 ></i>
                             </Link>
                         )
