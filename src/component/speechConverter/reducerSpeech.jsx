@@ -29,3 +29,11 @@ export const ReducerSpeech = (state, action) => {
             return {...state,text :text }
     }
 }
+
+export const InitialSpeech = {
+    voices : [],
+    text : "",
+    languge : 0,
+    speech : [],
+    availabe : []
+}

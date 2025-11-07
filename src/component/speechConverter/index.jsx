@@ -1,17 +1,11 @@
 import playImg from "./image/play.png"
 import dropDwonImg from "./image/dropdown.png"
 import { useEffect, useReducer } from "react"
-import { ReducerSpeech } from "./reducerSpeech"
+import { InitialSpeech, ReducerSpeech } from "./reducerSpeech"
 
 const TextSpeech = () => {
  
-    const [state, dispatch] = useReducer(ReducerSpeech, {
-        voices : [],
-        text : "",
-        languge : 0,
-        speech : [],
-        availabe : []
-    })
+    const [state, dispatch] = useReducer(ReducerSpeech, InitialSpeech)
 
     useEffect(() => {
         dispatch({type : "handleSpeech"})
