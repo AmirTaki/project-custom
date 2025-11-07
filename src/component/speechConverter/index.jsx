@@ -11,6 +11,8 @@ const TextSpeech = () => {
             case "handlerAvailabe":
                 return {...state, availabe : window.speechSynthesis.getVoices()}
 
+            case "handlerSpeechVoice": 
+                return{...state, }
             case "handlerVoices" :
                 return {...state, voices : state.availabe }
            
