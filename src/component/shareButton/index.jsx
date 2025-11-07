@@ -16,7 +16,7 @@ const ShareButton = () => {
             {/* icons */}
             <div className="absolute -top-[120px] left-[50%] transform -translate-1/2 bg-white
                 h-[110%] w-[140%] text-center flex justify-evenly items-center rounded-[35px] pointer-events-none
-                shadow-[0_0_4px_rgba(0,0,0,.5)]
+                shadow-[0_0_4px_rgba(0,0,0,.5) transition-all duration-300 ease-in-out]
             "></div>
         </div>
     )
