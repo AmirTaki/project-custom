@@ -11,6 +11,10 @@ const TextSpeech = () => {
                 className="w-[600px] h-[250px] bg-[#493d84] text-[15px]! border-0 outline-none p-[20px] rounded-[10px] resize-none mb-[30px]
                 placeholder:text-[16px]! placeholder:text-[#ddd] text-white"    
             ></textarea>
+            {/* row */}
+            <div className="w-[600px] flex text-center gap-[20px]">
+                <select className="flex-1 text-white bg-[#403d84] h-[50px] px-[20px] outline-none border-0 rounded-[35px] appearance-none "></select>
+            </div>
         </div>
     )
 }
