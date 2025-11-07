@@ -1,3 +1,6 @@
+import { BrowserRouter, Link } from "react-router-dom";
+
+
 const ShareButton = () => {
     return(
         // main-box
@@ -17,7 +20,13 @@ const ShareButton = () => {
             <div className="absolute -top-[120px] left-[50%] transform -translate-1/2 bg-white
                 h-[110%] w-[140%] text-center flex justify-evenly items-center rounded-[35px] pointer-events-none
                 shadow-[0_0_4px_rgba(0,0,0,.5) transition-all duration-300 ease-in-out]
-            "></div>
+                before:absolute before:content before:h-[18px] before:w-[18px] before:bg-white before:-bottom-[9px]
+                before:transform before:rotate-45
+            ">
+                <BrowserRouter>
+                    <Link to = "./" />
+                </BrowserRouter>
+            </div>
         </div>
     )
 }
