@@ -1,6 +1,6 @@
 import { BrowserRouter, Link } from "react-router-dom";
 import { DataShare } from "./dataShaer";
-
+import './styles.css'
 
 const ShareButton = () => {
     return(
@@ -27,10 +27,10 @@ const ShareButton = () => {
                 <BrowserRouter>
                     {DataShare.map((share) => {
                         return(
-                            <Link to = "./" key = {share.id} className="text-[green] hover:text-[blue]!">
+                            <Link to = "./" key = {share.id} className="">
                                 <i 
-                                    style = {{"--color" : 'blue'}}
-                                    className={`${share.icon}  hover:text-blue-700! text-[22px] `}
+                                    // style = {{"--color" : 'blue'}}
+                                    className={`${share.icon} icons text-red-100  text-[22px]  `}
                                 ></i>
                             </Link>
                         )
