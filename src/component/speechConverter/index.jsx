@@ -15,8 +15,12 @@ const TextSpeech = () => {
 
     useEffect(() => {
         let speech  = new SpeechSynthesisUtterance();
-        let availabeVoices =  window.speechSynthesis.getVoices()
-        dispatch({type : 'handlerVoices', payload : {availabe : availabeVoices}})
+        const load = () => {
+            let availabeVoices =  window.speechSynthesis.getVoices()
+            dispatch({type : 'handlerVoices', payload : {availabe : availabeVoices}})
+        }
+
+        window.speechSynthesis.onvoiceschanged = load
         console.log(avild)
     },[])
     return(
