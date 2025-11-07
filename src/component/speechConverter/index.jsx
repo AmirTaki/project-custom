@@ -14,7 +14,7 @@ const TextSpeech = () => {
             {/* row */}
             <div className="w-[600px] flex text-center gap-[20px]">
                 <select 
-                    style={{backgroundPositionX : "calc(100%-20px)", backgroundPositionY : "20px"}}
+                    style={{backgroundPositionX : "calc(100%-20px)", backgroundPositionY : "20px",backgroundImage: "url('./image/dropdown.png')"}}
                     className="flex-1 text-white bg-[#403d84] h-[50px] px-[20px] outline-none border-0 rounded-[35px] appearance-none bg-[url('./image/dropdown.png')] bg-no-repeat  bg-[length:15px]
                 
                     "
