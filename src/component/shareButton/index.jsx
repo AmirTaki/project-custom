@@ -13,6 +13,10 @@ const ShareButton = () => {
                     before:opacity-0 before:pointer-events-none hover:tracking-[1px]
                 "
             >Share</label>
+            {/* icons */}
+            <div className="absolute -top-[120px] left-[50%] transform -translate-1/2 bg-white
+                h-[110%] w-[140%]
+            "></div>
         </div>
     )
 }
