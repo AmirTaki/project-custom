@@ -7,17 +7,23 @@ const TextSpeech = () => {
             case "handlerVoices" :
                 return {...state, voices : action.payload.availabe }
             case "handlerSpeek":
-                const {value} = action.payload
-                const speech = new SpeechSynthesisUtterance
+                
+                const speech = new SpeechSynthesisUtterance(state.text)
                 return{...state,}
+
+            case "handlerLanguge" : 
+                const {value} = action.payload
+                console.log(value)
+                return{...state, languge : ""}
             case  "handlerTextArea":
                 const {text} = action.payload
-                return {...state,text : }
+                return {...state,text :text }
         }
     }
     const [state, dispatch] = useReducer(reducer, {
         voices : [],
-        text : ""
+        text : "",
+        languge : ''
         
     })
 
@@ -54,7 +60,7 @@ const TextSpeech = () => {
                 <select 
                     style={{backgroundPositionX : "calc(100% - 20px)", backgroundPositionY : "20px",backgroundImage: `url(${dropDwonImg})`}}
                     className={`flex-1 text-white bg-[#403d84] h-[50px] px-[20px] outline-none border-0 rounded-[35px] appearance-none bg-no-repeat  bg-[length:15px]`}
-                    onChange={(e) => {dispatch ({type : 'handlerSpeek', payload : {value : e.target.value}})}}
+                    onChange={(e) => {dispatch ({type : 'handlerLanguge', payload : {value : e.target.value}})}}
                 >
                     {state.voices.map((voice, index) => {
                         return(
