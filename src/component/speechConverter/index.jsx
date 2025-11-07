@@ -18,7 +18,7 @@ const TextSpeech = () => {
         const load = () => {
             let availabeVoices =  window.speechSynthesis.getVoices()
             dispatch({type : 'handlerVoices', payload : {availabe : availabeVoices}})
-            speech.voice = state.voice[0]
+            speech.voice = state.voices[0]
             console.log(speech.voice)
         }
 
@@ -46,6 +46,11 @@ const TextSpeech = () => {
                     style={{backgroundPositionX : "calc(100% - 20px)", backgroundPositionY : "20px",backgroundImage: `url(${dropDwonImg})`}}
                     className={`flex-1 text-white bg-[#403d84] h-[50px] px-[20px] outline-none border-0 rounded-[35px] appearance-none bg-no-repeat  bg-[length:15px]`}
                 >
+                    {state.voice.map((voice, index) => {
+                        return(
+                            <option key={index} value = {voice} >{voice.name}</option>
+                        )
+                    })}
                 </select>
                 {/* button */}
                 <button className="bg-[#ff296c] text-white text-[16px] p-[10px_30px] rounded-[35px] border-0 outline-none cursor-pointer flex items-center">
