@@ -6,7 +6,7 @@ const ShareButton = () => {
             <input type="checkbox" />
             {/*  */}
             <label htmlFor="check"
-                className="reltaive bg-white h-[50px] w-[50px]"
+                className="reltaive bg-white h-[50px] w-[150px] rounded-[35px] block text-center leading-[50px]"
             >Share</label>
         </div>
     )
