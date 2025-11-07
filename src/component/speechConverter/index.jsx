@@ -4,16 +4,14 @@ import { useEffect, useReducer } from "react"
 const TextSpeech = () => {
     const reducer = (state, action) => {
         switch(action.type){
-            case "handlerSpeech" : 
-                return {...state, speech : new SpeechSynthesisUtterance(state.text) }
-         
+            
             case "handlerVoices" :
-                return {...state, voices : action.payload.availabe }
+                return {...state, voices : action.payload.availabe , }
            
             case "handlerSpeek":
-                dispatch({type : "handlerSpeech"})
-                state.speech.voice = state.voices[state.languge]
-                window.speechSynthesis.speak(state.speech)
+                const speech = new SpeechSynthesisUtterance(state.text)
+                speech.voice = state.voices[state.languge]
+                window.speechSynthesis.speak(speech)
                 return{...state,}
 
             case "handlerLanguge" : 
@@ -29,16 +27,14 @@ const TextSpeech = () => {
         voices : [],
         text : "",
         languge : 0,
-        speech : null
     })
 
     useEffect(() => {
-        dispatch({type : "handlerSpeech", })
-        // let speech  = new SpeechSynthesisUtterance();
+        let speech  = new SpeechSynthesisUtterance();
         const load = () => {
             let availabeVoices =  window.speechSynthesis.getVoices()
             dispatch({type : 'handlerVoices', payload : {availabe : availabeVoices}})
-            speech.voice = state.voices[0]     
+            speech.voice = state.voices[state.languge]     
         }
 
         window.speechSynthesis.onvoiceschanged = load
