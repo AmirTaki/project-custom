@@ -1,4 +1,5 @@
 import { BrowserRouter, Link } from "react-router-dom";
+import { DataShare } from "./dataShaer";
 
 
 const ShareButton = () => {
@@ -24,9 +25,13 @@ const ShareButton = () => {
                 before:transform before:rotate-45
             ">
                 <BrowserRouter>
-                    <Link to = "./" >
-                        <i className="bi bi-facebook text-[22px] "></i>
-                    </Link>
+                    {DataShare.map((share) => {
+                        return(
+                            <Link to = "./" >
+                                <i className="bi bi-facebook text-[22px] "></i>
+                            </Link>
+                        )
+                    })}
                 </BrowserRouter>
             </div>
         </div>
