@@ -5,8 +5,8 @@ const TextSpeech = () => {
     const reducer = (state, action) => {
         switch(action.type){
             
-            case " " :
-                return {...state, speech : new SpeechSynthesisUtterance(state.text)}
+            case "handleSpeech" :
+                return {...state, speech : new SpeechSynthesisUtterance()}
             case "handlerVoices" :
                 return {...state, voices : action.payload.availabe , }
            
@@ -33,11 +33,11 @@ const TextSpeech = () => {
     })
 
     useEffect(() => {
-        let speech  = new SpeechSynthesisUtterance();
+        let speech  = new SpeechSynthesisUtterance()
+        dispatch({type : "handleSpeech"})
         console.log(state.speech)
         const load = () => {
             let availabeVoices =  window.speechSynthesis.getVoices()
-            console.log(availabeVoices)
             dispatch({type : 'handlerVoices', payload : {availabe : availabeVoices}})
             speech.voice = state.voices[0]     
         }
