@@ -9,10 +9,10 @@ const TextSpeech = () => {
                 return {...state, speech : new SpeechSynthesisUtterance(state.text)}
             
             case "handlerAvailabe":
-                return {...state}
+                return {...state, availabe : window.speechSynthesis.getVoices()}
 
             case "handlerVoices" :
-                return {...state, voices : action.payload.availabe , }
+                return {...state, voices : state.availabe }
            
             case "handlerSpeek":
                 state.speech = new SpeechSynthesisUtterance(state.text)
@@ -43,9 +43,7 @@ const TextSpeech = () => {
      
         const load = () => {
             dispatch({type : 'handlerAvailabe'})
-            let availabeVoices =  window.speechSynthesis.getVoices()
-            console.log(availabeVoices)
-            dispatch({type : 'handlerVoices', payload : {availabe : availabeVoices}})
+            dispatch({type : 'handlerVoices'})
             state.speech.voice = state.voices[0]     
         }
 
