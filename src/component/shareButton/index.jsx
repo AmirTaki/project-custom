@@ -27,8 +27,8 @@ const ShareButton = () => {
                 <BrowserRouter>
                     {DataShare.map((share) => {
                         return(
-                            <Link to = "./" >
-                                <i className="bi bi-facebook text-[22px] "></i>
+                            <Link to = "./" key = {share.id} >
+                                <i className={`${share.icon} hover:${share.color} text-[22px] `}></i>
                             </Link>
                         )
                     })}
