@@ -9,7 +9,7 @@ const TextSpeech = () => {
 
     useEffect(() => {
         dispatch({type : "handleSpeech"})
-     
+
         const load = () => {
             dispatch({type : 'handlerAvailabe'})
             dispatch({type : 'handlerVoices'})
@@ -24,8 +24,8 @@ const TextSpeech = () => {
     },[])
   
     return(
-        // hero
-        <div className="w-full min-h-screen bg-linear-[45deg,#010758,#490d61] text-white flex justify-center items-center flex-col ">
+        // hero bg-linear-[45deg,#010758,#490d61]
+        <div className="w-full min-h-screen  text-white flex justify-center items-center flex-col ">
             <h1 className="text-[45px] font-[500] -mt-[50px] mb-[50px] ">Text To Speech
                 <span className="text-[#ff2963] ml-2">Converter</span>
             </h1>
@@ -52,7 +52,7 @@ const TextSpeech = () => {
                 {/* button */}
                 <button 
                     onClick={() => {dispatch({type : 'handlerSpeek'})}}
-                    className="bg-[#ff296c] text-white text-[16px] p-[10px_30px] rounded-[35px] border-0 outline-none cursor-pointer flex items-center">
+                    className="bg-[#ff296c] text-white text-[16px] p-[10px_30px] rounded-[35px] border-0 outline-none cursor-pointer! flex items-center">
                         <img src={playImg} alt="" className="w-[16px] mr-[10px]" />
                         Listen
                 </button>
