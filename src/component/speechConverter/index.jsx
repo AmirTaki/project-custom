@@ -8,7 +8,8 @@ const TextSpeech = () => {
             {/* textarea */}
             <textarea 
                 name="" id="" placeholder="Write anything here..."
-                className="w-[600px] h-[250px] bg-[#493d84] text-[15px] border-0 outline-none p-[20px] rounded-[10px] resize-none mb-[30px]"    
+                className="w-[600px] h-[250px] bg-[#493d84] text-[15px]! border-0 outline-none p-[20px] rounded-[10px] resize-none mb-[30px]
+                placeholder:text-[16px]! placeholder:text-[#ddd] text-white"    
             ></textarea>
         </div>
     )
