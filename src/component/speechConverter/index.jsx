@@ -19,6 +19,7 @@ const TextSpeech = () => {
 
             case "handlerLanguge" : 
                 const {value} = action.payload
+                console.log(value)
                 return{...state, languge : value}
             
             case  "handlerTextArea":
@@ -41,6 +42,7 @@ const TextSpeech = () => {
             let availabeVoices =  window.speechSynthesis.getVoices()
             dispatch({type : 'handlerVoices', payload : {availabe : availabeVoices}})
             state.speech.voice = state.voices[0]     
+            console.log(state.speech)
         }
 
         window.speechSynthesis.onvoiceschanged = load
@@ -67,11 +69,12 @@ const TextSpeech = () => {
                 <select 
                     style={{backgroundPositionX : "calc(100% - 20px)", backgroundPositionY : "20px",backgroundImage: `url(${dropDwonImg})`}}
                     className={`flex-1 text-white bg-[#403d84] h-[50px] px-[20px] outline-none border-0 rounded-[35px] appearance-none bg-no-repeat  bg-[length:15px]`}
+                    
                     onChange={(e) => {dispatch ({type : 'handlerLanguge', payload : {value : e.target.value}})}}
                 >
                     {state.voices.map((voice, index) => {
                         return(
-                            <option key={index} value = {voice} >{voice.name}</option>
+                            <option key={index} value = {voice.name} >{voice.name}</option>
                         )
                     })}
                 </select>
