@@ -14,7 +14,7 @@ const TextSpeech = () => {
             case "handlerLanguge" : 
                 const {value} = action.payload
                 console.log(value)
-                return{...state, languge : ""}
+                return{...state, languge : value}
             case  "handlerTextArea":
                 const {text} = action.payload
                 return {...state,text :text }
@@ -23,7 +23,7 @@ const TextSpeech = () => {
     const [state, dispatch] = useReducer(reducer, {
         voices : [],
         text : "",
-        languge : ''
+        languge : 0
         
     })
 
