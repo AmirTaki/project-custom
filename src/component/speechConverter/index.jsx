@@ -1,6 +1,6 @@
 import playImg from "./image/play.png"
 import dropDwonImg from "./image/dropdown.png"
-import { useReducer } from "react"
+import { useEffect, useReducer } from "react"
 const TextSpeech = () => {
     const reducer = (state, action) => {
         switch(action.type){
@@ -8,7 +8,14 @@ const TextSpeech = () => {
                 return {...state}
         }
     }
-    const [state, dispatch] = useReducer(reducer, {})
+    const [state, dispatch] = useReducer(reducer, {
+        voices : [],
+        
+    })
+
+    useEffect(() => {
+        let speech  = new SpeechSynthesisUtterance();
+    },[])
     return(
         // hero
         <div className="w-full min-h-screen bg-linear-[45deg,#010758,#490d61] text-white flex justify-center items-center flex-col ">
