@@ -42,7 +42,7 @@ const TextSpeech = () => {
             let availabeVoices =  window.speechSynthesis.getVoices()
             dispatch({type : 'handlerVoices', payload : {availabe : availabeVoices}})
             state.speech.voice = state.voices[0]     
-            console.log(state.speech)
+            console.log(state.voices)
         }
 
         window.speechSynthesis.onvoiceschanged = load
@@ -74,7 +74,7 @@ const TextSpeech = () => {
                 >
                     {state.voices.map((voice, index) => {
                         return(
-                            <option key={index} value = {voice.name} >{voice.name}</option>
+                            <option key={index} value = {index} >{voice.name}</option>
                         )
                     })}
                 </select>
