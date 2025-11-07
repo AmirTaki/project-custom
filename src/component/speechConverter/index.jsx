@@ -1,11 +1,19 @@
 import playImg from "./image/play.png"
 import dropDwonImg from "./image/dropdown.png"
+import { useReducer } from "react"
 const TextSpeech = () => {
+    const reducer = (state, action) => {
+        switch(action.type){
+            case "" :
+                return {...state}
+        }
+    }
+    const [state, dispatch] = useReducer(reducer, {})
     return(
         // hero
         <div className="w-full min-h-screen bg-linear-[45deg,#010758,#490d61] text-white flex justify-center items-center flex-col ">
-            <h1 className="text-[45px] font-[500] -mt-[50px] mb-[50px]">Text To Speech
-                <span className="text-[#ff2963]">Converter</span>
+            <h1 className="text-[45px] font-[500] -mt-[50px] mb-[50px] ">Text To Speech
+                <span className="text-[#ff2963] ml-2">Converter</span>
             </h1>
             {/* textarea */}
             <textarea 
