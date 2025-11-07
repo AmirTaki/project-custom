@@ -2,7 +2,9 @@ const TextSpeech = () => {
     return(
         // hero
         <div className="w-full min-h-screen bg-linear-[45deg,#010758,#490d61] text-white flex justify-center items-center flex-col ">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est ipsam animi nesciunt voluptatem, voluptate sapiente necessitatibus quia magnam enim deserunt, blanditiis voluptas sit porro nulla, ea quaerat minus dolor ratione.
+            <h1 className="text-[45px] font-[500] -mt-[50px] mb-[50px]">Text To Speech
+                <span>Converter</span>
+            </h1>
         </div>
     )
 }
