@@ -6,7 +6,7 @@ const TextSpeech = () => {
         switch(action.type){
             
             case "handleSpeech" :
-                return {...state, speech : new SpeechSynthesisUtterance()}
+                return {...state, speech : new SpeechSynthesisUtterance(state.text)}
        
             case "handlerVoices" :
                 return {...state, voices : action.payload.availabe , }
@@ -15,7 +15,7 @@ const TextSpeech = () => {
                 state.speech = new SpeechSynthesisUtterance(state.text)
                 state.speech.voice = state.voices[state.languge]
                 window.speechSynthesis.speak(state.speech)
-                return{...state,}
+                return{...state}
 
             case "handlerLanguge" : 
                 const {value} = action.payload
@@ -37,12 +37,10 @@ const TextSpeech = () => {
     useEffect(() => {
         dispatch({type : "handleSpeech"})
      
-
         const load = () => {
             let availabeVoices =  window.speechSynthesis.getVoices()
             dispatch({type : 'handlerVoices', payload : {availabe : availabeVoices}})
             state.speech.voice = state.voices[0]     
-            console.log(state.voices)
         }
 
         window.speechSynthesis.onvoiceschanged = load
