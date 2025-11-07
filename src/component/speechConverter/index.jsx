@@ -10,10 +10,14 @@ const TextSpeech = () => {
                 const {value} = action.payload
                 const speech = new SpeechSynthesisUtterance
                 return{...state,}
+            case  "handlerTextArea":
+                const {text} = action.payload
+                return {...state,text : }
         }
     }
     const [state, dispatch] = useReducer(reducer, {
         voices : [],
+        text : ""
         
     })
 
