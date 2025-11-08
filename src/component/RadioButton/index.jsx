@@ -1,7 +1,13 @@
-import { useState } from "react";
+import { useReducer, useState } from "react";
 
 const PureRadio = () => {
-
+    const  reducer = (state, action) => {
+        switch(action.type){
+            case "":
+                return {...state}
+        }
+    }
+    const [radio, dispatch] = useReducer(reducer, initialState)
     const [radio, setRadio] = useState(false)
     return(
         // container
@@ -18,7 +24,7 @@ const PureRadio = () => {
                         flex flex-col items-center justify-center h-full border-2 border-[#07afd9]   rounded-[8px] transition-all duration-300! ease-in-out
                         `}
                     >
-                        <ion-icon name="walk" style = {{color : `${radio ? "white" : "#07afd9"}`}} className = {` text-[3rem]`}></ion-icon>
+                        <ion-icon name="walk" style = {{color : `${radio ? "white" : "#07afd9"}`}} className = {`text-[3rem]`}></ion-icon>
                         <label htmlFor="walk" className={`${radio ? "text-white" : "text-[#07afd9] "} text-[.8rem] font-[600] uppercase tracking-[1px]`}>Walk</label>
                     </div>
                 </div>
