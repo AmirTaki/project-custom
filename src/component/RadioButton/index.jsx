@@ -6,23 +6,27 @@ const PureRadio = () => {
             {
                 id : 0,
                 icon : 'walk',
-                name : 'walk'
+                name : 'walk', 
+                flag : true,
             },
             
             {
                 id : 1,
                 icon : 'bike',
-                name : 'bike'
+                name : 'bike',
+                flag : false
             },
             {
                 id : 2,
                 icon : 'car-sport',
-                name : 'driver'
+                name : 'driver',
+                flag : false
             },
             {
                 id : 3,
                 icon : 'airplane',
-                name : 'fly'
+                name : 'fly',
+                flag: false
             },
 
         ]
