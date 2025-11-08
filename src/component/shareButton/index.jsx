@@ -1,6 +1,5 @@
 import { BrowserRouter, Link } from "react-router-dom";
 import { DataShare } from "./dataShaer";
-import './styles.css'
 import { useState } from "react";
 
 const ShareButton = () => {
@@ -19,7 +18,7 @@ const ShareButton = () => {
                     text-[22px] font-[500] uppercase text-[#0984ac] cursor-pointer shadow-[0_0_4px_rgba(0,0,0,.5)] 
                     transition-all duration-300 ease-in 
                     before:content-['Cancel'] before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-white 
-                    hover:tracking-[1px]    
+                    hover:tracking-[1px]    before:rounded-[35px]
                 `}
             >Share</label>
             {/* icons */}
@@ -32,10 +31,10 @@ const ShareButton = () => {
                 <BrowserRouter>
                     {DataShare.map((share) => 
                         (
-                            <Link to = "./" key = {share.id} className="">
+                            <Link to = "./" key = {share.id} className="hover:translate-y-[-3px]! duration-300">
                                 <i 
                                     style = {{"--color" : share.color}}
-                                    className={`${share.icon} text-[#0984e3] hover:text-[var(--color)] transfrom hover:translate-y-[-2px] cursor-pointer text-[22px]  `}
+                                    className={`${share.icon} text-[#0984e3] hover:text-[var(--color)] duration-300 transfrom  cursor-pointer text-[22px]  `}
                                 ></i>
                             </Link>
                         )
