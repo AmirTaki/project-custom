@@ -7,15 +7,8 @@ const PureRadio = () => {
         switch(action.type){
             case "handlerClick":
                 const {icon} = action.payload
-                console.log(icon)
-                const newButtons = state.buttons.map((item) => {
-                    if(item.icon === icon){
-                        return {...item, flag : true}
-                    }
-                    else {
-                         return {...item, flag : false}
-                    }
-                })
+               
+                const newButtons = state.buttons.map((item) => ({...item, flag : item.icon === icon ? true : false}))
                 return {...state, buttons : newButtons}
         }
     }
