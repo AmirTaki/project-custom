@@ -9,7 +9,7 @@ const ShareButton = () => {
         // main-box
         <div className="absolute left-[50%] top-[60%] transform -translate-x-1/2 -translate-y-1/2">
             {/* check */}
-            <input type="checkbox"  />
+            <input type="checkbox"  className="hidden"/>
             {/*  */}
             <label 
                 onClick={() => {setCheck((prevCheck) => (prevCheck = true))}}
@@ -22,10 +22,10 @@ const ShareButton = () => {
                 "
             >Share</label>
             {/* icons */}
-            <div className={`${check ? "opacity-100 pointer-events-auto -top-[84px]" : "opacity-0 pointer-events-none -top-[120px]"}
+            <div className={`${check ? "opacity-100 pointer-events-auto -top-[64px]" : "opacity-0 pointer-events-none -top-[120px]"}
                 absolute  left-[50%] transform -translate-1/2 bg-white
                 h-[110%] w-[140%] text-center flex justify-evenly items-center rounded-[35px] 
-                shadow-[0_0_4px_rgba(0,0,0,.5) transition-all duration-300 ease-in-out 
+                shadow-[0_0_4px_rgba(0,0,0,.5) transition-all duration-500 ease-in-out 
                 before:absolute before:content before:h-[18px] before:w-[18px] before:bg-white before:-bottom-[9px]
                 before:transform before:rotate-45 `}>
                 <BrowserRouter>
