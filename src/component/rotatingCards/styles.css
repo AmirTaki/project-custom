@@ -1,0 +1,8 @@
+@keyframes rotate3d {
+    form {
+        transform: perspective(1000px) rotateY(0);
+    }
+    to {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
