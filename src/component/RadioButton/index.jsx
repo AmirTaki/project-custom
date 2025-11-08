@@ -5,8 +5,17 @@ const PureRadio = () => {
 
     const  reducer = (state, action) => {
         switch(action.type){
-            case "":
-                return {...state}
+            case "handlerClick":
+                const {icon} = action.payload
+                const newButtons = state.buttons.map((item) => {
+                    if(item.icon === icon){
+                        icon.flag = true
+                    }
+                    else {
+                        icon.flag = false
+                    }
+                })
+                return {...state, buttons : newButtons}
         }
     }
     const [radio, dispatch] = useReducer(reducer, InitialState)
