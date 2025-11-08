@@ -26,7 +26,7 @@ const TextSpeech = () => {
     return(
         // hero bg-linear-[45deg,#010758,#490d61]
         <div className="w-full min-h-screen  text-white flex justify-center items-center flex-col">
-            <h1 className="text-[45px] font-[500] -mt-[50px] mb-[50px] ">Text To Speech
+            <h1 className="text-[45px] font-[500] -mt-[50px] mb-[50px] text-center ">Text To Speech
                 <span className="text-[#ff2963] ml-2">Converter</span>
             </h1>
             {/* textarea */}
@@ -36,19 +36,20 @@ const TextSpeech = () => {
                 className="w-[70%] max-w-[600px]  h-[250px] bg-[#493d84] text-[15px]! border-0 outline-none p-[20px] rounded-[10px] resize-none mb-[30px]
                 placeholder:text-[16px]! placeholder:text-[#ddd] text-white"    
             ></textarea>
-            {/* row */}
+            {/* select */}
             
-                <select 
-                    style={{backgroundPositionX : "calc(100% - 20px)", backgroundPositionY : "25px",backgroundImage: `url(${dropDwonImg})`}}
-                    className={`flex w-[70%] max-w-[600px]   text-white bg-[#403d84] h-[60px]  px-[20px] outline-none border-0 rounded-[35px] appearance-none bg-no-repeat  bg-[length:15px]`}
-                    onChange={(e) => {dispatch ({type : 'handlerLanguge', payload : {value : e.target.value}})}}
-                >
-                    {state.voices.map((voice, index) => {
-                        return(
-                            <option key={index} value = {index} >{voice.name}</option>
-                        )
-                    })}
-                </select>
+            <select 
+                style={{backgroundPositionX : "calc(100% - 20px)", backgroundPositionY : "25px",backgroundImage: `url(${dropDwonImg})`}}
+                className={`flex w-[70%] max-w-[600px]   text-white bg-[#403d84] h-[60px]  px-[20px] outline-none border-0 rounded-[35px] appearance-none bg-no-repeat  bg-[length:15px]`}
+                value={state.languge}
+                onChange={(e) => {dispatch ({type : 'handlerLanguge', payload : {value : e.target.value}})}}
+            >
+                {state.voices.map((voice, index) => {
+                    return(
+                        <option key={index} value = {index} >{voice.name}</option>
+                    )
+                })}
+            </select>
             
             {/* button */}
             <button 
