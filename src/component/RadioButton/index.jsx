@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const PureRadio = () => {
 
-    const [radio, setRadio] = useState(false)
+    const [radio, setRadio] = useState(true)
     return(
         // container
         <div className="flex justify-center items-center">
@@ -19,7 +19,7 @@ const PureRadio = () => {
                     >
                         
                         <ion-icon name="walk" className = {`${radio ? "text-white" : "text-[#07afd9] "} text-[3rem]`}></ion-icon>
-                        <label htmlFor="walk" className="text-[#07afd9] text-[.8rem] font-[600] uppercase tracking-[1px]">Walk</label>
+                        <label htmlFor="walk" className={`${radio ? "text-white" : "text-[#07afd9] "} text-[.8rem] font-[600] uppercase tracking-[1px]`}>Walk</label>
                     </div>
                 </div>
             </div>
