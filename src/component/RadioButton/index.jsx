@@ -5,20 +5,24 @@ const PureRadio = () => {
         buttons :[
             {
                 id : 0,
+                icon : 'walk',
                 name : 'walk'
             },
             
             {
                 id : 1,
+                icon : 'bike',
                 name : 'bike'
             },
             {
                 id : 2,
-                name : 'car-sport'
+                icon : 'car-sport',
+                name : 'driver'
             },
             {
                 id : 3,
-                name : 'airplane'
+                icon : 'airplane',
+                name : 'fly'
             },
 
         ]
