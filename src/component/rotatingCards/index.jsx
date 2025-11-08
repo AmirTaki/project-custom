@@ -2,12 +2,15 @@ import './styles.css'
 const RotatingCard = () => {
     return(
         // container
-        <div className="bg-blue-600 w-[200px] h-[350px] mt-[10%] relative transform-3d perspective-[1000px] rotate3D">
+        <div className=" w-[200px] h-[350px] mt-[10%] relative transform-3d perspective-[1000px] rotate3D">
             <div 
                 style = {{"--i" : 0 , transform : "rotateY(calc(var(--i) * 45deg)) translateZ(400px);" }}
-                className="absolute left-0 top-0 transform-3d duration-1000"
+                className="absolute left-0 top-0 transform-3d duration-1000 "
             >
-
+                <span
+                    className='bg-[red] w-[200px] h-[350px] text-[10rem] text-white grid place-items-center font-[600]
+                    text-shadow-[10px_10px_20px_blue] rounded-[24px]'
+                >1</span>
             </div>
         </div>
     )
