@@ -12,14 +12,14 @@ const ShareButton = () => {
             <input type="checkbox"  className="hidden"/>
             {/*  */}
             <label 
-                onClick={() => {setCheck((prevCheck) => (prevCheck = true))}}
+                onClick={() => {setCheck((prevCheck) => (!prevCheck))}}
                 htmlFor="check"
-                className={`
+                className={` ${check ? "before:opacity-100 before:pointer-events-auto" : "before:opacity-0 before:pointer-events-none"}
                     reltaive bg-white h-[50px] w-[150px] rounded-[35px] block text-center leading-[50px]
                     text-[22px] font-[500] uppercase text-[#0984ac] cursor-pointer shadow-[0_0_4px_rgba(0,0,0,.5)] 
                     transition-all duration-300 ease-in 
                     before:content-['Cancel'] before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-white 
-                    before:opacity-0 before:pointer-events-none hover:tracking-[1px]    
+                    hover:tracking-[1px]    
                 `}
             >Share</label>
             {/* icons */}
