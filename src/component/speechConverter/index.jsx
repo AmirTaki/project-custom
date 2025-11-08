@@ -25,7 +25,7 @@ const TextSpeech = () => {
   
     return(
         // hero bg-linear-[45deg,#010758,#490d61]
-        <div className="w-full min-h-screen  text-white flex justify-center items-center flex-col ">
+        <div className="w-full min-h-screen  text-white flex justify-center items-center flex-col  bg-red-600">
             <h1 className="text-[45px] font-[500] -mt-[50px] mb-[50px] ">Text To Speech
                 <span className="text-[#ff2963] ml-2">Converter</span>
             </h1>
@@ -33,7 +33,7 @@ const TextSpeech = () => {
             <textarea 
                 onChange={(e) => {dispatch({type : 'handlerTextArea', payload : {text : e.target.value}})}}
                 name="" id="" placeholder="Write anything here..."
-                className="w-[600px] h-[250px] bg-[#493d84] text-[15px]! border-0 outline-none p-[20px] rounded-[10px] resize-none mb-[30px]
+                className="w-[70%] max-w-[600px]  h-[250px] bg-[#493d84] text-[15px]! border-0 outline-none p-[20px] rounded-[10px] resize-none mb-[30px]
                 placeholder:text-[16px]! placeholder:text-[#ddd] text-white"    
             ></textarea>
             {/* row */}
