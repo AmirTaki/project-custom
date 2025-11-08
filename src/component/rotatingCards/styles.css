@@ -1,3 +1,6 @@
+.rotate3D {
+    animation: rotate3d 20s linear infinite;
+}
 @keyframes rotate3d {
     form {
         transform: perspective(1000px) rotateY(0);

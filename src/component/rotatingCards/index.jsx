@@ -1,3 +1,4 @@
+import './styles.css'
 const RotatingCard = () => {
     return(
         // container
