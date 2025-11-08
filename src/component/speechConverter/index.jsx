@@ -25,7 +25,7 @@ const TextSpeech = () => {
   
     return(
         // hero bg-linear-[45deg,#010758,#490d61]
-        <div className="w-full min-h-screen  text-white flex justify-center items-center flex-col  bg-red-600">
+        <div className="w-full min-h-screen  text-white flex justify-center items-center flex-col ">
             <h1 className="text-[45px] font-[500] -mt-[50px] mb-[50px] ">Text To Speech
                 <span className="text-[#ff2963] ml-2">Converter</span>
             </h1>
@@ -37,7 +37,7 @@ const TextSpeech = () => {
                 placeholder:text-[16px]! placeholder:text-[#ddd] text-white"    
             ></textarea>
             {/* row */}
-            <div className="w-[600px] flex text-center gap-[20px]">
+            <div className="w-[70%] max-w-[600px] flex text-center gap-[20px]">
                 <select 
                     style={{backgroundPositionX : "calc(100% - 20px)", backgroundPositionY : "20px",backgroundImage: `url(${dropDwonImg})`}}
                     className={`flex-1 text-white bg-[#403d84] h-[50px] px-[20px] outline-none border-0 rounded-[35px] appearance-none bg-no-repeat  bg-[length:15px]`}
