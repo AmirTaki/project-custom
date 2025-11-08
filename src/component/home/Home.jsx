@@ -37,12 +37,12 @@ import LoadingBorder from "../loadingBorder/index.jsx"
 import PasswordGenerator from "../passwordGenerator/index.jsx"
 import TextSpeech from "../speechConverter/index.jsx"
 import ShareButton from "../shareButton/index.jsx"
-
+import RotatingCard from "../rotatingCards/index.jsx"
 // create context
 export const navigationContext = createContext ()
 
 const Home =  ()  => {
-
+    
     // doctMenu
     const DoctsMenuRef = useRef(null)
     const dragLocationRef = useRef({x : 0, y : 0})
@@ -52,20 +52,20 @@ const Home =  ()  => {
     const NavigationRef =  useRef(null)
     const dragPostionRef = useRef({x : 120, y : 120})
     const isDraggingNavigation = useRef(false)
-
+    
     // veiw projects 
     const  [view, setView] =   useState(false)   
     return(
         <div 
-            className={`bg-[#10131c]   min-h-[100vh] ${view ? "" : "flex! flex-col justify-center! items-center! "}`} 
+        className={`bg-[#10131c]   min-h-[100vh] ${view ? "" : "flex! flex-col justify-center! items-center! "}`} 
         >
             <div 
                 onMouseUp={() => {handlerMouseUp(isDraggingDocts, isDraggingNavigation)}}
                 onMouseLeave={() => {handlerMouseLeave(isDraggingDocts, isDraggingNavigation)}}  
                 onMouseMove={(e) => {handlerMouseMove(e, isDraggingDocts, dragLocationRef, DoctsMenuRef, isDraggingNavigation, dragPostionRef, NavigationRef)}} 
-            
+                
                 className={` ${view ? "flex" : 'hidden'} bg-[#10131c] min-h-[100vh]  flex-col justify-center items-center gap-52 `}
-            >        
+                >        
                 <navigationContext.Provider value = {{DoctsMenuRef, dragLocationRef, isDraggingDocts, NavigationRef, dragPostionRef, isDraggingNavigation}}>
                     {/* component navigation */}
                     <ComponentNavigation />
@@ -182,7 +182,8 @@ const Home =  ()  => {
             </div>
 
 
-            {/*  */}
+            {/* ROTATING CARD */}
+            <RotatingCard />
             <div className="h-100 w-100 text-white"></div>
 
  
