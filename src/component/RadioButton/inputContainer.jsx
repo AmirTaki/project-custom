@@ -2,7 +2,7 @@ const InputContainer = ({item, dispatch}) => {
     return(
         //  input-container
         <div
-            onClick={() => {dispatch({type : 'handlerClick', payload : {icon : icon}})}}
+            onClick={() => {dispatch({type : 'handlerClick', payload : {icon : item.icon}})}}
             className="relative h-[7rem] w-[7rem] m-[.5rem] hover:shadow-[0_0_12px_#07afd9]! rounded-[8px] duration-300 cursor-pointer">
             {/* radio-title */}
             <div 

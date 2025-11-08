@@ -7,12 +7,13 @@ const PureRadio = () => {
         switch(action.type){
             case "handlerClick":
                 const {icon} = action.payload
+                console.log(icon)
                 const newButtons = state.buttons.map((item) => {
                     if(item.icon === icon){
-                        icon.flag = true
+                        return {...item, flag : true}
                     }
                     else {
-                        icon.flag = false
+                         return {...item, flag : false}
                     }
                 })
                 return {...state, buttons : newButtons}
@@ -27,7 +28,7 @@ const PureRadio = () => {
             <div className="flex flex-wrap justify-center">
                 {radio.buttons.map((item) => {
                     return(
-                        <InputContainer key = {item.key} item = {item} dispatch = {dispatch}/>
+                        <InputContainer key = {item.id} item = {item} dispatch = {dispatch}/>
  
                     )
                 })}
