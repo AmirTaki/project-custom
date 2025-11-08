@@ -25,7 +25,7 @@ const TextSpeech = () => {
   
     return(
         // hero bg-linear-[45deg,#010758,#490d61]
-        <div className="w-full min-h-screen  text-white flex justify-center items-center flex-col ">
+        <div className="w-full min-h-screen  text-white flex justify-center items-center flex-col bg-green-500">
             <h1 className="text-[45px] font-[500] -mt-[50px] mb-[50px] ">Text To Speech
                 <span className="text-[#ff2963] ml-2">Converter</span>
             </h1>
@@ -37,10 +37,10 @@ const TextSpeech = () => {
                 placeholder:text-[16px]! placeholder:text-[#ddd] text-white"    
             ></textarea>
             {/* row */}
-            <div className="w-[70%] max-w-[600px] flex text-center gap-[20px]">
+            
                 <select 
-                    style={{backgroundPositionX : "calc(100% - 20px)", backgroundPositionY : "20px",backgroundImage: `url(${dropDwonImg})`}}
-                    className={`flex-1 text-white bg-[#403d84] h-[50px] px-[20px] outline-none border-0 rounded-[35px] appearance-none bg-no-repeat  bg-[length:15px]`}
+                    style={{backgroundPositionX : "calc(100% - 20px)", backgroundPositionY : "25px",backgroundImage: `url(${dropDwonImg})`}}
+                    className={`flex w-[70%] max-w-[600px]   text-white bg-[#403d84] h-[60px]  px-[20px] outline-none border-0 rounded-[35px] appearance-none bg-no-repeat  bg-[length:15px]`}
                     onChange={(e) => {dispatch ({type : 'handlerLanguge', payload : {value : e.target.value}})}}
                 >
                     {state.voices.map((voice, index) => {
@@ -49,14 +49,14 @@ const TextSpeech = () => {
                         )
                     })}
                 </select>
-                {/* button */}
-                <button 
-                    onClick={() => {dispatch({type : 'handlerSpeek'})}}
-                    className="bg-[#ff296c] text-white text-[16px] p-[10px_30px] rounded-[35px] border-0 outline-none cursor-pointer! flex items-center">
-                        <img src={playImg} alt="" className="w-[16px] mr-[10px]" />
-                        Listen
-                </button>
-            </div>
+            
+            {/* button */}
+            <button 
+                onClick={() => {dispatch({type : 'handlerSpeek'})}}
+                className="bg-[#ff296c] text-white text-[16px] p-[10px_30px] mt-7 rounded-[35px] border-0 outline-none cursor-pointer! flex items-center">
+                    <img src={playImg} alt="" className="w-[16px] mr-[10px]" />
+                    Listen
+            </button>
         </div>
     )
 }

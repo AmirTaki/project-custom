@@ -147,7 +147,7 @@ const Home =  ()  => {
                 <ImageEditor />
 
                 {/* background drawing & change effect background */}
-                <BackgroundChangeEffect />
+                {/* <BackgroundChangeEffect /> */}
 
                 {/* image hover overlay effects */}
                 <ImageHoverOverlayEffects />
