@@ -25,7 +25,7 @@ const TextSpeech = () => {
   
     return(
         // hero bg-linear-[45deg,#010758,#490d61]
-        <div className="w-full min-h-screen  text-white flex justify-center items-center flex-col bg-green-500">
+        <div className="w-full min-h-screen  text-white flex justify-center items-center flex-col">
             <h1 className="text-[45px] font-[500] -mt-[50px] mb-[50px] ">Text To Speech
                 <span className="text-[#ff2963] ml-2">Converter</span>
             </h1>

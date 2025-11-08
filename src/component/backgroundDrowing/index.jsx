@@ -61,7 +61,7 @@ const BackgroundChangeEffect = () => {
     }, [isDragging, handlerMouseMove, handlerTouchMove, handlerEndDrag])
     return(
         // container
-        <div className="w-[900px] max-md:w-[90%]! h-[580px] max-md:h-[400px]! mx-10">
+        <div className="w-[900px] max-lg:w-[90%]! h-[580px] max-lg:h-[400px]! mx-10">
             {/* img box */} 
             <div 
                 onMouseDown={handlerMouseDown}
