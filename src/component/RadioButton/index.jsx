@@ -1,6 +1,28 @@
-import { useReducer, useState } from "react";
+import { useReducer, } from "react";
 
 const PureRadio = () => {
+    const initialState = {
+        buttons :[
+            {
+                id : 0,
+                name : 'walk'
+            },
+            
+            {
+                id : 1,
+                name : 'bike'
+            },
+            {
+                id : 2,
+                name : 'car-sport'
+            },
+            {
+                id : 3,
+                name : 'airplane'
+            },
+
+        ]
+    }
     const  reducer = (state, action) => {
         switch(action.type){
             case "":
@@ -8,7 +30,7 @@ const PureRadio = () => {
         }
     }
     const [radio, dispatch] = useReducer(reducer, initialState)
-    const [radio, setRadio] = useState(false)
+    // const [radio, setRadio] = useState(false)
     return(
         // container
         <div className="flex justify-center items-center">
