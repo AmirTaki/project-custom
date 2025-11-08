@@ -27,4 +27,13 @@ export const InitialState = {
         },
 
     ]
+}
+export const  ReducerRadio = (state, action) => {
+    switch(action.type){
+        case "handlerClick":
+            const {icon} = action.payload
+            
+            const newButtons = state.buttons.map((item) => ({...item, flag : item.icon === icon ? true : false}))
+            return {...state, buttons : newButtons}
     }
+}

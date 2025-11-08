@@ -1,19 +1,10 @@
 import { useReducer, } from "react";
-import { InitialState } from "./initialState";
+import { InitialState, ReducerRadio } from "./initialState";
 import InputContainer from "./inputContainer";
+
 const PureRadio = () => {
 
-    const  reducer = (state, action) => {
-        switch(action.type){
-            case "handlerClick":
-                const {icon} = action.payload
-               
-                const newButtons = state.buttons.map((item) => ({...item, flag : item.icon === icon ? true : false}))
-                return {...state, buttons : newButtons}
-        }
-    }
-    const [radio, dispatch] = useReducer(reducer, InitialState)
-
+    const [radio, dispatch] = useReducer(ReducerRadio, InitialState)
     return(
         // container
         <div className="flex justify-center items-center">
