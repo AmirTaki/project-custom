@@ -10,13 +10,17 @@ const PureRadio = () => {
         }
     }
     const [radio, dispatch] = useReducer(reducer, InitialState)
-    // const [radio, setRadio] = useState(false)
+
     return(
         // container
         <div className="flex justify-center items-center">
             {/* radio-title-group */}
             <div className="flex flex-wrap justify-center">
-                
+                {radio.buttons.map((button) => {
+                    return(
+                        
+                    )
+                })}
                 {/* input-container */}
                 <div
                     onClick={() => {setRadio(!radio)}} 
