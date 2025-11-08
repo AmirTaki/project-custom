@@ -9,7 +9,7 @@ const RotatingCard = () => {
             >
                 <span
                     className='bg-[red] w-[200px] h-[350px] text-[10rem] text-white grid place-items-center font-[600]
-                    text-shadow-[10px_10px_20px_blue] rounded-[24px]'
+                    text-shadow-[10px_10px_20px_blue] rounded-[24px] shadow-[0_15px_25px_rgba(0,0,0,.5)]'
                 >1</span>
             </div>
         </div>
