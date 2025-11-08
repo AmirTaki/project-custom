@@ -9,7 +9,7 @@ export const InitialState = {
         
         {
             id : 1,
-            icon : 'bike',
+            icon : 'bicycle',
             name : 'bike',
             flag : false
         },
