@@ -1,49 +1,22 @@
 import { useReducer, } from "react";
+import { InitialState } from "./initialState";
 
 const PureRadio = () => {
-    const initialState = {
-        buttons :[
-            {
-                id : 0,
-                icon : 'walk',
-                name : 'walk', 
-                flag : true,
-            },
-            
-            {
-                id : 1,
-                icon : 'bike',
-                name : 'bike',
-                flag : false
-            },
-            {
-                id : 2,
-                icon : 'car-sport',
-                name : 'driver',
-                flag : false
-            },
-            {
-                id : 3,
-                icon : 'airplane',
-                name : 'fly',
-                flag: false
-            },
 
-        ]
-    }
     const  reducer = (state, action) => {
         switch(action.type){
             case "":
                 return {...state}
         }
     }
-    const [radio, dispatch] = useReducer(reducer, initialState)
+    const [radio, dispatch] = useReducer(reducer, InitialState)
     // const [radio, setRadio] = useState(false)
     return(
         // container
         <div className="flex justify-center items-center">
             {/* radio-title-group */}
             <div className="flex flex-wrap justify-center">
+                
                 {/* input-container */}
                 <div
                     onClick={() => {setRadio(!radio)}} 
