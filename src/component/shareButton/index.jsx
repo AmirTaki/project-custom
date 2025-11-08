@@ -22,10 +22,10 @@ const ShareButton = () => {
                 "
             >Share</label>
             {/* icons */}
-            <div className={`
-                absolute -top-[120px] left-[50%] transform -translate-1/2 bg-white
+            <div className={`${check ? "opacity-100 pointer-events-auto -top-[84px]" : "opacity-0 pointer-events-none -top-[120px]"}
+                absolute  left-[50%] transform -translate-1/2 bg-white
                 h-[110%] w-[140%] text-center flex justify-evenly items-center rounded-[35px] 
-                shadow-[0_0_4px_rgba(0,0,0,.5) transition-all duration-300 ease-in-out opacity-0
+                shadow-[0_0_4px_rgba(0,0,0,.5) transition-all duration-300 ease-in-out 
                 before:absolute before:content before:h-[18px] before:w-[18px] before:bg-white before:-bottom-[9px]
                 before:transform before:rotate-45 `}>
                 <BrowserRouter>
