@@ -15,3 +15,9 @@
 .rotateSpan {
     transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);;
 }
+
+@media screen and (max-width:1024px) {
+  .rotateSpan {
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(300px);;
+}  
+}
