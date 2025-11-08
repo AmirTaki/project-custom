@@ -18,7 +18,7 @@ const PureRadio = () => {
             <div className="flex flex-wrap justify-center">
                 {radio.buttons.map((item) => {
                     return(
-                        <InputContainer key = {item.key} item = {item} />
+                        <InputContainer key = {item.key} item = {item} dispatch = {dispatch}/>
  
                     )
                 })}
