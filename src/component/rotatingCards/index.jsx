@@ -2,7 +2,7 @@ import './styles.css'
 const RotatingCard = () => {
     const list = [1, 2, 3, 4, 5, 6, 7, 8]
     return(
-        <div className="grid place-items-center h-[50vh] pt-40  ">
+        <div className="grid place-items-center h-[50vh]   ">
 
         {/* // container */}
         <div className="  w-[200px] h-[350px]   relative transform-3d  rotate3D">
