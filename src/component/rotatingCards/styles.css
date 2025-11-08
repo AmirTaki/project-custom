@@ -11,3 +11,7 @@
         transform: perspective(1000px) rotateY(360deg);
     }
 }
+
+.rotateSpan {
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);;
+}

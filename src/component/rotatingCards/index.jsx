@@ -9,8 +9,8 @@ const RotatingCard = () => {
             {list.map((item) => (
                 <div
                     key = {item} 
-                    // style = {{"--i" : item , transform : "rotateY(calc(var(--i) * 45deg)) translateZ(400px)" }}
-                    className="absolute left-0 top-0 transform-3d duration-1000 "
+                    style = {{"--i" : item  }}
+                    className="absolute left-0 top-0 transform-3d duration-1000  rotateSpan"
                 >
                     <span
                         className='bg-[silver] w-[200px] h-[350px] text-[10rem] text-white grid place-items-center font-[600]
