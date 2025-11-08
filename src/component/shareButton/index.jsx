@@ -9,7 +9,7 @@ const ShareButton = () => {
         // main-box
         <div className="absolute left-[50%] top-[60%] transform -translate-x-1/2 -translate-y-1/2">
             {/* check */}
-            <input type="checkbox" />
+            <input type="checkbox"  />
             {/*  */}
             <label 
                 onClick={() => {setCheck((prevCheck) => (prevCheck = true))}}
@@ -22,12 +22,12 @@ const ShareButton = () => {
                 "
             >Share</label>
             {/* icons */}
-            <div className="absolute -top-[120px] left-[50%] transform -translate-1/2 bg-white
+            <div className={`
+                absolute -top-[120px] left-[50%] transform -translate-1/2 bg-white
                 h-[110%] w-[140%] text-center flex justify-evenly items-center rounded-[35px] 
-                shadow-[0_0_4px_rgba(0,0,0,.5) transition-all duration-300 ease-in-out 
+                shadow-[0_0_4px_rgba(0,0,0,.5) transition-all duration-300 ease-in-out opacity-0
                 before:absolute before:content before:h-[18px] before:w-[18px] before:bg-white before:-bottom-[9px]
-                before:transform before:rotate-45
-            ">
+                before:transform before:rotate-45 `}>
                 <BrowserRouter>
                     {DataShare.map((share) => 
                         (
