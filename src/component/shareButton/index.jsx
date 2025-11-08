@@ -6,10 +6,8 @@ const ShareButton = () => {
     const [check, setCheck] = useState(false)
     return(
         // main-box
-        <div className="absolute left-[50%] top-[60%] transform -translate-x-1/2 -translate-y-1/2">
-            {/* check */}
-            <input type="checkbox"  className="hidden"/>
-            {/*  */}
+        <div className="relative">
+            {/* label */}
             <label 
                 onClick={() => {setCheck((prevCheck) => (!prevCheck))}}
                 htmlFor="check"
@@ -18,9 +16,11 @@ const ShareButton = () => {
                     text-[22px] font-[500] uppercase text-[#0984ac] cursor-pointer shadow-[0_0_4px_rgba(0,0,0,.5)] 
                     transition-all duration-300 ease-in 
                     before:content-['Cancel'] before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-white 
-                    hover:tracking-[1px]    before:rounded-[35px]
+                    hover:tracking-[1px]  before:rounded-[35px]
                 `}
-            >Share</label>
+            >
+                Share
+            </label>
             {/* icons */}
             <div className={`${check ? "opacity-100 pointer-events-auto -top-[64px]" : "opacity-0 pointer-events-none -top-[120px]"}
                 absolute  left-[50%] transform -translate-1/2 bg-white
