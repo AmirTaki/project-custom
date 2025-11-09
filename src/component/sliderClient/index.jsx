@@ -22,7 +22,10 @@ const SliderClientSwiper = () => {
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia eius dolore officiis consequuntur voluptatum neque provident? Iure ducimus saepe eos, dolor magni reprehenderit in accusantium illo nobis laboriosam quae consequuntur.
                                 </p>
                                 {/* details */}
-                                <div className="flex items-center mt-[20px]"></div>
+                                <div className="flex items-center mt-[20px]">
+                                    {/* imgBx */}
+                                    <div className="relative w-[60px] h-[60px] rounded-[50%] overflow-hidden mr-[10px]"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
