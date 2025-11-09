@@ -1,5 +1,11 @@
-import img1 from "./image/img1.jpg"
+import { useReducer } from "react";
+import { DataImage } from "./dataImage";
+
 const ImgSliderTime = () => {
+    const reducer = (state, action) => {
+
+    }
+    const [state, dispatch] = useReducer (reducer, DataImage) ;
     return(
         // slider
         <div className="w-[1300px] max-w-[100vw] h-[700px] m-auto relative overflow-hidden max-md:h-[400px]!">
