@@ -24,7 +24,12 @@ const SliderClientSwiper = () => {
                                 {/* details */}
                                 <div className="flex items-center mt-[20px]">
                                     {/* imgBx */}
-                                    <div className="relative w-[60px] h-[60px] rounded-[50%] overflow-hidden mr-[10px]"></div>
+                                    <div className="relative w-[60px] h-[60px] rounded-full overflow-hidden mr-[10px]">
+                                        <img 
+                                            className="absolute top-0 left-0 w-full h-full object-center"
+                                            src="https://plus.unsplash.com/premium_photo-1726873337697-b60c68e6f515?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGVyc29uJTIwbXVzaWN8ZW58MHx8MHx8fDA%3D" alt="" 
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>
