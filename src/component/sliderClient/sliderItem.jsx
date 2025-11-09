@@ -19,7 +19,7 @@ const SwiperComponent = () => {
                 rotate: 0,
                 stretch: 0,
                 depth: 100,
-                modifier: 2,
+                modifier: 10,
                 slideShadows: true,
             }}
             modules={[EffectCoverflow, Pagination]}

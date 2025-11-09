@@ -40,7 +40,6 @@ import ShareButton from "../shareButton/index.jsx"
 import RotatingCard from "../rotatingCards/index.jsx"
 import PureRadio from "../RadioButton/index.jsx"
 import SliderClientSwiper from "../sliderClient/index.jsx"
-import CoverflowSwiper from "../sliderClient/td.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -58,7 +57,7 @@ const Home =  ()  => {
     const isDraggingNavigation = useRef(false)
     
     // veiw projects 
-    const  [view, setView] =   useState(false)   
+    const  [view, setView] =   useState(true)   
     return(
         <div 
         className={`bg-[#10131c]   min-h-[100vh] ${view ? "" : "flex! flex-col justify-center! items-center! "}`} 
@@ -186,6 +185,9 @@ const Home =  ()  => {
                 {/* Pure Radio Button */}
                 <PureRadio />
 
+                {/* slider client swiper  */}
+                <SliderClientSwiper />
+
                 {/* footer animated */}
                 <FooterAnimated />
 
@@ -193,9 +195,7 @@ const Home =  ()  => {
 
 
             <div className="h-100 w-100 text-white"></div>
-            {/* slider client swiper  */}
-            <SliderClientSwiper />
-            {/* <CoverflowSwiper /> */}
+          
         </div>   
     )
 }
