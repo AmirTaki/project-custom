@@ -1,7 +1,10 @@
+import { SwiperSlide } from "swiper/react";
+
+
 const SliderItem = ({item}) => {
     return(
         // {/* swiper-slide -> h */}
-        <div className="w-[320px]  bg-[#d1ebff] shadow-[0_15px_50px_rgba(0,0,0,.2)] backdrop-blur-[4px] rounded-[10px] bg-center bg-cover">
+        <SwiperSlide className="w-[320px]  bg-[#d1ebff] shadow-[0_15px_50px_rgba(0,0,0,.2)] backdrop-blur-[4px] rounded-[10px] bg-center bg-cover">
             {/* testimonialBox */}
             <div className="relative w-full p-[40px] pt-[90px] text-[#999]">
                 {/* img -> quote */}
@@ -29,7 +32,7 @@ const SliderItem = ({item}) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </SwiperSlide>
     )
 }
 export default SliderItem;
