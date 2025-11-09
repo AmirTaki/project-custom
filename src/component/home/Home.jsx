@@ -40,7 +40,7 @@ import ShareButton from "../shareButton/index.jsx"
 import RotatingCard from "../rotatingCards/index.jsx"
 import PureRadio from "../RadioButton/index.jsx"
 import SliderClientSwiper from "../sliderClient/index.jsx"
-import imgSliderTime from "../imageSliderTime/index.jsx"
+import ImgSliderTime from "../imageSliderTime/index.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -196,7 +196,7 @@ const Home =  ()  => {
 
 
             <div className="h-100 w-100 text-white"></div>
-            <imgSliderTime />
+            <ImgSliderTime />
         </div>   
     )
 }

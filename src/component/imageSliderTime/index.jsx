@@ -1,4 +1,5 @@
-const imgSliderTime = () => {
+import img1 from "./image/img1.jpg"
+const ImgSliderTime = () => {
     return(
         // slider
         <div className="w-[1300px] max-w-[100vw] h-[700px] m-auto relative overflow-hidden max-md:h-[400px]!">
@@ -8,10 +9,10 @@ const imgSliderTime = () => {
                 <div className="">
                     <img 
                         className="w-[1300px] max-w-[100vw] h-full object-cover"
-                        src="" alt="" />
+                        src={img1} alt="" />
                 </div>
             </div>
         </div>
     )
 }
-export default imgSliderTime;
+export default ImgSliderTime;
