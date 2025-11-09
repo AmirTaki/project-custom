@@ -7,7 +7,7 @@ const SliderClientSwiper = () => {
                 {/* swiper-wrapper */}
                 <div className="">
                     {/* swiper-slide */}
-                    <div className="w-[320px] h-[300px] bg-[#d1ebff] shadow-[0_15px_50px_rgba(0,0,0,.2)] backdrop-blur-[4px] rounded-[10px]"></div>
+                    <div className="w-[320px] h-[300px] bg-[#d1ebff] shadow-[0_15px_50px_rgba(0,0,0,.2)] backdrop-blur-[4px] rounded-[10px] bg-center bg-cover"></div>
                 </div>
             </div>
         </section>
