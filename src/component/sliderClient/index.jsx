@@ -1,7 +1,7 @@
-const SwiperSlder = () => {
+const SliderClientSwiper = () => {
     return(
         <div className=""></div>
     )
 }
 
-export default SwiperSlder;
+export default SliderClientSwiper;
