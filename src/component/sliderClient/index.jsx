@@ -1,6 +1,9 @@
 const SliderClientSwiper = () => {
     return(
-        <div className=""></div>
+        // section
+        <section
+            className="relative w-full min-h-screen flex justify-center items-center "
+        ></section>
     )
 }
 
