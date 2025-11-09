@@ -3,11 +3,11 @@ const SliderClientSwiper = () => {
         // section
         <section className="relative w-full min-h-screen flex justify-center items-center bg-[#2197f3] overflow-hidden ">
             {/* swiper-container   -> h */}
-            <div className="w-[400px] h-[500px] pt-[50px] pb-[50px]">
+            <div className="w-[400px]  pt-[50px] pb-[50px]">
                 {/* swiper-wrapper */}
                 <div className="">
                     {/* swiper-slide -> h */}
-                    <div className="w-[320px] h-[300px] bg-[#d1ebff] shadow-[0_15px_50px_rgba(0,0,0,.2)] backdrop-blur-[4px] rounded-[10px] bg-center bg-cover">
+                    <div className="w-[320px]  bg-[#d1ebff] shadow-[0_15px_50px_rgba(0,0,0,.2)] backdrop-blur-[4px] rounded-[10px] bg-center bg-cover">
                         {/* testimonialBox */}
                         <div className="relative w-full p-[40px] pt-[90px] text-[#999]">
                             {/* img -> quote */}
