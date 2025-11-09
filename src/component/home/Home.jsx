@@ -40,6 +40,7 @@ import ShareButton from "../shareButton/index.jsx"
 import RotatingCard from "../rotatingCards/index.jsx"
 import PureRadio from "../RadioButton/index.jsx"
 import SliderClientSwiper from "../sliderClient/index.jsx"
+import CoverflowSwiper from "../sliderClient/td.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -194,6 +195,7 @@ const Home =  ()  => {
             <div className="h-100 w-100 text-white"></div>
             {/* slider client swiper  */}
             <SliderClientSwiper />
+            {/* <CoverflowSwiper /> */}
         </div>   
     )
 }

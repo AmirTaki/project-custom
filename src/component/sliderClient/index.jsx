@@ -1,10 +1,9 @@
 import { Swiper } from 'swiper/react';
-import 'swiper/css';
 import { DataSlider } from "./dataSlider";
 import { EffectCoverflow, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
+// import 'swiper/css';
+// import 'swiper/css/effect-coverflow';
+// import 'swiper/css/pagination';
 import SliderItem from "./sliderItem";
 
 const SliderClientSwiper = () => {
