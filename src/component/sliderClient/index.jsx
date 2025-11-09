@@ -8,29 +8,33 @@ import SliderItem from "./sliderItem";
 
 const SliderClientSwiper = () => {
     return(
-        <Swiper
-            effect = 'coverflow'
-            grabCursor = {true}
-            centeredSlides = {true}
-            slidesPerView="auto"
-            loop = {true}
-            pagination = {{el : '.swiper-pagination', clickable: true}}
-            coverflowEffect={{
-                rotate : 0,
-                stretch: 0,
-                depth: 100,
-                modifier: 2,
-                slideShadows: true,
-            }}
-            modules={[EffectCoverflow, Pagination]}
-            className="swiper-container "
-        >
+      
             <section className="relative w-full min-h-screen flex justify-center items-center bg-[#2197f3] overflow-hidden ">
                 {/* swiper-container   -> h */}
                 <div className="w-[400px]  pt-[50px] pb-[50px]">
+                    <Swiper
+                        effect = 'coverflow'
+                        grabCursor = {true}
+                        centeredSlides = {true}
+                        slidesPerView="auto"
+                        loop = {true}
+                        pagination = {{el : '.swiper-pagination', clickable: true}}
+                        coverflowEffect={{
+                            rotate : 0,
+                            stretch: 0,
+                            depth: 100,
+                            modifier: 2,
+                            slideShadows: true,
+                        }}
+                        modules={[EffectCoverflow, Pagination]}
+                        className="swiper-container "
+                    >
+
+                        
+                    </Swiper>
                 </div>
             </section>
-        </Swiper>
+ 
     )
 }
 
