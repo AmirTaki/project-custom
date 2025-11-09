@@ -24,6 +24,30 @@ export const DataSlider = {
             title : 'Someone Famous',
             job : 'Creative Designer'
         },
+        {
+            id: 3,
+            img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHj-4qt5ZMM1om-SSRsIe50XzOyznYOz0ZTQ&s",
+            content : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi similique optio ipsam reprehenderit, voluptatem iusto fuga vitae eligendi. Reprehenderit impedit sapiente eos laborum voluptatum soluta magni dicta alias. Saepe, illo.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia eius dolore officiis consequuntur voluptatum neque provident? Iure ducimus saepe eos, dolor magni reprehenderit in accusantium illo nobis laboriosam quae consequuntur.',
+            imgDetails : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHj-4qt5ZMM1om-SSRsIe50XzOyznYOz0ZTQ&s",
+            title : 'Someone Famous',
+            job : 'Creative Designer'
+        },
+        {
+            id: 4,
+            img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHj-4qt5ZMM1om-SSRsIe50XzOyznYOz0ZTQ&s",
+            content : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi similique optio ipsam reprehenderit, voluptatem iusto fuga vitae eligendi. Reprehenderit impedit sapiente eos laborum voluptatum soluta magni dicta alias. Saepe, illo.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia eius dolore officiis consequuntur voluptatum neque provident? Iure ducimus saepe eos, dolor magni reprehenderit in accusantium illo nobis laboriosam quae consequuntur.',
+            imgDetails : "https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
+            title : 'Someone Famous',
+            job : 'Creative Designer'
+        },
+        {
+            id: 5,
+            img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHj-4qt5ZMM1om-SSRsIe50XzOyznYOz0ZTQ&s",
+            content : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi similique optio ipsam reprehenderit, voluptatem iusto fuga vitae eligendi. Reprehenderit impedit sapiente eos laborum voluptatum soluta magni dicta alias. Saepe, illo.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia eius dolore officiis consequuntur voluptatum neque provident? Iure ducimus saepe eos, dolor magni reprehenderit in accusantium illo nobis laboriosam quae consequuntur.',
+            imgDetails : "https://media.istockphoto.com/id/489832966/photo/young-girl-listening-to-music-on-public-transport.webp?a=1&b=1&s=612x612&w=0&k=20&c=dJI_cmJz4itI62jXCeRhMTDUP0P2B_yuOEv0SSLB77U=",
+            title : 'Someone Famous',
+            job : 'Creative Designer'
+        },
 
     ]
 }
