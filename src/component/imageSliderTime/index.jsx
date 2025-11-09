@@ -5,7 +5,11 @@ const imgSliderTime = () => {
             {/* list */}
             <div className="absolute top-0 left-0 h-full flex duration-1000 max-w-max">
                 {/* item */}
-                <div className=""></div>
+                <div className="">
+                    <img 
+                        className="w-[1300px] max-w-[100vw] h-full object-cover"
+                        src="" alt="" />
+                </div>
             </div>
         </div>
     )
