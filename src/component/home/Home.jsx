@@ -40,6 +40,7 @@ import ShareButton from "../shareButton/index.jsx"
 import RotatingCard from "../rotatingCards/index.jsx"
 import PureRadio from "../RadioButton/index.jsx"
 import SliderClientSwiper from "../sliderClient/index.jsx"
+import imgSliderTime from "../imageSliderTime/index.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -57,7 +58,7 @@ const Home =  ()  => {
     const isDraggingNavigation = useRef(false)
     
     // veiw projects 
-    const  [view, setView] =   useState(true)   
+    const  [view, setView] =   useState(false)   
     return(
         <div 
         className={`bg-[#10131c]   min-h-[100vh] ${view ? "" : "flex! flex-col justify-center! items-center! "}`} 
@@ -195,7 +196,7 @@ const Home =  ()  => {
 
 
             <div className="h-100 w-100 text-white"></div>
-          
+            <imgSliderTime />
         </div>   
     )
 }
