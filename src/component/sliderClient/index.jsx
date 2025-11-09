@@ -29,8 +29,13 @@ const SliderClientSwiper = () => {
                         modules={[EffectCoverflow, Pagination]}
                         className="swiper-container "
                     >
-
-                        
+                        <div className="swiper-container ">
+                            {DataSlider.Slider.map((item) => {
+                                return(
+                                    <SliderItem key = {item.id} item = {item} />
+                                )
+                            })}
+                        </div> 
                     </Swiper>
                 </div>
             </section>
@@ -38,12 +43,4 @@ const SliderClientSwiper = () => {
     )
 }
 
-                    // {/* swiper-wrapper */}
-                    //     <div className="swiper-container ">
-                    //         {DataSlider.Slider.map((item) => {
-                    //             return(
-                    //                 <SliderItem key = {item.id} item = {item} />
-                    //             )
-                    //         })}
-                    //     </div>
 export default SliderClientSwiper;
