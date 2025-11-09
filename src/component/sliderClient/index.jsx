@@ -14,7 +14,14 @@ const SliderClientSwiper = () => {
                             <img 
                                 className="absolute top-[20px] right-[3px] opacity-20"
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHj-4qt5ZMM1om-SSRsIe50XzOyznYOz0ZTQ&s" alt=""
-                             />
+                            />
+                            {/* content */}
+                            <div className="">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi similique optio ipsam reprehenderit, voluptatem iusto fuga vitae eligendi. Reprehenderit impedit sapiente eos laborum voluptatum soluta magni dicta alias. Saepe, illo.
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia eius dolore officiis consequuntur voluptatum neque provident? Iure ducimus saepe eos, dolor magni reprehenderit in accusantium illo nobis laboriosam quae consequuntur.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
