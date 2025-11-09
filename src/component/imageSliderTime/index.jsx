@@ -3,7 +3,10 @@ import { DataImage } from "./dataImage";
 
 const ImgSliderTime = () => {
     const reducer = (state, action) => {
-
+        switch(action.type){
+            case "":
+                return {...state}
+        }
     }
     const [state, dispatch] = useReducer (reducer, DataImage) ;
     return(
