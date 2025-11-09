@@ -8,7 +8,7 @@ const SliderClientSwiper = () => {
             <div className="w-[400px]  pt-[50px] pb-[50px]">
                 {/* swiper-wrapper */}
                 <div className="">
-                    {DataSlider.map((item) => {
+                    {DataSlider.Slider.map((item) => {
                         return(
                             // {/* swiper-slide -> h */}
                             <div className="w-[320px]  bg-[#d1ebff] shadow-[0_15px_50px_rgba(0,0,0,.2)] backdrop-blur-[4px] rounded-[10px] bg-center bg-cover">
