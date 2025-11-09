@@ -16,3 +16,5 @@ const ImgSliderTime = () => {
     )
 }
 export default ImgSliderTime;
+
+//https://www.youtube.com/watch?v=CCPZ6SsJVT8&t=4s
