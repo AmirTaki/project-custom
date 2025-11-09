@@ -12,7 +12,7 @@ const SliderClientSwiper = () => {
                         <div className="relative w-full p-[40px] pt-[90px] text-[#999]">
                             {/* img -> quote */}
                             <img 
-                                className="absolute top-[20px] right-[3px] opacity-20"
+                                className="absolute bottom-[5px] right-[3px] opacity-20"
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHj-4qt5ZMM1om-SSRsIe50XzOyznYOz0ZTQ&s" alt=""
                             />
                             {/* content */}
@@ -21,6 +21,8 @@ const SliderClientSwiper = () => {
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi similique optio ipsam reprehenderit, voluptatem iusto fuga vitae eligendi. Reprehenderit impedit sapiente eos laborum voluptatum soluta magni dicta alias. Saepe, illo.
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia eius dolore officiis consequuntur voluptatum neque provident? Iure ducimus saepe eos, dolor magni reprehenderit in accusantium illo nobis laboriosam quae consequuntur.
                                 </p>
+                                {/* details */}
+                                <div className="flex items-center mt-[20px]"></div>
                             </div>
                         </div>
                     </div>
