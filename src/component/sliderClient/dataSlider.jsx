@@ -12,7 +12,7 @@ export const DataSlider = {
             id: 1,
             img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHj-4qt5ZMM1om-SSRsIe50XzOyznYOz0ZTQ&s",
             content : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi similique optio ipsam reprehenderit, voluptatem iusto fuga vitae eligendi. Reprehenderit impedit sapiente eos laborum voluptatum soluta magni dicta alias. Saepe, illo.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia eius dolore officiis consequuntur voluptatum neque provident? Iure ducimus saepe eos, dolor magni reprehenderit in accusantium illo nobis laboriosam quae consequuntur.',
-            imgDetails : "https://plus.unsplash.com/premium_photo-1669635062493-cd4806e9b5d6?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHBlcnNvbiUyMG11c2ljfGVufDB8fDB8fHww",
+            imgDetails : "https://images.unsplash.com/photo-1504593811423-6dd665756598?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
             title : 'Someone Famous',
             job : 'Creative Designer'
         },
