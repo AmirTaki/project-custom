@@ -6,20 +6,24 @@ import img5 from "./image/img5.jpg"
 export const DataImage = {
     images : [
         {
-            id : ,
-            img : ,
+            id :0 ,
+            img :img1 ,
         },
         {
-            id : ,
-            img : ,
+            id :1 ,
+            img :img2 ,
         },
         {
-            id : ,
-            img : ,
+            id :2 ,
+            img :img3 ,
         },
         {
-            id : ,
-            img : ,
+            id :3,
+            img :img4 ,
+        },
+        {
+            id: 4,
+            img: img5
         }
     ]
 }
