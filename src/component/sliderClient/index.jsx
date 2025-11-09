@@ -31,7 +31,8 @@ const SliderClientSwiper = () => {
                                         />
                                     </div>
                                     <h3 className="text-[16px] font-[400] tracking-[1px] text-[#2196f3] leading-[1.1em]">
-                                        Someone Famous<br /> <span>Creative Designer</span></h3>
+                                        Someone Famous<br /> <span className="text-[#666] text-[12px]">Creative Designer</span>
+                                    </h3>
                                 </div>
                             </div>
                         </div>
