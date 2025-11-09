@@ -11,6 +11,8 @@ const SliderClientSwiper = () => {
             centeredSlides = {true}
             slidesPerView="auto"
             loop = {true}
+            pagination = {{el : '.swiper-pagination', clickable: true}}
+            
 
         >
 
