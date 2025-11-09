@@ -23,6 +23,8 @@ const ImgSliderTime = () => {
                     </div>
                 ))}
             </div>
+            {/* buttons */}
+            <div className="absolute top-[45%] left-[5%] w-[90%] flex justify-between"></div>
         </div>
     )
 }
