@@ -7,20 +7,22 @@ const ImgSliderTime = () => {
         switch(action.type){
             case "right":
                 var length = state.images.length - 1
-                const newindex =  state.index >= length ? state.index =  0 : state.index += 1
+                state.index >= length ? state.index =  0 : state.index += 1
                 return {...state, }
+          
             case "left" : 
                 var length = state.images.length - 1
                 state.index == 0 ? state.index = length   : state.index -= 1
-          
                 return {...state}
 
+            case "dots":
+                return{...state, index : action.payload.place}
+            
             case "changeImage":
                 if(sliderRef.current){
                     sliderRef.current.style.scrollBehavior = "smooth"
                     sliderRef.current.scrollLeft = state.index * sliderRef.current.offsetWidth;
                 }
-
                 return {...state}
         }
     }
@@ -63,7 +65,7 @@ const ImgSliderTime = () => {
             <ul className="absolute bottom-[10px] text-white left-0 w-full m-0 p-0 flex justify-center">
                 {state.images.map((item) => (
                     <li 
-                        onClick={() => {dispatch({type : 'dots', payload : {place : state.index}})}}
+                        onClick={() => {dispatch({type : 'dots', payload : {place : item.id}})}}
                         key = {item.id}
                         className={`${item.id == state.index? "w-[30px] bg-[rgba(255,255,255,.6)]" : "w-[10px] bg-white"} list-none  h-[10px]  m-[20px] rounded-[20px] duration-1000 hover:scale-110! cursor-pointer!`}    
                     ></li>
