@@ -30,5 +30,14 @@ export const ReducerSlider = (state, action) => {
             var x = e.clientX - rect.left
             console.log('down', Math.round(x))
             return{...state}
+
+        case "handlerMouseLeave":
+            var {sliderRef} = action.payload
+            var {e} = action.payload
+            var rect = sliderRef.getBoundingClientRect();
+            var x = e.clientX - rect.left
+            console.log('leave', Math.round(x))
+            return{...state}
+
     }
 }
