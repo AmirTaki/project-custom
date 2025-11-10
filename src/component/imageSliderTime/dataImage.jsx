@@ -30,12 +30,14 @@ export const DataImage = {
         {
             id: 0, 
             icon : 'bi bi-arrow-left-circle-fill',
-            name : 'left'
+            name : 'left',
+            symbol : '<'
         },
         {
             id: 1, 
             icon : 'bi bi-arrow-right-circle-fill',
-            name : 'right'
+            name : 'right',
+            symbol : '>'
         },
 
     ]
