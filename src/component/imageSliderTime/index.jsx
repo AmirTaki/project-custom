@@ -43,8 +43,8 @@ const ImgSliderTime = () => {
                     <button 
                         key = {item.id}  
                         onClick={() => {dispatch({type : item.name})}}
-                        className=" w-[50px] h-[50px] rounded-full bg-[#fff5] text-white border-0 font-[monospace] font-bold cursor-pointer! "
-                    >    
+                        className= {`w-[50px] h-[50px] rounded-full bg-[#fff5] text-white border-0 font-[monospace] font-bold cursor-pointer! `}
+                    > 
                         {item.symbol}
                     </button>
                 ))}
