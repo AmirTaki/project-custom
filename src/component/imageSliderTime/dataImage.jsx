@@ -4,7 +4,7 @@ import img3 from "./image/img3.jpg"
 import img4 from "./image/img4.jpg"
 import img5 from "./image/img5.jpg"
 export const DataImage = {
-    index : 0,
+    index : 4,
     images : [
         {
             id :0 ,

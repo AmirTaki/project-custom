@@ -53,7 +53,7 @@ const ImgSliderTime = () => {
                 {state.images.map((item) => (
                     <li 
                         key = {item.id}
-                        className={`${item.id == state.index? "w-[30px]" : "w-[10px]"} list-none  h-[10px] bg-white m-[20px] rounded-[20px] duration-1000`}    
+                        className={`${item.id == state.index? "w-[30px] bg-[rgba(255,255,255,.6)]" : "w-[10px] bg-white"} list-none  h-[10px]  m-[20px] rounded-[20px] duration-1000 hover:scale-110! cursor-pointer`}    
                     ></li>
                 ))}
             </ul>
