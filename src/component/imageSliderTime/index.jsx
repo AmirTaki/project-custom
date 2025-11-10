@@ -24,14 +24,22 @@ const ImgSliderTime = () => {
         const x = e.clientX - rect.left
         const y = e.clientY - rect.top
         console.log("x", x, "y", y)
-        console.log('left',sliderRef.current.scrollLeft)
+        // console.log('left',sliderRef.current.scrollLeft)
     }, [])
+
+    const handlerMouseUpSwiper = useCallback((e) => {
+        const rect = sliderRef.current.getBoundingClientRect();
+            const x = e.clientX - rect.left
+            const y = e.clientY - rect.top
+            console.log("x", x, "y", y)
+    },[])
     return(
         // slider
         <div  className=" w-[1300px] max-w-[97vw]  h-[600px] m-auto relative bg-yellow-500 overflow-hidden top-10 max-md:h-[400px]! ">
            {/* list */}
            <div
                 onMouseDown={handlerMouseDownSwiper}
+                onMouseUp={handlerMouseUpSwiper}
                 ref = {sliderRef} 
                 className="absolute top-0 left-0 w-full h-full bg-amber-600 flex flex-col flex-wrap overflow-x-hidden scrllBar"
             >
