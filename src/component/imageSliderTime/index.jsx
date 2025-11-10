@@ -23,7 +23,8 @@ const ImgSliderTime = () => {
         const rect = sliderRef.current.getBoundingClientRect();
         const x = e.clientX - rect.left
         const y = e.clientY - rect.top
-        console.log(x, y)
+        console.log("x", x, "y", y)
+        console.log('left',sliderRef.current.scrollLeft)
     }, [])
     return(
         // slider
