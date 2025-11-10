@@ -22,5 +22,9 @@ export const ReducerSlider = (state, action) => {
                 sliderRef.scrollLeft = state.index * sliderRef.offsetWidth;
             }
             return {...state}
+        
+        case "handlerMouseDown":
+            
+            return{...state}
     }
 }
