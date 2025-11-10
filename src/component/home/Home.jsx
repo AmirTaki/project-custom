@@ -195,8 +195,8 @@ const Home =  ()  => {
             </div>
 
 
-            <div className="h-100 w-100 text-white"></div>
             <ImgSliderTime />
+            <div className="h-100 w-100 text-white"></div>
         </div>   
     )
 }
