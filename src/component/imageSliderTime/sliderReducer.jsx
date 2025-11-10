@@ -14,9 +14,10 @@ export const ReducerSlider = (state, action) => {
             return{...state, index : action.payload.place}
         
         case "changeImage":
-            if(sliderRef.current){
-                sliderRef.current.style.scrollBehavior = "smooth"
-                sliderRef.current.scrollLeft = state.index * sliderRef.current.offsetWidth;
+            const {sliderRef} = action.payload
+            if(sliderRef){
+                sliderRef.style.scrollBehavior = "smooth"
+                sliderRef.scrollLeft = state.index * sliderRef.offsetWidth;
             }
             return {...state}
     }

@@ -1,13 +1,13 @@
 import { useEffect, useReducer, useRef } from "react";
 import { DataImage } from "./intitalState";
-
+import { ReducerSlider } from "./sliderReducer";
 
 const ImgSliderTime = () => {
     const sliderRef = useRef(null)
 
     const [state, dispatch] = useReducer (ReducerSlider, DataImage) ;
     useEffect(() => {
-        dispatch({type:"changeImage"})
+        dispatch({type:"changeImage", payload : {sliderRef : sliderRef.current}})
     }, [state.index])
 
     useEffect(() => {
