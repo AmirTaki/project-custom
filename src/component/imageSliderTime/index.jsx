@@ -11,7 +11,7 @@ const ImgSliderTime = () => {
     const [state, dispatch] = useReducer (reducer, DataImage) ;
     return(
         // slider
-        <div className=" w-[1300px] max-w-screen h-[700px] m-auto relative  max-md:h-[400px]!">
+        <div className=" w-[1300px] max-w-screen h-[700px] m-auto relative  max-md:h-[400px]! overflow-hidden">
             {/* list */}
             <div className="absolute top-0 left-0 h-full flex duration-1000 max-w-max">
                 {state.images.map((item) => (
