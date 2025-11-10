@@ -1,7 +1,7 @@
 import { useEffect, useReducer, useRef } from "react";
 import { DataImage } from "./intitalState";
 import { ReducerSlider } from "./sliderReducer";
-
+import "./styles.css"
 const ImgSliderTime = () => {
     const sliderRef = useRef(null)
 
@@ -24,7 +24,7 @@ const ImgSliderTime = () => {
            {/* list */}
            <div
                 ref = {sliderRef} 
-                className="absolute top-0 left-0 w-full h-full bg-amber-600 flex flex-col flex-wrap overflow-x-scroll"
+                className="absolute top-0 left-0 w-full h-full bg-amber-600 flex flex-col flex-wrap overflow-x-hidden scrllBar"
             >
                {state.images.map((item) => (
                     // item
@@ -38,12 +38,12 @@ const ImgSliderTime = () => {
            </div>
 
             {/* buttons */}
-            <div className="absolute top-[45%] left-[5%] w-[90%] flex justify-between cursor-pointer! ">
+            <div className="absolute top-[45%] left-[5%] w-[90%] flex justify-between ">
                 {state.buttons.map((item) => (
                     <button 
                         key = {item.id}  
                         onClick={() => {dispatch({type : item.name})}}
-                        className=" w-[50px] h-[50px] rounded-full bg-[#fff5] text-white border-0 font-[monospace] font-bold"
+                        className=" w-[50px] h-[50px] rounded-full bg-[#fff5] text-white border-0 font-[monospace] font-bold cursor-pointer! "
                     >    
                         {item.symbol}
                     </button>
