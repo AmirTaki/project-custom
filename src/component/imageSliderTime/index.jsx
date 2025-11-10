@@ -11,14 +11,14 @@ const ImgSliderTime = () => {
     const [state, dispatch] = useReducer (reducer, DataImage) ;
     return(
         // slider
-        <div className=" w-[1300px] max-w-[97vw]  h-[600px] m-auto relative bg-yellow-500 overflow-hidden top-10 ">
+        <div className=" w-[1300px] max-w-[97vw]  h-[600px] m-auto relative bg-yellow-500 overflow-hidden top-10 max-md:h-[400px]! ">
            {/* list */}
            <div className="absolute top-0 left-0 w-full h-full bg-amber-600 flex flex-col flex-wrap overflow-x-scroll">
                {state.images.map((item) => (
                     // item
                     <div key = {item.id}  className="w-full h-full bg-blue-500">
                         <img 
-                            className=" w-full h-full"
+                            className=" w-full h-full object-cover max-md:object-center!"
                             src={item.img} alt="" />
                     </div>
                 ))}
@@ -37,7 +37,7 @@ const ImgSliderTime = () => {
                 ))}
             </div> */}
             {/* buttons */}
-            <div className="absolute top-[45%] left-[5%] w-[90%] flex justify-between">
+            <div className="absolute top-[45%] left-[5%] w-[90%] flex justify-between ">
                 {state.buttons.map((item) => (
                     <button 
                         key = {item.id}  
