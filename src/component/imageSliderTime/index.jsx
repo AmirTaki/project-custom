@@ -10,8 +10,8 @@ const ImgSliderTime = () => {
                 const newindex =  state.index >= length ? state.index =  0 : state.index += 1
                 return {...state, }
             case "left" : 
-                var length = state.images.length -= 1
-                state.index == 0 ? state.index = length - 1  : state.index =- 1
+                var length = state.images.length - 1
+                state.index == 0 ? state.index = length   : state.index -= 1
           
                 return {...state}
 
