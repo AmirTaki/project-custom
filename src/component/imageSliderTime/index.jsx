@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useReducer, useRef } from "react";
+import {useEffect, useReducer, useRef } from "react";
 import { DataImage } from "./intitalState";
 import { ReducerSlider } from "./sliderReducer";
 import "./styles.css"

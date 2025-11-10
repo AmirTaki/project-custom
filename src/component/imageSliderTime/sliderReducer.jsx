@@ -1,12 +1,23 @@
 export const ReducerSlider = (state, action) => {
+  
+
+    const length = state.images.length - 1
+    
+    const handlerDrag = () => {
+        var {sliderRef} = action.payload
+        var {e} = action.payload
+        var rect = sliderRef.getBoundingClientRect();
+        var x = e.clientX - rect.left
+        return x
+    }
+
     switch(action.type){
+        
         case "right":
-            var length = state.images.length - 1
             state.index >= length ? state.index =  0 : state.index += 1
             return {...state, }
         
         case "left" : 
-            var length = state.images.length - 1
             state.index == 0 ? state.index = length   : state.index -= 1
             return {...state}
 
@@ -22,27 +33,21 @@ export const ReducerSlider = (state, action) => {
             return {...state}
         
         case "handlerDragStart":
-            var {sliderRef} = action.payload
-            var {e} = action.payload
-            var rect = sliderRef.getBoundingClientRect();
-            var x = e.clientX - rect.left
+            const dragStart = handlerDrag()
        
-            return{...state, dragStart : x}
+            return{...state, dragStart : dragStart}
 
         case "handlerDragEnd":
-            var {sliderRef} = action.payload
-            var {e} = action.payload
-            var rect = sliderRef.getBoundingClientRect();
-            var x = e.clientX - rect.left
-      
-            var length = state.images.length - 1
-            if(state.dragStart > x){
-                state.index >= length ? state.index =  0 : state.index += 1
-            }
-            else {
-                state.index == 0 ? state.index = length   : state.index -= 1
-            }
-            return{...state, dragEnd : x,  }
+            const xx = handlerDrag();
+            console.log(xx)
+            // const length = state.images.length - 1
+            // if(state.dragStart > xx){
+            //     state.index >= length ? state.index =  0 : state.index += 1
+            // }
+            // else {
+            //     state.index == 0 ? state.index = length   : state.index -= 1
+            // }
+            return{...state, dragEnd : xx,  }
 
     }
 }
