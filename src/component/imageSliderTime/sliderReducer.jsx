@@ -1,8 +1,6 @@
 export const ReducerSlider = (state, action) => {
-  
 
-    const length = state.images.length - 1
-    
+    const length = state.images.length - 1    
     const handlerDrag = () => {
         var {sliderRef} = action.payload
         var {e} = action.payload
@@ -11,8 +9,7 @@ export const ReducerSlider = (state, action) => {
         return x
     }
 
-    switch(action.type){
-        
+    switch(action.type){ 
         case "right":
             state.index >= length ? state.index =  0 : state.index += 1
             return {...state, }
@@ -34,18 +31,11 @@ export const ReducerSlider = (state, action) => {
         
         case "handlerDragStart":
             const dragStart = handlerDrag()
-       
             return{...state, dragStart : dragStart}
 
         case "handlerDragEnd":
             const dragEnd = handlerDrag();
-            
-            if(state.dragStart > dragEnd){
-                state.index >= length ? state.index =  0 : state.index += 1
-            }
-            else {
-                state.index == 0 ? state.index = length   : state.index -= 1
-            }
+            state.dragStart > dragEnd ?  state.index >= length ? state.index =  0 : state.index += 1 : state.index == 0 ? state.index = length   : state.index -= 1
             return{...state, dragEnd : dragEnd,  }
 
     }
