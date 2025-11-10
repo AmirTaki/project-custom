@@ -6,11 +6,25 @@ const ImgSliderTime = () => {
     const reducer = (state, action) => {
         switch(action.type){
             case "right":
-                state.index = state.index + 1;
+                const length = state.images.length - 1
+                console.log(length)
+                state.index  >= length ? state.index += 1 : state.index =  0
+             
+                return {...state}
+            case "left" : 
+                state.index = state.index - 1;
                 if(listRef.current){
                     listRef.current.style.scrollBehavior = "smooth"
                     listRef.current.scrollLeft = state.index * listRef.current.offsetWidth;
                 }
+                return {...state}
+
+            case "changeImage":
+                if(listRef.current){
+                    listRef.current.style.scrollBehavior = "smooth"
+                    listRef.current.scrollLeft = state.index * listRef.current.offsetWidth;
+                }
+
                 return {...state}
         }
     }
