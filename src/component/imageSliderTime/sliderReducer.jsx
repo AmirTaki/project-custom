@@ -16,23 +16,11 @@ export const ReducerSlider = (state, action) => {
             return{...state, index : action.payload.place}
         
         case "changeImage":
-            const {sliderRef} = action.payload
+            var {sliderRef} = action.payload
             if(sliderRef){
                 sliderRef.style.scrollBehavior = "smooth"
                 sliderRef.scrollLeft = state.index * sliderRef.offsetWidth;
             }
-            return {...state}
-
-        case "handlerMouseDown":
-            var {sliderRef} = action.payload
-            const handlerMouseDown = useCallback((e) => {
-                const rect = sliderRef.getBoundingClientRect()
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top
-
-                console.log(x, y)
-            }, [])
-            handlerMouseDown()
             return {...state}
     }
 }
