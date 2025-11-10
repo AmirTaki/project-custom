@@ -20,7 +20,10 @@ const ImgSliderTime = () => {
     // })
 
     const handlerMouseDownSwiper = useCallback((e) => {
-
+        const rect = sliderRef.current.getBoundingClientRect();
+        const x = e.clientX - rect.left
+        const y = e.clientY - rect.top
+        console.log(x, y)
     }, [])
     return(
         // slider
