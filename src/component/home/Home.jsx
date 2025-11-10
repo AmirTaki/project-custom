@@ -196,10 +196,10 @@ const Home =  ()  => {
             </div>
 
             {/* slider image swiper practice source code */}
-            {/* <ImgSliderTime /> */}
+            <ImgSliderTime />
 
             
-            <SwiperTest />
+            {/* <SwiperTest /> */}
             <div className="h-100 w-100 text-white"></div>
         </div>   
     )
