@@ -1,4 +1,4 @@
-import { useReducer, useRef } from "react";
+import { useEffect, useReducer, useRef } from "react";
 import { DataImage } from "./dataImage";
 
 const ImgSliderTime = () => {
@@ -29,6 +29,9 @@ const ImgSliderTime = () => {
         }
     }
     const [state, dispatch] = useReducer (reducer, DataImage) ;
+    useEffect(() => {
+        dispatch({type:"changeImage"})
+    }, [state.index])
     return(
         // slider
         <div  className=" w-[1300px] max-w-[97vw]  h-[600px] m-auto relative bg-yellow-500 overflow-hidden top-10 max-md:h-[400px]! ">
