@@ -1,3 +1,5 @@
+import { useCallback } from "react"
+
 export const ReducerSlider = (state, action) => {
     switch(action.type){
         case "right":
@@ -19,6 +21,15 @@ export const ReducerSlider = (state, action) => {
                 sliderRef.style.scrollBehavior = "smooth"
                 sliderRef.scrollLeft = state.index * sliderRef.offsetWidth;
             }
+            return {...state}
+
+        case "handlerMouseDown":
+            var {sliderRef} = action.payload
+            const handlerMouseDown = useCallback((e) => {
+                const rect = sliderRef.getBoundingClientRect()
+
+            }, [])
+            
             return {...state}
     }
 }
