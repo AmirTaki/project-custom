@@ -25,5 +25,18 @@ export const DataImage = {
             id: 4,
             img: img5
         }
+    ],
+    buttons : [
+        {
+            id: 0, 
+            icon : 'bi bi-arrow-left-circle-fill',
+            name : 'left'
+        },
+        {
+            id: 1, 
+            icon : 'bi bi-arrow-right-circle-fill',
+            name : 'right'
+        },
+
     ]
 }
