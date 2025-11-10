@@ -5,6 +5,11 @@ const ImgSliderTime = () => {
     const reducer = (state, action) => {
         switch(action.type){
             case "right":
+                state.index = index + 1;
+                if(listRef.current){
+                    listRef.current.style.scrollBehavior = "smooth"
+                    listRef.current.scrollLeft = state.index * listRef.current.offsetWidth;
+                }
                 return {...state}
         }
     }
