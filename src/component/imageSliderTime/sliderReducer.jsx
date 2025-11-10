@@ -26,7 +26,7 @@ export const ReducerSlider = (state, action) => {
             var {e} = action.payload
             var rect = sliderRef.getBoundingClientRect();
             var x = e.clientX - rect.left
-            console.log('down', Math.round(x))
+       
             return{...state, dragStart : x}
 
         case "handlerDragEnd":
@@ -34,7 +34,7 @@ export const ReducerSlider = (state, action) => {
             var {e} = action.payload
             var rect = sliderRef.getBoundingClientRect();
             var x = e.clientX - rect.left
-            console.log('leave', Math.round(x))
+      
             var length = state.images.length - 1
             if(state.dragStart > x){
                 state.index >= length ? state.index =  0 : state.index += 1
