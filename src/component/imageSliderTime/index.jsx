@@ -1,32 +1,11 @@
 import { useEffect, useReducer, useRef } from "react";
-import { DataImage } from "./dataImage";
+import { DataImage } from "./intitalState";
+
 
 const ImgSliderTime = () => {
     const sliderRef = useRef(null)
-    const reducer = (state, action) => {
-        switch(action.type){
-            case "right":
-                var length = state.images.length - 1
-                state.index >= length ? state.index =  0 : state.index += 1
-                return {...state, }
-          
-            case "left" : 
-                var length = state.images.length - 1
-                state.index == 0 ? state.index = length   : state.index -= 1
-                return {...state}
 
-            case "dots":
-                return{...state, index : action.payload.place}
-            
-            case "changeImage":
-                if(sliderRef.current){
-                    sliderRef.current.style.scrollBehavior = "smooth"
-                    sliderRef.current.scrollLeft = state.index * sliderRef.current.offsetWidth;
-                }
-                return {...state}
-        }
-    }
-    const [state, dispatch] = useReducer (reducer, DataImage) ;
+    const [state, dispatch] = useReducer (ReducerSlider, DataImage) ;
     useEffect(() => {
         dispatch({type:"changeImage"})
     }, [state.index])
