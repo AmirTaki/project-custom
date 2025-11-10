@@ -35,7 +35,14 @@ export const ReducerSlider = (state, action) => {
             var rect = sliderRef.getBoundingClientRect();
             var x = e.clientX - rect.left
             console.log('leave', Math.round(x))
-            return{...state, dragEnd : y}
+            var length = state.images.length - 1
+            if(state.dragStart > x){
+                state.index >= length ? state.index =  0 : state.index += 1
+            }
+            else {
+                state.index == 0 ? state.index = length   : state.index -= 1
+            }
+            return{...state, dragEnd : x,  }
 
     }
 }
