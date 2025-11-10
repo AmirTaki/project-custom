@@ -38,16 +38,15 @@ export const ReducerSlider = (state, action) => {
             return{...state, dragStart : dragStart}
 
         case "handlerDragEnd":
-            const xx = handlerDrag();
-            console.log(xx)
-            // const length = state.images.length - 1
-            // if(state.dragStart > xx){
-            //     state.index >= length ? state.index =  0 : state.index += 1
-            // }
-            // else {
-            //     state.index == 0 ? state.index = length   : state.index -= 1
-            // }
-            return{...state, dragEnd : xx,  }
+            const dragEnd = handlerDrag();
+            
+            if(state.dragStart > dragEnd){
+                state.index >= length ? state.index =  0 : state.index += 1
+            }
+            else {
+                state.index == 0 ? state.index = length   : state.index -= 1
+            }
+            return{...state, dragEnd : dragEnd,  }
 
     }
 }
