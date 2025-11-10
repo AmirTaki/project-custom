@@ -35,7 +35,9 @@ const ImgSliderTime = () => {
         const timer = setInterval(() => {
             dispatch({type : "right"})
         }, 3000)   
-        
+        return() => {
+            clearInterval(timer)
+        }
     })
     return(
         // slider
