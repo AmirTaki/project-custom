@@ -38,7 +38,10 @@ const ImgSliderTime = () => {
             {/* dots */}
             <ul className="absolute bottom-[10px] text-white left-0 w-full m-0 p-0 flex justify-center">
                 {state.images.map((item) => (
-                    <li key = {item.id}></li>
+                    <li 
+                        key = {item.id}
+                        className="list-none w-[10px] h-[10px] bg-white m-[20px] rounded-[20px] duration-1000"    
+                    ></li>
                 ))}
             </ul>
         </div>
