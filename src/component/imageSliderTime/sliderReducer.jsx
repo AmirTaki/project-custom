@@ -27,9 +27,12 @@ export const ReducerSlider = (state, action) => {
             var {sliderRef} = action.payload
             const handlerMouseDown = useCallback((e) => {
                 const rect = sliderRef.getBoundingClientRect()
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top
 
+                console.log(x, y)
             }, [])
-            
+            handlerMouseDown()
             return {...state}
     }
 }
