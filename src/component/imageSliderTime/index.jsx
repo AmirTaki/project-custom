@@ -25,7 +25,9 @@ const ImgSliderTime = () => {
             </div>
             {/* buttons */}
             <div className="absolute top-[45%] left-[5%] w-[90%] flex justify-between">
-                <button><i className=""></i></button>
+                {state.buttons.map((item) => (
+                    <button><i className=""></i></button>
+                ))}
             </div>
         </div>
     )
