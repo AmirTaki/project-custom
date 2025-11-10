@@ -30,6 +30,13 @@ const ImgSliderTime = () => {
     useEffect(() => {
         dispatch({type:"changeImage"})
     }, [state.index])
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            dispatch({type : "right"})
+        }, 3000)   
+        
+    })
     return(
         // slider
         <div  className=" w-[1300px] max-w-[97vw]  h-[600px] m-auto relative bg-yellow-500 overflow-hidden top-10 max-md:h-[400px]! ">
