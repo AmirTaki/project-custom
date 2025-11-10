@@ -27,7 +27,7 @@ export const ReducerSlider = (state, action) => {
             var {sliderRef} = action.payload
             var {e} = action.payload
             var rect = sliderRef.getBoundingClientRect();
-            var x = e.clientX - rect.scrollLeft
+            var x = e.clientX - rect.left
             console.log('down', Math.round(x))
             return{...state}
     }

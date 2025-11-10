@@ -40,7 +40,8 @@ const ImgSliderTime = () => {
            <div
                 // onMouseDown={handlerMouseDownSwiper}
                 // onMouseLeave={handlerMouseUpSwiper}
-                onMouseDown={() => {dispatch({type : "handlerMouseDown", payload : {e : e, sliderRef : sliderRef.current}})}}
+                onMouseDown={(e) => {dispatch({type : "handlerMouseDown", payload : {e : e, sliderRef : sliderRef.current}})}}
+                onMouseDown={(e) => {dispatch({type : "handlerMouseDown", payload : {e : e, sliderRef : sliderRef.current}})}}
                 ref = {sliderRef} 
                 className="absolute top-0 left-0 w-full h-full bg-amber-600 flex flex-col flex-wrap overflow-x-hidden scrllBar"
             >
