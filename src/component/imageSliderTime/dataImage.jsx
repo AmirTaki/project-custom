@@ -8,22 +8,27 @@ export const DataImage = {
         {
             id :0 ,
             img :img1 ,
+            status: true,
         },
         {
             id :1 ,
             img :img2 ,
+            status: false,
         },
         {
             id :2 ,
             img :img3 ,
+            status: false,
         },
         {
             id :3,
             img :img4 ,
+            status: false,
         },
         {
             id: 4,
-            img: img5
+            img: img5,
+            status: false,
         }
     ],
     buttons : [

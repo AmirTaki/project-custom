@@ -40,7 +40,7 @@ const ImgSliderTime = () => {
                 {state.images.map((item) => (
                     <li 
                         key = {item.id}
-                        className="list-none w-[10px] h-[10px] bg-white m-[20px] rounded-[20px] duration-1000"    
+                        className={`${item.status ? "w-[30px]" : "w-[10px]"} list-none  h-[10px] bg-white m-[20px] rounded-[20px] duration-1000`}    
                     ></li>
                 ))}
             </ul>
