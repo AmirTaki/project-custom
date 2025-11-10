@@ -5,6 +5,8 @@ import img4 from "./image/img4.jpg"
 import img5 from "./image/img5.jpg"
 export const DataImage = {
     index : 0,
+    dragStart : 0,
+    dragEnd : 0,
     images : [
         {
             id :0 ,

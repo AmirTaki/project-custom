@@ -1,5 +1,3 @@
-import { useCallback } from "react"
-
 export const ReducerSlider = (state, action) => {
     switch(action.type){
         case "right":
@@ -23,21 +21,21 @@ export const ReducerSlider = (state, action) => {
             }
             return {...state}
         
-        case "handlerMouseDown":
+        case "handlerDragStart":
             var {sliderRef} = action.payload
             var {e} = action.payload
             var rect = sliderRef.getBoundingClientRect();
             var x = e.clientX - rect.left
             console.log('down', Math.round(x))
-            return{...state}
+            return{...state, dragStart : x}
 
-        case "handlerMouseLeave":
+        case "handlerDragEnd":
             var {sliderRef} = action.payload
             var {e} = action.payload
             var rect = sliderRef.getBoundingClientRect();
             var x = e.clientX - rect.left
             console.log('leave', Math.round(x))
-            return{...state}
+            return{...state, dragEnd : y}
 
     }
 }
