@@ -41,6 +41,7 @@ import RotatingCard from "../rotatingCards/index.jsx"
 import PureRadio from "../RadioButton/index.jsx"
 import SliderClientSwiper from "../sliderClient/index.jsx"
 import ImgSliderTime from "../imageSliderTime/index.jsx"
+import ChangeSlider from "../changeSlider.jsx/index.jsx"
 import SwiperTest from "../swiper/index.jsx"
 
 // create context
@@ -198,8 +199,8 @@ const Home =  ()  => {
                 <FooterAnimated />
 
             </div>
-
-            
+            {/* change slider swiper */}
+            <ChangeSlider />
             {/* <SwiperTest /> */}
             <div className="h-100 w-100 text-white"></div>
         </div>   
