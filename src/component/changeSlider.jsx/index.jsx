@@ -25,8 +25,8 @@ const ChangeSlider = () => {
         
         <div className="relative">
 
-        <div ref = {imageRef} className="relative bg-gray-300 w-[300px] h-[600px] top- flex flex-col flex-wrap overflow-x-scroll justify-center items-center">
-            <div className="bg-blue-500 w-full h-[300px] "></div>
+        <div ref = {imageRef} className="absolute bg-gray-300 w-[300px] h-[600px]  top-[50%] left-[50%] flex flex-col flex-wrap overflow-x-scroll justify-center items-center">
+            <div className="bg-blue-500 w-full h-[300px] "></div> 
             <div className="bg-gray-500 w-full h-[300px] "></div>
             <div className="bg-red-500 w-full h-[300px] "></div>
 
