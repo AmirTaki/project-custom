@@ -1,7 +1,6 @@
 import { useEffect, useReducer, useRef, useState } from "react";
 import { InitailState } from "./initialState";
 import './styles.css'
-import img1 from "./image/c1.jpg"
 
 const ChangeSlider = () => {
     const imageRef =  useRef(null)

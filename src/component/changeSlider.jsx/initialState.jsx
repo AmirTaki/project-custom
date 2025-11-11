@@ -1,8 +1,8 @@
 import c1 from "./image/bg1.jpg"
 import c2 from "./image/bg2.jpg"
-import c3 from "./image/bg3.webp"
-import c4 from "./image/bg4.webp"
-import c5 from "./image/bg5.webp"
+import c3 from "./image/bg3.jpg"
+import c4 from "./image/bg4.jpg"
+import c5 from "./image/bg5.jpg"
 
 export const InitailState = {
     index : 0,
