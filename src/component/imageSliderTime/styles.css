@@ -6,10 +6,10 @@
     animation: changeImage 1s forwards linear;
 }
 @keyframes changeImage  {
-    to {
+    from {
         transform: rotateY(90deg);
     }
-    from {
+    to {
         transform: rotateY(0);
     }
 }

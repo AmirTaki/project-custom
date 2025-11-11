@@ -33,7 +33,7 @@ const ImgSliderTime = () => {
                {state.images.map((item) => (
                     // item
                     <div key = {item.id}  
-                        className={`${item.status ? "" : ""}  w-full h-full bg-blue-500`}>
+                        className={`${item.status ? "animationChangeImage" : ""}  w-full h-full bg-blue-500`}>
                         <img 
                             className=" w-full h-full object-cover max-md:object-center!"
                             src={item.img} alt="" />
