@@ -5,6 +5,7 @@ import c4 from "./image/c4.webp"
 import c5 from "./image/c5.webp"
 import c6 from "./image/c6.jpg"
 export const InitailState = {
+    url : images[0].img,
     images : [
         {
             id : 0,
