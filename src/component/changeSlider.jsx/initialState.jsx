@@ -9,26 +9,32 @@ export const InitailState = {
         {
             id : 0,
             img : c1,
+            flag : true,
         },
         {
             id : 1,
             img : c2,
+            flag: false
         },
         {
             id : 2,
             img : c3 ,
+            flag: false
         },
         {
             id : 3,
             img : c4,
+            flag: false
         },
         {
             id : 4,
             img : c5,
+            flag: false
         },
         {
             id : 5,
             img : c6,
+            flag: false
         },
 
     ]

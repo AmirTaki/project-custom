@@ -28,11 +28,8 @@ const ChangeSlider = () => {
       
 
         <div
-            style={{background : `url(${img1})` , }}
+            style={{background : `url(${state.images[0].img})` , }}
             ref = {imageRef} className="absolute bg-gray-300 w-screen h-[600px]  bg-cover ">
-            
-        
-
 
         </div>
          
