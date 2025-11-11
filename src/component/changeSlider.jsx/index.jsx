@@ -6,10 +6,17 @@ const ChangeSlider = () => {
     const reducer = (state, action) => {
         switch(action.type){
             case "": 
+
                 return {...state}
         }
     }
     const [state, dispatch] =  useReducer(reducer, InitailState)
+    const handlerClick = () => {
+        if(imageRef.current){
+
+            document.querySelectorAll(".item" )
+        }
+    }
     return(
         <div className="w-full h-[500px] bg-gray-600 relative top-10 flex justify-center items-center">
             <div
@@ -30,7 +37,7 @@ const ChangeSlider = () => {
 
 
             <div className=" absolute bottom-0 border-2 cursor-pointer bg-blue-500 z-30">
-                <button>click me</button>
+                <button onClick={handlerClick}>click me</button>
             </div>
         </div>
     )
