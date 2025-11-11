@@ -36,3 +36,13 @@ export const InitailState = {
 
     ]
 }
+
+
+
+export const reducer = (state, action) => {
+    const length = state.images.length 
+    switch(action.type){
+        case "changeBgImg": 
+            return {...state, index : (state.index  +  1) % length}
+    }
+}
