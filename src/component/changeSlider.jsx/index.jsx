@@ -14,7 +14,8 @@ const ChangeSlider = () => {
     const handlerClick = () => {
         if(imageRef.current){
 
-            document.querySelectorAll(".item" )
+           const items =  document.querySelectorAll(".item" )
+           imageRef.current.appendChild(items[0])
         }
     }
     return(
