@@ -8,7 +8,7 @@ const ChangeSlider = () => {
     const [flag, setFlag] =  useState(true)
     const reducer = (state, action) => {
         switch(action.type){
-            case "": 
+            case "changeBgImg": 
 
                 return {...state}
         }
@@ -24,7 +24,7 @@ const ChangeSlider = () => {
 
     useEffect(() => {
         const timer =  setInterval(() => {
-
+            dispatch({type: 'changeBgImg'})
         }, 3000)
         return () => {
             clearInterval(timer)
