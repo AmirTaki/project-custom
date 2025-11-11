@@ -28,7 +28,7 @@ const ImgSliderTime = () => {
                 onDragStart={(e) => {dispatch({type : "handlerDragStart", payload : {e : e, sliderRef : sliderRef.current}})}}
                 onDragEnd={(e) => {dispatch({type : "handlerDragEnd", payload : {e : e, sliderRef : sliderRef.current}})}}
                 ref = {sliderRef} 
-                className="absolute top-0 left-0 w-full h-full bg-amber-600 flex flex-col flex-wrap overflow-x-hidden scrllBar pointer-events-auto"
+                className="absolute top-0 left-0  w-full h-full bg-amber-600 flex flex-col flex-wrap overflow-x-hidden scrllBar pointer-events-auto cursor-pointer"
             >
                {state.images.map((item) => (
                     // item
