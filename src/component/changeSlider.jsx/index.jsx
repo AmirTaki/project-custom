@@ -1,9 +1,10 @@
-import { useReducer, useRef } from "react";
+import { useReducer, useRef, useState } from "react";
 import { InitailState } from "./initialState";
 import './styles.css'
 
 const ChangeSlider = () => {
-    // const imageRef =  useRef(null)
+    const imageRef =  useRef(null)
+    const [index, setIndex] = useState(0)
     // const reducer = (state, action) => {
     //     switch(action.type){
     //         case "": 
@@ -13,9 +14,10 @@ const ChangeSlider = () => {
     // }
     // const [state, dispatch] =  useReducer(reducer, InitailState)
     const handlerClick = () => {
+        setIndex(index + 1)
         if(imageRef.current){
                 imageRef.current.style.scrollBehavior = "smooth";
-                imageRef.current.scrollLeft = action.payload * imageRef.current.offsetWidth;
+                imageRef.current.scrollLeft = index * imageRef.current.offsetWidth;
         }
     }
     return(
@@ -38,7 +40,7 @@ const ChangeSlider = () => {
         // </div>
         <div className="relative">
 
-        <div className="relative bg-gray-300 w-[300px] h-[600px] top- flex flex-col flex-wrap overflow-x-scroll justify-center items-center">
+        <div ref = {imageRef} className="relative bg-gray-300 w-[300px] h-[600px] top- flex flex-col flex-wrap overflow-x-scroll justify-center items-center">
             <div className="bg-blue-500 w-full h-[300px] rotate-y-0"></div>
             <div className="bg-gray-500 w-full h-[300px] rotate-y-0"></div>
             <div className="bg-red-500 w-full h-[300px] rotate-y-0"></div>
