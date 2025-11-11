@@ -38,7 +38,9 @@ const ChangeSlider = () => {
 
         // </div>
 
-        <div className="relative bg-gray-300 w-full h-[600px] top-20"></div>
+        <div className="relative bg-gray-300 w-full h-[600px] top-20">
+            <div className="absolute w-[300px] h-[300px] top-50 translate-x-1/2 bg-blue-500"></div>
+        </div>
     )
 }
 export default ChangeSlider;
