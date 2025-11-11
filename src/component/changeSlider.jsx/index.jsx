@@ -4,7 +4,8 @@ import './styles.css'
 
 const ChangeSlider = () => {
     const imageRef =  useRef(null)
-    const [index, setIndex] = useState(0)
+    const [index, setIndex] = useState(1)
+    const [flag, setFlag] =  useState(true)
     // const reducer = (state, action) => {
     //     switch(action.type){
     //         case "": 
@@ -42,7 +43,7 @@ const ChangeSlider = () => {
 
         <div ref = {imageRef} className="relative bg-gray-300 w-[300px] h-[600px] top- flex flex-col flex-wrap overflow-x-scroll justify-center items-center">
             <div className="bg-blue-500 w-full h-[300px] rotate-y-0"></div>
-            <div className="bg-gray-500 w-full h-[300px] rotate-y-0"></div>
+            <div className="bg-gray-500 w-full h-[300px] rotate-y-20"></div>
             <div className="bg-red-500 w-full h-[300px] rotate-y-0"></div>
 
 
