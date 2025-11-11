@@ -3,45 +3,42 @@ import { InitailState } from "./initialState";
 import './styles.css'
 
 const ChangeSlider = () => {
-    const imageRef =  useRef(null)
-    const reducer = (state, action) => {
-        switch(action.type){
-            case "": 
+    // const imageRef =  useRef(null)
+    // const reducer = (state, action) => {
+    //     switch(action.type){
+    //         case "": 
 
-                return {...state}
-        }
-    }
-    const [state, dispatch] =  useReducer(reducer, InitailState)
-    const handlerClick = () => {
-        if(imageRef.current){
+    //             return {...state}
+    //     }
+    // }
+    // const [state, dispatch] =  useReducer(reducer, InitailState)
+    // const handlerClick = () => {
+    //     if(imageRef.current){
 
-           const items =  document.querySelectorAll(".itemAll" )
-           imageRef.current.appendChild(items[0])
-        }
-    }
+    //        const items =  document.querySelectorAll(".itemAll" )
+    //        imageRef.current.appendChild(items[0])
+    //     }
+    // }
     return(
-        <div className="w-full h-[500px] bg-gray-600 relative top-10 flex justify-center items-center">
-            <div
-                ref = {imageRef}
-                className="w-full h-[300px] bg-white overflow-x-scroll flex flex-col flex-wrap"
-            >
-                <div className=" h-full bg-green-500 rotate-y-  itemAll">
-                    <img src={state.images[0].img} className="w-full h-full" alt="" />
-                </div>
-                <div className=" h-full bg-blue-500 itemAll">
-                    <img src={state.images[1].img} className="w-full h-full " alt="" />
-                </div>
-                <div className=" h-full bg-orange-500 rotate-y itemAll">
-                    <img src={state.images[2].img} className="w-full h-full" alt="" />
-                </div>
+        // <div className="w-full h-[500px] bg-gray-600 relative top-10 flex justify-center items-center">
+        //     <div
+        //         ref = {imageRef}
+        //         className="w-full h-[300px] bg-white overflow-x-scroll flex flex-col flex-wrap"
+        //     >
+        //         {/* <div className="bg-blue-500 w-[90%] h-full absolute "></div>    */}
             
-            </div>
+        //     </div>
 
 
-            <div className=" absolute bottom-0 border-2 cursor-pointer bg-blue-500 z-30">
-                <button onClick={handlerClick}>click me</button>
-            </div>
-        </div>
+        //     <div className=" absolute bottom-0 border-2 cursor-pointer bg-blue-500 z-30">
+        //         <button onClick={handlerClick}>click me</button>
+        //     </div>
+
+
+
+        // </div>
+
+        <div className="relative bg-gray-300 w-full h-[600px] top-20"></div>
     )
 }
 export default ChangeSlider;
