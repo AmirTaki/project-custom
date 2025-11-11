@@ -22,29 +22,13 @@ const ChangeSlider = () => {
         }
     }
     return(
-        // <div className="w-full h-[500px] bg-gray-600 relative top-10 flex justify-center items-center">
-        //     <div
-        //         ref = {imageRef}
-        //         className="w-full h-[300px] bg-white overflow-x-scroll flex flex-col flex-wrap"
-        //     >
-        //         {/* <div className="bg-blue-500 w-[90%] h-full absolute "></div>    */}
-            
-        //     </div>
-
-
-        //     <div className=" absolute bottom-0 border-2 cursor-pointer bg-blue-500 z-30">
-        //         <button onClick={handlerClick}>click me</button>
-        //     </div>
-
-
-
-        // </div>
+        
         <div className="relative">
 
         <div ref = {imageRef} className="relative bg-gray-300 w-[300px] h-[600px] top- flex flex-col flex-wrap overflow-x-scroll justify-center items-center">
-            <div className="bg-blue-500 w-full h-[300px] rotate-y-0"></div>
-            <div className="bg-gray-500 w-full h-[300px] rotate-y-20"></div>
-            <div className="bg-red-500 w-full h-[300px] rotate-y-0"></div>
+            <div className="bg-blue-500 w-full h-[300px] "></div>
+            <div className="bg-gray-500 w-full h-[300px] "></div>
+            <div className="bg-red-500 w-full h-[300px] "></div>
 
 
         </div>
