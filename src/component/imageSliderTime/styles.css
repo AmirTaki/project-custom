@@ -1,3 +1,7 @@
 .scrllBar::-webkit-scrollbar {
     display: hidden;
 }
+
+.animationChangeImage {
+    animation: 
+}
