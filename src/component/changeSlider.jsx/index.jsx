@@ -10,8 +10,8 @@ const ChangeSlider = () => {
     }
     const [state, dispatch] =  useReducer(reducer, InitailState)
     return(
-        <div className="w-full h-[500px] bg-gray-600">
-            <div className="w-full h-full flex flex-row overlfow-x-scroll">
+        <div className="w-full h-[500px] bg-gray-600 ">
+            <div className="w-full h-full flex flex-col flex-wrap overlfow-x-scroll">
                 <div className="w-[300px] h-full bg-blue-600"></div>
                 <div className="w-[300px] h-full bg-green-600"></div>
                 <div className="w-[300px] h-full bg-yellow-600"></div>
