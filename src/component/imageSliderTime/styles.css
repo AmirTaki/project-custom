@@ -3,7 +3,7 @@
 }
 
 .animationChangeImage {
-    animation: changeImage .5s forwards linear;
+    animation: changeImage 1s forwards linear;
 }
 @keyframes changeImage  {
     from {
