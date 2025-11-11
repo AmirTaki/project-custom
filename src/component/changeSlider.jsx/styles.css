@@ -1,9 +1,7 @@
-.itemAll:nth-child(1){
-    width: 10%;
+.slider {
+    animation:  sliderImgAnimation 30s infinite;   
 }
-.itemAll:nth-child(2){
-    width: 80%;
-}
-.itemAll:nth-child(3){
-    width: 10%;
+
+@keyframes sliderImgAnimation {
+    
 }
