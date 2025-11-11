@@ -1,4 +1,4 @@
-import { useReducer, useRef, useState } from "react";
+import { useEffect, useReducer, useRef, useState } from "react";
 import { InitailState } from "./initialState";
 import './styles.css'
 
@@ -21,6 +21,15 @@ const ChangeSlider = () => {
                 imageRef.current.scrollLeft = index * imageRef.current.offsetWidth;
         }
     }
+
+    useEffect(() => {
+        const timer =  setInterval(() => {
+
+        }, 3000)
+        return () => {
+            clearInterval(timer)
+        }
+    })
     return(
         
         <div className="relative">
