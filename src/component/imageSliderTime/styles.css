@@ -7,9 +7,9 @@
 }
 @keyframes changeImage  {
     to {
-        
+        transform: rotateY(90deg);
     }
     from {
-
+        transform: rotateY(0);
     }
 }
