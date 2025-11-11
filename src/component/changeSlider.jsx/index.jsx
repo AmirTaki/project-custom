@@ -6,14 +6,14 @@ const ChangeSlider = () => {
     const imageRef =  useRef(null)
     const [index, setIndex] = useState(1)
     const [flag, setFlag] =  useState(true)
-    // const reducer = (state, action) => {
-    //     switch(action.type){
-    //         case "": 
+    const reducer = (state, action) => {
+        switch(action.type){
+            case "": 
 
-    //             return {...state}
-    //     }
-    // }
-    // const [state, dispatch] =  useReducer(reducer, InitailState)
+                return {...state}
+        }
+    }
+    const [state, dispatch] =  useReducer(reducer, InitailState)
     const handlerClick = () => {
         setIndex((prev) => (prev + 1))
         if(imageRef.current){
@@ -26,7 +26,9 @@ const ChangeSlider = () => {
         <div className="relative">
 
         <div ref = {imageRef} className="absolute bg-gray-300 w-[300px] h-[600px]  top-[50%] left-[50%] ml-[-150px] mt-[-150px] flex flex-col flex-wrap overflow-x-scroll justify-center items-center">
-            <div className="bg-blue-500 w-full h-[300px] bg-center bg-cover"></div> 
+            {state.images.map((item) => (
+                <div className="bg-blue-500 w-full h-[300px] bg-center bg-cover"></div> 
+            ))}
             <div className="bg-gray-500 w-full h-[300px] "></div>
             <div className="bg-red-500 w-full h-[300px] "></div>
 
