@@ -43,7 +43,7 @@ import SliderClientSwiper from "../sliderClient/index.jsx"
 import ImgSliderTime from "../imageSliderTime/index.jsx"
 import ChangeSlider from "../changeSlider.jsx/index.jsx"
 import SwiperTest from "../swiper/index.jsx"
-
+import SliderSwiper from "../sliderSwiper/index.jsx"
 // create context
 export const navigationContext = createContext ()
 
@@ -60,7 +60,7 @@ const Home =  ()  => {
     const isDraggingNavigation = useRef(false)
     
     // veiw projects 
-    const  [view, setView] =   useState(false)   
+    const  [view, setView] =   useState(true)   
     return(
         <div 
         className={`bg-[#10131c]   min-h-[100vh] ${view ? "" : "flex! flex-col justify-center! items-center! "}`} 
@@ -195,12 +195,16 @@ const Home =  ()  => {
                 {/* slider image swiper practice source code */}
                 <ImgSliderTime />
 
+                {/* change slider swiper */}
+                <ChangeSlider />
+
                 {/* footer animated */}
                 <FooterAnimated />
 
             </div>
-            {/* change slider swiper */}
-            <ChangeSlider />
+
+            <SliderSwiper   /> 
+ 
             {/* <SwiperTest /> */}
             <div className="h-100 w-100 text-white"></div>
         </div>   
