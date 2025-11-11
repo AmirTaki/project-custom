@@ -14,9 +14,8 @@ const ChangeSlider = () => {
     // const [state, dispatch] =  useReducer(reducer, InitailState)
     const handlerClick = () => {
         if(imageRef.current){
-
-           const items =  document.querySelectorAll(".itemAll" )
-           imageRef.current.appendChild(items[0])
+                imageRef.current.style.scrollBehavior = "smooth";
+                imageRef.current.scrollLeft = action.payload * imageRef.current.offsetWidth;
         }
     }
     return(
