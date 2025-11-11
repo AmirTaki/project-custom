@@ -7,10 +7,10 @@ const ChangeSlider = () => {
     const imageRef =  useRef(null)
   
     const reducer = (state, action) => {
+        const length = state.images.length 
         switch(action.type){
             case "changeBgImg": 
-                // imageRef.current.style.background = url(state.images[0].img)
-                return {...state}
+                return {...state, index : (state.index  +  1) % length}
         }
     }
     const [state, dispatch] =  useReducer(reducer, InitailState)
@@ -27,11 +27,10 @@ const ChangeSlider = () => {
     return(
       
 
-        <div
-            style={{background : `url(${state.url})` , }}
-            ref = {imageRef} className="absolute bg-gray-300 w-screen h-[600px]  bg-cover ">
-
-        </div>
+            <div
+                style={{background : `url(${state.images[state.index].img})` , }}
+                ref = {imageRef} className="absolute bg-gray-300  bg-center w-[800px] h-[540px] bg-cover ">
+            </div>
          
     )
 }
@@ -39,3 +38,8 @@ export default ChangeSlider;
 {/* <img src={state.images[0].img} alt="" />
 <img src={state.images[1].img} alt="" />
 <img src={state.images[2].img} alt="" /> */}
+
+
+// https://www.youtube.com/watch?v=ZczUFf-mOho
+// https://www.youtube.com/watch?v=kzLFdOY7GQk
+// https://www.youtube.com/@CSSnippets/playlists
