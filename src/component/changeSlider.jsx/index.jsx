@@ -24,13 +24,13 @@ const ChangeSlider = () => {
                 ref = {imageRef}
                 className="w-full h-[300px] bg-white overflow-x-scroll flex flex-col flex-wrap"
             >
-                <div className="w-[10%] h-full bg-green-500 rotate-y-45 itemAll">
+                <div className=" h-full bg-green-500 rotate-y-45 itemAll">
                     <img src={state.images[0].img} className="w-full h-full" alt="" />
                 </div>
-                <div className="w-[80%] h-full bg-blue-500">
-                    <img src={state.images[1].img} className="w-full h-full itemAll" alt="" />
+                <div className=" h-full bg-blue-500 itemAll">
+                    <img src={state.images[1].img} className="w-full h-full " alt="" />
                 </div>
-                <div className="w-[10%] h-full bg-orange-500 rotate-y-45 itemAll">
+                <div className=" h-full bg-orange-500 rotate-y-45 itemAll">
                     <img src={state.images[2].img} className="w-full h-full" alt="" />
                 </div>
             

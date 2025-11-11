@@ -1,0 +1,9 @@
+.itemAll:nth-child(1){
+    width: 10%;
+}
+.itemAll:nth-child(2){
+    width: 80%;
+}
+.itemAll:nth-child(3){
+    width: 10%;
+}
