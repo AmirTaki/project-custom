@@ -25,7 +25,7 @@ const ChangeSlider = () => {
             </div>
 
 
-            <div className=" absolute bottom-0 border-2 cursor-pointer">
+            <div className=" absolute bottom-0 border-2 cursor-pointer bg-blue-500 z-30">
                 <button>click me</button>
             </div>
         </div>
