@@ -41,6 +41,7 @@ const ChangeSlider = () => {
         <div className="relative bg-gray-300 w-full h-[600px] top-20">
             <div className="absolute w-[300px] h-[300px] top-50 translate-x-1/2 bg-blue-500"></div>
             <div className="absolute w-[300px] h-[300px] top-50 rotate-y-60 -left-18.5 bg-red-500"></div>
+            <div className="absolute w-[300px] h-[300px] top-50 rotate-y-60 left-93 bg-green-500"></div>
         </div>
     )
 }
