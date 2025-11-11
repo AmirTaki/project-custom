@@ -1,9 +1,9 @@
-import c1 from "./image/c1.jpg"
-import c2 from "./image/c2.jpg"
-import c3 from "./image/c3.webp"
-import c4 from "./image/c4.webp"
-import c5 from "./image/c5.webp"
-import c6 from "./image/c6.jpg"
+import c1 from "./image/bg1.jpg"
+import c2 from "./image/bg2.jpg"
+import c3 from "./image/bg3.webp"
+import c4 from "./image/bg4.webp"
+import c5 from "./image/bg5.webp"
+
 export const InitailState = {
     index : 0,
     images : [
@@ -32,11 +32,7 @@ export const InitailState = {
             img : c5,
             flag: false
         },
-        {
-            id : 5,
-            img : c6,
-            flag: false
-        },
+       
 
     ]
 }
