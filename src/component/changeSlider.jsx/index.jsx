@@ -25,19 +25,17 @@ const ChangeSlider = () => {
         }
     })
     return(
-        
-        <div className="relative">
+      
 
         <div
-            style={{background : `url(${img1})`}}
-            ref = {imageRef} className="absolute bg-gray-300 w-[300px] h-[600px]  top-[50%] left-[50%] ml-[-150px] mt-[-150px] flex flex-col flex-wrap overflow-x-scroll justify-center items-center">
+            style={{background : `url(${img1})` , }}
+            ref = {imageRef} className="absolute bg-gray-300 w-screen h-[600px]  bg-cover ">
             
         
 
 
         </div>
          
-        </div>
     )
 }
 export default ChangeSlider;
