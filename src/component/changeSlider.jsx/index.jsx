@@ -27,10 +27,11 @@ const ChangeSlider = () => {
 
         <div ref = {imageRef} className="absolute bg-gray-300 w-[300px] h-[600px]  top-[50%] left-[50%] ml-[-150px] mt-[-150px] flex flex-col flex-wrap overflow-x-scroll justify-center items-center">
             {state.images.map((item) => (
-                <div className="bg-blue-500 w-full h-[300px] bg-center bg-cover"></div> 
+                <div key = {item.id} className="bg-blue-500 w-full h-[300px] ">
+                    <img src={item.img} className="w-full h-full bg-center bg-cover" alt="" />
+                </div> 
             ))}
-            <div className="bg-gray-500 w-full h-[300px] "></div>
-            <div className="bg-red-500 w-full h-[300px] "></div>
+         
 
 
         </div>
