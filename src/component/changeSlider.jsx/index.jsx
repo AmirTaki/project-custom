@@ -23,6 +23,11 @@ const ChangeSlider = () => {
                 </div>
             
             </div>
+
+
+            <div className=" absolute bottom-0 border-2 cursor-pointer">
+                <button>click me</button>
+            </div>
         </div>
     )
 }
