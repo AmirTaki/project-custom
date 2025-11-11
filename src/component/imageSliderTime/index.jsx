@@ -21,19 +21,19 @@ const ImgSliderTime = () => {
 
     return(
         // slider
-        <div  className=" w-[1300px] max-w-[97vw]  h-[600px] m-auto relative bg-yellow-500 overflow-hidden top-10 max-md:h-[400px]! ">
+        <div  className=" w-[1300px] max-w-[97vw]  h-[600px] m-auto relative bg-transparent overflow-hidden top-10 max-md:h-[400px]! ">
            {/* list */}
            <div
                 draggable={false}
                 onDragStart={(e) => {dispatch({type : "handlerDragStart", payload : {e : e, sliderRef : sliderRef.current}})}}
                 onDragEnd={(e) => {dispatch({type : "handlerDragEnd", payload : {e : e, sliderRef : sliderRef.current}})}}
                 ref = {sliderRef} 
-                className={` absolute top-0 left-0  w-full h-full bg-amber-600 flex flex-col flex-wrap overflow-x-hidden scrllBar pointer-events-auto cursor-pointer`}
+                className={` absolute top-0 left-0  w-full h-full bg-transparent flex flex-col flex-wrap overflow-x-hidden scrllBar pointer-events-auto cursor-pointer`}
             >
                {state.images.map((item) => (
                     // item
                     <div key = {item.id}  
-                        className={`${} duration-500  w-full h-full bg-blue-500`}>
+                        className={`${item.id === state.index ? "animationChangeImage " : ""} duration-500  w-full h-full bg-blue-500`}>
                         <img 
                             className=" w-full h-full object-cover max-md:object-center!"
                             src={item.img} alt="" />
