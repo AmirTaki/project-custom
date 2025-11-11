@@ -39,9 +39,9 @@ const ChangeSlider = () => {
         // </div>
 
         <div className="relative bg-gray-300 w-full h-[600px] top- flex flex-row justify-center items-center">
-            <div className="bg-blue-500 w-[300px] h-[300px]"></div>
+            <div className="bg-blue-500 w-[300px] h-[300px] rotate-y-90"></div>
             <div className="bg-gray-500 w-[300px] h-[300px]"></div>
-            <div className="bg-red-500 w-[300px] h-[300px]"></div>
+            <div className="bg-red-500 w-[300px] h-[300px] rotate-y-90"></div>
         </div>
     )
 }
