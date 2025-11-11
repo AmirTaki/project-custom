@@ -2,7 +2,7 @@ import { useReducer } from "react";
 import { InitailState } from "./initialState";
 
 const ChangeSlider = () => {
-    const reduce = (state, action) => {
+    const reducer = (state, action) => {
         switch(action.type){
             case "": 
                 return {...state}
@@ -10,7 +10,7 @@ const ChangeSlider = () => {
     }
     const [state, dispatch] =  useReducer(reducer, InitailState)
     return(
-        <div className=""></div>
+        <div className="w-full h-[500px] bg-gray-600"></div>
     )
 }
 export default ChangeSlider;
