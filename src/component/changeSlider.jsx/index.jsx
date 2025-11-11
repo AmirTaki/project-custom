@@ -1,5 +1,6 @@
 import { useReducer, useRef } from "react";
 import { InitailState } from "./initialState";
+import './styles.css'
 
 const ChangeSlider = () => {
     const imageRef =  useRef(null)
@@ -24,13 +25,13 @@ const ChangeSlider = () => {
                 ref = {imageRef}
                 className="w-full h-[300px] bg-white overflow-x-scroll flex flex-col flex-wrap"
             >
-                <div className=" h-full bg-green-500 rotate-y-45 itemAll">
+                <div className=" h-full bg-green-500 rotate-y-  itemAll">
                     <img src={state.images[0].img} className="w-full h-full" alt="" />
                 </div>
                 <div className=" h-full bg-blue-500 itemAll">
                     <img src={state.images[1].img} className="w-full h-full " alt="" />
                 </div>
-                <div className=" h-full bg-orange-500 rotate-y-45 itemAll">
+                <div className=" h-full bg-orange-500 rotate-y itemAll">
                     <img src={state.images[2].img} className="w-full h-full" alt="" />
                 </div>
             
