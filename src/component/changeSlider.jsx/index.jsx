@@ -12,13 +12,13 @@ const ChangeSlider = () => {
     //     }
     // }
     // const [state, dispatch] =  useReducer(reducer, InitailState)
-    // const handlerClick = () => {
-    //     if(imageRef.current){
+    const handlerClick = () => {
+        if(imageRef.current){
 
-    //        const items =  document.querySelectorAll(".itemAll" )
-    //        imageRef.current.appendChild(items[0])
-    //     }
-    // }
+           const items =  document.querySelectorAll(".itemAll" )
+           imageRef.current.appendChild(items[0])
+        }
+    }
     return(
         // <div className="w-full h-[500px] bg-gray-600 relative top-10 flex justify-center items-center">
         //     <div
@@ -37,11 +37,18 @@ const ChangeSlider = () => {
 
 
         // </div>
+        <div className="relative">
 
-        <div className="relative bg-gray-300 w-[300px] h-[600px] top- flex flex-row justify-center items-center">
-            <div className="bg-blue-500 w-full h-[300px] rotate-y-90"></div>
-            <div className="bg-gray-500 w-full h-[300px]"></div>
-            <div className="bg-red-500 w-full h-[300px] rotate-y-90"></div>
+        <div className="relative bg-gray-300 w-[300px] h-[600px] top- flex flex-col flex-wrap overflow-x-scroll justify-center items-center">
+            <div className="bg-blue-500 w-full h-[300px] rotate-y-0"></div>
+            <div className="bg-gray-500 w-full h-[300px] rotate-y-0"></div>
+            <div className="bg-red-500 w-full h-[300px] rotate-y-0"></div>
+
+
+        </div>
+            <div className=" absolute bottom-0 border-2 cursor-pointer bg-blue-500 z-30">
+                 <button onClick={handlerClick}>click me</button>
+             </div>
         </div>
     )
 }
