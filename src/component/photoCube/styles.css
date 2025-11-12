@@ -21,6 +21,6 @@
     position: absolute;
     width: 350px;
     height: 350px;
-    background-color: red;
+    background-color: transparent;
     transform-style: preserve-3d;
 }
