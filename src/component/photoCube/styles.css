@@ -5,3 +5,10 @@
     transform-style: preserve-3d;
     animation: rotateCube 10s infinite linear;   
 }
+
+.face img {
+    width: 100%;
+    height: 10%;
+    object-fit: cover;
+    border-radius: 8px;
+}
