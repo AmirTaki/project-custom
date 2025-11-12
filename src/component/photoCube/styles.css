@@ -26,9 +26,19 @@
     transform: rotateY(-90deg) translateZ(150px);
 }
 .top {
-    transform: rotateY(90deg) translateZ(150px);
+    transform: rotateX(90deg) translateZ(150px);
 }
 .bottom {
-    transform: rotateY(-90deg) translateZ(150px);
+    transform: rotateX(-90deg) translateZ(150px);
 }
 
+
+
+@keyframes rotateCube {
+    0%{
+        transform: rotateX(0) rotateY(0);
+    }
+    100%{
+        transform: rotateX(360deg);
+    }
+}
