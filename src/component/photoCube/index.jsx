@@ -4,6 +4,7 @@ import './styles.css'
 
 const PhotoCube = () => {   
     const box =  useRef(null)
+    const cubeBox = useRef(null)
     const reducer = (state, action) => {
         switch(action.type){
             case "":
@@ -14,35 +15,38 @@ const PhotoCube = () => {
 
 
     useEffect(() => {
-        const rotateCube = (x, y) => {
-            let Xvalue = Math.floor((x / 2) + 100)
-            let Yvalue = Math.floor((y / 2) + 100)
-            if(box.current) {
-                box.current.style.transform = `rotateX(${Yvalue}deg) rotateY(${Xvalue}deg)`
+        if(cubeBox.current){
+
+            const rotateCube = (x, y) => {
+                let Xvalue = Math.floor((x / 2) + 100)
+                let Yvalue = Math.floor((y / 2) + 100)
+                if(box.current) {
+                    box.current.style.transform = `rotateX(${Yvalue}deg) rotateY(${Xvalue}deg)`
+                }
+    
             }
-
-        }
-        document.documentElement.addEventListener('mousemove', (e) => {
-            rotateCube(e.clientX, e.clientY)
-        })
-
-        document.documentElement.addEventListener("mousedown", (e) => {
-            rotateCube(105, -150)
-
-        })
-
-        return() => {
-            document.documentElement.removeEventListener('mousemove', (e) => {
-            rotateCube(e.clientX, e.clientY)
-
-            document.documentElement.removeEventListener("mousedown", (e) => {
-                rotateCube(-105, 100)
+            cubeBox.current.addEventListener('mousemove', (e) => {
+                rotateCube(e.clientX, e.clientY)
             })
-        })
+    
+           cubeBox.current.addEventListener("mousedown", (e) => {
+                rotateCube(105, -150)
+    
+            })
+    
+            return() => {
+                cubeBox.removeEventListener('mousemove', (e) => {
+                rotateCube(e.clientX, e.clientY)
+    
+                cubeBox.removeEventListener("mousedown", (e) => {
+                    rotateCube(-105, 100)
+                })
+            })
+            }
         }
     }, [])
     return(
-        <div className="cubeBox">
+        <div ref = {cubeBox} className="cubeBox">
             {/* container */}
             <div className="container">
                 <div ref = {box} className="box">
@@ -61,8 +65,5 @@ const PhotoCube = () => {
     )
 }
 export default PhotoCube;
-// {cube.lists.map((list) => (
-//     <span
-//         className='h-[calc(350px/ 3 - 6px)] bg-white'
-//     ></span>
-// ))}
+
+///  https://www.youtube.com/watch?v=JT8IqoCbcyo
