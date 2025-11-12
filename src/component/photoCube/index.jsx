@@ -30,16 +30,16 @@ const PhotoCube = () => {
             })
     
            cubeBox.current.addEventListener("mousedown", (e) => {
-                rotateCube(105, -150)
+                rotateCube(255, -150)
     
             })
     
             return() => {
                 cubeBox.removeEventListener('mousemove', (e) => {
-                rotateCube(e.clientX, e.clientY)
+                    rotateCube(e.clientX, e.clientY)
     
                 cubeBox.removeEventListener("mousedown", (e) => {
-                    rotateCube(-105, 100)
+                    rotateCube(255, -150)
                 })
             })
             }
@@ -48,7 +48,7 @@ const PhotoCube = () => {
     return(
         <div ref = {cubeBox} className="cubeBox">
             {/* container */}
-            <div className="container">
+            <div className="containerCubeBox">
                 <div ref = {box} className="box">
                     {cube.images.map((item) => (
                         <div 
