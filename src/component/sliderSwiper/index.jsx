@@ -20,7 +20,9 @@ const SliderSwiper = () => {
                         <div 
                             style={{backgroundColor : `#${cube.color}`}}
                             key = {cube.id}
-                            className={`${cube.name} w-[350px] h-[350px] absolute `}>
+                            className={`${cube.name} w-[400px] h-[400px] absolute `}
+                        >
+                            <img src={cube.img} className="w-full h-full bg-cover" alt="" />
                         </div>
                     ))}
                 </div>
