@@ -25,3 +25,10 @@
 .left {
     transform: rotateY(-90deg) translateZ(150px);
 }
+.top {
+    transform: rotateY(90deg) translateZ(150px);
+}
+.bottom {
+    transform: rotateY(-90deg) translateZ(150px);
+}
+
