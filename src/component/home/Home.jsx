@@ -44,6 +44,8 @@ import ImgSliderTime from "../imageSliderTime/index.jsx"
 import ChangeSlider from "../changeSlider.jsx/index.jsx"
 import SwiperTest from "../swiper/index.jsx"
 import SliderSwiper from "../sliderSwiper/index.jsx"
+import PhotoCube from "../photoCube/index.jsx"
+
 // create context
 export const navigationContext = createContext ()
 
@@ -204,7 +206,8 @@ const Home =  ()  => {
             </div>
 
             <SliderSwiper   /> 
- 
+            {/* phonto cube 3D */}
+            <PhotoCube />
             {/* <SwiperTest /> */}
             <div className="h-100 w-100 text-white"></div>
         </div>   
