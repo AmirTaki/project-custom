@@ -27,7 +27,7 @@
     transform: rotateY(360deg) rotateX(-150deg);
 }
 
-.top {
+ .top {
     bottom: 175px;
     transform: rotateX(90deg);
 }
@@ -53,4 +53,4 @@
 
 .back {
     transform: translateZ(-165px);
-}
+} 
