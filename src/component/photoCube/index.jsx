@@ -4,7 +4,9 @@ const PhotoCube = () => {
         // scene
         <div className="scene">
             <div className="cube">
-                <div className="face front"></div>
+                <div className="face front"> 
+                    <img src="" alt="front" />
+                </div>
             </div>
         </div>
     )
