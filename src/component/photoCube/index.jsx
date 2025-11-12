@@ -14,7 +14,8 @@ const PhotoCube = () => {
 
     useEffect(() => {
         const rotateCube = (x, y) => {
-            console.log(x, y)
+            let Xvalue = Math.floor((x / 2) + 100)
+            let Yvalue = Math.floor((y / 2) + 100)
         }
         document.documentElement.addEventListener('mousemove', (e) => {
             rotateCube(e.clientX, e.clientY)
