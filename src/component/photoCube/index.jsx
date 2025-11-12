@@ -15,7 +15,11 @@ const PhotoCube = () => {
         <div className="scene">
             <div className="cube">
                 <div className="face front"> 
-                    <img src="" alt="front" />
+                    {cube.images.map((item) => (
+                        <div className= {`face ${item.name}`}>
+
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>

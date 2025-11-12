@@ -6,7 +6,7 @@ import img5 from "./image/c5.jpg"
 import img6 from "./image/c6.jpg"
 
 export const InitialStateCube = {
-    image : [
+    images : [
         {
             id : 0,
             name : 'front',
