@@ -1,6 +1,7 @@
 const SliderSwiper = () => {
     return(
-        <div className=""></div>
+        // cubeBox
+        <div className="w-full h-screen bg-blue-600 overflow-hidden relative"></div>
     )
 }
 export default SliderSwiper;

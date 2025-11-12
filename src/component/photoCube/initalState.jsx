@@ -52,3 +52,17 @@ export const InitialStateCube = {
         },
     ]
 }
+
+export const reducerCubeBox = (state, action) => {
+    switch(action.type){
+        case "rotateCube":
+            const {box, x, y} = action.payload 
+            let Xvalue = Math.floor((x / 2) + 100)
+            let Yvalue = Math.floor((y / 2) + 100)
+            if(box) {
+                box.style.transform = `rotateX(${Yvalue}deg) rotateY(${Xvalue}deg)`
+            }
+        return {...state, }
+            
+    }
+}

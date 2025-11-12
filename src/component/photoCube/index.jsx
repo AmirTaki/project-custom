@@ -1,25 +1,11 @@
-import {  useEffect, useReducer, useRef, useState } from 'react';
-import { InitialStateCube } from './initalState';
+import {  useEffect, useReducer, useRef } from 'react';
+import { InitialStateCube, reducerCubeBox } from './initalState';
 import './styles.css'
 
 const PhotoCube = () => {   
     const box =  useRef(null)
     const cubeBox = useRef(null)
-    const reducer = (state, action) => {
-        switch(action.type){
-            case "rotateCube":
-                const {box, x, y} = action.payload 
-                let Xvalue = Math.floor((x / 2) + 100)
-                let Yvalue = Math.floor((y / 2) + 100)
-                if(box) {
-                    box.style.transform = `rotateX(${Yvalue}deg) rotateY(${Xvalue}deg)`
-                }
-                return {...state, }
-                
-        }
-    }
-    const [cube, dispatch] = useReducer(reducer, InitialStateCube)
-
+    const [cube, dispatch] = useReducer(reducerCubeBox, InitialStateCube)
 
     useEffect(() => {
         if(cubeBox.current){
