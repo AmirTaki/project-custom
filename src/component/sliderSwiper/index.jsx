@@ -1,5 +1,6 @@
 import { useReducer } from "react";
 import { InitialStateCubeSiwper, ReducerSwiperCube } from "./initialDataSlider";
+import './styles.css'
 
 const SliderSwiper = () => {
    const [cubes, dispatch] =  useReducer(ReducerSwiperCube, InitialStateCubeSiwper )

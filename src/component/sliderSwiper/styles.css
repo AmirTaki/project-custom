@@ -1,0 +1,7 @@
+.front {
+    transform: translateZ(175deg);
+}
+
+.back {
+    transform: translateZ(-175px);
+}
