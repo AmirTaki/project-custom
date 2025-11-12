@@ -23,14 +23,14 @@ export const InitialStateCube = {
         },
         {
             id : 2,
-            name : 'right',
+            name : 'left',
             color : '04a4f4',
             img : img3
 
         },
         {
             id : 3,
-            name : 'left',
+            name : 'right',
             color : '04f4a8',
             img : img4
 
