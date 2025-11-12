@@ -7,8 +7,8 @@ const PhotoCube = () => {
     const cubeBox = useRef(null)
     const reducer = (state, action) => {
         switch(action.type){
-            case "":
-                return {...state}
+            case "rotateCube":
+                return {...state, }
         }
     }
     const [cube, dispatch] = useReducer(reducer, InitialStateCube)
@@ -16,6 +16,7 @@ const PhotoCube = () => {
 
     useEffect(() => {
         if(cubeBox.current){
+            dispatch({type : "rotateCube", payload : {x : x, y : y, box : box.current}})
 
             const rotateCube = (x, y) => {
                 let Xvalue = Math.floor((x / 2) + 100)
