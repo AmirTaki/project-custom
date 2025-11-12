@@ -2,7 +2,7 @@ import { useReducer } from "react";
 import { InitialStateCubeSiwper, ReducerSwiperCube } from "./initialDataSlider";
 
 const SliderSwiper = () => {
-   const [cube, dispatch] =  useReducer(ReducerSwiperCube, InitialStateCubeSiwper )
+   const [cubes, dispatch] =  useReducer(ReducerSwiperCube, InitialStateCubeSiwper )
     return(
         // cubeBox
         <div className="w-full h-screen bg-blue-600 overflow-hidden relative">
@@ -11,7 +11,13 @@ const SliderSwiper = () => {
                 {/* box */}
                 <div className="absolute w-[350px] h-[350px] bg-green-600 transform-3d duration-1000 ease-in-out">
                     {/* cubs images */}
-                    <div className="w-[350px] h-[350px] bg-amber-50"></div>
+                    {cubes.map((cube) => (
+                        <div 
+                            style={{backgroundColor : `#${cube.color}`}}
+                            key = {cube.id}
+                            className="w-[350px] h-[350px] bg-amber-50">
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
