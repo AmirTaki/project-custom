@@ -13,12 +13,18 @@ const PhotoCube = () => {
 
 
     useEffect(() => {
-        const rotateCube = () => {
-            
+        const rotateCube = (x, y) => {
+            console.log(x, y)
         }
-        document.documentElement.addEventListener('mousemove', () => {
-            
+        document.documentElement.addEventListener('mousemove', (e) => {
+            rotateCube(e.clientX, e.clientY)
         })
+
+        return() => {
+            document.documentElement.removeEventListener('mousemove', (e) => {
+            rotateCube(e.clientX, e.clientY)
+        })
+        }
     }, [])
     return(
         <div className="cubeBox">
