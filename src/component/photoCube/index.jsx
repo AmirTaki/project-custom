@@ -13,7 +13,13 @@ const PhotoCube = () => {
     return(
         <div className="cubeBox">
             {/* container */}
-            <div className="container"></div>
+            <div className="container">
+                <div className="box">
+                    {cube.images.map((item) => (
+                        <div key = {item.id} className={`${item.name}`}>{item.name}</div>
+                    ))}
+                </div>
+            </div>
         </div>
     )
 }
