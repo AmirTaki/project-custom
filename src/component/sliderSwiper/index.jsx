@@ -4,7 +4,7 @@ import { reducer } from "../navbar/inialState";
 
 
 const SliderSwiper = () => {
-   const [cube, dispatch] =  useReducer(reducerSwiperCube,InitialStateCubeSiwper )
+   const [cube, dispatch] =  useReducer(reducerSwiperCube, InitialStateCubeSiwper )
     return(
         // cubeBox
         <div className="w-full h-screen bg-blue-600 overflow-hidden relative">

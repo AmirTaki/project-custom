@@ -45,3 +45,11 @@ export const InitialStateCubeSiwper = {
         },
     ]
 }
+
+export const reducerSwiperCube = (state, action) => {
+    switch(action.type){
+        case "": 
+        return {...state}
+    }
+}
+
