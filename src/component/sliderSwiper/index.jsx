@@ -1,10 +1,8 @@
 import { useReducer } from "react";
-import { InitialStateCubeSiwper } from "./initialDataSlider";
-import { reducer } from "../navbar/inialState";
-
+import { InitialStateCubeSiwper, ReducerSwiperCube } from "./initialDataSlider";
 
 const SliderSwiper = () => {
-   const [cube, dispatch] =  useReducer(reducerSwiperCube, InitialStateCubeSiwper )
+   const [cube, dispatch] =  useReducer(ReducerSwiperCube, InitialStateCubeSiwper )
     return(
         // cubeBox
         <div className="w-full h-screen bg-blue-600 overflow-hidden relative">

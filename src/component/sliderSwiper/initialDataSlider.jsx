@@ -46,7 +46,7 @@ export const InitialStateCubeSiwper = {
     ]
 }
 
-export const reducerSwiperCube = (state, action) => {
+export const ReducerSwiperCube = (state, action) => {
     switch(action.type){
         case "": 
         return {...state}
