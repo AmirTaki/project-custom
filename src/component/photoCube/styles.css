@@ -49,9 +49,9 @@
 }
 
 .front {
-    transform:  translateZ(165px);
+    transform:  translateZ(175px);
 }
 
 .back {
-    transform: translateZ(-165px);
+    transform: translateZ(-175px);
 } 
