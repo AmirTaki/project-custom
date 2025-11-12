@@ -1,4 +1,4 @@
-import {  useReducer } from 'react';
+import {  useEffect, useReducer } from 'react';
 import { InitialStateCube } from './initalState';
 import './styles.css'
 
@@ -10,6 +10,16 @@ const PhotoCube = () => {
         }
     }
     const [cube, dispatch] = useReducer(reducer, InitialStateCube)
+
+
+    useEffect(() => {
+        const rotateCube = () => {
+            
+        }
+        document.documentElement.addEventListener('mousemove', () => {
+            
+        })
+    }, [])
     return(
         <div className="cubeBox">
             {/* container */}
@@ -21,7 +31,7 @@ const PhotoCube = () => {
                             key = {item.id} 
                             className={`${item.name} w-[350px]  h-[350px] absolute flex justify-center items-center`}
                         >
-                            <img src={item.img} className='w-full h-full bg-cover' alt="" />
+                            <img src={item.img} className='w-full h-full bg-cover z-10' alt="" />
                         </div>
                     ))}
                 </div>
