@@ -5,3 +5,13 @@
 .back {
     transform: translateZ(-175px);
 }
+
+.left {
+    right: 175px;
+    transform: rotateY(-90deg);
+}
+
+.right{
+    right: 175px;
+    transform: rotateY(90deg);
+}
