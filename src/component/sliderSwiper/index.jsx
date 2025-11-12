@@ -1,8 +1,9 @@
-import { useReducer } from "react";
+import { useReducer, useRef } from "react";
 import { InitialStateCubeSiwper, ReducerSwiperCube } from "./initialDataSlider";
 import './styles.css'
 
 const SliderSwiper = () => {
+   const boxCubes = useRef(null)
    const [cubes, dispatch] =  useReducer(ReducerSwiperCube, InitialStateCubeSiwper )
     return(
         // cubeBox
@@ -10,7 +11,7 @@ const SliderSwiper = () => {
             {/* container */}
             <div className="w-[600px] h-[600px] absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 flex justify-center items-center perspective-[1000px]">
                 {/* box */}
-                <div className="absolute w-[350px] h-[350px]  transform-3d duration-1000 ease-in-out   transform">
+                <div ref = {boxCubes} className="absolute w-[350px] h-[350px]  transform-3d duration-1000 ease-in-out  transform">
                     {/* cubs images */}
                     {cubes.images.map((cube) => (
                         <div 
