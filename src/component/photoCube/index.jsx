@@ -8,13 +8,14 @@ const PhotoCube = () => {
     const reducer = (state, action) => {
         switch(action.type){
             case "rotateCube":
-                const {box} = action.payload 
+                const {box, x, y} = action.payload 
                 let Xvalue = Math.floor((x / 2) + 100)
                 let Yvalue = Math.floor((y / 2) + 100)
                 if(box) {
                     box.style.transform = `rotateX(${Yvalue}deg) rotateY(${Xvalue}deg)`
-             
+                }
                 return {...state, }
+                
         }
     }
     const [cube, dispatch] = useReducer(reducer, InitialStateCube)
@@ -26,9 +27,8 @@ const PhotoCube = () => {
                 dispatch({type : "rotateCube", payload : {x : e.clientX, y : e.clientY, box : box.current}})
             })
     
-           cubeBox.current.addEventListener("mousedown", (e) => {
+            cubeBox.current.addEventListener("mousedown", (e) => { 
                 dispatch({type : "rotateCube", payload : {x : 255, y : -150, box : box.current}})
-
     
             })
     
@@ -36,11 +36,10 @@ const PhotoCube = () => {
                 cubeBox.removeEventListener('mousemove', (e) => {
                     dispatch({type : "rotateCube", payload : {x : e.clientX, y : e.clientY, box : box.current}})
 
-    
+                })
                 cubeBox.removeEventListener("mousedown", (e) => {
                    dispatch({type : "rotateCube", payload : {x : 255, y : -150, box : box.current}})
                 })
-            })
             }
         }
     }, [])
