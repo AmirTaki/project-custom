@@ -12,7 +12,7 @@ const PhotoCube = () => {
     const [cube, dispatch] = useReducer(reducer, InitialStateCube)
     return(
         // scene
-        <div className="scene">
+        <div className="scene w-[300px] h-[300px] perspective-[1000px]">
             <div className="cube">
                 {cube.images.map((item) => (
                     <div key = {item.id} className= {`face ${item.name}`}>
