@@ -8,6 +8,12 @@ const PhotoCube = () => {
     const reducer = (state, action) => {
         switch(action.type){
             case "rotateCube":
+                const {box} = action.payload 
+                let Xvalue = Math.floor((x / 2) + 100)
+                let Yvalue = Math.floor((y / 2) + 100)
+                if(box) {
+                    box.style.transform = `rotateX(${Yvalue}deg) rotateY(${Xvalue}deg)`
+             
                 return {...state, }
         }
     }
@@ -16,15 +22,6 @@ const PhotoCube = () => {
 
     useEffect(() => {
         if(cubeBox.current){
-
-            // const rotateCube = (x, y) => {
-            //     let Xvalue = Math.floor((x / 2) + 100)
-            //     let Yvalue = Math.floor((y / 2) + 100)
-            //     if(box.current) {
-            //         box.current.style.transform = `rotateX(${Yvalue}deg) rotateY(${Xvalue}deg)`
-            //     }
-    
-            // }
             cubeBox.current.addEventListener('mousemove', (e) => {
                 dispatch({type : "rotateCube", payload : {x : e.clientX, y : e.clientY, box : box.current}})
             })
