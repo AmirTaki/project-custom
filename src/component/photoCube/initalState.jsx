@@ -9,8 +9,38 @@ export const InitalState = {
     image : [
         {
             id : 0,
-            name : '',
-            img : ''
+            name : 'front',
+            img : img1
+
+        },
+        {
+            id : 1,
+            name : 'back',
+            img : img2
+
+        },
+        {
+            id : 2,
+            name : 'right',
+            img : img3
+
+        },
+        {
+            id : 3,
+            name : 'left',
+            img : img4
+
+        },
+        {
+            id : 4,
+            name : 'top',
+            img : img5
+
+        },
+        {
+            id : 5,
+            name : 'bottom',
+            img : img6
 
         },
     ]
