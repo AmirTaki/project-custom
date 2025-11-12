@@ -1,9 +1,9 @@
 .cubeBox{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(to bottom right, rgba(104, 9,104), rgba(179, 54, 131));
+    /* background: linear-gradient(to bottom right, rgba(104, 9,104), rgba(179, 54, 131)); */
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .container{
     width: 600px;
@@ -14,7 +14,8 @@
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    perspective: 500;
 }
 
 .box {
@@ -25,8 +26,17 @@
     transform-style: preserve-3d;
 }
 
-.box div {
-    width: 350px;
-    height: 350px;
-    position: absolute;
+.top {
+    bottom: 155px;
+    transform: rotateX(90deg);
+}
+
+.bottom {
+    top: 155px;
+    transform: rotateX(-90deg);
+}
+
+.left {
+    right: 165px;
+    transform: rotateY(-90deg)
 }
