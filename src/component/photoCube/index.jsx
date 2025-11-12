@@ -19,7 +19,7 @@ const PhotoCube = () => {
                         <div 
                             style={{backgroundColor : `#${item.color}`}}
                             key = {item.id} 
-                            className={`${item.name} w-[350px]  h-[350px] absolute`}
+                            className={`${item.name} w-[350px]  h-[350px] absolute grid grid-cols-[repeat(auto-fill,minmax(calc(350px / 4), 1fr))] gap-[4px]`}
                         >
                             {item.name}
                             {cube.lists.map((list) => (
