@@ -4,7 +4,6 @@ import './styles.css'
 
 const PhotoCube = () => {   
     const box =  useRef(null)
-    const [isKeyDown, setIsKeyDown] = useState(false)
     const reducer = (state, action) => {
         switch(action.type){
             case "":
@@ -28,8 +27,7 @@ const PhotoCube = () => {
         })
 
         document.documentElement.addEventListener("mousedown", (e) => {
-            setIsKeyDown(true)
-            rotateCube(e.clientX, e.clientY)
+            rotateCube(105, -150)
 
         })
 
@@ -38,9 +36,7 @@ const PhotoCube = () => {
             rotateCube(e.clientX, e.clientY)
 
             document.documentElement.removeEventListener("mousedown", (e) => {
-                setIsKeyDown(true)
-                rotateCube(e.clientX, e.clientY)
-
+                rotateCube(-105, 100)
             })
         })
         }
