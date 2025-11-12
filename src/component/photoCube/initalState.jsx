@@ -5,7 +5,7 @@ import img4 from "./image/c4.jpg"
 import img5 from "./image/c5.jpg"
 import img6 from "./image/c6.jpg"
 
-export const InitalState = {
+export const InitialStateCube = {
     image : [
         {
             id : 0,
