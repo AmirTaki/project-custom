@@ -1,3 +1,8 @@
+import img1 from "./img/c1.jpg"
+import img2 from "./img/c2.jpg"
+import img3 from "./img/c3.jpg"
+import img4 from "./img/c4.jpg"
+
 export const InitialStateCubeSiwper = {
     lists : [1, 2, 3, 4, 5, 6, 7, 8, 9],
     images : [
@@ -27,20 +32,6 @@ export const InitialStateCubeSiwper = {
             name : 'right',
             color : '04f4a8',
             img : img4
-
-        },
-        {
-            id : 4,
-            name : 'top',
-            color : '1932f3',
-            img : img5
-
-        },
-        {
-            id : 5,
-            name : 'bottom',
-            color : 'bd0049',
-            img : img6
 
         },
     ]
