@@ -16,31 +16,32 @@ const PhotoCube = () => {
 
     useEffect(() => {
         if(cubeBox.current){
-            dispatch({type : "rotateCube", payload : {x : x, y : y, box : box.current}})
 
-            const rotateCube = (x, y) => {
-                let Xvalue = Math.floor((x / 2) + 100)
-                let Yvalue = Math.floor((y / 2) + 100)
-                if(box.current) {
-                    box.current.style.transform = `rotateX(${Yvalue}deg) rotateY(${Xvalue}deg)`
-                }
+            // const rotateCube = (x, y) => {
+            //     let Xvalue = Math.floor((x / 2) + 100)
+            //     let Yvalue = Math.floor((y / 2) + 100)
+            //     if(box.current) {
+            //         box.current.style.transform = `rotateX(${Yvalue}deg) rotateY(${Xvalue}deg)`
+            //     }
     
-            }
+            // }
             cubeBox.current.addEventListener('mousemove', (e) => {
-                rotateCube(e.clientX, e.clientY)
+                dispatch({type : "rotateCube", payload : {x : e.clientX, y : e.clientY, box : box.current}})
             })
     
            cubeBox.current.addEventListener("mousedown", (e) => {
-                rotateCube(255, -150)
+                dispatch({type : "rotateCube", payload : {x : 255, y : -150, box : box.current}})
+
     
             })
     
             return() => {
                 cubeBox.removeEventListener('mousemove', (e) => {
-                    rotateCube(e.clientX, e.clientY)
+                    dispatch({type : "rotateCube", payload : {x : e.clientX, y : e.clientY, box : box.current}})
+
     
                 cubeBox.removeEventListener("mousedown", (e) => {
-                    rotateCube(255, -150)
+                   dispatch({type : "rotateCube", payload : {x : 255, y : -150, box : box.current}})
                 })
             })
             }
