@@ -22,6 +22,9 @@ const PhotoCube = () => {
                             className={`${item.name} w-[350px]  h-[350px] absolute`}
                         >
                             {item.name}
+                            {cube.lists.map((list) => (
+                                <span></span>
+                            ))}
                         </div>
                     ))}
                 </div>
