@@ -17,9 +17,9 @@ const PhotoCube = () => {
                 <div className="box">
                     {cube.images.map((item) => (
                         <div 
-                            style={{color : `#${item.color}`}}
+                            style={{backgroundColor : `#${item.color}`}}
                             key = {item.id} 
-                            className={`${item.name}`}
+                            className={`${item.name} w-[350px]  h-[350px] absolute`}
                         >
                             {item.name}
                         </div>

@@ -24,3 +24,9 @@
     background-color: transparent;
     transform-style: preserve-3d;
 }
+
+.box div {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+}
