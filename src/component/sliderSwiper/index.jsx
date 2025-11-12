@@ -21,6 +21,8 @@ const SliderSwiper = () => {
                         </div>
                     ))}
                 </div>
+
+                <button className="bg-white z-50" onClick={() => {dispatch({type: "handlerCubes", })}}>click me</button>
             </div>
         </div>
     )
