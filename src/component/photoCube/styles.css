@@ -25,6 +25,7 @@
     background-color: transparent;
     transform-style: preserve-3d;
     transform: rotateY(360deg) rotateX(-150deg);
+    transform: all 1s ease-out;
 }
 
  .top {
@@ -33,7 +34,7 @@
 }
 
 .bottom {
-    top: 1775px;
+    top: 175px;
     transform: rotateX(-90deg);
 }
 

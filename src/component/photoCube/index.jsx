@@ -1,8 +1,10 @@
-import {  useEffect, useReducer } from 'react';
+import {  useEffect, useReducer, useRef, useState } from 'react';
 import { InitialStateCube } from './initalState';
 import './styles.css'
 
 const PhotoCube = () => {   
+    const box =  useRef(null)
+    const [isKeyDown, setIsKeyDown] = useState(false)
     const reducer = (state, action) => {
         switch(action.type){
             case "":
@@ -16,14 +18,30 @@ const PhotoCube = () => {
         const rotateCube = (x, y) => {
             let Xvalue = Math.floor((x / 2) + 100)
             let Yvalue = Math.floor((y / 2) + 100)
+            if(box.current) {
+                box.current.style.transform = `rotateX(${Yvalue}deg) rotateY(${Xvalue}deg)`
+            }
+
         }
         document.documentElement.addEventListener('mousemove', (e) => {
             rotateCube(e.clientX, e.clientY)
         })
 
+        document.documentElement.addEventListener("mousedown", (e) => {
+            setIsKeyDown(true)
+            rotateCube(e.clientX, e.clientY)
+
+        })
+
         return() => {
             document.documentElement.removeEventListener('mousemove', (e) => {
             rotateCube(e.clientX, e.clientY)
+
+            document.documentElement.removeEventListener("mousedown", (e) => {
+                setIsKeyDown(true)
+                rotateCube(e.clientX, e.clientY)
+
+            })
         })
         }
     }, [])
@@ -31,7 +49,7 @@ const PhotoCube = () => {
         <div className="cubeBox">
             {/* container */}
             <div className="container">
-                <div className="box">
+                <div ref = {box} className="box">
                     {cube.images.map((item) => (
                         <div 
                             style={{backgroundColor : `#${item.color}`}}
