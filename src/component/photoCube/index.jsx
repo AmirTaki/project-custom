@@ -19,14 +19,9 @@ const PhotoCube = () => {
                         <div 
                             style={{backgroundColor : `#${item.color}`}}
                             key = {item.id} 
-                            className={`${item.name} w-[350px]  h-[350px] absolute grid grid-cols-[repeat(auto-fill,minmax(calc(350px / 4), 1fr))] gap-[4px] p-[4px]`}
+                            className={`${item.name} w-[350px]  h-[350px] absolute flex justify-center items-center`}
                         >
-                            {item.name}
-                            {cube.lists.map((list) => (
-                                <span
-                                    className='h-[calc(350px/ 3 - 6px)] bg-white'
-                                ></span>
-                            ))}
+                            <img src={item.img} className='w-full h-full bg-cover' alt="" />
                         </div>
                     ))}
                 </div>
@@ -35,3 +30,8 @@ const PhotoCube = () => {
     )
 }
 export default PhotoCube;
+// {cube.lists.map((list) => (
+//     <span
+//         className='h-[calc(350px/ 3 - 6px)] bg-white'
+//     ></span>
+// ))}
