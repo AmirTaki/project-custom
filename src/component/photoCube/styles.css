@@ -15,7 +15,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    perspective: 500;
+    perspective: 1000;
 }
 
 .box {
@@ -39,4 +39,17 @@
 .left {
     right: 165px;
     transform: rotateY(-90deg)
+}
+
+.right {
+    left: 175px;
+    transform: rotateY(90deg);
+}
+
+.front {
+    transform:  translateZ(165px);
+}
+
+.back {
+    transform: translateZ(-165px);
 }
