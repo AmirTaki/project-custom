@@ -11,14 +11,15 @@ const PhotoCube = () => {
     }
     const [cube, dispatch] = useReducer(reducer, InitialStateCube)
     return(
-        // scene
-        <div className="scene w-[300px] h-[300px] perspective-[1000px]">
-            <div className="cube">
-                {cube.images.map((item) => (
-                    <div key = {item.id} className= {`face ${item.name}`}>
-                        <img src={item.img} alt={item.name} />
-                    </div>
-                ))}
+        <div className="flex justify-center h-[100vh] itmes-center">
+            <div className="scence ">
+                <div className="cube">
+                    {cube.images.map((item) => (
+                        <div key = {item.id} className= {`face ${item.name}`}>
+                            <img src={item.img} alt={item.name} />
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     )
