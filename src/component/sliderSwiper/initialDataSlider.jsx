@@ -5,6 +5,7 @@ import img4 from "./img/c6.jpg"
 
 export const InitialStateCubeSiwper = {
     lists : [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    rotate : 45,
     images : [
         {
             id : 0,

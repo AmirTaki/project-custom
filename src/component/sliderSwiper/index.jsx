@@ -11,7 +11,10 @@ const SliderSwiper = () => {
             {/* container */}
             <div className="w-[600px] h-[600px] absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 flex justify-center items-center perspective-[1000px]">
                 {/* box */}
-                <div ref = {boxCubes} className="absolute w-[350px] h-[350px]  transform-3d duration-1000 ease-in-out  transform">
+                <div 
+                    ref = {boxCubes} style={{transform : `rotateY(${cubes.rotate}deg)`}}
+                    className="absolute w-[350px] h-[350px]  transform-3d duration-1000 ease-in-out  transform"
+                >
                     {/* cubs images */}
                     {cubes.images.map((cube) => (
                         <div 
@@ -22,7 +25,7 @@ const SliderSwiper = () => {
                     ))}
                 </div>
 
-                <button className="bg-white z-50" onClick={() => {dispatch({type: "handlerCubes", })}}>click me</button>
+                <button className="bg-white z-50" onClick={() => {dispatch({type: "handlerCubes", payload : {box : boxCubes.current} })}}>click me</button>
             </div>
         </div>
     )
