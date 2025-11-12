@@ -11,7 +11,7 @@ const SliderSwiper = () => {
                 {/* box */}
                 <div className="absolute w-[350px] h-[350px] bg-green-600 transform-3d duration-1000 ease-in-out">
                     {/* cubs images */}
-                    {cubes.map((cube) => (
+                    {cubes.images.map((cube) => (
                         <div 
                             style={{backgroundColor : `#${cube.color}`}}
                             key = {cube.id}

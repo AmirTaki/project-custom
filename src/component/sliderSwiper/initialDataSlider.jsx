@@ -1,7 +1,7 @@
 import img1 from "./img/c1.jpg"
 import img2 from "./img/c2.jpg"
-import img3 from "./img/c3.jpg"
-import img4 from "./img/c4.jpg"
+import img3 from "./img/c5.jpg"
+import img4 from "./img/c6.jpg"
 
 export const InitialStateCubeSiwper = {
     lists : [1, 2, 3, 4, 5, 6, 7, 8, 9],
