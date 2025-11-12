@@ -12,3 +12,6 @@
     object-fit: cover;
     border-radius: 8px;
 }
+.front {
+    transform: rotateY(0deg) translateZ(150px);
+}
