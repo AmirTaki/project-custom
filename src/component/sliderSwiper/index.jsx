@@ -9,9 +9,12 @@ const SliderSwiper = () => {
         id : img.id + 1,
         imgSrc : img.src
     }))
-   })
+
+    setCards(newCards)
+
+   },[])
     return(
-        <div className="w-10 h-10 bg-amber-800"></div>
+        <div className="slider"></div>
     )
 }
 
