@@ -38,6 +38,12 @@ export const InitialStateCubeSiwper = {
 }
 
 export const ReducerSwiperCube = (state, action) => {
+
+    const HandlerDrag = () => {
+        var {boxCubes, e} = action.payload
+        
+    }
+
     switch(action.type){
         case "leftCubesClick": 
             state.rotate += 90

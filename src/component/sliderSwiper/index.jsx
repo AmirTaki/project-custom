@@ -6,8 +6,6 @@ const SliderSwiper = () => {
    const boxCubes = useRef(null)
    const [cubes, dispatch] =  useReducer(ReducerSwiperCube, InitialStateCubeSiwper)
 
-
-
     return(
         <div ref = {boxCubes} 
             className="w-full flex justify-center items-center relative"
