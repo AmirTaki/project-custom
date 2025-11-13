@@ -44,8 +44,9 @@ export const ReducerSwiperCube = (state, action) => {
             state.rotate -= 90
         return {...state}
 
-        case "" :
-            return{...state}
+        case "rightCubesClick" :
+            state.rotate -=90
+            return{...state,}
     }
 }
 
