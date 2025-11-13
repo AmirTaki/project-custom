@@ -206,6 +206,7 @@ const Home =  ()  => {
                 {/* footer animated */}
                 <FooterAnimated />
 
+                
                 <SliderSwiper   /> 
 
             </div>
