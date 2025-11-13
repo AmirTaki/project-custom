@@ -6,22 +6,15 @@ const SliderSwiper = () => {
    const boxCubes = useRef(null)
    const [cubes, dispatch] =  useReducer(ReducerSwiperCube, InitialStateCubeSiwper)
 
-    useEffect(() => {
-        if(boxCubes.current){
-            boxCubes.current.addEventListener('mousemove', (e) => {
-                dispatch({type: 'rotateCube', payload : {x : e.clientX, y: e.clientY, cube: boxCubes.current }})
-            })
-            
-            return()=> {
-                boxCubes.current.removeEventListener('mousemove', (e) => {
-                    dispatch({type: 'rotateCube', payload : {x : e.clientX, y: e.clientY, cube: boxCubes.current }})
-                }) 
-            }
-        }
-    }, [])
+
 
     return(
-        <div ref = {boxCubes} className="w-full flex justify-center items-center relative">
+        <div ref = {boxCubes} 
+            className="w-full flex justify-center items-center relative"
+            draggable = {false}
+            onDragStart={(e) => {}}
+            onDragEnd={(e) => {}}
+        >
             <i 
                 onClick={() => {dispatch({type : 'leftCubesClick'})}}
                 className={`bi bi-chevron-double-left  hover:scale-150  text-4xl  text-gray-300 hover:text-blue-700 duration-500 cursor-pointer`}
