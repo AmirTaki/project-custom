@@ -35,9 +35,14 @@ const SliderSwiper = () => {
             </div>
 
             {/* button cubs */}
-            
-            <i className="absolute top-[40%] right-[10%] hover:scale-200  text-4xl bi bi-chevron-double-right text-gray-300 hover:text-blue-700 duration-500 cursor-pointer"></i>
-            <i className="absolute top-[40%] left-[10%] hover:scale-200 text-4xl bi bi-chevron-double-left text-gray-300 hover:text-blue-700 duration-500 cursor-pointer"></i>
+            {cubes.icons.map((cube) => (
+                <i 
+                    key = {cube.id}
+                    style = {{right: `${cube.right}%`, left: `${cube.left}%`}}
+                    className={`absolute top-[40%] hover:scale-200  text-4xl bi bi-chevron-double-right text-gray-300 hover:text-blue-700 duration-500 cursor-pointer`}
+                ></i>
+            ))}
+            {/* <i className="absolute top-[40%] left-[10%] hover:scale-200 text-4xl bi bi-chevron-double-left text-gray-300 hover:text-blue-700 duration-500 cursor-pointer"></i> */}
                     
         </div>
     )
