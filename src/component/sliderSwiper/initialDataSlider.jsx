@@ -35,6 +35,18 @@ export const InitialStateCubeSiwper = {
             img : img4
 
         },
+    ],
+    icons : [
+        {
+            id : 0,
+            icon : 'bi bi-chevron-double-right',
+            right : 40,
+        },
+        {
+            id : 0,
+            icon : 'bi bi-chevron-double-left',
+            left : 40,
+        },
     ]
 }
 
