@@ -4,6 +4,8 @@ import img3 from "./img/c5.jpg"
 import img4 from "./img/c6.jpg"
 
 export const InitialStateCubeSiwper = {
+    dragStart: 0,
+    dragEnd: 0,
     rotate : 0,
     images : [
         {
@@ -53,6 +55,11 @@ export const ReducerSwiperCube = (state, action) => {
         case "rightCubesClick" :
             state.rotate -=90
             return{...state,}
+
+        case "cubeDragStart":
+            return {...state, dragStart : HandlerDrag()}
+
+        
     }
 }
 
