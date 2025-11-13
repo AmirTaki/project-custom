@@ -11,7 +11,7 @@
 
 const Images = Array.from({length : 500}, (_, i) => ({
     id : i ,
-    img : `src ${i + 1}` 
+    src : `src ${i + 1}` 
 }))
 
 export const InitalStateItems = {
