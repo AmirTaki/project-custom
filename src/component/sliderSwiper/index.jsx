@@ -6,37 +6,38 @@ const SliderSwiper = () => {
    const boxCubes = useRef(null)
    const [cubes, dispatch] =  useReducer(ReducerSwiperCube, InitialStateCubeSiwper )
     return(
-        <div className="w-full bg-amber-700 h-screen">
+        <div className="w-full bg-amber-700  flex justify-center relative">
 
-        {/* cubeBox */}
-        <div className="w-[700px] h-screen  overflow-hidden relative flex justify-center itmes-center">
-            {/* container */}
-            <div className="w-[500px] h-[500px] bg-amber-300  flex justify-center items-center  perspective-[1300px]">
-                {/* box */}
-                <div 
-                    style={{transform : `rotateY(${cubes.rotate}deg)`}}
-                    className=" w-[350px] h-[350px]  transform-3d duration-1000 ease-in-out  transform"
-                >
-                    {/* cubs images */}
-                    {cubes.images.map((cube) => (
-                        <div 
-                            style={{backgroundColor : `#${cube.color}`}}
-                            key = {cube.id}
-                            className={`${cube.name} w-[400px] h-[400px]   absolute overflow-hidden  `}
-                        >
-                            <img src={cube.img} className="w-full h-full bg-cover" alt="" />
-                        </div>
-                    ))}
+            {/* cubeBox */}
+            <div className="w-[700px] h-[700px]  overflow-hidden relative flex justify-center itmes-center">
+                {/* container */}
+                <div className="w-[500px] h-[500px]  flex justify-center items-center  perspective-[1300px]">
+                    {/* box */}
+                    <div 
+                        style={{transform : `rotateY(${cubes.rotate}deg)`}}
+                        className=" w-[350px] h-[350px]  transform-3d duration-1000 ease-in-out  transform"
+                    >
+                        {/* cubs images */}
+                        {cubes.images.map((cube) => (
+                            <div 
+                                style={{backgroundColor : `#${cube.color}`}}
+                                key = {cube.id}
+                                className={`${cube.name} w-[400px] h-[400px]   absolute overflow-hidden  `}
+                            >
+                                <img src={cube.img} className="w-full h-full bg-cover" alt="" />
+                            </div>
+                        ))}
+                    </div>
+
+                    <button className="bg-blue-500 z-50! text-red-700 absolute" onClick={() => {dispatch({type: "handlerCubes", })}}>click me</button>
+
                 </div>
-
-                <button className="bg-blue-500 z-50! text-red-700 absolute" onClick={() => {dispatch({type: "handlerCubes", })}}>click me</button>
-
             </div>
+
             {/* button cubs */}
-            <i className="absolute right-20 top-30 text-4xl bi bi-chevron-double-right text-gray-300 hover:text-blue-700 duration-500 cursor-pointer"></i>
-            <i className="absolute left-40 top-30 text-4xl bi bi-chevron-double-left text-gray-300 hover:text-blue-700 duration-500 cursor-pointer"></i>
+            <i className="absolute top-[40%] right-[10%] hover:scale-200  text-4xl bi bi-chevron-double-right text-gray-300 hover:text-blue-700 duration-500 cursor-pointer"></i>
+            <i className="absolute top-[40%] left-[10%] hover:scale-200 text-4xl bi bi-chevron-double-left text-gray-300 hover:text-blue-700 duration-500 cursor-pointer"></i>
                     
-    </div>
         </div>
     )
 }
