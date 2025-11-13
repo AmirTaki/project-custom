@@ -7,7 +7,7 @@ const SliderSwiper = () => {
    const [cubes, dispatch] =  useReducer(ReducerSwiperCube, InitialStateCubeSiwper )
     return(
         // cubeBox
-        <div className="w-full h-screen  overflow-hidden relative flex justify- items-end ">
+        <div className="w-full h-screen  overflow-hidden relative bg-blue-600 ">
             {/* container */}
             <div className="w-[600px] h-[600px] absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 flex justify-center items-center perspective-[1000px]">
                 {/* box */}
