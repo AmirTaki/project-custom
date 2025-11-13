@@ -30,7 +30,7 @@ const SliderSwiper = () => {
                 {/* <button className="bg-white z-50" onClick={() => {dispatch({type: "handlerCubes", })}}>click me</button> */}
                 {/* button cubs */}
                 <div className=" z-50 absolute -right-70 top-80 duration-500 hover:scale-120!"><i className="text-4xl bi bi-chevron-double-right text-gray-300 hover:text-blue-700 duration-500 cursor-pointer"></i></div>
-                <div className=" z-50 absolute -right-70 top-80 duration-500 hover:scale-120!"><i className="text-4xl bi bi-chevron-double-right text-gray-300 hover:text-blue-700 duration-500 cursor-pointer"></i></div>
+                <div className=" z-50 absolute -left-55 top-80 duration-500 hover:scale-120!"><i className="text-4xl bi bi-chevron-double-left text-gray-300 hover:text-blue-700 duration-500 cursor-pointer"></i></div>
 
             </div>
                     
