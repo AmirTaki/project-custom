@@ -1,5 +1,6 @@
 import { useEffect, useReducer, useState } from "react";
 import { InitalStateItems, } from "./initialState";
+import './styles.css'
 
 const SliderSwiper = () => {
    const [cards, setCards]  = useState([])
