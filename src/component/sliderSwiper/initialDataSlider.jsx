@@ -41,7 +41,8 @@ export const ReducerSwiperCube = (state, action) => {
 
     const HandlerDrag = () => {
         var {boxCubes, e} = action.payload
-        
+        var rect = boxCubes.getBoundingClientRect();
+        return e.clientX - rect.left;
     }
 
     switch(action.type){
