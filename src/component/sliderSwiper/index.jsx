@@ -1,4 +1,12 @@
+import { useEffect, useReducer, useState } from "react";
+
+
 const SliderSwiper = () => {
+   const [cards, setCards]  = useState([])
+   const [state, dispatch] = useReducer()
+   useEffect(() => {
+        
+   })
     return(
         <div className="w-10 h-10 bg-amber-800"></div>
     )
