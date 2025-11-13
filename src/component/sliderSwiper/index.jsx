@@ -12,8 +12,8 @@ const SliderSwiper = () => {
         <div ref = {boxCubes} 
             className="w-full flex justify-center items-center relative"
             draggable = {false}
-            onDragStart={(e) => {}}
-            onDragEnd={(e) => {}}
+            onDragStart={(e) => {dispatch({type : "cubeDragStart", payload : {e : e, boxCubes : boxCubes.current}})}}
+            onDragEnd={(e) => {dispatch({type : "cubeDragEnd", payload : {e : e, boxCubes : boxCubes.current}})}}
         >
             <i 
                 onClick={() => {dispatch({type : 'leftCubesClick'})}}
