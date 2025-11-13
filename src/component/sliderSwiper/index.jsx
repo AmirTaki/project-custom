@@ -13,13 +13,15 @@ const SliderSwiper = () => {
 
     setCards(newCards)
 
+    console.log(InitalStateItems.Images)
+
    },[])
     return(
         <div className="w-screen h-[80vh] overflow-hidden ">
             <div className="slider">
-                {cards.map((card) => (
+                {InitalStateItems.Images.map((card) => (
                     <div className="card" key = {card.id}>
-                        <img src="" alt={card.imgSrc} />
+                        <img src={card.src} alt={card.src} />
                     </div>
                 ))}
             </div>
