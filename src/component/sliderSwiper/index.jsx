@@ -28,6 +28,14 @@ const SliderSwiper = () => {
                 </div>
 
                 <button className="bg-white z-50" onClick={() => {dispatch({type: "handlerCubes", })}}>click me</button>
+
+                {/* button cubs */}
+                <div className="flex gap-10">
+
+                <div className="w-10 h-2 bg-red-500 absolute z-50 bottom-7 rounded-4xl cursor-pointer"></div>
+                <div className="w-10 h-2 bg-red-500 absolute z-50 bottom-7 rounded-4xl cursor-pointer"></div>
+                <div className="w-10 h-2 bg-red-500 absolute z-50 bottom-7 rounded-4xl cursor-pointer"></div>
+                </div>
             </div>
         </div>
     )
