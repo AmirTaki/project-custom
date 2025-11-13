@@ -1,8 +1,13 @@
-export const Items = Array.from({length : 500} ,(_,i)=> `img: ${i + 1}`)
 
-Object.from({length: 500}, (_, i) => `id : ${i} img : ${i+100} ` )
+let Images = []
+for (let i = 0; i < 500 ; i ++){
+    let obj = {
+        id : i ,
+        img : `src ${i + 1}`
+    }
+    Images.push(obj)
+}
+
 export const InitalStateItems = {
-    images : [
-        Items
-    ]
+   Images,
 }
