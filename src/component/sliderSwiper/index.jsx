@@ -14,7 +14,13 @@ const SliderSwiper = () => {
 
    },[])
     return(
-        <div className="slider"></div>
+        <div className="slider">
+            {cards.map((card) => (
+                <div className="card" key = {card.id}>
+                    <img src="" alt={card.imgSrc} />
+                </div>
+            ))}
+        </div>
     )
 }
 
