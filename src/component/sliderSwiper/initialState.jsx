@@ -23,9 +23,9 @@ import img9 from "./images/img9"
 
 
 
-const Images = Array.from({length : 500}, (_, i) => ({
+const Images = Array.from({length : 50}, (_, i) => ({
     id : i ,
-    src : `src ${i + 1}` 
+    src : `./images/img${i+1}` 
 }))
 
 export const InitalStateItems = {
