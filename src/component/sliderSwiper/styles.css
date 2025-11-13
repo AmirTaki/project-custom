@@ -1,0 +1,7 @@
+.slider {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0) rotateX(0deg) rotateY(-25deg) rotateZ(-120deg) ;
+    transform-style: preserve-3d;
+}
