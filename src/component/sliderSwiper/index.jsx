@@ -19,7 +19,7 @@ const SliderSwiper = () => {
             ></i>
 
             {/* cubeBox */}
-            <div className="w-[700px] h-[700px]  overflow-hidden relative flex justify-center itmes-center">
+            <div className="w-[700px] h-[700px]  overflow-hidden relative flex justify-center itmes-center cursor-pointer">
                 {/* container */}
                 <div className="w-[500px] h-[500px]  flex justify-center items-center  perspective-[1300px]">
                     {/* box */}
