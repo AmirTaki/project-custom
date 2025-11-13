@@ -40,8 +40,8 @@ export const InitialStateCubeSiwper = {
 
 export const ReducerSwiperCube = (state, action) => {
     switch(action.type){
-        case "handlerCubes": 
-            state.rotate -= 90
+        case "leftCubesClick": 
+            state.rotate += 90
         return {...state}
 
         case "rightCubesClick" :
