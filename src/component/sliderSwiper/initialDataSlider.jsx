@@ -9,28 +9,28 @@ export const InitialStateCubeSiwper = {
     images : [
         {
             id : 0,
-            name : 'front',
+            name : 'frontCube',
             color : '2db911',
             img : img1
 
         },
         {
             id : 1,
-            name : 'back',
+            name : 'backCube',
             color : 'df980b',
             img : img2
 
         },
         {
             id : 2,
-            name : 'left',
+            name : 'leftCube',
             color : '04a4f4',
             img : img3
 
         },
         {
             id : 3,
-            name : 'right',
+            name : 'rightCube',
             color : '04f4a8',
             img : img4
 
@@ -41,7 +41,7 @@ export const InitialStateCubeSiwper = {
 export const ReducerSwiperCube = (state, action) => {
     switch(action.type){
         case "handlerCubes": 
-            state.rotate += 90
+            state.rotate -= 90
         return {...state}
     }
 }

@@ -1,17 +1,22 @@
-.front {
-    transform: translateZ(175deg);
+
+.frontCube {
+    transform: translateZ(200px) !important;
+    background-color: red !important;
 }
 
-.back {
-    transform: translateZ(-175px);
+.backCube {
+    transform: translateZ(-200px) !important;
+    background-color: aliceblue !important;
 }
 
-.left {
-    right: 175px;
+.leftCube {
+    right: 150px !important;
+    
     transform: rotateY(-90deg);
 }
 
-.right{
-    right: 175px;
+.rightCubes {
+    left: 200px !important;
+    background: slateblue !important;
     transform: rotateY(90deg);
 }
