@@ -4,4 +4,6 @@
     left: 50%;
     transform: translate3d(-50%, -50%, 0) rotateX(0deg) rotateY(-25deg) rotateZ(-120deg) ;
     transform-style: preserve-3d;
+    transition: 1s cubic-bezier(.0.75, .82, .165, 1);
+    user-select: none;
 }
