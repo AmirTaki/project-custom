@@ -42,7 +42,7 @@ import img30 from "./images/pins (20).jpg"
 
 
 
-const im = [img1, img2,img3, img4, img5, img6, img7, img8, img9, ]
+const im = [img1, img2,img3, img4, img5, img6, img7, img8, img9,img10, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, img23, img24, img25, img26, img27, img28, img29, img30, ]
 const Images = Array.from({length : 10}, (_, i) => ({
     id : i ,
     src :  im[i]
