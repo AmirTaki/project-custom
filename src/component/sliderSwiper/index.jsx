@@ -1,12 +1,17 @@
-import { useReducer, useRef } from "react";
+import { useEffect, useReducer, useRef } from "react";
 import { InitialStateCubeSiwper, ReducerSwiperCube } from "./initialDataSlider";
 import './styles.css'
 
 const SliderSwiper = () => {
    const boxCubes = useRef(null)
-   const [cubes, dispatch] =  useReducer(ReducerSwiperCube, InitialStateCubeSiwper )
+   const [cubes, dispatch] =  useReducer(ReducerSwiperCube, InitialStateCubeSiwper)
+
+    useEffect(() => {
+
+    }, [])
+
     return(
-        <div className="w-full flex justify-center items-center relative">
+        <div ref = {boxCubes} className="w-full flex justify-center items-center relative">
             <i 
                 onClick={() => {dispatch({type : 'leftCubesClick'})}}
                 className={`bi bi-chevron-double-left  hover:scale-150  text-4xl  text-gray-300 hover:text-blue-700 duration-500 cursor-pointer`}
