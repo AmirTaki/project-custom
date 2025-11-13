@@ -3,7 +3,7 @@ import { InitialStateCubeSiwper, ReducerSwiperCube } from "./initialDataSlider";
 import CubeBox from "./cubeBox";
 import './styles.css'
 
-const SliderSwiper = () => {
+const CubeBoxSwiper = () => {
    const boxCubes = useRef(null)
    const [cubes, dispatch] =  useReducer(ReducerSwiperCube, InitialStateCubeSiwper)
 
@@ -31,7 +31,7 @@ const SliderSwiper = () => {
         </div>
     )
 }
-export default SliderSwiper;
+export default CubeBoxSwiper;
 
 
 // https://www.youtube.com/watch?v=ZczUFf-mOho

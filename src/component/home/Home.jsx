@@ -42,10 +42,12 @@ import PureRadio from "../RadioButton/index.jsx"
 import SliderClientSwiper from "../sliderClient/index.jsx"
 import ImgSliderTime from "../imageSliderTime/index.jsx"
 import ChangeSlider from "../changeSlider.jsx/index.jsx"
-import SwiperTest from "../swiper/index.jsx"
-import SliderSwiper from "../sliderSwiper/index.jsx"
 import PhotoCube from "../photoCube/index.jsx"
+import CubeBoxSwiper from "../cubesSwiper.jsx/index.jsx"
 
+
+// import SwiperTest from "../swiper/index.jsx"
+// import SliderSwiper from "../sliderSwiper/index.jsx"
 // create context
 export const navigationContext = createContext ()
 
@@ -203,11 +205,11 @@ const Home =  ()  => {
                 {/* phonto cube 3D */}
                 <PhotoCube />
 
+                {/* cube box swiper */}
+                <CubeBoxSwiper />
+
                 {/* footer animated */}
                 <FooterAnimated />
-
-                
-                <SliderSwiper   /> 
 
             </div>
             {/* <SwiperTest /> */}
