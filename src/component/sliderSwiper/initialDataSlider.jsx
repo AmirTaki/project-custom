@@ -41,11 +41,13 @@ export const InitialStateCubeSiwper = {
             id : 0,
             icon : 'bi bi-chevron-double-right',
             right : 40,
+            left : 0
         },
         {
-            id : 0,
+            id : 1,
             icon : 'bi bi-chevron-double-left',
             left : 40,
+            right : 0
         },
     ]
 }

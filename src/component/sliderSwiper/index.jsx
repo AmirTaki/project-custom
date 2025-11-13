@@ -6,7 +6,8 @@ const SliderSwiper = () => {
    const boxCubes = useRef(null)
    const [cubes, dispatch] =  useReducer(ReducerSwiperCube, InitialStateCubeSiwper )
     return(
-        <div className="w-full bg-amber-700  flex justify-center relative">
+        <div className="w-full bg-amber-700  flex justify-center items-center relative">
+            <i className={`bi bi-chevron-double-left  hover:scale-150  text-4xl  text-gray-300 hover:text-blue-700 duration-500 cursor-pointer`}></i>
 
             {/* cubeBox */}
             <div className="w-[700px] h-[700px]  overflow-hidden relative flex justify-center itmes-center">
@@ -34,15 +35,7 @@ const SliderSwiper = () => {
                 </div>
             </div>
 
-            {/* button cubs */}
-            {cubes.icons.map((cube) => (
-                <i 
-                    key = {cube.id}
-                    style = {{right: `${cube.right}%`, left: `${cube.left}%`}}
-                    className={`absolute top-[40%] hover:scale-200  text-4xl bi bi-chevron-double-right text-gray-300 hover:text-blue-700 duration-500 cursor-pointer`}
-                ></i>
-            ))}
-            {/* <i className="absolute top-[40%] left-[10%] hover:scale-200 text-4xl bi bi-chevron-double-left text-gray-300 hover:text-blue-700 duration-500 cursor-pointer"></i> */}
+            <i className={`bi bi-chevron-double-right  hover:scale-150  text-4xl  text-gray-300 hover:text-blue-700 duration-500 cursor-pointer`}></i>
                     
         </div>
     )
