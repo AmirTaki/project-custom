@@ -7,7 +7,11 @@ const SliderSwiper = () => {
    const [cubes, dispatch] =  useReducer(ReducerSwiperCube, InitialStateCubeSiwper)
 
     useEffect(() => {
-
+        if(boxCubes.current){
+            boxCubes.current.addEventListener('mousemove', (e) => {
+                dispatch({type: 'rotateCube', payload : {x : e.clientX, y: e.clientY, cube: boxCubes.current }})
+            })
+        }
     }, [])
 
     return(
