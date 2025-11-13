@@ -9,7 +9,7 @@ const SliderSwiper = () => {
         // cubeBox
         <div className="w-full h-screen  overflow-hidden relative bg-blue-600 ">
             {/* container */}
-            <div className="w-[600px] h-[600px] absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 flex justify-center items-center perspective-[1000px]">
+            <div className="w- h-[600px] absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 flex justify-center items-center perspective-[1000px]">
                 {/* box */}
                 <div 
                     style={{transform : `rotateY(${cubes.rotate}deg)`}}
@@ -27,17 +27,13 @@ const SliderSwiper = () => {
                     ))}
                 </div>
 
-                <button className="bg-white z-50" onClick={() => {dispatch({type: "handlerCubes", })}}>click me</button>
+                {/* <button className="bg-white z-50" onClick={() => {dispatch({type: "handlerCubes", })}}>click me</button> */}
+                {/* button cubs */}
+                <div className=" z-50 absolute -right-70 top-80 duration-500 hover:scale-120!"><i className="text-4xl bi bi-chevron-double-right text-gray-300 hover:text-blue-700 duration-500 cursor-pointer"></i></div>
+                <div className=" z-50 absolute -right-70 top-80 duration-500 hover:scale-120!"><i className="text-4xl bi bi-chevron-double-right text-gray-300 hover:text-blue-700 duration-500 cursor-pointer"></i></div>
 
             </div>
-            {/* button cubs */}
-            <div className="flex gap-4 justify-center items-center bg-amber-300  z-50">
-
-                <div className="w-10 h-2 bg-red-500  rounded-4xl cursor-pointer"></div>
-                <div className="w-10 h-2 bg-red-500  rounded-4xl cursor-pointer"></div>
-                <div className="w-10 h-2 bg-red-500  rounded-4xl cursor-pointer"></div>
-                <div className="w-10 h-2 bg-red-500  rounded-4xl cursor-pointer"></div>
-            </div>
+                    
     </div>
     )
 }
