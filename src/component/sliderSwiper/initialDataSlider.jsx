@@ -59,7 +59,10 @@ export const ReducerSwiperCube = (state, action) => {
         case "cubeDragStart":
             return {...state, dragStart : HandlerDrag()}
 
-        
+        case "cubeDragEnd":
+            const dragEnd = HandlerDrag();
+            
+            return {...state, }
     }
 }
 
