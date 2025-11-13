@@ -5,9 +5,9 @@ const SliderSwiper = () => {
    const [cards, setCards]  = useState([])
   
    useEffect(() => {
-    const newCards = InitalStateItems.map((img) => ({
-        id: img.id + 1,
-        imgSrc: img.src
+    const newCards = InitalStateItems.Images.map((img) => ({
+        id : img.id + 1,
+        imgSrc : img.src
     }))
    })
     return(
