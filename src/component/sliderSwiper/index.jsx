@@ -31,7 +31,7 @@ export default SliderSwiper;
 
 
 // https://www.youtube.com/watch?v=ZczUFf-mOho
-// https://www.youtube.com/watch?v=kzLFdOY7GQk
+// https://www.youtube.com/watch?v=kzLFdOY7GQk  ===> 4:6
 // https://www.youtube.com/@CSSnippets/playlists
 
 
