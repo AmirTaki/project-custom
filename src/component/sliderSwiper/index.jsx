@@ -12,5 +12,7 @@ export default SliderSwiper;
 // https://www.youtube.com/@CSSnippets/playlists
 
 
+// https://www.youtube.com/watch?v=0JKGNnIKitM&list=PL8bX3D8aBEpnS3nVvSHiPqxX_HvBYCTcL
+
 //https://www.youtube.com/watch?v=CCPZ6SsJVT8&t=4s
 // https://swiperjs.com/demos#scrollbar

@@ -24,7 +24,7 @@ const ImgSliderTime = () => {
         <div  className=" w-[1300px] max-w-[97vw]  h-[600px] m-auto relative bg-transparent overflow-hidden top-10 max-md:h-[400px]! ">
            {/* list */}
            <div
-                draggable={false}
+                draggable={true}
                 onDragStart={(e) => {dispatch({type : "handlerDragStart", payload : {e : e, sliderRef : sliderRef.current}})}}
                 onDragEnd={(e) => {dispatch({type : "handlerDragEnd", payload : {e : e, sliderRef : sliderRef.current}})}}
                 ref = {sliderRef} 
