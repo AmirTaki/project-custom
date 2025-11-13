@@ -7,9 +7,9 @@ const SliderSwiper = () => {
    const [cubes, dispatch] =  useReducer(ReducerSwiperCube, InitialStateCubeSiwper )
     return(
         // cubeBox
-        <div className="w-full h-screen  overflow-hidden relative bg-blue-600 ">
+        <div className="w-full h-screen  overflow-hidden relative flex">
             {/* container */}
-            <div className="w- h-[600px] absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 flex justify-center items-center perspective-[1000px]">
+            <div className="w-[500px] h-[500px] bg-amber-300  absolute top-[50%] left-[50%]  -translate-x-1/2 -translate-y-1/2 flex perspective-[1000px]">
                 {/* box */}
                 <div 
                     style={{transform : `rotateY(${cubes.rotate}deg)`}}
@@ -27,10 +27,10 @@ const SliderSwiper = () => {
                     ))}
                 </div>
 
-                {/* <button className="bg-white z-50" onClick={() => {dispatch({type: "handlerCubes", })}}>click me</button> */}
+                <button className="bg-transparent z-50 text-red-700" onClick={() => {dispatch({type: "handlerCubes", })}}>click me</button>
                 {/* button cubs */}
-                <div className=" z-50 absolute -right-70 top-80 duration-500 hover:scale-120!"><i className="text-4xl bi bi-chevron-double-right text-gray-300 hover:text-blue-700 duration-500 cursor-pointer"></i></div>
-                <div className=" z-50 absolute -left-55 top-80 duration-500 hover:scale-120!"><i className="text-4xl bi bi-chevron-double-left text-gray-300 hover:text-blue-700 duration-500 cursor-pointer"></i></div>
+                <div className=" z-50 absolute -right-24 top-80 duration-500 hover:scale-120!"><i className="text-4xl bi bi-chevron-double-right text-gray-300 hover:text-blue-700 duration-500 cursor-pointer"></i></div>
+                <div className=" z-50 absolute -left-10 top-80 duration-500 hover:scale-120!"><i className="text-4xl bi bi-chevron-double-left text-gray-300 hover:text-blue-700 duration-500 cursor-pointer"></i></div>
 
             </div>
                     
