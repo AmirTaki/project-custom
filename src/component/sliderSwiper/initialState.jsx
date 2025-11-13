@@ -1,1 +1,8 @@
-export const items = Array.from({length : 10000} ,(_,i)=> `Item ${i + 1}`)
+export const Items = Array.from({length : 500} ,(_,i)=> `img: ${i + 1}`)
+
+
+export const InitalStateItems = {
+    images : [
+        Items
+    ]
+}

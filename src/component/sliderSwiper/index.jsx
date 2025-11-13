@@ -1,14 +1,13 @@
 import { useEffect, useReducer, useState } from "react";
-
+import { InitalStateItems, Items } from "./initialState";
 
 const SliderSwiper = () => {
    const [cards, setCards]  = useState([])
   
    useEffect(() => {
-        const items = Array.from({length : 10000} ,(_,i)=> `Item ${i + 1}`)
-        items.map((item) => {
-            console.log(item)
-        })
+    //   Items.map(())
+    console.log(InitalStateItems)
+    // console.log(Items)
    })
     return(
         <div className="w-10 h-10 bg-amber-800"></div>
