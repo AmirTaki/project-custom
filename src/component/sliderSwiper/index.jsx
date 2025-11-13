@@ -14,12 +14,14 @@ const SliderSwiper = () => {
 
    },[])
     return(
-        <div className="slider">
-            {cards.map((card) => (
-                <div className="card" key = {card.id}>
-                    <img src="" alt={card.imgSrc} />
-                </div>
-            ))}
+        <div className="w-screen h-[80vh] overflow-hidden ">
+            <div className="slider">
+                {cards.map((card) => (
+                    <div className="card" key = {card.id}>
+                        <img src="" alt={card.imgSrc} />
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }
