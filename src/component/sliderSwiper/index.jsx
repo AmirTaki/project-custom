@@ -3,10 +3,12 @@ import { useEffect, useReducer, useState } from "react";
 
 const SliderSwiper = () => {
    const [cards, setCards]  = useState([])
-   const [state, dispatch] = useReducer()
+  
    useEffect(() => {
         const items = Array.from({length : 10000} ,(_,i)=> `Item ${i + 1}`)
-        console.log(items)
+        items.map((item) => {
+            console.log(item)
+        })
    })
     return(
         <div className="w-10 h-10 bg-amber-800"></div>
