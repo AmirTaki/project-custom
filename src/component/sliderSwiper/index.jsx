@@ -35,7 +35,10 @@ const SliderSwiper = () => {
                 </div>
             </div>
 
-            <i className={`bi bi-chevron-double-right  hover:scale-150  text-4xl  text-gray-300 hover:text-blue-700 duration-500 cursor-pointer`}></i>
+            <i 
+                onClick={() => {dispatch({type : 'rightCubesClick'})}}
+                className={`bi bi-chevron-double-right  hover:scale-150  text-4xl  text-gray-300 hover:text-blue-700 duration-500 cursor-pointer`}
+            ></i>
                     
         </div>
     )
