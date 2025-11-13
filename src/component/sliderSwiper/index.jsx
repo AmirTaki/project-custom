@@ -11,6 +11,12 @@ const SliderSwiper = () => {
             boxCubes.current.addEventListener('mousemove', (e) => {
                 dispatch({type: 'rotateCube', payload : {x : e.clientX, y: e.clientY, cube: boxCubes.current }})
             })
+            
+            return()=> {
+                boxCubes.current.removeEventListener('mousemove', (e) => {
+                    dispatch({type: 'rotateCube', payload : {x : e.clientX, y: e.clientY, cube: boxCubes.current }})
+                }) 
+            }
         }
     }, [])
 

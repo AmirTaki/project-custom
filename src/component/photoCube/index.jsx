@@ -19,11 +19,11 @@ const PhotoCube = () => {
             })
     
             return() => {
-                cubeBox.removeEventListener('mousemove', (e) => {
+                cubeBox.current.removeEventListener('mousemove', (e) => {
                     dispatch({type : "rotateCube", payload : {x : e.clientX, y : e.clientY, box : box.current}})
 
                 })
-                cubeBox.removeEventListener("mousedown", (e) => {
+                cubeBox.current.removeEventListener("mousedown", (e) => {
                    dispatch({type : "rotateCube", payload : {x : 255, y : -150, box : box.current}})
                 })
             }
