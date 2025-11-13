@@ -7,7 +7,7 @@ const SliderSwiper = () => {
    const [cubes, dispatch] =  useReducer(ReducerSwiperCube, InitialStateCubeSiwper )
     return(
         // cubeBox
-        <div className="w-full h-screen  overflow-hidden relative">
+        <div className="w-full h-screen  overflow-hidden relative flex justify- items-end ">
             {/* container */}
             <div className="w-[600px] h-[600px] absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 flex justify-center items-center perspective-[1000px]">
                 {/* box */}
@@ -29,15 +29,16 @@ const SliderSwiper = () => {
 
                 <button className="bg-white z-50" onClick={() => {dispatch({type: "handlerCubes", })}}>click me</button>
 
-                {/* button cubs */}
-                <div className="flex gap-10">
-
-                <div className="w-10 h-2 bg-red-500 absolute z-50 bottom-7 rounded-4xl cursor-pointer"></div>
-                <div className="w-10 h-2 bg-red-500 absolute z-50 bottom-7 rounded-4xl cursor-pointer"></div>
-                <div className="w-10 h-2 bg-red-500 absolute z-50 bottom-7 rounded-4xl cursor-pointer"></div>
-                </div>
             </div>
-        </div>
+            {/* button cubs */}
+            <div className="flex gap-4 justify-center items-center bg-amber-300  z-50">
+
+                <div className="w-10 h-2 bg-red-500  rounded-4xl cursor-pointer"></div>
+                <div className="w-10 h-2 bg-red-500  rounded-4xl cursor-pointer"></div>
+                <div className="w-10 h-2 bg-red-500  rounded-4xl cursor-pointer"></div>
+                <div className="w-10 h-2 bg-red-500  rounded-4xl cursor-pointer"></div>
+            </div>
+    </div>
     )
 }
 export default SliderSwiper;
