@@ -44,6 +44,7 @@ import ImgSliderTime from "../imageSliderTime/index.jsx"
 import ChangeSlider from "../changeSlider.jsx/index.jsx"
 import PhotoCube from "../photoCube/index.jsx"
 import CubeBoxSwiper from "../cubesSwiper.jsx/index.jsx"
+import CubeSlider from "../cubeSlider/index.jsx"
 
 
 // import SwiperTest from "../swiper/index.jsx"
@@ -64,7 +65,7 @@ const Home =  ()  => {
     const isDraggingNavigation = useRef(false)
     
     // veiw projects 
-    const  [view, setView] =   useState(true)   
+    const  [view, setView] =   useState(false)   
     return(
         <div 
         className={`bg-[#10131c]   min-h-[100vh] ${view ? "" : "flex! flex-col justify-center! items-center! "}`} 
@@ -214,6 +215,8 @@ const Home =  ()  => {
             </div>
       
             <div className="h-100 w-100 text-white"></div>
+            {/* cube slider */}
+            <CubeSlider />
         </div>   
     )
 }
