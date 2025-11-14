@@ -40,6 +40,15 @@ export const ReducerCubesSlider = (state, action) => {
             return {...state, touchStartX :e.changedTouches[0].clientX }
 
         case "handlerTouchEnd":
+            var {e} = action.payload
+            state.touchEndX = e.changedTouches[0].clientX;
+            const distance = state.touchStartX - state.touchEndX;
+            if(distance > 50) {
+                return {...state, index : (state.index - 1 + state.images.length) % state.images.length}
+            }
+            else if (distance < -50){
+                return {...state, index : (state.index + 1) % state.images.length}
+            }
             return {...state}
     }
 }
