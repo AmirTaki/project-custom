@@ -5,7 +5,8 @@ import { ReducerCubeSlider } from "./initialState";
 const CubeSlider = () => {
     const [state, dispatch]  = useReducer(ReducerCubeSlider, InitialStateCubeSiwper)
     return(
-        <div className=""></div>
+        // cube-container
+        <div className="w-[300px] h-[300px] bg-amber-600 relative m-auto perspective-[1000px]"></div>
     )
 }
 
