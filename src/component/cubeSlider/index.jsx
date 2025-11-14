@@ -6,7 +6,7 @@ const CubeSlider = () => {
     const [state, dispatch]  = useReducer(ReducerCubeSlider, InitialStateCubes)
     return(
         // cube-container
-        <div className="w-[300px] h-[300px] bg-amber-600 relative m-auto perspective-[1000px]">
+        <div className="w-[300px] h-[300px] bg-amber-600 relative m-auto perspective-[1000px] top-10">
             {/* cube */}
             <div
                 style={{transform : `rotateY(-${state.index * 90}deg)`}}
@@ -24,6 +24,18 @@ const CubeSlider = () => {
                     </div>
                 ))}
             </div>
+
+            {/* button */}
+            <button
+                className="absolute top-[50%] -translate-y-1/2 bg-white border-0 text-[1.5rem] cursor-pointer -left-[40px] "
+            >
+                ◀
+            </button>
+            <button
+                className="absolute top-[50%] -translate-y-1/2 bg-white border-0 text-[1.5rem] cursor-pointer -right-[40px] "
+            >
+                ▶
+            </button>
         </div>
     )
 }
