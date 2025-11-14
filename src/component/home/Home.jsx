@@ -47,6 +47,7 @@ import CubeBoxSwiper from "../cubesSwiper.jsx/index.jsx"
 import CubeSlider from "../cubeSlider/index.jsx"
 
 
+
 // import SwiperTest from "../swiper/index.jsx"
 
 // create context
@@ -216,6 +217,7 @@ const Home =  ()  => {
       
             {/* cube slider */}
             <CubeSlider />
+        
             <div className="h-100 w-100 text-white"></div>
         </div>   
     )

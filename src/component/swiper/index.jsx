@@ -1,37 +1,63 @@
-// import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+// import React, { useState, useEffect, useRef } from 'react';
+// import './styles.css';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+// const images = [
+//   'https://swiperjs.com/demos/images/nature-1.jpg',
+//   'https://swiperjs.com/demos/images/nature-2.jpg',
+//   'https://swiperjs.com/demos/images/nature-3.jpg',
+//   'https://swiperjs.com/demos/images/nature-4.jpg',
+// ];
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+// export default function CubeTest() {
+//   const [index, setIndex] = useState(0);
+//   const touchStartX = useRef(null);
+//   const touchEndX = useRef(null);
 
-const SwiperTest = () => {
-  return (
-     <Swiper
-      // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
-      slidesPerView={3}
-      navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
-      className='bg-white h-20 mySwiper'
-    >
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-    
-    </Swiper>
-  );
-};
-export default SwiperTest 
+//   // Auto-play every 4 seconds
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setIndex((prev) => (prev + 1) % images.length);
+//     }, 4000);
+//     return () => clearInterval(interval);
+//   }, []);
+
+//   // Touch gesture handlers
+//   const handleTouchStart = (e) => {
+//     touchStartX.current = e.touches[0].clientX;
+//   };
+
+//   const handleTouchEnd = (e) => {
+//     touchEndX.current = e.changedTouches[0].clientX;
+//     const distance = touchStartX.current - touchEndX.current;
+//     if (distance > 50) {
+//       // swipe left
+//       setIndex((prev) => (prev + 1) % images.length);
+//     } else if (distance < -50) {
+//       // swipe right
+//       setIndex((prev) => (prev - 1 + images.length) % images.length);
+//     }
+//   };
+
+//   return (
+//     <div className="w-[50vw] h-[50vh]">
+//           <div
+//       className="cube-slider"
+//       onTouchStart={handleTouchStart}
+//       onTouchEnd={handleTouchEnd}
+//     >
+//       <div className="slider-wrapper" style={{ transform: `rotateY(-${index * 90}deg)` }}>
+//         {images.map((src, i) => (
+//           <div key={i} className="slide" style={{ backgroundImage: `url(${src})` }} />
+//         ))}
+//       </div>
+//       <button className="nav left" onClick={() => setIndex((prev) => (prev - 1 + images.length) % images.length)}>‹</button>
+//       <button className="nav right" onClick={() => setIndex((prev) => (prev + 1) % images.length)}>›</button>
+//     </div>
+//     </div>
+
+//   );
+// }
+ 
 
 
 // https://swiperjs.com/demos#scrollbar
