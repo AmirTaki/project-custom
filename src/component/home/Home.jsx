@@ -45,7 +45,7 @@ import ChangeSlider from "../changeSlider.jsx/index.jsx"
 import PhotoCube from "../photoCube/index.jsx"
 import CubeBoxSwiper from "../cubesSwiper.jsx/index.jsx"
 import CubeSlider from "../cubeSlider/index.jsx"
-import CubeTestOne from "../sliderSwiper/index.jsx"
+// import CubeTestOne from "../sliderSwiper/index.jsx"
 
 
 

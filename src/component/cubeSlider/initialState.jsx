@@ -60,7 +60,16 @@ export const ReducerCubesSlider = (state, action) => {
         
         case "handlerEnd":
             var {client} = action.payload
-            console.log(client)
+            state.endX = client
+
+            const dis = state.startX - state.endX;
+            if(dis > 50){
+                return {...state, index : (state.index - 1 + state.images.length) % state.images.length}
+            }
+            else if (dis < -50){
+                return {...state, index : (state.index + 1) % state.images.length}
+
+            }
             return {...state,}
     }
 }
