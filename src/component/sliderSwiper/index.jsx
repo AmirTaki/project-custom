@@ -4,14 +4,19 @@ import './styles.css'
 
 const SliderSwiper = () => {
     const slider =  useRef(null)
-   const hadlerScroll = () => {
+    const hadlerScroll = () => {
         const scrollPos = window.screenY;
         const InitialTransform = `translate3d(-50%, -50%, 0) rotateX(0deg) rotateY(-25deg) rotateZ(-120deg)`;
         const zOffset = scrollPos * .5;
-        
-        slider.current?.style.transform = `${InitialTransform} translateY(${zOffset}px)`
+        if(slider.current){
+            slider.current.style.transform = `${InitialTransform} translateY(${zOffset}px)`
+        }
+    }
+    const handlerMouseOver = (e) => {
+        e.currentTarget.style.left = '15%'
+    }
 
-   }
+    const handlerMouseOut = 
     return(
         <div className="w-screen h-[80vh] overflow-auto  bg-red-600">
             <div ref = {slider} className="slider">
