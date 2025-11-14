@@ -10,10 +10,10 @@ const CubeSlider = () => {
         <div 
             ref = {cubeSliderRef}
             className="w-[300px] h-[300px] bg-amber-600 relative m-auto perspective-[1000px] top-10 select-all"
-            // onTouchStart={(e) => dispatch({type : 'handlerTouchStart', payload : {e : e}})}
-            // onTouchEnd = {(e) => dispatch({type : 'handlerTouchEnd', payload : {e : e}})}
-            onMouseDown={(e) => {dispatch({type : 'handlerStart', payload : {client : e.clientX, cubeRef : cubeSliderRef.current}})}}
-            onMouseUp={(e) => {dispatch({type : 'handlerEnd', payload : {client : e.clientX, cubeRef : cubeSliderRef.current}})}}
+            onTouchStart={(e) => dispatch({type : 'handlerTouchStart', payload : {e : e}})}
+            onTouchEnd = {(e) => dispatch({type : 'handlerTouchEnd', payload : {e : e}})}
+            onDragStart={(e) => {dispatch({type : 'handlerStart', payload : {client : e.clientX, cubeRef : cubeSliderRef.current}})}}
+            onDragEnd={(e) => {dispatch({type : 'handlerEnd', payload : {client : e.clientX, cubeRef : cubeSliderRef.current}})}}
         >
             {/* cube */}
             <div

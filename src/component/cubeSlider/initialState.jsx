@@ -68,9 +68,9 @@ export const ReducerCubesSlider = (state, action) => {
             var rect = cubeRef.getBoundingClientRect();
 
             state.endX = client - rect.left
+            console.log(state.startX, state.endX)
 
             const dis = state.startX - state.endX;
-            console.log(dis)
             if(dis > 50){
                 return {...state, index : (state.index - 1 + state.images.length) % state.images.length}
             }
@@ -78,6 +78,6 @@ export const ReducerCubesSlider = (state, action) => {
                 return {...state, index : (state.index + 1) % state.images.length}
 
             }
-            return {...state,}
+            // return {...state,}
     }
 }
