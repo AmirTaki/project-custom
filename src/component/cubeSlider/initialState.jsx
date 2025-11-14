@@ -23,3 +23,10 @@ export const  InitialStateCubeSwiper = {
         },
     ]
 }
+
+export const ReducerCubeSlider = (state, action) => {
+    switch(action.type){
+        case "" :
+            return {...state}
+    }
+}
