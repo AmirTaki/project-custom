@@ -27,11 +27,13 @@ const CubeSlider = () => {
 
             {/* button */}
             <button
+                onClick={() => {dispatch({type : "prevSlide"})}}
                 className="absolute top-[50%] -translate-y-1/2 bg-white border-0 text-[1.5rem] cursor-pointer -left-[40px] "
             >
                 ◀
             </button>
             <button
+                onClick={() => {dispatch({type : "nextSlide"})}}
                 className="absolute top-[50%] -translate-y-1/2 bg-white border-0 text-[1.5rem] cursor-pointer -right-[40px] "
             >
                 ▶

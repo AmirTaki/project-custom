@@ -27,7 +27,10 @@ export const  InitialStateCubes = {
 
 export const ReducerCubeSlider = (state, action) => {
     switch(action.type){
-        case "" :
-            return {...state}
+        case "prevSlide" :
+            return {...state, index : (index - 1 + state.images.length) % state.images.length}
+        
+        case 'nextSlide':
+            return {...state, index : (index + 1) % state.images.length}
     }
 }
