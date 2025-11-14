@@ -1,9 +1,9 @@
 import { useReducer } from "react";
-import { ReducerCubeSlider,InitialStateCubes } from "./initialState";
+import { ReducerCubesSlider,InitialStateCubes } from "./initialState";
 import './styles.css'
 
 const CubeSlider = () => {
-    const [state, dispatch]  = useReducer(ReducerCubeSlider, InitialStateCubes)
+    const [state, dispatch]  = useReducer(ReducerCubesSlider, InitialStateCubes)
     return(
         // cube-container
         <div className="w-[300px] h-[300px] bg-amber-600 relative m-auto perspective-[1000px] top-10">

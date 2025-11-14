@@ -25,12 +25,12 @@ export const  InitialStateCubes = {
     ]
 }
 
-export const ReducerCubeSlider = (state, action) => {
+export const ReducerCubesSlider = (state, action) => {
     switch(action.type){
         case "prevSlide" :
-            return {...state, index : (index - 1 + state.images.length) % state.images.length}
+            return {...state, index : (state.index - 1 + state.images.length) % state.images.length}
         
         case 'nextSlide':
-            return {...state, index : (index + 1) % state.images.length}
+            return {...state, index : (state.index + 1) % state.images.length}
     }
 }
