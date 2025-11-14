@@ -16,7 +16,14 @@ const SliderSwiper = () => {
         e.currentTarget.style.left = '15%'
     }
 
-    const handlerMouseOut = 
+    const handlerMouseOut = (e) => {
+        e.currentTarget.style.left = '0%'
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', hadlerScroll)
+        return () => {window.removeEventListener('scroll', hadlerScroll)}
+    }, [])
     return(
         <div className="w-screen h-[80vh] overflow-auto  bg-red-600">
             <div ref = {slider} className="slider">
