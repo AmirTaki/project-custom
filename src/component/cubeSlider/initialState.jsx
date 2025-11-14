@@ -30,6 +30,7 @@ export const  InitialStateCubes = {
 }
 
 export const ReducerCubesSlider = (state, action) => {
+
     switch(action.type){
         case "prevSlide" :
             return {...state, index : (state.index - 1 + state.images.length) % state.images.length}
@@ -54,15 +55,22 @@ export const ReducerCubesSlider = (state, action) => {
             return {...state}
 
         case "handlerStart" :
+            var {cubeRef} = action.payload
             var {client} = action.payload
+            var rect = cubeRef.getBoundingClientRect();
 
-            return {...state, startX : client}
+
+            return {...state, startX : client - rect.left}
         
         case "handlerEnd":
             var {client} = action.payload
-            state.endX = client
+            var {cubeRef} = action.payload
+            var rect = cubeRef.getBoundingClientRect();
+
+            state.endX = client - rect.left
 
             const dis = state.startX - state.endX;
+            console.log(dis)
             if(dis > 50){
                 return {...state, index : (state.index - 1 + state.images.length) % state.images.length}
             }

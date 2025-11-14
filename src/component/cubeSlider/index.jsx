@@ -1,18 +1,19 @@
-import { useReducer } from "react";
+import { useReducer, useRef } from "react";
 import { ReducerCubesSlider,InitialStateCubes } from "./initialState";
 import './styles.css'
 
 const CubeSlider = () => {
+    const cubeSliderRef = useRef(null)
     const [state, dispatch]  = useReducer(ReducerCubesSlider, InitialStateCubes)
     return(
         // cube-container
         <div 
-            onTouchCancel={false}
-            className="w-[300px] h-[300px] bg-amber-600 relative m-auto perspective-[1000px] top-10"
+            ref = {cubeSliderRef}
+            className="w-[300px] h-[300px] bg-amber-600 relative m-auto perspective-[1000px] top-10 select-all"
             // onTouchStart={(e) => dispatch({type : 'handlerTouchStart', payload : {e : e}})}
             // onTouchEnd = {(e) => dispatch({type : 'handlerTouchEnd', payload : {e : e}})}
-            onMouseDown={(e) => {dispatch({type : 'handlerStart', payload : {client : e.clientX}})}}
-            onMouseUp={(e) => {dispatch({type : 'handlerEnd', payload : {client : e.clientX}})}}
+            onMouseDown={(e) => {dispatch({type : 'handlerStart', payload : {client : e.clientX, cubeRef : cubeSliderRef.current}})}}
+            onMouseUp={(e) => {dispatch({type : 'handlerEnd', payload : {client : e.clientX, cubeRef : cubeSliderRef.current}})}}
         >
             {/* cube */}
             <div
