@@ -3,7 +3,7 @@ import img2 from "./images/pins (26).jpg"
 import img3 from "./images/pins (27).jpg"
 import img4 from "./images/pins (28).jpg"
 
-export const  InitialStateCubeSwiper = {
+export const  InitialStateCubes = {
     index : 0,
     images : [
         {
