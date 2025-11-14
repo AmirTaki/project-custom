@@ -1,0 +1,42 @@
+.coverflow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 40px;
+}
+
+.coverflow {
+  display: flex;
+  position: relative;
+  width: 600px;
+  height: 300px;
+  perspective: 1000px;
+  overflow: visible;
+}
+
+.coverflow-slide {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform-origin: center center;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.coverflow-slide img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+button {
+  background: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+}

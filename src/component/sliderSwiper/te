@@ -1,0 +1,36 @@
+import './styles.css';
+
+
+const images = [
+  '/images/img1.jpg',
+  '/images/img2.jpg',
+  '/images/img3.jpg',
+  '/images/img4.jpg',
+];
+
+const CubeSlider = () => {
+  const [index, setIndex] = useState(0);
+
+  const nextSlide = () => setIndex((index + 1) % images.length);
+  const prevSlide = () => setIndex((index - 1 + images.length) % images.length);
+
+  return (
+    <div className="cube-container">
+      <div className="cube" style={{ transform: `rotateY(-${index * 90}deg)` }}>
+        {images.map((src, i) => (
+          <div key={i} className="face">
+            <img src={src} alt={`Slide ${i}`} />
+          </div>
+        ))}
+      </div>
+      <button onClick={prevSlide}>◀</button>
+      <button onClick={nextSlide}>▶</button>
+    </div>
+  );
+};
+
+
+
+
+//https://www.youtube.com/watch?v=CCPZ6SsJVT8&t=4s
+// https://swiperjs.com/demos#scrollbar

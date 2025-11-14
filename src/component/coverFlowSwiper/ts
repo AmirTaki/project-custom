@@ -1,0 +1,53 @@
+import React, { useState } from 'react';
+import './CoverflowSlider.css';
+
+const images = [
+  '/images/img1.jpg',
+  '/images/img2.jpg',
+  '/images/img3.jpg',
+  '/images/img4.jpg',
+  '/images/img5.jpg',
+];
+
+const CoverflowSlider = () => {
+  const [activeIndex, setActiveIndex] = useState(2); // مرکز اسلایدر
+
+  const next = () => {
+    if (activeIndex < images.length - 1) setActiveIndex(activeIndex + 1);
+  };
+
+  const prev = () => {
+    if (activeIndex > 0) setActiveIndex(activeIndex - 1);
+  };
+
+  return (
+    <div className="coverflow-container">
+      <button onClick={prev}>◀</button>
+      <div className="coverflow">
+        {images.map((src, i) => {
+          const offset = i - activeIndex;
+          return (
+            <div
+              key={i}
+              className="coverflow-slide"
+              style={{
+                transform: `
+                  translateX(${offset * 100}px)
+                  scale(${Math.max(1 - Math.abs(offset) * 0.2, 0.6)})
+                  rotateY(${offset * 30}deg)
+                `,
+                zIndex: 100 - Math.abs(offset),
+                opacity: Math.max(1 - Math.abs(offset) * 0.3, 0.3),
+              }}
+            >
+              <img src={src} alt={`Slide ${i}`} />
+            </div>
+          );
+        })}
+      </div>
+      <button onClick={next}>▶</button>
+    </div>
+  );
+};
+
+export default CoverflowSlider;
