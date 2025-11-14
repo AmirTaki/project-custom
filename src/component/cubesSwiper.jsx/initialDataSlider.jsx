@@ -49,11 +49,11 @@ export const ReducerSwiperCube = (state, action) => {
 
     switch(action.type){
         case "leftCubesClick": 
-            state.rotate += 90
+            state.rotate -= 90
         return {...state}
 
         case "rightCubesClick" :
-            state.rotate -=90
+            state.rotate +=90
             return{...state,}
 
         case "cubeDragStart":
