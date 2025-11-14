@@ -6,7 +6,11 @@ const CubeSlider = () => {
     const [state, dispatch]  = useReducer(ReducerCubesSlider, InitialStateCubes)
     return(
         // cube-container
-        <div className="w-[300px] h-[300px] bg-amber-600 relative m-auto perspective-[1000px] top-10">
+        <div 
+            className="w-[300px] h-[300px] bg-amber-600 relative m-auto perspective-[1000px] top-10"
+            onTouchStart={(e) => dispatch({type : 'handlerTouchStart', payload : {e : e}})}
+            onTouchEnd = {() => dispatch({type : 'handlerTouchEnd'})}
+        >
             {/* cube */}
             <div
                 style={{transform : `rotateY(-${state.index * 90}deg)`}}

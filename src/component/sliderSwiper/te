@@ -1,36 +1,59 @@
-import './styles.css';
-
+import React, { useState, useEffect, useRef } from 'react';
+import './CubeSlider.css';
 
 const images = [
-  '/images/img1.jpg',
-  '/images/img2.jpg',
-  '/images/img3.jpg',
-  '/images/img4.jpg',
+  'https://swiperjs.com/demos/images/nature-1.jpg',
+  'https://swiperjs.com/demos/images/nature-2.jpg',
+  'https://swiperjs.com/demos/images/nature-3.jpg',
+  'https://swiperjs.com/demos/images/nature-4.jpg',
 ];
 
-const CubeSlider = () => {
+export default function CubeSlider() {
   const [index, setIndex] = useState(0);
+  const touchStartX = useRef(null);
+  const touchEndX = useRef(null);
 
-  const nextSlide = () => setIndex((index + 1) % images.length);
-  const prevSlide = () => setIndex((index - 1 + images.length) % images.length);
+  // Auto-play every 4 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Touch gesture handlers
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e) => {
+    touchEndX.current = e.changedTouches[0].clientX;
+    const distance = touchStartX.current - touchEndX.current;
+    if (distance > 50) {
+      // swipe left
+      setIndex((prev) => (prev + 1) % images.length);
+    } else if (distance < -50) {
+      // swipe right
+      setIndex((prev) => (prev - 1 + images.length) % images.length);
+    }
+  };
 
   return (
-    <div className="cube-container">
-      <div className="cube" style={{ transform: `rotateY(-${index * 90}deg)` }}>
+    <div
+      className="cube-slider"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
+      <div className="slider-wrapper" style={{ transform: `rotateY(-${index * 90}deg)` }}>
         {images.map((src, i) => (
-          <div key={i} className="face">
-            <img src={src} alt={`Slide ${i}`} />
-          </div>
+          <div key={i} className="slide" style={{ backgroundImage: `url(${src})` }} />
         ))}
       </div>
-      <button onClick={prevSlide}>◀</button>
-      <button onClick={nextSlide}>▶</button>
+      <button className="nav left" onClick={() => setIndex((prev) => (prev - 1 + images.length) % images.length)}>‹</button>
+      <button className="nav right" onClick={() => setIndex((prev) => (prev + 1) % images.length)}>›</button>
     </div>
   );
-};
-
-
-
+}
 
 //https://www.youtube.com/watch?v=CCPZ6SsJVT8&t=4s
 // https://swiperjs.com/demos#scrollbar

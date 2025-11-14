@@ -4,6 +4,8 @@ import img3 from "./images/pins (27).jpg"
 import img4 from "./images/pins (28).jpg"
 
 export const  InitialStateCubes = {
+    touchStartX : 0,
+    touchEndX : 0,
     index : 0,
     images : [
         {
@@ -32,5 +34,12 @@ export const ReducerCubesSlider = (state, action) => {
         
         case 'nextSlide':
             return {...state, index : (state.index + 1) % state.images.length}
+
+        case "handlerTouchStart":
+            var {e} = action.payload
+            return {...state, touchStartX :e.changedTouches[0].clientX }
+
+        case "handlerTouchEnd":
+            return {...state}
     }
 }
