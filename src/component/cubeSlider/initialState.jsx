@@ -6,6 +6,8 @@ import img4 from "./images/pins (28).jpg"
 export const  InitialStateCubes = {
     touchStartX : 0,
     touchEndX : 0,
+    startX : 0,
+    endX : 0,
     index : 0,
     images : [
         {
@@ -50,5 +52,21 @@ export const ReducerCubesSlider = (state, action) => {
                 return {...state, index : (state.index + 1) % state.images.length}
             }
             return {...state}
+
+        case "handlerStart" :
+            var {e} = action.payload
+            return {...state, startX : e.clientX}
+        
+        case "handlerEnd":
+            var {e} = action.payload
+            state.endX = e.clientX
+            const dis = state.startX - state.endX;
+                if(dis > 50) {
+                return {...state, index : (state.index - 1 + state.images.length) % state.images.length}
+            }
+            else if (dis < -50){
+                return {...state, index : (state.index + 1) % state.images.length}
+            }
+            return {...state,}
     }
 }
