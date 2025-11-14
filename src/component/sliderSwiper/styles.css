@@ -17,4 +17,5 @@
     border-radius: 12px;
     overflow: hidden;
     margin: -300px 0;
+    transition: 1s cubic-bezier(.0.75, .82, .165, 1);
 }

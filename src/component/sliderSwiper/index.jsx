@@ -1,24 +1,16 @@
-import { useEffect, useReducer, useState } from "react";
+import { useEffect, useReducer, useRef, useState } from "react";
 import { InitalStateItems, } from "./initialState";
 import './styles.css'
 
 const SliderSwiper = () => {
-   const [cards, setCards]  = useState([])
-  
-   useEffect(() => {
-    const newCards = InitalStateItems.Images.map((img) => ({
-        id : img.id + 1,
-        imgSrc : img.src
-    }))
+    const slider =  useRef(null)
+   const hadlerScroll = () => {
+        const scrollPos = window.screenY;
 
-    setCards(newCards)
-
-    console.log(InitalStateItems.Images)
-
-   },[])
+   }
     return(
-        <div className="w-screen h-[80vh] overflow-hidden ">
-            <div className="slider">
+        <div className="w-screen h-[80vh] overflow-auto  bg-red-600">
+            <div ref = {slider} className="slider">
                 {InitalStateItems.Images.map((card) => (
                     <div className="card" key = {card.id}>
                         <img src={card.src} alt={card.src} />
