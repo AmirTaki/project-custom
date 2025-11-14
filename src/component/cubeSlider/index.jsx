@@ -9,10 +9,10 @@ const CubeSlider = () => {
         <div 
             onTouchCancel={false}
             className="w-[300px] h-[300px] bg-amber-600 relative m-auto perspective-[1000px] top-10"
-            onTouchStart={(e) => dispatch({type : 'handlerTouchStart', payload : {e : e}})}
-            onTouchEnd = {(e) => dispatch({type : 'handlerTouchEnd', payload : {e : e}})}
-            onMouseDown={(e) => {dispatch({type : 'handlerStart', payload : {e : e}})}}
-            onMouseUp={(e) => {dispatch({type : 'handlerEnd', payload : {e : e}})}}
+            // onTouchStart={(e) => dispatch({type : 'handlerTouchStart', payload : {e : e}})}
+            // onTouchEnd = {(e) => dispatch({type : 'handlerTouchEnd', payload : {e : e}})}
+            onMouseDown={(e) => {dispatch({type : 'handlerStart', payload : {client : e.clientX}})}}
+            onMouseUp={(e) => {dispatch({type : 'handlerEnd', payload : {client : e.clientX}})}}
         >
             {/* cube */}
             <div

@@ -45,6 +45,7 @@ import ChangeSlider from "../changeSlider.jsx/index.jsx"
 import PhotoCube from "../photoCube/index.jsx"
 import CubeBoxSwiper from "../cubesSwiper.jsx/index.jsx"
 import CubeSlider from "../cubeSlider/index.jsx"
+import CubeTestOne from "../sliderSwiper/index.jsx"
 
 
 
@@ -217,7 +218,7 @@ const Home =  ()  => {
       
             {/* cube slider */}
             <CubeSlider />
-        
+            {/* <CubeTestOne /> */}
             <div className="h-100 w-100 text-white"></div>
         </div>   
     )

@@ -54,19 +54,13 @@ export const ReducerCubesSlider = (state, action) => {
             return {...state}
 
         case "handlerStart" :
-            var {e} = action.payload
-            return {...state, startX : e.clientX}
+            var {client} = action.payload
+
+            return {...state, startX : client}
         
         case "handlerEnd":
-            var {e} = action.payload
-            state.endX = e.clientX
-            const dis = state.startX - state.endX;
-                if(dis > 50) {
-                return {...state, index : (state.index - 1 + state.images.length) % state.images.length}
-            }
-            else if (dis < -50){
-                return {...state, index : (state.index + 1) % state.images.length}
-            }
+            var {client} = action.payload
+            console.log(client)
             return {...state,}
     }
 }
