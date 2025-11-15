@@ -40,7 +40,7 @@ import ShareButton from "../shareButton/index.jsx"
 import RotatingCard from "../rotatingCards/index.jsx"
 import PureRadio from "../RadioButton/index.jsx"
 import SliderClientSwiper from "../sliderClient/index.jsx"
-import ImgSliderTime from "../imageSliderTime/index.jsx"
+import SliderLoop from "../imageSliderTime/index.jsx"
 import ChangeSlider from "../changeSlider.jsx/index.jsx"
 import PhotoCube from "../photoCube/index.jsx"
 
@@ -192,7 +192,7 @@ const Home =  ()  => {
                 <SliderClientSwiper />
 
                 {/* slider image swiper practice source code */}
-                <ImgSliderTime />
+                <SliderLoop />
 
                 {/* change slider swiper */}
                 <ChangeSlider />

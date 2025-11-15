@@ -1,9 +1,10 @@
-.scrllBar::-webkit-scrollbar {
+.scrollbarWrapper::-webkit-scrollbar {
     display: hidden;
 }
 
 .animationChangeImage {
     animation: changeImage 1s forwards linear;
+
 }
 @keyframes changeImage  {
     from {

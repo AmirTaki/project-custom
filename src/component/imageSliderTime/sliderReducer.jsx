@@ -1,63 +1,25 @@
-export const ReducerSlider = (state, action) => {
-
-    // const length = state.images.length 
-    const length = state.images.length - 1    
-    const handlerDrag = () => {
-        var {sliderRef} = action.payload
-        var {e} = action.payload
-        var rect = sliderRef.getBoundingClientRect();
-        var x = e.clientX - rect.left
-        return x
-    }
-
-    switch(action.type){ 
-        case "right":
-            state.index >= length ? state.index =  0 : state.index += 1
-            // state.index = (state.index  +  1) % length
-            return {...state, }
+export const ReducerSliderTime = (state, action) => {
+    const length = state.items.length ;
+    const add =  (state.index  +  1) % length
+    const min = (state.index - 1 + length) % length
+   
+    switch(action.type){
+        case "handlerStart":
+            return {...state, startX : action.payload.event }
         
-        case "left" : 
-            state.index == 0 ? state.index = length   : state.index -= 1
-            // state.index = (state.index - 1 + length) % length
-            return {...state}
-
-        case "dots":
-            return{...state, index : action.payload.place}
-        
-        case "changeImage":
-            var {sliderRef} = action.payload
-            if(sliderRef){
-                sliderRef.style.scrollBehavior = "smooth"
-                sliderRef.scrollLeft = state.index * sliderRef.offsetWidth;
-            }
-            return {...state}
-        
-        case "handlerDragStart":
-            var {event} = action.payload
-            var {MouseXStart} = action.payload;
-            MouseXStart = event
+        case "handlerEnd" :
+            return {...state, endX : action.payload.event, }
             
-      
-            return{...state, dragStart : event}
+        case "handlerRollImage" :
+            return {...state, index : state.startX > state.endX ? add : min} 
+        
+        case "leftButtonSlider":
+            return {...state, index : min}
+        
+        case 'rightButtonSlider' : 
+            return {...state, index : add}
 
-        case "handlerDragEnd":
-            var {event} = action.payload
-            var {MouseXStart} = action.payload;
-            var {MouseXEnd} = action.payload;
-            MouseXEnd = event
-            
-            const distance = MouseXStart - MouseXEnd
-            console.log(distance)
-            if (distance > 50 ){
-                state.index >= length ? state.index =  0 : state.index += 1
-                return {...state, }
-            }   
-            else if (distance < -50) {
-                state.index == 0 ? state.index = length   : state.index -= 1
-                return {...state}
-            }
-
-        default : 
-            return {...state}    
+        case "dotsSldier" : 
+            return {...state, index : action.payload.place}
     }
 }
