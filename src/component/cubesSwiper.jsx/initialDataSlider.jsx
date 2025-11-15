@@ -4,8 +4,8 @@ import img3 from "./img/c5.jpg"
 import img4 from "./img/c6.jpg"
 
 export const InitialStateCubeSiwper = {
-    dragStart: 0,
-    dragEnd: 0,
+    startX: 0,
+    endX: 0,
     rotate : 0,
     images : [
         {
@@ -56,10 +56,10 @@ export const ReducerSwiperCube = (state, action) => {
             state.rotate +=90
             return{...state,}
 
-        case "cubeDragStart":
+        case "handerStart":
             return {...state, dragStart : HandlerDrag()}
 
-        case "cubeDragEnd":
+        case "handlerEnd":
             const dragEnd = HandlerDrag();
             state.dragStart > dragEnd ? state.rotate -=90 : state.rotate += 90
             return {...state, dragEnd: HandlerDrag() }
