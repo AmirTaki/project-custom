@@ -1,6 +1,9 @@
-const CubeBox = ({cubes}) => {
+const CubeBox = ({cubes, dispatch}) => {
     return(
-        <div className="w-[700px] h-[700px]  overflow-hidden relative flex justify-center itmes-center cursor-pointer">
+        <div 
+            onMouseDown={(e) => {dispatch({type : "handerStart", payload : {e : e.clientX}})}}
+            onMouseUp={(e) => {dispatch({type : "handlerEnd", payload : {e : e.clientX}})}}
+            className="w-[700px] h-[700px]  overflow-hidden relative flex justify-center itmes-center cursor-pointer">
             {/* container */}
             <div className="w-[500px] h-[500px]  flex justify-center items-center  perspective-[1300px]">
                 {/* box */}

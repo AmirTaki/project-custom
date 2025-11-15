@@ -41,12 +41,6 @@ export const InitialStateCubeSiwper = {
 
 export const ReducerSwiperCube = (state, action) => {
 
-    const HandlerDrag = () => {
-        var {boxCubes, e} = action.payload
-        var rect = boxCubes.getBoundingClientRect();
-        return e.clientX - rect.left;
-    }
-
     switch(action.type){
         case "leftCubesClick": 
             state.rotate -= 90
@@ -63,7 +57,17 @@ export const ReducerSwiperCube = (state, action) => {
         case "handlerEnd":
             var {e} = action.payload;
             state.endX = e;
-            
+            const distance = state.startX - state.endX;
+            if(distance > 50){
+                state.rotate += 90;
+                return{...state, }
+            }
+            else if  (distance < -50) {
+                state.rotate -= 90;
+                return{...state, }
+            }
+       
+
           
     }
 }

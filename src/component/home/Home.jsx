@@ -199,13 +199,13 @@ const Home =  ()  => {
                 <ChangeSlider />
 
                 {/* phonto cube 3D */}
-                <PhotoCube />
+                {/* <PhotoCube /> */}
 
                 {/* cube box swiper */}
                 <CubeBoxSwiper />
        
                 {/* cube slider */}
-                <CubeSlider />
+                {/* <CubeSlider /> */}
 
                 {/* footer animated */}
                 <FooterAnimated />
