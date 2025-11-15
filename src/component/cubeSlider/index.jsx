@@ -23,12 +23,13 @@ const CubeSlider = () => {
                 {state.images.map((item) => (
                     // face
                     <div 
+                        style={{backgroundImage : `url(${item.img})`}}
                         key = {item.id}
-                        className="absolute w-full  h-full backface-hidden face-cube"
+                        className="absolute w-[300px]  h-[300px] backface-hidden face-cube"
                     >
-                        <img src={item.img} alt=""
+                        {/* <img src={item.img} alt=""
                             className="w-full h-full object-cover"
-                        />
+                        /> */}
                     </div>
                 ))}
             </div>

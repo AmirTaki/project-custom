@@ -1,8 +1,7 @@
 const CubeBox = ({cubes, dispatch}) => {
     return(
         <div 
-            onMouseDown={(e) => {dispatch({type : "handerStart", payload : {e : e.clientX}})}}
-            onMouseUp={(e) => {dispatch({type : "handlerEnd", payload : {e : e.clientX}})}}
+          
             className="w-[700px] h-[700px]  overflow-hidden relative flex justify-center itmes-center cursor-pointer">
             {/* container */}
             <div className="w-[500px] h-[500px]  flex justify-center items-center  perspective-[1300px]">
@@ -14,10 +13,10 @@ const CubeBox = ({cubes, dispatch}) => {
                     {/* cubs images */}
                     {cubes.images.map((cube) => (
                         <div 
-                            // style={{ backgroundImage: `url(${cube.img})` }}
-                            style = {{background : `#${cube.color}`}}
+                            style={{ backgroundImage: `url(${cube.img})` }}
+                            // style = {{background : `#${cube.color}`}}
                             key = {cube.id}
-                            className={`${cube.name} w-[350px] h-[350px]   absolute overflow-hidden  `
+                            className={`${cube.name} w-[400px] h-[400px]  z-10 absolute overflow-hidden  `
                         }
                         >
                         </div>

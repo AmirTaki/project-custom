@@ -4,6 +4,8 @@ import { ReducerSlider } from "./sliderReducer";
 import "./styles.css"
 const ImgSliderTime = () => {
     const sliderRef = useRef(null)
+    const MouseXStart = useRef(null)
+    const MouseXEnd = useRef(null)
 
     const [state, dispatch] = useReducer (ReducerSlider, DataImage) ;
     useEffect(() => {
@@ -24,19 +26,16 @@ const ImgSliderTime = () => {
         <div  className=" w-[1300px] max-w-[97vw]  h-[600px] m-auto relative bg-transparent overflow-hidden top-10 max-md:h-[400px]! ">
            {/* list */}
            <div
-                draggable={true}
-                onDragStart={(e) => {dispatch({type : "handlerDragStart", payload : {e : e, sliderRef : sliderRef.current}})}}
-                onDragEnd={(e) => {dispatch({type : "handlerDragEnd", payload : {e : e, sliderRef : sliderRef.current}})}}
+                onMouseDown={(e) => {dispatch({type : "handlerDragStart", payload : {event : e.clientX, mouseX : MouseXStart.current }})}}
+                onMouseUp={(e) => {dispatch({type : "handlerDragEnd", payload : {event : e.clientX, mouseX: MouseXEnd.current}})}}
                 ref = {sliderRef} 
                 className={` absolute top-0 left-0  w-full h-full bg-transparent flex flex-col flex-wrap overflow-x-hidden scrllBar  cursor-pointer`}
             >
                {state.images.map((item) => (
                     // item
-                    <div key = {item.id}  
-                        className={`${item.id === state.index ? "animationChangeImage " : ""}  w-full h-full bg-blue-500`}>
-                        <img 
-                            className=" w-full h-full object-cover max-md:object-center!"
-                            src={item.img} alt="" />
+                    <div key = {item.id} 
+                        style={{backgroundImage : `url(${item.img})`}} 
+                        className={`${item.id === state.index ? "animationChangeImage " : ""}  w-full h-full bg-cover  bg-center bg-blue-500`}>
                     </div>
                 ))}
         
