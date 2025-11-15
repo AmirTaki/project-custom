@@ -37,23 +37,25 @@ export const ReducerSlider = (state, action) => {
             var {MouseXStart} = action.payload;
             MouseXStart = event
             
+      
             return{...state, dragStart : event}
 
         case "handlerDragEnd":
             var {event} = action.payload
+            var {MouseXStart} = action.payload;
             var {MouseXEnd} = action.payload;
             MouseXEnd = event
             
             const distance = MouseXStart - MouseXEnd
-
+            console.log(distance)
             if (distance > 50 ){
+                state.index >= length ? state.index =  0 : state.index += 1
                 return {...state, }
             }   
             else if (distance < -50) {
-
+                state.index == 0 ? state.index = length   : state.index -= 1
+                return {...state}
             }
-
-            return {...state}
 
         default : 
             return {...state}    
