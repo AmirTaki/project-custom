@@ -66,6 +66,7 @@ export const ReducerSwiperCube = (state, action) => {
                 state.rotate -= 90;
                 return{...state, }
             }
+            return {...state}
        
 
           

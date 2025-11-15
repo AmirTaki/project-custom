@@ -14,11 +14,12 @@ const CubeBox = ({cubes, dispatch}) => {
                     {/* cubs images */}
                     {cubes.images.map((cube) => (
                         <div 
-                            style={{backgroundColor : `#${cube.color}`}}
+                            // style={{ backgroundImage: `url(${cube.img})` }}
+                            style = {{background : `#${cube.color}`}}
                             key = {cube.id}
-                            className={`${cube.name} w-[400px] h-[400px]   absolute overflow-hidden  `}
+                            className={`${cube.name} w-[350px] h-[350px]   absolute overflow-hidden  `
+                        }
                         >
-                            <img src={cube.img} className="w-full h-full bg-cover" alt="" />
                         </div>
                     ))}
                 </div>
