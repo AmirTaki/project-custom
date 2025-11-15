@@ -12,14 +12,14 @@ const ImgSliderTime = () => {
         dispatch({type:"changeImage", payload : {sliderRef : sliderRef.current}})
     }, [state.index])
 
-    useEffect(() => {
-        const timer = setInterval(() => {
-            dispatch({type : "right"})
-        }, 3000)   
-        return() => {
-            clearInterval(timer)
-        }
-    })
+    // useEffect(() => {
+    //     const timer = setInterval(() => {
+    //         dispatch({type : "right"})
+    //     }, 3000)   
+    //     return() => {
+    //         clearInterval(timer)
+    //     }
+    // })
 
     return(
         // slider
