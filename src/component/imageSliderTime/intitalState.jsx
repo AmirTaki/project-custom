@@ -6,7 +6,11 @@ import pins5 from "./image/pins5.jpg"
 import pins6 from "./image/pins6.jpg"
 import pins7 from "./image/pins7.jpg"
 import pins8 from "./image/pins8.jpg"
-
+import img1 from "./image/img1.jpg"
+import img2 from "./image/img2.jpg"
+import img3 from "./image/img3.jpg"
+import img4 from "./image/img4.jpg"
+import img5 from "./image/img5.jpg"
 
 export const InitialStateTime = {
     index : 0,
@@ -52,6 +56,31 @@ export const InitialStateTime = {
             id : 7, 
             color : 'pink',
             img : pins8,
+        },
+        {
+            id : 8, 
+            color : 'white',
+            img : img1,
+        },
+        {
+            id : 9,
+            color : 'silver',
+            img : img2,
+        },
+        {
+            id :10, 
+            color : 'orange',
+            img : img3,
+        },
+        {
+            id : 11, 
+            color : 'yellow',
+            img : img4,
+        },
+        {
+            id : 12, 
+            color : 'pink',
+            img : img5,
         },
 
     ],

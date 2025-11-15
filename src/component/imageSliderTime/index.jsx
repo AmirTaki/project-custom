@@ -39,7 +39,7 @@ const SliderLoop = () => {
                 onTouchEnd={(e) => {dispatch({type: "handlerEnd", payload : {event : e.changedTouches[0].clientX}})}}
                 onMouseDown={(e) => {dispatch({type : 'handlerStart', payload : {event : e.clientX}})}}
                 onMouseUp={(e) => {dispatch({type : 'handlerEnd', payload : {event : e.clientX}})}}                
-                className="w-[80vw] h-[80vh] bg-amber-800 flex flex-col flex-wrap  overflow-hidden select-none scrollbarWrapper cursor-pointer "
+                className="w-[80vw] h-[80vh] bg-transparent flex flex-col flex-wrap  overflow-hidden select-none scrollbarWrapper cursor-pointer "
                 >
                 
                 {/* slider */}
@@ -47,7 +47,7 @@ const SliderLoop = () => {
                     <div 
                         key = {item.id}
                         style={{ backgroundImage: `url(${item.img})`}}
-                        className= {`w-full h-full bg-no-repeat    bg-cover bg-center`}
+                        className= {`${item.id === slider.index ?  'animationChangeImage' : ""}  w-full h-full bg-no-repeat    bg-cover bg-center`}
                     ></div>
                 ))}
     
