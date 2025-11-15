@@ -27,7 +27,7 @@ const ImgSliderTime = () => {
            {/* list */}
            <div
                 onMouseDown={(e) => {dispatch({type : "handlerDragStart", payload : {event : e.clientX, MouseXStart : MouseXStart.current }})}}
-                onMouseUp={(e) => {dispatch({type : "handlerDragEnd", payload : {event : e.clientX, MouseXEnd : MouseXEnd.current }})}}
+                onMouseUp={(e) => {dispatch({type : "handlerDragEnd", payload : {event : e.clientX, MouseXEnd : MouseXEnd.current , MouseXStart : MouseXStart.current}})}}
                 ref = {sliderRef} 
                 className={` absolute top-0 left-0  w-full h-full bg-transparent flex flex-col flex-wrap overflow-x-hidden scrllBar  cursor-pointer`}
             >
