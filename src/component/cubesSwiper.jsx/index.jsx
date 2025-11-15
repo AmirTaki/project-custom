@@ -10,8 +10,8 @@ const CubeBoxSwiper = () => {
     return(
         <div ref = {boxCubes} 
             className="w-full flex justify-center items-center relative"
-            onMouseDown={(e) => {dispatch({type : "handerStart", payload : {e : e, boxCubes : boxCubes.current}})}}
-            onMouseUp={(e) => {dispatch({type : "handlerEnd", payload : {e : e, boxCubes : boxCubes.current}})}}
+            onMouseDown={(e) => {dispatch({type : "handerStart", payload : {e : e.clientX}})}}
+            onMouseUp={(e) => {dispatch({type : "handlerEnd", payload : {e : e.clientX}})}}
         >
             <i 
                 onClick={() => {dispatch({type : 'leftCubesClick'})}}
