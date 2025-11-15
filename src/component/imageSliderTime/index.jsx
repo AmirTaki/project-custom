@@ -26,8 +26,8 @@ const ImgSliderTime = () => {
         <div  className=" w-[1300px] max-w-[97vw]  h-[600px] m-auto relative bg-transparent overflow-hidden top-10 max-md:h-[400px]! ">
            {/* list */}
            <div
-                onMouseDown={(e) => {dispatch({type : "handlerDragStart", payload : {event : e.clientX, mouseX : MouseXStart.current }})}}
-                onMouseUp={(e) => {dispatch({type : "handlerDragEnd", payload : {event : e.clientX, mouseX: MouseXEnd.current}})}}
+                onMouseDown={(e) => {dispatch({type : "handlerDragStart", payload : {event : e.clientX, MouseXStart : MouseXStart.current }})}}
+                onMouseUp={(e) => {dispatch({type : "handlerDragEnd", payload : {event : e.clientX, MouseXEnd : MouseXEnd.current }})}}
                 ref = {sliderRef} 
                 className={` absolute top-0 left-0  w-full h-full bg-transparent flex flex-col flex-wrap overflow-x-hidden scrllBar  cursor-pointer`}
             >
@@ -42,7 +42,7 @@ const ImgSliderTime = () => {
            </div>
 
             {/* buttons */}
-            <div className="absolute top-[45%] left-[5%] w-[90%] flex justify-between ">
+            <div className="absolute top-[45%] left-[5%] w-[90%] flex justify-between z-50! ">
                 {state.buttons.map((item) => (
                     <button 
                         key = {item.id}  
