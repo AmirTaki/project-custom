@@ -39,10 +39,10 @@ export const InitailState = {
 
 
 
-export const reducer = (state, action) => {
+export const reducerChangeImage = (state, action) => {
     const length = state.images.length 
     switch(action.type){
-        case "changeBgImg": 
+        case "changeBackGroundImageTime": 
             return {...state, index : (state.index  +  1) % length}
     }
 }

@@ -1,19 +1,19 @@
 import { useEffect, useReducer, useRef, useState } from "react";
-import { InitailState, reducer } from "./initialState";
+import { InitailState,  reducerChangeImage } from "./initialState";
 
 const ChangeSlider = () => {
     const imageRef =  useRef(null)
   
-    const [state, dispatch] =  useReducer(reducer, InitailState)
+    const [state, dispatch] =  useReducer(reducerChangeImage, InitailState)
   
+
     useEffect(() => {
         const timer =  setInterval(() => {
-            dispatch({type: 'changeBgImg'})
-        }, 3000)
-        return () => {
-            clearInterval(timer)
-        }
+            dispatch({type : "changeBackGroundImageTime"})
+        }, 4000)   
+        return () => {clearInterval(timer)}
     })
+
     return(   
         <div className=" flex justify-center items-center">
             <div
