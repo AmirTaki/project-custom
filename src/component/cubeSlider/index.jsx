@@ -1,54 +1,54 @@
-import { useReducer, useRef } from "react";
-import { ReducerCubesSlider,InitialStateCubes } from "./initialState";
-import './styles.css'
+import { useEffect, useReducer,} from 'react';
+import { InitialStateCubes, ReducerCubes } from './initialState';
+import './slidersCubs.css'
 
-const CubeSlider = () => {
-    const cubeSliderRef = useRef(null)
-    const [state, dispatch]  = useReducer(ReducerCubesSlider, InitialStateCubes)
+const ImageSliderCubs = () => {
+    const [state, dispatch] = useReducer(ReducerCubes, InitialStateCubes)
+
+    useEffect(() => {
+        dispatch({type : "handlerChangeBg"}) 
+    }, [state.end])
+
     return(
-        // cube-container
-        <div 
-            ref = {cubeSliderRef}
-            className="w-[300px] h-[300px] bg-amber-600 relative m-auto perspective-[1000px] top-10 select-all"
-            onTouchStart={(e) => dispatch({type : 'handlerTouchStart', payload : {e : e}})}
-            onTouchEnd = {(e) => dispatch({type : 'handlerTouchEnd', payload : {e : e}})}
-            onDragStart={(e) => {dispatch({type : 'handlerStart', payload : {client : e.clientX, cubeRef : cubeSliderRef.current}})}}
-            onDragEnd={(e) => {dispatch({type : 'handlerEnd', payload : {client : e.clientX, cubeRef : cubeSliderRef.current}})}}
-        >
-            {/* cube */}
-            <div
-                style={{transform : `rotateY(-${state.index * 90}deg)`}}
-                className="w-full h-full relative transform-3d transition-all duration-1000"
+        <div className="relative">
+            {/* cube-slider */}
+            <div 
+                onMouseDown = {(e) => {dispatch({type : 'handlerStart', payload : {event : e.clientX }})}}
+                onTouchStart = {(e) => {dispatch({type : 'handlerStart', payload : {event : e.changedTouches[0].clientX}})}}
+                
+                onMouseUp = {(e) => {dispatch({type : 'handlerEnd', payload : {event : e.clientX}})}}
+                onTouchEnd = {(e) => {dispatch({type : 'handlerEnd', payload : {event : e.changedTouches[0].clientX}})}}
+          
+                className="containerCube "
             >
+                {/* slide-wrapper */}
+                <div 
+                    className="sliderWrapper"
+                    style={{ transform: `rotateY(-${state.index * 90}deg)` }}
+                >
+
                 {state.images.map((item) => (
-                    // face
-                    <div 
-                        style={{backgroundImage : `url(${item.img})`}}
-                        key = {item.id}
-                        className="absolute w-[300px]  h-[300px] backface-hidden face-cube"
-                    >
-                        {/* <img src={item.img} alt=""
-                            className="w-full h-full object-cover"
-                        /> */}
+                    <div className="slideImage bg-amber-700!" key = {item.id}  style={{ backgroundImage: `url(${item.img})` }}>
                     </div>
                 ))}
-            </div>
+                </div>
 
-            {/* button */}
-            <button
-                onClick={() => {dispatch({type : "prevSlide"})}}
-                className="absolute top-[50%] -translate-y-1/2 bg-white border-0 text-[1.5rem] cursor-pointer -left-[40px] "
-            >
-                ◀
-            </button>
-            <button
-                onClick={() => {dispatch({type : "nextSlide"})}}
-                className="absolute top-[50%] -translate-y-1/2 bg-white border-0 text-[1.5rem] cursor-pointer -right-[40px] "
-            >
-                ▶
-            </button>
+                <div className=" z-100! nav -left-[50px] "
+                    onClick={() => {dispatch({type : "handlerLeft"})}}
+                >
+                    <i className="bi bi-chevron-double-left"></i>
+                </div>
+                <div 
+                    className=" z-100! nav -right-[50px]"
+                    onClick={() => {dispatch({type : "handlerRight"})}}
+                >
+                  <i className="bi bi-chevron-double-right"></i>
+                </div>
+
+
+            </div>
         </div>
     )
 }
 
-export default CubeSlider;
+export default ImageSliderCubs;

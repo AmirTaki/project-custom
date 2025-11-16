@@ -1,14 +1,12 @@
-import img1 from "./images/pins (25).jpg"
-import img2 from "./images/pins (26).jpg"
-import img3 from "./images/pins (27).jpg"
-import img4 from "./images/pins (28).jpg"
+import img1 from "./images/pins1.jpg"
+import img2 from "./images/pins2.jpg"
+import img3 from "./images/pins3.jpg"
+import img4 from "./images/pins4.jpg"
 
-export const  InitialStateCubes = {
-    touchStartX : 0,
-    touchEndX : 0,
-    startX : 0,
-    endX : 0,
+export const InitialStateCubes = {
     index : 0,
+    start : 0, 
+    end : 0,
     images : [
         {
             id : 0, 
@@ -29,55 +27,34 @@ export const  InitialStateCubes = {
     ]
 }
 
-export const ReducerCubesSlider = (state, action) => {
+export const ReducerCubes = (state, action) => {
 
+    const len = state.images.length
+    const add = (state.index + 1) % len
+    const min = (state.index - 1  + len) % len
+ 
     switch(action.type){
-        case "prevSlide" :
-            return {...state, index : (state.index - 1 + state.images.length) % state.images.length}
+        case "handlerStart" :
+            return {...state, start : action.payload.event}
         
-        case 'nextSlide':
-            return {...state, index : (state.index + 1) % state.images.length}
+        case 'handlerEnd' :
+            return {...state, end : action.payload.event}
 
-        case "handlerTouchStart":
-            var {e} = action.payload
-            return {...state, touchStartX :e.changedTouches[0].clientX }
-
-        case "handlerTouchEnd":
-            var {e} = action.payload
-            state.touchEndX = e.changedTouches[0].clientX;
-            const distance = state.touchStartX - state.touchEndX;
+        case "handlerChangeBg":
+            const distance = state.start - state.end
+            
             if(distance > 50) {
-                return {...state, index : (state.index - 1 + state.images.length) % state.images.length}
+                return {...state, index : add}
             }
             else if (distance < -50){
-                return {...state, index : (state.index + 1) % state.images.length}
+
+                return {...state, index : min}
             }
             return {...state}
+        case "handlerLeft" : 
+            return {...state, index : min}
 
-        case "handlerStart" :
-            var {cubeRef} = action.payload
-            var {client} = action.payload
-            var rect = cubeRef.getBoundingClientRect();
-
-
-            return {...state, startX : client - rect.left}
-        
-        case "handlerEnd":
-            var {client} = action.payload
-            var {cubeRef} = action.payload
-            var rect = cubeRef.getBoundingClientRect();
-
-            state.endX = client - rect.left
-            console.log(state.startX, state.endX)
-
-            const dis = state.startX - state.endX;
-            if(dis > 50){
-                return {...state, index : (state.index - 1 + state.images.length) % state.images.length}
-            }
-            else if (dis < -50){
-                return {...state, index : (state.index + 1) % state.images.length}
-
-            }
-            // return {...state,}
+        case "handlerRight" :
+            return {...state, index : add}
     }
 }

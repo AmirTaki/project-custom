@@ -43,6 +43,8 @@ import SliderClientSwiper from "../sliderClient/index.jsx"
 import SliderLoop from "../imageSliderTime/index.jsx"
 import ChangeSlider from "../changeSlider.jsx/index.jsx"
 import PhotoCube from "../photoCube/index.jsx"
+import ImageSliderCubs from "../cubeSlider/index.jsx"
+
 
 // create context
 export const navigationContext = createContext ()
@@ -200,6 +202,7 @@ const Home =  ()  => {
                 {/* phonto cube 3D */}
                 <PhotoCube />
 
+                <ImageSliderCubs />
      
                 {/* footer animated */}
                 <FooterAnimated />

@@ -18,7 +18,7 @@ const LoginForm = () => {
             })}
            
                 {/* login */}
-            <form>
+        
                 <div className="absolute w-[450px] h-[600px] px-[40px] py-[60px] text-center pointer-events-none">
        
                     <h2 className="text-white text-[2em] mb-[62px] font-[600] uppercase tracking-[.1em] pointer-events-auto">
@@ -35,7 +35,7 @@ const LoginForm = () => {
                     </BrowserRouter>
             
                 </div>
-            </form>
+
        
         </div>
     )
