@@ -16,21 +16,25 @@ const LoginForm = () => {
                     <Box  key = {box.id} box = {box}/>
                 )
             })}
-            {/* login */}
-            <div className="absolute w-[450px] h-[600px] px-[40px] py-[60px] text-center pointer-events-none">
-                <h2 className="text-white text-[2em] mb-[62px] font-[600] uppercase tracking-[.1em] pointer-events-auto">
-                    Login
-                </h2>
-                <InputBox input = 'username'  type = 'text' value = "" />
-                <InputBox input = 'password'  type = 'password' value = ''/>
-                {/* submit */}
-                <SubmitButton value = "login" />
+           
+                {/* login */}
+                <div className="absolute w-[450px] h-[600px] px-[40px] py-[60px] text-center pointer-events-none">
+                    <form action={''}>
+                        <h2 className="text-white text-[2em] mb-[62px] font-[600] uppercase tracking-[.1em] pointer-events-auto">
+                            Login
+                        </h2>
+                        <InputBox input = 'username'  type = 'text' value = "" />
+                        <InputBox input = 'password'  type = 'password' value = ''/>
+                        {/* submit */}
+                        <SubmitButton value = "login" />
 
-                {/* group */}
-                <BrowserRouter>
-                    <GroupForm />
-                </BrowserRouter>
-            </div>
+                        {/* group */}
+                        <BrowserRouter>
+                            <GroupForm />
+                        </BrowserRouter>
+                    </form>
+                </div>
+       
         </div>
     )
 }

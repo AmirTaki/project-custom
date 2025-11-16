@@ -29,7 +29,7 @@ const SliderLoop = () => {
     })
 
     return (
-        <div className="relative rounded-xl overflow-hidden">
+        <div className="relative rounded-xl overflow-hidden ">
 
             {/* wrapper */}
             <div 
@@ -39,7 +39,7 @@ const SliderLoop = () => {
                 onTouchEnd={(e) => {dispatch({type: "handlerEnd", payload : {event : e.changedTouches[0].clientX}})}}
                 onMouseDown={(e) => {dispatch({type : 'handlerStart', payload : {event : e.clientX}})}}
                 onMouseUp={(e) => {dispatch({type : 'handlerEnd', payload : {event : e.clientX}})}}                
-                className="w-[80vw] h-[80vh] bg-transparent flex flex-col flex-wrap  overflow-hidden select-none scrollbarWrapper cursor-pointer "
+                className="w-[80vw] h-[80vh] bg-transparent flex flex-col flex-wrap select-none    scrollbarWrapper overflow-hidden cursor-pointer  "
                 >
                 
                 {/* slider */}

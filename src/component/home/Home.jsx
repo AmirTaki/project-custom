@@ -200,7 +200,6 @@ const Home =  ()  => {
                 {/* phonto cube 3D */}
                 <PhotoCube />
 
-       
      
                 {/* footer animated */}
                 <FooterAnimated />
