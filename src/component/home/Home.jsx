@@ -202,6 +202,7 @@ const Home =  ()  => {
                 {/* phonto cube 3D */}
                 <PhotoCube />
 
+                {/* cube slider image */}
                 <ImageSliderCubs />
      
                 {/* footer animated */}
