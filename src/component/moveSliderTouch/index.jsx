@@ -4,7 +4,16 @@ import { InitailDataFlowSlider } from "./InitialData";
 const MoveSliderTouch = () => {
     const [state, setState]  = useState(InitailDataFlowSlider)
     const [index, setIndex] = useState(0)
+    const [isDragging, setDragging] = useState(false);
+    const [start, setStart] = useState(0)
 
+    const HandlerDragStart = (event) => {
+        setDragging(true)
+
+        if(event.type === "mousedown"){event.preventDefault()}
+
+
+    }
 
     const goToNext = useCallback((n = 1) => {
         const newIndex = index + n > state.images.length - 1 ? 0 : index + n
@@ -15,6 +24,7 @@ const MoveSliderTouch = () => {
         const newIndex = index - n < 0 ? state.images.length - 1 : index - n
         setIndex(newIndex)
     }, [state.images, index])
+
 
     return(
         // flex
@@ -30,6 +40,9 @@ const MoveSliderTouch = () => {
 
                 {/* slider-container */}
                 <div 
+                    onMouseDown={(e) => {HandlerDragStart(e)}}
+
+
                     style={{transform : `translateX(-${index * 100}%)`}}
                     className="flex cursor-grab transition-transform duration-500 ease-in-out"
                 >
