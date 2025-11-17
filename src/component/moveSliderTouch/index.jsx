@@ -6,7 +6,11 @@ const MoveSliderTouch = () => {
             <div className="">◀️</div>
 
             {/* sliderWrapper  */}
-            <div className="w-[800px] h-[400px] bg-blue-800 relative "></div>
+            <div className="w-[800px] h-[400px] bg-blue-800 relative ">
+
+                {/* slider-container */}
+                
+            </div>
 
             {/* right button */}
             <div className="">▶️</div>
