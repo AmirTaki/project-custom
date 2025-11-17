@@ -33,12 +33,18 @@ const MoveSliderTouch = () => {
 
     const HandlerDragMove = (event) => {
         if(!isDragging) return;
-
-        const movePosition = 'touches' in event ? event.touches[0].clientX : event.clientX;
-        setMove(movePosition)
-        if(containerSldier.current){
-            containerSldier.current.style.scrollBehavior = "smooth"
-            containerSldier.current.scrollLeft += movePosition ;
+        else{
+            const movePosition = 'touches' in event ? event.touches[0].clientX : event.clientX;
+            setMove(movePosition)
+            const widthSlider = containerSldier.current.offsetWidth 
+            const distace = Math.abs(start - move)
+            
+            if(start < move) {
+                distace > widthSlider  ? goToPrevious(Math.ceil(distace / widthSlider)) : goToPrevious()
+            }
+            else {
+                distace > widthSlider  ? goToNext(Math.ceil(distace / widthSlider)) : goToNext()
+            }
         }
     }
 
@@ -70,9 +76,10 @@ const MoveSliderTouch = () => {
             <div 
                 onMouseDown={(e) => {HandlerDragStart(e)} }
                 onMouseMove={(e) => {HandlerDragMove(e)} }
-                onMouseEnd={(e) => {HandlerDragEnd(e)} }
+                onMouseUp={(e) => {HandlerDragEnd(e)} }
+                onMouseLeave={(e) => {HandlerDragEnd(e)}}
                 ref = {containerSldier}
-                className="w-[800px] h-[500px]  flex flex-col flex-wrap overflow-x-scroll"
+                className="w-[800px] h-[500px]  flex flex-col flex-wrap overflow-x-hidden"
             >
                 {state.images.map((item) => (
                     <div key = {item.id}  style={{ backgroundImage: `url(${item.img})` }} className="w-full h-full bg-cover bg-center"></div>
