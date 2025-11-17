@@ -19,6 +19,10 @@ const MoveSliderTouch = () => {
         setMove(0)
     }
 
+    const HandlerDragMove = (event) => {
+
+    }
+    
     const goToNext = useCallback((n = 1) => {
         const newIndex = index + n > state.images.length - 1 ? 0 : index + n
         setIndex(newIndex)
@@ -45,7 +49,7 @@ const MoveSliderTouch = () => {
                 {/* slider-container */}
                 <div 
                     onMouseDown={(e) => {HandlerDragStart(e)}}
-
+                    onMouseMove={(e) => {HandlerDragMove(e)}}
 
                     style={{transform : `translateX(-${index * 100}%)`}}
                     className="flex cursor-grab transition-transform duration-500 ease-in-out"
