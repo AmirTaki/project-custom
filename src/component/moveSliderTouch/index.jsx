@@ -20,9 +20,12 @@ const MoveSliderTouch = () => {
     }
 
     const HandlerDragMove = (event) => {
+        if(!isDragging) return;
 
+        const movePosition = 'touches' in event ? event.touches[0].clientX : event.clientX;
+        setMove(movePosition)
     }
-    
+
     const goToNext = useCallback((n = 1) => {
         const newIndex = index + n > state.images.length - 1 ? 0 : index + n
         setIndex(newIndex)
