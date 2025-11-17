@@ -36,7 +36,10 @@ const MoveSliderTouch = () => {
 
         const movePosition = 'touches' in event ? event.touches[0].clientX : event.clientX;
         setMove(movePosition)
-
+        if(containerSldier.current){
+            containerSldier.current.style.scrollBehavior = "smooth"
+            containerSldier.current.scrollLeft += movePosition ;
+        }
     }
 
     const HandlerDragEnd = (event) => {
@@ -65,6 +68,9 @@ const MoveSliderTouch = () => {
             >◀️</div>
             {/* container slider */}
             <div 
+                onMouseDown={(e) => {HandlerDragStart(e)} }
+                onMouseMove={(e) => {HandlerDragMove(e)} }
+                onMouseEnd={(e) => {HandlerDragEnd(e)} }
                 ref = {containerSldier}
                 className="w-[800px] h-[500px]  flex flex-col flex-wrap overflow-x-scroll"
             >
