@@ -10,11 +10,20 @@ const MoveSliderTouch = () => {
         const newIndex = index + n > state.images.length - 1 ? 0 : index + n
         setIndex(newIndex)
     }, [state.images, index])
+
+    const goToPrevious = useCallback((n = 1) => {
+        const newIndex = index - n < 0 ? state.images.length - 1 : index - n
+        setIndex(newIndex)
+    }, [state.images, index])
+
     return(
         // flex
         <div className=" bg-white flex justify-center items-center">
             {/* left button */}
-            <div className="">◀️</div>
+            <div 
+                onClick={() => {goToPrevious()}}
+                className="cursor-pointer"
+            >◀️</div>
 
             {/* sliderWrapper  */}
             <div className="w-[800px] h-[400px]  relativ overflow-hidden ">
