@@ -5,4 +5,15 @@
     height: 50px;
     background-color: blue;
     width: 100%;
+    animation: scroll-animation 1s linear;
+    animation-timeline: scroll(root y);
+}
+
+@keyframes scroll-animation {
+    from{
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
