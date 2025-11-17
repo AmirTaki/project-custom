@@ -12,12 +12,12 @@ const CustomSlider = () => {
   const isDragging = useRef(false);
 
   // autoplay
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [activeIndex]);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     nextSlide();
+  //   }, 4000);
+  //   return () => clearInterval(interval);
+  // }, [activeIndex]);
 
   const nextSlide = () => {
     setActiveIndex((prev) => (prev + 1) % DataSlider.SliderGroup.length);
@@ -40,7 +40,7 @@ const handleMove = (x) => {
   if (!isDragging.current) return;
   currentX.current = x;
   const diff = currentX.current - startX.current;
-  setDragOffset(diff); // مقدار کشیدن ذخیره می‌شود
+  setDragOffset(diff); // مقدار جابه‌جایی لحظه‌ای
 };
 
 const handleEnd = () => {
@@ -63,11 +63,12 @@ const handleEnd = () => {
       onMouseDown={(e) => handleStart(e.clientX)}
       onMouseMove={(e) => handleMove(e.clientX)}
       onMouseUp={handleEnd}
+      onMouseLeave={handleEnd}
       onTouchStart={(e) => handleStart(e.touches[0].clientX)}
       onTouchMove={(e) => handleMove(e.touches[0].clientX)}
       onTouchEnd={handleEnd}
     >
-      <div className="slides flex justify-center items-center relative">
+      <div className="slides flex justify-center items-center relative bg-amber-400">
         {DataSlider.SliderGroup.map((item, index) => {
           const offset = index - activeIndex;
 
@@ -78,7 +79,7 @@ const handleEnd = () => {
           return (
             <div
               key={index}
-              className={`slide absolute transition-all duration-700 ease-in-out w-[320px] bg-[#d1ebff] shadow-[0_15px_50px_rgba(0,0,0,.2)] rounded-[10px]`}
+              className={`slide absolute transition-all duration-700 ease-in-out w-[520px] bg-[#d1ebff] shadow-[0_15px_50px_rgba(0,0,0,.2)] rounded-[10px]`}
               style={{
                 transform: transformStyle,
                 opacity: index === activeIndex ? 1 : 0.5,
