@@ -1,12 +1,23 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { InitailDataFlowSlider } from "./InitialData";
 
 const MoveSliderTouch = () => {
+
+    const containerSldier = useRef(null)
+
     const [state, setState]  = useState(InitailDataFlowSlider)
     const [index, setIndex] = useState(0)
     const [isDragging, setDragging] = useState(false);
     const [start, setStart] = useState(0)
     const [move, setMove] = useState(0)
+
+
+    useEffect(() => {
+        if(containerSldier.current){
+            containerSldier.current.style.scrollBehavior = "smooth"
+            containerSldier.current.scrollLeft = index * containerSldier.current.offsetWidth;
+        }
+    } , [index])
 
 
     const HandlerDragStart = (event) => {
@@ -53,7 +64,10 @@ const MoveSliderTouch = () => {
                 className="cursor-pointer"
             >◀️</div>
             {/* container slider */}
-            <div className="w-[800px] h-[500px]  flex flex-col flex-wrap overflow-x-scroll">
+            <div 
+                ref = {containerSldier}
+                className="w-[800px] h-[500px]  flex flex-col flex-wrap overflow-x-scroll"
+            >
                 {state.images.map((item) => (
                     <div key = {item.id}  style={{ backgroundImage: `url(${item.img})` }} className="w-full h-full bg-cover bg-center"></div>
                 ))}
