@@ -46,6 +46,7 @@ import PhotoCube from "../photoCube/index.jsx"
 import ImageSliderCubs from "../cubeSlider/index.jsx"
 import MoveSliderTouch from "../moveSliderTouch/index.jsx"
 import CustomSlider from "../testsliwer/index.jsx"
+import ProgressTimeLine from "../timeLineScroll/index.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -213,6 +214,7 @@ const Home =  ()  => {
 
             {/* <MoveSliderTouch /> */}
             {/* <CustomSlider /> */}
+            <ProgressTimeLine />
             <div className="h-100 w-100 text-white"></div>
         </div>   
     )
