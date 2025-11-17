@@ -28,18 +28,18 @@ const ImageSliderCubs = () => {
                 >
 
                 {state.images.map((item) => (
-                    <div className="slideImage cursor-pointer " key = {item.id}  style={{ backgroundImage: `url(${item.img})` }}>
+                    <div className="slideImage cursor-grab " key = {item.id}  style={{ backgroundImage: `url(${item.img})` }}>
                     </div>
                 ))}
                 </div>
 
-                <div className=" z-100! nav -left-[70px]  scale-70 hover:scale-120 duration-600 cursor-pointer"
+                <div className=" z-100! nav -left-[70px]  scale-70 hover:scale-120 duration-600 cursor-grab"
                     onClick={() => {dispatch({type : "handlerLeft"})}}
                 >
                     <i className="bi bi-chevron-double-left"></i>
                 </div>
                 <div 
-                    className=" z-100! nav -right-[70px] scale-70 hover:scale-120 duration-600 cursor-pointer"
+                    className=" z-100! nav -right-[70px] scale-70 hover:scale-120 duration-600 cursor-grab"
                     onClick={() => {dispatch({type : "handlerRight"})}}
                 >
                   <i className="bi bi-chevron-double-right"></i>
