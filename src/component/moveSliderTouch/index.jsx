@@ -24,7 +24,13 @@ const MoveSliderTouch = () => {
 
         const movePosition = 'touches' in event ? event.touches[0].clientX : event.clientX;
         setMove(movePosition)
+        console.log(move)
     }
+
+    const HandlerDragEnd = (event) => {
+        setDragging(false)
+    }
+
 
     const goToNext = useCallback((n = 1) => {
         const newIndex = index + n > state.images.length - 1 ? 0 : index + n
@@ -53,6 +59,7 @@ const MoveSliderTouch = () => {
                 <div 
                     onMouseDown={(e) => {HandlerDragStart(e)}}
                     onMouseMove={(e) => {HandlerDragMove(e)}}
+                    onMouseUp={(e) => {HandlerDragEnd(e)}}
 
                     style={{transform : `translateX(-${index * 100}%)`}}
                     className="flex cursor-grab transition-transform duration-500 ease-in-out"
