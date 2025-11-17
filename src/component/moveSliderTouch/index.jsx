@@ -6,13 +6,17 @@ const MoveSliderTouch = () => {
     const [index, setIndex] = useState(0)
     const [isDragging, setDragging] = useState(false);
     const [start, setStart] = useState(0)
+    const [move, setMove] = useState(0)
+
 
     const HandlerDragStart = (event) => {
         setDragging(true)
 
         if(event.type === "mousedown"){event.preventDefault()}
 
-
+        const startPosition = 'touches' in event ? event.touches[0].clientX : event.clientX;
+        setStart(startPosition)
+        setMove(0)
     }
 
     const goToNext = useCallback((n = 1) => {
