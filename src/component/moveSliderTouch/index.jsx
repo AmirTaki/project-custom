@@ -25,7 +25,7 @@ const MoveSliderTouch = () => {
 
         const movePosition = 'touches' in event ? event.touches[0].clientX : event.clientX;
         setMove(movePosition)
-        console.log(move)
+
     }
 
     const HandlerDragEnd = (event) => {
@@ -46,37 +46,19 @@ const MoveSliderTouch = () => {
 
     return(
         // flex
-        <div className=" bg-white flex justify-center items-center">
+        <div className=" bg-white flex justify-center items-center mt-6">
             {/* left button */}
             <div 
                 onClick={() => {goToPrevious()}}
                 className="cursor-pointer"
             >◀️</div>
-
-            {/* sliderWrapper  */}
-            <div className="w-[800px] h-[400px]  relativ overflow-hidden ">
-
-                {/* slider-container */}
-                <div 
-                    onDragStart={(e) => {HandlerDragStart(e)}}
-                    // onMouseMove={(e) => {HandlerDragMove(e)}}
-                    onDragEnd={(e) => {HandlerDragEnd(e)}}
-
-                    style={{transform : `translateX(-${index * 100}%)`}}
-                    className="flex cursor-grab transition-transform duration-500 ease-in-out"
-                >
-
-                    {/* slide */}
-                    {state.images.map((item) => (
-                        <div
-                            style={{backgroundImage: `url(${item.img})`}}
-                            key = {item.id}
-                            className="flex-[0_0_100%] h-[400px] bg-cover bg-center"
-                        ></div>
-                    ))}
-                </div>
-
+            {/* container slider */}
+            <div className="w-[800px] h-[500px]  flex flex-col flex-wrap overflow-x-scroll">
+                {state.images.map((item) => (
+                    <div key = {item.id}  style={{ backgroundImage: `url(${item.img})` }} className="w-full h-full bg-cover bg-center"></div>
+                ))}
             </div>
+        
 
             {/* right button */}
             <div 
