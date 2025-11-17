@@ -45,6 +45,7 @@ import ChangeSlider from "../changeSlider.jsx/index.jsx"
 import PhotoCube from "../photoCube/index.jsx"
 import ImageSliderCubs from "../cubeSlider/index.jsx"
 import MoveSliderTouch from "../moveSliderTouch/index.jsx"
+import CustomSlider from "../testsliwer/index.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -62,7 +63,7 @@ const Home =  ()  => {
     const isDraggingNavigation = useRef(false)
     
     // veiw projects 
-    const  [view, setView] =   useState(true)   
+    const  [view, setView] =   useState(false)   
     return(
         <div 
         className={`bg-[#10131c]   min-h-[100vh] ${view ? "" : "flex! flex-col justify-center! items-center! "}`} 
@@ -211,6 +212,7 @@ const Home =  ()  => {
             </div>
 
             <MoveSliderTouch />
+            {/* <CustomSlider /> */}
             <div className="h-100 w-100 text-white"></div>
         </div>   
     )

@@ -17,6 +17,7 @@ const MoveSliderTouch = () => {
         const startPosition = 'touches' in event ? event.touches[0].clientX : event.clientX;
         setStart(startPosition)
         setMove(0)
+
     }
 
     const HandlerDragMove = (event) => {
@@ -57,9 +58,9 @@ const MoveSliderTouch = () => {
 
                 {/* slider-container */}
                 <div 
-                    onMouseDown={(e) => {HandlerDragStart(e)}}
-                    onMouseMove={(e) => {HandlerDragMove(e)}}
-                    onMouseUp={(e) => {HandlerDragEnd(e)}}
+                    onDragStart={(e) => {HandlerDragStart(e)}}
+                    // onMouseMove={(e) => {HandlerDragMove(e)}}
+                    onDragEnd={(e) => {HandlerDragEnd(e)}}
 
                     style={{transform : `translateX(-${index * 100}%)`}}
                     className="flex cursor-grab transition-transform duration-500 ease-in-out"
