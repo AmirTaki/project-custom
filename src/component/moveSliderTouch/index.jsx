@@ -11,7 +11,7 @@ const MoveSliderTouch = () => {
             <div className="">◀️</div>
 
             {/* sliderWrapper  */}
-            <div className="w-[800px] h-[400px]  relative ">
+            <div className="w-[800px] h-[400px]  relativ overflow-hidden ">
 
                 {/* slider-container */}
                 <div className="flex ">
