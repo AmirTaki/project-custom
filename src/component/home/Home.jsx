@@ -44,7 +44,7 @@ import SliderLoop from "../imageSliderTime/index.jsx"
 import ChangeSlider from "../changeSlider.jsx/index.jsx"
 import PhotoCube from "../photoCube/index.jsx"
 import ImageSliderCubs from "../cubeSlider/index.jsx"
-
+import MoveSliderTouch from "../moveSliderTouch/index.jsx"
 
 // create context
 export const navigationContext = createContext ()
@@ -210,7 +210,7 @@ const Home =  ()  => {
 
             </div>
 
-      
+            <MoveSliderTouch />
             <div className="h-100 w-100 text-white"></div>
         </div>   
     )
