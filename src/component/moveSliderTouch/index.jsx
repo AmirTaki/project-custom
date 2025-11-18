@@ -39,6 +39,12 @@ const MoveSliderTouch = () => {
     }, [width])
 
 
+    useEffect(() => {
+        const targetPosition = -currentIndex * slideWidth;
+        animateToPosition(targetPosition);
+    }, [currentIndex, slideWidth, animateToPosition]);
+    
+    
     const getClientX  = (e) => {
         return 'touches' in e ? e.touches[0].clientX : e.clientX;
     }
@@ -74,12 +80,13 @@ const MoveSliderTouch = () => {
         let newIndex = currentIndex
 
         if(dragDeltaRef.current > dragThreshold){
-
+            newIndex = (currentIndex - 1 + ImagesFlow.images.length) % ImagesFlow.images.length;
         }
-        else if(dragDeltaRef.current < -dragThreshold){
-
+        else if(dragDeltaRef.current < -dragThreshold){ 
+            newIndex = (currentIndex + 1) % ImagesFlow.images.length
         }
         setCurrentIndex()
+        dragDeltaRef.current = 0
 
     }, [slideWidth, currentIndex, ImagesFlow.images.length ])
 
