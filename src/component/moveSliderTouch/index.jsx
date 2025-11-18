@@ -3,20 +3,26 @@ import { InitailDataFlowSlider as ImagesFlow } from "./InitialData";
 
 const MoveSliderTouch = () => {
     const checkDrag =  useRef(false)
+    const start = useRef(0)
+    const move = useRef(0)
 
     const handlerDown = (event) => {
     checkDrag.current = true
+    start.current = event
+    
 
     }
 
     const handlerMove = (event) => {
         if(!checkDrag.current) return ;
-        console.log(event)
-
+        move.current = event
+        const drag = move - start.current
    }
 
     const handlerUp = (event) => {
         checkDrag.current = false
+        start.current = 0
+        move.current = 0
     }
     return(
       <div 
