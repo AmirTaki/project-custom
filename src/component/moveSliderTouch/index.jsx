@@ -22,9 +22,10 @@ const MoveSliderTouch = () => {
         if(slider.current){
             slider.current.style.scrollBehavior = "smooth"
             if(move.current > start.current){
+                slider.current.scrollLeft -= move.current
             }
             else {
-                slider.current.scrollLeft -= move.current
+                slider.current.scrollLeft += move.current
             }
         }
    }
