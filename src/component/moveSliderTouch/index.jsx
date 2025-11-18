@@ -1,12 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 
 const MoveSliderTouch = () => {
-
-    
-
-    const sliderWidth = useMemo(() => {
-    })
-
+    // use window size
     const useWindowSize = () => {
         const [size, setSize] = useState({
             width : window.innerWidth,
@@ -25,6 +20,14 @@ const MoveSliderTouch = () => {
         }, [])
         return size
     }
+
+    const {width, height} = useWindowSize();
+    
+    const slideWidth = useMemo(() => {
+        if(!width) return 300;
+        return Math.min(width * .7, 500)
+    }, [width])
+
     
 
 
@@ -33,7 +36,7 @@ const MoveSliderTouch = () => {
             <div 
                 className="relative overflow-hidden cursor-grab active:cursor-grabbing"
                 style={{
-                    // width : `${}px`,
+                    width : `${slideWidth}px`,
                     // height: `${}px`
                 }}
            >
