@@ -66,6 +66,11 @@ const MoveSliderTouch = () => {
         sliderRef.current.style.transform = `translateX(${newPosition}px)`;
     }, [])
 
+    const handlerDragEnd = useCallback(() => {
+
+    }, [slideWidth, currentIndex, ImagesFlow.images.length ])
+
+
     useEffectEvent(() => {
         const onMouseMove = (e) => handlerDragMove(e)
         const onTouchMove = (e) => handlerDragMove(e)
@@ -85,7 +90,7 @@ const MoveSliderTouch = () => {
             window.removeEventListener('touchend', onTouchEnd)
             window.removeEventListener('mouseleave', onMouseLeave)
         }
-    }, [])
+    }, [handlerDragMove, handlerDragEnd])
 
     return(
         <div className="w-full flex flex-col items-center justify-center gap-8">
