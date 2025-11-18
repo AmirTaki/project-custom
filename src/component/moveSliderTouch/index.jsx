@@ -78,7 +78,10 @@ const MoveSliderTouch = () => {
                             className="flex-shrink-0 w-full h-full"
                             style={{width : `${slideWidth}px`}}
                         >
-
+                            <img src={item.img} alt="" 
+                                className="w-full h-full object-cover rouded-xl shadow-2xl shadow-black/50  select-none pointer-events-none "
+                                draggable = 'false'
+                            />
                         </div>
                     ))}
                     
