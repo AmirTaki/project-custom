@@ -1,0 +1,50 @@
+.scroll-container {
+  display: flex; 
+  overflow-x: auto; /* اسکرول افقی را فعال می‌کند */
+  white-space: nowrap; 
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  
+  /* تغییر نشانگر موس به حالت "grab" */
+  cursor: grab; 
+
+  /* سفارشی‌سازی نوار اسکرول برای فایرفاکس */
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+/* سفارشی‌سازی نوار اسکرول برای مرورگرهای WebKit (کروم، سافاری، اج) */
+.scroll-container::-webkit-scrollbar {
+  height: 10px; /* ارتفاع نوار اسکرول افقی */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1; /* رنگ پس‌زمینه مسیر اسکرول */
+  border-radius: 5px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #888; /* رنگ دستگیره اسکرول */
+  border-radius: 5px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #555; /* رنگ دستگیره هنگام هاور */
+}
+
+.scroll-item {
+  flex: 0 0 auto; /* از جمع شدن آیتم‌ها جلوگیری می‌کند */
+  width: 100%; /* عرض ثابت برای هر آیتم */
+  height: 150px;
+  margin-right: 10px;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  /* جلوگیری از انتخاب متن در آیتم‌ها هنگام کشیدن */
+  user-select: none; 
+}
