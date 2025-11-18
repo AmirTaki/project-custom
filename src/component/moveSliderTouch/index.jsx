@@ -18,10 +18,14 @@ const MoveSliderTouch = () => {
     const handlerMove = (event) => {
         if(!checkDrag.current) return ;
         move.current = event
-        const drag = move - start.current
+        const drag = move.current - start.current
         if(slider.current){
             slider.current.style.scrollBehavior = "smooth"
-            slider.current.scrollLeft += drag
+            if(move.current > start.current){
+            }
+            else {
+                slider.current.scrollLeft -= move.current
+            }
         }
    }
 
@@ -36,7 +40,7 @@ const MoveSliderTouch = () => {
         onMouseDown={(e) => {handlerDown(e.clientX)}}
         onMouseUp={(e) => {handlerUp(e.clientX)}}
         onMouseMove = {(e) => {handlerMove(e.clientX)}}
-        className="w-[90vw] h-[40vh] bg-white mt-10 relative flex flex-col flex-wrap overflow-x-scroll select-none ">
+        className="w-[90vw] h-[40vh] bg-white mt-10 relative flex flex-col flex-wrap overflow-x-hidden select-none cursor-grab duration-1000 transition-all">
         <div className="w-50 h-full   bg-amber-300"></div>
         <div className="w-50 h-full   bg-green-300"></div>
         <div className="w-50 h-full  bg-red-300"></div>
