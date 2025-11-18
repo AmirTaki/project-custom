@@ -64,7 +64,13 @@ const MoveSliderTouch = () => {
                     height: `${slideWidth * .75}px`
                 }}
                 onMouseDown={handlerDragStart}
-           >
+                onTouchStart={handlerDragStart}
+            >
+                <div 
+                    ref ={sliderRef}
+                    className="flex h-full"
+                    style={{width: `${slideWidth}px`}}
+                ></div>    
 
             </div>
         </div>
