@@ -3,9 +3,12 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 const MoveSliderTouch = () => {
     const [currentIndex, setCurrentIndex] = useState(0)
 
+    const sliderRef = useRef(null)
     const animationFrameRef = useRef(null)
     const isDraggingRef = useRef(false)
     const startXRef = useRef(0)
+    const dragDeltaRef = useRef(0)
+    const basePositionRef = useRef(0)
 
     // use window size
     const useWindowSize = () => {
@@ -44,6 +47,11 @@ const MoveSliderTouch = () => {
 
         isDraggingRef.current = true;
         startXRef.current = getClientX(e)
+        dragDeltaRef.current = 0
+        if(sliderRef.current){
+            sliderRef.current.style.transition  ='none'
+            basePositionRef.current = -currentIndex * slideWidth;
+        }
 
     }, [currentIndex, slideWidth])
 
