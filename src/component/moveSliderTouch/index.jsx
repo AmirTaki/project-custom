@@ -38,6 +38,59 @@ const MoveSliderTouch = () => {
         return Math.min(width * .7, 500)
     }, [width])
 
+      const animateToPosition = useCallback((targetPosition, duration = 400) => {
+        if (!sliderRef.current) return;
+        if (animationFrameRef.current) cancelAnimationFrame(animationFrameRef.current);
+
+        const currentTransform = getComputedStyle(sliderRef.current).transform;
+        let startPosition = basePositionRef.current;
+        if (currentTransform !== 'none') {
+            const matrix = new DOMMatrix(currentTransform);
+            startPosition = matrix.m41; // m41 is translateX in a 2D matrix
+        }
+
+        const startTime = performance.now();
+
+        const animate = (currentTime) => {
+            const elapsedTime = currentTime - startTime;
+            const progress = Math.min(elapsedTime / duration, 1);
+            const easedProgress = 1 - Math.pow(1 - progress, 4); // easeOutQuart
+
+            const newPosition = startPosition + (targetPosition - startPosition) * easedProgress;
+            sliderRef.current?.style.transform = `translateX(${newPosition}px)`;
+
+            if (progress < 1) {
+                animationFrameRef.current = requestAnimationFrame(animate);
+            } else {
+                sliderRef.current?.style.transform = `translateX(${targetPosition}px)`;
+                basePositionRef.current = targetPosition;
+            }
+        };
+        animationFrameRef.current = requestAnimationFrame(animate);
+    }, []);
+
+     const handleIndexChange = useCallback((direction) => {
+        setCurrentIndex(prev => {
+            if (direction === 'next') {
+                return (prev + 1) % ImagesFlow.images.length;
+            } else {
+                return (prev - 1 + ImagesFlow.images.length) % ImagesFlow.images.length;
+            }
+        });
+    }, [images.length]);
+
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === 'ArrowRight') {
+                handleIndexChange('next');
+            } else if (e.key === 'ArrowLeft') {
+                handleIndexChange('prev');
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [handleIndexChange]);
 
     useEffect(() => {
         const targetPosition = -currentIndex * slideWidth;
