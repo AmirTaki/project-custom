@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useEffectEvent, useMemo, useRef, useState } from "react";
 import { InitailDataFlowSlider as ImagesFlow } from "./InitialData";
 
 const MoveSliderTouch = () => {
@@ -56,6 +56,17 @@ const MoveSliderTouch = () => {
 
     }, [currentIndex, slideWidth])
 
+
+
+    useEffectEvent(() => {
+        const onMouseMove = (e) => handlerDragMove(e)
+
+        window.addEventListener('mousemove', onMouseMove)
+        return() => {
+            window.removeEventListener('mousemove', onMouseMove)
+        }
+    }, [])
+
     return(
         <div className="w-full flex flex-col items-center justify-center gap-8">
             <div 
@@ -90,7 +101,7 @@ const MoveSliderTouch = () => {
                 {ImagesFlow.images.map((item) =>  (
                     <button 
                         key = {item.id}
-                        onClick = {() =>  setCurrentIndex(i)}
+                        onClick = {() =>  setCurrentIndex(item.id)}
                         className={`w-3 h-3 rounded-full transition-all duration-300
                             ${currentIndex === item.id ? "bg-blue-500 scale-125" : "bg-gray-600 hover:bg-gray-500"}
                         `}
