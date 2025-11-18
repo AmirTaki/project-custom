@@ -1,6 +1,9 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 const MoveSliderTouch = () => {
+    const [currentIndex, setCurrentIndex] = useState(0)
+
+    const animationFrameRef = useRef(null)
     // use window size
     const useWindowSize = () => {
         const [size, setSize] = useState({
@@ -29,7 +32,11 @@ const MoveSliderTouch = () => {
     }, [width])
 
     
+    const handlerDragStart = useCallback((e) => {
+        if(animationFrameRef.current) cancelAnimationFrame(animationFrameRef.current);
 
+        
+    }, [currentIndex, slideWidth])
 
     return(
         <div className="w-full flex flex-col items-center justify-center gap-8">
@@ -37,8 +44,9 @@ const MoveSliderTouch = () => {
                 className="relative overflow-hidden cursor-grab active:cursor-grabbing"
                 style={{
                     width : `${slideWidth}px`,
-                    // height: `${}px`
+                    height: `${slideWidth * .75}px`
                 }}
+                onMouseDown={handlerDragStart}
            >
 
             </div>
