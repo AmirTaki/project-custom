@@ -67,6 +67,19 @@ const MoveSliderTouch = () => {
     }, [])
 
     const handlerDragEnd = useCallback(() => {
+        if(!isDraggingRef.current) return;
+        isDraggingRef.current = false;
+        
+        const dragThreshold = slideWidth / 4;
+        let newIndex = currentIndex
+
+        if(dragDeltaRef.current > dragThreshold){
+
+        }
+        else if(dragDeltaRef.current < -dragThreshold){
+
+        }
+        setCurrentIndex()
 
     }, [slideWidth, currentIndex, ImagesFlow.images.length ])
 
