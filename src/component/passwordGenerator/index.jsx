@@ -34,7 +34,7 @@ const PasswordGenerator = () => {
         
                 </div>
                 {/* input range */}
-                <input type="range" min = "0" max = '30' value={state.value} onChange={(e) => {dispatch({type: "handlerRange", payload : {event : e.target.value}})}}  />
+                <input className="w-full" type="range" min = "0" max = '30' value={state.value} onChange={(e) => {dispatch({type: "handlerRange", payload : {event : e.target.value}})}}  />
 
                 {/* row */}
                 <div className="flex my-[8px]">
