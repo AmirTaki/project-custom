@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { InitailDataFlowSlider as ImagesFlow } from "./InitialData";
 
 const MoveSliderTouch = () => {
     const [currentIndex, setCurrentIndex] = useState(0)
@@ -69,8 +70,19 @@ const MoveSliderTouch = () => {
                 <div 
                     ref ={sliderRef}
                     className="flex h-full"
-                    style={{width: `${slideWidth}px`}}
-                ></div>    
+                    style={{willChange: 'transform'}}
+                >
+                    {ImagesFlow.images.map((item) => (
+                        <div 
+                            key = {item.id} 
+                            className="flex-shrink-0 w-full h-full"
+                            style={{width : `${slideWidth}px`}}
+                        >
+
+                        </div>
+                    ))}
+                    
+                </div>    
 
             </div>
         </div>
