@@ -56,7 +56,15 @@ const MoveSliderTouch = () => {
 
     }, [currentIndex, slideWidth])
 
+    const handlerDragMove = useCallback((e) => {
+        if(!isDraggingRef.current || !sliderRef.current) return;
 
+        const currentX = getClientX(e)
+        dragDeltaRef.current = currentX - startXRef.current;
+        const newPosition =  basePositionRef.current + dragDeltaRef.current
+
+        sliderRef.current.style.transform = `translateX(${newPosition}px)`;
+    }, [])
 
     useEffectEvent(() => {
         const onMouseMove = (e) => handlerDragMove(e)
