@@ -6,7 +6,7 @@ const MoveSliderTouch = () => {
     const animationFrameRef = useRef(null)
     const isDraggingRef = useRef(false)
     const startXRef = useRef(0)
-    
+
     // use window size
     const useWindowSize = () => {
         const [size, setSize] = useState({
@@ -34,12 +34,16 @@ const MoveSliderTouch = () => {
         return Math.min(width * .7, 500)
     }, [width])
 
+
+    const getClientX  = (e) => {
+        return 'touches' in e ? e.touches[0].clientX : e.clientX;
+    }
     
     const handlerDragStart = useCallback((e) => {
         if(animationFrameRef.current) cancelAnimationFrame(animationFrameRef.current);
 
         isDraggingRef.current = true;
-
+        startXRef.current = getClientX(e)
 
     }, [currentIndex, slideWidth])
 
