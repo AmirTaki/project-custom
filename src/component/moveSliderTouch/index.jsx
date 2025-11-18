@@ -71,15 +71,19 @@ const MoveSliderTouch = () => {
         const onTouchMove = (e) => handlerDragMove(e)
         const onMouseUp = (e) => handlerDragEnd(e)
         const onTouchEnd = (e) => handlerDragEnd(e)
+        const onMouseLeave = (e) => handlerDragEnd(e)
 
         window.addEventListener('mousemove', onMouseMove)
         window.addEventListener("touchmove", onTouchMove)
         window.addEventListener('mouseup', onMouseUp)
         window.addEventListener('touchend', onTouchEnd)
-        window.addEventListener('',)
+        window.addEventListener('mouseleave', onMouseLeave)
         return() => {
             window.removeEventListener('mousemove', onMouseMove)
             window.removeEventListener('touchmove', onTouchMove)
+            window.removeEventListener('mouseup', onMouseUp)
+            window.removeEventListener('touchend', onTouchEnd)
+            window.removeEventListener('mouseleave', onMouseLeave)
         }
     }, [])
 
