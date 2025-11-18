@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 const MoveSliderTouch = () => {
 
@@ -8,11 +8,23 @@ const MoveSliderTouch = () => {
 
     })
 
-    useEffect(() => {
+    const useWindowSize = () => {
+        const [size, setSize] = useState({
+            width : window.innerWidth,
+            height: window.innerHeight
+        })
 
-        window.addEventListener('resize', handlerResize)
-        return () => window.removeEventListener('resize', handlerResize)
-    })
+        useEffect(() => {
+            const useWindowSize = () => {
+    
+            }
+            window.addEventListener('resize', handlerResize)
+            return () => window.removeEventListener('resize', handlerResize)
+        }, [])
+        return size
+    }
+
+    
     return(
         <div className="w-full flex flex-col items-center justify-center gap-8">
             <div 
