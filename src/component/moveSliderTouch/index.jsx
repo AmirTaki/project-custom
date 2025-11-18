@@ -69,9 +69,14 @@ const MoveSliderTouch = () => {
     useEffectEvent(() => {
         const onMouseMove = (e) => handlerDragMove(e)
         const onTouchMove = (e) => handlerDragMove(e)
+        const onMouseUp = (e) => handlerDragEnd(e)
+        const onTouchEnd = (e) => handlerDragEnd(e)
 
         window.addEventListener('mousemove', onMouseMove)
         window.addEventListener("touchmove", onTouchMove)
+        window.addEventListener('mouseup', onMouseUp)
+        window.addEventListener('touchend', onTouchEnd)
+        window.addEventListener('',)
         return() => {
             window.removeEventListener('mousemove', onMouseMove)
             window.removeEventListener('touchmove', onTouchMove)
