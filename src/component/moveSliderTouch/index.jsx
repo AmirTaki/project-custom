@@ -91,6 +91,10 @@ const MoveSliderTouch = () => {
                     <button 
                         key = {item.id}
                         onClick = {() =>  setCurrentIndex(i)}
+                        className={`w-3 h-3 rounded-full transition-all duration-300
+                            ${currentIndex === item.id ? "bg-blue-500 scale-125" : "bg-gray-600 hover:bg-gray-500"}
+                        `}
+                        aria-label={`Go to slide ${item.id + 1}`}
                     />
                 ))}
             </div>
