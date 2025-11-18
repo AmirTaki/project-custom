@@ -87,8 +87,11 @@ const MoveSliderTouch = () => {
                 </div>    
             </div>
             <div className="flex justify-center gap-2">
-                {ImagesFlow.images.map((_, i) =>  (
-                    <button />
+                {ImagesFlow.images.map((item) =>  (
+                    <button 
+                        key = {item.id}
+                        onClick = {() =>  setCurrentIndex(i)}
+                    />
                 ))}
             </div>
         </div>
