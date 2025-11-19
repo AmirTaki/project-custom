@@ -47,11 +47,13 @@ const Carousel = () => {
     const prevSlide = useCallback(() => {
         setIsTransitioning(true)
         setCurrentIndex((prev) => (prev - 1))
-        
     }, [])
 
 
-    const
+    const nextSlide = useCallback(() => {
+        setIsTransitioning(true)
+        setCurrentIndex((prev) => (prev + 1))
+    }, [])
 
     const onMouseDown = (e) => handlerDragStart(e.clientX)
     const onMouseMove = (e) => handlerDragMove(e.clientX)
