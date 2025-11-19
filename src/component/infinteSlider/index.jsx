@@ -1,4 +1,5 @@
 import Carousel from "./Carousel";
+import { Slides } from "./slides";
 
 
 const InfiniteLoopSlider = () => {
@@ -14,7 +15,7 @@ const InfiniteLoopSlider = () => {
 
               </div>
 
-              <Carousel items = {} />
+              <Carousel items = {Slides} />
           </main>
       </div>
     </div>
