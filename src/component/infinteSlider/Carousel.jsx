@@ -1,10 +1,14 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const Carousel = () => {
-    const conatinerRef =  useRef(null)
+    const [isDragging, setIsDragging] = useState(false)
    
-    const handlerDragStart = () => {
-        
+    const conatinerRef =  useRef(null)
+    const startX = useRef(0)
+
+    const handlerDragStart = (client) => {
+        setIsDragging(true)
+        startX.current  = client
     }
     const onMouseDown = (e) => handlerDragStart(e.clientX)
 
