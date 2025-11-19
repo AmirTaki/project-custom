@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 
 const Carousel = () => {
     const [isDragging, setIsDragging] = useState(false)
+    const [isTranitioning, setIsTransitioning] = useState(false)
    
     const conatinerRef =  useRef(null)
     const startX = useRef(0)
@@ -9,6 +10,7 @@ const Carousel = () => {
     const handlerDragStart = (client) => {
         setIsDragging(true)
         startX.current  = client
+        setIsTransitioning(false)
     }
     const onMouseDown = (e) => handlerDragStart(e.clientX)
 
