@@ -15,7 +15,7 @@ const Carousel = ({items}) => {
 
     const cloneHead = items.slice(-2)
     const cloneTail = items.slice(0, 2)
-    const extendedItmes = [...cloneHead]
+    const extendedItmes = [...cloneHead, ...items, ...cloneTail ]
 
     const handlerDragStart = (client) => {
         setIsDragging(true)
@@ -72,7 +72,8 @@ const Carousel = ({items}) => {
     const handlerTransitionEnd = () => {
         setIsTransitioning(false)
 
-        const totalLenght = ext
+        const totalLenght = extendedItmes.length;
+        const realCount = items.length
     }
 
     const onMouseDown = (e) => handlerDragStart(e.clientX)
