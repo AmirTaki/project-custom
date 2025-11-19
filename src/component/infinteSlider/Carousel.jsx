@@ -58,6 +58,8 @@ const Carousel = () => {
     const onMouseDown = (e) => handlerDragStart(e.clientX)
     const onMouseMove = (e) => handlerDragMove(e.clientX)
     const onMouseUp = () => handlerDragEnd();
+    const onMouseLeave = () => { if(isDragging) handlerDragEnd() }
+    
     return(
         <div className="w-full max-w-4xl mx-auto relative group select-none" dir="ltr">
             {/* viewport */}
@@ -66,6 +68,7 @@ const Carousel = () => {
                 onMouseDown={onMouseDown}
                 onMouseMove = {onMouseMove}
                 onMouseUp={onMouseUp}
+                onMouseLeave={onMouseLeave}
                 className="overflow-hidden rounded-2xl cursor-grab active:cursor-grabbing touch-pan-y"
             ></div>
         </div>
