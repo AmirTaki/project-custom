@@ -64,6 +64,10 @@ const Carousel = () => {
         return baseTranslate
     }
 
+    const handlerTransitionEnd = () => {
+
+    }
+
     const onMouseDown = (e) => handlerDragStart(e.clientX)
     const onMouseMove = (e) => handlerDragMove(e.clientX)
     const onMouseUp = () => handlerDragEnd();
@@ -92,7 +96,8 @@ const Carousel = () => {
                     style={{
                         transform : `translateX(${getTranslateX()}%)`,
                         transition : isTranitioning ? 'transform 500ms cubic-bezier(0.25, 1, 0.5, 1)' : 'none'
-                    }}    
+                    }} 
+                    onTransitionEnd={handlerTransitionEnd}   
                 >
                     
                 </div>
