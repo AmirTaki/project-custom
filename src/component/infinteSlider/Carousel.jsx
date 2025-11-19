@@ -114,6 +114,9 @@ const Carousel = ({items}) => {
                     }} 
                     onTransitionEnd={handlerTransitionEnd}   
                 >
+                    {extendedItmes.map((item, index) => {
+                        const isActive = index === currentIndex;
+                    })}
                     
                 </div>
 
