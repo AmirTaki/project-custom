@@ -74,6 +74,13 @@ const Carousel = ({items}) => {
 
         const totalLenght = extendedItmes.length;
         const realCount = items.length
+
+        if(currentIndex >= totalLenght - 2){
+            setCurrentIndex(currentIndex - realCount)
+        }
+        else if (currentIndex < 2){
+            
+        }
     }
 
     const onMouseDown = (e) => handlerDragStart(e.clientX)
