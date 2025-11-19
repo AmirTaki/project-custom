@@ -224,7 +224,9 @@ const Home =  ()  => {
             {/* <CustomHorizontalScroll /> */}
             <InfiniteLoopSlider />
             <div className="h-100 w-100 text-white">
-                <main className=""></main>
+                <main className="w-full max-w-6xl mx-auto mb-12 relative z-10">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[60%] bg-gradient-to-r from-blue-500/10 via-purple-500/10 "></div>
+                </main>
             </div>
         </div>   
     )
