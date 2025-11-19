@@ -49,7 +49,8 @@ import CustomSlider from "../testsliwer/index.jsx"
 import ProgressTimeLine from "../timeLineScroll/index.jsx"
 import TestContainer from "../testContainer/index.jsx"
 import CustomHorizontalScroll from "../testSlider/index.jsx"
-import { InfiniteLoopSlider } from "../infinteSlider/index.jsx"
+import InfiniteLoopSlider from "../infinteSlider/index.jsx"
+
 
 // create context
 export const navigationContext = createContext ()
@@ -222,7 +223,9 @@ const Home =  ()  => {
 
             {/* <CustomHorizontalScroll /> */}
             <InfiniteLoopSlider />
-            <div className="h-100 w-100 text-white"></div>
+            <div className="h-100 w-100 text-white">
+                <main className=""></main>
+            </div>
         </div>   
     )
 }
