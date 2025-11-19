@@ -116,6 +116,15 @@ const Carousel = ({items}) => {
                 >
                     {extendedItmes.map((item, index) => {
                         const isActive = index === currentIndex;
+
+                        return(
+                            <div 
+                                key = {`${item.id}-${index}`}
+                                className="w-full flex-shrink-0 p-4 box-border"
+                            >   
+    
+                            </div>
+                        )
                     })}
                     
                 </div>
