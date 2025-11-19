@@ -1,7 +1,7 @@
 import { use } from "react";
 import { useCallback, useRef, useState } from "react";
 
-const Carousel = () => {
+const Carousel = ({items}) => {
     const [currentIndex, setCurrentIndex] = useState(1)
     const [isDragging, setIsDragging] = useState(false)
     const [isTranitioning, setIsTransitioning] = useState(false)
@@ -11,6 +11,11 @@ const Carousel = () => {
     const startX = useRef(0)
     const currentX = useRef(0)
     const widthRef = useRef(0)
+
+
+    const cloneHead = items.slice(-2)
+    const cloneTail = items.slice(0, 2)
+    const extendedItmes = [...cloneHead]
 
     const handlerDragStart = (client) => {
         setIsDragging(true)
@@ -65,7 +70,9 @@ const Carousel = () => {
     }
 
     const handlerTransitionEnd = () => {
+        setIsTransitioning(false)
 
+        const totalLenght = ext
     }
 
     const onMouseDown = (e) => handlerDragStart(e.clientX)
