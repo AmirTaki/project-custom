@@ -55,6 +55,15 @@ const Carousel = () => {
         setCurrentIndex((prev) => (prev + 1))
     }, [])
 
+    const getTranslateX = () => {
+        const baseTranslate = -currentIndex * 100
+        if(isDragging && widthRef.current > 0){
+            const dragPercentage = (dragOffset / widthRef.current) * 100
+            return baseTranslate + dragPercentage
+        }
+        return baseTranslate
+    }
+
     const onMouseDown = (e) => handlerDragStart(e.clientX)
     const onMouseMove = (e) => handlerDragMove(e.clientX)
     const onMouseUp = () => handlerDragEnd();
@@ -62,7 +71,7 @@ const Carousel = () => {
 
     const onTouchStart = (e) => handlerDragStart(e.touches[0].clientX)
     const onTouchMove = (e) => handlerDragMove(e.touches[0].clientX)
-
+    const onTouchEnd = () => handlerDragEnd()
     return(
         <div className="w-full max-w-4xl mx-auto relative group select-none" dir="ltr">
             {/* viewport */}
@@ -74,9 +83,20 @@ const Carousel = () => {
                 onMouseLeave={onMouseLeave}
                 onTouchStart={onTouchStart}
                 onTouchMouve={onTouchMove}
-                
+                onTouchEnd={onTouchEnd}
                 className="overflow-hidden rounded-2xl cursor-grab active:cursor-grabbing touch-pan-y"
-            ></div>
+            >
+                {/* track */}
+                <div 
+                    className="flex"
+                    style={{
+                        transform : `translateX(${getTranslateX()}%)`
+                    }}    
+                >
+                    
+                </div>
+
+            </div>
         </div>
     )
 }
