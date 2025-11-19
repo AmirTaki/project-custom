@@ -1,6 +1,8 @@
-import { useRef, useState } from "react";
+import { use } from "react";
+import { useCallback, useRef, useState } from "react";
 
 const Carousel = () => {
+    const [currentIndex, setCurrentIndex] = useState(1)
     const [isDragging, setIsDragging] = useState(false)
     const [isTranitioning, setIsTransitioning] = useState(false)
     const [dragOffset, setDragOffset] = useState(0)
@@ -30,10 +32,10 @@ const Carousel = () => {
         const threshold =  widthRef.current * .2
 
         if(dragOffset > threshold){
-            
+            prevSlide()
         }
         else if(dragOffset < -threshold){
-
+            nextSlide()
         }
         else {
             setIsTransitioning(true)
@@ -41,6 +43,15 @@ const Carousel = () => {
         setDragOffset(0)
         
     }
+
+    const prevSlide = useCallback(() => {
+        setIsTransitioning(true)
+        setCurrentIndex((prev) => (prev - 1))
+        
+    }, [])
+
+
+    const
 
     const onMouseDown = (e) => handlerDragStart(e.clientX)
     const onMouseMove = (e) => handlerDragMove(e.clientX)
