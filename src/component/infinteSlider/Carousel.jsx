@@ -79,7 +79,7 @@ const Carousel = ({items}) => {
             setCurrentIndex(currentIndex - realCount)
         }
         else if (currentIndex < 2){
-            
+            setCurrentIndex(currentIndex + realCount)   
         }
     }
 
