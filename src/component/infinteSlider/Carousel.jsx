@@ -1,6 +1,6 @@
 import { use } from "react";
 import { useCallback, useRef, useState } from "react";
-
+import Slide from "./slide";
 const Carousel = ({items}) => {
     const [currentIndex, setCurrentIndex] = useState(1)
     const [isDragging, setIsDragging] = useState(false)
@@ -122,7 +122,7 @@ const Carousel = ({items}) => {
                                 key = {`${item.id}-${index}`}
                                 className="w-full flex-shrink-0 p-4 box-border"
                             >   
-    
+                                <Slide data = {item} isActive = {isActive} />    
                             </div>
                         )
                     })}
