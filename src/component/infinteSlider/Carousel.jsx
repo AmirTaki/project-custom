@@ -90,7 +90,8 @@ const Carousel = () => {
                 <div 
                     className="flex"
                     style={{
-                        transform : `translateX(${getTranslateX()}%)`
+                        transform : `translateX(${getTranslateX()}%)`,
+                        transition : isTranitioning ? 'transform 500ms cubic-bezier(0.25, 1, 0.5, 1)' : 'none'
                     }}    
                 >
                     
