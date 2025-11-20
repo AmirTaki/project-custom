@@ -128,8 +128,8 @@ const Carousel = ({items}) => {
                     })}
                     
                 </div>
-
             </div>
+            {/* controls */}
         </div>
     )
 }
