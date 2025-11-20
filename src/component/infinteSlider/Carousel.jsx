@@ -1,6 +1,7 @@
-import { use } from "react";
+import { use, useEffect } from "react";
 import { useCallback, useRef, useState } from "react";
 import Slide from "./slide";
+
 const Carousel = ({items}) => {
     const [currentIndex, setCurrentIndex] = useState(1)
     const [isDragging, setIsDragging] = useState(false)
@@ -16,6 +17,19 @@ const Carousel = ({items}) => {
     const cloneHead = items.slice(-2)
     const cloneTail = items.slice(0, 2)
     const extendedItmes = [...cloneHead, ...items, ...cloneTail ]
+
+    const INITIAL_OFFSET = 2;
+
+    useEffect(() => {
+        const handleResize = () => {
+            if(conatinerRef.current){
+                widthRef.current = conatinerRef.current.offsetWidth;
+            }
+        }
+        handleResize()
+        window.addEventListener('resize', handleResize)
+        return() => window.removeEventListener('resize',handleResize )
+    }, [])
 
     const handlerDragStart = (client) => {
         setIsDragging(true)
