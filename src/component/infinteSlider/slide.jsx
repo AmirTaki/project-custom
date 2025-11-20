@@ -20,6 +20,13 @@ const Slide = ({data, isActive}) => {
                 `}>
                     {data.title}
                 </h2>
+                <p 
+                    className={`text-lg text-gray-200 ${isActive ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"} 
+                        transition-all duration-500 delay-200
+                    `}
+                >
+                    {data.subtitle}
+                </p>
             </div>
         </div>
     )
