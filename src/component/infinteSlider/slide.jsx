@@ -15,7 +15,11 @@ const Slide = ({data, isActive}) => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
 
             <div className="absolute bottom-0 right-0 p-8 text-right w-full transform transition-transform duration-500">
-                <h2 className={``}></h2>
+                <h2 className={`text-3xl md:text-4xl font-bold mb-2 text-white drop-shadow-lg ${isActive ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}
+                    transition-all duration-500 delay-100
+                `}>
+                    {data.title}
+                </h2>
             </div>
         </div>
     )
