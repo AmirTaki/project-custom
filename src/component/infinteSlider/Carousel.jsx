@@ -97,6 +97,9 @@ const Carousel = ({items}) => {
         }
     }
 
+    let activeIndicator = (currentIndex - 2) % items.length
+    if(activeIndicator < 0) activeIndicator += items.length
+
     const onMouseDown = (e) => handlerDragStart(e.clientX)
     const onMouseMove = (e) => handlerDragMove(e.clientX)
     const onMouseUp = () => handlerDragEnd();
