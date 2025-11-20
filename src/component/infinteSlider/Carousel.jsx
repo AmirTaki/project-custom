@@ -1,6 +1,7 @@
 import { use, useEffect } from "react";
 import { useCallback, useRef, useState } from "react";
 import Slide from "./slide";
+import { build } from "vite";
 
 const Carousel = ({items}) => {
     const [currentIndex, setCurrentIndex] = useState(1)
@@ -168,6 +169,25 @@ const Carousel = ({items}) => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg>
             </button>
+
+            {/* pagination Dots */}
+            <div className="absolute -bottom-10 left-0 right-0 flex justify-center gap-2">
+                {items.map((_, index) => (
+                    <button
+                        key = {index}
+                        onClick={() => {
+                            setIsTransitioning(true);
+                            setCurrentIndex(index + 2)
+                        }}  
+                        className={`h-2 rounded-full transition-all duration-300
+                            ${activeIndicator === index ? "w-8 bg-emerald-400" : "w-2 bg-gray-600 hover:bg-gray-500"}    
+                        `}
+                        aria-label={`Go to slide ${index + 1}`}
+                    >
+
+                    </button>
+                ))}
+            </div>
 
         </div>
     )
