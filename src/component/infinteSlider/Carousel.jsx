@@ -1,7 +1,7 @@
-import { use, useEffect } from "react";
+import { useEffect } from "react";
 import { useCallback, useRef, useState } from "react";
 import Slide from "./slide";
-import { build } from "vite";
+
 
 const Carousel = ({items}) => {
     const [currentIndex, setCurrentIndex] = useState(1)
