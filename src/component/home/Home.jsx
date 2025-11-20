@@ -68,7 +68,7 @@ const Home =  ()  => {
     const isDraggingNavigation = useRef(false)
     
     // veiw projects 
-    const  [view, setView] =   useState(false)   
+    const  [view, setView] =   useState(true)   
     return(
         <div 
         className={`bg-[#10131c]   min-h-[100vh] ${view ? "" : "flex! flex-col justify-center! items-center! "}`} 
@@ -210,19 +210,21 @@ const Home =  ()  => {
 
                 {/* cube slider image */}
                 <ImageSliderCubs />
+
+                {/* Infinite loop slider */}
+                <InfiniteLoopSlider />
      
                 {/* footer animated */}
                 <FooterAnimated />
 
             </div>
 
-            {/* <MoveSliderTouch /> */}
-            {/* <CustomSlider /> */}
-            {/* <ProgressTimeLine /> */}
-            {/* <TestContainer /> */}
+            {/* <MoveSliderTouch />
+            <CustomSlider />
+            <ProgressTimeLine />
+            <TestContainer />
 
-            {/* <CustomHorizontalScroll /> */}
-            <InfiniteLoopSlider />
+            <CustomHorizontalScroll /> */}
            
         </div>   
     )
