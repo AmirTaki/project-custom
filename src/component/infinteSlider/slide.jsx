@@ -11,6 +11,7 @@ const Slide = ({data, isActive}) => {
                 className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                 loading="lazy"    
             />
+            <div className={`absolute inset-0 bg-gradient-to-t ${data.color} opacity-80 mix-blend-multiply`}></div>
         </div>
     )
 }
